@@ -1,0 +1,137 @@
+{
+    'risk-level': {
+        size: {
+            padding: {
+                vertical: { value: '{size.3xs}'},
+                horizontal: { value: '{size.s}' }
+            },
+            'border': {
+                width: { value: '{size.border-width}' },
+                radius: { value: '{size.xxs}'}
+            }
+        },
+        font: {
+            text: { value: 'subheading' }
+        },
+        'light-color-scheme': {
+            filled: {
+                'fade-off': {
+                    success: {
+                        background: { value: '{light-color-scheme.background.success}' },
+                        text: { value: '{light-color-scheme.foreground.white}' }
+                    },
+                    warning: {
+                        background: { value: '{light-color-scheme.background.warning}' },
+                        text: { value: '{light-color-scheme.foreground.white}' }
+                    },
+                    error: {
+                        background: { value: '{light-color-scheme.background.error}' },
+                        text: { value: '{light-color-scheme.foreground.white}' }
+                    }
+                },
+                'fade-on': {
+                    contrast: {
+                        background: { value: '{light-color-scheme.background.contrast-fade}' },
+                        text: { value: '{light-color-scheme.foreground.contrast}' }
+                    },
+                    success: {
+                        background: { value: '{light-color-scheme.background.success-fade}' },
+                        text: { value: '{light-color-scheme.foreground.success}' }
+                    },
+                    warning: {
+                        background: { value: '{light-color-scheme.background.warning-fade}' },
+                        text: { value: '{light-color-scheme.foreground.warning}' }
+                    },
+                    error: {
+                        background: { value: '{light-color-scheme.background.error-fade}' },
+                        text: { value: '{light-color-scheme.foreground.error}' }
+                    }
+                }
+            },
+            outline: {
+                'fade-on': {
+                    contrast: {
+                        background: { value: 'transparent' },
+                        text: { value: '{light-color-scheme.foreground.contrast}' },
+                        border: { value: '{light-color-scheme.line.contrast-fade}' }
+                    },
+                    success: {
+                        background: { value: 'transparent' },
+                        text: { value: '{light-color-scheme.foreground.success}' },
+                        border: { value: '{light-color-scheme.line.success-fade}' }
+                    },
+                    warning: {
+                        background: { value: 'transparent' },
+                        text: { value: '{light-color-scheme.foreground.warning}' },
+                        border: { value: '{light-color-scheme.line.warning-fade}' }
+                    },
+                    error: {
+                        background: { value: 'transparent' },
+                        text: { value: '{light-color-scheme.foreground.error}' },
+                        border: { value: '{light-color-scheme.line.error-fade}' }
+                    }
+                }
+            }
+        },
+        'dark-color-scheme': {
+            filled: {
+                'fade-off': {
+                    success: {
+                        background: { value: '{dark-color-scheme.background.success}' },
+                        text: { value: '{dark-color-scheme.foreground.white}' }
+                    },
+                    warning: {
+                        background: { value: '{dark-color-scheme.background.warning}' },
+                        text: { value: '{dark-color-scheme.foreground.white}' }
+                    },
+                    error: {
+                        background: { value: '{dark-color-scheme.background.error}' },
+                        text: { value: '{dark-color-scheme.foreground.white}' }
+                    }
+                },
+                'fade-on': {
+                    contrast: {
+                        background: { value: '{dark-color-scheme.background.contrast-fade}' },
+                        text: { value: '{dark-color-scheme.foreground.contrast}' }
+                    },
+                    success: {
+                        background: { value: '{dark-color-scheme.background.success-fade}' },
+                        text: { value: '{dark-color-scheme.foreground.success}' }
+                    },
+                    warning: {
+                        background: { value: '{dark-color-scheme.background.warning-fade}' },
+                        text: { value: '{dark-color-scheme.foreground.warning}' }
+                    },
+                    error: {
+                        background: { value: '{dark-color-scheme.background.error-fade}' },
+                        text: { value: '{dark-color-scheme.foreground.error}' }
+                    }
+                }
+            },
+            outline: {
+                'fade-on': {
+                    contrast: {
+                        background: { value: 'transparent' },
+                        text: { value: '{dark-color-scheme.foreground.contrast}' },
+                        border: { value: '{dark-color-scheme.line.contrast-fade}' }
+                    },
+                    success: {
+                        background: { value: 'transparent' },
+                        text: { value: '{dark-color-scheme.foreground.success}' },
+                        border: { value: '{dark-color-scheme.line.success-fade}' }
+                    },
+                    warning: {
+                        background: { value: 'transparent' },
+                        text: { value: '{dark-color-scheme.foreground.warning}' },
+                        border: { value: '{dark-color-scheme.line.warning-fade}' }
+                    },
+                    error: {
+                        background: { value: 'transparent' },
+                        text: { value: '{dark-color-scheme.foreground.error}' },
+                        border: { value: '{dark-color-scheme.line.error-fade}' }
+                    }
+                }
+            }
+        },
+    }
+}

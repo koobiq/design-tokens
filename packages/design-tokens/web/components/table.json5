@@ -1,0 +1,15 @@
+{
+    table: {
+        size: {
+            'border-width': { value: '{size.border-width}' },
+            'row-padding': {
+                vertical: { value: '{size.s}' },
+                horizontal: { value: '{size.l}' }
+            }
+        },
+        font: {
+            header: { value: 'text-normal' },
+            body: { value: 'tabular-big' }
+        }
+    }
+}

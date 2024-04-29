@@ -1,0 +1,12 @@
+{
+    option: {
+        size: {
+            'horizontal-padding': { value: '{size.m}' },
+            height: { value: '{size.3xl}' },
+            'border-width': { value: '2px' }
+        },
+        font: {
+            default: { value: 'text-big' }
+        }
+    }
+}

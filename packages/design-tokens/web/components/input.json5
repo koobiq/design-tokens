@@ -1,0 +1,13 @@
+{
+    input: {
+        size: {
+            padding: {
+                horizontal: { value: '{size.m}' },
+                vertical: { value: '{size.xxs}' }
+            }
+        },
+        font: {
+            text: { value: 'text-normal' }
+        }
+    }
+}

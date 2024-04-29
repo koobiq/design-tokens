@@ -1,0 +1,98 @@
+{
+    'loader-overlay': {
+         size: {
+            big: {
+                overlay: {
+                    padding: {
+                        horizontal: { value: '{size.3xl}' }
+                    }
+                },
+                loader: {
+                    margin: {
+                        bottom: { value: '{size.xxl}'}
+                    }
+                },
+                'content': {
+                    'content-gap': { 
+                        vertical: { value: '{size.xxs}' }
+                    }
+                }
+            },
+            compact: {
+                overlay: {
+                    padding: {
+                        horizontal: { value: '{size.3xl}' }
+                    }
+                },
+                loader: {
+                    margin: {
+                        bottom: { value: '{size.s}'}
+                    }
+                },
+                'content': {
+                    'content-gap': { 
+                        vertical: { value: '{size.3xs}' }
+                    }
+                }
+            }
+        },
+        font: {
+            big: {
+                text: { value: 'subheading' },
+                caption: { value: 'text-normal' },
+            },
+            compact: {
+                text: { value: 'text-normal' },
+                caption: { value: 'text-compact-strong' },
+            }   
+        },
+        'light-color-scheme': {
+            transparent: {
+                overlay: {
+                    background: { value: '{light-color-scheme.background.overlay-inverse}' }
+                },
+                text: {
+                    color: { value: '{light-color-scheme.foreground.contrast}'}
+                },
+                caption: {
+                    color: { value: '{light-color-scheme.foreground.contrast-secondary}'}
+                }
+            },
+            filled: {
+                overlay: {
+                    background: { value: '{light-color-scheme.background.bg}' }
+                },
+                text: {
+                    color: { value: '{light-color-scheme.foreground.contrast}'}
+                },
+                caption: {
+                    color: { value: '{light-color-scheme.foreground.contrast-secondary}'}
+                }
+            },
+        },
+        'dark-color-scheme': {
+            transparent: {
+                overlay: {
+                    background: { value: '{dark-color-scheme.background.overlay-inverse}' }
+                },
+                text: {
+                    color: { value: '{dark-color-scheme.foreground.contrast}'}
+                },
+                caption: {
+                    color: { value: '{dark-color-scheme.foreground.contrast-secondary}'}
+                }
+            },
+            filled: {
+                overlay: {
+                    background: { value: '{dark-color-scheme.background.bg}' }
+                },
+                text: {
+                    color: { value: '{dark-color-scheme.foreground.contrast}'}
+                },
+                caption: {
+                    color: { value: '{dark-color-scheme.foreground.contrast-secondary}'}
+                }
+            },
+        }
+    }
+}

@@ -1,0 +1,7 @@
+{
+    'tag-list': {
+        size: {
+            'content-gap': { value: '{size.xxs}' }
+        }
+    }
+}

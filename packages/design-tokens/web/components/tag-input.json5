@@ -1,0 +1,15 @@
+{
+    'tag-input': {
+        size: {
+            'padding': {
+                left: { value: '{size.xxs}' },
+                right: { value: '{size.m}' },
+                vertical: { value: '{size.xxs}' }
+            },
+            'content-gap': { value: '{size.s}' }
+        },
+        font: {
+            default: { value: 'text-normal' }
+        }
+    }
+}

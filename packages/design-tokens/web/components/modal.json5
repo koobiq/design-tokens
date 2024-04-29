@@ -1,0 +1,97 @@
+{
+    'modal': {
+        size: {
+            small: {
+                width: { value: '400px'}
+            },
+            medium: {
+                width: { value: '640px'}
+            },
+            large: {
+                width: { value: '960px'}
+            },
+            border: {
+                radius: { value: '{size.s}' }
+            },
+            header: {
+                padding: {
+                    vertical: { value: '{size.l}' },
+                    left: { value: '{size.xxl}' },
+                    right: { value: '{size.5xl}'}
+                }
+            },
+            'close-button': {
+                margin: {
+                    left: { value: '{size.s}'}
+                }
+            },
+            content: {
+                padding: {
+                    horizontal: { value: '{size.xxl}' },
+                    top: { value: 0 },
+                    bottom: { value: '{size.s}' },
+
+                    'top-without-header': { value: '{size.xxl}' },
+                    'bottom-without-footer': { value: '{size.4xl}' }
+                }
+            },
+            footer: {
+                padding: {
+                    horizontal: { value: '{size.xxl}' },
+                    vertical: { value: '{size.xl}' }
+                },
+                'content-gap': {
+                    horizontal: { value: '{size.l}' }
+                }
+            },
+        },
+        font: {
+            header: {value: 'title'},
+            content: {value: 'text-normal'}
+        },
+        'light-color-scheme': {
+            overlay: {
+                background: { value: '{light-color-scheme.background.overlay}' }
+            },
+            container: {
+                background: { value: '{light-color-scheme.background.card}' },
+                'box-shadow': { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.16)' }
+            },
+            'close-button': {
+                color: { value: '{light-color-scheme.icon.contrast}' }
+            },
+            header: {
+                text: {
+                    color: { value: '{light-color-scheme.foreground.contrast}' }
+                }
+            },
+            content: {
+                text: {
+                    color: { value: '{light-color-scheme.foreground.contrast}' }
+                }
+            }
+        },
+        'dark-color-scheme': {
+            overlay: {
+                background: { value: '{dark-color-scheme.background.overlay}' }
+            },
+            container: {
+                background: { value: '{dark-color-scheme.background.card}' },
+                'box-shadow': { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.50);' }
+            },
+            'close-button': {
+                color: { value: '{dark-color-scheme.icon.contrast}' }
+            },
+            header: {
+                text: {
+                    color: { value: '{dark-color-scheme.foreground.contrast}' }
+                }
+            },
+            content: {
+                text: {
+                    color: { value: '{dark-color-scheme.foreground.contrast}' }
+                }
+            }
+        }
+    }
+}

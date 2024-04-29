@@ -1,0 +1,139 @@
+{
+    'form-field': {
+         size: {
+            height: { value: '{size.3xl}' },
+            border: {
+                width: { value: '1px' },
+                radius: { value: '{size.s}' }
+            },
+            icon: {
+                size: { value: '{size.l}' },
+                margin: {
+                    left: { value: '{size.s}' },
+                    right: { value: '{size.s}'}
+                }
+            },
+            'icon-button': {
+                size: { value: '{size.xxl}' },
+                margin: {
+                    right: { value: '{size.xxs}' },
+                    left: { value: '{size.xxs}' }
+                }
+            }
+        },
+        font: {
+            text: { value: 'text-normal' },
+        },
+        'light-color-scheme': {
+            default: {
+                border: {
+                    color: { value: '{light-color-scheme.line.contrast-fade}' }
+                 },
+                background: { value: '{light-color-scheme.background.bg}' },
+                placeholder: { value: '{light-color-scheme.foreground.contrast-tertiary}' },
+                text: { value: '{light-color-scheme.foreground.contrast}' }
+            },
+            states: {
+                focused: {
+                    border: {
+                        color: { value: '{light-color-scheme.states.line.focus-theme}' }
+                    },
+                    background: { value: '{light-color-scheme.background.bg}' },
+                    placeholder: { value: '{light-color-scheme.foreground.contrast-tertiary}' },
+                    text: { value: '{light-color-scheme.foreground.contrast}' },
+                    'focus-outline': { value: '{light-color-scheme.states.line.focus-theme}'}
+                },
+                error: {
+                    border: {
+                        color: { value: '{light-color-scheme.line.error}' }
+                    },
+                    background: { value: '{light-color-scheme.states.background.error-less}' },
+                    placeholder: { value: '{light-color-scheme.foreground.error-tertiary}' },
+                    text: { value: '{light-color-scheme.foreground.error}' }
+                },
+                'error-focused': {
+                    'focus-outline': { value: '{light-color-scheme.states.line.focus-error}' }
+                },
+                autofill: {
+                    border: {
+                        color: { value: '{light-color-scheme.states.line.focus-theme}' }
+                    },
+                    background: { value: '{light-color-scheme.background.theme-fade}' },
+                    placeholder: { value: '{light-color-scheme.foreground.contrast-tertiary}' },
+                    text: { value: '{light-color-scheme.foreground.contrast}' }
+                },
+                disabled: {
+                    border: {
+                        color: { value: '{light-color-scheme.states.line.disabled}' }
+                    },
+                    background: { value: '{light-color-scheme.states.background.disabled}' },
+                    placeholder: { value: '{light-color-scheme.states.foreground.disabled}' },
+                    text: { value: '{light-color-scheme.states.foreground.disabled}' }
+                }
+            }
+        },
+        'dark-color-scheme': {
+            default: {
+                border: {
+                    color: { value: '{dark-color-scheme.line.contrast-fade}' }
+                 },
+                background: { value: '{dark-color-scheme.background.bg}' },
+                placeholder: { value: '{dark-color-scheme.foreground.contrast-tertiary}' },
+                text: { value: '{dark-color-scheme.foreground.contrast}' }
+            },
+            states: {
+                focused: {
+                    border: {
+                        color: { value: '{dark-color-scheme.states.line.focus-theme}' }
+                    },
+                    background: { value: '{dark-color-scheme.background.bg}' },
+                    placeholder: { value: '{dark-color-scheme.foreground.contrast-tertiary}' },
+                    text: { value: '{dark-color-scheme.foreground.contrast}' },
+                    'focus-outline': { value: '{dark-color-scheme.states.line.focus-theme}'}
+                },
+                error: {
+                    border: {
+                        color: { value: '{dark-color-scheme.line.error}' }
+                    },
+                    background: { value: '{dark-color-scheme.states.background.error-less}' },
+                    placeholder: { value: '{dark-color-scheme.foreground.error-tertiary}' },
+                    text: { value: '{dark-color-scheme.foreground.error}' }
+                },
+                'error-focused': {
+                    'focus-outline': { value: '{dark-color-scheme.states.line.focus-error}' }
+                },
+                autofill: {
+                    border: {
+                        color: { value: '{dark-color-scheme.states.line.focus-theme}' }
+                    },
+                    background: { value: '{dark-color-scheme.background.theme-fade}' },
+                    placeholder: { value: '{dark-color-scheme.foreground.contrast-tertiary}' },
+                    text: { value: '{dark-color-scheme.foreground.contrast}' }
+                },
+                disabled: {
+                    border: {
+                        color: { value: '{dark-color-scheme.states.line.disabled}' }
+                    },
+                    background: { value: '{dark-color-scheme.states.background.disabled}' },
+                    placeholder: { value: '{dark-color-scheme.states.foreground.disabled}' },
+                    text: { value: '{dark-color-scheme.states.foreground.disabled}' }
+                }
+            }
+        },
+    },
+    'form-field-hint': {
+        size: {
+            'margin-top': { value: '{size.xxs}' },
+            'gap': { value: '{size.s}' }
+        },
+        font: {
+            text: { value: 'text-compact' }
+        },
+        'light-color-scheme': {
+            text: { value: '{light-color-scheme.foreground.contrast-secondary}' }
+        },
+        'dark-color-scheme': {
+            text: { value: '{dark-color-scheme.foreground.contrast-secondary}' }
+        }
+    }
+}

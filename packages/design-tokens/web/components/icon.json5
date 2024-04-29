@@ -1,0 +1,105 @@
+{
+    icon: {
+        'light-color-scheme': {
+            theme: {
+                color: { value: '{light-color-scheme.icon.theme}' }
+            },
+            contrast: {
+                color: { value: '{light-color-scheme.icon.contrast}' }
+            },
+            'fade-contrast': {
+                color: { value: '{light-color-scheme.icon.contrast-fade}' }
+            },
+            error: {
+                color: { value: '{light-color-scheme.icon.error}' }
+            },
+            success: {
+                color: { value: '{light-color-scheme.icon.success}' }
+            },
+
+            // удалить, когда будут сделаны зависящие компоненты
+            primary: {
+                default: { value: '{light-color-scheme.icon.theme}' },
+                states: {
+                    hover: { value: '{light-color-scheme.states.icon.theme-hover}' },
+                    active: { value: '{light-color-scheme.states.icon.theme-active}' },
+                    disabled: { value: '{light-color-scheme.states.icon.disabled}' }
+                }
+            },
+            secondary: {
+                default: { value: '{light-color-scheme.icon.contrast}' },
+                states: {
+                    hover: { value: '{light-color-scheme.states.icon.contrast-hover}' },
+                    active: { value: '{light-color-scheme.states.icon.contrast-active}' },
+                    disabled: { value: '{light-color-scheme.states.icon.disabled}' }
+                }
+            },
+            info: {
+                default: { value: '{light-color-scheme.icon.contrast-fade}' },
+                states: {
+                    hover: { value: '{light-color-scheme.states.icon.contrast-fade-hover}' },
+                    active: { value: '{light-color-scheme.states.icon.contrast-fade-active}' },
+                    disabled: { value: '{light-color-scheme.states.icon.disabled}' }
+                }
+            },
+            warning: {
+                default: { value: '{light-color-scheme.warning.palette.value.45}' },
+                states: {
+                    hover: { value: '{light-color-scheme.warning.palette.value.40}' },
+                    active: { value: '{light-color-scheme.warning.palette.value.35}' },
+                    disabled: { value: '{light-color-scheme.warning.palette.value.80}' }
+                }
+            }
+        },
+        'dark-color-scheme': {
+            theme: {
+                color: { value: '{dark-color-scheme.icon.theme}' }
+            },
+            contrast: {
+                color: { value: '{dark-color-scheme.icon.contrast}' }
+            },
+            'fade-contrast': {
+                color: { value: '{dark-color-scheme.icon.contrast-fade}' }
+            },
+            error: {
+                color: { value: '{dark-color-scheme.icon.error}' }
+            },
+            success: {
+                color: { value: '{dark-color-scheme.icon.success}' }
+            },
+            // переписать в 2.0
+            secondary: {
+                default: { value: '{dark-color-scheme.secondary.palette.value.70}' },
+                states: {
+                    hover: { value: '{dark-color-scheme.secondary.palette.value.50}' },
+                    active: { value: '{dark-color-scheme.secondary.palette.value.80}' },
+                    disabled: { value: 'mix({icon.dark-color-scheme.secondary.default}, transparent, 30%)' }
+                }
+            },
+            primary: {
+                default: { value: '{dark-color-scheme.theme.palette.value.70}' },
+                states: {
+                    hover: { value: '{dark-color-scheme.theme.palette.value.50}' },
+                    active: { value: '{dark-color-scheme.theme.palette.value.80}' },
+                    disabled: { value: 'mix({icon.dark-color-scheme.primary.default}, transparent, 30%)' }
+                }
+            },
+            info: {
+                default: { value: '{dark-color-scheme.info.palette.value.70}' },
+                states: {
+                    hover: { value: '{dark-color-scheme.info.palette.value.50}' },
+                    active: { value: '{dark-color-scheme.info.palette.value.80}' },
+                    disabled: { value: 'mix({icon.dark-color-scheme.info.default}, transparent, 30%)' }
+                }
+            },
+            warning: {
+                default: { value: '{dark-color-scheme.warning.palette.value.50}' },
+                states: {
+                    hover: { value: '{dark-color-scheme.warning.palette.value.35}' },
+                    active: { value: '{dark-color-scheme.warning.palette.value.60}' },
+                    disabled: { value: 'mix({icon.dark-color-scheme.warning.default}, transparent, 30%)' }
+                }
+            }
+        }
+    }
+}

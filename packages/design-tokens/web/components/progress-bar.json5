@@ -1,0 +1,46 @@
+{
+    'progress-bar': {
+         size: {
+            container: {
+                'content-gap': { value: '{size.s}' },
+                border: {
+                    radius: { value: '{size.3xs}' }
+                }
+            },
+            bar: {
+                height: { value: '{size.xxs}' },
+                border: {
+                    radius: { value: '{size.3xs}' }
+                }
+            }
+        },
+        font: {
+            label: { value: 'text-normal'},
+            caption: { value: 'text-compact-strong' } 
+        },
+        'light-color-scheme': {
+            bar: {
+                background: { value: '{light-color-scheme.background.contrast-fade}' },
+                foreground: { value: '{light-color-scheme.icon.theme}'}
+            },
+            text: {
+                color: { value: '{light-color-scheme.foreground.contrast}' }
+            },
+            caption: {
+                color: { value: '{light-color-scheme.foreground.contrast-secondary}' }
+            }
+        },
+        'dark-color-scheme': {
+            bar: {
+                background: { value: '{dark-color-scheme.background.contrast-fade}' },
+                foreground: { value: '{dark-color-scheme.icon.theme}'}
+            },
+            text: {
+                color: { value: '{dark-color-scheme.foreground.contrast}' }
+            },
+            caption: {
+                color: { value: '{dark-color-scheme.foreground.contrast-secondary}' }
+            }
+        },
+    }
+}

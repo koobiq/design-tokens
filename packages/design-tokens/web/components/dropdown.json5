@@ -1,0 +1,30 @@
+{
+    dropdown: {
+        size: {
+            container: {
+                width: {
+                    min: { value: '{size.7xl}' },
+                    max: { value: '640px' }
+                },
+                padding: {
+                    vertical: { value: '{size.xxs}'}
+                },
+                border: {
+                    radius: { value: '{size.s}' }
+                }
+            }
+        },
+        'light-color-scheme': {
+            container: {
+                background: { value: '{light-color-scheme.background.card}' },
+                'box-shadow': { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.16)'}
+            }
+        },
+        'dark-color-scheme': {
+            container: {
+                background: { value: '{dark-color-scheme.background.card}' },
+                'box-shadow': { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.50)'}
+            }
+        }
+    }
+}

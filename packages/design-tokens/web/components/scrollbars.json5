@@ -1,0 +1,80 @@
+{
+    scrollbar: {
+        size: {
+            track: {
+                dimension: { value: '{size.l}'},
+                padding: {
+                    vertical: { value: '{size.3xs}'},
+                    horizontal: { value: '{size.3xs}'}
+                }
+            },
+            thumb: {
+                width: { value: '{size.s}' },
+                'min-size': { value: '{size.xl}'},
+                border: {
+                    radius: { value: '{size.s}' },
+                }
+            }
+        },
+        'light-color-scheme': {
+            'thumb': {
+                default: {
+                    background: { value: '{light-color-scheme.icon.contrast-fade}' }
+                },
+                hover: {
+                    background: { value: '{light-color-scheme.states.icon.contrast-fade-hover}' }
+                },
+                active: {
+                    background: { value: '{light-color-scheme.states.icon.contrast-fade-active}' }
+                },
+                disabled: {
+                    background: { value: '{light-color-scheme.states.icon.disabled}' }
+                }
+            },
+            track: {
+                default: {
+                    border: { value: 'transparent' },
+                    background: { value: 'transparent' }
+                },
+                hover: {
+                    border: { value: 'transparent' },
+                    background: { value: 'transparent' }
+                },
+                active: {
+                    border: { value: 'transparent' },
+                    background: { value: 'transparent' }
+                }
+            }
+        },
+        'dark-color-scheme': {
+            'thumb': {
+                default: {
+                    background: { value: '{dark-color-scheme.icon.contrast-fade}' }
+                },
+                hover: {
+                    background: { value: '{dark-color-scheme.states.icon.contrast-fade-hover}' }
+                },
+                active: {
+                    background: { value: '{dark-color-scheme.states.icon.contrast-fade-active}' }
+                },
+                disabled: {
+                    background: { value: '{dark-color-scheme.states.icon.disabled}' }
+                }
+            },
+            track: {
+                default: {
+                    border: { value: 'transparent' },
+                    background: { value: 'transparent' }
+                },
+                hover: {
+                    border: { value: 'transparent' },
+                    background: { value: 'transparent' }
+                },
+                active: {
+                    border: { value: 'transparent' },
+                    background: { value: 'transparent' }
+                }
+            }
+        },
+    }
+}

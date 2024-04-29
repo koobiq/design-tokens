@@ -1,0 +1,52 @@
+{
+    'progress-spinner': {
+        size: {
+            compact: {
+                size: { value: '{size.l}' },
+                stroke: {
+                    width: { value: '2px' }
+                },
+                'content-gap': {
+                    vertical: { value: '{size.3xs}' },
+                    horizontal: { value: '{size.s}' }
+                }
+            },
+            big: {
+                size: { value: '{size.5xl}' },
+                stroke: {
+                    width: { value: '3px' }
+                },
+                'content-gap': {
+                    vertical: { value: '{size.3xs}' },
+                    horizontal: { value: '{size.s}' }
+                }
+            }
+        },
+        font: {
+            label: { value: 'text-normal'},
+            caption: { value: 'text-compact-strong' } 
+        },
+        'light-color-scheme': {
+            circle: {
+                background: { value: '{light-color-scheme.icon.theme}' },
+            },
+            text: {
+                color: { value: '{light-color-scheme.foreground.contrast}' }
+            },
+            caption: {
+                color: { value: '{light-color-scheme.foreground.contrast-secondary}' }
+            }
+        },
+        'dark-color-scheme': {
+            circle: {
+                background: { value: '{dark-color-scheme.icon.theme}' },
+            },
+            text: {
+                color: { value: '{dark-color-scheme.foreground.contrast}' }
+            },
+            caption: {
+                color: { value: '{dark-color-scheme.foreground.contrast-secondary}' }
+            }
+        },
+    }
+}

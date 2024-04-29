@@ -1,0 +1,389 @@
+{
+    'file-upload': {
+        size: {
+            single: {
+                container: {
+                    border: {
+                        radius: { value: '{size.s}' },
+                        width: { value: '1px'}
+                    },
+                    'content-gap': {
+                        horizontal: {value: '{size.s}'}
+                    },
+                    padding: {
+                        vertical: { value: '{size.m}'},
+                        horizontal: { value: '{size.m}'}
+                    }
+                },
+                'text-block': {
+                        padding: {
+                            vertical: { value: '{size.xxs}' }
+                        },
+                        'content-gap': {
+                            horizontal: {value: '{size.xxs}' }
+                        }
+                }
+            },
+            multiple: {
+                big: {
+                    container: {
+                        'min-height': { value: '160px'},
+                        'min-width': { value: '320px'},
+                        border: {
+                            radius: { value: '{size.s}' },
+                            width: { value: '1px'},
+                        },
+                        'content-gap': {
+                            horizontal: { value: '{size.m}' }
+                        },
+                        padding: {
+                            vertical: { value: '{size.xxl}'},
+                            horizontal: { value: '{size.xxl}'}
+                        }
+                    },
+                    'text-block': {
+                        'content-gap': {
+                            vertical: { value: '{size.xxs}' },
+                            horizontal: {value: '{size.xxs}'}
+                        },
+                    },
+                    'grid': {
+                        cell: {
+                            padding: {
+                                horizontal: { value: '{size.s}'},
+                                vertical: { value: '{size.s}'}
+                            },
+                            'content-gap': {
+                                horizontal: { value: '{size.xxs}'}
+                            }
+                        }
+                    }
+                }
+            },
+        },
+        font: {
+            single: {
+                'text-block': { value: 'text-normal' }
+            },
+            multiple: {
+                title: { value: 'subheading' },
+                'text-block': { value: 'text-normal' },
+                grid: { value: 'text-normal' }
+            }
+        },
+        'light-color-scheme': {
+            single: {
+                default: {
+                    container: {
+                        border: { value: '{light-color-scheme.line.contrast-fade}'},
+                        background: { value: '{light-color-scheme.background.bg}'},
+                    },
+                    'upload-icon': {
+                        color: { value: '{light-color-scheme.icon.contrast-fade}' }
+                    },
+                    'left-icon': {
+                        color: { value: '{light-color-scheme.icon.contrast-fade}' }
+                    },
+                    'text-block': {
+                       color: { value: '{light-color-scheme.foreground.contrast}' }
+                    },
+                    'icon-button': {
+                        color: { value: '{light-color-scheme.icon.contrast}' }
+                    }
+                },
+                states: {
+                    'on-drag': {
+                        container: {
+                            border: { value: '{light-color-scheme.line.theme-fade}'},
+                            background: { value: '{light-color-scheme.background.theme-fade}'},
+                        },
+                        'upload-icon': {
+                            color: { value: '{light-color-scheme.icon.contrast-fade}' }
+                        },
+                       'left-icon': {
+                            color: { value: '{light-color-scheme.icon.contrast-fade}' }
+                        },
+                        'text-block': {
+                            color: { value: '{light-color-scheme.foreground.contrast}' }
+                        }
+                    },
+                    error: {
+                        container: {
+                            border: { value: '{light-color-scheme.line.error}'},
+                            background: { value: '{light-color-scheme.states.background.error-less}'},
+                        },
+                        'left-icon': {
+                            color: { value: '{light-color-scheme.icon.error}' }
+                        },
+                        'text-block': {
+                            color: { value: '{light-color-scheme.foreground.error}' }
+                        }
+                    },
+                    disabled: {
+                        container: {
+                            border: { value: '{light-color-scheme.states.line.disabled}'},
+                            background: { value: '{light-color-scheme.states.background.disabled}'},
+                        },
+                        'upload-icon': {
+                            color: { value: '{light-color-scheme.states.icon.disabled}' }
+                        },
+                        'left-icon': {
+                            color: { value: '{light-color-scheme.states.icon.disabled}' }
+                        },
+                        'text-block': {
+                            color: { value: '{light-color-scheme.states.foreground.disabled}' }
+                        }
+                    },
+                    'focused': {
+                        'focus-outline': {
+                            color: { value: '{light-color-scheme.states.line.focus-theme}'}
+                        }
+                    }
+                }
+            },
+            multiple: {
+                default: {
+                    container: {
+                        border: { value: '{light-color-scheme.line.contrast-fade}'},
+                        background: { value: '{light-color-scheme.background.bg}'},
+                    },
+                    'upload-icon': {
+                        color: { value: '{light-color-scheme.icon.contrast-fade}' }
+                    },
+                    'left-icon': {
+                        color: { value: '{light-color-scheme.icon.contrast-fade}' }
+                    },
+                    'text-block': {
+                       color: { value: '{light-color-scheme.foreground.contrast}' }
+                    },
+                    'icon-button': {
+                        color: { value: '{light-color-scheme.icon.contrast}' }
+                    },
+                    grid: {
+                        divider: {
+                            color: { value: '{light-color-scheme.line.contrast-fade}' }
+                         }
+                    }
+                },
+                states: {
+                    'on-drag': {
+                        container: {
+                            border: { value: '{light-color-scheme.line.theme-fade}' },
+                            background: { value: '{light-color-scheme.background.theme-fade}' }
+                        },
+                        'upload-icon': {
+                            color: { value: '{light-color-scheme.icon.contrast-fade}' }
+                        },
+                        'left-icon': {
+                            color: { value: '{light-color-scheme.icon.contrast-fade}' }
+                        },
+                        'icon-button': {
+                            color: { value: '{light-color-scheme.icon.contrast}' }
+                         },
+                        'text-block': {
+                            color: { value: '{light-color-scheme.foreground.contrast}' }
+                        },
+                        grid: {
+                            divider: {
+                                color: { value: '{light-color-scheme.line.theme-fade}' }
+                            }
+                        }
+                    },
+                    error: {
+                        grid: {
+                            cell: {
+                                background: { value: '{light-color-scheme.states.background.error-less}'}
+                            }
+                        },
+                        'left-icon': {
+                            color: { value: '{light-color-scheme.icon.error}' }
+                        },
+                        'text-block': {
+                            color: { value: '{light-color-scheme.foreground.error}' }
+                        },
+                        'icon-button': {
+                            color: { value: '{light-color-scheme.icon.error}' }
+                        }
+                    },
+                    disabled: {
+                        container: {
+                            border: { value: '{light-color-scheme.states.line.disabled}'},
+                            background: { value: '{light-color-scheme.states.background.disabled}'},
+                        },
+                        'upload-icon': {
+                            color: { value: '{light-color-scheme.states.icon.disabled}' }
+                        },
+                        'left-icon': {
+                            color: { value: '{light-color-scheme.states.icon.disabled}' }
+                        },
+                        'text-block': {
+                            color: { value: '{light-color-scheme.states.foreground.disabled}' }
+                        },
+                        grid: {
+                            divider: {
+                                color: { value: '{light-color-scheme.states.line.disabled}' }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        'dark-color-scheme': {
+            single: {
+                default: {
+                    container: {
+                        border: { value: '{dark-color-scheme.line.contrast-fade}'},
+                        background: { value: '{dark-color-scheme.background.bg}'},
+                    },
+                    'upload-icon': {
+                        color: { value: '{dark-color-scheme.icon.contrast-fade}' }
+                    },
+                    'left-icon': {
+                        color: { value: '{dark-color-scheme.icon.contrast-fade}' }
+                    },
+                    'text-block': {
+                       color: { value: '{dark-color-scheme.foreground.contrast}' }
+                    },
+                    'icon-button': {
+                        color: { value: '{dark-color-scheme.icon.contrast}' }
+                    }
+                },
+                states: {
+                    'on-drag': {
+                        container: {
+                            border: { value: '{dark-color-scheme.line.theme-fade}'},
+                            background: { value: '{dark-color-scheme.background.theme-fade}'},
+                        },
+                        'upload-icon': {
+                            color: { value: '{dark-color-scheme.icon.contrast-fade}' }
+                        },
+                       'left-icon': {
+                            color: { value: '{dark-color-scheme.icon.contrast-fade}' }
+                        },
+                        'text-block': {
+                            color: { value: '{dark-color-scheme.foreground.contrast}' }
+                        }
+                    },
+                    error: {
+                        container: {
+                            border: { value: '{dark-color-scheme.line.error}'},
+                            background: { value: '{dark-color-scheme.states.background.error-less}'},
+                        },
+                        'left-icon': {
+                            color: { value: '{dark-color-scheme.icon.error}' }
+                        },
+                        'text-block': {
+                            color: { value: '{dark-color-scheme.foreground.error}' }
+                        }
+                    },
+                    disabled: {
+                        container: {
+                            border: { value: '{dark-color-scheme.states.line.disabled}'},
+                            background: { value: '{dark-color-scheme.states.background.disabled}'},
+                        },
+                        'upload-icon': {
+                            color: { value: '{dark-color-scheme.states.icon.disabled}' }
+                        },
+                        'left-icon': {
+                            color: { value: '{dark-color-scheme.states.icon.disabled}' }
+                        },
+                        'text-block': {
+                            color: { value: '{dark-color-scheme.states.foreground.disabled}' }
+                        }
+                    },
+                    'focused': {
+                        'focus-outline': {
+                            color: { value: '{dark-color-scheme.states.line.focus-theme}'}
+                        }
+                    }
+                }
+            },
+            multiple: {
+                default: {
+                    container: {
+                        border: { value: '{dark-color-scheme.line.contrast-fade}'},
+                        background: { value: '{dark-color-scheme.background.bg}'},
+                    },
+                    'upload-icon': {
+                        color: { value: '{dark-color-scheme.icon.contrast-fade}' }
+                    },
+                    'left-icon': {
+                        color: { value: '{dark-color-scheme.icon.contrast-fade}' }
+                    },
+                    'text-block': {
+                       color: { value: '{dark-color-scheme.foreground.contrast}' }
+                    },
+                    'icon-button': {
+                        color: { value: '{dark-color-scheme.icon.contrast}' }
+                    },
+                    grid: {
+                        divider: {
+                            color: { value: '{dark-color-scheme.line.contrast-fade}' }
+                         }
+                    }
+                },
+                states: {
+                    'on-drag': {
+                        container: {
+                            border: { value: '{dark-color-scheme.line.theme-fade}' },
+                            background: { value: '{dark-color-scheme.background.theme-fade}' }
+                        },
+                        'upload-icon': {
+                            color: { value: '{dark-color-scheme.icon.contrast-fade}' }
+                        },
+                        'left-icon': {
+                            color: { value: '{dark-color-scheme.icon.contrast-fade}' }
+                        },
+                        'icon-button': {
+                            color: { value: '{dark-color-scheme.icon.contrast}' }
+                         },
+                        'text-block': {
+                            color: { value: '{dark-color-scheme.foreground.contrast}' }
+                        },
+                        grid: {
+                            divider: {
+                                color: { value: '{dark-color-scheme.line.theme-fade}' }
+                            }
+                        }
+                    },
+                    error: {
+                        grid: {
+                            cell: {
+                                background: { value: '{dark-color-scheme.states.background.error-less}'}
+                            }
+                        },
+                        'left-icon': {
+                            color: { value: '{dark-color-scheme.icon.error}' }
+                        },
+                        'text-block': {
+                            color: { value: '{dark-color-scheme.foreground.error}' }
+                        },
+                        'icon-button': {
+                            color: { value: '{dark-color-scheme.icon.error}' }
+                        }
+                    },
+                    disabled: {
+                        container: {
+                            border: { value: '{dark-color-scheme.states.line.disabled}'},
+                            background: { value: '{dark-color-scheme.states.background.disabled}'},
+                        },
+                        'upload-icon': {
+                            color: { value: '{dark-color-scheme.states.icon.disabled}' }
+                        },
+                        'left-icon': {
+                            color: { value: '{dark-color-scheme.states.icon.disabled}' }
+                        },
+                        'text-block': {
+                            color: { value: '{dark-color-scheme.states.foreground.disabled}' }
+                        },
+                        grid: {
+                            divider: {
+                                color: { value: '{dark-color-scheme.states.line.disabled}' }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

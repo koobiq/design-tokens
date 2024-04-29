@@ -1,0 +1,42 @@
+{
+    'description-list': {
+        size: {
+            horizontal: {
+                'content-gap': {
+                    horizontal: { value: '{size.l}' },
+                },
+                'gap': {
+                    vertical: { value: '{size.l}' }
+                }
+            },
+            vertical: {
+                'content-gap': {
+                    vertical: { value: '{size.3xs}' }
+                },
+                'gap': {
+                    vertical: { value: '{size.m}' }
+                }
+            }
+        },
+        font: {
+            term: { value: 'text-normal' },
+            description: { value: 'text-normal' }
+        },
+        'light-color-scheme': {
+            term: {
+                color: { value: '{light-color-scheme.foreground.text-less-contrast}'}
+            },
+            description: {
+                color: { value: '{light-color-scheme.foreground.contrast}'}
+            }
+        },
+        'dark-color-scheme': {
+            term: {
+                color: { value: '{dark-color-scheme.foreground.text-less-contrast}'}
+            },
+            description: {
+                color: { value: '{dark-color-scheme.foreground.contrast}'}
+            }
+        }
+    }
+}

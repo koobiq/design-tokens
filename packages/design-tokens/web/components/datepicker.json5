@@ -1,0 +1,127 @@
+{
+    datepicker: {
+        size: {
+            container: {
+                padding: {
+                    vertical: { value: '{size.m}' }
+                },
+                border: {
+                    radius: { value: '{size.s}'}
+                }
+            },
+            header: {
+                padding: {
+                    horizontal: { value: '{size.xxs}'}
+                },
+                margin: {
+                    bottom: { value: '{size.3xs}'}
+                }
+            },
+            grid: {
+                padding: {
+                    horizontal: { value: '{size.m}'}
+                },
+                'content-gap': {
+                    vertical: { value: '{size.3xs}' }
+                },
+                divider: {
+                    height: { value: '1px' }
+                },
+                cell: {
+                    padding: {
+                        horizontal: { value: '{size.s}' },
+                        vertical: { value: '{size.s}'}
+                     },
+                     border: {
+                        radius: { value: '{size.s}'}
+                     }
+                }
+            }
+        },
+        font: {
+            text: { value: 'text-normal' }
+        },
+        'light-color-scheme': {
+            container: {
+                background: {value: '{light-color-scheme.background.card}'},
+                'box-shadow': { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.16)' }
+            },
+            header: {
+                text: {value: '{light-color-scheme.foreground.contrast-tertiary}'},
+                divider: {value: '{light-color-scheme.line.contrast-fade}'}
+            },
+            grid: {
+                cell: {
+                    default: {
+                        background: {value: 'transparent'},
+                        text: { value: '{light-color-scheme.foreground.contrast}' }
+                    },
+                    today: {
+                        background: {value: 'transparent'},
+                        text: { value: '{light-color-scheme.foreground.theme}' }
+                    },
+                    states: {
+                        hover: {
+                             background: {value: '{light-color-scheme.states.background.ghost-hover}'}
+                        },
+                        active: {
+                            background: {value: '{light-color-scheme.states.background.ghost-active}'}
+                        },
+                        selected: {
+                            background: {value: '{light-color-scheme.background.contrast}'},
+                            text: { value: '{light-color-scheme.foreground.white}' }
+                        },
+                        'selected-hover': {
+                            background: {value: '{light-color-scheme.states.background.contrast-active}'}
+                        },
+                        disabled: {
+                            background: {value: 'transparent'},
+                            text: { value: '{light-color-scheme.states.foreground.disabled}' }
+                        }
+                    }
+                }
+            }
+        },
+         'dark-color-scheme': {
+            container: {
+                background: {value: '{dark-color-scheme.background.card}'},
+                'box-shadow': { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.50)' }
+            },
+            header: {
+                text: {value: '{dark-color-scheme.foreground.contrast-tertiary}'},
+                divider: {value: '{dark-color-scheme.line.contrast-fade}'}
+            },
+            grid: {
+                cell: {
+                    default: {
+                        background: {value: 'transparent'},
+                        text: { value: '{dark-color-scheme.foreground.contrast}' }
+                    },
+                    today: {
+                        background: {value: 'transparent'},
+                        text: { value: '{dark-color-scheme.foreground.theme}' }
+                    },
+                    states: {
+                        hover: {
+                             background: {value: '{dark-color-scheme.states.background.ghost-hover}'}
+                        },
+                        active: {
+                            background: {value: '{dark-color-scheme.states.background.ghost-active}'}
+                        },
+                        selected: {
+                            background: {value: '{dark-color-scheme.background.contrast}'},
+                            text: { value: '{dark-color-scheme.foreground.white}' }
+                        },
+                        'selected-hover': {
+                            background: {value: '{dark-color-scheme.states.background.contrast-active}'}
+                        },
+                        disabled: {
+                            background: {value: 'transparent'},
+                            text: { value: '{dark-color-scheme.states.foreground.disabled}' }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,62 @@
+{
+    tooltip: {
+        size: {
+            'max-width': { value: '300px' },
+            border: {
+                radius: { value: '{size.s}' }
+            },
+            padding: {
+                horizontal: { value: '{size.l}'},
+                vertical: { value: '{size.s}' }
+            },
+            arrow: {
+                size: { value: '{size.m}' }
+            }
+        },
+        font: {
+            default: { value: 'text-normal' },
+        },
+        'light-color-scheme': {
+            contrast: {
+                'fade-on': {
+                    background: { value: '{light-color-scheme.background.card}' },
+                    text: { value: '{light-color-scheme.foreground.contrast}' },
+                    shadow: { value: '0 2px 4px 0 rgba(39, 51, 62, 0.2)' }
+                },
+                'fade-off': {
+                    background: { value: '{light-color-scheme.background.night}' },
+                    text: { value: '{light-color-scheme.foreground.white}' },
+                    shadow: { value: '0 2px 4px 0 rgba(39, 51, 62, 0.2)' }
+                }
+            },
+            theme: {
+                'fade-off': {
+                    background: { value: '{light-color-scheme.background.theme}' },
+                    text: { value: '{light-color-scheme.foreground.white}' },
+                    shadow: { value: '0 2px 4px 0 rgba(39, 51, 62, 0.2)' }
+                }
+            }
+        },
+        'dark-color-scheme': {
+            contrast: {
+                'fade-on': {
+                    background: { value: '{dark-color-scheme.background.card}' },
+                    text: { value: '{dark-color-scheme.foreground.contrast}' },
+                    shadow: { value: '0 2px 4px 0 rgba(39, 51, 62, 0.5)' }
+                },
+                'fade-off': {
+                    background: { value: '{dark-color-scheme.background.night}' },
+                    text: { value: '{dark-color-scheme.foreground.white}' },
+                    shadow: { value: '0 2px 4px 0 rgba(39, 51, 62, 0.5)' }
+                }
+            },
+            theme: {
+                'fade-off': {
+                    background: { value: '{dark-color-scheme.background.theme}' },
+                    text: { value: '{dark-color-scheme.foreground.white}' },
+                    shadow: { value: '0 2px 4px 0 rgba(39, 51, 62, 0.5)' }
+                }
+            }
+        },
+    }
+}

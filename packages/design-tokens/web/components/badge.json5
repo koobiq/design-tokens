@@ -1,0 +1,256 @@
+{
+    badge: {
+        'light-color-scheme': {
+            filled: {
+                'fade-off': {
+                    theme: {
+                        background: { value: '{light-color-scheme.background.theme}' },
+                        color: { value: '{light-color-scheme.foreground.white}' },
+                        caption: { value: '{light-color-scheme.foreground.white-secondary}' },
+                        icon: { value: '{light-color-scheme.icon.white}' }
+                    },
+                    success: {
+                        background: { value: '{light-color-scheme.background.success}' },
+                        color: { value: '{light-color-scheme.foreground.white}' },
+                        caption: { value: '{light-color-scheme.foreground.white-secondary}' },
+                        icon: { value: '{light-color-scheme.icon.white}' }
+                    },
+                    warning: {
+                        background: { value: '{light-color-scheme.background.warning}' },
+                        color: { value: '{light-color-scheme.foreground.white}' },
+                        caption: { value: '{light-color-scheme.foreground.white-secondary}' },
+                        icon: { value: '{light-color-scheme.icon.white}' }
+                    },
+                    error: {
+                        background: { value: '{light-color-scheme.background.error}' },
+                        color: { value: '{light-color-scheme.foreground.white}' },
+                        caption: { value: '{light-color-scheme.foreground.white-secondary}' },
+                        icon: { value: '{light-color-scheme.icon.white}' }
+                    }
+                },
+                'fade-on': {
+                    theme: {
+                        background: { value: '{light-color-scheme.background.theme-fade}' },
+                        color: { value: '{light-color-scheme.foreground.theme}' },
+                        caption: { value: '{light-color-scheme.foreground.theme-secondary}' },
+                        icon: { value: '{light-color-scheme.icon.theme}' }
+                    },
+                    contrast: {
+                        background: { value: '{light-color-scheme.background.contrast-fade}' },
+                        color: { value: '{light-color-scheme.foreground.contrast}' },
+                        caption: { value: '{light-color-scheme.foreground.contrast-secondary}'},
+                        icon: { value: '{light-color-scheme.icon.contrast-fade}' }
+                    },
+                    success: {
+                        background: { value: '{light-color-scheme.background.success-fade}' },
+                        color: { value: '{light-color-scheme.foreground.success}' },
+                        caption: { value: '{light-color-scheme.foreground.success-secondary}' },
+                        icon: { value: '{light-color-scheme.icon.success}' }
+                    },
+                    warning: {
+                        background: { value: '{light-color-scheme.background.warning-fade}' },
+                        color: { value: '{light-color-scheme.foreground.warning}' },
+                        caption: { value: '{light-color-scheme.foreground.warning-secondary}' },
+                        icon: { value: '{light-color-scheme.icon.warning}' }
+                    },
+                    error: {
+                        background: { value: '{light-color-scheme.background.error-fade}' },
+                        color: { value: '{light-color-scheme.foreground.error}' },
+                        caption: { value: '{light-color-scheme.foreground.error-secondary}' },
+                        icon: { value: '{light-color-scheme.icon.error}' }
+                    }
+                }
+            },
+            outline: {
+                'fade-on': {
+                    theme: {
+                        background: { value: 'transparent' },
+                        color: { value: '{light-color-scheme.foreground.theme}' },
+                        border: { value: '{light-color-scheme.line.theme-fade}' },
+                        caption: { value: '{light-color-scheme.foreground.theme-secondary}' },
+                        icon: { value: '{light-color-scheme.icon.theme}' }
+                    },
+                    contrast: {
+                        background: { value: 'transparent' },
+                        color: { value: '{light-color-scheme.foreground.contrast}' },
+                        border: { value: '{light-color-scheme.line.contrast-fade}' },
+                        caption: { value: '{light-color-scheme.foreground.contrast-secondary}' },
+                        icon: { value: '{light-color-scheme.icon.contrast-fade}' }
+                    },
+                    success: {
+                        background: { value: 'transparent' },
+                        color: { value: '{light-color-scheme.foreground.success}' },
+                        border: { value: '{light-color-scheme.line.success-fade}' },
+                        caption: { value: '{light-color-scheme.foreground.success-secondary}' },
+                        icon: { value: '{light-color-scheme.icon.success}' }
+                    },
+                    warning: {
+                        background: { value: 'transparent' },
+                        color: { value: '{light-color-scheme.foreground.warning}' },
+                        border: { value: '{light-color-scheme.line.warning-fade}' },
+                        caption: { value: '{light-color-scheme.foreground.warning-secondary}' },
+                        icon: { value: '{light-color-scheme.icon.warning}' }
+                    },
+                    error: {
+                        background: { value: 'transparent' },
+                        color: { value: '{light-color-scheme.foreground.error}' },
+                        border: { value: '{light-color-scheme.line.error-fade}' },
+                        caption: { value: '{light-color-scheme.foreground.error-secondary}' },
+                        icon: { value: '{light-color-scheme.icon.error}' }
+                    }
+                }
+            }
+        },
+        'dark-color-scheme': {
+            filled: {
+                'fade-off': {
+                    theme: {
+                        background: { value: '{dark-color-scheme.background.theme}' },
+                        color: { value: '{dark-color-scheme.foreground.white}' },
+                        caption: { value: '{dark-color-scheme.foreground.white-secondary}' },
+                        icon: { value: '{dark-color-scheme.icon.white}' }
+                    },
+                    success: {
+                        background: { value: '{dark-color-scheme.background.success}' },
+                        color: { value: '{dark-color-scheme.foreground.white}' },
+                        caption: { value: '{dark-color-scheme.foreground.white-secondary}' },
+                        icon: { value: '{dark-color-scheme.icon.white}' }
+                    },
+                    warning: {
+                        background: { value: '{dark-color-scheme.background.warning}' },
+                        color: { value: '{dark-color-scheme.foreground.white}' },
+                        caption: { value: '{dark-color-scheme.foreground.white-secondary}' },
+                        icon: { value: '{dark-color-scheme.icon.white}' }
+                    },
+                    error: {
+                        background: { value: '{dark-color-scheme.background.error}' },
+                        color: { value: '{dark-color-scheme.foreground.white}' },
+                        caption: { value: '{dark-color-scheme.foreground.white-secondary}' },
+                        icon: { value: '{dark-color-scheme.icon.white}' }
+                    }
+                },
+                'fade-on': {
+                    theme: {
+                        background: { value: '{dark-color-scheme.background.theme-fade}' },
+                        color: { value: '{dark-color-scheme.foreground.theme}' },
+                        caption: { value: '{dark-color-scheme.foreground.theme-secondary}' },
+                        icon: { value: '{dark-color-scheme.icon.theme}' }
+                    },
+                    contrast: {
+                        background: { value: '{dark-color-scheme.background.contrast-fade}' },
+                        color: { value: '{dark-color-scheme.foreground.contrast}' },
+                        caption: { value: '{dark-color-scheme.foreground.contrast-secondary}'},
+                        icon: { value: '{dark-color-scheme.icon.contrast-fade}' }
+                    },
+                    success: {
+                        background: { value: '{dark-color-scheme.background.success-fade}' },
+                        color: { value: '{dark-color-scheme.foreground.success}' },
+                        caption: { value: '{dark-color-scheme.foreground.success-secondary}' },
+                        icon: { value: '{dark-color-scheme.icon.success}' }
+                    },
+                    warning: {
+                        background: { value: '{dark-color-scheme.background.warning-fade}' },
+                        color: { value: '{dark-color-scheme.foreground.warning}' },
+                        caption: { value: '{dark-color-scheme.foreground.warning-secondary}' },
+                        icon: { value: '{dark-color-scheme.icon.warning}' }
+                    },
+                    error: {
+                        background: { value: '{dark-color-scheme.background.error-fade}' },
+                        color: { value: '{dark-color-scheme.foreground.error}' },
+                        caption: { value: '{dark-color-scheme.foreground.error-secondary}' },
+                        icon: { value: '{dark-color-scheme.icon.error}' }
+                    }
+                }
+            },
+            outline: {
+                'fade-on': {
+                    theme: {
+                        background: { value: 'transparent' },
+                        color: { value: '{dark-color-scheme.foreground.theme}' },
+                        border: { value: '{dark-color-scheme.line.theme-fade}' },
+                        caption: { value: '{dark-color-scheme.foreground.theme-secondary}' },
+                        icon: { value: '{dark-color-scheme.icon.theme}' }
+                    },
+                    contrast: {
+                        background: { value: 'transparent' },
+                        color: { value: '{dark-color-scheme.foreground.contrast}' },
+                        border: { value: '{dark-color-scheme.line.contrast-fade}' },
+                        caption: { value: '{dark-color-scheme.foreground.contrast-secondary}' },
+                        icon: { value: '{dark-color-scheme.icon.contrast-fade}' }
+                    },
+                    success: {
+                        background: { value: 'transparent' },
+                        color: { value: '{dark-color-scheme.foreground.success}' },
+                        border: { value: '{dark-color-scheme.line.success-fade}' },
+                        caption: { value: '{dark-color-scheme.foreground.success-secondary}' },
+                        icon: { value: '{dark-color-scheme.icon.success}' }
+                    },
+                    warning: {
+                        background: { value: 'transparent' },
+                        color: { value: '{dark-color-scheme.foreground.warning}' },
+                        border: { value: '{dark-color-scheme.line.warning-fade}' },
+                        caption: { value: '{dark-color-scheme.foreground.warning-secondary}' },
+                        icon: { value: '{dark-color-scheme.icon.warning}' }
+                    },
+                    error: {
+                        background: { value: 'transparent' },
+                        color: { value: '{dark-color-scheme.foreground.error}' },
+                        border: { value: '{dark-color-scheme.line.error-fade}' },
+                        caption: { value: '{dark-color-scheme.foreground.error-secondary}' },
+                        icon: { value: '{dark-color-scheme.icon.error}' }
+                    }
+                }
+            }
+        },
+        size: {
+            normal: {
+                icon: {
+                    left: {
+                        width: { value: '{size.l}' },
+                        height: { value: '{size.l}' },
+                        'margin-right': { value: '{size.xxs}' }
+                    },
+                    right: {
+                        width: { value: '{size.l}' },
+                        height: { value: '{size.l}' },
+                        'margin-left': { value: '{size.xxs}' }
+                    }
+                },
+                'vertical-padding': { value: '{size.xxs}' },
+                'horizontal-padding': { value: '{size.s}' },
+                'content-padding': { value: '{size.xxs}' },
+                'border-width': { value: '{size.border-width}' },
+                'border-radius': { value: '{size.xxs}' }
+            },
+            compact: {
+                icon: {
+                    left: {
+                        width: { value: '{size.l}' },
+                        height: { value: '{size.l}' },
+                        'margin-right': { value: '{size.3xs}' }
+                    },
+                    right: {
+                        width: { value: '{size.l}' },
+                        height: { value: '{size.l}' },
+                        'margin-left': { value: '{size.3xs}' }
+                    }
+                },
+                'vertical-padding': { value: 0 },
+                'horizontal-padding': { value: '{size.xxs}' },
+                'content-padding': { value: '{size.3xs}' },
+                'border-width': { value: '{size.border-width}' },
+                'border-radius': { value: '{size.xxs}' }
+            }
+        },
+        font: {
+            normal: {
+                default: { value: 'text-normal-strong' },
+                caption: { value: 'text-normal' }
+            },
+            compact: {
+                default: { value: 'text-compact-strong' },
+                caption: { value: 'text-compact' }
+            }
+        }
+    }
+}

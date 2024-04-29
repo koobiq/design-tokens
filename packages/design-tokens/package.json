@@ -1,0 +1,19 @@
+{
+    "name": "@koobiq/design-tokens",
+    "description": "Design tokens",
+    "author": "",
+    "license": "MIT",
+    "keywords": [
+        "tokens",
+        "design",
+        "system"
+    ],
+    "publishConfig": {
+        "access": "public"
+    },
+    "exports": {
+        "./*": {
+            "default": "./*"
+        }
+    }
+}

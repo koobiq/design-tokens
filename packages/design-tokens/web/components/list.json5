@@ -1,0 +1,215 @@
+{
+    list: {
+        size: {
+            container: {
+                padding: {
+                    left: { value: '{size.m}'},
+                    right: { value: '{size.m}' },
+                    vertical: { value: '{size.xxs}' }
+                },
+                'content-gap': {
+                    horizontal: { value: '{size.s}'},
+                    vertical: { value: '{size.3xs}' }
+                },
+                'focus-outline': {
+                    width: { value: '{size.3xs}' }
+                }
+            },
+            text: {
+                padding: {
+                    vertical: { value: '{size.xxs}' }
+                }
+            },
+            header: {
+                padding: {
+                    top: { value: '{size.s}'},
+                    bottom: { value: '{size.xxs}' },
+                    horizontal: { value: '{size.m}' }
+                }
+            },
+            subheading: {
+                padding: {
+                    top: { value: '{size.m}'},
+                    bottom: { value: '{size.xxs}' },
+                    horizontal: { value: '{size.m}' }
+                }
+            }
+        },
+        font: {
+            text: { value: 'text-normal' },
+            caption: { value: 'text-compact'},
+            header: { value: 'subheading'},
+            subheading: { value: 'caps-compact'},
+        },
+        'light-color-scheme': {
+            default: {
+                container: {
+                    background: { value: 'transparent'},
+                },
+                text: {
+                    color: { value: '{light-color-scheme.foreground.contrast}' }
+                },
+                icon: {
+                    color: { value: '{light-color-scheme.icon.contrast}' }
+                },
+                'icon-button': {
+                    color: { value: '{light-color-scheme.icon.contrast-fade}' }
+                },
+                caption: {
+                    color: { value: '{light-color-scheme.foreground.contrast-secondary}' }
+                }
+            },
+            states: {
+                hover: {
+                    container: {
+                        background: { value: '{light-color-scheme.states.background.ghost-hover}'},
+                    },
+                    text: {
+                        color: { value: '{light-color-scheme.foreground.contrast}' }
+                    },
+                    icon: {
+                        color: { value: '{light-color-scheme.icon.contrast}' }
+                    },
+                    'icon-button': {
+                        color: { value: '{light-color-scheme.icon.contrast-fade}' }
+                    }
+                },
+                selected: {
+                    container: {
+                        background: { value: '{light-color-scheme.background.theme-fade}'},
+                    },
+                    text: {
+                        color: { value: '{light-color-scheme.foreground.contrast}' }
+                    },
+                    icon: {
+                        color: { value: '{light-color-scheme.icon.contrast}' }
+                    },
+                    'icon-button': {
+                        color: { value: '{light-color-scheme.icon.contrast-fade}' }
+                    }
+                },
+                'selected-hover': {
+                    container: {
+                        background: { value: '{light-color-scheme.states.background.theme-fade-hover}'},
+                    },
+                    text: {
+                        color: { value: '{light-color-scheme.foreground.contrast}' }
+                    },
+                    icon: {
+                        color: { value: '{light-color-scheme.icon.contrast}' }
+                    },
+                    'icon-button': {
+                        color: { value: '{light-color-scheme.icon.contrast-fade}' }
+                    }
+                },
+                focused: {
+                    'focus-outline': {
+                        color: { value: '{light-color-scheme.states.line.focus-theme}'}
+                    }
+                },
+                disabled: {
+                    container: {
+                        background: { value: 'transparent'},
+                    },
+                    text: {
+                        color: { value: '{light-color-scheme.states.foreground.disabled}' }
+                    },
+                    icon: {
+                        color: { value: '{light-color-scheme.states.icon.disabled}' }
+                    },
+                    'icon-button': {
+                        color: { value: '{light-color-scheme.states.icon.disabled}' }
+                    },
+                    caption: {
+                        color: { value: '{light-color-scheme.states.foreground.disabled}' }
+                    }
+                }
+            }
+        },
+        'dark-color-scheme': {
+            default: {
+                container: {
+                    background: { value: 'transparent'},
+                },
+                text: {
+                    color: { value: '{dark-color-scheme.foreground.contrast}' }
+                },
+                icon: {
+                    color: { value: '{dark-color-scheme.icon.contrast}' }
+                },
+                'icon-button': {
+                    color: { value: '{dark-color-scheme.icon.contrast-fade}' }
+                },
+                caption: {
+                    color: { value: '{dark-color-scheme.foreground.contrast-secondary}' }
+                }
+            },
+            states: {
+                hover: {
+                    container: {
+                        background: { value: '{dark-color-scheme.states.background.ghost-hover}'},
+                    },
+                    text: {
+                        color: { value: '{dark-color-scheme.foreground.contrast}' }
+                    },
+                    icon: {
+                        color: { value: '{dark-color-scheme.icon.contrast}' }
+                    },
+                    'icon-button': {
+                        color: { value: '{dark-color-scheme.icon.contrast-fade}' }
+                    }
+                },
+                selected: {
+                    container: {
+                        background: { value: '{dark-color-scheme.background.theme-fade}'},
+                    },
+                    text: {
+                        color: { value: '{dark-color-scheme.foreground.contrast}' }
+                    },
+                    icon: {
+                        color: { value: '{dark-color-scheme.icon.contrast}' }
+                    },
+                    'icon-button': {
+                        color: { value: '{dark-color-scheme.icon.contrast-fade}' }
+                    }
+                },
+                'selected-hover': {
+                    container: {
+                        background: { value: '{dark-color-scheme.states.background.theme-fade-hover}'},
+                    },
+                    text: {
+                        color: { value: '{dark-color-scheme.foreground.contrast}' }
+                    },
+                    icon: {
+                        color: { value: '{dark-color-scheme.icon.contrast}' }
+                    },
+                    'icon-button': {
+                        color: { value: '{dark-color-scheme.icon.contrast-fade}' }
+                    }
+                },
+                focused: {
+                    'focus-outline': {
+                        color: { value: '{dark-color-scheme.states.line.focus-theme}'}
+                    }
+                },
+                disabled: {
+                    container: {
+                        background: { value: 'transparent'},
+                    },
+                    text: {
+                        color: { value: '{dark-color-scheme.states.foreground.disabled}' }
+                    },
+                    icon: {
+                        color: { value: '{dark-color-scheme.states.icon.disabled}' }
+                    },
+                    'icon-button': {
+                        color: { value: '{dark-color-scheme.states.icon.disabled}' }
+                    },
+                    caption: {
+                        color: { value: '{dark-color-scheme.states.foreground.disabled}' }
+                    }
+                }
+            }
+        }
+    }
+}

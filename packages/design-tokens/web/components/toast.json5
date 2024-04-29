@@ -1,0 +1,76 @@
+{
+    toast: {
+        size: {
+            container: {
+                'min-height': { value: '48px'},
+                'width': { value: '360px'},
+                'content-gap': {
+                    horizontal: { value: '{size.m}' },
+                    vertical: { value: '{size.xxs}' }
+                },
+                border: {
+                    radius: { value: '{size.m}'}
+                },
+                padding: {
+                    vertical: { value: '{size.l}' },
+                    horizontal: { value: '{size.xl}' }
+                }
+            },
+            'close-button': {
+                // отрицательный сдвиг относительно container
+                margin: {
+                    top: { value: '-{size.s}' },
+                    right: { value: '-{size.m}' }
+                }
+            },
+            'button-stack': {
+                padding: {
+                    top: { value: '{size.m}' }
+                },
+                'content-gap': {
+                    horizontal: { value: '{size.xxs}'}
+                }
+            }
+        },
+        font: {
+           title: { value: 'subheading' },
+           text: { value: 'text-normal' }
+        },
+        'light-color-scheme': {
+            contrast: {
+                container: {
+                    background: { value: '{light-color-scheme.background.card}' },
+                    title: { value: '{light-color-scheme.foreground.contrast}' },
+                    text: { value: '{light-color-scheme.foreground.contrast}' },
+                    'box-shadow': { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.16)'}
+                }
+            },
+            error: {
+                container: {
+                    background: { value: '{light-color-scheme.background.card}' },
+                    title: { value: '{light-color-scheme.foreground.contrast}' },
+                    text: { value: '{light-color-scheme.foreground.contrast}' },
+                    'box-shadow': { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.16)'}
+                }
+            }
+        },
+        'dark-color-scheme': {
+            contrast: {
+                container: {
+                    background: { value: '{dark-color-scheme.background.card}' },
+                    title: { value: '{dark-color-scheme.foreground.contrast}' },
+                    text: { value: '{dark-color-scheme.foreground.contrast}' },
+                    'box-shadow': { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.50)'}
+                }
+            },
+            error: {
+                container: {
+                    background: { value: '{dark-color-scheme.background.card}' },
+                    title: { value: '{dark-color-scheme.foreground.contrast}' },
+                    text: { value: '{dark-color-scheme.foreground.contrast}' },
+                    'box-shadow': { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.50)'}
+                }
+            }
+        }
+    }
+}

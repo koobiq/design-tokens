@@ -1,0 +1,48 @@
+{
+    select: {
+        size: {
+            single: {
+                padding: {
+                    left: { value: '{size.m}' },
+                    right: { value: '{size.xxs}' },
+                    vertical: { value: '{size.s}' }
+                },
+                'content-gap': { value: '{size.xxs}' }
+            },
+            multiple: {
+                padding: {
+                    left: { value: '{size.xxs}' },
+                    right: { value: '{size.xxs}' },
+                    vertical: { value: '{size.xxs}' }
+                },
+                'content-gap': { value: '{size.xxs}' }
+            }
+        },
+        font: {
+            default: { value: 'text-normal' }
+        }
+    },
+    'select-panel': {
+        size: {
+            border: {
+                radius: { value: '{size.s}' },
+            },
+            'max-height': { value: '256px' },
+        },
+        font: {
+            default: { value: 'text-normal' }
+        },
+        'light-color-scheme': {
+            dropdown: {
+                background: { value: '{light-color-scheme.background.card}' },
+                shadow: { value: '0px 3px 8px 0px rgba(39,51,62,0.2)' }
+            }
+        },
+        'dark-color-scheme': {
+            dropdown: {
+                background: { value: '{dark-color-scheme.background.card}' },
+                shadow: { value: '0px 3px 8px 0px rgba(39,51,62,0.5)' }
+            }
+        }
+    }
+}

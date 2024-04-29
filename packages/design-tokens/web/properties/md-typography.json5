@@ -1,0 +1,103 @@
+{
+    "md-typography": {
+        'md-h1': {
+            'font-size': { value: '{typography.display-2.font-size}' },
+            'line-height': { value: '48px' },
+            'letter-spacing': { value: '{typography.display-2.letter-spacing}' },
+            'font-weight': { value: '{typography.display-2.font-weight}' },
+            'font-family': { value: '{typography.display-2.font-family}' },
+            'text-transform': { value: '{typography.display-2.text-transform}' },
+            'font-feature-settings': { value: '{typography.display-2.font-feature-settings}' }
+        },
+        'md-h2': {
+            'font-size': { value: '{typography.display-3.font-size}' },
+            'line-height': { value: '38px' },
+            'letter-spacing': { value: '{typography.display-3.letter-spacing}' },
+            'font-weight': { value: '{typography.display-3.font-weight}' },
+            'font-family': { value: '{typography.display-3.font-family}' },
+            'text-transform': { value: '{typography.display-3.text-transform}' },
+            'font-feature-settings': { value: '{typography.display-3.font-feature-settings}' }
+        },
+        'md-h3': {
+            'font-size': { value: '{typography.headline.font-size}' },
+            'line-height': { value: '28px' },
+            'letter-spacing': { value: '{typography.headline.letter-spacing}' },
+            'font-weight': { value: '{typography.headline.font-weight}' },
+            'font-family': { value: '{typography.headline.font-family}' },
+            'text-transform': { value: '{typography.headline.text-transform}' },
+            'font-feature-settings': { value: '{typography.headline.font-feature-settings}' }
+        },
+        'md-h4': {
+            'font-size': { value: '{typography.title.font-size}' },
+            'line-height': { value: '24px' },
+            'letter-spacing': { value: '{typography.title.letter-spacing}' },
+            'font-weight': { value: '{typography.title.font-weight}' },
+            'font-family': { value: '{typography.title.font-family}' },
+            'text-transform': { value: '{typography.title.text-transform}' },
+            'font-feature-settings': { value: '{typography.title.font-feature-settings}' }
+        },
+        'md-h5': {
+            'font-size': { value: '{typography.subheading.font-size}' },
+            'line-height': { value: '24px' },
+            'letter-spacing': { value: '{typography.subheading.letter-spacing}' },
+            'font-weight': { value: '{typography.subheading.font-weight}' },
+            'font-family': { value: '{typography.subheading.font-family}' },
+            'text-transform': { value: '{typography.subheading.text-transform}' },
+            'font-feature-settings': { value: '{typography.subheading.font-feature-settings}' }
+        },
+        'md-h6': {
+            'font-size': { value: '{typography.subheading.font-size}' },
+            'line-height': { value: '24px' },
+            'letter-spacing': { value: '{typography.subheading.letter-spacing}' },
+            'font-weight': { value: '{typography.subheading.font-weight}' },
+            'font-family': { value: '{typography.subheading.font-family}' },
+            'text-transform': { value: '{typography.subheading.text-transform}' },
+            'font-feature-settings': { value: '{typography.subheading.font-feature-settings}' }
+        },
+        'md-body': {
+            'font-size': { value: '{typography.body.font-size}' },
+            'line-height': { value: '24px' },
+            'letter-spacing': { value: '{typography.body.letter-spacing}' },
+            'font-weight': { value: '{typography.body.font-weight}' },
+            'font-family': { value: '{typography.body.font-family}' },
+            'text-transform': { value: '{typography.body.text-transform}' },
+            'font-feature-settings': { value: '{typography.body.font-feature-settings}' }
+        },
+        'md-body-mono': {
+            'font-size': { value: '14px' },
+            'line-height': { value: '20px' },
+            'letter-spacing': { value: '{typography.body-mono.letter-spacing}' },
+            'font-weight': { value: '{typography.body-mono.font-weight}' },
+            'font-family': { value: '{typography.body-mono.font-family}' },
+            'text-transform': { value: '{typography.body-mono.text-transform}' },
+            'font-feature-settings': { value: '{typography.body-mono.font-feature-settings}' }
+        },
+        'md-caption': {
+            'font-size': { value: '{typography.caption.font-size}' },
+            'line-height': { value: '{typography.caption.line-height}' },
+            'letter-spacing': { value: '{typography.caption.letter-spacing}' },
+            'font-weight': { value: '{typography.caption.font-weight}' },
+            'font-family': { value: '{typography.caption.font-family}' },
+            'text-transform': { value: '{typography.caption.text-transform}' },
+            'font-feature-settings': { value: '{typography.caption.font-feature-settings}' }
+        },
+        'md-table-cell': {
+            'font-size': { value: '{typography.body-tabular.font-size}' },
+            'line-height': { value: '{typography.body-tabular.line-height}' },
+            'letter-spacing': { value: '{typography.body-tabular.letter-spacing}' },
+            'font-weight': { value: '{typography.body-tabular.font-weight}' },
+            'font-family': { value: '{typography.body-tabular.font-family}' },
+            'text-transform': { value: '{typography.body-tabular.text-transform}' },
+            'font-feature-settings': { value: '{typography.body-tabular.font-feature-settings}' }
+        },
+        'md-table-header': {
+            'font-size': { value: '{typography.caption-tabular.font-size}' },
+            'line-height': { value: '{typography.caption-tabular.line-height}' },
+            'letter-spacing': { value: '{typography.caption-tabular.letter-spacing}' },
+            'font-weight': { value: '{typography.caption-tabular.font-weight}' },
+            'font-family': { value: '{typography.caption-tabular.font-family}' },
+            'text-transform': { value: '{typography.caption-tabular.text-transform}' },
+            'font-feature-settings': { value: '{typography.caption-tabular.font-feature-settings}' }
+        }
+    }
+}

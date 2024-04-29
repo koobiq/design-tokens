@@ -1,0 +1,72 @@
+{
+    alert: {
+        size: {
+            container: {
+                'min-height': { value: '48px'},
+                'min-weight': { value: '320px'},
+                'content-gap': {
+                    horizontal: { value: '{size.m}' },
+                    vertical: { value: '{size.xxs}' }
+                },
+                border: {
+                    radius: { value: '{size.m}'}
+                },
+                padding: {
+                    vertical: { value: '{size.l}' },
+                    horizontal: { value: '{size.xl}' }
+                }
+            },
+            'close-button': {
+                // отрицательный сдвиг относительно container
+                margin: {
+                    top: { value: '-{size.s}' },
+                    right: { value: '-{size.m}' }
+                }
+            },
+            'button-stack': {
+                padding: {
+                    top: { value: '{size.s}' }
+                },
+                'content-gap': {
+                    horizontal: { value: '{size.xxs}'}
+                }
+            }
+        },
+        font: {
+           title: { value: 'subheading' },
+           text: { value: 'text-normal' },
+        },
+        'light-color-scheme': {
+            contrast: {
+                container: {
+                    background: { value: '{light-color-scheme.background.contrast-fade}' },
+                    title: { value: '{light-color-scheme.foreground.contrast}' },
+                    text: { value: '{light-color-scheme.foreground.contrast}' }
+                }
+            },
+            error: {
+                container: {
+                    background: { value: '{light-color-scheme.background.contrast-fade}' },
+                    title: { value: '{light-color-scheme.foreground.contrast}' },
+                    text: { value: '{light-color-scheme.foreground.contrast}' }
+                }
+            }
+        },
+        'dark-color-scheme': {
+            contrast: {
+                container: {
+                    background: { value: '{dark-color-scheme.background.contrast-fade}' },
+                    title: { value: '{dark-color-scheme.foreground.contrast}' },
+                    text: { value: '{dark-color-scheme.foreground.contrast}' }
+                }
+            },
+            error: {
+                container: {
+                    background: { value: '{dark-color-scheme.background.contrast-fade}' },
+                    title: { value: '{dark-color-scheme.foreground.contrast}' },
+                    text: { value: '{dark-color-scheme.foreground.contrast}' }
+                }
+            }
+        }
+    }
+}

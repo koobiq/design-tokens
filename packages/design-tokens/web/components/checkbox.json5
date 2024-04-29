@@ -1,0 +1,198 @@
+{
+    checkbox: {
+        'light-color-scheme': {
+            theme: {
+                default: {
+                    border: { value: '{light-color-scheme.line.contrast-fade}' },
+                    color: { value: '{light-color-scheme.neutral.white}' },
+                    text: { value: '{light-color-scheme.foreground.contrast}' },
+                    background: { value: '{light-color-scheme.background.bg}' },
+                    caption: { value: '{light-color-scheme.foreground.contrast-secondary}' }
+                },
+
+                states: {
+                    hover: {
+                        border: { value: '{light-color-scheme.line.contrast-fade}' },
+                        background: { value: '{light-color-scheme.states.background.ghost-hover}' }
+                    },
+                    checked: {
+                        border: { value: 'transparent' },
+                        background: { value: '{light-color-scheme.background.theme}' }
+                    },
+                    'checked-hover': {
+                        border: { value: 'transparent' },
+                        background: { value: '{light-color-scheme.states.background.theme-hover}' }
+                    },
+                    focused: {
+                        border: { value: '{light-color-scheme.states.line.focus-theme}' },
+                        background: { value: '{light-color-scheme.background.bg}' },
+                        outline: { value: '1px solid {light-color-scheme.states.line.focus-theme}' }
+                    },
+                    'checked-focused': {
+                        border: { value: '{light-color-scheme.states.line.focus-theme}' },
+                        background: { value: '{light-color-scheme.background.theme}' },
+                        outline: { value: '1px solid {light-color-scheme.states.line.focus-theme}' }
+                    },
+                    disabled: {
+                        border: { value: '{light-color-scheme.line.contrast-fade}' },
+                        color: { value: '{light-color-scheme.states.icon.disabled}' },
+                        text: { value: '{light-color-scheme.states.foreground.disabled}' },
+                        background: { value: '{light-color-scheme.states.background.disabled}' },
+                        caption: { value: '{light-color-scheme.states.icon.disabled}' }
+                    }
+                }
+            },
+            error: {
+                default: {
+                    border: { value: '{light-color-scheme.line.error}' },
+                    color: { value: '{light-color-scheme.neutral.white}' },
+                    text: { value: '{light-color-scheme.foreground.contrast}' },
+                    background: { value: '{light-color-scheme.states.background.error-less}' },
+                    caption: { value: '{light-color-scheme.foreground.contrast-secondary}' }
+                },
+
+                states: {
+                    hover: {
+                        border: { value: '{light-color-scheme.line.error}' },
+                        background: { value: '{light-color-scheme.states.background.error-fade-hover}' }
+                    },
+                    checked: {
+                        border: { value: 'transparent' },
+                        background: { value: '{light-color-scheme.background.error}' }
+                    },
+                    'checked-hover': {
+                        border: { value: 'transparent' },
+                        background: { value: '{light-color-scheme.states.background.error-hover}' }
+                    },
+                    focused: {
+                        border: { value: '{light-color-scheme.line.error}' },
+                        background: { value: '{light-color-scheme.states.background.error-less}' },
+                        outline: { value: '1px solid {light-color-scheme.states.line.focus-error}' }
+                    },
+                    'checked-focused': {
+                        border: { value: '{light-color-scheme.states.line.focus-error}' },
+                        background: { value: '{light-color-scheme.background.error}' },
+                        outline: { value: '1px solid {light-color-scheme.states.line.focus-error}' }
+                    },
+                    disabled: {
+                        border: { value: '{light-color-scheme.line.contrast-fade}' },
+                        color: { value: '{light-color-scheme.states.icon.disabled}' },
+                        text: { value: '{light-color-scheme.states.foreground.disabled}' },
+                        background: { value: '{light-color-scheme.states.background.disabled}' },
+                        caption: { value: '{light-color-scheme.states.icon.disabled}' }
+                    }
+                }
+            }
+        },
+        'dark-color-scheme': {
+            theme: {
+                default: {
+                    border: { value: '{dark-color-scheme.line.contrast-fade}' },
+                    color: { value: '{dark-color-scheme.neutral.white}' },
+                    text: { value: '{dark-color-scheme.foreground.contrast}' },
+                    background: { value: '{dark-color-scheme.background.bg}' },
+                    caption: { value: '{dark-color-scheme.foreground.contrast-secondary}' }
+                },
+
+                states: {
+                    hover: {
+                        border: { value: '{dark-color-scheme.line.contrast-fade}' },
+                        background: { value: '{dark-color-scheme.states.background.ghost-hover}' }
+                    },
+                    checked: {
+                        border: { value: 'transparent' },
+                        background: { value: '{dark-color-scheme.background.theme}' }
+                    },
+                    'checked-hover': {
+                        border: { value: 'transparent' },
+                        background: { value: '{dark-color-scheme.states.background.theme-hover}' }
+                    },
+                    focused: {
+                        border: { value: '{dark-color-scheme.states.line.focus-theme}' },
+                        background: { value: '{dark-color-scheme.background.bg}' },
+                        outline: { value: '1px solid {dark-color-scheme.states.line.focus-theme}' }
+                    },
+                    'checked-focused': {
+                        border: { value: '{dark-color-scheme.states.line.focus-theme}' },
+                        background: { value: '{dark-color-scheme.background.theme}' },
+                        outline: { value: '1px solid {dark-color-scheme.states.line.focus-theme}' }
+                    },
+                    disabled: {
+                        border: { value: '{dark-color-scheme.line.contrast-fade}' },
+                        color: { value: '{dark-color-scheme.states.icon.disabled}' },
+                        text: { value: '{dark-color-scheme.states.foreground.disabled}' },
+                        background: { value: '{dark-color-scheme.states.background.disabled}' },
+                        caption: { value: '{dark-color-scheme.states.icon.disabled}' }
+                    }
+                }
+            },
+            error: {
+                default: {
+                    border: { value: '{dark-color-scheme.line.error}' },
+                    color: { value: '{dark-color-scheme.neutral.white}' },
+                    text: { value: '{dark-color-scheme.foreground.contrast}' },
+                    background: { value: '{dark-color-scheme.states.background.error-less}' },
+                    caption: { value: '{dark-color-scheme.foreground.contrast-secondary}' }
+                },
+
+                states: {
+                    hover: {
+                        border: { value: '{dark-color-scheme.line.error}' },
+                        background: { value: '{dark-color-scheme.states.background.error-fade-hover}' }
+                    },
+                    checked: {
+                        border: { value: 'transparent' },
+                        background: { value: '{dark-color-scheme.background.error}' }
+                    },
+                    'checked-hover': {
+                        border: { value: 'transparent' },
+                        background: { value: '{dark-color-scheme.states.background.error-hover}' }
+                    },
+                    focused: {
+                        border: { value: '{dark-color-scheme.line.error}' },
+                        background: { value: '{dark-color-scheme.states.background.error-less}' },
+                        outline: { value: '1px solid {dark-color-scheme.states.line.focus-error}' }
+                    },
+                    'checked-focused': {
+                        border: { value: '{dark-color-scheme.states.line.focus-error}' },
+                        background: { value: '{dark-color-scheme.background.error}' },
+                        outline: { value: '1px solid {dark-color-scheme.states.line.focus-error}' }
+                    },
+                    disabled: {
+                        border: { value: '{dark-color-scheme.line.contrast-fade}' },
+                        color: { value: '{dark-color-scheme.states.icon.disabled}' },
+                        text: { value: '{dark-color-scheme.states.foreground.disabled}' },
+                        background: { value: '{dark-color-scheme.states.background.disabled}' },
+                        caption: { value: '{dark-color-scheme.states.icon.disabled}' }
+                    }
+                }
+            }
+        },
+        size: {
+            normal: {
+                width: { value: '{size.l}' },
+                'border-width': { value: '{size.border-width}' },
+                'border-radius': { value: '{size.xxs}' },
+                'horizontal-content-padding': { value: '{size.s}' },
+                'vertical-content-padding': { value: '{size.3xs}' }
+            },
+            big: {
+                width: { value: '{size.l}' },
+                'border-width': { value: '{size.border-width}' },
+                'border-radius': { value: '{size.xxs}' },
+                'horizontal-content-padding': { value: '{size.s}' },
+                'vertical-content-padding': { value: '{size.3xs}' }
+            },
+        },
+        font: {
+            normal: {
+                label: { value: 'text-normal' },
+                caption: { value: 'text-compact-strong'},
+            },
+            big: {
+                label: { value: 'text-big' },
+                caption: { value: 'text-normal' },
+            }
+        }
+    }
+}

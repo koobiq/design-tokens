@@ -1,0 +1,86 @@
+{
+    link: {
+        'light-color-scheme': {
+            text: { value: '{light-color-scheme.foreground.theme}' },
+            'border-bottom': { value: '{light-color-scheme.line.theme-fade}' },
+            'state-visited': {
+                'text': { value: '{light-color-scheme.foreground.visited}' },
+                'border-bottom': { value: '{light-color-scheme.line.visited}' }
+            },
+            'state-visited-hover': {
+                'text': { value: '{light-color-scheme.states.foreground.visited-hover}' },
+                'border-bottom': { value: '{light-color-scheme.line.visited}' }
+            },
+            'state-visited-active': {
+                'text': { value: '{light-color-scheme.states.foreground.visited-active}' },
+                'border-bottom': { value: '{light-color-scheme.line.visited}' }
+            },
+            'state-hover': {
+                'text': { value: '{light-color-scheme.states.foreground.theme-hover}' },
+                'border-bottom': { value: '{light-color-scheme.line.theme-fade}' },
+            },
+            'state-active': {
+                'text': { value: '{light-color-scheme.states.foreground.theme-active}' },
+                'border-bottom': { value: '{light-color-scheme.line.theme-fade}' },
+            },
+            'state-focused': {
+                outline: { value: '{light-color-scheme.states.line.focus-theme}' }
+            },
+             'state-disabled': {
+                'text': { value: '{light-color-scheme.states.foreground.disabled}' },
+                'border-bottom': { value: '{light-color-scheme.states.line.disabled}' },
+            },
+        },
+        'dark-color-scheme': {
+            text: { value: '{dark-color-scheme.foreground.theme}' },
+            'border-bottom': { value: '{dark-color-scheme.line.theme-fade}' },
+            'state-visited': {
+                'text': { value: '{dark-color-scheme.foreground.visited}' },
+                'border-bottom': { value: '{dark-color-scheme.line.visited}' }
+            },
+            'state-visited-hover': {
+                'text': { value: '{dark-color-scheme.states.foreground.visited-hover}' },
+                'border-bottom': { value: '{dark-color-scheme.line.visited}' }
+            },
+            'state-visited-active': {
+                'text': { value: '{dark-color-scheme.states.foreground.visited-active}' },
+                'border-bottom': { value: '{dark-color-scheme.line.visited}' }
+            },
+            'state-hover': {
+                'text': { value: '{dark-color-scheme.states.foreground.theme-hover}' },
+                'border-bottom': { value: '{dark-color-scheme.line.theme-fade}' },
+            },
+            'state-active': {
+                'text': { value: '{dark-color-scheme.states.foreground.theme-active}' },
+                'border-bottom': { value: '{dark-color-scheme.line.theme-fade}' },
+            },
+            'state-focused': {
+                outline: { value: '{dark-color-scheme.states.line.focus-theme}' }
+            },
+             'state-disabled': {
+                'text': { value: '{dark-color-scheme.states.foreground.disabled}' },
+                'border-bottom': { value: '{dark-color-scheme.states.line.disabled}' },
+            },
+        },
+        size: {
+            'state-focused': {
+                'outline-offset': { value: '0px' },
+                'outline-width': { value: '2px' }
+            },
+            compact: {
+                'content-padding': { value: '{size.3xs}' }
+            },
+            normal: {
+                'content-padding': { value: '{size.3xs}' }
+            },
+            big: {
+                'content-padding': { value: '{size.xxs}' }
+            }
+        },
+        font: {
+            compact: { value: 'text-compact' },
+            normal: { value: 'text-normal' },
+            big: { value: 'text-big' }
+        }
+    }
+}

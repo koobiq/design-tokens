@@ -1,0 +1,27 @@
+{
+    'timezone-option': {
+        'light-color-scheme': {
+            text: { value: '{light-color-scheme.foreground.contrast}' },
+            caption: { value: '{light-color-scheme.foreground.contrast-secondary}' },
+            'optgroup-label': { value: '{light-color-scheme.foreground.contrast-secondary}' }
+        },
+        'dark-color-scheme': {
+            text: { value: '{dark-color-scheme.foreground.contrast}' },
+            caption: { value: '{dark-color-scheme.foreground.contrast-secondary}' },
+            'optgroup-label': { value: '{dark-color-scheme.foreground.contrast-secondary}' }
+        },
+        size: {
+            padding: { value: '6px 10px' },
+            'column-gap': { value: '16px' },
+            height: { value: 'auto' },
+            'max-height': { value: '5em' },
+            'optgroup-label-padding': { value: '12px 12px 4px 12px' }
+        },
+        font: {
+            text: { value: 'tabular-normal' },
+            'offset-text': { value: 'tabular-normal' },
+            caption: { value: 'text-compact' },
+            'optgroup-label': { value: 'caps-compact-strong' },
+        }
+    }
+}

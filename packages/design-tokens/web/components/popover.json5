@@ -1,0 +1,95 @@
+{
+    popover: {
+        size: {
+            container: {
+                width: {
+                    small: { value: '200px' },
+                    medium: { value: '400px' },
+                    large: { value: '640px' }
+                },
+                border: {
+                    radius: { value: '{size.m}' }
+                },
+               'max-height': { value: '480px'},
+            },
+            'close-button': {
+                width: { value: '32px'},
+                margin: {
+                    // отрицательные отступы для компенсации padding
+                    right: { value: '-16px' },
+                    top: { value: '-10px'},
+                }
+            },
+            header: {
+                padding: {
+                    horizontal: { value: '{size.xxl}' },
+                    top: { value: '16px' },
+                    bottom: { value: '8px'}
+                },
+            },
+            content: {
+                'padding': {
+                    top: { value: '{size.xxl}'},
+                    bottom: { value: '{size.3xl}'},
+                    horizontal: { value: '{size.xxl}'}
+                },
+                'padding-with-header': {
+                    top: { value: '{size.s}'}
+                },
+                'padding-with-footer': {
+                    bottom: { value: '{size.s}'}
+                }
+            },
+            footer: {
+                padding: {
+                    vertical: { value: '{size.l}' },
+                    horizontal: { value: '{size.xxl}'},
+                }
+            }
+        },
+        font: {
+            header: { value: 'subheading' },
+            content: { value: 'text-normal' }
+        },
+        'light-color-scheme': {
+            container: {
+                background: { value: '{light-color-scheme.background.card}' },
+                'box-shadow': { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.16)' }
+            },
+            header: {
+                text: {
+                    color: { value: '{light-color-scheme.foreground.contrast}' }
+                },
+                'scroll-shadow': { value: '0px 9px 8px -12px rgba(106, 115, 151, 0.50)'},
+            },
+            content: {
+                text: {
+                    color: { value: '{light-color-scheme.foreground.contrast}' }
+                }
+            },
+            footer: {
+                'scroll-shadow': { value: '0px -9px 8px -12px rgba(106, 115, 151, 0.50)'}
+            }
+        },
+        'dark-color-scheme': {
+            container: {
+                background: { value: '{dark-color-scheme.background.card}' },
+                'box-shadow': { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.50)' }
+            },
+            header: {
+                text: {
+                    color: { value: '{dark-color-scheme.foreground.contrast}' }
+                },
+                'scroll-shadow': { value: '0px 9px 8px -12px rgba(106, 115, 151, 0.50)'},
+            },
+            content: {
+                text: {
+                    color: { value: '{dark-color-scheme.foreground.contrast}' }
+                }
+            },
+            footer: {
+                'scroll-shadow': { value: '0px -9px 8px -12px rgba(106, 115, 151, 0.50)'}
+            }
+        },
+}
+}

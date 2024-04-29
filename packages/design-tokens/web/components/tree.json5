@@ -1,0 +1,250 @@
+{
+    tree: {
+        size: {
+            // отступ для уровней вложенностей (+24px на каждом уровне)
+            'indent-level': { value: '{size.xxl}'},
+
+            container: {
+                padding: {
+                    right: { value: '{size.s}' },
+                    vertical: { value: '{size.xxs}' },
+                },
+                'content-gap': {
+                    horizontal: { value: '{size.s}'},
+                    // задает отступ между text и caption
+                    vertical: { value: '{size.3xs}' }
+                },
+                'focus-outline': {
+                    width: { value: '{size.3xs}' }
+                }
+            },
+            text: {
+                padding: {
+                    vertical: { value: '{size.xxs}' }
+                }
+            }
+        },
+        font: {
+            text: { value: 'text-normal' },
+            caption: { value: 'text-compact'}
+        },
+        'light-color-scheme': {
+            default: {
+                container: {
+                    background: { value: 'transparent'},
+                },
+                text: {
+                    color: { value: '{light-color-scheme.foreground.contrast}' }
+                },
+                icon: {
+                    color: { value: '{light-color-scheme.icon.contrast}' }
+                },
+                'tree-toggle': {
+                     color: { value: '{light-color-scheme.icon.contrast-fade}' }
+                },
+                'action-button': {
+                    color: { value: '{light-color-scheme.icon.contrast-fade}' }
+                },
+                caption: {
+                    color: { value: '{light-color-scheme.foreground.contrast-secondary}' }
+                }
+            },
+            states: {
+                hover: {
+                    container: {
+                        background: { value: '{light-color-scheme.states.background.ghost-hover}'},
+                    },
+                    text: {
+                        color: { value: '{light-color-scheme.foreground.contrast}' }
+                    },
+                    icon: {
+                        color: { value: '{light-color-scheme.icon.contrast}' }
+                    },
+                    'tree-toggle': {
+                        color: { value: '{light-color-scheme.icon.contrast-fade}' }
+                    },
+                    'action-button': {
+                        color: { value: '{light-color-scheme.icon.contrast-fade}' }
+                    },
+                    caption: {
+                        color: { value: '{light-color-scheme.foreground.contrast-secondary}' }
+                    }
+                },
+                focused: {
+                    'focus-outline': {
+                        color: { value: '{light-color-scheme.states.line.focus-theme}'}
+                    }
+                },
+                selected: {
+                    container: {
+                        background: { value: '{light-color-scheme.background.theme-fade}'},
+                    },
+                    text: {
+                        color: { value: '{light-color-scheme.foreground.contrast}' }
+                    },
+                    icon: {
+                        color: { value: '{light-color-scheme.icon.contrast}' }
+                    },
+                    'tree-toggle': {
+                        color: { value: '{light-color-scheme.icon.contrast-fade}' }
+                    },
+                    'action-button': {
+                        color: { value: '{light-color-scheme.icon.contrast-fade}' }
+                    },
+                    caption: {
+                        color: { value: '{light-color-scheme.foreground.contrast-secondary}' }
+                    }
+                },
+                'selected-hover': {
+                    container: {
+                        background: { value: '{light-color-scheme.states.background.theme-fade-hover}'},
+                    },
+                    text: {
+                        color: { value: '{light-color-scheme.foreground.contrast}' }
+                    },
+                    icon: {
+                        color: { value: '{light-color-scheme.icon.contrast}' }
+                    },
+                    'tree-toggle': {
+                        color: { value: '{light-color-scheme.icon.contrast-fade}' }
+                    },
+                    'action-button': {
+                        color: { value: '{light-color-scheme.icon.contrast-fade}' }
+                    },
+                    caption: {
+                        color: { value: '{light-color-scheme.foreground.contrast-secondary}' }
+                    }
+                },
+                disabled: {
+                    container: {
+                        background: { value: 'transparent'},
+                    },
+                    text: {
+                        color: { value: '{light-color-scheme.states.foreground.disabled}' }
+                    },
+                    icon: {
+                        color: { value: '{light-color-scheme.states.icon.disabled}' }
+                    },
+                    'tree-toggle': {
+                        color: { value: '{light-color-scheme.states.icon.disabled}' }
+                    },
+                    'action-button': {
+                        color: { value: '{light-color-scheme.states.icon.disabled}' }
+                    },
+                    caption: {
+                        color: { value: '{light-color-scheme.states.foreground.disabled}' }
+                    }
+                }
+            }
+        },
+        'dark-color-scheme': {
+            default: {
+                container: {
+                    background: { value: 'transparent'},
+                },
+                text: {
+                    color: { value: '{dark-color-scheme.foreground.contrast}' }
+                },
+                icon: {
+                    color: { value: '{dark-color-scheme.icon.contrast}' }
+                },
+                'tree-toggle': {
+                     color: { value: '{dark-color-scheme.icon.contrast-fade}' }
+                },
+                'action-button': {
+                    color: { value: '{dark-color-scheme.icon.contrast-fade}' }
+                },
+                caption: {
+                    color: { value: '{dark-color-scheme.foreground.contrast-secondary}' }
+                }
+            },
+            states: {
+                hover: {
+                    container: {
+                        background: { value: '{dark-color-scheme.states.background.ghost-hover}'},
+                    },
+                    text: {
+                        color: { value: '{dark-color-scheme.foreground.contrast}' }
+                    },
+                    icon: {
+                        color: { value: '{dark-color-scheme.icon.contrast}' }
+                    },
+                    'tree-toggle': {
+                        color: { value: '{dark-color-scheme.icon.contrast-fade}' }
+                    },
+                    'action-button': {
+                        color: { value: '{dark-color-scheme.icon.contrast-fade}' }
+                    },
+                    caption: {
+                        color: { value: '{dark-color-scheme.foreground.contrast-secondary}' }
+                    }
+                },
+                focused: {
+                    'focus-outline': {
+                        color: { value: '{dark-color-scheme.states.line.focus-theme}'}
+                    }
+                },
+                selected: {
+                    container: {
+                        background: { value: '{dark-color-scheme.background.theme-fade}'},
+                    },
+                    text: {
+                        color: { value: '{dark-color-scheme.foreground.contrast}' }
+                    },
+                    icon: {
+                        color: { value: '{dark-color-scheme.icon.contrast}' }
+                    },
+                    'tree-toggle': {
+                        color: { value: '{dark-color-scheme.icon.contrast-fade}' }
+                    },
+                    'action-button': {
+                        color: { value: '{dark-color-scheme.icon.contrast-fade}' }
+                    },
+                    caption: {
+                        color: { value: '{dark-color-scheme.foreground.contrast-secondary}' }
+                    }
+                },
+                'selected-hover': {
+                    container: {
+                        background: { value: '{dark-color-scheme.states.background.theme-fade-hover}'},
+                    },
+                    text: {
+                        color: { value: '{dark-color-scheme.foreground.contrast}' }
+                    },
+                    icon: {
+                        color: { value: '{dark-color-scheme.icon.contrast}' }
+                    },
+                    'tree-toggle': {
+                        color: { value: '{dark-color-scheme.icon.contrast-fade}' }
+                    },
+                    'action-button': {
+                        color: { value: '{dark-color-scheme.icon.contrast-fade}' }
+                    },
+                    caption: {
+                        color: { value: '{dark-color-scheme.foreground.contrast-secondary}' }
+                    }
+                },
+                disabled: {
+                    container: {
+                        background: { value: 'transparent'},
+                    },
+                    text: {
+                        color: { value: '{dark-color-scheme.states.foreground.disabled}' }
+                    },
+                    icon: {
+                        color: { value: '{dark-color-scheme.states.icon.disabled}' }
+                    },
+                    'tree-toggle': {
+                        color: { value: '{dark-color-scheme.states.icon.disabled}' }
+                    },
+                    'action-button': {
+                        color: { value: '{dark-color-scheme.states.icon.disabled}' }
+                    },
+                    caption: {
+                        color: { value: '{dark-color-scheme.states.foreground.disabled}' }
+                    }
+                }
+            }
+        }
+    }
+}

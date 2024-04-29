@@ -1,0 +1,52 @@
+{
+    "icon-item": {
+        'light-color-scheme': {
+            theme: {
+                color: { value: '{light-color-scheme.foreground.white}' },
+                background: { value: '{light-color-scheme.icon.theme}' },
+            },
+            contrast: {
+                color: { value: '{light-color-scheme.foreground.white}' },
+                background: { value: '{light-color-scheme.icon.contrast}' },
+            },
+            'fade-contrast': {
+                color: { value: '{light-color-scheme.foreground.contrast}' },
+                background: { value: '{light-color-scheme.background.contrast-fade}' },
+            },
+            error: {
+                color: { value: '{light-color-scheme.foreground.white}' },
+                background: { value: '{light-color-scheme.icon.error}' },
+            },
+            success: {
+                color: { value: '{light-color-scheme.foreground.white}' },
+                background: { value: '{light-color-scheme.icon.success}' },
+            }
+        },
+        'dark-color-scheme': {
+            theme: {
+                color: { value: '{dark-color-scheme.foreground.white}' },
+                background: { value: '{dark-color-scheme.icon.theme}' },
+            },
+            contrast: {
+                color: { value: '{dark-color-scheme.icon.on-contrast}' },
+                background: { value: '{dark-color-scheme.icon.contrast}' },
+            },
+            'fade-contrast': {
+                color: { value: '{dark-color-scheme.foreground.contrast}' },
+                background: { value: '{dark-color-scheme.background.contrast-fade}' },
+            },
+            error: {
+                color: { value: '{dark-color-scheme.foreground.white}' },
+                background: { value: '{dark-color-scheme.icon.error}' },
+            },
+            success: {
+                color: { value: '{dark-color-scheme.foreground.white}' },
+                background: { value: '{dark-color-scheme.icon.success}' },
+            }
+        },
+        size: {
+            'horizontal-padding': { value: '{size.s}' },
+            'vertical-padding': { value: '{size.s}' }
+        }
+    }
+}

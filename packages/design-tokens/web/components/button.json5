@@ -1,0 +1,474 @@
+{
+    button: {
+        size: {
+            height: { value: '{size.3xl}' },
+            'border-width': { value: '{size.3xs}' },
+            'border-radius': { value: '{size.s}' },
+            'horizontal-padding': { value: '{size.m}' },
+            'content-padding': { value: '{size.s}' }
+        },
+        font: {
+            default: { value: 'text-normal-strong' },
+        },
+        'light-color-scheme': {
+            filled: {
+                contrast: {
+                    'fade-off': {
+                        background: { value: '{light-color-scheme.background.contrast}' },
+                        border: { value: 'transparent' },
+                        foreground: { value: '{light-color-scheme.foreground.on-contrast}' },
+                        'left-icon': { value: '{light-color-scheme.icon.on-contrast}' },
+                        'right-icon': { value: '{light-color-scheme.icon.on-contrast}' },
+
+                        states: {
+                            hover: {
+                                background: { value: '{light-color-scheme.states.background.contrast-hover}' }
+                            },
+                            active: {
+                                background: { value: '{light-color-scheme.states.background.contrast-active}' }
+                            },
+                            'active-hover': {
+                                background: { value: '{light-color-scheme.states.background.contrast-active}' }
+                            },
+                            disabled: {
+                                background: { value: '{light-color-scheme.states.background.disabled}' },
+                                border: { value: 'transparent'},
+                                foreground: { value: '{light-color-scheme.states.foreground.disabled}' },
+                                'left-icon': { value: '{light-color-scheme.states.foreground.disabled}' },
+                                'right-icon': { value: '{light-color-scheme.states.foreground.disabled}' }
+                            }
+                        }
+                    },
+                    'fade-on': {
+                        background: { value: '{light-color-scheme.background.contrast-fade}' },
+                        border: { value: 'transparent' },
+                        foreground: { value: '{light-color-scheme.foreground.contrast}' },
+                        'left-icon': { value: '{light-color-scheme.icon.contrast}' },
+                        'right-icon': { value: '{light-color-scheme.icon.contrast}' },
+
+                        states: {
+                            hover: {
+                                background: { value: '{light-color-scheme.states.background.contrast-fade-hover}' }
+                            },
+                            active: {
+                                background: { value: '{light-color-scheme.states.background.contrast-fade-active}' }
+                            },
+                            'active-hover': {
+                                background: { value: '{light-color-scheme.states.background.contrast-fade-active}' }
+                            },
+                            disabled: {
+                                background: { value: '{light-color-scheme.states.background.disabled}' },
+                                border: { value: 'transparent'},
+                                foreground: { value: '{light-color-scheme.states.foreground.disabled}' },
+                                'left-icon': { value: '{light-color-scheme.states.foreground.disabled}' },
+                                'right-icon': { value: '{light-color-scheme.states.foreground.disabled}' }
+                            }
+                        }
+                    }
+                }
+            },
+            outline: {
+                theme: {
+                    'fade-on': {
+                        background: { value: 'transparent' },
+                        border: { value: '{light-color-scheme.line.theme-fade}' },
+                        foreground: { value: '{light-color-scheme.foreground.theme}' },
+                        'left-icon': { value: '{light-color-scheme.icon.theme}' },
+                        'right-icon': { value: '{light-color-scheme.icon.theme}' },
+
+                        states: {
+                            hover: {
+                                background: { value: '{light-color-scheme.states.background.transparent-hover}' },
+                                border: { value: '{light-color-scheme.line.theme-fade}' },
+                                foreground: { value: '{light-color-scheme.foreground.theme}' },
+                                'left-icon': { value: '{light-color-scheme.icon.theme}' },
+                                'right-icon': { value: '{light-color-scheme.icon.theme}' },
+                            },
+                            active: {
+                                background: { value: '{light-color-scheme.states.background.transparent-active}' },
+                                border: { value: '{light-color-scheme.line.theme-fade}' },
+                                foreground: { value: '{light-color-scheme.foreground.theme}' },
+                                'left-icon': { value: '{light-color-scheme.icon.theme}' },
+                                'right-icon': { value: '{light-color-scheme.icon.theme}' },
+                            },
+                            'active-hover': {
+                                background: { value: '{light-color-scheme.states.background.transparent-active}' },
+                                border: { value: '{light-color-scheme.line.theme-fade}' },
+                                foreground: { value: '{light-color-scheme.foreground.theme}' },
+                                'left-icon': { value: '{light-color-scheme.icon.theme}' },
+                                'right-icon': { value: '{light-color-scheme.icon.theme}' },
+                            },
+                            disabled: {
+                                background: { value: 'transparent' },
+                                border: { value: '{light-color-scheme.states.line.disabled}' },
+                                foreground: { value: '{light-color-scheme.states.foreground.disabled}' },
+                                'left-icon': { value: '{light-color-scheme.states.icon.disabled}' },
+                                'right-icon': { value: '{light-color-scheme.states.icon.disabled}' },
+                            }
+                        }
+                    }
+                },
+                contrast: {
+                    'fade-on': {
+                        background: { value: 'transparent' },
+                        border: { value: '{light-color-scheme.line.contrast-fade}' },
+                        foreground: { value: '{light-color-scheme.foreground.contrast}' },
+                        'left-icon': { value: '{light-color-scheme.icon.contrast}' },
+                        'right-icon': { value: '{light-color-scheme.icon.contrast}' },
+
+                        states: {
+                            hover: {
+                                background: { value: '{light-color-scheme.states.background.transparent-hover}' },
+                                border: { value: '{light-color-scheme.line.contrast-fade}' },
+                                foreground: { value: '{light-color-scheme.foreground.contrast}' },
+                                'left-icon': { value: '{light-color-scheme.icon.contrast}' },
+                                'right-icon': { value: '{light-color-scheme.icon.contrast}' },
+                            },
+                            active: {
+                                background: { value: '{light-color-scheme.states.background.transparent-active}' },
+                                border: { value: '{light-color-scheme.line.contrast-fade}' },
+                                foreground: { value: '{light-color-scheme.foreground.contrast}' },
+                                'left-icon': { value: '{light-color-scheme.icon.contrast}' },
+                                'right-icon': { value: '{light-color-scheme.icon.contrast}' },
+                            },
+                            'active-hover': {
+                                background: { value: '{light-color-scheme.states.background.transparent-active}' },
+                                border: { value: '{light-color-scheme.line.contrast-fade}' },
+                                foreground: { value: '{light-color-scheme.foreground.contrast}' },
+                                'left-icon': { value: '{light-color-scheme.icon.contrast}' },
+                                'right-icon': { value: '{light-color-scheme.icon.contrast}' },
+                            },
+                            disabled: {
+                                background: { value: 'transparent' },
+                                border: { value: '{light-color-scheme.states.line.disabled}' },
+                                foreground: { value: '{light-color-scheme.states.foreground.disabled}' },
+                                'left-icon': { value: '{light-color-scheme.states.icon.disabled}' },
+                                'right-icon': { value: '{light-color-scheme.states.icon.disabled}' },
+                            }
+                        }
+                    }
+                }
+            },
+            transparent: {
+                theme: {
+                    'fade-on': {
+                        border: { value: 'transparent' },
+                        foreground: { value: '{light-color-scheme.foreground.theme}' },
+                        background: { value: 'transparent' },
+                        'left-icon': { value: '{light-color-scheme.icon.theme}' },
+                        'right-icon': { value: '{light-color-scheme.icon.theme}' },
+
+                        states: {
+                            hover: {
+                                border: { value: 'transparent' },
+                                foreground: { value: '{light-color-scheme.foreground.theme}' },
+                                background: { value: '{light-color-scheme.states.background.transparent-hover}' },
+                                'left-icon': { value: '{light-color-scheme.icon.theme}' },
+                                'right-icon': { value: '{light-color-scheme.icon.theme}' },
+                            },
+                            active: {
+                                border: { value: 'transparent' },
+                                foreground: { value: '{light-color-scheme.foreground.theme}' },
+                                background: { value: '{light-color-scheme.states.background.transparent-active}' },
+                                'left-icon': { value: '{light-color-scheme.icon.theme}' },
+                                'right-icon': { value: '{light-color-scheme.icon.theme}' },
+                            },
+                            'active-hover': {
+                                border: { value: 'transparent' },
+                                foreground: { value: '{light-color-scheme.foreground.theme}' },
+                                background: { value: '{light-color-scheme.states.background.transparent-active}' },
+                                'left-icon': { value: '{light-color-scheme.icon.theme}' },
+                                'right-icon': { value: '{light-color-scheme.icon.theme}' },
+                            },
+                            disabled: {
+                                border: { value: 'transparent' },
+                                foreground: { value: '{light-color-scheme.states.foreground.disabled}' },
+                                background: { value: 'transparent' },
+                                'left-icon': { value: '{light-color-scheme.states.icon.disabled}' },
+                                'right-icon': { value: '{light-color-scheme.states.icon.disabled}' },
+                            }
+                        }
+                    }
+                },
+                contrast: {
+                    'fade-on': {
+                        border: { value: 'transparent' },
+                        foreground: { value: '{light-color-scheme.foreground.contrast}' },
+                        background: { value: 'transparent' },
+                        'left-icon': { value: '{light-color-scheme.icon.contrast}' },
+                        'right-icon': { value: '{light-color-scheme.icon.contrast}' },
+
+                        states: {
+                            hover: {
+                                border: { value: 'transparent' },
+                                foreground: { value: '{light-color-scheme.foreground.contrast}' },
+                                background: { value: '{light-color-scheme.states.background.transparent-hover}' },
+                                'left-icon': { value: '{light-color-scheme.icon.contrast}' },
+                                'right-icon': { value: '{light-color-scheme.icon.contrast}' },
+                            },
+                            active: {
+                                border: { value: 'transparent' },
+                                foreground: { value: '{light-color-scheme.foreground.contrast}' },
+                                background: { value: '{light-color-scheme.states.background.transparent-active}' },
+                                'left-icon': { value: '{light-color-scheme.icon.contrast}' },
+                                'right-icon': { value: '{light-color-scheme.icon.contrast}' },
+                            },
+                            'active-hover': {
+                                border: { value: 'transparent' },
+                                foreground: { value: '{light-color-scheme.foreground.contrast}' },
+                                background: { value: '{light-color-scheme.states.background.transparent-active}' },
+                                'left-icon': { value: '{light-color-scheme.icon.contrast}' },
+                                'right-icon': { value: '{light-color-scheme.icon.contrast}' },
+                            },
+                            disabled: {
+                                border: { value: 'transparent' },
+                                foreground: { value: '{light-color-scheme.states.foreground.disabled}' },
+                                background: { value: 'transparent' },
+                                'left-icon': { value: '{light-color-scheme.states.icon.disabled}' },
+                                'right-icon': { value: '{light-color-scheme.states.icon.disabled}' },
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        'dark-color-scheme': {
+            filled: {
+                contrast: {
+                    'fade-off': {
+                        background: { value: '{dark-color-scheme.background.contrast}' },
+                        border: { value: 'transparent' },
+                        foreground: { value: '{dark-color-scheme.foreground.on-contrast}' },
+                        'left-icon': { value: '{dark-color-scheme.icon.on-contrast}' },
+                        'right-icon': { value: '{dark-color-scheme.icon.on-contrast}' },
+
+                        states: {
+                            hover: {
+                                background: { value: '{dark-color-scheme.states.background.contrast-hover}' }
+                            },
+                            active: {
+                                background: { value: '{dark-color-scheme.states.background.contrast-active}' }
+                            },
+                            'active-hover': {
+                                background: { value: '{dark-color-scheme.states.background.contrast-active}' }
+                            },
+                            disabled: {
+                                background: { value: '{dark-color-scheme.states.background.disabled}' },
+                                border: { value: 'transparent'},
+                                foreground: { value: '{dark-color-scheme.states.foreground.disabled}' },
+                                'left-icon': { value: '{dark-color-scheme.states.foreground.disabled}' },
+                                'right-icon': { value: '{dark-color-scheme.states.foreground.disabled}' }
+                            }
+                        }
+                    },
+                    'fade-on': {
+                        background: { value: '{dark-color-scheme.background.contrast-fade}' },
+                        border: { value: 'transparent' },
+                        foreground: { value: '{dark-color-scheme.foreground.contrast}' },
+                        'left-icon': { value: '{dark-color-scheme.icon.contrast}' },
+                        'right-icon': { value: '{dark-color-scheme.icon.contrast}' },
+
+                        states: {
+                            hover: {
+                                background: { value: '{dark-color-scheme.states.background.contrast-fade-hover}' }
+                            },
+                            active: {
+                                background: { value: '{dark-color-scheme.states.background.contrast-fade-active}' }
+                            },
+                            'active-hover': {
+                                background: { value: '{dark-color-scheme.states.background.contrast-fade-active}' }
+                            },
+                            disabled: {
+                                background: { value: '{dark-color-scheme.states.background.disabled}' },
+                                border: { value: 'transparent'},
+                                foreground: { value: '{dark-color-scheme.states.foreground.disabled}' },
+                                'left-icon': { value: '{dark-color-scheme.states.foreground.disabled}' },
+                                'right-icon': { value: '{dark-color-scheme.states.foreground.disabled}' }
+                            }
+                        }
+                    }
+                }
+            },
+            outline: {
+                theme: {
+                    'fade-on': {
+                        background: { value: 'transparent' },
+                        border: { value: '{dark-color-scheme.line.theme-fade}' },
+                        foreground: { value: '{dark-color-scheme.foreground.theme}' },
+                        'left-icon': { value: '{dark-color-scheme.icon.theme}' },
+                        'right-icon': { value: '{dark-color-scheme.icon.theme}' },
+
+                        states: {
+                            hover: {
+                                background: { value: '{dark-color-scheme.states.background.transparent-hover}' },
+                                border: { value: '{dark-color-scheme.line.theme-fade}' },
+                                foreground: { value: '{dark-color-scheme.foreground.theme}' },
+                                'left-icon': { value: '{dark-color-scheme.icon.theme}' },
+                                'right-icon': { value: '{dark-color-scheme.icon.theme}' },
+                            },
+                            active: {
+                                background: { value: '{dark-color-scheme.states.background.transparent-active}' },
+                                border: { value: '{dark-color-scheme.line.theme-fade}' },
+                                foreground: { value: '{dark-color-scheme.foreground.theme}' },
+                                'left-icon': { value: '{dark-color-scheme.icon.theme}' },
+                                'right-icon': { value: '{dark-color-scheme.icon.theme}' },
+                            },
+                            'active-hover': {
+                                background: { value: '{dark-color-scheme.states.background.transparent-active}' },
+                                border: { value: '{dark-color-scheme.line.theme-fade}' },
+                                foreground: { value: '{dark-color-scheme.foreground.theme}' },
+                                'left-icon': { value: '{dark-color-scheme.icon.theme}' },
+                                'right-icon': { value: '{dark-color-scheme.icon.theme}' },
+                            },
+                            disabled: {
+                                background: { value: 'transparent' },
+                                border: { value: '{dark-color-scheme.states.line.disabled}' },
+                                foreground: { value: '{dark-color-scheme.states.foreground.disabled}' },
+                                'left-icon': { value: '{dark-color-scheme.states.icon.disabled}' },
+                                'right-icon': { value: '{dark-color-scheme.states.icon.disabled}' },
+                            }
+                        }
+                    }
+                },
+                contrast: {
+                    'fade-on': {
+                        background: { value: 'transparent' },
+                        border: { value: '{dark-color-scheme.line.contrast-fade}' },
+                        foreground: { value: '{dark-color-scheme.foreground.contrast}' },
+                        'left-icon': { value: '{dark-color-scheme.icon.contrast}' },
+                        'right-icon': { value: '{dark-color-scheme.icon.contrast}' },
+
+                        states: {
+                            hover: {
+                                background: { value: '{dark-color-scheme.states.background.transparent-hover}' },
+                                border: { value: '{dark-color-scheme.line.contrast-fade}' },
+                                foreground: { value: '{dark-color-scheme.foreground.contrast}' },
+                                'left-icon': { value: '{dark-color-scheme.icon.contrast}' },
+                                'right-icon': { value: '{dark-color-scheme.icon.contrast}' },
+                            },
+                            active: {
+                                background: { value: '{dark-color-scheme.states.background.transparent-active}' },
+                                border: { value: '{dark-color-scheme.line.contrast-fade}' },
+                                foreground: { value: '{dark-color-scheme.foreground.contrast}' },
+                                'left-icon': { value: '{dark-color-scheme.icon.contrast}' },
+                                'right-icon': { value: '{dark-color-scheme.icon.contrast}' },
+                            },
+                            'active-hover': {
+                                background: { value: '{dark-color-scheme.states.background.transparent-active}' },
+                                border: { value: '{dark-color-scheme.line.contrast-fade}' },
+                                foreground: { value: '{dark-color-scheme.foreground.contrast}' },
+                                'left-icon': { value: '{dark-color-scheme.icon.contrast}' },
+                                'right-icon': { value: '{dark-color-scheme.icon.contrast}' },
+                            },
+                            disabled: {
+                                background: { value: 'transparent' },
+                                border: { value: '{dark-color-scheme.states.line.disabled}' },
+                                foreground: { value: '{dark-color-scheme.states.foreground.disabled}' },
+                                'left-icon': { value: '{dark-color-scheme.states.icon.disabled}' },
+                                'right-icon': { value: '{dark-color-scheme.states.icon.disabled}' },
+                            }
+                        }
+                    }
+                }
+            },
+            transparent: {
+                theme: {
+                    'fade-on': {
+                        border: { value: 'transparent' },
+                        foreground: { value: '{dark-color-scheme.foreground.theme}' },
+                        background: { value: 'transparent' },
+                        'left-icon': { value: '{dark-color-scheme.icon.theme}' },
+                        'right-icon': { value: '{dark-color-scheme.icon.theme}' },
+
+                        states: {
+                            hover: {
+                                border: { value: 'transparent' },
+                                foreground: { value: '{dark-color-scheme.foreground.theme}' },
+                                background: { value: '{dark-color-scheme.states.background.transparent-hover}' },
+                                'left-icon': { value: '{dark-color-scheme.icon.theme}' },
+                                'right-icon': { value: '{dark-color-scheme.icon.theme}' },
+                            },
+                            active: {
+                                border: { value: 'transparent' },
+                                foreground: { value: '{dark-color-scheme.foreground.theme}' },
+                                background: { value: '{dark-color-scheme.states.background.transparent-active}' },
+                                'left-icon': { value: '{dark-color-scheme.icon.theme}' },
+                                'right-icon': { value: '{dark-color-scheme.icon.theme}' },
+                            },
+                            'active-hover': {
+                                border: { value: 'transparent' },
+                                foreground: { value: '{dark-color-scheme.foreground.theme}' },
+                                background: { value: '{dark-color-scheme.states.background.transparent-active}' },
+                                'left-icon': { value: '{dark-color-scheme.icon.theme}' },
+                                'right-icon': { value: '{dark-color-scheme.icon.theme}' },
+                            },
+                            disabled: {
+                                border: { value: 'transparent' },
+                                foreground: { value: '{dark-color-scheme.states.foreground.disabled}' },
+                                background: { value: 'transparent' },
+                                'left-icon': { value: '{dark-color-scheme.states.icon.disabled}' },
+                                'right-icon': { value: '{dark-color-scheme.states.icon.disabled}' },
+                            }
+                        }
+                    }
+                },
+                contrast: {
+                    'fade-on': {
+                        border: { value: 'transparent' },
+                        foreground: { value: '{dark-color-scheme.foreground.contrast}' },
+                        background: { value: 'transparent' },
+                        'left-icon': { value: '{dark-color-scheme.icon.contrast}' },
+                        'right-icon': { value: '{dark-color-scheme.icon.contrast}' },
+
+                        states: {
+                            hover: {
+                                border: { value: 'transparent' },
+                                foreground: { value: '{dark-color-scheme.foreground.contrast}' },
+                                background: { value: '{dark-color-scheme.states.background.transparent-hover}' },
+                                'left-icon': { value: '{dark-color-scheme.icon.contrast}' },
+                                'right-icon': { value: '{dark-color-scheme.icon.contrast}' },
+                            },
+                            active: {
+                                border: { value: 'transparent' },
+                                foreground: { value: '{dark-color-scheme.foreground.contrast}' },
+                                background: { value: '{dark-color-scheme.states.background.transparent-active}' },
+                                'left-icon': { value: '{dark-color-scheme.icon.contrast}' },
+                                'right-icon': { value: '{dark-color-scheme.icon.contrast}' },
+                            },
+                            'active-hover': {
+                                border: { value: 'transparent' },
+                                foreground: { value: '{dark-color-scheme.foreground.contrast}' },
+                                background: { value: '{dark-color-scheme.states.background.transparent-active}' },
+                                'left-icon': { value: '{dark-color-scheme.icon.contrast}' },
+                                'right-icon': { value: '{dark-color-scheme.icon.contrast}' },
+                            },
+                            disabled: {
+                                border: { value: 'transparent' },
+                                foreground: { value: '{dark-color-scheme.states.foreground.disabled}' },
+                                background: { value: 'transparent' },
+                                'left-icon': { value: '{dark-color-scheme.states.icon.disabled}' },
+                                'right-icon': { value: '{dark-color-scheme.states.icon.disabled}' },
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    // нужно будет удалить в дальнейшем
+    'icon-button': {
+        size: {
+            'horizontal-padding': { value: '{size.s}' },
+            'left-icon-padding': { value: '{size.xs}' }
+        }
+    },
+
+    'button-icon': {
+        size: {
+            'horizontal-padding': { value: '{size.s}' },
+            // пока не используется
+            'vertical-padding': { value: '{size.s}' },
+            'content-padding': { value: '{size.xxs}' }
+        }
+    }
+}

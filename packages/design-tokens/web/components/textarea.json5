@@ -1,0 +1,15 @@
+{
+    textarea: {
+        size: {
+            'min-height': { value: '64px' },
+            'max-height': { value:  '96px' },
+            padding: {
+                vertical: { value: '{size.s}' },
+                horizontal: { value: '{size.m}' }
+            }
+        },
+        font: {
+            default: { value: 'text-normal' }
+        }
+    }
+}

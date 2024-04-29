@@ -1,0 +1,214 @@
+{
+    tag: {
+        size: {
+            padding: {
+                horizontal: { value: '{size.xxs}' },
+                vertical: { value: '{size.xxs}' }
+            },
+            'content-gap': {
+                horizontal: { value: '{size.3xs}' }
+            },
+            // Дополнительные отступы для иконки и кнопки закрытия
+            icon: {
+                'margin-left': { value: '{size.3xs}' }
+            },
+            'close-button': {
+                'margin-right': { value: '{size.3xs}' }
+            }
+        },
+        font: {
+            default: { value: 'text-normal-strong' }
+        },
+        // Стили
+        'light-color-scheme': {
+            theme: {
+                'fade-on': {
+                    default: {
+                        background: { value: '{light-color-scheme.background.theme-fade}'},
+                        text: { value: '{light-color-scheme.foreground.theme}' },
+                        icon: { value: '{light-color-scheme.icon.theme}' },
+                        'close-button': { value: '{light-color-scheme.icon.theme}' }
+                    },
+                    states: {
+                        hover: {
+                            background: { value: '{light-color-scheme.states.background.theme-fade-hover}'},
+                            text: { value: '{light-color-scheme.foreground.theme}' },
+                            icon: { value: '{light-color-scheme.icon.theme}' },
+                            'close-button': { value: '{light-color-scheme.icon.theme}' }
+                        },
+                        focus: {
+                            background: { value: '{light-color-scheme.background.theme-fade}'},
+                            text: { value: '{light-color-scheme.foreground.theme}' },
+                            icon: { value: '{light-color-scheme.icon.theme}' },
+                            'close-button': { value: '{light-color-scheme.icon.theme}' },
+                            'outline': { value: '{light-color-scheme.states.line.focus-theme}' }
+                        },
+                        disabled: {
+                            background: { value: '{light-color-scheme.states.background.disabled}'},
+                            text: { value: '{light-color-scheme.states.foreground.disabled}' },
+                            icon: { value: '{light-color-scheme.states.icon.disabled}' },
+                            'close-button': { value: '{light-color-scheme.states.icon.disabled}' }
+                        }
+                    }
+                }
+            },
+            contrast: {
+                'fade-on': {
+                    default: {
+                        background: { value: '{light-color-scheme.background.contrast-fade}'},
+                        text: { value: '{light-color-scheme.foreground.contrast}' },
+                        icon: { value: '{light-color-scheme.icon.contrast-fade}' },
+                        'close-button': { value: '{light-color-scheme.icon.contrast-fade}' }
+                    },
+                    states: {
+                        hover: {
+                            background: { value: '{light-color-scheme.states.background.contrast-fade-hover}'},
+                            text: { value: '{light-color-scheme.foreground.contrast}' },
+                            icon: { value: '{light-color-scheme.icon.contrast-fade}' },
+                            'close-button': { value: '{light-color-scheme.icon.contrast-fade}' }
+                        },
+                        focus: {
+                            background: { value: '{light-color-scheme.background.contrast-fade}'},
+                            text: { value: '{light-color-scheme.foreground.contrast}' },
+                            icon: { value: '{light-color-scheme.icon.contrast-fade}' },
+                            'close-button': { value: '{light-color-scheme.icon.contrast-fade}' },
+                            'outline': { value: '{light-color-scheme.states.line.focus-theme}' }
+                        },
+                        disabled: {
+                            background: { value: '{light-color-scheme.states.background.disabled}'},
+                            text: { value: '{light-color-scheme.states.foreground.disabled}' },
+                            icon: { value: '{light-color-scheme.states.icon.disabled}' },
+                            'close-button': { value: '{light-color-scheme.states.icon.disabled}' }
+                        }
+                    }
+                }
+            },
+            error: {
+                'fade-on': {
+                    default: {
+                        background: { value: '{light-color-scheme.background.error-fade}'},
+                        text: { value: '{light-color-scheme.foreground.error}' },
+                        icon: { value: '{light-color-scheme.icon.error}' },
+                        'close-button': { value: '{light-color-scheme.icon.error}' }
+                    },
+                    states: {
+                        hover: {
+                            background: { value: '{light-color-scheme.states.background.error-fade-hover}'},
+                            text: { value: '{light-color-scheme.foreground.error}' },
+                            icon: { value: '{light-color-scheme.icon.error}' },
+                            'close-button': { value: '{light-color-scheme.icon.error}' }
+                        },
+                        focus: {
+                            background: { value: '{light-color-scheme.background.error-fade}'},
+                            text: { value: '{light-color-scheme.foreground.error}' },
+                            icon: { value: '{light-color-scheme.icon.error}' },
+                            'close-button': { value: '{light-color-scheme.icon.error}' },
+                            'outline': { value: '{light-color-scheme.states.line.focus-error}' }
+                        },
+                        disabled: {
+                            background: { value: '{light-color-scheme.states.background.disabled}'},
+                            text: { value: '{light-color-scheme.states.foreground.disabled}' },
+                            icon: { value: '{light-color-scheme.states.icon.disabled}' },
+                            'close-button': { value: '{light-color-scheme.states.icon.disabled}' }
+                        }
+                    }
+                }
+            }
+        },
+        'dark-color-scheme': {
+            theme: {
+                'fade-on': {
+                    default: {
+                        background: { value: '{dark-color-scheme.background.theme-fade}'},
+                        text: { value: '{dark-color-scheme.foreground.theme}' },
+                        icon: { value: '{dark-color-scheme.icon.theme}' },
+                        'close-button': { value: '{dark-color-scheme.icon.theme}' }
+                    },
+                    states: {
+                        hover: {
+                            background: { value: '{dark-color-scheme.states.background.theme-fade-hover}'},
+                            text: { value: '{dark-color-scheme.foreground.theme}' },
+                            icon: { value: '{dark-color-scheme.icon.theme}' },
+                            'close-button': { value: '{dark-color-scheme.icon.theme}' }
+                        },
+                        focus: {
+                            background: { value: '{dark-color-scheme.background.theme-fade}'},
+                            text: { value: '{dark-color-scheme.foreground.theme}' },
+                            icon: { value: '{dark-color-scheme.icon.theme}' },
+                            'close-button': { value: '{dark-color-scheme.icon.theme}' },
+                            'outline': { value: '{dark-color-scheme.states.line.focus-theme}' }
+                        },
+                        disabled: {
+                            background: { value: '{dark-color-scheme.states.background.disabled}'},
+                            text: { value: '{dark-color-scheme.states.foreground.disabled}' },
+                            icon: { value: '{dark-color-scheme.states.icon.disabled}' },
+                            'close-button': { value: '{dark-color-scheme.states.icon.disabled}' }
+                        }
+                    }
+                }
+            },
+            contrast: {
+                'fade-on': {
+                    default: {
+                        background: { value: '{dark-color-scheme.background.contrast-fade}'},
+                        text: { value: '{dark-color-scheme.foreground.contrast}' },
+                        icon: { value: '{dark-color-scheme.icon.contrast-fade}' },
+                        'close-button': { value: '{dark-color-scheme.icon.contrast-fade}' }
+                    },
+                    states: {
+                        hover: {
+                            background: { value: '{dark-color-scheme.states.background.contrast-fade-hover}'},
+                            text: { value: '{dark-color-scheme.foreground.contrast}' },
+                            icon: { value: '{dark-color-scheme.icon.contrast-fade}' },
+                            'close-button': { value: '{dark-color-scheme.icon.contrast-fade}' }
+                        },
+                        focus: {
+                            background: { value: '{dark-color-scheme.background.contrast-fade}'},
+                            text: { value: '{dark-color-scheme.foreground.contrast}' },
+                            icon: { value: '{dark-color-scheme.icon.contrast-fade}' },
+                            'close-button': { value: '{dark-color-scheme.icon.contrast-fade}' },
+                            'outline': { value: '{dark-color-scheme.states.line.focus-theme}' }
+                        },
+                        disabled: {
+                            background: { value: '{dark-color-scheme.states.background.disabled}'},
+                            text: { value: '{dark-color-scheme.states.foreground.disabled}' },
+                            icon: { value: '{dark-color-scheme.states.icon.disabled}' },
+                            'close-button': { value: '{dark-color-scheme.states.icon.disabled}' }
+                        }
+                    }
+                }
+            },
+            error: {
+                'fade-on': {
+                    default: {
+                        background: { value: '{dark-color-scheme.background.error-fade}'},
+                        text: { value: '{dark-color-scheme.foreground.error}' },
+                        icon: { value: '{dark-color-scheme.icon.error}' },
+                        'close-button': { value: '{dark-color-scheme.icon.error}' }
+                    },
+                    states: {
+                        hover: {
+                            background: { value: '{dark-color-scheme.states.background.error-fade-hover}'},
+                            text: { value: '{dark-color-scheme.foreground.error}' },
+                            icon: { value: '{dark-color-scheme.icon.error}' },
+                            'close-button': { value: '{dark-color-scheme.icon.error}' }
+                        },
+                        focus: {
+                            background: { value: '{dark-color-scheme.background.error-fade}'},
+                            text: { value: '{dark-color-scheme.foreground.error}' },
+                            icon: { value: '{dark-color-scheme.icon.error}' },
+                            'close-button': { value: '{dark-color-scheme.icon.error}' },
+                            'outline': { value: '{dark-color-scheme.states.line.focus-error}' }
+                        },
+                        disabled: {
+                            background: { value: '{dark-color-scheme.states.background.disabled}'},
+                            text: { value: '{dark-color-scheme.states.foreground.disabled}' },
+                            icon: { value: '{dark-color-scheme.states.icon.disabled}' },
+                            'close-button': { value: '{dark-color-scheme.states.icon.disabled}' }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
