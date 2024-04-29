@@ -4,17 +4,22 @@
     "description": "Design tokens",
     "author": "",
     "license": "MIT",
+    "packageManager": "yarn@4.1.1",
     "engines": {
+        "yarn": "^4.0.0",
         "node": ">=18.0.0"
     },
     "keywords": [
-        "tokens",
-        "design",
-        "system"
+        "design-system",
+        "design-tokens",
+        "style-dictionary",
+        "figma",
+        "koobiq"
     ],
     "scripts": {
+        "prepare": "husky",
         "prebuild": "rimraf dist/",
-        "build:all": "node tools/build.js",
+        "build": "node tools/build.js",
         "stage:commit": "koobiq-cli stage-commit -c \"Design Tokens\"",
         "publish:github": "koobiq-cli publish-ci-github"
     },

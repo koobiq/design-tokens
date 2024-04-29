@@ -1,0 +1,34 @@
+name: Publish
+
+on:
+  push:
+    tags:
+      - '*.*.*'
+      # - '[0-9]+.[0-9]+.[0-9]+'
+      # - '*@*.*.*' for NX integration
+
+permissions:
+  contents: read
+  packages: write
+  id-token: write # needed for provenance data generation
+
+jobs:
+  publish:
+    name: Publish
+    runs-on: ubuntu-latest
+    if: ${{ github.repository_owner == 'koobiq' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Yarn
+        uses: ./.github/workflows/actions/setup-yarn
+
+      - name: Build
+        run: yarn run build
+
+      - name: Publish package
+        run: |
+          rm -rf .npmrc && echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN_KOOBIQ" > ~/.npmrc
+          npm run publish:github
+        env:
+          NPM_TOKEN_KOOBIQ: ${{ secrets.NPM_PUBLISH_TOKEN }}
