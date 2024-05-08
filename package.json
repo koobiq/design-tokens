@@ -19,7 +19,7 @@
     "scripts": {
         "prepare": "husky",
         "prebuild": "rimraf dist/",
-        "build:index-common": "yarn run rollup dist/design-tokens/web/index.mjs --file dist/design-tokens/web/cjs/index.cjs --format cjs",
+        "build:index-common": "yarn run rollup dist/design-tokens/web/js/index.mjs --file dist/design-tokens/web/js/index.cjs --format cjs",
         "build": "node tools/build.js && yarn run build:index-common",
         "stage:commit": "koobiq-cli stage-commit -c \"Design Tokens\"",
         "publish:github": "koobiq-cli publish-ci-github"

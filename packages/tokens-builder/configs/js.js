@@ -3,7 +3,7 @@ module.exports = {
         transformGroup: 'kbq/ts',
         files: [
             {
-                destination: 'index.js',
+                destination: 'js/index.js',
                 format: 'javascript/es6'
             },
             {

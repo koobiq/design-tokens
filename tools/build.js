@@ -11,17 +11,12 @@ build([
     }
 ]);
 
-const { copySync, copyFileSync, writeFileSync, readFileSync, mkdirSync, removeSync, renameSync, existsSync } = require('fs-extra');
+const { copySync, copyFileSync, writeFileSync, readFileSync, renameSync } = require('fs-extra');
 
 const prepareTokens = (package) => {
     copySync(`packages/${package}`, `dist/${package}`);
 
     copyFileSync('./LICENSE', `dist/${package}/LICENSE`);
-}
-
-const prepareDir = (dirPath) => {
-    if (existsSync(dirPath)) { removeSync(dirPath); }
-    mkdirSync(dirPath);
 }
 
 const updateVersion = (package, version) => {
@@ -37,19 +32,19 @@ const updateTokensPackage = () => {
     const exportsConfig = {
         ...packageContent.exports,
         './*': {
-            require: './web/cjs/*',
-            import: './web/esm/*',
+            require: './web/js/*',
+            import: './web/js/*',
             default: './*'
         },
         '.': {
-            require: './web/cjs/index.cjs',
-            import: './web/esm/index.mjs',
-            default: './web/esm/index.mjs'
+            require: './web/js/index.cjs',
+            import: './web/js/index.mjs',
+            default: './web/js/index.mjs'
         }
     }
 
     packageContent.types = "web/index.d.ts";
-    packageContent.module = "web/index.mjs";
+    packageContent.module = "web/js/index.mjs";
     packageContent.exports = exportsConfig;
 
     writeFileSync(packagePath, JSON.stringify(packageContent, undefined, 2))
@@ -63,6 +58,5 @@ prepareTokens('tokens-builder');
 updateVersion('tokens-builder', currentVersion);
 updateVersion('design-tokens', currentVersion);
 
-prepareDir('dist/design-tokens/web/cjs');
-renameSync('dist/design-tokens/web/index.js', 'dist/design-tokens/web/index.mjs');
+renameSync('dist/design-tokens/web/js/index.js', 'dist/design-tokens/web/js/index.mjs');
 updateTokensPackage();
