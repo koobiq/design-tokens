@@ -21,7 +21,7 @@
                         top: { value: '0' },
                         right: { value: '{size.s}' },
                         bottom: { value: '0' },
-                        left: { value: '{size.l}' },
+                        left: { value: '{size.s}' },
                     }
                 },
                 // обертка для содержимого (заголовок, текст, кнопки)
@@ -102,7 +102,7 @@
                         top: { value: '{size.m}' },
                         right: { value: '0' },
                         bottom: { value: '{size.xxs}' },
-                        left: { value: '{size.l}' },
+                        left: { value: '0' },
                     }
                 },
                 icon: {
