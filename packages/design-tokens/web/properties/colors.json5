@@ -64,15 +64,13 @@
             'error-less': { value: '{light-color-scheme.error.palette.value.99}' },
             success: { value: '{light-color-scheme.success.palette.value.45}' },
             'success-fade': { value: '{light-color-scheme.success.palette.value.88}' },
-            // surfacce — удалить после удаления из компонентов
-            surface: { value: '{light-color-scheme.contrast.palette.value.95}' },
+            surface: { value: '{light-color-scheme.contrast.palette.value.95}' }, // surface — удалить после удаления из компонентов
             theme: { value: '{light-color-scheme.theme.default.value}' },
             'theme-fade': { value: '{light-color-scheme.theme.palette.value.92}' },
             warning: { value: '{light-color-scheme.warning.palette.value.50}' },
             'warning-fade': { value: '{light-color-scheme.warning.palette.value.90}' },
             transparent: { value: 'transparent' },
-            // будет удалено, после удаления из компонентов ↓
-            background: { value: '{light-color-scheme.white.default}' },
+            background: { value: '{light-color-scheme.white.default}' }, // будет удалено, после удаления из компонентов
             'background-disabled': { value: '{light-color-scheme.contrast.palette.value.95}' },
             'background-less-contrast': { value: '{light-color-scheme.contrast.palette.value.95}' },
             'background-under': { value: '{light-color-scheme.contrast.palette.value.95}' },
@@ -92,9 +90,7 @@
             'contrast-secondary': { value: '{light-color-scheme.contrast.palette.value.50}' },
             'contrast-tertiary': { value: '{light-color-scheme.contrast.palette.value.70}' },
             success: { value: '{light-color-scheme.success.palette.value.35}' },
-            // будет удалено, после удаления из компонентов ↓
-            'success-less': { value: '{light-color-scheme.success.palette.value.90}' },
-            //
+            'success-less': { value: '{light-color-scheme.success.palette.value.90}' }, // будет удалено, после удаления из компонентов
             'success-secondary': { value: '{light-color-scheme.success.palette.value.45}' },
             warning: { value: '{light-color-scheme.warning.palette.value.40}' },
             'warning-secondary': { value: '{light-color-scheme.warning.palette.value.45}' },
@@ -102,10 +98,8 @@
             'error-secondary': { value: '{light-color-scheme.error.palette.value.50}' },
             'error-tertiary': { value: '{light-color-scheme.error.palette.value.70}' },
             visited: { value: '{light-color-scheme.purple.palette.value.45}' },
-            // будет удалено, после удаления из компонентов ↓
-            'error-less': { value: '{light-color-scheme.error.palette.value.90}' },
-            // будет удалено, после удаления из компонентов ↓
-            text: { value: '{light-color-scheme.contrast.palette.value.15}' },
+            'error-less': { value: '{light-color-scheme.error.palette.value.90}' }, // будет удалено, после удаления из компонентов
+            text: { value: '{light-color-scheme.contrast.palette.value.15}' }, // будет удалено, после удаления из компонентов
             'text-less-contrast': { value: '{light-color-scheme.contrast.palette.value.50}'},
             'text-disabled': { value: '{light-color-scheme.contrast.palette.value.70}' },
             'text-error': { value: '{light-color-scheme.error.palette.value.50}' },
@@ -155,9 +149,12 @@
                 'error-active':  {  value: '#D8412D' },
                 'error-fade-hover':  {  value: '#FFD9D4' },
                 'error-fade-active': {  value: '#FEC9C2' },
-                // будет удалено, после удаления из компонентов ↓
-                'error-less': { value: '{light-color-scheme.error.palette.value.99}' },
-			},
+                'warning-fade-hover':  {  value: '#FFE6BC' },
+                'warning-fade-active': {  value: '#FFE0AB' },
+                'error-less': { value: '{light-color-scheme.error.palette.value.99}' }, // будет удалено, после удаления из компонентов
+                'ghost-hover': { value: 'rgba(106, 115, 150, 0.08)' }, // будет удалено, после удаления из компонентов
+                'ghost-active': { value: 'rgba(106, 115, 150, 0.16)' }, // будет удалено, после удаления из компонентов
+            },
 			foreground: {
                 disabled: { value: '{light-color-scheme.contrast.palette.value.70}' },
                 'theme-hover': { value: '{light-color-scheme.theme.palette.value.45}' },
@@ -166,6 +163,7 @@
                 'visited-active': {  value: '{light-color-scheme.purple.palette.value.35}'  },
 			},
 			icon: {
+                disabled: { value: '{light-color-scheme.contrast.palette.value.80}' },
                 'theme-hover': { value: '{light-color-scheme.theme.palette.value.45}' },
                 'theme-active': { value: '{light-color-scheme.theme.palette.value.40}' },
                 'contrast-hover': { value: '{light-color-scheme.contrast.palette.value.10}' },
@@ -176,7 +174,6 @@
                 'error-active': { value: '{light-color-scheme.error.palette.value.40}' },
                 'success-hover': { value: '{light-color-scheme.success.palette.value.40}' },
                 'success-active': { value: '{light-color-scheme.success.palette.value.30}' },
-                disabled: { value: '{light-color-scheme.contrast.palette.value.80}' },
                 'warning-hover': { value: '{light-color-scheme.warning.palette.value.45}' },
                 'warning-active': { value: '{light-color-scheme.warning.palette.value.42}' },
                 'visited-hover': {  value: '{light-color-scheme.purple.palette.value.50}'  },
@@ -341,23 +338,31 @@
 		},
 		states: {
 			background: {
+                //  DISABLE
                 disabled: { value: '{dark-color-scheme.contrast.palette.value.A16}' },
+                //  TRANSPARENT
                 'transparent-hover': { value: '{dark-color-scheme.contrast.palette.value.A16}'},
                 'transparent-active': { value: '{dark-color-scheme.contrast.palette.value.А15L85}'},
+                //  CONTRAST
                 'contrast-hover': { value: '#C2C4C8' },
                 'contrast-active': {  value: '#858991' },
                 'contrast-fade-hover': {  value: '#353748' },
                 'contrast-fade-active': {  value: '#3A3C4E' },
+                //  THEME
                 'theme-hover': {  value: '{dark-color-scheme.theme.palette.value.45}' },
                 'theme-active': {  value: '{dark-color-scheme.theme.palette.value.39}' },
                 'theme-fade-hover': {  value: '{dark-color-scheme.theme.palette.value.18}' },
                 'theme-fade-active': {  value: '{dark-color-scheme.theme.palette.value.21}' },
+                //  ERROR
                 'error-hover': {  value: '#D21B03' },
                 'error-active':  {  value: '#C21903' },
                 'error-fade-hover':  {  value: '#430800' },
                 'error-fade-active': {  value: '#530A01' },
-                // будет удалено, после удаления из компонентов ↓
-                'error-less': { value: '{dark-color-scheme.error.palette.value.6}' },
+                //  WARNING
+                'warning-fade-hover':  {  value: '#432A00' },
+                'warning-fade-active': {  value: '#543500' },
+                //  OTHER
+                'error-less': { value: '{dark-color-scheme.error.palette.value.6}' }, // будет удалено, после удаления из компонентов
 			},
 			foreground: {
                 disabled: { value: '{dark-color-scheme.contrast.palette.value.30}' },
