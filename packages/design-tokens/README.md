@@ -1,10 +1,10 @@
-# Design Tokens Koobiq
+# Tokens koobiq
 
 ## Overview
 
 Design tokens are special variables used to maintain a scalable
 visual system for UI development and brand consistency.
-Koobiq design-tokens store the visual design attributes that define the
+Koobiq design tokens store the visual design attributes that define the
 visual language, including color, typography, and spacing we use.
 
 

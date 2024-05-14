@@ -13,7 +13,7 @@
                 states: {
                     hover: {
                         border: { value: '{light-color-scheme.line.contrast-fade}' },
-                        background: { value: '{light-color-scheme.states.background.ghost-hover}' }
+                        background: { value: '{light-color-scheme.states.background.transparent-hover}' }
                     },
                     checked: {
                         border: { value: 'transparent' },
@@ -97,7 +97,7 @@
                 states: {
                     hover: {
                         border: { value: '{dark-color-scheme.line.contrast-fade}' },
-                        background: { value: '{dark-color-scheme.states.background.ghost-hover}' }
+                        background: { value: '{dark-color-scheme.states.background.transparent-hover}' }
                     },
                     checked: {
                         border: { value: 'transparent' },

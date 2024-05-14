@@ -12,7 +12,7 @@
                 states: {
                     hover: {
                         'outer-circle-border': { value: '{light-color-scheme.line.contrast-fade}' },
-                        'outer-circle-background': { value: '{light-color-scheme.states.background.ghost-hover}' },
+                        'outer-circle-background': { value: '{light-color-scheme.states.background.transparent-hover}' },
                         'inner-circle-background': { value: 'transparent' }
                     },
                     checked: {
@@ -109,7 +109,7 @@
                 states: {
                     hover: {
                         'outer-circle-border': { value: '{dark-color-scheme.line.contrast-fade}' },
-                        'outer-circle-background': { value: '{dark-color-scheme.states.background.ghost-hover}' },
+                        'outer-circle-background': { value: '{dark-color-scheme.states.background.transparent-hover}' },
                         'inner-circle-background': { value: 'transparent' }
                     },
                     checked: {

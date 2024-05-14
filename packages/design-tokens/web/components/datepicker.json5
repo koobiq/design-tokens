@@ -62,10 +62,10 @@
                     },
                     states: {
                         hover: {
-                             background: {value: '{light-color-scheme.states.background.ghost-hover}'}
+                             background: {value: '{light-color-scheme.states.background.transparent-hover}'}
                         },
                         active: {
-                            background: {value: '{light-color-scheme.states.background.ghost-active}'}
+                            background: {value: '{light-color-scheme.states.background.transparent-active}'}
                         },
                         selected: {
                             background: {value: '{light-color-scheme.background.contrast}'},
@@ -103,10 +103,10 @@
                     },
                     states: {
                         hover: {
-                             background: {value: '{dark-color-scheme.states.background.ghost-hover}'}
+                             background: {value: '{dark-color-scheme.states.background.transparent-hover}'}
                         },
                         active: {
-                            background: {value: '{dark-color-scheme.states.background.ghost-active}'}
+                            background: {value: '{dark-color-scheme.states.background.transparent-active}'}
                         },
                         selected: {
                             background: {value: '{dark-color-scheme.background.contrast}'},

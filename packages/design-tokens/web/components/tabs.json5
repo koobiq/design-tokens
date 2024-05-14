@@ -48,7 +48,7 @@
                         },
                         states: {
                             hover: {
-                                background: { value: '{light-color-scheme.states.background.ghost-hover}'}
+                                background: { value: '{light-color-scheme.states.background.transparent-hover}'}
                             },
                             focused: {
                                 'focus-outline': {
@@ -56,13 +56,13 @@
                                 }
                             },
                             selected: {
-                                background: { value: '{light-color-scheme.states.background.ghost-active}'}
+                                background: { value: '{light-color-scheme.states.background.transparent-active}'}
                             },
                             'selected-hover': {
-                                background: { value: '{light-color-scheme.states.background.ghost-active}'}
+                                background: { value: '{light-color-scheme.states.background.transparent-active}'}
                             },
                             'selected-disabled': {
-                                background: { value: '{light-color-scheme.states.background.ghost-active}'},
+                                background: { value: '{light-color-scheme.states.background.transparent-active}'},
                                 text: {
                                     color: { value: '{light-color-scheme.states.foreground.disabled}'}
                                 },
@@ -93,7 +93,7 @@
                         },
                         states: {
                             hover: {
-                                background: { value: '{light-color-scheme.states.background.ghost-hover}'}
+                                background: { value: '{light-color-scheme.states.background.transparent-hover}'}
                             },
                             focused: {
                                 'focus-outline': {
@@ -101,13 +101,13 @@
                                 }
                             },
                             selected: {
-                                background: { value: '{light-color-scheme.states.background.ghost-active}'}
+                                background: { value: '{light-color-scheme.states.background.transparent-active}'}
                             },
                             'selected-hover': {
-                                background: { value: '{light-color-scheme.states.background.ghost-active}'}
+                                background: { value: '{light-color-scheme.states.background.transparent-active}'}
                             },
                             'selected-disabled': {
-                                background: { value: '{light-color-scheme.states.background.ghost-active}'},
+                                background: { value: '{light-color-scheme.states.background.transparent-active}'},
                                 text: {
                                     color: { value: '{light-color-scheme.states.foreground.disabled}'}
                                 },
@@ -141,7 +141,7 @@
                         },
                         states: {
                             hover: {
-                                background: { value: '{light-color-scheme.states.background.ghost-hover}'}
+                                background: { value: '{light-color-scheme.states.background.transparent-hover}'}
                             },
                             focused: {
                                 'focus-outline': {
@@ -149,13 +149,13 @@
                                 }
                             },
                             selected: {
-                                background: { value: '{light-color-scheme.states.background.ghost-active}'}
+                                background: { value: '{light-color-scheme.states.background.transparent-active}'}
                             },
                             'selected-hover': {
-                                background: { value: '{light-color-scheme.states.background.ghost-active}'}
+                                background: { value: '{light-color-scheme.states.background.transparent-active}'}
                             },
                             'selected-disabled': {
-                                background: { value: '{light-color-scheme.states.background.ghost-active}'},
+                                background: { value: '{light-color-scheme.states.background.transparent-active}'},
                                 text: {
                                     color: { value: '{light-color-scheme.states.foreground.disabled}'}
                                 },
@@ -186,7 +186,7 @@
                         },
                         states: {
                             hover: {
-                                background: { value: '{light-color-scheme.states.background.ghost-hover}'}
+                                background: { value: '{light-color-scheme.states.background.transparent-hover}'}
                             },
                             focused: {
                                 'focus-outline': {
@@ -194,13 +194,13 @@
                                 }
                             },
                             selected: {
-                                background: { value: '{light-color-scheme.states.background.ghost-active}'}
+                                background: { value: '{light-color-scheme.states.background.transparent-active}'}
                             },
                             'selected-hover': {
-                                background: { value: '{light-color-scheme.states.background.ghost-active}'}
+                                background: { value: '{light-color-scheme.states.background.transparent-active}'}
                             },
                             'selected-disabled': {
-                                background: { value: '{light-color-scheme.states.background.ghost-active}'},
+                                background: { value: '{light-color-scheme.states.background.transparent-active}'},
                                 text: {
                                     color: { value: '{light-color-scheme.states.foreground.disabled}'}
                                 },
@@ -256,7 +256,7 @@
                         },
                         states: {
                             hover: {
-                                background: { value: '{dark-color-scheme.states.background.ghost-hover}'}
+                                background: { value: '{dark-color-scheme.states.background.transparent-hover}'}
                             },
                             focused: {
                                 'focus-outline': {
@@ -264,13 +264,13 @@
                                 }
                             },
                             selected: {
-                                background: { value: '{dark-color-scheme.states.background.ghost-active}'}
+                                background: { value: '{dark-color-scheme.states.background.transparent-active}'}
                             },
                             'selected-hover': {
-                                background: { value: '{dark-color-scheme.states.background.ghost-active}'}
+                                background: { value: '{dark-color-scheme.states.background.transparent-active}'}
                             },
                             'selected-disabled': {
-                                background: { value: '{dark-color-scheme.states.background.ghost-active}'},
+                                background: { value: '{dark-color-scheme.states.background.transparent-active}'},
                                 text: {
                                     color: { value: '{dark-color-scheme.states.foreground.disabled}'}
                                 },
@@ -301,7 +301,7 @@
                         },
                         states: {
                             hover: {
-                                background: { value: '{dark-color-scheme.states.background.ghost-hover}'}
+                                background: { value: '{dark-color-scheme.states.background.transparent-hover}'}
                             },
                             focused: {
                                 'focus-outline': {
@@ -309,13 +309,13 @@
                                 }
                             },
                             selected: {
-                                background: { value: '{dark-color-scheme.states.background.ghost-active}'}
+                                background: { value: '{dark-color-scheme.states.background.transparent-active}'}
                             },
                             'selected-hover': {
-                                background: { value: '{dark-color-scheme.states.background.ghost-active}'}
+                                background: { value: '{dark-color-scheme.states.background.transparent-active}'}
                             },
                             'selected-disabled': {
-                                background: { value: '{dark-color-scheme.states.background.ghost-active}'},
+                                background: { value: '{dark-color-scheme.states.background.transparent-active}'},
                                 text: {
                                     color: { value: '{dark-color-scheme.states.foreground.disabled}'}
                                 },
@@ -349,7 +349,7 @@
                         },
                         states: {
                             hover: {
-                                background: { value: '{dark-color-scheme.states.background.ghost-hover}'}
+                                background: { value: '{dark-color-scheme.states.background.transparent-hover}'}
                             },
                             focused: {
                                 'focus-outline': {
@@ -357,13 +357,13 @@
                                 }
                             },
                             selected: {
-                                background: { value: '{dark-color-scheme.states.background.ghost-active}'}
+                                background: { value: '{dark-color-scheme.states.background.transparent-active}'}
                             },
                             'selected-hover': {
-                                background: { value: '{dark-color-scheme.states.background.ghost-active}'}
+                                background: { value: '{dark-color-scheme.states.background.transparent-active}'}
                             },
                             'selected-disabled': {
-                                background: { value: '{dark-color-scheme.states.background.ghost-active}'},
+                                background: { value: '{dark-color-scheme.states.background.transparent-active}'},
                                 text: {
                                     color: { value: '{dark-color-scheme.states.foreground.disabled}'}
                                 },
@@ -394,7 +394,7 @@
                         },
                         states: {
                             hover: {
-                                background: { value: '{dark-color-scheme.states.background.ghost-hover}'}
+                                background: { value: '{dark-color-scheme.states.background.transparent-hover}'}
                             },
                             focused: {
                                 'focus-outline': {
@@ -402,13 +402,13 @@
                                 }
                             },
                             selected: {
-                                background: { value: '{dark-color-scheme.states.background.ghost-active}'}
+                                background: { value: '{dark-color-scheme.states.background.transparent-active}'}
                             },
                             'selected-hover': {
-                                background: { value: '{dark-color-scheme.states.background.ghost-active}'}
+                                background: { value: '{dark-color-scheme.states.background.transparent-active}'}
                             },
                             'selected-disabled': {
-                                background: { value: '{dark-color-scheme.states.background.ghost-active}'},
+                                background: { value: '{dark-color-scheme.states.background.transparent-active}'},
                                 text: {
                                     color: { value: '{dark-color-scheme.states.foreground.disabled}'}
                                 },

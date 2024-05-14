@@ -52,7 +52,7 @@
             states: {
                 hover: {
                     container: {
-                        background: { value: '{light-color-scheme.states.background.ghost-hover}'},
+                        background: { value: '{light-color-scheme.states.background.transparent-hover}'},
                     },
                     text: {
                         color: { value: '{light-color-scheme.foreground.contrast}' }
@@ -161,7 +161,7 @@
             states: {
                 hover: {
                     container: {
-                        background: { value: '{dark-color-scheme.states.background.ghost-hover}'},
+                        background: { value: '{dark-color-scheme.states.background.transparent-hover}'},
                     },
                     text: {
                         color: { value: '{dark-color-scheme.foreground.contrast}' }
