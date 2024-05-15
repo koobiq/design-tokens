@@ -101,7 +101,7 @@
                     padding: {
                         top: { value: '{size.m}' },
                         right: { value: '0' },
-                        bottom: { value: '{size.xxs}' },
+                        bottom: { value: '{size.m}' },
                         left: { value: '0' },
                     }
                 },
