@@ -1,72 +1,306 @@
 {
     alert: {
         size: {
-            container: {
-                'min-height': { value: '48px'},
-                'min-weight': { value: '320px'},
-                'content-gap': {
-                    horizontal: { value: '{size.m}' },
-                    vertical: { value: '{size.xxs}' }
+            normal: {
+                container: {
+                    // удалил мин. высоту. вроде как без нее можно
+                    // 'min-height': { value: '48px'},
+                    // удалил. заменил на токены составных частей (иконка, тайтл). см. ниже
+                    // 'content-gap': {
+                    //     horizontal: { value: '{size.m}' },
+                    //     vertical: { value: '{size.xxs}' }
+                    // },
+                    border: {
+                        // завести токен для радиуса контейнеров (сейчас 12px алерты, модалки, контейнеры)
+                        radius: { value: '{size.m}'}
+                    },
+                    padding: {
+                        // vertical: { value: '{size.l}' },
+                        // horizontal: { value: '{size.xl}' },
+                        // переделываю структуру, см спеку
+                        top: { value: '0' },
+                        right: { value: '{size.s}' },
+                        bottom: { value: '0' },
+                        left: { value: '{size.s}' },
+                    }
                 },
-                border: {
-                    radius: { value: '{size.m}'}
+                // обертка для содержимого (заголовок, текст, кнопки)
+                content: {
+                    padding: {
+                        top: { value: '{size.l}' },
+                        right: { value: '{size.s}' },
+                        bottom: { value: '{size.l}' },
+                        left: { value: '{size.m}' },
+                    }
                 },
-                padding: {
-                    vertical: { value: '{size.l}' },
-                    horizontal: { value: '{size.xl}' }
+                icon: {
+                    margin: {
+                        top: { value: '{size.l}' },
+                        right: { value: '0' },
+                        bottom: { value: '{size.l}' },
+                        left: { value: '{size.m}' },
+                        // доп. отступ иконки от верхней границы контейнера алерта, когда в алерте есть заголовок
+                        addon: {
+                            title: { value: '{size.3xs}' }
+                        }
+                    }
+                },
+                title: {
+                    margin: {
+                        bottom: { value: '{size.xxs}'}
+                    }
+                },
+                'close-button': {
+                    // переделал токены. см спеку
+                    margin: {
+                        top: { value: '{size.xxs}' },
+                        left: { value: '{size.3xs}' }
+                    }
+                },
+                // не нравится название
+                'button-stack': {
+                    padding: {
+                        top: { value: '{size.xs}' },
+                        bottom: { value: '{size.3xs}' },
+                    },
+                    // удалить этот гап, тк он зависит от вида кнопок/ссылок, которые дизайнер поставит туда
+                    // возможно, правильно было бы создать компоненты стек кнопок с заливкой, стек прозрачных кнопок, стек ссылок
+                    // а там уже и стандартизировать отступы
+                    // с появлением стеков пропадет разброд и шатание в отступах между кнопками в системе
+                    // примеры, где используются стеки кнопо: футер поповера, модалки, сайдпанели, панель действий над страницей, гридом, список действий-иконок в блоке кода
+                    // 'content-gap': {
+                    //     horizontal: { value: '{size.xxs}'}
+                    // }
                 }
             },
-            'close-button': {
-                // отрицательный сдвиг относительно container
-                margin: {
-                    top: { value: '-{size.s}' },
-                    right: { value: '-{size.m}' }
-                }
-            },
-            'button-stack': {
-                padding: {
-                    top: { value: '{size.s}' }
+            compact: {
+                container: {
+                    // удалил мин. высоту. вроде как без нее можно
+                    // 'min-height': { value: '48px'},
+                    // удалил. заменил на токены составных частей (иконка, тайтл). см. ниже
+                    // 'content-gap': {
+                    //     horizontal: { value: '{size.m}' },
+                    //     vertical: { value: '{size.xxs}' }
+                    // },
+                    border: {
+                        // завести токен для радиуса контейнеров (сейчас 12px алерты, модалки, контейнеры)
+                        radius: { value: '{size.m}'}
+                    },
+                    padding: {
+                        // vertical: { value: '{size.l}' },
+                        // horizontal: { value: '{size.xl}' },
+                        // переделываю структуру, см спеку
+                        top: { value: '0' },
+                        right: { value: '{size.s}' },
+                        bottom: { value: '0' },
+                        left: { value: '{size.l}' },
+                    }
                 },
-                'content-gap': {
-                    horizontal: { value: '{size.xxs}'}
+                // обертка для содержимого (заголовок, текст, кнопки)
+                content: {
+                    padding: {
+                        top: { value: '{size.m}' },
+                        right: { value: '0' },
+                        bottom: { value: '{size.m}' },
+                        left: { value: '0' },
+                    }
+                },
+                icon: {
+                    margin: {
+                        top: { value: '{size.m}' },
+                        right: { value: '{size.s}' },
+                        // доп. отступ иконки от верхней границы контейнера алерта, когда в алерте есть заголовок
+                        addon: {
+                            title: { value: '{size.3xs}' }
+                        }
+                    }
+                },
+                title: {
+                    margin: {
+                        bottom: { value: '{size.3xs}'}
+                    }
+                },
+                'close-button': {
+                    // переделал токены. см спеку
+                    margin: {
+                        top: { value: '{size.xxs}' },
+                        left: { value: '{size.3xs}' }
+                    }
+                },
+                'button-stack': {
+                    padding: {
+                        top: { value: '{size.xs}' },
+                        bottom: { value: '{size.3xs}' },
+                    },
+                    // удалить этот гап, тк он зависит от вида кнопок/ссылок, которые дизайнер поставит туда
+                    // возможно, правильно было бы создать компоненты стек кнопок с заливкой, стек прозрачных кнопок, стек ссылок
+                    // а там уже и стандартизировать отступы
+                    // с появлением стеков пропадет разброд и шатание в отступах между кнопками в системе
+                    // примеры, где используются стеки кнопо: футер поповера, модалки, сайдпанели, панель действий над страницей, гридом, список действий-иконок в блоке кода
+                    // 'content-gap': {
+                    //     horizontal: { value: '{size.xxs}'}
+                    // }
                 }
             }
         },
         font: {
-           title: { value: 'subheading' },
-           text: { value: 'text-normal' },
+            title: { value: 'subheading' },
+            'title-compact': {  value: 'text-big-strong' },
+            text: { value: 'text-normal' },
         },
         'light-color-scheme': {
-            contrast: {
-                container: {
-                    background: { value: '{light-color-scheme.background.contrast-fade}' },
-                    title: { value: '{light-color-scheme.foreground.contrast}' },
-                    text: { value: '{light-color-scheme.foreground.contrast}' }
+            default: {
+                contrast: {
+                    container: {
+                        background: { value: '{light-color-scheme.background.contrast-fade}' },
+                        title: { value: '{light-color-scheme.foreground.contrast}' },
+                        text: { value: '{light-color-scheme.foreground.contrast}' }
+                    }
+                },
+                error: {
+                    container: {
+                        background: { value: '{light-color-scheme.background.contrast-fade}' },
+                        title: { value: '{light-color-scheme.foreground.contrast}' },
+                        text: { value: '{light-color-scheme.foreground.contrast}' }
+                    }
+                },
+                warning: {
+                    container: {
+                        background: { value: '{light-color-scheme.background.contrast-fade}' },
+                        title: { value: '{light-color-scheme.foreground.contrast}' },
+                        text: { value: '{light-color-scheme.foreground.contrast}' }
+                    }
+                },
+                success: {
+                    container: {
+                        background: { value: '{light-color-scheme.background.contrast-fade}' },
+                        title: { value: '{light-color-scheme.foreground.contrast}' },
+                        text: { value: '{light-color-scheme.foreground.contrast}' }
+                    }
+                },
+                theme: {
+                    container: {
+                        background: { value: '{light-color-scheme.background.contrast-fade}' },
+                        title: { value: '{light-color-scheme.foreground.contrast}' },
+                        text: { value: '{light-color-scheme.foreground.contrast}' }
+                    }
                 }
             },
-            error: {
-                container: {
-                    background: { value: '{light-color-scheme.background.contrast-fade}' },
-                    title: { value: '{light-color-scheme.foreground.contrast}' },
-                    text: { value: '{light-color-scheme.foreground.contrast}' }
+            colored: {
+                contrast: {
+                    container: {
+                        background: { value: '{light-color-scheme.background.contrast-fade}' },
+                        title: { value: '{light-color-scheme.foreground.contrast}' },
+                        text: { value: '{light-color-scheme.foreground.contrast}' }
+                    }
+                },
+                error: {
+                    container: {
+                        background: { value: '{light-color-scheme.background.error-fade}' },
+                        title: { value: '{light-color-scheme.foreground.contrast}' },
+                        text: { value: '{light-color-scheme.foreground.contrast}' }
+                    }
+                },
+                warning: {
+                    container: {
+                        background: { value: '{light-color-scheme.background.warning-fade}' },
+                        title: { value: '{light-color-scheme.foreground.contrast}' },
+                        text: { value: '{light-color-scheme.foreground.contrast}' }
+                    }
+                },
+                success: {
+                    container: {
+                        background: { value: '{light-color-scheme.background.success-fade}' },
+                        title: { value: '{light-color-scheme.foreground.contrast}' },
+                        text: { value: '{light-color-scheme.foreground.contrast}' }
+                    }
+                },
+                theme: {
+                    container: {
+                        background: { value: '{light-color-scheme.background.theme-fade}' },
+                        title: { value: '{light-color-scheme.foreground.contrast}' },
+                        text: { value: '{light-color-scheme.foreground.contrast}' }
+                    }
                 }
-            }
+            },
+
         },
         'dark-color-scheme': {
-            contrast: {
-                container: {
-                    background: { value: '{dark-color-scheme.background.contrast-fade}' },
-                    title: { value: '{dark-color-scheme.foreground.contrast}' },
-                    text: { value: '{dark-color-scheme.foreground.contrast}' }
+            default: {
+                contrast: {
+                    container: {
+                        background: { value: '{dark-color-scheme.background.contrast-fade}' },
+                        title: { value: '{dark-color-scheme.foreground.contrast}' },
+                        text: { value: '{dark-color-scheme.foreground.contrast}' }
+                    }
+                },
+                error: {
+                    container: {
+                        background: { value: '{dark-color-scheme.background.contrast-fade}' },
+                        title: { value: '{dark-color-scheme.foreground.contrast}' },
+                        text: { value: '{dark-color-scheme.foreground.contrast}' }
+                    }
+                },
+                warning: {
+                    container: {
+                        background: { value: '{dark-color-scheme.background.contrast-fade}' },
+                        title: { value: '{dark-color-scheme.foreground.contrast}' },
+                        text: { value: '{dark-color-scheme.foreground.contrast}' }
+                    }
+                },
+                success: {
+                    container: {
+                        background: { value: '{dark-color-scheme.background.contrast-fade}' },
+                        title: { value: '{dark-color-scheme.foreground.contrast}' },
+                        text: { value: '{dark-color-scheme.foreground.contrast}' }
+                    }
+                },
+                theme: {
+                    container: {
+                        background: { value: '{dark-color-scheme.background.contrast-fade}' },
+                        title: { value: '{dark-color-scheme.foreground.contrast}' },
+                        text: { value: '{dark-color-scheme.foreground.contrast}' }
+                    }
                 }
             },
-            error: {
-                container: {
-                    background: { value: '{dark-color-scheme.background.contrast-fade}' },
-                    title: { value: '{dark-color-scheme.foreground.contrast}' },
-                    text: { value: '{dark-color-scheme.foreground.contrast}' }
+            colored: {
+                contrast: {
+                    container: {
+                        background: { value: '{dark-color-scheme.background.contrast-fade}' },
+                        title: { value: '{dark-color-scheme.foreground.contrast}' },
+                        text: { value: '{dark-color-scheme.foreground.contrast}' }
+                    }
+                },
+                error: {
+                    container: {
+                        background: { value: '{dark-color-scheme.background.error-fade}' },
+                        title: { value: '{dark-color-scheme.foreground.contrast}' },
+                        text: { value: '{dark-color-scheme.foreground.contrast}' }
+                    }
+                },
+                warning: {
+                    container: {
+                        background: { value: '{dark-color-scheme.background.warning-fade}' },
+                        title: { value: '{dark-color-scheme.foreground.contrast}' },
+                        text: { value: '{dark-color-scheme.foreground.contrast}' }
+                    }
+                },
+                success: {
+                    container: {
+                        background: { value: '{dark-color-scheme.background.success-fade}' },
+                        title: { value: '{dark-color-scheme.foreground.contrast}' },
+                        text: { value: '{dark-color-scheme.foreground.contrast}' }
+                    }
+                },
+                theme: {
+                    container: {
+                        background: { value: '{dark-color-scheme.background.theme-fade}' },
+                        title: { value: '{dark-color-scheme.foreground.contrast}' },
+                        text: { value: '{dark-color-scheme.foreground.contrast}' }
+                    }
                 }
-            }
-        }
+            },
+
+        },
     }
 }
