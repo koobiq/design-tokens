@@ -19,7 +19,8 @@
     "scripts": {
         "prepare": "husky",
         "prebuild": "rimraf dist/",
-        "build": "node tools/build.js",
+        "build:index-common": "yarn run rollup dist/design-tokens/web/js/index.mjs --file dist/design-tokens/web/js/index.cjs --format cjs",
+        "build": "node tools/build.js && yarn run build:index-common",
         "stage:commit": "koobiq-cli stage-commit -c \"Design Tokens\"",
         "publish:github": "koobiq-cli publish-ci-github"
     },
@@ -41,6 +42,7 @@
         "fs-extra": "^11.2.0",
         "husky": "^9.0.11",
         "rimraf": "^5.0.5",
+        "rollup": "^4.17.2",
         "style-dictionary": "^3.7.1"
     }
 }
