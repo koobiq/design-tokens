@@ -1,4 +1,4 @@
-# Tokens koobiq
+# Koobiq Design Tokens
 
 ## Overview
 
