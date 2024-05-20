@@ -8,19 +8,19 @@
                 },
                 padding: {
                     left: { value: '{size.m}' },
-                    right: { value: '{size.m}' },
+                    right: { value: '{size.s}' },
                 }
             },
             // центральная область, в которой расположены текст и кнопки
             content: {
                 padding: {
                     top: { value: '{size.l}' },
-                    buttom: { value: '{size.l}' },
+                    bottom: { value: '{size.l}' }
                 }
             },
             caption: {
                 padding: {
-                    top: { value: '{size.xxs}' },
+                    bottom: { value: '{size.xxs}' }
                 }
             },
             icon: {
@@ -52,17 +52,13 @@
             title: { value: 'text-normal' },
             text: { value: 'text-normal' }
         },
-        light: {
+        'light': {
             contrast: {
                 container: {
                     background: { value: '{light.background.card}' },
                     title: { value: '{light.foreground.contrast}' },
                     text: { value: '{light.foreground.contrast-secondary}' },
                     shadow: { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.16)'}
-                },
-                icon: {
-                    background: { value: 'none' },
-                    color: { value: '{light.icon.contrast}' },
                 }
             },
             error: {
@@ -71,10 +67,6 @@
                     title: { value: '{light.foreground.contrast}' },
                     text: { value: '{light.foreground.contrast-secondary}' },
                     shadow: { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.16)'}
-                },
-                icon: {
-                    background: { value: 'none' },
-                    color: { value: '{light.icon.error}' },
                 }
             },
             warning: {
@@ -83,10 +75,6 @@
                     title: { value: '{light.foreground.contrast}' },
                     text: { value: '{light.foreground.contrast-secondary}' },
                     shadow: { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.16)'}
-                },
-                icon: {
-                    background: { value: 'none' },
-                    color: { value: '{light.icon.warning}' },
                 }
             },
             success: {
@@ -95,24 +83,16 @@
                     title: { value: '{light.foreground.contrast}' },
                     text: { value: '{light.foreground.contrast-secondary}' },
                     shadow: { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.16)'}
-                },
-                icon: {
-                    background: { value: 'none' },
-                    color: { value: '{light.icon.success}' },
                 }
             }
         },
-        dark: {
+        'dark': {
             contrast: {
                 container: {
                     background: { value: '{dark.background.card}' },
                     title: { value: '{dark.foreground.contrast}' },
                     text: { value: '{dark.foreground.contrast-secondary}' },
                     shadow: { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.16)'}
-                },
-                icon: {
-                    background: { value: 'none' },
-                    color: { value: '{dark.icon.contrast}' },
                 }
             },
             error: {
@@ -121,10 +101,6 @@
                     title: { value: '{dark.foreground.contrast}' },
                     text: { value: '{dark.foreground.contrast-secondary}' },
                     shadow: { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.16)'}
-                },
-                icon: {
-                    background: { value: 'none' },
-                    color: { value: '{dark.icon.error}' },
                 }
             },
             warning: {
@@ -133,10 +109,6 @@
                     title: { value: '{dark.foreground.contrast}' },
                     text: { value: '{dark.foreground.contrast-secondary}' },
                     shadow: { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.16)'}
-                },
-                icon: {
-                    background: { value: 'none' },
-                    color: { value: '{dark.icon.warning}' },
                 }
             },
             success: {
@@ -145,10 +117,6 @@
                     title: { value: '{dark.foreground.contrast}' },
                     text: { value: '{dark.foreground.contrast-secondary}' },
                     shadow: { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.16)'}
-                },
-                icon: {
-                    background: { value: 'none' },
-                    color: { value: '{dark.icon.success}' },
                 }
             }
         }
@@ -156,10 +124,10 @@
     'toast-stack': {
         size: {
             margin: {
-                top: { value: '{size.m}}' },
-                right: { value: '{size.m}}' }
+                top: { value: '{size.m}' },
+                right: { value: '{size.m}' }
             },
-            gap: { value: '{size.s}}' }
+            gap: { value: '{size.s}' }
         }
     }
 }
