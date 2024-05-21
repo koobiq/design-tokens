@@ -6,12 +6,12 @@ require('./transforms/attribute/md-typography')(StyleDictionary);
 require('./transforms/attribute/typography')(StyleDictionary);
 require('./transforms/attribute/palette')(StyleDictionary);
 require('./transforms/attribute/prefix')(StyleDictionary);
-require('./transforms/attribute/size')(StyleDictionary);
+require('./transforms/attribute/font')(StyleDictionary);
 
 // ==== Include custom filters ====
 require('./filters/palette')(StyleDictionary);
+require('./filters/css-variables')(StyleDictionary);
 require('./filters/color')(StyleDictionary);
-require('./filters/size')(StyleDictionary);
 require('./filters/typography')(StyleDictionary);
 require('./filters/md-typography')(StyleDictionary);
 
