@@ -1,78 +1,78 @@
 {
     hint: {
-        'light-color-scheme': {
+        light: {
             'fill-text-off': {
                 'fade-contrast': {
-                    text: { value: '{light-color-scheme.foreground.contrast}' },
-                    icon: { value: '{light-color-scheme.icon.contrast-fade}' }
+                    text: { value: '{light.foreground.contrast}' },
+                    icon: { value: '{light.icon.contrast-fade}' }
                 },
                 success: {
-                    text: { value: '{light-color-scheme.foreground.contrast}' },
-                    icon: { value: '{light-color-scheme.icon.success}' }
+                    text: { value: '{light.foreground.contrast}' },
+                    icon: { value: '{light.icon.success}' }
                 },
                 warning: {
-                    text: { value: '{light-color-scheme.foreground.contrast}' },
-                    icon: { value: '{light-color-scheme.icon.warning}' }
+                    text: { value: '{light.foreground.contrast}' },
+                    icon: { value: '{light.icon.warning}' }
                 },
                 error: {
-                    text: { value: '{light-color-scheme.foreground.contrast}' },
-                    icon: { value: '{light-color-scheme.icon.error}' }
+                    text: { value: '{light.foreground.contrast}' },
+                    icon: { value: '{light.icon.error}' }
                 }
             },
             'fill-text-on': {
                 'fade-contrast': {
-                    text: { value: '{light-color-scheme.foreground.contrast}' },
-                    icon: { value: '{light-color-scheme.icon.contrast-fade}' }
+                    text: { value: '{light.foreground.contrast}' },
+                    icon: { value: '{light.icon.contrast-fade}' }
                 },
                 success: {
-                    text: { value: '{light-color-scheme.foreground.success}' },
-                    icon: { value: '{light-color-scheme.icon.success}' }
+                    text: { value: '{light.foreground.success}' },
+                    icon: { value: '{light.icon.success}' }
                 },
                 warning: {
-                    text: { value: '{light-color-scheme.foreground.warning}' },
-                    icon: { value: '{light-color-scheme.icon.warning}' }
+                    text: { value: '{light.foreground.warning}' },
+                    icon: { value: '{light.icon.warning}' }
                 },
                 error: {
-                    text: { value: '{light-color-scheme.foreground.error}' },
-                    icon: { value: '{light-color-scheme.icon.error}' }
+                    text: { value: '{light.foreground.error}' },
+                    icon: { value: '{light.icon.error}' }
                 }
             },
         },
-        'dark-color-scheme': {
+        dark: {
             'fill-text-off': {
                 'fade-contrast': {
-                    text: { value: '{dark-color-scheme.foreground.contrast}' },
-                    icon: { value: '{dark-color-scheme.icon.contrast-fade}' }
+                    text: { value: '{dark.foreground.contrast}' },
+                    icon: { value: '{dark.icon.contrast-fade}' }
                 },
                 success: {
-                    text: { value: '{dark-color-scheme.foreground.contrast}' },
-                    icon: { value: '{dark-color-scheme.icon.success}' }
+                    text: { value: '{dark.foreground.contrast}' },
+                    icon: { value: '{dark.icon.success}' }
                 },
                 warning: {
-                    text: { value: '{dark-color-scheme.foreground.contrast}' },
-                    icon: { value: '{dark-color-scheme.icon.warning}' }
+                    text: { value: '{dark.foreground.contrast}' },
+                    icon: { value: '{dark.icon.warning}' }
                 },
                 error: {
-                    text: { value: '{dark-color-scheme.foreground.contrast}' },
-                    icon: { value: '{dark-color-scheme.icon.error}' }
+                    text: { value: '{dark.foreground.contrast}' },
+                    icon: { value: '{dark.icon.error}' }
                 }
             },
             'fill-text-on': {
                 'fade-contrast': {
-                    text: { value: '{dark-color-scheme.foreground.contrast}' },
-                    icon: { value: '{dark-color-scheme.icon.contrast-fade}' }
+                    text: { value: '{dark.foreground.contrast}' },
+                    icon: { value: '{dark.icon.contrast-fade}' }
                 },
                 success: {
-                    text: { value: '{dark-color-scheme.foreground.success}' },
-                    icon: { value: '{dark-color-scheme.icon.success}' }
+                    text: { value: '{dark.foreground.success}' },
+                    icon: { value: '{dark.icon.success}' }
                 },
                 warning: {
-                    text: { value: '{dark-color-scheme.foreground.warning}' },
-                    icon: { value: '{dark-color-scheme.icon.warning}' }
+                    text: { value: '{dark.foreground.warning}' },
+                    icon: { value: '{dark.icon.warning}' }
                 },
                 error: {
-                    text: { value: '{dark-color-scheme.foreground.error}' },
-                    icon: { value: '{dark-color-scheme.icon.error}' }
+                    text: { value: '{dark.foreground.error}' },
+                    icon: { value: '{dark.icon.error}' }
                 }
             },
         },

@@ -1,102 +1,102 @@
 {
     'icon-button': {
-        'light-color-scheme': {
+        light: {
             theme: {
-                default: { value: '{light-color-scheme.icon.theme}' },
+                default: { value: '{light.icon.theme}' },
                 states: {
-                    hover: { value: '{light-color-scheme.states.icon.theme-hover}' },
-                    active: { value: '{light-color-scheme.states.icon.theme-active}' },
-                    disabled: { value: '{light-color-scheme.states.icon.disabled}' }
+                    hover: { value: '{light.states.icon.theme-hover}' },
+                    active: { value: '{light.states.icon.theme-active}' },
+                    disabled: { value: '{light.states.icon.disabled}' }
                 }
             },
             contrast: {
-                default: { value: '{light-color-scheme.icon.contrast}' },
+                default: { value: '{light.icon.contrast}' },
                 states: {
-                    hover: { value: '{light-color-scheme.states.icon.contrast-hover}' },
-                    active: { value: '{light-color-scheme.states.icon.contrast-active}' },
-                    disabled: { value: '{light-color-scheme.states.icon.disabled}' }
+                    hover: { value: '{light.states.icon.contrast-hover}' },
+                    active: { value: '{light.states.icon.contrast-active}' },
+                    disabled: { value: '{light.states.icon.disabled}' }
                 }
             },
             'fade-contrast': {
-                default: { value: '{light-color-scheme.icon.contrast-fade}' },
+                default: { value: '{light.icon.contrast-fade}' },
                 states: {
-                    hover: { value: '{light-color-scheme.states.icon.contrast-fade-hover}' },
-                    active: { value: '{light-color-scheme.states.icon.contrast-fade-active}' },
-                    disabled: { value: '{light-color-scheme.states.icon.disabled}' }
+                    hover: { value: '{light.states.icon.contrast-fade-hover}' },
+                    active: { value: '{light.states.icon.contrast-fade-active}' },
+                    disabled: { value: '{light.states.icon.disabled}' }
                 }
             },
             error: {
-                default: { value: '{light-color-scheme.icon.error}' },
+                default: { value: '{light.icon.error}' },
                 states: {
-                    hover: { value: '{light-color-scheme.states.icon.error-hover}' },
-                    active: { value: '{light-color-scheme.states.icon.error-active}' },
-                    disabled: { value: '{light-color-scheme.states.icon.disabled}' }
+                    hover: { value: '{light.states.icon.error-hover}' },
+                    active: { value: '{light.states.icon.error-active}' },
+                    disabled: { value: '{light.states.icon.disabled}' }
                 }
             },
             success: {
-                default: { value: '{light-color-scheme.icon.success}' },
+                default: { value: '{light.icon.success}' },
                 states: {
-                    hover: { value: '{light-color-scheme.states.icon.success-hover}' },
-                    active: { value: '{light-color-scheme.states.icon.success-active}' },
-                    disabled: { value: '{light-color-scheme.states.icon.disabled}' }
+                    hover: { value: '{light.states.icon.success-hover}' },
+                    active: { value: '{light.states.icon.success-active}' },
+                    disabled: { value: '{light.states.icon.disabled}' }
                 }
             },
             warning: {
-                default: { value: '{light-color-scheme.icon.warning}' },
+                default: { value: '{light.icon.warning}' },
                 states: {
-                    hover: { value: '{light-color-scheme.states.icon.warning-hover}' },
-                    active: { value: '{light-color-scheme.states.icon.warning-active}' },
-                    disabled: { value: '{light-color-scheme.states.icon.disabled}' }
+                    hover: { value: '{light.states.icon.warning-hover}' },
+                    active: { value: '{light.states.icon.warning-active}' },
+                    disabled: { value: '{light.states.icon.disabled}' }
                 }
             }
         },
-       'dark-color-scheme': {
+       dark: {
             theme: {
-                default: { value: '{dark-color-scheme.icon.theme}' },
+                default: { value: '{dark.icon.theme}' },
                 states: {
-                    hover: { value: '{dark-color-scheme.states.icon.theme-hover}' },
-                    active: { value: '{dark-color-scheme.states.icon.theme-active}' },
-                    disabled: { value: '{dark-color-scheme.states.icon.disabled}' }
+                    hover: { value: '{dark.states.icon.theme-hover}' },
+                    active: { value: '{dark.states.icon.theme-active}' },
+                    disabled: { value: '{dark.states.icon.disabled}' }
                 }
             },
             contrast: {
-                default: { value: '{dark-color-scheme.icon.contrast}' },
+                default: { value: '{dark.icon.contrast}' },
                 states: {
-                    hover: { value: '{dark-color-scheme.states.icon.contrast-hover}' },
-                    active: { value: '{dark-color-scheme.states.icon.contrast-active}' },
-                    disabled: { value: '{dark-color-scheme.states.icon.disabled}' }
+                    hover: { value: '{dark.states.icon.contrast-hover}' },
+                    active: { value: '{dark.states.icon.contrast-active}' },
+                    disabled: { value: '{dark.states.icon.disabled}' }
                 }
             },
             'fade-contrast': {
-                default: { value: '{dark-color-scheme.icon.contrast-fade}' },
+                default: { value: '{dark.icon.contrast-fade}' },
                 states: {
-                    hover: { value: '{dark-color-scheme.states.icon.contrast-fade-hover}' },
-                    active: { value: '{dark-color-scheme.states.icon.contrast-fade-active}' },
-                    disabled: { value: '{dark-color-scheme.states.icon.disabled}' }
+                    hover: { value: '{dark.states.icon.contrast-fade-hover}' },
+                    active: { value: '{dark.states.icon.contrast-fade-active}' },
+                    disabled: { value: '{dark.states.icon.disabled}' }
                 }
             },
             error: {
-                default: { value: '{dark-color-scheme.icon.error}' },
+                default: { value: '{dark.icon.error}' },
                 states: {
-                    hover: { value: '{dark-color-scheme.states.icon.error-hover}' },
-                    active: { value: '{dark-color-scheme.states.icon.error-active}' },
-                    disabled: { value: '{dark-color-scheme.states.icon.disabled}' }
+                    hover: { value: '{dark.states.icon.error-hover}' },
+                    active: { value: '{dark.states.icon.error-active}' },
+                    disabled: { value: '{dark.states.icon.disabled}' }
                 }
             },
             success: {
-                default: { value: '{dark-color-scheme.icon.success}' },
+                default: { value: '{dark.icon.success}' },
                 states: {
-                    hover: { value: '{dark-color-scheme.states.icon.success-hover}' },
-                    active: { value: '{dark-color-scheme.states.icon.success-active}' },
-                    disabled: { value: '{dark-color-scheme.states.icon.disabled}' }
+                    hover: { value: '{dark.states.icon.success-hover}' },
+                    active: { value: '{dark.states.icon.success-active}' },
+                    disabled: { value: '{dark.states.icon.disabled}' }
                 }
             },
             warning: {
-                default: { value: '{dark-color-scheme.icon.warning}' },
+                default: { value: '{dark.icon.warning}' },
                 states: {
-                    hover: { value: '{dark-color-scheme.states.icon.warning-hover}' },
-                    active: { value: '{dark-color-scheme.states.icon.warning-active}' },
-                    disabled: { value: '{dark-color-scheme.states.icon.disabled}' }
+                    hover: { value: '{dark.states.icon.warning-hover}' },
+                    active: { value: '{dark.states.icon.warning-active}' },
+                    disabled: { value: '{dark.states.icon.disabled}' }
                 }
             }
         },

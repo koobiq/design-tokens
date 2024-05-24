@@ -24,99 +24,99 @@
         font: {
             text: { value: 'text-normal' },
         },
-        'light-color-scheme': {
+        light: {
             default: {
                 border: {
-                    color: { value: '{light-color-scheme.line.contrast-fade}' }
+                    color: { value: '{light.line.contrast-fade}' }
                  },
-                background: { value: '{light-color-scheme.background.bg}' },
-                placeholder: { value: '{light-color-scheme.foreground.contrast-tertiary}' },
-                text: { value: '{light-color-scheme.foreground.contrast}' }
+                background: { value: '{light.background.bg}' },
+                placeholder: { value: '{light.foreground.contrast-tertiary}' },
+                text: { value: '{light.foreground.contrast}' }
             },
             states: {
                 focused: {
                     border: {
-                        color: { value: '{light-color-scheme.states.line.focus-theme}' }
+                        color: { value: '{light.states.line.focus-theme}' }
                     },
-                    background: { value: '{light-color-scheme.background.bg}' },
-                    placeholder: { value: '{light-color-scheme.foreground.contrast-tertiary}' },
-                    text: { value: '{light-color-scheme.foreground.contrast}' },
-                    'focus-outline': { value: '{light-color-scheme.states.line.focus-theme}'}
+                    background: { value: '{light.background.bg}' },
+                    placeholder: { value: '{light.foreground.contrast-tertiary}' },
+                    text: { value: '{light.foreground.contrast}' },
+                    'focus-outline': { value: '{light.states.line.focus-theme}'}
                 },
                 error: {
                     border: {
-                        color: { value: '{light-color-scheme.line.error}' }
+                        color: { value: '{light.line.error}' }
                     },
-                    background: { value: '{light-color-scheme.states.background.error-less}' },
-                    placeholder: { value: '{light-color-scheme.foreground.error-tertiary}' },
-                    text: { value: '{light-color-scheme.foreground.error}' }
+                    background: { value: '{light.states.background.error-less}' },
+                    placeholder: { value: '{light.foreground.error-tertiary}' },
+                    text: { value: '{light.foreground.error}' }
                 },
                 'error-focused': {
-                    'focus-outline': { value: '{light-color-scheme.states.line.focus-error}' }
+                    'focus-outline': { value: '{light.states.line.focus-error}' }
                 },
                 autofill: {
                     border: {
-                        color: { value: '{light-color-scheme.states.line.focus-theme}' }
+                        color: { value: '{light.states.line.focus-theme}' }
                     },
-                    background: { value: '{light-color-scheme.background.theme-fade}' },
-                    placeholder: { value: '{light-color-scheme.foreground.contrast-tertiary}' },
-                    text: { value: '{light-color-scheme.foreground.contrast}' }
+                    background: { value: '{light.background.theme-fade}' },
+                    placeholder: { value: '{light.foreground.contrast-tertiary}' },
+                    text: { value: '{light.foreground.contrast}' }
                 },
                 disabled: {
                     border: {
-                        color: { value: '{light-color-scheme.states.line.disabled}' }
+                        color: { value: '{light.states.line.disabled}' }
                     },
-                    background: { value: '{light-color-scheme.states.background.disabled}' },
-                    placeholder: { value: '{light-color-scheme.states.foreground.disabled}' },
-                    text: { value: '{light-color-scheme.states.foreground.disabled}' }
+                    background: { value: '{light.states.background.disabled}' },
+                    placeholder: { value: '{light.states.foreground.disabled}' },
+                    text: { value: '{light.states.foreground.disabled}' }
                 }
             }
         },
-        'dark-color-scheme': {
+        dark: {
             default: {
                 border: {
-                    color: { value: '{dark-color-scheme.line.contrast-fade}' }
+                    color: { value: '{dark.line.contrast-fade}' }
                  },
-                background: { value: '{dark-color-scheme.background.bg}' },
-                placeholder: { value: '{dark-color-scheme.foreground.contrast-tertiary}' },
-                text: { value: '{dark-color-scheme.foreground.contrast}' }
+                background: { value: '{dark.background.bg}' },
+                placeholder: { value: '{dark.foreground.contrast-tertiary}' },
+                text: { value: '{dark.foreground.contrast}' }
             },
             states: {
                 focused: {
                     border: {
-                        color: { value: '{dark-color-scheme.states.line.focus-theme}' }
+                        color: { value: '{dark.states.line.focus-theme}' }
                     },
-                    background: { value: '{dark-color-scheme.background.bg}' },
-                    placeholder: { value: '{dark-color-scheme.foreground.contrast-tertiary}' },
-                    text: { value: '{dark-color-scheme.foreground.contrast}' },
-                    'focus-outline': { value: '{dark-color-scheme.states.line.focus-theme}'}
+                    background: { value: '{dark.background.bg}' },
+                    placeholder: { value: '{dark.foreground.contrast-tertiary}' },
+                    text: { value: '{dark.foreground.contrast}' },
+                    'focus-outline': { value: '{dark.states.line.focus-theme}'}
                 },
                 error: {
                     border: {
-                        color: { value: '{dark-color-scheme.line.error}' }
+                        color: { value: '{dark.line.error}' }
                     },
-                    background: { value: '{dark-color-scheme.states.background.error-less}' },
-                    placeholder: { value: '{dark-color-scheme.foreground.error-tertiary}' },
-                    text: { value: '{dark-color-scheme.foreground.error}' }
+                    background: { value: '{dark.states.background.error-less}' },
+                    placeholder: { value: '{dark.foreground.error-tertiary}' },
+                    text: { value: '{dark.foreground.error}' }
                 },
                 'error-focused': {
-                    'focus-outline': { value: '{dark-color-scheme.states.line.focus-error}' }
+                    'focus-outline': { value: '{dark.states.line.focus-error}' }
                 },
                 autofill: {
                     border: {
-                        color: { value: '{dark-color-scheme.states.line.focus-theme}' }
+                        color: { value: '{dark.states.line.focus-theme}' }
                     },
-                    background: { value: '{dark-color-scheme.background.theme-fade}' },
-                    placeholder: { value: '{dark-color-scheme.foreground.contrast-tertiary}' },
-                    text: { value: '{dark-color-scheme.foreground.contrast}' }
+                    background: { value: '{dark.background.theme-fade}' },
+                    placeholder: { value: '{dark.foreground.contrast-tertiary}' },
+                    text: { value: '{dark.foreground.contrast}' }
                 },
                 disabled: {
                     border: {
-                        color: { value: '{dark-color-scheme.states.line.disabled}' }
+                        color: { value: '{dark.states.line.disabled}' }
                     },
-                    background: { value: '{dark-color-scheme.states.background.disabled}' },
-                    placeholder: { value: '{dark-color-scheme.states.foreground.disabled}' },
-                    text: { value: '{dark-color-scheme.states.foreground.disabled}' }
+                    background: { value: '{dark.states.background.disabled}' },
+                    placeholder: { value: '{dark.states.foreground.disabled}' },
+                    text: { value: '{dark.states.foreground.disabled}' }
                 }
             }
         },
@@ -129,11 +129,11 @@
         font: {
             text: { value: 'text-compact' }
         },
-        'light-color-scheme': {
-            text: { value: '{light-color-scheme.foreground.contrast-secondary}' }
+        light: {
+            text: { value: '{light.foreground.contrast-secondary}' }
         },
-        'dark-color-scheme': {
-            text: { value: '{dark-color-scheme.foreground.contrast-secondary}' }
+        dark: {
+            text: { value: '{dark.foreground.contrast-secondary}' }
         }
     }
 }

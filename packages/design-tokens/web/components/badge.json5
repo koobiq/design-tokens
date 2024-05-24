@@ -1,63 +1,63 @@
 {
     badge: {
-        'light-color-scheme': {
+        light: {
             filled: {
                 'fade-off': {
                     theme: {
-                        background: { value: '{light-color-scheme.background.theme}' },
-                        color: { value: '{light-color-scheme.foreground.white}' },
-                        caption: { value: '{light-color-scheme.foreground.white-secondary}' },
-                        icon: { value: '{light-color-scheme.icon.white}' }
+                        background: { value: '{light.background.theme}' },
+                        color: { value: '{light.foreground.white}' },
+                        caption: { value: '{light.foreground.white-secondary}' },
+                        icon: { value: '{light.icon.white}' }
                     },
                     success: {
-                        background: { value: '{light-color-scheme.background.success}' },
-                        color: { value: '{light-color-scheme.foreground.white}' },
-                        caption: { value: '{light-color-scheme.foreground.white-secondary}' },
-                        icon: { value: '{light-color-scheme.icon.white}' }
+                        background: { value: '{light.background.success}' },
+                        color: { value: '{light.foreground.white}' },
+                        caption: { value: '{light.foreground.white-secondary}' },
+                        icon: { value: '{light.icon.white}' }
                     },
                     warning: {
-                        background: { value: '{light-color-scheme.background.warning}' },
-                        color: { value: '{light-color-scheme.foreground.white}' },
-                        caption: { value: '{light-color-scheme.foreground.white-secondary}' },
-                        icon: { value: '{light-color-scheme.icon.white}' }
+                        background: { value: '{light.background.warning}' },
+                        color: { value: '{light.foreground.white}' },
+                        caption: { value: '{light.foreground.white-secondary}' },
+                        icon: { value: '{light.icon.white}' }
                     },
                     error: {
-                        background: { value: '{light-color-scheme.background.error}' },
-                        color: { value: '{light-color-scheme.foreground.white}' },
-                        caption: { value: '{light-color-scheme.foreground.white-secondary}' },
-                        icon: { value: '{light-color-scheme.icon.white}' }
+                        background: { value: '{light.background.error}' },
+                        color: { value: '{light.foreground.white}' },
+                        caption: { value: '{light.foreground.white-secondary}' },
+                        icon: { value: '{light.icon.white}' }
                     }
                 },
                 'fade-on': {
                     theme: {
-                        background: { value: '{light-color-scheme.background.theme-fade}' },
-                        color: { value: '{light-color-scheme.foreground.theme}' },
-                        caption: { value: '{light-color-scheme.foreground.theme-secondary}' },
-                        icon: { value: '{light-color-scheme.icon.theme}' }
+                        background: { value: '{light.background.theme-fade}' },
+                        color: { value: '{light.foreground.theme}' },
+                        caption: { value: '{light.foreground.theme-secondary}' },
+                        icon: { value: '{light.icon.theme}' }
                     },
                     contrast: {
-                        background: { value: '{light-color-scheme.background.contrast-fade}' },
-                        color: { value: '{light-color-scheme.foreground.contrast}' },
-                        caption: { value: '{light-color-scheme.foreground.contrast-secondary}'},
-                        icon: { value: '{light-color-scheme.icon.contrast-fade}' }
+                        background: { value: '{light.background.contrast-fade}' },
+                        color: { value: '{light.foreground.contrast}' },
+                        caption: { value: '{light.foreground.contrast-secondary}'},
+                        icon: { value: '{light.icon.contrast-fade}' }
                     },
                     success: {
-                        background: { value: '{light-color-scheme.background.success-fade}' },
-                        color: { value: '{light-color-scheme.foreground.success}' },
-                        caption: { value: '{light-color-scheme.foreground.success-secondary}' },
-                        icon: { value: '{light-color-scheme.icon.success}' }
+                        background: { value: '{light.background.success-fade}' },
+                        color: { value: '{light.foreground.success}' },
+                        caption: { value: '{light.foreground.success-secondary}' },
+                        icon: { value: '{light.icon.success}' }
                     },
                     warning: {
-                        background: { value: '{light-color-scheme.background.warning-fade}' },
-                        color: { value: '{light-color-scheme.foreground.warning}' },
-                        caption: { value: '{light-color-scheme.foreground.warning-secondary}' },
-                        icon: { value: '{light-color-scheme.icon.warning}' }
+                        background: { value: '{light.background.warning-fade}' },
+                        color: { value: '{light.foreground.warning}' },
+                        caption: { value: '{light.foreground.warning-secondary}' },
+                        icon: { value: '{light.icon.warning}' }
                     },
                     error: {
-                        background: { value: '{light-color-scheme.background.error-fade}' },
-                        color: { value: '{light-color-scheme.foreground.error}' },
-                        caption: { value: '{light-color-scheme.foreground.error-secondary}' },
-                        icon: { value: '{light-color-scheme.icon.error}' }
+                        background: { value: '{light.background.error-fade}' },
+                        color: { value: '{light.foreground.error}' },
+                        caption: { value: '{light.foreground.error-secondary}' },
+                        icon: { value: '{light.icon.error}' }
                     }
                 }
             },
@@ -65,100 +65,100 @@
                 'fade-on': {
                     theme: {
                         background: { value: 'transparent' },
-                        color: { value: '{light-color-scheme.foreground.theme}' },
-                        border: { value: '{light-color-scheme.line.theme-fade}' },
-                        caption: { value: '{light-color-scheme.foreground.theme-secondary}' },
-                        icon: { value: '{light-color-scheme.icon.theme}' }
+                        color: { value: '{light.foreground.theme}' },
+                        border: { value: '{light.line.theme-fade}' },
+                        caption: { value: '{light.foreground.theme-secondary}' },
+                        icon: { value: '{light.icon.theme}' }
                     },
                     contrast: {
                         background: { value: 'transparent' },
-                        color: { value: '{light-color-scheme.foreground.contrast}' },
-                        border: { value: '{light-color-scheme.line.contrast-fade}' },
-                        caption: { value: '{light-color-scheme.foreground.contrast-secondary}' },
-                        icon: { value: '{light-color-scheme.icon.contrast-fade}' }
+                        color: { value: '{light.foreground.contrast}' },
+                        border: { value: '{light.line.contrast-fade}' },
+                        caption: { value: '{light.foreground.contrast-secondary}' },
+                        icon: { value: '{light.icon.contrast-fade}' }
                     },
                     success: {
                         background: { value: 'transparent' },
-                        color: { value: '{light-color-scheme.foreground.success}' },
-                        border: { value: '{light-color-scheme.line.success-fade}' },
-                        caption: { value: '{light-color-scheme.foreground.success-secondary}' },
-                        icon: { value: '{light-color-scheme.icon.success}' }
+                        color: { value: '{light.foreground.success}' },
+                        border: { value: '{light.line.success-fade}' },
+                        caption: { value: '{light.foreground.success-secondary}' },
+                        icon: { value: '{light.icon.success}' }
                     },
                     warning: {
                         background: { value: 'transparent' },
-                        color: { value: '{light-color-scheme.foreground.warning}' },
-                        border: { value: '{light-color-scheme.line.warning-fade}' },
-                        caption: { value: '{light-color-scheme.foreground.warning-secondary}' },
-                        icon: { value: '{light-color-scheme.icon.warning}' }
+                        color: { value: '{light.foreground.warning}' },
+                        border: { value: '{light.line.warning-fade}' },
+                        caption: { value: '{light.foreground.warning-secondary}' },
+                        icon: { value: '{light.icon.warning}' }
                     },
                     error: {
                         background: { value: 'transparent' },
-                        color: { value: '{light-color-scheme.foreground.error}' },
-                        border: { value: '{light-color-scheme.line.error-fade}' },
-                        caption: { value: '{light-color-scheme.foreground.error-secondary}' },
-                        icon: { value: '{light-color-scheme.icon.error}' }
+                        color: { value: '{light.foreground.error}' },
+                        border: { value: '{light.line.error-fade}' },
+                        caption: { value: '{light.foreground.error-secondary}' },
+                        icon: { value: '{light.icon.error}' }
                     }
                 }
             }
         },
-        'dark-color-scheme': {
+        dark: {
             filled: {
                 'fade-off': {
                     theme: {
-                        background: { value: '{dark-color-scheme.background.theme}' },
-                        color: { value: '{dark-color-scheme.foreground.white}' },
-                        caption: { value: '{dark-color-scheme.foreground.white-secondary}' },
-                        icon: { value: '{dark-color-scheme.icon.white}' }
+                        background: { value: '{dark.background.theme}' },
+                        color: { value: '{dark.foreground.white}' },
+                        caption: { value: '{dark.foreground.white-secondary}' },
+                        icon: { value: '{dark.icon.white}' }
                     },
                     success: {
-                        background: { value: '{dark-color-scheme.background.success}' },
-                        color: { value: '{dark-color-scheme.foreground.white}' },
-                        caption: { value: '{dark-color-scheme.foreground.white-secondary}' },
-                        icon: { value: '{dark-color-scheme.icon.white}' }
+                        background: { value: '{dark.background.success}' },
+                        color: { value: '{dark.foreground.white}' },
+                        caption: { value: '{dark.foreground.white-secondary}' },
+                        icon: { value: '{dark.icon.white}' }
                     },
                     warning: {
-                        background: { value: '{dark-color-scheme.background.warning}' },
-                        color: { value: '{dark-color-scheme.foreground.white}' },
-                        caption: { value: '{dark-color-scheme.foreground.white-secondary}' },
-                        icon: { value: '{dark-color-scheme.icon.white}' }
+                        background: { value: '{dark.background.warning}' },
+                        color: { value: '{dark.foreground.white}' },
+                        caption: { value: '{dark.foreground.white-secondary}' },
+                        icon: { value: '{dark.icon.white}' }
                     },
                     error: {
-                        background: { value: '{dark-color-scheme.background.error}' },
-                        color: { value: '{dark-color-scheme.foreground.white}' },
-                        caption: { value: '{dark-color-scheme.foreground.white-secondary}' },
-                        icon: { value: '{dark-color-scheme.icon.white}' }
+                        background: { value: '{dark.background.error}' },
+                        color: { value: '{dark.foreground.white}' },
+                        caption: { value: '{dark.foreground.white-secondary}' },
+                        icon: { value: '{dark.icon.white}' }
                     }
                 },
                 'fade-on': {
                     theme: {
-                        background: { value: '{dark-color-scheme.background.theme-fade}' },
-                        color: { value: '{dark-color-scheme.foreground.theme}' },
-                        caption: { value: '{dark-color-scheme.foreground.theme-secondary}' },
-                        icon: { value: '{dark-color-scheme.icon.theme}' }
+                        background: { value: '{dark.background.theme-fade}' },
+                        color: { value: '{dark.foreground.theme}' },
+                        caption: { value: '{dark.foreground.theme-secondary}' },
+                        icon: { value: '{dark.icon.theme}' }
                     },
                     contrast: {
-                        background: { value: '{dark-color-scheme.background.contrast-fade}' },
-                        color: { value: '{dark-color-scheme.foreground.contrast}' },
-                        caption: { value: '{dark-color-scheme.foreground.contrast-secondary}'},
-                        icon: { value: '{dark-color-scheme.icon.contrast-fade}' }
+                        background: { value: '{dark.background.contrast-fade}' },
+                        color: { value: '{dark.foreground.contrast}' },
+                        caption: { value: '{dark.foreground.contrast-secondary}'},
+                        icon: { value: '{dark.icon.contrast-fade}' }
                     },
                     success: {
-                        background: { value: '{dark-color-scheme.background.success-fade}' },
-                        color: { value: '{dark-color-scheme.foreground.success}' },
-                        caption: { value: '{dark-color-scheme.foreground.success-secondary}' },
-                        icon: { value: '{dark-color-scheme.icon.success}' }
+                        background: { value: '{dark.background.success-fade}' },
+                        color: { value: '{dark.foreground.success}' },
+                        caption: { value: '{dark.foreground.success-secondary}' },
+                        icon: { value: '{dark.icon.success}' }
                     },
                     warning: {
-                        background: { value: '{dark-color-scheme.background.warning-fade}' },
-                        color: { value: '{dark-color-scheme.foreground.warning}' },
-                        caption: { value: '{dark-color-scheme.foreground.warning-secondary}' },
-                        icon: { value: '{dark-color-scheme.icon.warning}' }
+                        background: { value: '{dark.background.warning-fade}' },
+                        color: { value: '{dark.foreground.warning}' },
+                        caption: { value: '{dark.foreground.warning-secondary}' },
+                        icon: { value: '{dark.icon.warning}' }
                     },
                     error: {
-                        background: { value: '{dark-color-scheme.background.error-fade}' },
-                        color: { value: '{dark-color-scheme.foreground.error}' },
-                        caption: { value: '{dark-color-scheme.foreground.error-secondary}' },
-                        icon: { value: '{dark-color-scheme.icon.error}' }
+                        background: { value: '{dark.background.error-fade}' },
+                        color: { value: '{dark.foreground.error}' },
+                        caption: { value: '{dark.foreground.error-secondary}' },
+                        icon: { value: '{dark.icon.error}' }
                     }
                 }
             },
@@ -166,38 +166,38 @@
                 'fade-on': {
                     theme: {
                         background: { value: 'transparent' },
-                        color: { value: '{dark-color-scheme.foreground.theme}' },
-                        border: { value: '{dark-color-scheme.line.theme-fade}' },
-                        caption: { value: '{dark-color-scheme.foreground.theme-secondary}' },
-                        icon: { value: '{dark-color-scheme.icon.theme}' }
+                        color: { value: '{dark.foreground.theme}' },
+                        border: { value: '{dark.line.theme-fade}' },
+                        caption: { value: '{dark.foreground.theme-secondary}' },
+                        icon: { value: '{dark.icon.theme}' }
                     },
                     contrast: {
                         background: { value: 'transparent' },
-                        color: { value: '{dark-color-scheme.foreground.contrast}' },
-                        border: { value: '{dark-color-scheme.line.contrast-fade}' },
-                        caption: { value: '{dark-color-scheme.foreground.contrast-secondary}' },
-                        icon: { value: '{dark-color-scheme.icon.contrast-fade}' }
+                        color: { value: '{dark.foreground.contrast}' },
+                        border: { value: '{dark.line.contrast-fade}' },
+                        caption: { value: '{dark.foreground.contrast-secondary}' },
+                        icon: { value: '{dark.icon.contrast-fade}' }
                     },
                     success: {
                         background: { value: 'transparent' },
-                        color: { value: '{dark-color-scheme.foreground.success}' },
-                        border: { value: '{dark-color-scheme.line.success-fade}' },
-                        caption: { value: '{dark-color-scheme.foreground.success-secondary}' },
-                        icon: { value: '{dark-color-scheme.icon.success}' }
+                        color: { value: '{dark.foreground.success}' },
+                        border: { value: '{dark.line.success-fade}' },
+                        caption: { value: '{dark.foreground.success-secondary}' },
+                        icon: { value: '{dark.icon.success}' }
                     },
                     warning: {
                         background: { value: 'transparent' },
-                        color: { value: '{dark-color-scheme.foreground.warning}' },
-                        border: { value: '{dark-color-scheme.line.warning-fade}' },
-                        caption: { value: '{dark-color-scheme.foreground.warning-secondary}' },
-                        icon: { value: '{dark-color-scheme.icon.warning}' }
+                        color: { value: '{dark.foreground.warning}' },
+                        border: { value: '{dark.line.warning-fade}' },
+                        caption: { value: '{dark.foreground.warning-secondary}' },
+                        icon: { value: '{dark.icon.warning}' }
                     },
                     error: {
                         background: { value: 'transparent' },
-                        color: { value: '{dark-color-scheme.foreground.error}' },
-                        border: { value: '{dark-color-scheme.line.error-fade}' },
-                        caption: { value: '{dark-color-scheme.foreground.error-secondary}' },
-                        icon: { value: '{dark-color-scheme.icon.error}' }
+                        color: { value: '{dark.foreground.error}' },
+                        border: { value: '{dark.line.error-fade}' },
+                        caption: { value: '{dark.foreground.error-secondary}' },
+                        icon: { value: '{dark.icon.error}' }
                     }
                 }
             }

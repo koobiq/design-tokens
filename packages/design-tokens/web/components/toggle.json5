@@ -1,169 +1,169 @@
 {
     toggle: {
-        'light-color-scheme': {
+        light: {
             theme: {
                 default: {
-                    border: { value: '{light-color-scheme.line.contrast-fade}' },
-                    background: { value: '{light-color-scheme.background.bg}'},
-                    'circle-background': { value: '{light-color-scheme.icon.contrast}'}
+                    border: { value: '{light.line.contrast-fade}' },
+                    background: { value: '{light.background.bg}'},
+                    'circle-background': { value: '{light.icon.contrast}'}
                 },
                 states: {
                     hover: {
-                        border: { value: '{light-color-scheme.line.contrast-fade}' },
-                        background: { value: '{light-color-scheme.states.background.transparent-hover}'},
-                        'circle-background': { value: '{light-color-scheme.icon.contrast}'}
+                        border: { value: '{light.line.contrast-fade}' },
+                        background: { value: '{light.states.background.transparent-hover}'},
+                        'circle-background': { value: '{light.icon.contrast}'}
                     },
                     checked: {
                         border: { value: 'transparent' },
-                        background: { value: '{light-color-scheme.background.theme}'},
-                        'circle-background': { value: '{light-color-scheme.icon.white}'}
+                        background: { value: '{light.background.theme}'},
+                        'circle-background': { value: '{light.icon.white}'}
                     },
                     'checked-hover': {
                         border: { value: 'transparent' },
-                        background: { value: '{light-color-scheme.states.background.theme-hover}'},
-                        'circle-background': { value: '{light-color-scheme.icon.white}'}
+                        background: { value: '{light.states.background.theme-hover}'},
+                        'circle-background': { value: '{light.icon.white}'}
                     },
                     focused: {
-                        border: { value: '{light-color-scheme.states.line.focus-theme}' },
-                        background: { value: '{light-color-scheme.background.bg}'},
-                        'circle-background': { value: '{light-color-scheme.icon.contrast}'},
-                        'focus-outline': { value: '{light-color-scheme.states.line.focus-theme}' }
+                        border: { value: '{light.states.line.focus-theme}' },
+                        background: { value: '{light.background.bg}'},
+                        'circle-background': { value: '{light.icon.contrast}'},
+                        'focus-outline': { value: '{light.states.line.focus-theme}' }
                     },
                     'checked-focused': {
-                        border: { value: '{light-color-scheme.states.line.focus-theme}' },
-                        background: { value: '{light-color-scheme.background.theme}'},
-                        'circle-background': { value: '{light-color-scheme.icon.white}'},
-                        'focus-outline': { value: '{light-color-scheme.states.line.focus-theme}' }
+                        border: { value: '{light.states.line.focus-theme}' },
+                        background: { value: '{light.background.theme}'},
+                        'circle-background': { value: '{light.icon.white}'},
+                        'focus-outline': { value: '{light.states.line.focus-theme}' }
                     },
                     disabled: {
-                        border: { value: '{light-color-scheme.states.line.disabled}' },
-                        background: { value: '{light-color-scheme.states.background.disabled}'},
-                        'circle-background': { value: '{light-color-scheme.states.icon.disabled}'},
+                        border: { value: '{light.states.line.disabled}' },
+                        background: { value: '{light.states.background.disabled}'},
+                        'circle-background': { value: '{light.states.icon.disabled}'},
                     }
                 }
             },
             error: {
                 default: {
-                    border: { value: '{light-color-scheme.line.error}' },
-                    background: { value: '{light-color-scheme.background.error-less}'},
-                    'circle-background': { value: '{light-color-scheme.icon.error}'}
+                    border: { value: '{light.line.error}' },
+                    background: { value: '{light.background.error-less}'},
+                    'circle-background': { value: '{light.icon.error}'}
                 },
                 states: {
                     hover: {
-                        border: { value: '{light-color-scheme.line.error}' },
-                        background: { value: '{light-color-scheme.states.background.error-fade-hover}'},
-                        'circle-background': { value: '{light-color-scheme.icon.error}'}
+                        border: { value: '{light.line.error}' },
+                        background: { value: '{light.states.background.error-fade-hover}'},
+                        'circle-background': { value: '{light.icon.error}'}
                     },
                     checked: {
-                        border: { value: '{light-color-scheme.line.error}' },
-                        background: { value: '{light-color-scheme.background.error}'},
-                        'circle-background': { value: '{light-color-scheme.icon.white}'}
+                        border: { value: '{light.line.error}' },
+                        background: { value: '{light.background.error}'},
+                        'circle-background': { value: '{light.icon.white}'}
                     },
                     'checked-hover': {
-                        border: { value: '{light-color-scheme.line.error}' },
-                        background: { value: '{light-color-scheme.states.background.error-hover}'},
-                        'circle-background': { value: '{light-color-scheme.icon.white}'}
+                        border: { value: '{light.line.error}' },
+                        background: { value: '{light.states.background.error-hover}'},
+                        'circle-background': { value: '{light.icon.white}'}
                     },
                     focused: {
-                        border: { value: '{light-color-scheme.states.line.focus-error}' },
-                        background: { value: '{light-color-scheme.states.background.error-less}'},
-                        'circle-background': { value: '{light-color-scheme.icon.error}'},
-                        'focus-outline': { value: '{light-color-scheme.states.line.focus-error}' }
+                        border: { value: '{light.states.line.focus-error}' },
+                        background: { value: '{light.states.background.error-less}'},
+                        'circle-background': { value: '{light.icon.error}'},
+                        'focus-outline': { value: '{light.states.line.focus-error}' }
                     },
                     'checked-focused': {
-                        border: { value: '{light-color-scheme.states.line.focus-error}' },
-                        background: { value: '{light-color-scheme.background.error}'},
-                        'circle-background': { value: '{light-color-scheme.icon.white}'},
-                        'focus-outline': { value: '{light-color-scheme.states.line.focus-error}' }
+                        border: { value: '{light.states.line.focus-error}' },
+                        background: { value: '{light.background.error}'},
+                        'circle-background': { value: '{light.icon.white}'},
+                        'focus-outline': { value: '{light.states.line.focus-error}' }
                     },
                     disabled: {
-                        border: { value: '{light-color-scheme.states.line.disabled}' },
-                        background: { value: '{light-color-scheme.states.background.disabled}'},
-                        'circle-background': { value: '{light-color-scheme.states.icon.disabled}'},
+                        border: { value: '{light.states.line.disabled}' },
+                        background: { value: '{light.states.background.disabled}'},
+                        'circle-background': { value: '{light.states.icon.disabled}'},
                     }
                 }
             }
         },
-        'dark-color-scheme': {
+        dark: {
             theme: {
                 default: {
-                    border: { value: '{dark-color-scheme.line.contrast-fade}' },
-                    background: { value: '{dark-color-scheme.background.bg}'},
-                    'circle-background': { value: '{dark-color-scheme.icon.contrast}'}
+                    border: { value: '{dark.line.contrast-fade}' },
+                    background: { value: '{dark.background.bg}'},
+                    'circle-background': { value: '{dark.icon.contrast}'}
                 },
                 states: {
                     hover: {
-                        border: { value: '{dark-color-scheme.line.contrast-fade}' },
-                        background: { value: '{dark-color-scheme.states.background.transparent-hover}'},
-                        'circle-background': { value: '{dark-color-scheme.icon.contrast}'}
+                        border: { value: '{dark.line.contrast-fade}' },
+                        background: { value: '{dark.states.background.transparent-hover}'},
+                        'circle-background': { value: '{dark.icon.contrast}'}
                     },
                     checked: {
                         border: { value: 'transparent' },
-                        background: { value: '{dark-color-scheme.background.theme}'},
-                        'circle-background': { value: '{dark-color-scheme.icon.white}'}
+                        background: { value: '{dark.background.theme}'},
+                        'circle-background': { value: '{dark.icon.white}'}
                     },
                     'checked-hover': {
                         border: { value: 'transparent' },
-                        background: { value: '{dark-color-scheme.states.background.theme-hover}'},
-                        'circle-background': { value: '{dark-color-scheme.icon.white}'}
+                        background: { value: '{dark.states.background.theme-hover}'},
+                        'circle-background': { value: '{dark.icon.white}'}
                     },
                     focused: {
-                        border: { value: '{dark-color-scheme.states.line.focus-theme}' },
-                        background: { value: '{dark-color-scheme.background.bg}'},
-                        'circle-background': { value: '{dark-color-scheme.icon.contrast}'},
-                        'focus-outline': { value: '{dark-color-scheme.states.line.focus-theme}' }
+                        border: { value: '{dark.states.line.focus-theme}' },
+                        background: { value: '{dark.background.bg}'},
+                        'circle-background': { value: '{dark.icon.contrast}'},
+                        'focus-outline': { value: '{dark.states.line.focus-theme}' }
                     },
                     'checked-focused': {
-                        border: { value: '{dark-color-scheme.states.line.focus-theme}' },
-                        background: { value: '{dark-color-scheme.background.theme}'},
-                        'circle-background': { value: '{dark-color-scheme.icon.white}'},
-                        'focus-outline': { value: '{dark-color-scheme.states.line.focus-theme}' }
+                        border: { value: '{dark.states.line.focus-theme}' },
+                        background: { value: '{dark.background.theme}'},
+                        'circle-background': { value: '{dark.icon.white}'},
+                        'focus-outline': { value: '{dark.states.line.focus-theme}' }
                     },
                     disabled: {
-                        border: { value: '{dark-color-scheme.states.line.disabled}' },
-                        background: { value: '{dark-color-scheme.states.background.disabled}'},
-                        'circle-background': { value: '{dark-color-scheme.states.icon.disabled}'},
+                        border: { value: '{dark.states.line.disabled}' },
+                        background: { value: '{dark.states.background.disabled}'},
+                        'circle-background': { value: '{dark.states.icon.disabled}'},
                     }
                 }
             },
             error: {
                 default: {
-                    border: { value: '{dark-color-scheme.line.error}' },
-                    background: { value: '{dark-color-scheme.background.error-less}'},
-                    'circle-background': { value: '{dark-color-scheme.icon.error}'}
+                    border: { value: '{dark.line.error}' },
+                    background: { value: '{dark.background.error-less}'},
+                    'circle-background': { value: '{dark.icon.error}'}
                 },
                 states: {
                     hover: {
-                        border: { value: '{dark-color-scheme.line.error}' },
-                        background: { value: '{dark-color-scheme.states.background.error-fade-hover}'},
-                        'circle-background': { value: '{dark-color-scheme.icon.error}'}
+                        border: { value: '{dark.line.error}' },
+                        background: { value: '{dark.states.background.error-fade-hover}'},
+                        'circle-background': { value: '{dark.icon.error}'}
                     },
                     checked: {
-                        border: { value: '{dark-color-scheme.line.error}' },
-                        background: { value: '{dark-color-scheme.background.error}'},
-                        'circle-background': { value: '{dark-color-scheme.icon.white}'}
+                        border: { value: '{dark.line.error}' },
+                        background: { value: '{dark.background.error}'},
+                        'circle-background': { value: '{dark.icon.white}'}
                     },
                     'checked-hover': {
-                        border: { value: '{dark-color-scheme.line.error}' },
-                        background: { value: '{dark-color-scheme.states.background.error-hover}'},
-                        'circle-background': { value: '{dark-color-scheme.icon.white}'}
+                        border: { value: '{dark.line.error}' },
+                        background: { value: '{dark.states.background.error-hover}'},
+                        'circle-background': { value: '{dark.icon.white}'}
                     },
                     focused: {
-                        border: { value: '{dark-color-scheme.states.line.focus-error}' },
-                        background: { value: '{dark-color-scheme.states.background.error-less}'},
-                        'circle-background': { value: '{dark-color-scheme.icon.error}'},
-                        'focus-outline': { value: '{dark-color-scheme.states.line.focus-error}' }
+                        border: { value: '{dark.states.line.focus-error}' },
+                        background: { value: '{dark.states.background.error-less}'},
+                        'circle-background': { value: '{dark.icon.error}'},
+                        'focus-outline': { value: '{dark.states.line.focus-error}' }
                     },
                     'checked-focused': {
-                        border: { value: '{dark-color-scheme.states.line.focus-error}' },
-                        background: { value: '{dark-color-scheme.background.error}'},
-                        'circle-background': { value: '{dark-color-scheme.icon.white}'},
-                        'focus-outline': { value: '{dark-color-scheme.states.line.focus-error}' }
+                        border: { value: '{dark.states.line.focus-error}' },
+                        background: { value: '{dark.background.error}'},
+                        'circle-background': { value: '{dark.icon.white}'},
+                        'focus-outline': { value: '{dark.states.line.focus-error}' }
                     },
                     disabled: {
-                        border: { value: '{dark-color-scheme.states.line.disabled}' },
-                        background: { value: '{dark-color-scheme.states.background.disabled}'},
-                        'circle-background': { value: '{dark-color-scheme.states.icon.disabled}'},
+                        border: { value: '{dark.states.line.disabled}' },
+                        background: { value: '{dark.states.background.disabled}'},
+                        'circle-background': { value: '{dark.states.icon.disabled}'},
                     }
                 }
             }

@@ -36,38 +36,38 @@
            title: { value: 'subheading' },
            text: { value: 'text-normal' }
         },
-        'light-color-scheme': {
+        light: {
             contrast: {
                 container: {
-                    background: { value: '{light-color-scheme.background.card}' },
-                    title: { value: '{light-color-scheme.foreground.contrast}' },
-                    text: { value: '{light-color-scheme.foreground.contrast}' },
+                    background: { value: '{light.background.card}' },
+                    title: { value: '{light.foreground.contrast}' },
+                    text: { value: '{light.foreground.contrast}' },
                     'box-shadow': { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.16)'}
                 }
             },
             error: {
                 container: {
-                    background: { value: '{light-color-scheme.background.card}' },
-                    title: { value: '{light-color-scheme.foreground.contrast}' },
-                    text: { value: '{light-color-scheme.foreground.contrast}' },
+                    background: { value: '{light.background.card}' },
+                    title: { value: '{light.foreground.contrast}' },
+                    text: { value: '{light.foreground.contrast}' },
                     'box-shadow': { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.16)'}
                 }
             }
         },
-        'dark-color-scheme': {
+        dark: {
             contrast: {
                 container: {
-                    background: { value: '{dark-color-scheme.background.card}' },
-                    title: { value: '{dark-color-scheme.foreground.contrast}' },
-                    text: { value: '{dark-color-scheme.foreground.contrast}' },
+                    background: { value: '{dark.background.card}' },
+                    title: { value: '{dark.foreground.contrast}' },
+                    text: { value: '{dark.foreground.contrast}' },
                     'box-shadow': { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.50)'}
                 }
             },
             error: {
                 container: {
-                    background: { value: '{dark-color-scheme.background.card}' },
-                    title: { value: '{dark-color-scheme.foreground.contrast}' },
-                    text: { value: '{dark-color-scheme.foreground.contrast}' },
+                    background: { value: '{dark.background.card}' },
+                    title: { value: '{dark.foreground.contrast}' },
+                    text: { value: '{dark.foreground.contrast}' },
                     'box-shadow': { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.50)'}
                 }
             }

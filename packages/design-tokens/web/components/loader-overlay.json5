@@ -13,7 +13,7 @@
                     }
                 },
                 'content': {
-                    'content-gap': { 
+                    'content-gap': {
                         vertical: { value: '{size.xxs}' }
                     }
                 }
@@ -30,7 +30,7 @@
                     }
                 },
                 'content': {
-                    'content-gap': { 
+                    'content-gap': {
                         vertical: { value: '{size.3xs}' }
                     }
                 }
@@ -44,53 +44,53 @@
             compact: {
                 text: { value: 'text-normal' },
                 caption: { value: 'text-compact-strong' },
-            }   
+            }
         },
-        'light-color-scheme': {
+        light: {
             transparent: {
                 overlay: {
-                    background: { value: '{light-color-scheme.background.overlay-inverse}' }
+                    background: { value: '{light.background.overlay-inverse}' }
                 },
                 text: {
-                    color: { value: '{light-color-scheme.foreground.contrast}'}
+                    color: { value: '{light.foreground.contrast}'}
                 },
                 caption: {
-                    color: { value: '{light-color-scheme.foreground.contrast-secondary}'}
+                    color: { value: '{light.foreground.contrast-secondary}'}
                 }
             },
             filled: {
                 overlay: {
-                    background: { value: '{light-color-scheme.background.bg}' }
+                    background: { value: '{light.background.bg}' }
                 },
                 text: {
-                    color: { value: '{light-color-scheme.foreground.contrast}'}
+                    color: { value: '{light.foreground.contrast}'}
                 },
                 caption: {
-                    color: { value: '{light-color-scheme.foreground.contrast-secondary}'}
+                    color: { value: '{light.foreground.contrast-secondary}'}
                 }
             },
         },
-        'dark-color-scheme': {
+        dark: {
             transparent: {
                 overlay: {
-                    background: { value: '{dark-color-scheme.background.overlay-inverse}' }
+                    background: { value: '{dark.background.overlay-inverse}' }
                 },
                 text: {
-                    color: { value: '{dark-color-scheme.foreground.contrast}'}
+                    color: { value: '{dark.foreground.contrast}'}
                 },
                 caption: {
-                    color: { value: '{dark-color-scheme.foreground.contrast-secondary}'}
+                    color: { value: '{dark.foreground.contrast-secondary}'}
                 }
             },
             filled: {
                 overlay: {
-                    background: { value: '{dark-color-scheme.background.bg}' }
+                    background: { value: '{dark.background.bg}' }
                 },
                 text: {
-                    color: { value: '{dark-color-scheme.foreground.contrast}'}
+                    color: { value: '{dark.foreground.contrast}'}
                 },
                 caption: {
-                    color: { value: '{dark-color-scheme.foreground.contrast-secondary}'}
+                    color: { value: '{dark.foreground.contrast-secondary}'}
                 }
             },
         }

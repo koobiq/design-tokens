@@ -13,38 +13,38 @@
         font: {
             text: { value: 'subheading' }
         },
-        'light-color-scheme': {
+        light: {
             filled: {
                 'fade-off': {
                     success: {
-                        background: { value: '{light-color-scheme.background.success}' },
-                        text: { value: '{light-color-scheme.foreground.white}' }
+                        background: { value: '{light.background.success}' },
+                        text: { value: '{light.foreground.white}' }
                     },
                     warning: {
-                        background: { value: '{light-color-scheme.background.warning}' },
-                        text: { value: '{light-color-scheme.foreground.white}' }
+                        background: { value: '{light.background.warning}' },
+                        text: { value: '{light.foreground.white}' }
                     },
                     error: {
-                        background: { value: '{light-color-scheme.background.error}' },
-                        text: { value: '{light-color-scheme.foreground.white}' }
+                        background: { value: '{light.background.error}' },
+                        text: { value: '{light.foreground.white}' }
                     }
                 },
                 'fade-on': {
                     contrast: {
-                        background: { value: '{light-color-scheme.background.contrast-fade}' },
-                        text: { value: '{light-color-scheme.foreground.contrast}' }
+                        background: { value: '{light.background.contrast-fade}' },
+                        text: { value: '{light.foreground.contrast}' }
                     },
                     success: {
-                        background: { value: '{light-color-scheme.background.success-fade}' },
-                        text: { value: '{light-color-scheme.foreground.success}' }
+                        background: { value: '{light.background.success-fade}' },
+                        text: { value: '{light.foreground.success}' }
                     },
                     warning: {
-                        background: { value: '{light-color-scheme.background.warning-fade}' },
-                        text: { value: '{light-color-scheme.foreground.warning}' }
+                        background: { value: '{light.background.warning-fade}' },
+                        text: { value: '{light.foreground.warning}' }
                     },
                     error: {
-                        background: { value: '{light-color-scheme.background.error-fade}' },
-                        text: { value: '{light-color-scheme.foreground.error}' }
+                        background: { value: '{light.background.error-fade}' },
+                        text: { value: '{light.foreground.error}' }
                     }
                 }
             },
@@ -52,59 +52,59 @@
                 'fade-on': {
                     contrast: {
                         background: { value: 'transparent' },
-                        text: { value: '{light-color-scheme.foreground.contrast}' },
-                        border: { value: '{light-color-scheme.line.contrast-fade}' }
+                        text: { value: '{light.foreground.contrast}' },
+                        border: { value: '{light.line.contrast-fade}' }
                     },
                     success: {
                         background: { value: 'transparent' },
-                        text: { value: '{light-color-scheme.foreground.success}' },
-                        border: { value: '{light-color-scheme.line.success-fade}' }
+                        text: { value: '{light.foreground.success}' },
+                        border: { value: '{light.line.success-fade}' }
                     },
                     warning: {
                         background: { value: 'transparent' },
-                        text: { value: '{light-color-scheme.foreground.warning}' },
-                        border: { value: '{light-color-scheme.line.warning-fade}' }
+                        text: { value: '{light.foreground.warning}' },
+                        border: { value: '{light.line.warning-fade}' }
                     },
                     error: {
                         background: { value: 'transparent' },
-                        text: { value: '{light-color-scheme.foreground.error}' },
-                        border: { value: '{light-color-scheme.line.error-fade}' }
+                        text: { value: '{light.foreground.error}' },
+                        border: { value: '{light.line.error-fade}' }
                     }
                 }
             }
         },
-        'dark-color-scheme': {
+        dark: {
             filled: {
                 'fade-off': {
                     success: {
-                        background: { value: '{dark-color-scheme.background.success}' },
-                        text: { value: '{dark-color-scheme.foreground.white}' }
+                        background: { value: '{dark.background.success}' },
+                        text: { value: '{dark.foreground.white}' }
                     },
                     warning: {
-                        background: { value: '{dark-color-scheme.background.warning}' },
-                        text: { value: '{dark-color-scheme.foreground.white}' }
+                        background: { value: '{dark.background.warning}' },
+                        text: { value: '{dark.foreground.white}' }
                     },
                     error: {
-                        background: { value: '{dark-color-scheme.background.error}' },
-                        text: { value: '{dark-color-scheme.foreground.white}' }
+                        background: { value: '{dark.background.error}' },
+                        text: { value: '{dark.foreground.white}' }
                     }
                 },
                 'fade-on': {
                     contrast: {
-                        background: { value: '{dark-color-scheme.background.contrast-fade}' },
-                        text: { value: '{dark-color-scheme.foreground.contrast}' }
+                        background: { value: '{dark.background.contrast-fade}' },
+                        text: { value: '{dark.foreground.contrast}' }
                     },
                     success: {
-                        background: { value: '{dark-color-scheme.background.success-fade}' },
-                        text: { value: '{dark-color-scheme.foreground.success}' }
+                        background: { value: '{dark.background.success-fade}' },
+                        text: { value: '{dark.foreground.success}' }
                     },
                     warning: {
-                        background: { value: '{dark-color-scheme.background.warning-fade}' },
-                        text: { value: '{dark-color-scheme.foreground.warning}' }
+                        background: { value: '{dark.background.warning-fade}' },
+                        text: { value: '{dark.foreground.warning}' }
                     },
                     error: {
-                        background: { value: '{dark-color-scheme.background.error-fade}' },
-                        text: { value: '{dark-color-scheme.foreground.error}' }
+                        background: { value: '{dark.background.error-fade}' },
+                        text: { value: '{dark.foreground.error}' }
                     }
                 }
             },
@@ -112,23 +112,23 @@
                 'fade-on': {
                     contrast: {
                         background: { value: 'transparent' },
-                        text: { value: '{dark-color-scheme.foreground.contrast}' },
-                        border: { value: '{dark-color-scheme.line.contrast-fade}' }
+                        text: { value: '{dark.foreground.contrast}' },
+                        border: { value: '{dark.line.contrast-fade}' }
                     },
                     success: {
                         background: { value: 'transparent' },
-                        text: { value: '{dark-color-scheme.foreground.success}' },
-                        border: { value: '{dark-color-scheme.line.success-fade}' }
+                        text: { value: '{dark.foreground.success}' },
+                        border: { value: '{dark.line.success-fade}' }
                     },
                     warning: {
                         background: { value: 'transparent' },
-                        text: { value: '{dark-color-scheme.foreground.warning}' },
-                        border: { value: '{dark-color-scheme.line.warning-fade}' }
+                        text: { value: '{dark.foreground.warning}' },
+                        border: { value: '{dark.line.warning-fade}' }
                     },
                     error: {
                         background: { value: 'transparent' },
-                        text: { value: '{dark-color-scheme.foreground.error}' },
-                        border: { value: '{dark-color-scheme.line.error-fade}' }
+                        text: { value: '{dark.foreground.error}' },
+                        border: { value: '{dark.line.error-fade}' }
                     }
                 }
             }

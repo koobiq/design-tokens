@@ -11,7 +11,7 @@ visual language, including color, typography, and spacing we use.
 Design tokens are key-value pairs. For example:
 ```
 Key: value;
-$card-dark-color-scheme-success-background: #276211;
+$card-dark-success-background: #276211;
 ```
 - The key name defines the usage or how to apply the value to a specific context, such as using text on a light background
 - The key stores visual design attributes

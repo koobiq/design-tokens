@@ -22,20 +22,20 @@
             term: { value: 'text-normal' },
             description: { value: 'text-normal' }
         },
-        'light-color-scheme': {
+        light: {
             term: {
-                color: { value: '{light-color-scheme.foreground.text-less-contrast}'}
+                color: { value: '{light.foreground.text-less-contrast}'}
             },
             description: {
-                color: { value: '{light-color-scheme.foreground.contrast}'}
+                color: { value: '{light.foreground.contrast}'}
             }
         },
-        'dark-color-scheme': {
+        dark: {
             term: {
-                color: { value: '{dark-color-scheme.foreground.text-less-contrast}'}
+                color: { value: '{dark.foreground.text-less-contrast}'}
             },
             description: {
-                color: { value: '{dark-color-scheme.foreground.contrast}'}
+                color: { value: '{dark.foreground.contrast}'}
             }
         }
     }

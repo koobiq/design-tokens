@@ -32,15 +32,15 @@
         font: {
             default: { value: 'text-normal' }
         },
-        'light-color-scheme': {
+        light: {
             dropdown: {
-                background: { value: '{light-color-scheme.background.card}' },
+                background: { value: '{light.background.card}' },
                 shadow: { value: '0px 3px 8px 0px rgba(39,51,62,0.2)' }
             }
         },
-        'dark-color-scheme': {
+        dark: {
             dropdown: {
-                background: { value: '{dark-color-scheme.background.card}' },
+                background: { value: '{dark.background.card}' },
                 shadow: { value: '0px 3px 8px 0px rgba(39,51,62,0.5)' }
             }
         }
