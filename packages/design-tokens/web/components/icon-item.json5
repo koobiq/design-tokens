@@ -17,6 +17,10 @@
                 color: { value: '{light.foreground.white}' },
                 background: { value: '{light.icon.error}' },
             },
+            warning: {
+                color: { value: '{light-color-scheme.foreground.white}' },
+                background: { value: '{light-color-scheme.background.warning}' },
+            },
             success: {
                 color: { value: '{light.foreground.white}' },
                 background: { value: '{light.icon.success}' },
@@ -38,6 +42,10 @@
             error: {
                 color: { value: '{dark.foreground.white}' },
                 background: { value: '{dark.icon.error}' },
+            },
+            warning: {
+                color: { value: '{dark-color-scheme.foreground.white}' },
+                background: { value: '{dark-color-scheme.background.warning}' },
             },
             success: {
                 color: { value: '{dark.foreground.white}' },
