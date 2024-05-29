@@ -15,6 +15,7 @@
         '7xl': { value: '64px' },
 
         'border-width': { 'value': '1px' },
+
         'border-radius': { 'value': '8px' }
     }
 }
