@@ -1,3 +1,10 @@
+# 3.0.0-rc.3 "Dour Todas" (2024-05-29)
+
+### Design Tokens
+
+ * bug fix  **alert:** change close top margin ([#ds-2489](https://github.com/koobiq/design-tokens/issues/issue/ds-2489)) ([#7](https://github.com/koobiq/design-tokens/issues/7)) ([54c0bdf](https://github.com/koobiq/design-tokens/commit/54c0bdffed56230ffc1e80668bceb2fca1cc071b))
+ * feature  generate css-variables for colors ([#DS-2338](https://github.com/koobiq/design-tokens/issues/issue/DS-2338)) ([#8](https://github.com/koobiq/design-tokens/issues/8)) ([3bef802](https://github.com/koobiq/design-tokens/commit/3bef802a89eac5c3f51677480590290c817467c2))
+
 # 3.0.0-rc.2 (2024-05-15)
 
 ### Design Tokens
