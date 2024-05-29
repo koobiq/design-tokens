@@ -14,11 +14,11 @@
                 }
             }
         },
-        'light-color-scheme': {
-            color: { value: '{light-color-scheme.line.contrast-fade}' }
+        light: {
+            color: { value: '{light.line.contrast-fade}' }
         },
-        'dark-color-scheme': {
-            color: { value: '{dark-color-scheme.line.contrast-fade}' }
+        dark: {
+            color: { value: '{dark.line.contrast-fade}' }
         }
     }
 }

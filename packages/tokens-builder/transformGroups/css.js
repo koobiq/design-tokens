@@ -4,7 +4,8 @@ module.exports = (StyleDictionary) => {
         name: 'kbq/css',
         transforms: [
             'attribute/cti',
-            'kbq-attribute/size',
+            'kbq-attribute/palette',
+            'kbq-attribute/font',
             'name/cti/kebab',
             'color/css',
             'kbq/prefix'

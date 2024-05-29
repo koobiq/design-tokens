@@ -33,50 +33,50 @@
         font: {
             text: { value: 'text-normal-strong' }
         },
-        'light-color-scheme': {
+        light: {
             'tab-item': {
                 filled: {
                     'on-background': {
                         default: {
                             background: { value: 'transparent'},
                             text: {
-                                color: { value: '{light-color-scheme.foreground.contrast}'}
+                                color: { value: '{light.foreground.contrast}'}
                             },
                             icon: {
-                                color: { value: '{light-color-scheme.icon.contrast}'}
+                                color: { value: '{light.icon.contrast}'}
                             }
                         },
                         states: {
                             hover: {
-                                background: { value: '{light-color-scheme.states.background.transparent-hover}'}
+                                background: { value: '{light.states.background.transparent-hover}'}
                             },
                             focused: {
                                 'focus-outline': {
-                                    color: { value: '{light-color-scheme.states.line.focus-theme}'}
+                                    color: { value: '{light.states.line.focus-theme}'}
                                 }
                             },
                             selected: {
-                                background: { value: '{light-color-scheme.states.background.transparent-active}'}
+                                background: { value: '{light.states.background.transparent-active}'}
                             },
                             'selected-hover': {
-                                background: { value: '{light-color-scheme.states.background.transparent-active}'}
+                                background: { value: '{light.states.background.transparent-active}'}
                             },
                             'selected-disabled': {
-                                background: { value: '{light-color-scheme.states.background.transparent-active}'},
+                                background: { value: '{light.states.background.transparent-active}'},
                                 text: {
-                                    color: { value: '{light-color-scheme.states.foreground.disabled}'}
+                                    color: { value: '{light.states.foreground.disabled}'}
                                 },
                                 icon: {
-                                    color: { value: '{light-color-scheme.states.icon.disabled}'}
+                                    color: { value: '{light.states.icon.disabled}'}
                                 }
                             },
                             'disabled': {
                                 background: { value: 'transparent'},
                                 text: {
-                                    color: { value: '{light-color-scheme.states.foreground.disabled}'}
+                                    color: { value: '{light.states.foreground.disabled}'}
                                 },
                                 icon: {
-                                    color: { value: '{light-color-scheme.states.icon.disabled}'}
+                                    color: { value: '{light.states.icon.disabled}'}
                                 }
                             }
                         }
@@ -85,43 +85,43 @@
                         default: {
                             background: { value: 'transparent'},
                             text: {
-                                color: { value: '{light-color-scheme.foreground.contrast}'}
+                                color: { value: '{light.foreground.contrast}'}
                             },
                             icon: {
-                                color: { value: '{light-color-scheme.icon.contrast}'}
+                                color: { value: '{light.icon.contrast}'}
                             }
                         },
                         states: {
                             hover: {
-                                background: { value: '{light-color-scheme.states.background.transparent-hover}'}
+                                background: { value: '{light.states.background.transparent-hover}'}
                             },
                             focused: {
                                 'focus-outline': {
-                                    color: { value: '{light-color-scheme.states.line.focus-theme}'}
+                                    color: { value: '{light.states.line.focus-theme}'}
                                 }
                             },
                             selected: {
-                                background: { value: '{light-color-scheme.states.background.transparent-active}'}
+                                background: { value: '{light.states.background.transparent-active}'}
                             },
                             'selected-hover': {
-                                background: { value: '{light-color-scheme.states.background.transparent-active}'}
+                                background: { value: '{light.states.background.transparent-active}'}
                             },
                             'selected-disabled': {
-                                background: { value: '{light-color-scheme.states.background.transparent-active}'},
+                                background: { value: '{light.states.background.transparent-active}'},
                                 text: {
-                                    color: { value: '{light-color-scheme.states.foreground.disabled}'}
+                                    color: { value: '{light.states.foreground.disabled}'}
                                 },
                                 icon: {
-                                    color: { value: '{light-color-scheme.states.icon.disabled}'}
+                                    color: { value: '{light.states.icon.disabled}'}
                                 }
                             },
                             'disabled': {
                                 background: { value: 'transparent'},
                                 text: {
-                                    color: { value: '{light-color-scheme.states.foreground.disabled}'}
+                                    color: { value: '{light.states.foreground.disabled}'}
                                 },
                                 icon: {
-                                    color: { value: '{light-color-scheme.states.icon.disabled}'}
+                                    color: { value: '{light.states.icon.disabled}'}
                                 }
                             }
                         }
@@ -133,43 +133,43 @@
                         default: {
                             background: { value: 'transparent'},
                             text: {
-                                color: { value: '{light-color-scheme.foreground.contrast}'}
+                                color: { value: '{light.foreground.contrast}'}
                             },
                             icon: {
-                                color: { value: '{light-color-scheme.icon.contrast}'}
+                                color: { value: '{light.icon.contrast}'}
                             }
                         },
                         states: {
                             hover: {
-                                background: { value: '{light-color-scheme.states.background.transparent-hover}'}
+                                background: { value: '{light.states.background.transparent-hover}'}
                             },
                             focused: {
                                 'focus-outline': {
-                                    color: { value: '{light-color-scheme.states.line.focus-theme}'}
+                                    color: { value: '{light.states.line.focus-theme}'}
                                 }
                             },
                             selected: {
-                                background: { value: '{light-color-scheme.states.background.transparent-active}'}
+                                background: { value: '{light.states.background.transparent-active}'}
                             },
                             'selected-hover': {
-                                background: { value: '{light-color-scheme.states.background.transparent-active}'}
+                                background: { value: '{light.states.background.transparent-active}'}
                             },
                             'selected-disabled': {
-                                background: { value: '{light-color-scheme.states.background.transparent-active}'},
+                                background: { value: '{light.states.background.transparent-active}'},
                                 text: {
-                                    color: { value: '{light-color-scheme.states.foreground.disabled}'}
+                                    color: { value: '{light.states.foreground.disabled}'}
                                 },
                                 icon: {
-                                    color: { value: '{light-color-scheme.states.icon.disabled}'}
+                                    color: { value: '{light.states.icon.disabled}'}
                                 }
                             },
                             'disabled': {
                                 background: { value: 'transparent'},
                                 text: {
-                                    color: { value: '{light-color-scheme.states.foreground.disabled}'}
+                                    color: { value: '{light.states.foreground.disabled}'}
                                 },
                                 icon: {
-                                    color: { value: '{light-color-scheme.states.icon.disabled}'}
+                                    color: { value: '{light.states.icon.disabled}'}
                                 }
                             },
                         }
@@ -178,43 +178,43 @@
                         default: {
                             background: { value: 'transparent'},
                             text: {
-                                color: { value: '{light-color-scheme.foreground.contrast}'}
+                                color: { value: '{light.foreground.contrast}'}
                             },
                             icon: {
-                                color: { value: '{light-color-scheme.icon.contrast}'}
+                                color: { value: '{light.icon.contrast}'}
                             }
                         },
                         states: {
                             hover: {
-                                background: { value: '{light-color-scheme.states.background.transparent-hover}'}
+                                background: { value: '{light.states.background.transparent-hover}'}
                             },
                             focused: {
                                 'focus-outline': {
-                                    color: { value: '{light-color-scheme.states.line.focus-theme}'}
+                                    color: { value: '{light.states.line.focus-theme}'}
                                 }
                             },
                             selected: {
-                                background: { value: '{light-color-scheme.states.background.transparent-active}'}
+                                background: { value: '{light.states.background.transparent-active}'}
                             },
                             'selected-hover': {
-                                background: { value: '{light-color-scheme.states.background.transparent-active}'}
+                                background: { value: '{light.states.background.transparent-active}'}
                             },
                             'selected-disabled': {
-                                background: { value: '{light-color-scheme.states.background.transparent-active}'},
+                                background: { value: '{light.states.background.transparent-active}'},
                                 text: {
-                                    color: { value: '{light-color-scheme.states.foreground.disabled}'}
+                                    color: { value: '{light.states.foreground.disabled}'}
                                 },
                                 icon: {
-                                    color: { value: '{light-color-scheme.states.icon.disabled}'}
+                                    color: { value: '{light.states.icon.disabled}'}
                                 }
                             },
                             'disabled': {
                                 background: { value: 'transparent'},
                                 text: {
-                                    color: { value: '{light-color-scheme.states.foreground.disabled}'}
+                                    color: { value: '{light.states.foreground.disabled}'}
                                 },
                                 icon: {
-                                    color: { value: '{light-color-scheme.states.icon.disabled}'}
+                                    color: { value: '{light.states.icon.disabled}'}
                                 }
                             }
                         }
@@ -224,10 +224,10 @@
             'tab-stack': {
                 filled: {
                     'on-background': {
-                        background: { value: '{light-color-scheme.background.bg}'}
+                        background: { value: '{light.background.bg}'}
                     },
                     'on-surface': {
-                        background: { value: '{light-color-scheme.background.contrast-fade}'}
+                        background: { value: '{light.background.contrast-fade}'}
                     }
                 },
                 //
@@ -241,50 +241,50 @@
                 }
             }
         },
-        'dark-color-scheme': {
+        dark: {
             'tab-item': {
                 filled: {
                     'on-background': {
                         default: {
                             background: { value: 'transparent'},
                             text: {
-                                color: { value: '{dark-color-scheme.foreground.contrast}'}
+                                color: { value: '{dark.foreground.contrast}'}
                             },
                             icon: {
-                                color: { value: '{dark-color-scheme.icon.contrast}'}
+                                color: { value: '{dark.icon.contrast}'}
                             }
                         },
                         states: {
                             hover: {
-                                background: { value: '{dark-color-scheme.states.background.transparent-hover}'}
+                                background: { value: '{dark.states.background.transparent-hover}'}
                             },
                             focused: {
                                 'focus-outline': {
-                                    color: { value: '{dark-color-scheme.states.line.focus-theme}'}
+                                    color: { value: '{dark.states.line.focus-theme}'}
                                 }
                             },
                             selected: {
-                                background: { value: '{dark-color-scheme.states.background.transparent-active}'}
+                                background: { value: '{dark.states.background.transparent-active}'}
                             },
                             'selected-hover': {
-                                background: { value: '{dark-color-scheme.states.background.transparent-active}'}
+                                background: { value: '{dark.states.background.transparent-active}'}
                             },
                             'selected-disabled': {
-                                background: { value: '{dark-color-scheme.states.background.transparent-active}'},
+                                background: { value: '{dark.states.background.transparent-active}'},
                                 text: {
-                                    color: { value: '{dark-color-scheme.states.foreground.disabled}'}
+                                    color: { value: '{dark.states.foreground.disabled}'}
                                 },
                                 icon: {
-                                    color: { value: '{dark-color-scheme.states.icon.disabled}'}
+                                    color: { value: '{dark.states.icon.disabled}'}
                                 }
                             },
                             'disabled': {
                                 background: { value: 'transparent'},
                                 text: {
-                                    color: { value: '{dark-color-scheme.states.foreground.disabled}'}
+                                    color: { value: '{dark.states.foreground.disabled}'}
                                 },
                                 icon: {
-                                    color: { value: '{dark-color-scheme.states.icon.disabled}'}
+                                    color: { value: '{dark.states.icon.disabled}'}
                                 }
                             }
                         }
@@ -293,43 +293,43 @@
                         default: {
                             background: { value: 'transparent'},
                             text: {
-                                color: { value: '{dark-color-scheme.foreground.contrast}'}
+                                color: { value: '{dark.foreground.contrast}'}
                             },
                             icon: {
-                                color: { value: '{dark-color-scheme.icon.contrast}'}
+                                color: { value: '{dark.icon.contrast}'}
                             }
                         },
                         states: {
                             hover: {
-                                background: { value: '{dark-color-scheme.states.background.transparent-hover}'}
+                                background: { value: '{dark.states.background.transparent-hover}'}
                             },
                             focused: {
                                 'focus-outline': {
-                                    color: { value: '{dark-color-scheme.states.line.focus-theme}'}
+                                    color: { value: '{dark.states.line.focus-theme}'}
                                 }
                             },
                             selected: {
-                                background: { value: '{dark-color-scheme.states.background.transparent-active}'}
+                                background: { value: '{dark.states.background.transparent-active}'}
                             },
                             'selected-hover': {
-                                background: { value: '{dark-color-scheme.states.background.transparent-active}'}
+                                background: { value: '{dark.states.background.transparent-active}'}
                             },
                             'selected-disabled': {
-                                background: { value: '{dark-color-scheme.states.background.transparent-active}'},
+                                background: { value: '{dark.states.background.transparent-active}'},
                                 text: {
-                                    color: { value: '{dark-color-scheme.states.foreground.disabled}'}
+                                    color: { value: '{dark.states.foreground.disabled}'}
                                 },
                                 icon: {
-                                    color: { value: '{dark-color-scheme.states.icon.disabled}'}
+                                    color: { value: '{dark.states.icon.disabled}'}
                                 }
                             },
                             'disabled': {
                                 background: { value: 'transparent'},
                                 text: {
-                                    color: { value: '{dark-color-scheme.states.foreground.disabled}'}
+                                    color: { value: '{dark.states.foreground.disabled}'}
                                 },
                                 icon: {
-                                    color: { value: '{dark-color-scheme.states.icon.disabled}'}
+                                    color: { value: '{dark.states.icon.disabled}'}
                                 }
                             }
                         }
@@ -341,43 +341,43 @@
                         default: {
                             background: { value: 'transparent'},
                             text: {
-                                color: { value: '{dark-color-scheme.foreground.contrast}'}
+                                color: { value: '{dark.foreground.contrast}'}
                             },
                             icon: {
-                                color: { value: '{dark-color-scheme.icon.contrast}'}
+                                color: { value: '{dark.icon.contrast}'}
                             }
                         },
                         states: {
                             hover: {
-                                background: { value: '{dark-color-scheme.states.background.transparent-hover}'}
+                                background: { value: '{dark.states.background.transparent-hover}'}
                             },
                             focused: {
                                 'focus-outline': {
-                                    color: { value: '{dark-color-scheme.states.line.focus-theme}'}
+                                    color: { value: '{dark.states.line.focus-theme}'}
                                 }
                             },
                             selected: {
-                                background: { value: '{dark-color-scheme.states.background.transparent-active}'}
+                                background: { value: '{dark.states.background.transparent-active}'}
                             },
                             'selected-hover': {
-                                background: { value: '{dark-color-scheme.states.background.transparent-active}'}
+                                background: { value: '{dark.states.background.transparent-active}'}
                             },
                             'selected-disabled': {
-                                background: { value: '{dark-color-scheme.states.background.transparent-active}'},
+                                background: { value: '{dark.states.background.transparent-active}'},
                                 text: {
-                                    color: { value: '{dark-color-scheme.states.foreground.disabled}'}
+                                    color: { value: '{dark.states.foreground.disabled}'}
                                 },
                                 icon: {
-                                    color: { value: '{dark-color-scheme.states.icon.disabled}'}
+                                    color: { value: '{dark.states.icon.disabled}'}
                                 }
                             },
                             'disabled': {
                                 background: { value: 'transparent'},
                                 text: {
-                                    color: { value: '{dark-color-scheme.states.foreground.disabled}'}
+                                    color: { value: '{dark.states.foreground.disabled}'}
                                 },
                                 icon: {
-                                    color: { value: '{dark-color-scheme.states.icon.disabled}'}
+                                    color: { value: '{dark.states.icon.disabled}'}
                                 }
                             },
                         }
@@ -386,43 +386,43 @@
                         default: {
                             background: { value: 'transparent'},
                             text: {
-                                color: { value: '{dark-color-scheme.foreground.contrast}'}
+                                color: { value: '{dark.foreground.contrast}'}
                             },
                             icon: {
-                                color: { value: '{dark-color-scheme.icon.contrast}'}
+                                color: { value: '{dark.icon.contrast}'}
                             }
                         },
                         states: {
                             hover: {
-                                background: { value: '{dark-color-scheme.states.background.transparent-hover}'}
+                                background: { value: '{dark.states.background.transparent-hover}'}
                             },
                             focused: {
                                 'focus-outline': {
-                                    color: { value: '{dark-color-scheme.states.line.focus-theme}'}
+                                    color: { value: '{dark.states.line.focus-theme}'}
                                 }
                             },
                             selected: {
-                                background: { value: '{dark-color-scheme.states.background.transparent-active}'}
+                                background: { value: '{dark.states.background.transparent-active}'}
                             },
                             'selected-hover': {
-                                background: { value: '{dark-color-scheme.states.background.transparent-active}'}
+                                background: { value: '{dark.states.background.transparent-active}'}
                             },
                             'selected-disabled': {
-                                background: { value: '{dark-color-scheme.states.background.transparent-active}'},
+                                background: { value: '{dark.states.background.transparent-active}'},
                                 text: {
-                                    color: { value: '{dark-color-scheme.states.foreground.disabled}'}
+                                    color: { value: '{dark.states.foreground.disabled}'}
                                 },
                                 icon: {
-                                    color: { value: '{dark-color-scheme.states.icon.disabled}'}
+                                    color: { value: '{dark.states.icon.disabled}'}
                                 }
                             },
                             'disabled': {
                                 background: { value: 'transparent'},
                                 text: {
-                                    color: { value: '{dark-color-scheme.states.foreground.disabled}'}
+                                    color: { value: '{dark.states.foreground.disabled}'}
                                 },
                                 icon: {
-                                    color: { value: '{dark-color-scheme.states.icon.disabled}'}
+                                    color: { value: '{dark.states.icon.disabled}'}
                                 }
                             }
                         }
@@ -432,10 +432,10 @@
             'tab-stack': {
                 filled: {
                     'on-background': {
-                        background: { value: '{dark-color-scheme.background.bg}'}
+                        background: { value: '{dark.background.bg}'}
                     },
                     'on-surface': {
-                        background: { value: '{dark-color-scheme.background.contrast-fade}'}
+                        background: { value: '{dark.background.contrast-fade}'}
                     }
                 },
                 //

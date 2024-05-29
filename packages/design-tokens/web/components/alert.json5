@@ -121,155 +121,155 @@
             'title-compact': {  value: 'text-big-strong' },
             text: { value: 'text-normal' },
         },
-        'light-color-scheme': {
+        light: {
             default: {
                 contrast: {
                     container: {
-                        background: { value: '{light-color-scheme.background.contrast-fade}' },
-                        title: { value: '{light-color-scheme.foreground.contrast}' },
-                        text: { value: '{light-color-scheme.foreground.contrast}' }
+                        background: { value: '{light.background.contrast-fade}' },
+                        title: { value: '{light.foreground.contrast}' },
+                        text: { value: '{light.foreground.contrast}' }
                     }
                 },
                 error: {
                     container: {
-                        background: { value: '{light-color-scheme.background.contrast-fade}' },
-                        title: { value: '{light-color-scheme.foreground.contrast}' },
-                        text: { value: '{light-color-scheme.foreground.contrast}' }
+                        background: { value: '{light.background.contrast-fade}' },
+                        title: { value: '{light.foreground.contrast}' },
+                        text: { value: '{light.foreground.contrast}' }
                     }
                 },
                 warning: {
                     container: {
-                        background: { value: '{light-color-scheme.background.contrast-fade}' },
-                        title: { value: '{light-color-scheme.foreground.contrast}' },
-                        text: { value: '{light-color-scheme.foreground.contrast}' }
+                        background: { value: '{light.background.contrast-fade}' },
+                        title: { value: '{light.foreground.contrast}' },
+                        text: { value: '{light.foreground.contrast}' }
                     }
                 },
                 success: {
                     container: {
-                        background: { value: '{light-color-scheme.background.contrast-fade}' },
-                        title: { value: '{light-color-scheme.foreground.contrast}' },
-                        text: { value: '{light-color-scheme.foreground.contrast}' }
+                        background: { value: '{light.background.contrast-fade}' },
+                        title: { value: '{light.foreground.contrast}' },
+                        text: { value: '{light.foreground.contrast}' }
                     }
                 },
                 theme: {
                     container: {
-                        background: { value: '{light-color-scheme.background.contrast-fade}' },
-                        title: { value: '{light-color-scheme.foreground.contrast}' },
-                        text: { value: '{light-color-scheme.foreground.contrast}' }
+                        background: { value: '{light.background.contrast-fade}' },
+                        title: { value: '{light.foreground.contrast}' },
+                        text: { value: '{light.foreground.contrast}' }
                     }
                 }
             },
             colored: {
                 contrast: {
                     container: {
-                        background: { value: '{light-color-scheme.background.contrast-fade}' },
-                        title: { value: '{light-color-scheme.foreground.contrast}' },
-                        text: { value: '{light-color-scheme.foreground.contrast}' }
+                        background: { value: '{light.background.contrast-fade}' },
+                        title: { value: '{light.foreground.contrast}' },
+                        text: { value: '{light.foreground.contrast}' }
                     }
                 },
                 error: {
                     container: {
-                        background: { value: '{light-color-scheme.background.error-fade}' },
-                        title: { value: '{light-color-scheme.foreground.contrast}' },
-                        text: { value: '{light-color-scheme.foreground.contrast}' }
+                        background: { value: '{light.background.error-fade}' },
+                        title: { value: '{light.foreground.contrast}' },
+                        text: { value: '{light.foreground.contrast}' }
                     }
                 },
                 warning: {
                     container: {
-                        background: { value: '{light-color-scheme.background.warning-fade}' },
-                        title: { value: '{light-color-scheme.foreground.contrast}' },
-                        text: { value: '{light-color-scheme.foreground.contrast}' }
+                        background: { value: '{light.background.warning-fade}' },
+                        title: { value: '{light.foreground.contrast}' },
+                        text: { value: '{light.foreground.contrast}' }
                     }
                 },
                 success: {
                     container: {
-                        background: { value: '{light-color-scheme.background.success-fade}' },
-                        title: { value: '{light-color-scheme.foreground.contrast}' },
-                        text: { value: '{light-color-scheme.foreground.contrast}' }
+                        background: { value: '{light.background.success-fade}' },
+                        title: { value: '{light.foreground.contrast}' },
+                        text: { value: '{light.foreground.contrast}' }
                     }
                 },
                 theme: {
                     container: {
-                        background: { value: '{light-color-scheme.background.theme-fade}' },
-                        title: { value: '{light-color-scheme.foreground.contrast}' },
-                        text: { value: '{light-color-scheme.foreground.contrast}' }
+                        background: { value: '{light.background.theme-fade}' },
+                        title: { value: '{light.foreground.contrast}' },
+                        text: { value: '{light.foreground.contrast}' }
                     }
                 }
             },
 
         },
-        'dark-color-scheme': {
+        dark: {
             default: {
                 contrast: {
                     container: {
-                        background: { value: '{dark-color-scheme.background.contrast-fade}' },
-                        title: { value: '{dark-color-scheme.foreground.contrast}' },
-                        text: { value: '{dark-color-scheme.foreground.contrast}' }
+                        background: { value: '{dark.background.contrast-fade}' },
+                        title: { value: '{dark.foreground.contrast}' },
+                        text: { value: '{dark.foreground.contrast}' }
                     }
                 },
                 error: {
                     container: {
-                        background: { value: '{dark-color-scheme.background.contrast-fade}' },
-                        title: { value: '{dark-color-scheme.foreground.contrast}' },
-                        text: { value: '{dark-color-scheme.foreground.contrast}' }
+                        background: { value: '{dark.background.contrast-fade}' },
+                        title: { value: '{dark.foreground.contrast}' },
+                        text: { value: '{dark.foreground.contrast}' }
                     }
                 },
                 warning: {
                     container: {
-                        background: { value: '{dark-color-scheme.background.contrast-fade}' },
-                        title: { value: '{dark-color-scheme.foreground.contrast}' },
-                        text: { value: '{dark-color-scheme.foreground.contrast}' }
+                        background: { value: '{dark.background.contrast-fade}' },
+                        title: { value: '{dark.foreground.contrast}' },
+                        text: { value: '{dark.foreground.contrast}' }
                     }
                 },
                 success: {
                     container: {
-                        background: { value: '{dark-color-scheme.background.contrast-fade}' },
-                        title: { value: '{dark-color-scheme.foreground.contrast}' },
-                        text: { value: '{dark-color-scheme.foreground.contrast}' }
+                        background: { value: '{dark.background.contrast-fade}' },
+                        title: { value: '{dark.foreground.contrast}' },
+                        text: { value: '{dark.foreground.contrast}' }
                     }
                 },
                 theme: {
                     container: {
-                        background: { value: '{dark-color-scheme.background.contrast-fade}' },
-                        title: { value: '{dark-color-scheme.foreground.contrast}' },
-                        text: { value: '{dark-color-scheme.foreground.contrast}' }
+                        background: { value: '{dark.background.contrast-fade}' },
+                        title: { value: '{dark.foreground.contrast}' },
+                        text: { value: '{dark.foreground.contrast}' }
                     }
                 }
             },
             colored: {
                 contrast: {
                     container: {
-                        background: { value: '{dark-color-scheme.background.contrast-fade}' },
-                        title: { value: '{dark-color-scheme.foreground.contrast}' },
-                        text: { value: '{dark-color-scheme.foreground.contrast}' }
+                        background: { value: '{dark.background.contrast-fade}' },
+                        title: { value: '{dark.foreground.contrast}' },
+                        text: { value: '{dark.foreground.contrast}' }
                     }
                 },
                 error: {
                     container: {
-                        background: { value: '{dark-color-scheme.background.error-fade}' },
-                        title: { value: '{dark-color-scheme.foreground.contrast}' },
-                        text: { value: '{dark-color-scheme.foreground.contrast}' }
+                        background: { value: '{dark.background.error-fade}' },
+                        title: { value: '{dark.foreground.contrast}' },
+                        text: { value: '{dark.foreground.contrast}' }
                     }
                 },
                 warning: {
                     container: {
-                        background: { value: '{dark-color-scheme.background.warning-fade}' },
-                        title: { value: '{dark-color-scheme.foreground.contrast}' },
-                        text: { value: '{dark-color-scheme.foreground.contrast}' }
+                        background: { value: '{dark.background.warning-fade}' },
+                        title: { value: '{dark.foreground.contrast}' },
+                        text: { value: '{dark.foreground.contrast}' }
                     }
                 },
                 success: {
                     container: {
-                        background: { value: '{dark-color-scheme.background.success-fade}' },
-                        title: { value: '{dark-color-scheme.foreground.contrast}' },
-                        text: { value: '{dark-color-scheme.foreground.contrast}' }
+                        background: { value: '{dark.background.success-fade}' },
+                        title: { value: '{dark.foreground.contrast}' },
+                        text: { value: '{dark.foreground.contrast}' }
                     }
                 },
                 theme: {
                     container: {
-                        background: { value: '{dark-color-scheme.background.theme-fade}' },
-                        title: { value: '{dark-color-scheme.foreground.contrast}' },
-                        text: { value: '{dark-color-scheme.foreground.contrast}' }
+                        background: { value: '{dark.background.theme-fade}' },
+                        title: { value: '{dark.foreground.contrast}' },
+                        text: { value: '{dark.foreground.contrast}' }
                     }
                 }
             },

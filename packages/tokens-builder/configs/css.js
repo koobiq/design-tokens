@@ -4,7 +4,7 @@ module.exports = {
         files: [{
             destination: 'css-tokens.css',
             format: 'css/variables',
-            filter: 'size',
+            filter: 'css-variables',
             prefix: 'kbq'
         }]
     }

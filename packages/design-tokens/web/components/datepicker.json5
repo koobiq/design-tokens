@@ -41,83 +41,83 @@
         font: {
             text: { value: 'text-normal' }
         },
-        'light-color-scheme': {
+        light: {
             container: {
-                background: {value: '{light-color-scheme.background.card}'},
+                background: {value: '{light.background.card}'},
                 'box-shadow': { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.16)' }
             },
             header: {
-                text: {value: '{light-color-scheme.foreground.contrast-tertiary}'},
-                divider: {value: '{light-color-scheme.line.contrast-fade}'}
+                text: {value: '{light.foreground.contrast-tertiary}'},
+                divider: {value: '{light.line.contrast-fade}'}
             },
             grid: {
                 cell: {
                     default: {
                         background: {value: 'transparent'},
-                        text: { value: '{light-color-scheme.foreground.contrast}' }
+                        text: { value: '{light.foreground.contrast}' }
                     },
                     today: {
                         background: {value: 'transparent'},
-                        text: { value: '{light-color-scheme.foreground.theme}' }
+                        text: { value: '{light.foreground.theme}' }
                     },
                     states: {
                         hover: {
-                             background: {value: '{light-color-scheme.states.background.transparent-hover}'}
+                             background: {value: '{light.states.background.transparent-hover}'}
                         },
                         active: {
-                            background: {value: '{light-color-scheme.states.background.transparent-active}'}
+                            background: {value: '{light.states.background.transparent-active}'}
                         },
                         selected: {
-                            background: {value: '{light-color-scheme.background.contrast}'},
-                            text: { value: '{light-color-scheme.foreground.white}' }
+                            background: {value: '{light.background.contrast}'},
+                            text: { value: '{light.foreground.white}' }
                         },
                         'selected-hover': {
-                            background: {value: '{light-color-scheme.states.background.contrast-active}'}
+                            background: {value: '{light.states.background.contrast-active}'}
                         },
                         disabled: {
                             background: {value: 'transparent'},
-                            text: { value: '{light-color-scheme.states.foreground.disabled}' }
+                            text: { value: '{light.states.foreground.disabled}' }
                         }
                     }
                 }
             }
         },
-         'dark-color-scheme': {
+         dark: {
             container: {
-                background: {value: '{dark-color-scheme.background.card}'},
+                background: {value: '{dark.background.card}'},
                 'box-shadow': { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.50)' }
             },
             header: {
-                text: {value: '{dark-color-scheme.foreground.contrast-tertiary}'},
-                divider: {value: '{dark-color-scheme.line.contrast-fade}'}
+                text: {value: '{dark.foreground.contrast-tertiary}'},
+                divider: {value: '{dark.line.contrast-fade}'}
             },
             grid: {
                 cell: {
                     default: {
                         background: {value: 'transparent'},
-                        text: { value: '{dark-color-scheme.foreground.contrast}' }
+                        text: { value: '{dark.foreground.contrast}' }
                     },
                     today: {
                         background: {value: 'transparent'},
-                        text: { value: '{dark-color-scheme.foreground.theme}' }
+                        text: { value: '{dark.foreground.theme}' }
                     },
                     states: {
                         hover: {
-                             background: {value: '{dark-color-scheme.states.background.transparent-hover}'}
+                             background: {value: '{dark.states.background.transparent-hover}'}
                         },
                         active: {
-                            background: {value: '{dark-color-scheme.states.background.transparent-active}'}
+                            background: {value: '{dark.states.background.transparent-active}'}
                         },
                         selected: {
-                            background: {value: '{dark-color-scheme.background.contrast}'},
-                            text: { value: '{dark-color-scheme.foreground.white}' }
+                            background: {value: '{dark.background.contrast}'},
+                            text: { value: '{dark.foreground.white}' }
                         },
                         'selected-hover': {
-                            background: {value: '{dark-color-scheme.states.background.contrast-active}'}
+                            background: {value: '{dark.states.background.contrast-active}'}
                         },
                         disabled: {
                             background: {value: 'transparent'},
-                            text: { value: '{dark-color-scheme.states.foreground.disabled}' }
+                            text: { value: '{dark.states.foreground.disabled}' }
                         }
                     }
                 }

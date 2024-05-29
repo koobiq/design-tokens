@@ -1,46 +1,46 @@
 {
     card: {
-        'light-color-scheme': {
+        light: {
             error: {
-                'vertical-line': { value: '{light-color-scheme.error.palette.value.90}' },
-                background: { value: '{light-color-scheme.error.palette.value.45}' },
+                'vertical-line': { value: '{light.error.palette.value.90}' },
+                background: { value: '{light.error.palette.value.45}' },
                 shadow: { value: 'transparent' }
             },
             warning: {
-                'vertical-line': { value: '{light-color-scheme.warning.palette.value.80}' },
-                background: { value: '{light-color-scheme.warning.palette.value.35}' },
+                'vertical-line': { value: '{light.warning.palette.value.80}' },
+                background: { value: '{light.warning.palette.value.35}' },
                 shadow: { value: 'transparent' }
             },
             success: {
-                'vertical-line': { value: '{light-color-scheme.success.palette.value.90}' },
-                background: { value: '{light-color-scheme.success.palette.value.35}' },
+                'vertical-line': { value: '{light.success.palette.value.90}' },
+                background: { value: '{light.success.palette.value.35}' },
                 shadow: { value: 'transparent' }
             },
             info: {
-                'vertical-line': { value: '{light-color-scheme.info.palette.value.90}' },
-                background: { value: '{light-color-scheme.info.palette.value.35}' },
+                'vertical-line': { value: '{light.info.palette.value.90}' },
+                background: { value: '{light.info.palette.value.35}' },
                 shadow: { value: 'transparent' }
             }
         },
-        'dark-color-scheme': {
+        dark: {
             error: {
-                'vertical-line': { value: '{dark-color-scheme.error.palette.value.30}' },
-                background: { value: '{dark-color-scheme.error.palette.value.15}' },
+                'vertical-line': { value: '{dark.error.palette.value.30}' },
+                background: { value: '{dark.error.palette.value.15}' },
                 shadow: { value: 'transparent' }
             },
             warning: {
-                'vertical-line': { value: '{dark-color-scheme.warning.palette.value.20}' },
-                background: { value: '{dark-color-scheme.warning.palette.value.14}' },
+                'vertical-line': { value: '{dark.warning.palette.value.20}' },
+                background: { value: '{dark.warning.palette.value.14}' },
                 shadow: { value: 'transparent' }
             },
             success: {
-                'vertical-line': { value: '{dark-color-scheme.success.palette.value.30}' },
-                background: { value: '{dark-color-scheme.success.palette.value.20}' },
+                'vertical-line': { value: '{dark.success.palette.value.30}' },
+                background: { value: '{dark.success.palette.value.20}' },
                 shadow: { value: 'transparent' }
             },
             info: {
-                'vertical-line': { value: '{dark-color-scheme.info.palette.value.30}' },
-                background: { value: '{dark-color-scheme.info.palette.value.20}' },
+                'vertical-line': { value: '{dark.info.palette.value.30}' },
+                background: { value: '{dark.info.palette.value.20}' },
                 shadow: { value: 'transparent' }
             }
         },

@@ -280,21 +280,21 @@
                 }
             }
         },
-        'light-color-scheme': {
+        light: {
             'filled': {
                 container: {
-                    background: { value: '{light-color-scheme.background.bg-secondary}' },
+                    background: { value: '{light.background.bg-secondary}' },
                     border: {
                         color: { value: 'transparent' }
                     },
                 },
                 header: {
-                    background: { value: '{light-color-scheme.background.bg-secondary}' },
+                    background: { value: '{light.background.bg-secondary}' },
                     shadow: { value: '0px 9px 8px -12px rgba(108, 115, 148, 0.5)' }
                 },
                 actionbar: {
-                    'fade-gradient': { value: 'linear-gradient(90deg, {light-color-scheme.background.bg-secondary} 0%, {light-color-scheme.background.bg-secondary} 100%);' },
-                    background: { value: '{light-color-scheme.background.bg-secondary}' }
+                    'fade-gradient': { value: 'linear-gradient(90deg, {light.background.bg-secondary} 0%, {light.background.bg-secondary} 100%);' },
+                    background: { value: '{light.background.bg-secondary}' }
                 },
                 collapse: {
                     expanded: {
@@ -304,24 +304,24 @@
                         background: { value: 'linear-gradient(180deg, hsla(225, 15%, 95%, 0%) 0%, hsla(225, 15%, 95%, 100%) 100%)' }
                     },
                     'button-expand': {
-                        background: { value: '{light-color-scheme.background.bg-secondary}' }
+                        background: { value: '{light.background.bg-secondary}' }
                     }
                 }
             },
             'outline': {
                 container: {
-                    background: { value: '{light-color-scheme.background.card}' },
+                    background: { value: '{light.background.card}' },
                     border: {
-                        color: { value: '{light-color-scheme.line.contrast-fade}' }
+                        color: { value: '{light.line.contrast-fade}' }
                     }
                 },
                 header: {
-                    background: { value: '{light-color-scheme.background.card}' },
+                    background: { value: '{light.background.card}' },
                     shadow: { value: '0px 9px 8px -12px rgba(108, 115, 148, 0.5)' }
                 },
                 actionbar: {
-                    'fade-gradient': { value: 'linear-gradient(90deg, {light-color-scheme.background.card} 0%, {light-color-scheme.background.card} 100%);' },
-                    background: { value: '{light-color-scheme.background.card}' }
+                    'fade-gradient': { value: 'linear-gradient(90deg, {light.background.card} 0%, {light.background.card} 100%);' },
+                    background: { value: '{light.background.card}' }
                 },
                 collapse: {
                     expanded: {
@@ -331,7 +331,7 @@
                         background: { value: 'linear-gradient(180deg, hsla(0, 0%, 100%, 0%) 0%, hsla(0, 0%, 100%, 100%) 100%)' }
                     },
                     'button-expand': {
-                        background: { value: '{light-color-scheme.background.card}' }
+                        background: { value: '{light.background.card}' }
                     }
                 }
             },
@@ -397,7 +397,7 @@
                     color: { value: 'null' }
                 },
                 'line-numbers': {
-                    color: { value:  '{light-color-scheme.foreground.contrast-secondary}'}
+                    color: { value:  '{light.foreground.contrast-secondary}'}
                 },
                 link: {
                     background: { value: 'null' },
@@ -545,21 +545,21 @@
                 }
                 }
         },
-        'dark-color-scheme': {
+        dark: {
             'filled': {
                 container: {
-                    background: { value: '{dark-color-scheme.background.bg-secondary}' },
+                    background: { value: '{dark.background.bg-secondary}' },
                     border: {
-                        color: { value: '{dark-color-scheme.line.contrast-fade}' }
+                        color: { value: '{dark.line.contrast-fade}' }
                     }
                 },
                 header: {
-                    background: { value: '{dark-color-scheme.background.bg-secondary}' },
+                    background: { value: '{dark.background.bg-secondary}' },
                     shadow: { value: '0px 9px 8px -12px rgba(108, 115, 148, 0.5)' }
                 },
                 actionbar: {
-                    'fade-gradient': { value: 'linear-gradient(90deg, {dark-color-scheme.background.bg-secondary} 0%, {dark-color-scheme.background.bg-secondary} 100%);' },
-                    background: { value: '{dark-color-scheme.background.bg-secondary}' }
+                    'fade-gradient': { value: 'linear-gradient(90deg, {dark.background.bg-secondary} 0%, {dark.background.bg-secondary} 100%);' },
+                    background: { value: '{dark.background.bg-secondary}' }
                 },
                 collapse: {
                     expanded: {
@@ -569,25 +569,25 @@
                         background: { value: 'linear-gradient(180deg, hsla(229, 15%, 15%, 0%) 0%, hsla(229, 15%, 15%, 1%) 100%)' }
                     },
                     'button-expand': {
-                        background: { value: '{dark-color-scheme.background.bg-secondary}' }
+                        background: { value: '{dark.background.bg-secondary}' }
                     }
                 }
             },
             'outline': {
                 container: {
-                    background: { value: '{dark-color-scheme.background.card}' },
+                    background: { value: '{dark.background.card}' },
                     border: {
                         color: { value: 'transparent' }
                     }
                 },
                 header: {
-                    background: { value: '{dark-color-scheme.background.card}' },
+                    background: { value: '{dark.background.card}' },
                     shadow: { value: '0px 9px 8px -12px rgba(108, 115, 148, 0.5)' },
 
                 },
                 actionbar: {
-                    'fade-gradient': { value: 'linear-gradient(90deg, {dark-color-scheme.background.card} 0%, {dark-color-scheme.background.card} 100%);' },
-                    background: { value: '{dark-color-scheme.background.card}' }
+                    'fade-gradient': { value: 'linear-gradient(90deg, {dark.background.card} 0%, {dark.background.card} 100%);' },
+                    background: { value: '{dark.background.card}' }
                 },
                 collapse: {
                     expanded: {
@@ -597,7 +597,7 @@
                         background: { value: 'linear-gradient(180deg, hsla(229, 15%, 12%, 0%) 0%, hsla(229, 15%, 12%, 1%) 100%)' }
                     },
                     'button-expand': {
-                        background: { value: '{dark-color-scheme.background.card}' }
+                        background: { value: '{dark.background.card}' }
                     }
                 }
             },
@@ -663,7 +663,7 @@
                     color: { value: 'null' }
                 },
                 'line-numbers': {
-                    color: { value:  '{dark-color-scheme.foreground.contrast-secondary}'}
+                    color: { value:  '{dark.foreground.contrast-secondary}'}
                 },
                 link: {
                     background: { value: 'null' },

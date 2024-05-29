@@ -1,11 +1,11 @@
 {
     markdown: {
         h1: {
-            'light-color-scheme': {
-                color: { value: '{light-color-scheme.foreground.contrast}' }
+            light: {
+                color: { value: '{light.foreground.contrast}' }
             },
-            'dark-color-scheme': {
-                color: { value: '{dark-color-scheme.foreground.contrast}' }
+            dark: {
+                color: { value: '{dark.foreground.contrast}' }
             },
             size: {
                 'max-width': { value: '{markdown.size.max-width}'},
@@ -17,11 +17,11 @@
             }
         },
         h2: {
-            'light-color-scheme': {
-                color: { value: '{light-color-scheme.foreground.contrast}' }
+            light: {
+                color: { value: '{light.foreground.contrast}' }
             },
-            'dark-color-scheme': {
-                color: { value: '{dark-color-scheme.foreground.contrast}' }
+            dark: {
+                color: { value: '{dark.foreground.contrast}' }
             },
             size: {
                 'max-width': { value: '{markdown.size.max-width}'},
@@ -33,11 +33,11 @@
             }
         },
         h3: {
-            'light-color-scheme': {
-                color: { value: '{light-color-scheme.foreground.contrast}' }
+            light: {
+                color: { value: '{light.foreground.contrast}' }
             },
-            'dark-color-scheme': {
-                color: { value: '{dark-color-scheme.foreground.contrast}' }
+            dark: {
+                color: { value: '{dark.foreground.contrast}' }
             },
             size: {
                 'max-width': { value: '{markdown.size.max-width}'},
@@ -49,11 +49,11 @@
             }
         },
         h4: {
-            'light-color-scheme': {
-                color: { value: '{light-color-scheme.foreground.contrast}' }
+            light: {
+                color: { value: '{light.foreground.contrast}' }
             },
-            'dark-color-scheme': {
-                color: { value: '{dark-color-scheme.foreground.contrast}' }
+            dark: {
+                color: { value: '{dark.foreground.contrast}' }
             },
             size: {
                 'max-width': { value: '{markdown.size.max-width}'},
@@ -65,11 +65,11 @@
             }
         },
         h5: {
-            'light-color-scheme': {
-                color: { value: '{light-color-scheme.foreground.contrast}' }
+            light: {
+                color: { value: '{light.foreground.contrast}' }
             },
-            'dark-color-scheme': {
-                color: { value: '{dark-color-scheme.foreground.contrast}' }
+            dark: {
+                color: { value: '{dark.foreground.contrast}' }
             },
             size: {
                 'max-width': { value: '{markdown.size.max-width}'},
@@ -81,11 +81,11 @@
             }
         },
         h6: {
-            'light-color-scheme': {
-                color: { value: '{light-color-scheme.foreground.contrast}' }
+            light: {
+                color: { value: '{light.foreground.contrast}' }
             },
-            'dark-color-scheme': {
-                color: { value: '{dark-color-scheme.foreground.contrast}' }
+            dark: {
+                color: { value: '{dark.foreground.contrast}' }
             },
             size: {
                 'max-width': { value: '{markdown.size.max-width}'},
@@ -97,11 +97,11 @@
             }
         },
         p: {
-            'light-color-scheme': {
-                color: { value: '{light-color-scheme.foreground.contrast}' }
+            light: {
+                color: { value: '{light.foreground.contrast}' }
             },
-            'dark-color-scheme': {
-                color: { value: '{dark-color-scheme.foreground.contrast}' }
+            dark: {
+                color: { value: '{dark.foreground.contrast}' }
             },
             size: {
                 'max-width': { value: '{markdown.size.max-width}'},
@@ -113,11 +113,11 @@
             }
         },
         list: {
-            'light-color-scheme': {
-                color: { value: '{light-color-scheme.foreground.contrast}' }
+            light: {
+                color: { value: '{light.foreground.contrast}' }
             },
-            'dark-color-scheme': {
-                color: { value: '{dark-color-scheme.foreground.contrast}' }
+            dark: {
+                color: { value: '{dark.foreground.contrast}' }
             },
             size: {
                 'max-width': { value: '{markdown.size.max-width}'},
@@ -133,15 +133,15 @@
             }
         },
         blockquote: {
-            'light-color-scheme': {
-                text: { value: '{light-color-scheme.foreground.contrast}' },
-                line: { value: '{light-color-scheme.foreground.border}' },
+            light: {
+                text: { value: '{light.foreground.contrast}' },
+                line: { value: '{light.foreground.border}' },
                 background: { value: 'transparent' },
                 border: { value: 'transparent' }
             },
-            'dark-color-scheme': {
-                text: { value: '{dark-color-scheme.foreground.contrast}' },
-                line: { value: '{dark-color-scheme.foreground.border}' },
+            dark: {
+                text: { value: '{dark.foreground.contrast}' },
+                line: { value: '{dark.foreground.border}' },
                 background: { value: 'transparent' },
                 border: { value: 'transparent' }
             },
@@ -159,15 +159,15 @@
             }
         },
         code: {
-            'light-color-scheme': {
-                text: { value: '{light-color-scheme.foreground.contrast}' },
-                background: { value: '{light-color-scheme.background.background-less-contrast}' },
-                border: { value: '{light-color-scheme.foreground.divider}' }
+            light: {
+                text: { value: '{light.foreground.contrast}' },
+                background: { value: '{light.background.background-less-contrast}' },
+                border: { value: '{light.foreground.divider}' }
             },
-            'dark-color-scheme': {
-                text: { value: '{dark-color-scheme.foreground.contrast}' },
-                background: { value: '{dark-color-scheme.background.background-less-contrast}' },
-                border: { value: '{dark-color-scheme.foreground.divider}' }
+            dark: {
+                text: { value: '{dark.foreground.contrast}' },
+                background: { value: '{dark.background.background-less-contrast}' },
+                border: { value: '{dark.foreground.divider}' }
             },
             size: {
                 'max-width': { value: '{markdown.size.max-width}'},
@@ -183,42 +183,42 @@
             }
         },
         link: {
-            'light-color-scheme': {
-                text: { value: '{link.light-color-scheme.text}' },
-                'border-bottom': { value: '{link.light-color-scheme.border-bottom}' },
+            light: {
+                text: { value: '{link.light.text}' },
+                'border-bottom': { value: '{link.light.border-bottom}' },
 
                 'state-visited': {
-                    'text': { value: '{link.light-color-scheme.state-visited.text}' },
-                    'border-bottom': { value: '{link.light-color-scheme.state-visited.border-bottom}' }
+                    'text': { value: '{link.light.state-visited.text}' },
+                    'border-bottom': { value: '{link.light.state-visited.border-bottom}' }
                 },
                 'state-hover': {
-                    'text': { value: '{link.light-color-scheme.state-hover.text}' },
-                    'border-bottom': { value: '{link.light-color-scheme.state-hover.border-bottom}' }
+                    'text': { value: '{link.light.state-hover.text}' },
+                    'border-bottom': { value: '{link.light.state-hover.border-bottom}' }
                 },
 
-                'state-active': { value: '{link.light-color-scheme.state-active.text}' },
+                'state-active': { value: '{link.light.state-active.text}' },
 
                 'state-focused': {
-                    outline: { value: '{link.light-color-scheme.state-focused.outline}' }
+                    outline: { value: '{link.light.state-focused.outline}' }
                 }
             },
-            'dark-color-scheme': {
-                text: { value: '{link.dark-color-scheme.text}' },
-                'border-bottom': { value: '{link.dark-color-scheme.border-bottom}' },
+            dark: {
+                text: { value: '{link.dark.text}' },
+                'border-bottom': { value: '{link.dark.border-bottom}' },
 
                 'state-visited': {
-                    'text': { value: '{link.dark-color-scheme.state-visited.text}' },
-                    'border-bottom': { value: '{link.dark-color-scheme.state-visited.border-bottom}' }
+                    'text': { value: '{link.dark.state-visited.text}' },
+                    'border-bottom': { value: '{link.dark.state-visited.border-bottom}' }
                 },
                 'state-hover': {
-                    'text': { value: '{link.dark-color-scheme.state-hover.text}' },
-                    'border-bottom': { value: '{link.dark-color-scheme.state-hover.border-bottom}' }
+                    'text': { value: '{link.dark.state-hover.text}' },
+                    'border-bottom': { value: '{link.dark.state-hover.border-bottom}' }
                 },
 
-                'state-active': { value: '{link.dark-color-scheme.state-active.text}' },
+                'state-active': { value: '{link.dark.state-active.text}' },
 
                 'state-focused': {
-                    outline: { value: '{link.dark-color-scheme.state-focused.outline}' }
+                    outline: { value: '{link.dark.state-focused.outline}' }
                 }
             },
             size: {
@@ -233,11 +233,11 @@
             }
         },
         image: {
-            'light-color-scheme': {
-                'caption-text': { value: '{light-color-scheme.foreground.text-less-contrast}' }
+            light: {
+                'caption-text': { value: '{light.foreground.text-less-contrast}' }
             },
-            'dark-color-scheme': {
-                'caption-text': { value: '{dark-color-scheme.foreground.text-less-contrast}' }
+            dark: {
+                'caption-text': { value: '{dark.foreground.text-less-contrast}' }
             },
             size: {
                 'max-width': { value: '{markdown.size.max-width}'},
@@ -252,11 +252,11 @@
             }
         },
         hr: {
-            'light-color-scheme': {
-                color: { value: '{light-color-scheme.foreground.divider}' },
+            light: {
+                color: { value: '{light.foreground.divider}' },
             },
-            'dark-color-scheme': {
-                color: { value: '{dark-color-scheme.foreground.divider}' }
+            dark: {
+                color: { value: '{dark.foreground.divider}' }
             },
             size: {
                 'width': { value: '1px'},
@@ -264,15 +264,15 @@
             },
         },
         table: {
-            'light-color-scheme': {
-                header: { value: '{light-color-scheme.foreground.text-less-contrast}' },
-                body: { value: '{light-color-scheme.foreground.contrast}' },
-                border: { value: '{light-color-scheme.foreground.divider}' }
+            light: {
+                header: { value: '{light.foreground.text-less-contrast}' },
+                body: { value: '{light.foreground.contrast}' },
+                border: { value: '{light.foreground.divider}' }
             },
-            'dark-color-scheme': {
-                header: { value: '{dark-color-scheme.foreground.text-less-contrast}' },
-                body: { value: '{dark-color-scheme.foreground.contrast}' },
-                border: { value: '{dark-color-scheme.foreground.divider}' }
+            dark: {
+                header: { value: '{dark.foreground.text-less-contrast}' },
+                body: { value: '{dark.foreground.contrast}' },
+                border: { value: '{dark.foreground.divider}' }
             },
             size: {
                 'border-width': { value: '{size.border-width}'},

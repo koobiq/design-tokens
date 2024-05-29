@@ -14,15 +14,15 @@
                 }
             }
         },
-        'light-color-scheme': {
+        light: {
             container: {
-                background: { value: '{light-color-scheme.background.card}' },
+                background: { value: '{light.background.card}' },
                 'box-shadow': { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.16)'}
             }
         },
-        'dark-color-scheme': {
+        dark: {
             container: {
-                background: { value: '{dark-color-scheme.background.card}' },
+                background: { value: '{dark.background.card}' },
                 'box-shadow': { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.50)'}
             }
         }

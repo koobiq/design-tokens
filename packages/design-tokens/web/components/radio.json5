@@ -1,194 +1,194 @@
 {
     radio: {
-        'light-color-scheme': {
+        light: {
             theme: {
                 default: {
-                    'outer-circle-border': { value: '{light-color-scheme.line.contrast-fade}' },
-                    'outer-circle-background': { value: '{light-color-scheme.background.bg}' },
+                    'outer-circle-border': { value: '{light.line.contrast-fade}' },
+                    'outer-circle-background': { value: '{light.background.bg}' },
                     'inner-circle-background': { value: 'transparent' },
-                    caption: { value: '{light-color-scheme.foreground.contrast-secondary}' }
+                    caption: { value: '{light.foreground.contrast-secondary}' }
                 },
 
                 states: {
                     hover: {
-                        'outer-circle-border': { value: '{light-color-scheme.line.contrast-fade}' },
-                        'outer-circle-background': { value: '{light-color-scheme.states.background.transparent-hover}' },
+                        'outer-circle-border': { value: '{light.line.contrast-fade}' },
+                        'outer-circle-background': { value: '{light.states.background.transparent-hover}' },
                         'inner-circle-background': { value: 'transparent' }
                     },
                     checked: {
                         'outer-circle-border': { value: 'transparent' },
-                        'outer-circle-background': { value: '{light-color-scheme.background.theme}' },
-                        'inner-circle-background': { value: '{light-color-scheme.foreground.white}' }
+                        'outer-circle-background': { value: '{light.background.theme}' },
+                        'inner-circle-background': { value: '{light.foreground.white}' }
                     },
                     'checked-hover': {
-                        'outer-circle-border': { value: '{light-color-scheme.states.background.theme-hover}' },
-                        'outer-circle-background': { value: '{light-color-scheme.states.background.theme-hover}' },
-                        'inner-circle-background': { value: '{light-color-scheme.foreground.white}' }
+                        'outer-circle-border': { value: '{light.states.background.theme-hover}' },
+                        'outer-circle-background': { value: '{light.states.background.theme-hover}' },
+                        'inner-circle-background': { value: '{light.foreground.white}' }
                     },
                     'checked-disabled': {
-                        'outer-circle-border': { value: '{light-color-scheme.states.line.disabled}' },
-                        'outer-circle-background': { value: '{light-color-scheme.states.background.disabled}'},
-                        'inner-circle-background': { value: '{light-color-scheme.states.icon.disabled}'}
+                        'outer-circle-border': { value: '{light.states.line.disabled}' },
+                        'outer-circle-background': { value: '{light.states.background.disabled}'},
+                        'inner-circle-background': { value: '{light.states.icon.disabled}'}
                     },
                     focused: {
                         'outer-circle-border': { value: 'transparent' },
-                        'outer-circle-background': { value: '{light-color-scheme.background.bg}' },
+                        'outer-circle-background': { value: '{light.background.bg}' },
                         'inner-circle-background': { value: 'transparent' },
-                        'outer-circle-shadow': { value: '0 0 0 2px {light-color-scheme.states.line.focus-theme}'}
+                        'outer-circle-shadow': { value: '0 0 0 2px {light.states.line.focus-theme}'}
                     },
                     'checked-focused': {
                         'outer-circle-border': { value: 'transparent' },
-                        'outer-circle-background': { value: '{light-color-scheme.background.theme}' },
-                        'inner-circle-background': { value: '{light-color-scheme.foreground.white}' },
-                        'outer-circle-shadow': { value: '0 0 0 2px {light-color-scheme.states.line.focus-theme}'}
+                        'outer-circle-background': { value: '{light.background.theme}' },
+                        'inner-circle-background': { value: '{light.foreground.white}' },
+                        'outer-circle-shadow': { value: '0 0 0 2px {light.states.line.focus-theme}'}
                     },
                     'disabled': {
-                        'outer-circle-border': { value: '{light-color-scheme.states.line.disabled}' },
-                        'outer-circle-background': { value: '{light-color-scheme.states.background.disabled}'},
+                        'outer-circle-border': { value: '{light.states.line.disabled}' },
+                        'outer-circle-background': { value: '{light.states.background.disabled}'},
                         'inner-circle-background': { value: 'transparent'},
-                        caption: { value: '{light-color-scheme.states.icon.disabled}' }
+                        caption: { value: '{light.states.icon.disabled}' }
                     }
                 }
             },
             error: {
                 default: {
-                    'outer-circle-border': { value: '{light-color-scheme.line.error}' },
-                    'outer-circle-background': { value: '{light-color-scheme.background.error-less}'},
+                    'outer-circle-border': { value: '{light.line.error}' },
+                    'outer-circle-background': { value: '{light.background.error-less}'},
                     'inner-circle-background': { value: 'transparent'}
                 },
                 states: {
                     hover: {
-                        'outer-circle-border': { value: '{light-color-scheme.line.error}' },
-                        'outer-circle-background': { value: '{light-color-scheme.states.background.error-fade-hover}'},
+                        'outer-circle-border': { value: '{light.line.error}' },
+                        'outer-circle-background': { value: '{light.states.background.error-fade-hover}'},
                         'inner-circle-background': { value: 'transparent'}
                     },
                     checked: {
                         'outer-circle-border': { value: 'transparent' },
-                        'outer-circle-background': { value: '{light-color-scheme.background.error}'},
-                        'inner-circle-background': { value: '{light-color-scheme.icon.white}'}
+                        'outer-circle-background': { value: '{light.background.error}'},
+                        'inner-circle-background': { value: '{light.icon.white}'}
                     },
                     'checked-hover': {
                         'outer-circle-border': { value: 'transparent' },
-                        'outer-circle-background': { value: '{light-color-scheme.states.background.error-hover}'},
-                        'inner-circle-background': { value: '{light-color-scheme.icon.white}'}
+                        'outer-circle-background': { value: '{light.states.background.error-hover}'},
+                        'inner-circle-background': { value: '{light.icon.white}'}
                     },
                     'checked-disabled': {
-                        'outer-circle-border': { value: '{light-color-scheme.states.line.disabled}' },
-                        'outer-circle-background': { value: '{light-color-scheme.states.background.disabled}'},
-                        'inner-circle-background': { value: '{light-color-scheme.states.icon.disabled}'}
+                        'outer-circle-border': { value: '{light.states.line.disabled}' },
+                        'outer-circle-background': { value: '{light.states.background.disabled}'},
+                        'inner-circle-background': { value: '{light.states.icon.disabled}'}
                     },
                     focused: {
                         'outer-circle-border': { value: 'transparent' },
-                        'outer-circle-background': { value: '{light-color-scheme.states.background.error-less}'},
+                        'outer-circle-background': { value: '{light.states.background.error-less}'},
                         'inner-circle-background': { value: 'transparent'},
-                         'outer-circle-shadow': { value: '0 0 0 2px {light-color-scheme.states.line.focus-error}'}
+                         'outer-circle-shadow': { value: '0 0 0 2px {light.states.line.focus-error}'}
                     },
                     'checked-focused': {
                         'outer-circle-border': { value: 'transparent' },
-                        'outer-circle-background': { value: '{light-color-scheme.background.error}'},
-                        'inner-circle-background': { value: '{light-color-scheme.icon.white}'},
-                        'outer-circle-shadow': { value: '0 0 0 2px {light-color-scheme.states.line.focus-error}'}
+                        'outer-circle-background': { value: '{light.background.error}'},
+                        'inner-circle-background': { value: '{light.icon.white}'},
+                        'outer-circle-shadow': { value: '0 0 0 2px {light.states.line.focus-error}'}
                     },
                     disabled: {
-                        'outer-circle-border': { value: '{light-color-scheme.states.line.disabled}' },
-                        'outer-circle-background': { value: '{light-color-scheme.states.background.disabled}'},
+                        'outer-circle-border': { value: '{light.states.line.disabled}' },
+                        'outer-circle-background': { value: '{light.states.background.disabled}'},
                         'inner-circle-background': { value: 'transparent'}
                     }
                 }
             }
         },
-        'dark-color-scheme': {
+        dark: {
             theme: {
                 default: {
-                    'outer-circle-border': { value: '{dark-color-scheme.line.contrast-fade}' },
-                    'outer-circle-background': { value: '{dark-color-scheme.background.bg}' },
+                    'outer-circle-border': { value: '{dark.line.contrast-fade}' },
+                    'outer-circle-background': { value: '{dark.background.bg}' },
                     'inner-circle-background': { value: 'transparent' },
-                    caption: { value: '{dark-color-scheme.foreground.contrast-secondary}' }
+                    caption: { value: '{dark.foreground.contrast-secondary}' }
                 },
 
                 states: {
                     hover: {
-                        'outer-circle-border': { value: '{dark-color-scheme.line.contrast-fade}' },
-                        'outer-circle-background': { value: '{dark-color-scheme.states.background.transparent-hover}' },
+                        'outer-circle-border': { value: '{dark.line.contrast-fade}' },
+                        'outer-circle-background': { value: '{dark.states.background.transparent-hover}' },
                         'inner-circle-background': { value: 'transparent' }
                     },
                     checked: {
                         'outer-circle-border': { value: 'transparent' },
-                        'outer-circle-background': { value: '{dark-color-scheme.background.theme}' },
-                        'inner-circle-background': { value: '{dark-color-scheme.foreground.white}' }
+                        'outer-circle-background': { value: '{dark.background.theme}' },
+                        'inner-circle-background': { value: '{dark.foreground.white}' }
                     },
                     'checked-hover': {
-                        'outer-circle-border': { value: '{dark-color-scheme.states.background.theme-hover}' },
-                        'outer-circle-background': { value: '{dark-color-scheme.states.background.theme-hover}' },
-                        'inner-circle-background': { value: '{dark-color-scheme.foreground.white}' }
+                        'outer-circle-border': { value: '{dark.states.background.theme-hover}' },
+                        'outer-circle-background': { value: '{dark.states.background.theme-hover}' },
+                        'inner-circle-background': { value: '{dark.foreground.white}' }
                     },
                     'checked-disabled': {
-                        'outer-circle-border': { value: '{dark-color-scheme.states.line.disabled}' },
-                        'outer-circle-background': { value: '{dark-color-scheme.states.background.disabled}'},
-                        'inner-circle-background': { value: '{dark-color-scheme.states.icon.disabled}'}
+                        'outer-circle-border': { value: '{dark.states.line.disabled}' },
+                        'outer-circle-background': { value: '{dark.states.background.disabled}'},
+                        'inner-circle-background': { value: '{dark.states.icon.disabled}'}
                     },
                     focused: {
                         'outer-circle-border': { value: 'transparent' },
-                        'outer-circle-background': { value: '{dark-color-scheme.background.bg}' },
+                        'outer-circle-background': { value: '{dark.background.bg}' },
                         'inner-circle-background': { value: 'transparent' },
-                        'outer-circle-shadow': { value: '0 0 0 2px {dark-color-scheme.states.line.focus-theme}'}
+                        'outer-circle-shadow': { value: '0 0 0 2px {dark.states.line.focus-theme}'}
                     },
                     'checked-focused': {
                         'outer-circle-border': { value: 'transparent' },
-                        'outer-circle-background': { value: '{dark-color-scheme.background.theme}' },
-                        'inner-circle-background': { value: '{dark-color-scheme.foreground.white}' },
-                        'outer-circle-shadow': { value: '0 0 0 2px {dark-color-scheme.states.line.focus-theme}'}
+                        'outer-circle-background': { value: '{dark.background.theme}' },
+                        'inner-circle-background': { value: '{dark.foreground.white}' },
+                        'outer-circle-shadow': { value: '0 0 0 2px {dark.states.line.focus-theme}'}
                     },
                     'disabled': {
-                        'outer-circle-border': { value: '{dark-color-scheme.states.line.disabled}' },
-                        'outer-circle-background': { value: '{dark-color-scheme.states.background.disabled}'},
+                        'outer-circle-border': { value: '{dark.states.line.disabled}' },
+                        'outer-circle-background': { value: '{dark.states.background.disabled}'},
                         'inner-circle-background': { value: 'transparent'},
-                        caption: { value: '{dark-color-scheme.states.icon.disabled}' }
+                        caption: { value: '{dark.states.icon.disabled}' }
                     }
                 }
             },
             error: {
                 default: {
-                    'outer-circle-border': { value: '{dark-color-scheme.line.error}' },
-                    'outer-circle-background': { value: '{dark-color-scheme.background.error-less}'},
+                    'outer-circle-border': { value: '{dark.line.error}' },
+                    'outer-circle-background': { value: '{dark.background.error-less}'},
                     'inner-circle-background': { value: 'transparent'}
                 },
                 states: {
                     hover: {
-                        'outer-circle-border': { value: '{dark-color-scheme.line.error}' },
-                        'outer-circle-background': { value: '{dark-color-scheme.states.background.error-fade-hover}'},
+                        'outer-circle-border': { value: '{dark.line.error}' },
+                        'outer-circle-background': { value: '{dark.states.background.error-fade-hover}'},
                         'inner-circle-background': { value: 'transparent'}
                     },
                     checked: {
                         'outer-circle-border': { value: 'transparent' },
-                        'outer-circle-background': { value: '{dark-color-scheme.background.error}'},
-                        'inner-circle-background': { value: '{dark-color-scheme.icon.white}'}
+                        'outer-circle-background': { value: '{dark.background.error}'},
+                        'inner-circle-background': { value: '{dark.icon.white}'}
                     },
                     'checked-hover': {
                         'outer-circle-border': { value: 'transparent' },
-                        'outer-circle-background': { value: '{dark-color-scheme.states.background.error-hover}'},
-                        'inner-circle-background': { value: '{dark-color-scheme.icon.white}'}
+                        'outer-circle-background': { value: '{dark.states.background.error-hover}'},
+                        'inner-circle-background': { value: '{dark.icon.white}'}
                     },
                     'checked-disabled': {
-                        'outer-circle-border': { value: '{dark-color-scheme.states.line.disabled}' },
-                        'outer-circle-background': { value: '{dark-color-scheme.states.background.disabled}'},
-                        'inner-circle-background': { value: '{dark-color-scheme.states.icon.disabled}'}
+                        'outer-circle-border': { value: '{dark.states.line.disabled}' },
+                        'outer-circle-background': { value: '{dark.states.background.disabled}'},
+                        'inner-circle-background': { value: '{dark.states.icon.disabled}'}
                     },
                     focused: {
                         'outer-circle-border': { value: 'transparent' },
-                        'outer-circle-background': { value: '{dark-color-scheme.states.background.error-less}'},
+                        'outer-circle-background': { value: '{dark.states.background.error-less}'},
                         'inner-circle-background': { value: 'transparent'},
-                         'outer-circle-shadow': { value: '0 0 0 2px {dark-color-scheme.states.line.focus-error}'}
+                         'outer-circle-shadow': { value: '0 0 0 2px {dark.states.line.focus-error}'}
                     },
                     'checked-focused': {
                         'outer-circle-border': { value: 'transparent' },
-                        'outer-circle-background': { value: '{dark-color-scheme.background.error}'},
-                        'inner-circle-background': { value: '{dark-color-scheme.icon.white}'},
-                        'outer-circle-shadow': { value: '0 0 0 2px {dark-color-scheme.states.line.focus-error}'}
+                        'outer-circle-background': { value: '{dark.background.error}'},
+                        'inner-circle-background': { value: '{dark.icon.white}'},
+                        'outer-circle-shadow': { value: '0 0 0 2px {dark.states.line.focus-error}'}
                     },
                     disabled: {
-                        'outer-circle-border': { value: '{dark-color-scheme.states.line.disabled}' },
-                        'outer-circle-background': { value: '{dark-color-scheme.states.background.disabled}'},
+                        'outer-circle-border': { value: '{dark.states.line.disabled}' },
+                        'outer-circle-background': { value: '{dark.states.background.disabled}'},
                         'inner-circle-background': { value: 'transparent'}
                     }
                 }

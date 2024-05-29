@@ -41,70 +41,70 @@
             header: { value: 'subheading'},
             subheading: { value: 'caps-compact'},
         },
-        'light-color-scheme': {
+        light: {
             default: {
                 container: {
                     background: { value: 'transparent'},
                 },
                 text: {
-                    color: { value: '{light-color-scheme.foreground.contrast}' }
+                    color: { value: '{light.foreground.contrast}' }
                 },
                 icon: {
-                    color: { value: '{light-color-scheme.icon.contrast}' }
+                    color: { value: '{light.icon.contrast}' }
                 },
                 'icon-button': {
-                    color: { value: '{light-color-scheme.icon.contrast-fade}' }
+                    color: { value: '{light.icon.contrast-fade}' }
                 },
                 caption: {
-                    color: { value: '{light-color-scheme.foreground.contrast-secondary}' }
+                    color: { value: '{light.foreground.contrast-secondary}' }
                 }
             },
             states: {
                 hover: {
                     container: {
-                        background: { value: '{light-color-scheme.states.background.transparent-hover}'},
+                        background: { value: '{light.states.background.transparent-hover}'},
                     },
                     text: {
-                        color: { value: '{light-color-scheme.foreground.contrast}' }
+                        color: { value: '{light.foreground.contrast}' }
                     },
                     icon: {
-                        color: { value: '{light-color-scheme.icon.contrast}' }
+                        color: { value: '{light.icon.contrast}' }
                     },
                     'icon-button': {
-                        color: { value: '{light-color-scheme.icon.contrast-fade}' }
+                        color: { value: '{light.icon.contrast-fade}' }
                     }
                 },
                 selected: {
                     container: {
-                        background: { value: '{light-color-scheme.background.theme-fade}'},
+                        background: { value: '{light.background.theme-fade}'},
                     },
                     text: {
-                        color: { value: '{light-color-scheme.foreground.contrast}' }
+                        color: { value: '{light.foreground.contrast}' }
                     },
                     icon: {
-                        color: { value: '{light-color-scheme.icon.contrast}' }
+                        color: { value: '{light.icon.contrast}' }
                     },
                     'icon-button': {
-                        color: { value: '{light-color-scheme.icon.contrast-fade}' }
+                        color: { value: '{light.icon.contrast-fade}' }
                     }
                 },
                 'selected-hover': {
                     container: {
-                        background: { value: '{light-color-scheme.states.background.theme-fade-hover}'},
+                        background: { value: '{light.states.background.theme-fade-hover}'},
                     },
                     text: {
-                        color: { value: '{light-color-scheme.foreground.contrast}' }
+                        color: { value: '{light.foreground.contrast}' }
                     },
                     icon: {
-                        color: { value: '{light-color-scheme.icon.contrast}' }
+                        color: { value: '{light.icon.contrast}' }
                     },
                     'icon-button': {
-                        color: { value: '{light-color-scheme.icon.contrast-fade}' }
+                        color: { value: '{light.icon.contrast-fade}' }
                     }
                 },
                 focused: {
                     'focus-outline': {
-                        color: { value: '{light-color-scheme.states.line.focus-theme}'}
+                        color: { value: '{light.states.line.focus-theme}'}
                     }
                 },
                 disabled: {
@@ -112,84 +112,84 @@
                         background: { value: 'transparent'},
                     },
                     text: {
-                        color: { value: '{light-color-scheme.states.foreground.disabled}' }
+                        color: { value: '{light.states.foreground.disabled}' }
                     },
                     icon: {
-                        color: { value: '{light-color-scheme.states.icon.disabled}' }
+                        color: { value: '{light.states.icon.disabled}' }
                     },
                     'icon-button': {
-                        color: { value: '{light-color-scheme.states.icon.disabled}' }
+                        color: { value: '{light.states.icon.disabled}' }
                     },
                     caption: {
-                        color: { value: '{light-color-scheme.states.foreground.disabled}' }
+                        color: { value: '{light.states.foreground.disabled}' }
                     }
                 }
             }
         },
-        'dark-color-scheme': {
+        dark: {
             default: {
                 container: {
                     background: { value: 'transparent'},
                 },
                 text: {
-                    color: { value: '{dark-color-scheme.foreground.contrast}' }
+                    color: { value: '{dark.foreground.contrast}' }
                 },
                 icon: {
-                    color: { value: '{dark-color-scheme.icon.contrast}' }
+                    color: { value: '{dark.icon.contrast}' }
                 },
                 'icon-button': {
-                    color: { value: '{dark-color-scheme.icon.contrast-fade}' }
+                    color: { value: '{dark.icon.contrast-fade}' }
                 },
                 caption: {
-                    color: { value: '{dark-color-scheme.foreground.contrast-secondary}' }
+                    color: { value: '{dark.foreground.contrast-secondary}' }
                 }
             },
             states: {
                 hover: {
                     container: {
-                        background: { value: '{dark-color-scheme.states.background.transparent-hover}'},
+                        background: { value: '{dark.states.background.transparent-hover}'},
                     },
                     text: {
-                        color: { value: '{dark-color-scheme.foreground.contrast}' }
+                        color: { value: '{dark.foreground.contrast}' }
                     },
                     icon: {
-                        color: { value: '{dark-color-scheme.icon.contrast}' }
+                        color: { value: '{dark.icon.contrast}' }
                     },
                     'icon-button': {
-                        color: { value: '{dark-color-scheme.icon.contrast-fade}' }
+                        color: { value: '{dark.icon.contrast-fade}' }
                     }
                 },
                 selected: {
                     container: {
-                        background: { value: '{dark-color-scheme.background.theme-fade}'},
+                        background: { value: '{dark.background.theme-fade}'},
                     },
                     text: {
-                        color: { value: '{dark-color-scheme.foreground.contrast}' }
+                        color: { value: '{dark.foreground.contrast}' }
                     },
                     icon: {
-                        color: { value: '{dark-color-scheme.icon.contrast}' }
+                        color: { value: '{dark.icon.contrast}' }
                     },
                     'icon-button': {
-                        color: { value: '{dark-color-scheme.icon.contrast-fade}' }
+                        color: { value: '{dark.icon.contrast-fade}' }
                     }
                 },
                 'selected-hover': {
                     container: {
-                        background: { value: '{dark-color-scheme.states.background.theme-fade-hover}'},
+                        background: { value: '{dark.states.background.theme-fade-hover}'},
                     },
                     text: {
-                        color: { value: '{dark-color-scheme.foreground.contrast}' }
+                        color: { value: '{dark.foreground.contrast}' }
                     },
                     icon: {
-                        color: { value: '{dark-color-scheme.icon.contrast}' }
+                        color: { value: '{dark.icon.contrast}' }
                     },
                     'icon-button': {
-                        color: { value: '{dark-color-scheme.icon.contrast-fade}' }
+                        color: { value: '{dark.icon.contrast-fade}' }
                     }
                 },
                 focused: {
                     'focus-outline': {
-                        color: { value: '{dark-color-scheme.states.line.focus-theme}'}
+                        color: { value: '{dark.states.line.focus-theme}'}
                     }
                 },
                 disabled: {
@@ -197,16 +197,16 @@
                         background: { value: 'transparent'},
                     },
                     text: {
-                        color: { value: '{dark-color-scheme.states.foreground.disabled}' }
+                        color: { value: '{dark.states.foreground.disabled}' }
                     },
                     icon: {
-                        color: { value: '{dark-color-scheme.states.icon.disabled}' }
+                        color: { value: '{dark.states.icon.disabled}' }
                     },
                     'icon-button': {
-                        color: { value: '{dark-color-scheme.states.icon.disabled}' }
+                        color: { value: '{dark.states.icon.disabled}' }
                     },
                     caption: {
-                        color: { value: '{dark-color-scheme.states.foreground.disabled}' }
+                        color: { value: '{dark.states.foreground.disabled}' }
                     }
                 }
             }

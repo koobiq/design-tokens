@@ -16,19 +16,19 @@
                 }
             }
         },
-        'light-color-scheme': {
+        light: {
             'thumb': {
                 default: {
-                    background: { value: '{light-color-scheme.icon.contrast-fade}' }
+                    background: { value: '{light.icon.contrast-fade}' }
                 },
                 hover: {
-                    background: { value: '{light-color-scheme.states.icon.contrast-fade-hover}' }
+                    background: { value: '{light.states.icon.contrast-fade-hover}' }
                 },
                 active: {
-                    background: { value: '{light-color-scheme.states.icon.contrast-fade-active}' }
+                    background: { value: '{light.states.icon.contrast-fade-active}' }
                 },
                 disabled: {
-                    background: { value: '{light-color-scheme.states.icon.disabled}' }
+                    background: { value: '{light.states.icon.disabled}' }
                 }
             },
             track: {
@@ -46,19 +46,19 @@
                 }
             }
         },
-        'dark-color-scheme': {
+        dark: {
             'thumb': {
                 default: {
-                    background: { value: '{dark-color-scheme.icon.contrast-fade}' }
+                    background: { value: '{dark.icon.contrast-fade}' }
                 },
                 hover: {
-                    background: { value: '{dark-color-scheme.states.icon.contrast-fade-hover}' }
+                    background: { value: '{dark.states.icon.contrast-fade-hover}' }
                 },
                 active: {
-                    background: { value: '{dark-color-scheme.states.icon.contrast-fade-active}' }
+                    background: { value: '{dark.states.icon.contrast-fade-active}' }
                 },
                 disabled: {
-                    background: { value: '{dark-color-scheme.states.icon.disabled}' }
+                    background: { value: '{dark.states.icon.disabled}' }
                 }
             },
             track: {

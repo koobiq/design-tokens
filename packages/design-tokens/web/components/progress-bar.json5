@@ -16,30 +16,30 @@
         },
         font: {
             label: { value: 'text-normal'},
-            caption: { value: 'text-compact-strong' } 
+            caption: { value: 'text-compact-strong' }
         },
-        'light-color-scheme': {
+        light: {
             bar: {
-                background: { value: '{light-color-scheme.background.contrast-fade}' },
-                foreground: { value: '{light-color-scheme.icon.theme}'}
+                background: { value: '{light.background.contrast-fade}' },
+                foreground: { value: '{light.icon.theme}'}
             },
             text: {
-                color: { value: '{light-color-scheme.foreground.contrast}' }
+                color: { value: '{light.foreground.contrast}' }
             },
             caption: {
-                color: { value: '{light-color-scheme.foreground.contrast-secondary}' }
+                color: { value: '{light.foreground.contrast-secondary}' }
             }
         },
-        'dark-color-scheme': {
+        dark: {
             bar: {
-                background: { value: '{dark-color-scheme.background.contrast-fade}' },
-                foreground: { value: '{dark-color-scheme.icon.theme}'}
+                background: { value: '{dark.background.contrast-fade}' },
+                foreground: { value: '{dark.icon.theme}'}
             },
             text: {
-                color: { value: '{dark-color-scheme.foreground.contrast}' }
+                color: { value: '{dark.foreground.contrast}' }
             },
             caption: {
-                color: { value: '{dark-color-scheme.foreground.contrast-secondary}' }
+                color: { value: '{dark.foreground.contrast-secondary}' }
             }
         },
     }

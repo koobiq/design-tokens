@@ -32,106 +32,106 @@
         font: {
             item: { value: 'text-normal-strong' }
         },
-        'light-color-scheme': {
+        light: {
             container: {
-                background: { value: '{light-color-scheme.background.contrast-fade}'}
+                background: { value: '{light.background.contrast-fade}'}
             },
             item: {
                 default: {
-                    background: { value: '{light-color-scheme.background.contrast-fade}' },
-                    text: { value: '{light-color-scheme.foreground.contrast}' },
-                    icon: { value: '{light-color-scheme.icon.contrast-fade}' }
+                    background: { value: '{light.background.contrast-fade}' },
+                    text: { value: '{light.foreground.contrast}' },
+                    icon: { value: '{light.icon.contrast-fade}' }
                 },
                 states: {
                     hover: {
-                        background: { value: '{light-color-scheme.states.background.contrast-fade-hover}' },
-                        text: { value: '{light-color-scheme.foreground.contrast}' },
-                        icon: { value: '{light-color-scheme.icon.contrast-fade}' }
+                        background: { value: '{light.states.background.contrast-fade-hover}' },
+                        text: { value: '{light.foreground.contrast}' },
+                        icon: { value: '{light.icon.contrast-fade}' }
                     },
                     active: {
-                        background: { value: '{light-color-scheme.states.background.contrast-fade-active}' },
-                        text: { value: '{light-color-scheme.foreground.contrast}' },
-                        icon: { value: '{light-color-scheme.icon.contrast-fade}' }
+                        background: { value: '{light.states.background.contrast-fade-active}' },
+                        text: { value: '{light.foreground.contrast}' },
+                        icon: { value: '{light.icon.contrast-fade}' }
                     },
                     selected: {
-                        background: { value: '{light-color-scheme.background.card}' },
-                        text: { value: '{light-color-scheme.foreground.contrast}' },
-                        icon: { value: '{light-color-scheme.icon.contrast-fade}' }
+                        background: { value: '{light.background.card}' },
+                        text: { value: '{light.foreground.contrast}' },
+                        icon: { value: '{light.icon.contrast-fade}' }
                     },
                     'selected-hover': {
-                        background: { value: '{light-color-scheme.states.background.transparent-hover}' },
-                        text: { value: '{light-color-scheme.foreground.contrast}' },
-                        icon: { value: '{light-color-scheme.icon.contrast-fade}' }
+                        background: { value: '{light.states.background.transparent-hover}' },
+                        text: { value: '{light.foreground.contrast}' },
+                        icon: { value: '{light.icon.contrast-fade}' }
                     },
                     'selected-active': {
-                        background: { value: '{light-color-scheme.states.background.transparent-active}' },
-                        text: { value: '{light-color-scheme.foreground.contrast}' },
-                        icon: { value: '{light-color-scheme.icon.contrast-fade}' }
+                        background: { value: '{light.states.background.transparent-active}' },
+                        text: { value: '{light.foreground.contrast}' },
+                        icon: { value: '{light.icon.contrast-fade}' }
                     },
                     'selected-disabled': {
-                        background: { value: '{light-color-scheme.states.background.disabled}' },
-                        text: { value: '{light-color-scheme.states.foreground.disabled}' },
-                        icon: { value: '{light-color-scheme.states.icon.disabled}' }
+                        background: { value: '{light.states.background.disabled}' },
+                        text: { value: '{light.states.foreground.disabled}' },
+                        icon: { value: '{light.states.icon.disabled}' }
                     },
                     disabled: {
                         background: { value: 'none' },
-                        text: { value: '{light-color-scheme.states.foreground.disabled}' },
-                        icon: { value: '{light-color-scheme.states.icon.disabled}' }
+                        text: { value: '{light.states.foreground.disabled}' },
+                        icon: { value: '{light.states.icon.disabled}' }
                     },
                     focused: {
-                        outline: { value: '{light-color-scheme.states.line.focus-theme}' }
+                        outline: { value: '{light.states.line.focus-theme}' }
                     }
                 }
             }
         },
-        'dark-color-scheme': {
+        dark: {
             container: {
-                background: { value: '{dark-color-scheme.background.contrast-fade}'}
+                background: { value: '{dark.background.contrast-fade}'}
             },
             item: {
                 default: {
-                    background: { value: '{dark-color-scheme.background.contrast-fade}' },
-                    text: { value: '{dark-color-scheme.foreground.contrast}' },
-                    icon: { value: '{dark-color-scheme.icon.contrast-fade}' }
+                    background: { value: '{dark.background.contrast-fade}' },
+                    text: { value: '{dark.foreground.contrast}' },
+                    icon: { value: '{dark.icon.contrast-fade}' }
                 },
                 states: {
                     hover: {
-                        background: { value: '{dark-color-scheme.states.background.contrast-fade-hover}' },
-                        text: { value: '{dark-color-scheme.foreground.contrast}' },
-                        icon: { value: '{dark-color-scheme.icon.contrast-fade}' }
+                        background: { value: '{dark.states.background.contrast-fade-hover}' },
+                        text: { value: '{dark.foreground.contrast}' },
+                        icon: { value: '{dark.icon.contrast-fade}' }
                     },
                     active: {
-                        background: { value: '{dark-color-scheme.states.background.contrast-fade-active}' },
-                        text: { value: '{dark-color-scheme.foreground.contrast}' },
-                        icon: { value: '{dark-color-scheme.icon.contrast-fade}' }
+                        background: { value: '{dark.states.background.contrast-fade-active}' },
+                        text: { value: '{dark.foreground.contrast}' },
+                        icon: { value: '{dark.icon.contrast-fade}' }
                     },
                     selected: {
-                        background: { value: '{dark-color-scheme.background.card}' },
-                        text: { value: '{dark-color-scheme.foreground.contrast}' },
-                        icon: { value: '{dark-color-scheme.icon.contrast-fade}' }
+                        background: { value: '{dark.background.card}' },
+                        text: { value: '{dark.foreground.contrast}' },
+                        icon: { value: '{dark.icon.contrast-fade}' }
                     },
                     'selected-hover': {
-                        background: { value: '{dark-color-scheme.states.background.transparent-hover}' },
-                        text: { value: '{dark-color-scheme.foreground.contrast}' },
-                        icon: { value: '{dark-color-scheme.icon.contrast-fade}' }
+                        background: { value: '{dark.states.background.transparent-hover}' },
+                        text: { value: '{dark.foreground.contrast}' },
+                        icon: { value: '{dark.icon.contrast-fade}' }
                     },
                     'selected-active': {
-                        background: { value: '{dark-color-scheme.states.background.transparent-active}' },
-                        text: { value: '{dark-color-scheme.foreground.contrast}' },
-                        icon: { value: '{dark-color-scheme.icon.contrast-fade}' }
+                        background: { value: '{dark.states.background.transparent-active}' },
+                        text: { value: '{dark.foreground.contrast}' },
+                        icon: { value: '{dark.icon.contrast-fade}' }
                     },
                     'selected-disabled': {
-                        background: { value: '{dark-color-scheme.states.background.disabled}' },
-                        text: { value: '{dark-color-scheme.states.foreground.disabled}' },
-                        icon: { value: '{dark-color-scheme.states.icon.disabled}' }
+                        background: { value: '{dark.states.background.disabled}' },
+                        text: { value: '{dark.states.foreground.disabled}' },
+                        icon: { value: '{dark.states.icon.disabled}' }
                     },
                     disabled: {
                         background: { value: 'none' },
-                        text: { value: '{dark-color-scheme.states.foreground.disabled}' },
-                        icon: { value: '{dark-color-scheme.states.icon.disabled}' }
+                        text: { value: '{dark.states.foreground.disabled}' },
+                        icon: { value: '{dark.states.icon.disabled}' }
                     },
                     focused: {
-                        outline: { value: '{dark-color-scheme.states.line.focus-theme}' }
+                        outline: { value: '{dark.states.line.focus-theme}' }
                     }
                 }
             }
