@@ -1340,7 +1340,7 @@ __metadata:
     husky: "npm:^9.0.11"
     rimraf: "npm:^5.0.5"
     rollup: "npm:^4.17.2"
-    style-dictionary: "npm:^3.7.1"
+    style-dictionary: "npm:^3.9.2"
   languageName: unknown
   linkType: soft
 
@@ -3525,7 +3525,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"style-dictionary@npm:^3.7.1":
+"style-dictionary@npm:^3.9.2":
   version: 3.9.2
   resolution: "style-dictionary@npm:3.9.2"
   dependencies:
