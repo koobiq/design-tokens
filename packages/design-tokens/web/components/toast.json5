@@ -2,75 +2,132 @@
     toast: {
         size: {
             container: {
-                'min-height': { value: '48px'},
-                'width': { value: '360px'},
-                'content-gap': {
-                    horizontal: { value: '{size.m}' },
-                    vertical: { value: '{size.xxs}' }
-                },
+                width: { value: '360px'},
                 border: {
-                    radius: { value: '{size.m}'}
+                    radius: { value: '{size.s}'}
                 },
                 padding: {
-                    vertical: { value: '{size.l}' },
-                    horizontal: { value: '{size.xl}' }
+                    left: { value: '{size.m}' },
+                    right: { value: '{size.s}' },
                 }
             },
-            'close-button': {
-                // отрицательный сдвиг относительно container
+            // центральная область, в которой расположены текст и кнопки
+            content: {
+                padding: {
+                    top: { value: '{size.l}' },
+                    bottom: { value: '{size.l}' }
+                }
+            },
+            caption: {
+                padding: {
+                    bottom: { value: '{size.xxs}' }
+                }
+            },
+            icon: {
+                //обертка вокруг иконик, например захотим поместить иконку в кружок
+                // сейчас
+                width: { value: '{size.l}' },
+                height: { value: '{size.l}' },
                 margin: {
-                    top: { value: '-{size.s}' },
-                    right: { value: '-{size.m}' }
+                    right: { value: '{size.s}' },
+                },
+                'border-radius': { value: '50%' }
+            },
+            'close-button': {
+                margin: {
+                    top: { value: '{size.m}' },
+                    right: { value: '{size.xxs}' }
                 }
             },
             'button-stack': {
                 padding: {
-                    top: { value: '{size.m}' }
+                    top: { value: '{size.s}' }
                 },
                 'content-gap': {
-                    horizontal: { value: '{size.xxs}'}
+                    horizontal: { value: '{size.m}'}
                 }
             }
         },
         font: {
-           title: { value: 'subheading' },
-           text: { value: 'text-normal' }
+            title: { value: 'text-normal' },
+            text: { value: 'text-normal' }
         },
-        light: {
+        'light': {
             contrast: {
                 container: {
                     background: { value: '{light.background.card}' },
                     title: { value: '{light.foreground.contrast}' },
-                    text: { value: '{light.foreground.contrast}' },
-                    'box-shadow': { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.16)'}
+                    text: { value: '{light.foreground.contrast-secondary}' },
+                    shadow: { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.16)'}
                 }
             },
             error: {
                 container: {
                     background: { value: '{light.background.card}' },
                     title: { value: '{light.foreground.contrast}' },
-                    text: { value: '{light.foreground.contrast}' },
-                    'box-shadow': { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.16)'}
+                    text: { value: '{light.foreground.contrast-secondary}' },
+                    shadow: { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.16)'}
+                }
+            },
+            warning: {
+                container: {
+                    background: { value: '{light.background.card}' },
+                    title: { value: '{light.foreground.contrast}' },
+                    text: { value: '{light.foreground.contrast-secondary}' },
+                    shadow: { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.16)'}
+                }
+            },
+            success: {
+                container: {
+                    background: { value: '{light.background.card}' },
+                    title: { value: '{light.foreground.contrast}' },
+                    text: { value: '{light.foreground.contrast-secondary}' },
+                    shadow: { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.16)'}
                 }
             }
         },
-        dark: {
+        'dark': {
             contrast: {
                 container: {
                     background: { value: '{dark.background.card}' },
                     title: { value: '{dark.foreground.contrast}' },
-                    text: { value: '{dark.foreground.contrast}' },
-                    'box-shadow': { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.50)'}
+                    text: { value: '{dark.foreground.contrast-secondary}' },
+                    shadow: { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.16)'}
                 }
             },
             error: {
                 container: {
                     background: { value: '{dark.background.card}' },
                     title: { value: '{dark.foreground.contrast}' },
-                    text: { value: '{dark.foreground.contrast}' },
-                    'box-shadow': { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.50)'}
+                    text: { value: '{dark.foreground.contrast-secondary}' },
+                    shadow: { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.16)'}
+                }
+            },
+            warning: {
+                container: {
+                    background: { value: '{dark.background.card}' },
+                    title: { value: '{dark.foreground.contrast}' },
+                    text: { value: '{dark.foreground.contrast-secondary}' },
+                    shadow: { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.16)'}
+                }
+            },
+            success: {
+                container: {
+                    background: { value: '{dark.background.card}' },
+                    title: { value: '{dark.foreground.contrast}' },
+                    text: { value: '{dark.foreground.contrast-secondary}' },
+                    shadow: { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.16)'}
                 }
             }
+        }
+    },
+    'toast-stack': {
+        size: {
+            margin: {
+                top: { value: '{size.m}' },
+                right: { value: '{size.m}' }
+            },
+            gap: { value: '{size.s}' }
         }
     }
 }
