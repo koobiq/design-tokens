@@ -1,3 +1,9 @@
+# 3.0.0-rc.4 (2024-05-30)
+
+### Design Tokens
+
+ * feature  **toast:** toast v2 tokens ([#3](https://github.com/koobiq/design-tokens/issues/3)) ([d303e1a](https://github.com/koobiq/design-tokens/commit/d303e1a730bb5ccff71dcd00e14553fa8a99f8fe))
+
 # 3.0.0-rc.3 "Dour Todas" (2024-05-29)
 
 ### Design Tokens
