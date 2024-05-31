@@ -1,3 +1,7 @@
+# 3.0.0-rc.5 (2024-05-31)
+
+ * feature  **icon-item:** Warning state ([89f3150b](https://github.com/koobiq/design-tokens/commit/89f3150b5a2cae3952936d2824dc99d583822c1d))
+
 # 3.0.0-rc.4 (2024-05-30)
 
 ### Design Tokens
