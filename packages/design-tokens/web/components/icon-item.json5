@@ -18,8 +18,8 @@
                 background: { value: '{light.background.error}' },
             },
             warning: {
-                color: { value: '{light-color-scheme.foreground.white}' },
-                background: { value: '{light-color-scheme.background.warning}' },
+                color: { value: '{light.foreground.white}' },
+                background: { value: '{light.background.warning}' },
             },
             success: {
                 color: { value: '{light.foreground.white}' },
@@ -44,8 +44,8 @@
                 background: { value: '{dark.background.error}' },
             },
             warning: {
-                color: { value: '{dark-color-scheme.foreground.white}' },
-                background: { value: '{dark-color-scheme.background.warning}' },
+                color: { value: '{dark.foreground.white}' },
+                background: { value: '{dark.background.warning}' },
             },
             success: {
                 color: { value: '{dark.foreground.white}' },
