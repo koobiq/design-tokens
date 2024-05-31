@@ -3,11 +3,11 @@
         light: {
             theme: {
                 color: { value: '{light.foreground.white}' },
-                background: { value: '{light.icon.theme}' },
+                background: { value: '{light.background.theme}' },
             },
             contrast: {
                 color: { value: '{light.foreground.white}' },
-                background: { value: '{light.icon.contrast}' },
+                background: { value: '{light.background.contrast}' },
             },
             'fade-contrast': {
                 color: { value: '{light.foreground.contrast}' },
@@ -15,21 +15,25 @@
             },
             error: {
                 color: { value: '{light.foreground.white}' },
-                background: { value: '{light.icon.error}' },
+                background: { value: '{light.background.error}' },
+            },
+            warning: {
+                color: { value: '{light.foreground.white}' },
+                background: { value: '{light.background.warning}' },
             },
             success: {
                 color: { value: '{light.foreground.white}' },
-                background: { value: '{light.icon.success}' },
+                background: { value: '{light.background.success}' },
             }
         },
         dark: {
             theme: {
                 color: { value: '{dark.foreground.white}' },
-                background: { value: '{dark.icon.theme}' },
+                background: { value: '{dark.background.theme}' },
             },
             contrast: {
                 color: { value: '{dark.icon.on-contrast}' },
-                background: { value: '{dark.icon.contrast}' },
+                background: { value: '{dark.background.contrast}' },
             },
             'fade-contrast': {
                 color: { value: '{dark.foreground.contrast}' },
@@ -37,11 +41,15 @@
             },
             error: {
                 color: { value: '{dark.foreground.white}' },
-                background: { value: '{dark.icon.error}' },
+                background: { value: '{dark.background.error}' },
+            },
+            warning: {
+                color: { value: '{dark.foreground.white}' },
+                background: { value: '{dark.background.warning}' },
             },
             success: {
                 color: { value: '{dark.foreground.white}' },
-                background: { value: '{dark.icon.success}' },
+                background: { value: '{dark.background.success}' },
             }
         },
         size: {
