@@ -82,7 +82,7 @@
                 content: {
                     padding: {
                         top: { value: '{size.m}' },
-                        right: { value: '0' },
+                        right: { value: '{size.s}' },
                         bottom: { value: '{size.m}' },
                         left: { value: '0' },
                     }
