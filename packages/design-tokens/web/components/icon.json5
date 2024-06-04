@@ -16,39 +16,8 @@
             success: {
                 color: { value: '{light.icon.success}' }
             },
-
-            // удалить, когда будут сделаны зависящие компоненты
-            primary: {
-                default: { value: '{light.icon.theme}' },
-                states: {
-                    hover: { value: '{light.states.icon.theme-hover}' },
-                    active: { value: '{light.states.icon.theme-active}' },
-                    disabled: { value: '{light.states.icon.disabled}' }
-                }
-            },
-            secondary: {
-                default: { value: '{light.icon.contrast}' },
-                states: {
-                    hover: { value: '{light.states.icon.contrast-hover}' },
-                    active: { value: '{light.states.icon.contrast-active}' },
-                    disabled: { value: '{light.states.icon.disabled}' }
-                }
-            },
-            info: {
-                default: { value: '{light.icon.contrast-fade}' },
-                states: {
-                    hover: { value: '{light.states.icon.contrast-fade-hover}' },
-                    active: { value: '{light.states.icon.contrast-fade-active}' },
-                    disabled: { value: '{light.states.icon.disabled}' }
-                }
-            },
             warning: {
-                default: { value: '{light.warning.palette.value.45}' },
-                states: {
-                    hover: { value: '{light.warning.palette.value.40}' },
-                    active: { value: '{light.warning.palette.value.35}' },
-                    disabled: { value: '{light.warning.palette.value.80}' }
-                }
+                color: { value: '{light.icon.warning}' }
             }
         },
         dark: {
@@ -67,38 +36,8 @@
             success: {
                 color: { value: '{dark.icon.success}' }
             },
-            // переписать в 2.0
-            secondary: {
-                default: { value: '{dark.secondary.palette.value.70}' },
-                states: {
-                    hover: { value: '{dark.secondary.palette.value.50}' },
-                    active: { value: '{dark.secondary.palette.value.80}' },
-                    disabled: { value: 'mix({icon.dark.secondary.default}, transparent, 30%)' }
-                }
-            },
-            primary: {
-                default: { value: '{dark.theme.palette.value.70}' },
-                states: {
-                    hover: { value: '{dark.theme.palette.value.50}' },
-                    active: { value: '{dark.theme.palette.value.80}' },
-                    disabled: { value: 'mix({icon.dark.primary.default}, transparent, 30%)' }
-                }
-            },
-            info: {
-                default: { value: '{dark.info.palette.value.70}' },
-                states: {
-                    hover: { value: '{dark.info.palette.value.50}' },
-                    active: { value: '{dark.info.palette.value.80}' },
-                    disabled: { value: 'mix({icon.dark.info.default}, transparent, 30%)' }
-                }
-            },
             warning: {
-                default: { value: '{dark.warning.palette.value.50}' },
-                states: {
-                    hover: { value: '{dark.warning.palette.value.35}' },
-                    active: { value: '{dark.warning.palette.value.60}' },
-                    disabled: { value: 'mix({icon.dark.warning.default}, transparent, 30%)' }
-                }
+                color: { value: '{dark.icon.warning}' }
             }
         }
     }
