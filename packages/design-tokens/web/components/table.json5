@@ -4,7 +4,7 @@
             'border-width': { value: '{size.border-width}' },
             'row-padding': {
                 vertical: { value: '{size.m}' },
-                horizontal: { value: '{size.l}' }
+                horizontal: { value: '{size.s}' }
             }
         },
         font: {
