@@ -1,3 +1,12 @@
+# 3.0.0-rc.6 (2024-06-04)
+
+### Design Tokens
+
+ * bug fix  **alert:** alert-content right padding ([#DS-2343](https://github.com/koobiq/design-tokens/issues/issue/DS-2343)) ([#11](https://github.com/koobiq/design-tokens/issues/11)) ([3b08da3](https://github.com/koobiq/design-tokens/commit/3b08da33fa6fa67a893780cc763b017fd4adac31))
+ * bug fix  horizontal padding in table ([140b42a](https://github.com/koobiq/design-tokens/commit/140b42a8f7a427332b231265cb78de02e81e4d68))
+ * feature  **icon:** delete unused icon states ([#12](https://github.com/koobiq/design-tokens/issues/12)) ([f5f58ed](https://github.com/koobiq/design-tokens/commit/f5f58edfe26438f95b5fb7e04978b062bac307d4))
+ * feature  **table:** table size tokens and font fix ([#10](https://github.com/koobiq/design-tokens/issues/10)) ([b5347eb](https://github.com/koobiq/design-tokens/commit/b5347ebf6ec8151169f3dc5ccfd4f22ecba2e136))
+
 # 3.0.0-rc.5 (2024-05-31)
 
  * feature  **icon-item:** Warning state ([89f3150b](https://github.com/koobiq/design-tokens/commit/89f3150b5a2cae3952936d2824dc99d583822c1d))
