@@ -37,9 +37,9 @@
         },
         font: {
             text: { value: 'text-normal' },
-            caption: { value: 'text-compact'},
-            header: { value: 'subheading'},
-            subheading: { value: 'caps-compact'},
+            caption: { value: 'text-compact' },
+            subheading: { value: 'caps-compact-strong' },
+            header: { value: 'text-big-strong' }
         },
         light: {
             default: {
