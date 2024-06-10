@@ -340,7 +340,7 @@
             "font-weight": { value: '500' },
             "font-family": { value: '{font.family.base}' },
             "text-transform": { value: 'null' },
-            "font-feature-settings": { value: '"tnum" on, "ss01" on, "ss04" on' }
+            "font-feature-settings": { value: '"ss01" on, "ss04" on' }
         },
         "text-compact": {
             "font-size": { value: '11px' },
@@ -539,7 +539,7 @@
             "font-weight": { value: 'normal' },
             "font-family": { value: '{font.family.base}' },
             "text-transform": { value: 'null' },
-            "font-feature-settings": { value: '"tnum" on, "ss01" on, "ss04" on' }
+            "font-feature-settings": { value: '"ss01" on, "ss04" on' }
         },
         'italic-big-strong': {
                 "font-style": {value: 'italic' },
@@ -549,7 +549,7 @@
             "font-weight": { value: '500' },
             "font-family": { value: '{font.family.base}' },
             "text-transform": { value: 'null' },
-            "font-feature-settings": { value: '"tnum" on, "ss01" on, "ss04" on' }
+            "font-feature-settings": { value: '"ss01" on, "ss04" on' }
         },
         "italic-normal": {
                 "font-style": {value: 'italic' },
@@ -559,7 +559,7 @@
             "font-weight": { value: 'normal' },
             "font-family": { value: '{font.family.base}' },
             "text-transform": { value: 'null' },
-            "font-feature-settings": { value: '"tnum" on, "ss01" on, "ss04" on' }
+            "font-feature-settings": { value: '"ss01" on, "ss04" on' }
         },
         "italic-normal-strong": {
                 "font-style": {value: 'italic' },
@@ -569,7 +569,7 @@
             "font-weight": { value: '500' },
             "font-family": { value: '{font.family.base}' },
             "text-transform": { value: 'null' },
-            "font-feature-settings": { value: '"tnum" on, "ss01" on, "ss04" on' }
+            "font-feature-settings": { value: '"ss01" on, "ss04" on' }
         },
         "italic-compact": {
             "font-style": {value: 'italic' },
@@ -579,7 +579,7 @@
             "font-weight": { value: 'normal' },
             "font-family": { value: '{font.family.base}' },
             "text-transform": { value: 'null' },
-            "font-feature-settings": { value: '"tnum" on, "ss01" on, "ss04" on' }
+            "font-feature-settings": { value: '"ss01" on, "ss04" on' }
         },
         "italic-compact-strong": {
                 "font-style": {value: 'italic' },
@@ -589,7 +589,7 @@
             "font-weight": { value: '500' },
             "font-family": { value: '{font.family.base}' },
             "text-transform": { value: 'null' },
-            "font-feature-settings": { value: '"tnum" on, "ss01" on, "ss04" on' }
+            "font-feature-settings": { value: '"ss01" on, "ss04" on' }
         },
         // стиль текста, который используется для названия продукта в навбаре
         'navbar-title': {
