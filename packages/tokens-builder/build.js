@@ -7,6 +7,7 @@ require('./transforms/attribute/typography')(StyleDictionary);
 require('./transforms/attribute/palette')(StyleDictionary);
 require('./transforms/attribute/prefix')(StyleDictionary);
 require('./transforms/attribute/font')(StyleDictionary);
+require('./transforms/attribute/theme')(StyleDictionary);
 
 // ==== Include custom filters ====
 require('./filters/palette')(StyleDictionary);
@@ -23,6 +24,7 @@ require('./transformGroups/ts')(StyleDictionary);
 // ==== Include custom formats ====
 require('./formats/typography')(StyleDictionary);
 require('./formats/palette')(StyleDictionary);
+require('./formats/variables')(StyleDictionary);
 
 // ==== Run build ====
 console.log('Build started...');
