@@ -25,6 +25,15 @@ module.exports = {
                 options: {
                     selector: '.kbq-dark'
                 }
+            },
+            {
+                destination: 'css-tokens-font.css',
+                format: 'kbq-css/variables',
+                filter: 'css-variables-font',
+                prefix: 'kbq',
+                options: {
+                    selector: '.kbq-font'
+                }
             }
         ]
     }
