@@ -1,3 +1,9 @@
+# 3.0.0-rc.8 (2024-06-17)
+
+### Design Tokens
+
+ * feature  **chore:** koobiq/cli for stage:commit with tag sign ([#17](https://github.com/koobiq/design-tokens/issues/17)) ([23d6db6](https://github.com/koobiq/design-tokens/commit/23d6db6e07edb62dcc60a88c9c65af8aae95b4bf))
+
 # 3.0.0-rc.7 (2024-06-17)
 
 ### Design Tokens
