@@ -1,3 +1,9 @@
+# 3.0.0-rc.7 (2024-06-17)
+
+### Design Tokens
+
+ * bug fix  **dropdown,list:** font type ([#DS-2461](https://github.com/koobiq/design-tokens/issues/issue/DS-2461)) ([#14](https://github.com/koobiq/design-tokens/issues/14)) ([3d49986](https://github.com/koobiq/design-tokens/commit/3d49986427a9316a56a9dbb56ad7a91feceb897c))
+
 # 3.0.0-rc.6 (2024-06-04)
 
 ### Design Tokens
