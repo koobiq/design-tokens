@@ -3,7 +3,7 @@
         size: {
             padding: {
                 horizontal: { value: '{size.xxs}' },
-                vertical: { value: '{size.xxs}' }
+                vertical: { value: '{size.3xs}' }
             },
             'content-gap': {
                 horizontal: { value: '{size.3xs}' }

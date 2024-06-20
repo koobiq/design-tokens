@@ -549,7 +549,7 @@
             "font-feature-settings": { value: '"tnum" on, "ss01" on, "ss04" on' }
         },
         "italic-normal": {
-                "font-style": {value: 'italic' },
+            "font-style": {value: 'italic' },
             "font-size": { value: '14px' },
             "line-height": { value: '20px' },
             "letter-spacing": { value: '0.005em' },

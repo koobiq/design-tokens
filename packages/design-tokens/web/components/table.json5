@@ -3,7 +3,8 @@
         size: {
             'border-width': { value: '{size.border-width}' },
             'row-padding': {
-                vertical: { value: '{size.m}' },
+                // to keep 40px total height
+                vertical: { value: '10px' },
                 horizontal: { value: '{size.s}' }
             }
         },

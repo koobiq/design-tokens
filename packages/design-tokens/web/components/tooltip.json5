@@ -7,7 +7,7 @@
             },
             padding: {
                 horizontal: { value: '{size.l}'},
-                vertical: { value: '{size.s}' }
+                vertical: { value: '{size.xs}' }
             },
             arrow: {
                 size: { value: '{size.m}' }

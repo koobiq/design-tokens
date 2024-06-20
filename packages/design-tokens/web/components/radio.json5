@@ -213,7 +213,7 @@
         font: {
             normal: {
                 label: { value: 'text-normal' },
-                caption: { value: 'text-compact-strong'}
+                caption: { value: 'text-compact'}
             },
             big: {
                 label: { value: 'text-big' },
