@@ -14,12 +14,13 @@
                 }
             },
             item: {
+                height: { value: '{size.xxl}' },
                 border: {
                     radius: {value: '{size.xxs}'}
                 },
                 padding: {
                     horizontal: {value: '{size.s}' },
-                    vertical: {value: '{size.xxs}'}
+                    vertical: {value: '{size.3xs}'}
                 },
                 'content-gap': {
                     horizontal: { value: '{size.xxs}'}
