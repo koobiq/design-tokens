@@ -4,7 +4,7 @@
             'min-height': { value: '64px' },
             'max-height': { value:  '96px' },
             padding: {
-                vertical: { value: '{size.s}' },
+                vertical: { value: '{size.xs}' },
                 horizontal: { value: '{size.m}' }
             }
         },
