@@ -3,7 +3,7 @@
         size: {
             padding: {
                 horizontal: { value: '{size.m}' },
-                vertical: { value: '{size.xxs}' }
+                vertical: { value: '{size.xs}' }
             }
         },
         font: {
