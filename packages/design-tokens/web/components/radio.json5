@@ -200,14 +200,16 @@
                 'inner-size': { value: '{size.xs}' },
                 'horizontal-content-padding': { value: '{size.s}' },
                 'vertical-content-padding': { value: '{size.3xs}' },
-                'vertical-gap': { value: '{size.m}' }
+                'vertical-gap': { value: '{size.m}' },
+                'top': { value: 0},
             },
             big: {
                 'outer-size': { value: '{size.l}' },
                 'inner-size': { value: '{size.xs}' },
                 'horizontal-content-padding': { value: '{size.s}' },
                 'vertical-content-padding': { value: '{size.3xs}' },
-                'vertical-gap': { value: '{size.m}' }
+                'vertical-gap': { value: '{size.m}' },
+                'top': { value: '{size.3xs}'},
             }
         },
         font: {
