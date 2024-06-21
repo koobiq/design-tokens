@@ -50,7 +50,7 @@
                 // не нравится название
                 'button-stack': {
                     padding: {
-                        top: { value: '{size.xs}' },
+                        top: { value: '{size.s}' },
                         bottom: { value: '{size.3xs}' }
                     }
                 }
