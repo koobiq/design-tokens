@@ -78,10 +78,12 @@
         },
         size: {
             normal: {
-                 'content-padding': { value: '{size.xxs}' }
+                'margin-top': { value: '{size.3xs}'},
+                'content-padding': { value: '{size.xxs}' }
             },
             compact: {
-                 'content-padding': { value: '{size.3xs}' }
+                'margin-top': { value: 0},
+                'content-padding': { value: '{size.xxs}' }
             }
         },
         font: {
