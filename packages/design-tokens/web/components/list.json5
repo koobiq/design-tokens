@@ -5,7 +5,7 @@
                 padding: {
                     left: { value: '{size.m}'},
                     right: { value: '{size.m}' },
-                    vertical: { value: '{size.xxs}' }
+                    vertical: { value: '{size.xs}' }
                 },
                 'content-gap': {
                     horizontal: { value: '{size.s}'},
@@ -17,7 +17,7 @@
             },
             text: {
                 padding: {
-                    vertical: { value: '{size.xxs}' }
+                    vertical: { value: 0 }
                 }
             },
             header: {
