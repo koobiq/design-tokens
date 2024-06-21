@@ -174,14 +174,16 @@
                 'border-width': { value: '{size.border-width}' },
                 'border-radius': { value: '{size.xxs}' },
                 'horizontal-content-padding': { value: '{size.s}' },
-                'vertical-content-padding': { value: '{size.3xs}' }
+                'vertical-content-padding': { value: '{size.3xs}' },
+                'top': { value: '{size.3xs}'},
             },
             big: {
                 width: { value: '{size.l}' },
                 'border-width': { value: '{size.border-width}' },
                 'border-radius': { value: '{size.xxs}' },
                 'horizontal-content-padding': { value: '{size.s}' },
-                'vertical-content-padding': { value: '{size.3xs}' }
+                'vertical-content-padding': { value: '{size.3xs}' },
+                'top': { value: '{size.xxs}'},
             },
         },
         font: {
