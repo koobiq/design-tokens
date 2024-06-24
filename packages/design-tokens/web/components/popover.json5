@@ -23,8 +23,8 @@
             header: {
                 padding: {
                     horizontal: { value: '{size.xxl}' },
-                    top: { value: '16px' },
-                    bottom: { value: '8px'}
+                    top: { value: '{size.l}' },
+                    bottom: { value: '{size.xxl}'}
                 },
             },
             content: {
