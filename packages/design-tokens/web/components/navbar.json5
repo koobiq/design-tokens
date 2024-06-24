@@ -1,7 +1,15 @@
 {
     navbar: {
         font: {
-            title: { value: 'navbar-title' },
+            title: {
+                "font-size": { value: '{typography.navbar-title.font-size}' },
+                "line-height": { value: '{typography.navbar-title.line-height}' },
+                "letter-spacing": { value: '{typography.navbar-title.letter-spacing}' },
+                "font-weight": { value: '{typography.navbar-title.font-weight}' },
+                "font-family": { value: '{typography.navbar-title.font-family}' },
+                "text-transform": { value: '{typography.navbar-title.text-transform}' },
+                "font-feature-settings": { value: '{typography.navbar-title.font-feature-settings}' }
+            }
         },
         light: {
             background: { value: '{light.background.bg}' },

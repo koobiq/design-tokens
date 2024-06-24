@@ -86,10 +86,26 @@
         },
         font: {
             normal: {
-                 text: { value: 'text-normal-strong' }
+                 text: {
+                     "font-size": { value: '{typography.text-normal-strong.font-size}' },
+                     "line-height": { value: '{typography.text-normal-strong.line-height}' },
+                     "letter-spacing": { value: '{typography.text-normal-strong.letter-spacing}' },
+                     "font-weight": { value: '{typography.text-normal-strong.font-weight}' },
+                     "font-family": { value: '{typography.text-normal-strong.font-family}' },
+                     "text-transform": { value: '{typography.text-normal-strong.text-transform}' },
+                     "font-feature-settings": { value: '{typography.text-normal-strong.font-feature-settings}' }
+                 }
             },
             compact: {
-                 text: { value: 'text-compact-strong' }
+                 text: {
+                     "font-size": { value: '{typography.text-compact-strong.font-size}' },
+                     "line-height": { value: '{typography.text-compact-strong.line-height}' },
+                     "letter-spacing": { value: '{typography.text-compact-strong.letter-spacing}' },
+                     "font-weight": { value: '{typography.text-compact-strong.font-weight}' },
+                     "font-family": { value: '{typography.text-compact-strong.font-family}' },
+                     "text-transform": { value: '{typography.text-compact-strong.text-transform}' },
+                     "font-feature-settings": { value: '{typography.text-compact-strong.font-feature-settings}' }
+                 }
             }
         }
     }

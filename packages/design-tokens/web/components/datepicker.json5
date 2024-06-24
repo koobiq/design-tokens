@@ -39,7 +39,15 @@
             }
         },
         font: {
-            text: { value: 'text-normal' }
+            text: {
+                "font-size": { value: '{typography.text-normal.font-size}' },
+                "line-height": { value: '{typography.text-normal.line-height}' },
+                "letter-spacing": { value: '{typography.text-normal.letter-spacing}' },
+                "font-weight": { value: '{typography.text-normal.font-weight}' },
+                "font-family": { value: '{typography.text-normal.font-family}' },
+                "text-transform": { value: '{typography.text-normal.text-transform}' },
+                "font-feature-settings": { value: '{typography.text-normal.font-feature-settings}' }
+            }
         },
         light: {
             container: {
@@ -82,7 +90,7 @@
                 }
             }
         },
-         dark: {
+        dark: {
             container: {
                 background: {value: '{dark.background.card}'},
                 'box-shadow': { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.50)' }

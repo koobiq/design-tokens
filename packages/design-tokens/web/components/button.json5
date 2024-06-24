@@ -8,7 +8,15 @@
             'content-padding': { value: '{size.s}' }
         },
         font: {
-            default: { value: 'text-normal-strong' },
+            default: {
+                "font-size": { value: '{typography.text-normal-strong.font-size}' },
+                "line-height": { value: '{typography.text-normal-strong.line-height}' },
+                "letter-spacing": { value: '{typography.text-normal-strong.letter-spacing}' },
+                "font-weight": { value: '{typography.text-normal-strong.font-weight}' },
+                "font-family": { value: '{typography.text-normal-strong.font-family}' },
+                "text-transform": { value: '{typography.text-normal-strong.text-transform}' },
+                "font-feature-settings": { value: '{typography.text-normal-strong.font-feature-settings}' }
+            },
         },
         light: {
             filled: {

@@ -122,7 +122,7 @@
                 "line-height": { value: '{typography.subheading.line-height}' },
                 "letter-spacing": { value: '{typography.subheading.letter-spacing}' },
                 "font-weight": { value: '{typography.subheading.font-weight}' },
-                "font-family": { value: '{font.family.accent}' },
+                "font-family": { value: '{typography.subheading.font-family}' },
                 "text-transform": { value: '{typography.subheading.text-transform}' },
                 "font-feature-settings": { value: '{typography.subheading.font-feature-settings}' }
             },
@@ -131,7 +131,7 @@
                 "line-height": { value: '{typography.text-big-strong.line-height}' },
                 "letter-spacing": { value: '{typography.text-big-strong.letter-spacing}' },
                 "font-weight": { value: '{typography.text-big-strong.font-weight}' },
-                "font-family": { value: '{font.family.base}' },
+                "font-family": { value: '{typography.text-big-strong.font-family}' },
                 "text-transform": { value: '{typography.text-big-strong.text-transform}' },
                 "font-feature-settings": { value: '{typography.text-big-strong.font-feature-settings}' }
             },
@@ -140,7 +140,7 @@
                 "line-height": { value: '{typography.text-normal.line-height}' },
                 "letter-spacing": { value: '{typography.text-normal.letter-spacing}' },
                 "font-weight": { value: '{typography.text-normal.font-weight}' },
-                "font-family": { value: '{font.family.base}' },
+                "font-family": { value: '{typography.text-normal.font-family}' },
                 "text-transform": { value: '{typography.text-normal.text-transform}' },
                 "font-feature-settings": { value: '{typography.text-normal.font-feature-settings}' }
             }
