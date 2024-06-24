@@ -79,7 +79,7 @@
             "text-transform": { value: 'null' },
             "font-feature-settings": { value: 'initial' }
         },
-        "subheading": { // TODO: Нужно будет проверить как поведет себя subheading с 16px в Alerts
+        "subheading": {
             "font-size": { value: '18px' },
             "line-height": { value: '26px' },
             "letter-spacing": { value: 'normal' },
@@ -539,7 +539,7 @@
             "font-feature-settings": { value: '"ss01" on, "ss04" on' }
         },
         'italic-big-strong': {
-                "font-style": {value: 'italic' },
+            "font-style": {value: 'italic' },
             "font-size": { value: '16px' },
             "line-height": { value: '24px' },
             "letter-spacing": { value: 'normal' },
@@ -549,7 +549,7 @@
             "font-feature-settings": { value: '"ss01" on, "ss04" on' }
         },
         "italic-normal": {
-                "font-style": {value: 'italic' },
+            "font-style": {value: 'italic' },
             "font-size": { value: '14px' },
             "line-height": { value: '20px' },
             "letter-spacing": { value: '0.005em' },
@@ -559,7 +559,7 @@
             "font-feature-settings": { value: '"ss01" on, "ss04" on' }
         },
         "italic-normal-strong": {
-                "font-style": {value: 'italic' },
+            "font-style": {value: 'italic' },
             "font-size": { value: '14px' },
             "line-height": { value: '20px' },
             "letter-spacing": { value: '0.5%' },
@@ -579,7 +579,7 @@
             "font-feature-settings": { value: '"ss01" on, "ss04" on' }
         },
         "italic-compact-strong": {
-                "font-style": {value: 'italic' },
+            "font-style": {value: 'italic' },
             "font-size": { value: '12px' },
             "line-height": { value: '16px' },
             "letter-spacing": { value: '0.01em' },
