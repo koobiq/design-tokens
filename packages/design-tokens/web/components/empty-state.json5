@@ -9,10 +9,10 @@
                     bottom: { value: '{size.5xl}' }, 
                 },
                 actions: {
-                    margin-top: { value: '{size.xl}' }
+                    'margin-top': { value: '{size.xl}' }
                 },
                 image: {
-                    margin-bottom: { value: '{size.3xl}' }  
+                    'margin-bottom': { value: '{size.3xl}' }  
                 },
                 'image-addon': { 
                     height: { value: '{size.6xl}' } 
@@ -29,10 +29,10 @@
                     bottom: { value: '{size.3xl}' }, 
                 },
                 actions: {
-                    margin-top: { value: '{size.s}' }
+                    'margin-top': { value: '{size.s}' }
                 },
                 image: {
-                    margin-bottom: { value: '{size.3xl}' }  
+                    'margin-bottom': { value: '{size.3xl}' }  
                 },
                 'image-addon': { 
                     height: { value: '{size.xxl}' } 
