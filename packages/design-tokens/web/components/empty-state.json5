@@ -8,6 +8,18 @@
                     top: { value: '{size.5xl}' }, 
                     bottom: { value: '{size.5xl}' }, 
                 },
+                actions: {
+                    margin-top: { value: '{size.xl}' }
+                },
+                image: {
+                    margin-bottom: { value: '{size.3xl}' }  
+                },
+                'image-addon': { 
+                    height: { value: '{size.6xl}' } 
+                },
+                title: {
+                    'margin-bottom': { value: '{size.xl}' },
+                }
             },
             normal: {
                 'max-width': { value: '320px'},
@@ -16,6 +28,18 @@
                     top: { value: '{size.3xl}' }, 
                     bottom: { value: '{size.3xl}' }, 
                 },
+                actions: {
+                    margin-top: { value: '{size.s}' }
+                },
+                image: {
+                    margin-bottom: { value: '{size.3xl}' }  
+                },
+                'image-addon': { 
+                    height: { value: '{size.xxl}' } 
+                },
+                title: {
+                    'margin-bottom': { value: '{size.s}' },
+                }
             },
         },
         font: {
@@ -33,78 +57,8 @@
             color: { value: '{light.foreground.contrast}'}
         },
         dark: {
-            title: { value: '{light.foreground.contrast}'},
-            color: { value: '{light.foreground.contrast}'}
-        }
-    },
-    'empty-state-actions': {
-        size: {
-            big: {
-                margin: {
-                     top: { value: '{size.xl}' }
-                }           
-            },
-            normal: {
-                margin: {
-                     top: { value: '{size.s}' }
-                }          
-            },
-        }
-    },
-    'empty-state-image': {
-        size: {
-            big: {
-                margin: {
-                    bottom: { value: '{size.3xl}' }  
-                },               
-            },
-            normal: {
-                margin: {
-                    bottom: { value: '{size.xl}' }  
-                },               
-            },
-        }
-    },
-    // дополнительный отступ в варианте по центру с изображением
-    'empty-state-image-addon': {
-        size: {
-            big: {
-                height: { value: '{size.6xl}' }          
-            },
-            normal: {
-                height: { value: '{size.xxl}' }          
-            },
-        }
-    },
-    
-    'empty-state-actions': {
-        size: {
-            big: {
-                margin: {
-                     top: { value: '{size.xl}' }
-                }           
-            },
-            normal: {
-                margin: {
-                     top: { value: '{size.s}' }
-                }          
-            },
-        }
-    },
-    // отступы для заголовка
-    // нужно ли сюда и цвет текста добавлять?
-    'empty-state-title': {
-        size: {
-            big: {
-                margin: {
-                     bottom: { value: '{size.xl}' }
-                }           
-            },
-            normal: {
-                margin: {
-                     bottom: { value: '{size.s}' }
-                }          
-            },
+            title: { value: '{dark.foreground.contrast}'},
+            color: { value: '{dark.foreground.contrast}'}
         }
     }
 }
