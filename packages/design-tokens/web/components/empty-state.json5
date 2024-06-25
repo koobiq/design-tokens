@@ -1,0 +1,110 @@
+{
+    'empty-state': {
+        size: {
+            big: {
+                'max-width': { value: '480px'},
+                padding: {
+                    horizontal: { value: '{size.6xl}' }, 
+                    top: { value: '{size.5xl}' }, 
+                    bottom: { value: '{size.5xl}' }, 
+                },
+            },
+            normal: {
+                'max-width': { value: '320px'},
+                padding: {
+                    horizontal: { value: '{size.3xl}' }, 
+                    top: { value: '{size.3xl}' }, 
+                    bottom: { value: '{size.3xl}' }, 
+                },
+            },
+        },
+        font: {
+            big: {
+                title: { value: 'headline' },
+                text: { value: 'text-normal' },
+            },
+            normal: {
+                title: { value: 'subheading' },
+                text: { value: 'text-normal' },
+            }
+        },
+        light: {
+            title: { value: '{light.foreground.contrast}'},
+            color: { value: '{light.foreground.contrast}'}
+        },
+        dark: {
+            title: { value: '{light.foreground.contrast}'},
+            color: { value: '{light.foreground.contrast}'}
+        }
+    },
+    'empty-state-actions': {
+        size: {
+            big: {
+                margin: {
+                     top: { value: '{size.xl}' }
+                }           
+            },
+            normal: {
+                margin: {
+                     top: { value: '{size.s}' }
+                }          
+            },
+        }
+    },
+    'empty-state-image': {
+        size: {
+            big: {
+                margin: {
+                    bottom: { value: '{size.3xl}' }  
+                },               
+            },
+            normal: {
+                margin: {
+                    bottom: { value: '{size.xl}' }  
+                },               
+            },
+        }
+    },
+    // дополнительный отступ в варианте по центру с изображением
+    'empty-state-image-addon': {
+        size: {
+            big: {
+                height: { value: '{size.6xl}' }          
+            },
+            normal: {
+                height: { value: '{size.xxl}' }          
+            },
+        }
+    },
+    
+    'empty-state-actions': {
+        size: {
+            big: {
+                margin: {
+                     top: { value: '{size.xl}' }
+                }           
+            },
+            normal: {
+                margin: {
+                     top: { value: '{size.s}' }
+                }          
+            },
+        }
+    },
+    // отступы для заголовка
+    // нужно ли сюда и цвет текста добавлять?
+    'empty-state-title': {
+        size: {
+            big: {
+                margin: {
+                     bottom: { value: '{size.xl}' }
+                }           
+            },
+            normal: {
+                margin: {
+                     bottom: { value: '{size.s}' }
+                }          
+            },
+        }
+    }
+}
