@@ -22,7 +22,8 @@
         "build:index-common": "yarn run rollup dist/design-tokens/web/js/index.mjs --file dist/design-tokens/web/js/index.cjs --format cjs",
         "build": "node tools/build.js && yarn run build:index-common",
         "stage:commit": "koobiq-cli stage-commit -c \"Design Tokens\"",
-        "release:publish:ci-github": "koobiq-cli publish-ci-github"
+        "release:publish:ci-github": "koobiq-cli publish-ci-github",
+        "release:publish:ci-gitlab": "koobiq-cli publish-ci-gitlab"
     },
     "publishConfig": {
         "access": "public"
