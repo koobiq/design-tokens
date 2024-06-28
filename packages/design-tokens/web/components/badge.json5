@@ -219,7 +219,6 @@
                         'margin-left': { value: '{size.xxs}' }
                     }
                 },
-                'vertical-padding': { value: '{size.3xs}' },
                 'horizontal-padding': { value: '{size.s}' },
                 'content-padding': { value: '{size.xxs}' },
                 'border-width': { value: '{size.border-width}' },
