@@ -8,8 +8,24 @@
             }
         },
         font: {
-            header: { value: 'text-normal' },
-            body: { value: 'tabular-normal' }
+            header: {
+                "font-size": { value: '{typography.text-normal.font-size}' },
+                "line-height": { value: '{typography.text-normal.line-height}' },
+                "letter-spacing": { value: '{typography.text-normal.letter-spacing}' },
+                "font-weight": { value: '{typography.text-normal.font-weight}' },
+                "font-family": { value: '{typography.text-normal.font-family}' },
+                "text-transform": { value: '{typography.text-normal.text-transform}' },
+                "font-feature-settings": { value: '{typography.text-normal.font-feature-settings}' }
+            },
+            body: {
+                "font-size": { value: '{typography.tabular-normal.font-size}' },
+                "line-height": { value: '{typography.tabular-normal.line-height}' },
+                "letter-spacing": { value: '{typography.tabular-normal.letter-spacing}' },
+                "font-weight": { value: '{typography.tabular-normal.font-weight}' },
+                "font-family": { value: '{typography.tabular-normal.font-family}' },
+                "text-transform": { value: '{typography.tabular-normal.text-transform}' },
+                "font-feature-settings": { value: '{typography.tabular-normal.font-feature-settings}' }
+            }
         }
     }
 }

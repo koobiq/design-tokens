@@ -6,7 +6,15 @@
             'border-width': { value: '2px' }
         },
         font: {
-            default: { value: 'text-big' }
+            default: {
+                "font-size": { value: '{typography.text-big.font-size}' },
+                "line-height": { value: '{typography.text-big.line-height}' },
+                "letter-spacing": { value: '{typography.text-big.letter-spacing}' },
+                "font-weight": { value: '{typography.text-big.font-weight}' },
+                "font-family": { value: '{typography.text-big.font-family}' },
+                "text-transform": { value: '{typography.text-big.text-transform}' },
+                "font-feature-settings": { value: '{typography.text-big.font-feature-settings}' }
+            }
         }
     }
 }

@@ -40,8 +40,24 @@
             }
         },
         font: {
-            header: { value: 'title' },
-            content: { value: 'text-normal' }
+            header: {
+                "font-size": { value: '{typography.title.font-size}' },
+                "line-height": { value: '{typography.title.line-height}' },
+                "letter-spacing": { value: '{typography.title.letter-spacing}' },
+                "font-weight": { value: '{typography.title.font-weight}' },
+                "font-family": { value: '{typography.title.font-family}' },
+                "text-transform": { value: '{typography.title.text-transform}' },
+                "font-feature-settings": { value: '{typography.title.font-feature-settings}' }
+            },
+            content: {
+                "font-size": { value: '{typography.text-normal.font-size}' },
+                "line-height": { value: '{typography.text-normal.line-height}' },
+                "letter-spacing": { value: '{typography.text-normal.letter-spacing}' },
+                "font-weight": { value: '{typography.text-normal.font-weight}' },
+                "font-family": { value: '{typography.text-normal.font-family}' },
+                "text-transform": { value: '{typography.text-normal.text-transform}' },
+                "font-feature-settings": { value: '{typography.text-normal.font-feature-settings}' }
+            }
         },
         light: {
              overlay: {

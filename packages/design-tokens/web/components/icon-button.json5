@@ -50,7 +50,7 @@
                 }
             }
         },
-       dark: {
+        dark: {
             theme: {
                 default: { value: '{dark.icon.theme}' },
                 states: {

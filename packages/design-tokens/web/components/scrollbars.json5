@@ -75,6 +75,6 @@
                     background: { value: 'transparent' }
                 }
             }
-        },
+        }
     }
 }

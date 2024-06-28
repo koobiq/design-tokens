@@ -36,10 +36,42 @@
             }
         },
         font: {
-            text: { value: 'text-normal' },
-            caption: { value: 'text-compact' },
-            subheading: { value: 'caps-compact-strong' },
-            header: { value: 'text-big-strong' }
+            text: {
+                "font-size": { value: '{typography.text-normal.font-size}' },
+                "line-height": { value: '{typography.text-normal.line-height}' },
+                "letter-spacing": { value: '{typography.text-normal.letter-spacing}' },
+                "font-weight": { value: '{typography.text-normal.font-weight}' },
+                "font-family": { value: '{typography.text-normal.font-family}' },
+                "text-transform": { value: '{typography.text-normal.text-transform}' },
+                "font-feature-settings": { value: '{typography.text-normal.font-feature-settings}' }
+            },
+            caption: {
+                "font-size": { value: '{typography.text-compact.font-size}' },
+                "line-height": { value: '{typography.text-compact.line-height}' },
+                "letter-spacing": { value: '{typography.text-compact.letter-spacing}' },
+                "font-weight": { value: '{typography.text-compact.font-weight}' },
+                "font-family": { value: '{typography.text-compact.font-family}' },
+                "text-transform": { value: '{typography.text-compact.text-transform}' },
+                "font-feature-settings": { value: '{typography.text-compact.font-feature-settings}' }
+            },
+            header: {
+                "font-size": { value: '{typography.text-big-strong.font-size}' },
+                "line-height": { value: '{typography.text-big-strong.line-height}' },
+                "letter-spacing": { value: '{typography.text-big-strong.letter-spacing}' },
+                "font-weight": { value: '{typography.text-big-strong.font-weight}' },
+                "font-family": { value: '{typography.text-big-strong.font-family}' },
+                "text-transform": { value: '{typography.text-big-strong.text-transform}' },
+                "font-feature-settings": { value: '{typography.text-big-strong.font-feature-settings}' }
+            },
+            subheading: {
+                "font-size": { value: '{typography.caps-compact-strong.font-size}' },
+                "line-height": { value: '{typography.caps-compact-strong.line-height}' },
+                "letter-spacing": { value: '{typography.caps-compact-strong.letter-spacing}' },
+                "font-weight": { value: '{typography.caps-compact-strong.font-weight}' },
+                "font-family": { value: '{typography.caps-compact-strong.font-family}' },
+                "text-transform": { value: '{typography.caps-compact-strong.text-transform}' },
+                "font-feature-settings": { value: '{typography.caps-compact-strong.font-feature-settings}' }
+            }
         },
         light: {
             default: {

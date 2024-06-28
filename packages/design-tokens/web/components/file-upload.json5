@@ -63,12 +63,44 @@
         },
         font: {
             single: {
-                'text-block': { value: 'text-normal' }
+                'text-block': {
+                    "font-size": { value: '{typography.text-normal.font-size}' },
+                    "line-height": { value: '{typography.text-normal.line-height}' },
+                    "letter-spacing": { value: '{typography.text-normal.letter-spacing}' },
+                    "font-weight": { value: '{typography.text-normal.font-weight}' },
+                    "font-family": { value: '{typography.text-normal.font-family}' },
+                    "text-transform": { value: '{typography.text-normal.text-transform}' },
+                    "font-feature-settings": { value: '{typography.text-normal.font-feature-settings}' }
+                }
             },
             multiple: {
-                title: { value: 'subheading' },
-                'text-block': { value: 'text-normal' },
-                grid: { value: 'text-normal' }
+                title: {
+                    "font-size": { value: '{typography.subheading.font-size}' },
+                    "line-height": { value: '{typography.subheading.line-height}' },
+                    "letter-spacing": { value: '{typography.subheading.letter-spacing}' },
+                    "font-weight": { value: '{typography.subheading.font-weight}' },
+                    "font-family": { value: '{typography.subheading.font-family}' },
+                    "text-transform": { value: '{typography.subheading.text-transform}' },
+                    "font-feature-settings": { value: '{typography.subheading.font-feature-settings}' }
+                },
+                'text-block': {
+                    "font-size": { value: '{typography.text-normal.font-size}' },
+                    "line-height": { value: '{typography.text-normal.line-height}' },
+                    "letter-spacing": { value: '{typography.text-normal.letter-spacing}' },
+                    "font-weight": { value: '{typography.text-normal.font-weight}' },
+                    "font-family": { value: '{typography.text-normal.font-family}' },
+                    "text-transform": { value: '{typography.text-normal.text-transform}' },
+                    "font-feature-settings": { value: '{typography.text-normal.font-feature-settings}' }
+                },
+                grid: {
+                    "font-size": { value: '{typography.text-normal.font-size}' },
+                    "line-height": { value: '{typography.text-normal.line-height}' },
+                    "letter-spacing": { value: '{typography.text-normal.letter-spacing}' },
+                    "font-weight": { value: '{typography.text-normal.font-weight}' },
+                    "font-family": { value: '{typography.text-normal.font-family}' },
+                    "text-transform": { value: '{typography.text-normal.text-transform}' },
+                    "font-feature-settings": { value: '{typography.text-normal.font-feature-settings}' }
+                }
             }
         },
         light: {
