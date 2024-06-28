@@ -17,7 +17,7 @@
                 },
                 'text-block': {
                         padding: {
-                            vertical: { value: '{size.xxs}' }
+                            vertical: { value: '{size.3xs}' }
                         },
                         'content-gap': {
                             horizontal: {value: '{size.xxs}' }
@@ -43,7 +43,7 @@
                     },
                     'text-block': {
                         'content-gap': {
-                            vertical: { value: '{size.xxs}' },
+                            vertical: { value: '0px' },
                             horizontal: {value: '{size.xxs}'}
                         },
                     },

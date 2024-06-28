@@ -204,6 +204,9 @@
         },
         size: {
             normal: {
+                height: {
+                    value: '{size.xxl}'
+                },
                 icon: {
                     left: {
                         width: { value: '{size.l}' },
@@ -216,13 +219,15 @@
                         'margin-left': { value: '{size.xxs}' }
                     }
                 },
-                'vertical-padding': { value: '{size.xxs}' },
                 'horizontal-padding': { value: '{size.s}' },
                 'content-padding': { value: '{size.xxs}' },
                 'border-width': { value: '{size.border-width}' },
                 'border-radius': { value: '{size.xxs}' }
             },
             compact: {
+                height: {
+                    value: '{size.l}'
+                },
                 icon: {
                     left: {
                         width: { value: '{size.l}' },

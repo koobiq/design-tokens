@@ -78,18 +78,20 @@
         },
         size: {
             normal: {
-                 'content-padding': { value: '{size.xxs}' }
+                'margin-top': { value: '{size.3xs}'},
+                'content-padding': { value: '{size.xxs}' }
             },
             compact: {
-                 'content-padding': { value: '{size.3xs}' }
+                'margin-top': { value: 0},
+                'content-padding': { value: '{size.xxs}' }
             }
         },
         font: {
             normal: {
-                 text: { value: 'text-normal-strong' }
+                text: { value: 'text-normal-strong' }
             },
             compact: {
-                 text: { value: 'text-compact-strong' }
+                text: { value: 'text-compact-strong' }
             }
         }
     }

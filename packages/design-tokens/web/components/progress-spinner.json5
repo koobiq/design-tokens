@@ -24,7 +24,7 @@
         },
         font: {
             label: { value: 'text-normal'},
-            caption: { value: 'text-compact-strong' }
+            caption: { value: 'text-compact' }
         },
         light: {
             circle: {
