@@ -1,3 +1,12 @@
+# 3.0.0-rc.9 (2024-06-28)
+
+### Design Tokens
+
+ * bug fix  typography in empty-state ([de7eaf4](https://github.com/koobiq/design-tokens/commit/de7eaf49f0bf3f44936d0f5508402553693965a1))
+ * bug fix  **typography:** remove useless tnum in font-feature-settings ([#15](https://github.com/koobiq/design-tokens/issues/15)) ([e73038c](https://github.com/koobiq/design-tokens/commit/e73038c2b622776eb010971f243e202f2fcd6891))
+ * feature  css-variables for colors and fonts ([#DS-2338](https://github.com/koobiq/design-tokens/issues/issue/DS-2338)) ([#16](https://github.com/koobiq/design-tokens/issues/16)) ([efda80a](https://github.com/koobiq/design-tokens/commit/efda80a401d83242add97d65c689d035fc37feeb))
+ * feature  empty state ([#DS-2551](https://github.com/koobiq/design-tokens/issues/issue/DS-2551)) ([#19](https://github.com/koobiq/design-tokens/issues/19)) ([4120ca1](https://github.com/koobiq/design-tokens/commit/4120ca1e6c1f6d47f28a404673dcfbe520f1345f))
+
 # 3.0.0-rc.8 (2024-06-17)
 
 ### Design Tokens
