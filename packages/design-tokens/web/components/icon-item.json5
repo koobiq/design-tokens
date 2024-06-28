@@ -23,7 +23,7 @@
                         color: { value: '{light.icon.white}' },
                         background: { value: '{light.background.success}' },
                     }
-                    },
+                },
                 'fade-on': {
                     theme: {
                         color: { value: '{light.icon.theme}' },
@@ -104,7 +104,7 @@
             big: {
                 'horizontal-padding': { value: '{size.l}' },
                 'vertical-padding': { value: '{size.l}' }
-            },
+            }
         }
     }
 }
