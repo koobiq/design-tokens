@@ -1,0 +1,64 @@
+{
+    'empty-state': {
+        size: {
+            big: {
+                'max-width': { value: '480px'},
+                padding: {
+                    horizontal: { value: '{size.6xl}' }, 
+                    top: { value: '{size.5xl}' }, 
+                    bottom: { value: '{size.5xl}' }, 
+                },
+                actions: {
+                    'margin-top': { value: '{size.xl}' }
+                },
+                image: {
+                    'margin-bottom': { value: '{size.3xl}' }  
+                },
+                'image-addon': { 
+                    height: { value: '{size.6xl}' } 
+                },
+                title: {
+                    'margin-bottom': { value: '{size.xl}' },
+                }
+            },
+            normal: {
+                'max-width': { value: '320px'},
+                padding: {
+                    horizontal: { value: '{size.3xl}' }, 
+                    top: { value: '{size.3xl}' }, 
+                    bottom: { value: '{size.3xl}' }, 
+                },
+                actions: {
+                    'margin-top': { value: '{size.s}' }
+                },
+                image: {
+                    'margin-bottom': { value: '{size.3xl}' }  
+                },
+                'image-addon': { 
+                    height: { value: '{size.xxl}' } 
+                },
+                title: {
+                    'margin-bottom': { value: '{size.s}' },
+                }
+            },
+        },
+        font: {
+            big: {
+                title: { value: 'headline' },
+                text: { value: 'text-normal' },
+            },
+            normal: {
+                title: { value: 'subheading' },
+                text: { value: 'text-normal' },
+            }
+        },
+        light: {
+            title: { value: '{light.foreground.contrast}'},
+            color: { value: '{light.foreground.contrast}'}
+        },
+        dark: {
+            title: { value: '{dark.foreground.contrast}'},
+            color: { value: '{dark.foreground.contrast}'}
+        }
+    }
+}
