@@ -25,14 +25,13 @@
                 },
                 icon: {
                     margin: {
-                        top: { value: '{size.l}' },
-                        right: { value: '0' },
-                        bottom: { value: '{size.l}' },
-                        left: { value: '{size.m}' },
-                        // доп. отступ иконки от верхней границы контейнера алерта, когда в алерте есть заголовок
-                        addon: {
-                            title: { value: '{size.3xs}' }
-                        }
+                        top: { value: '{size.l}'},
+                        right: { value: '0'},
+                        bottom: {value: '{size.l}'},
+                        left: {value: '{size.m}'}
+                    },
+                    padding: {
+                        top: {value: '{size.xxs}'}
                     }
                 },
                 title: {
@@ -50,8 +49,18 @@
                 // не нравится название
                 'button-stack': {
                     padding: {
-                        top: { value: '{size.xs}' },
+                        top: { value: '{size.s}' },
                         bottom: { value: '{size.3xs}' }
+                    }
+                }
+            },
+            'normal-no-title': {
+                icon: {
+                    margin: {
+                        top: { value: '{size.l}' }
+                    },
+                    padding: {
+                        top: { value: '{size.3xs}' }
                     }
                 }
             },
@@ -91,10 +100,9 @@
                     margin: {
                         top: { value: '{size.m}' },
                         right: { value: '{size.s}' },
-                        // доп. отступ иконки от верхней границы контейнера алерта, когда в алерте есть заголовок
-                        addon: {
-                            title: { value: '{size.3xs}' }
-                        }
+                    },
+                    padding: {
+                        top: { value: '{size.xxs}' }
                     }
                 },
                 title: {
@@ -112,6 +120,16 @@
                     padding: {
                         top: { value: '{size.s}' },
                         bottom: { value: '{size.3xs}' }
+                    }
+                }
+            },
+            'compact-no-title': {
+                icon: {
+                    margin: {
+                        top: { value: '{size.m}' }
+                    },
+                    padding: {
+                        top: { value: '{size.3xs}' }
                     }
                 }
             }

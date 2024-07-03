@@ -12,7 +12,7 @@
                 'content-gap': {
                     horizontal: { value: '{size.s}'},
                     // задает отступ между text и caption
-                    vertical: { value: '{size.3xs}' }
+                    vertical: { value: '0px' }
                 },
                 'focus-outline': {
                     width: { value: '{size.3xs}' }
@@ -20,7 +20,7 @@
             },
             text: {
                 padding: {
-                    vertical: { value: '{size.xxs}' }
+                    vertical: { value: '{size.3xs}' }
                 }
             }
         },

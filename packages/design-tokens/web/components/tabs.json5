@@ -4,7 +4,7 @@
             'tab-item': {
                 padding: {
                     horizontal: { value: '{size.m}'},
-                    vertical: { value: '{size.s}'}
+                    vertical: { value: '{size.xs}'}
                 },
                 'content-gap': {
                     horizontal: { value: '{size.xxs}'}

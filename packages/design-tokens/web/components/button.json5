@@ -5,7 +5,7 @@
             'border-width': { value: '{size.3xs}' },
             'border-radius': { value: '{size.s}' },
             'horizontal-padding': { value: '{size.m}' },
-            'content-padding': { value: '{size.s}' }
+            'content-padding': { value: '{size.xs}' }
         },
         font: {
             default: {

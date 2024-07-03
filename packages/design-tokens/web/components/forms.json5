@@ -1,11 +1,11 @@
 {
     forms: {
         light: {
-            label: { value: '{light.foreground.contrast-secondary}' },
+            label: { value: '{light.foreground.contrast}' },
             legend: { value: '{light.foreground.contrast}' }
         },
         dark: {
-            label: { value: '{dark.foreground.contrast-secondary}' },
+            label: { value: '{dark.foreground.contrast}' },
             legend: { value: '{dark.foreground.contrast}' }
         },
         size: {
