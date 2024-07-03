@@ -1,3 +1,9 @@
+# 3.0.0-rc.10 (2024-07-03)
+
+### Design Tokens
+
+ * feature  **tokens:** Updates for components after resizing ([#DS-2168](https://github.com/koobiq/design-tokens/issues/issue/DS-2168)) ([#20](https://github.com/koobiq/design-tokens/issues/20)) ([a61a7fa](https://github.com/koobiq/design-tokens/commit/a61a7fa174ae760a263f53023cd45e7b556c3c63))
+
 # 3.0.0-rc.9 (2024-06-28)
 
 ### Design Tokens
