@@ -597,7 +597,7 @@
             'font-family': { value: '{typography.title.font-family}' },
             'text-transform': { value: '{typography.title.text-transform}' },
             'font-feature-settings': { value: '{typography.title.font-feature-settings}' }
-          }
+        }
     },
     'zh-CN': {
         "body-strong": {

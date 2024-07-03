@@ -1,8 +1,8 @@
 {
     light: {
         theme: {
-            default: { value: '{palette.blue.50}' },
-            palette: { value: '{palette.blue}' }
+            default: { value: '{palette.royal-blue.50}' },
+            palette: { value: '{palette.royal-blue}' }
         },
         success: {
             default: { value: '{palette.green.50}' },
@@ -194,8 +194,8 @@
     // DARK THEME
     dark: {
         theme: {
-            default: { value: '{palette.blue.50}' },
-            palette: { value: '{palette.blue}' }
+            default: { value: '{palette.royal-blue.50}' },
+            palette: { value: '{palette.royal-blue}' }
         },
         success: {
             default: { value: '{palette.green.50}' },
