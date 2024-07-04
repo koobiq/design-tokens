@@ -34,13 +34,13 @@
                         'outer-circle-border': { value: 'transparent' },
                         'outer-circle-background': { value: '{light.background.bg}' },
                         'inner-circle-background': { value: 'transparent' },
-                        'outer-circle-shadow': { value: '0 0 0 2px {light.states.line.focus-theme}'}
+                        'outer-circle-shadow': { value: '0 0 0.1px 2px {light.states.line.focus-theme}'}
                     },
                     'checked-focused': {
                         'outer-circle-border': { value: 'transparent' },
                         'outer-circle-background': { value: '{light.background.theme}' },
                         'inner-circle-background': { value: '{light.foreground.white}' },
-                        'outer-circle-shadow': { value: '0 0 0 2px {light.states.line.focus-theme}'}
+                        'outer-circle-shadow': { value: '0 0 0.1px 2px {light.states.line.focus-theme}'}
                     },
                     'disabled': {
                         'outer-circle-border': { value: '{light.states.line.disabled}' },
@@ -81,13 +81,13 @@
                         'outer-circle-border': { value: 'transparent' },
                         'outer-circle-background': { value: '{light.states.background.error-less}'},
                         'inner-circle-background': { value: 'transparent'},
-                         'outer-circle-shadow': { value: '0 0 0 2px {light.states.line.focus-error}'}
+                         'outer-circle-shadow': { value: '0 0 0.1px 2px {light.states.line.focus-error}'}
                     },
                     'checked-focused': {
                         'outer-circle-border': { value: 'transparent' },
                         'outer-circle-background': { value: '{light.background.error}'},
                         'inner-circle-background': { value: '{light.icon.white}'},
-                        'outer-circle-shadow': { value: '0 0 0 2px {light.states.line.focus-error}'}
+                        'outer-circle-shadow': { value: '0 0 0.1px 2px {light.states.line.focus-error}'}
                     },
                     disabled: {
                         'outer-circle-border': { value: '{light.states.line.disabled}' },
@@ -131,13 +131,13 @@
                         'outer-circle-border': { value: 'transparent' },
                         'outer-circle-background': { value: '{dark.background.bg}' },
                         'inner-circle-background': { value: 'transparent' },
-                        'outer-circle-shadow': { value: '0 0 0 2px {dark.states.line.focus-theme}'}
+                        'outer-circle-shadow': { value: '0 0 0.1px 2px {dark.states.line.focus-theme}'}
                     },
                     'checked-focused': {
                         'outer-circle-border': { value: 'transparent' },
                         'outer-circle-background': { value: '{dark.background.theme}' },
                         'inner-circle-background': { value: '{dark.foreground.white}' },
-                        'outer-circle-shadow': { value: '0 0 0 2px {dark.states.line.focus-theme}'}
+                        'outer-circle-shadow': { value: '0 0 0.1px 2px {dark.states.line.focus-theme}'}
                     },
                     'disabled': {
                         'outer-circle-border': { value: '{dark.states.line.disabled}' },
@@ -178,13 +178,13 @@
                         'outer-circle-border': { value: 'transparent' },
                         'outer-circle-background': { value: '{dark.states.background.error-less}'},
                         'inner-circle-background': { value: 'transparent'},
-                         'outer-circle-shadow': { value: '0 0 0 2px {dark.states.line.focus-error}'}
+                         'outer-circle-shadow': { value: '0 0 0.1px 2px {dark.states.line.focus-error}'}
                     },
                     'checked-focused': {
                         'outer-circle-border': { value: 'transparent' },
                         'outer-circle-background': { value: '{dark.background.error}'},
                         'inner-circle-background': { value: '{dark.icon.white}'},
-                        'outer-circle-shadow': { value: '0 0 0 2px {dark.states.line.focus-error}'}
+                        'outer-circle-shadow': { value: '0 0 0.1px 2px {dark.states.line.focus-error}'}
                     },
                     disabled: {
                         'outer-circle-border': { value: '{dark.states.line.disabled}' },
