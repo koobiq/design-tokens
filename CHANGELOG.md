@@ -1,3 +1,9 @@
+# 3.0.0-rc.11 (2024-07-04)
+
+### Design Tokens
+
+ * bug fix  box-shadow gpu lines ([#21](https://github.com/koobiq/design-tokens/issues/21)) ([c87d055](https://github.com/koobiq/design-tokens/commit/c87d055457a65f12e082783ca9880272acf6f331))
+
 # 3.0.0-rc.10 (2024-07-03)
 
 ### Design Tokens
