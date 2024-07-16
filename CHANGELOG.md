@@ -1,3 +1,9 @@
+# 3.0.0-rc.12 (2024-07-16)
+
+### Design Tokens
+
+ * bug fix  **empty-state:** fix typography and paddings ([#DS-2619](https://github.com/koobiq/design-tokens/issues/issue/DS-2619)) ([#22](https://github.com/koobiq/design-tokens/issues/22)) ([05cc321](https://github.com/koobiq/design-tokens/commit/05cc3214aec93e0843ef70fa9164994e653ba4f6))
+
 # 3.0.0-rc.11 (2024-07-04)
 
 ### Design Tokens
