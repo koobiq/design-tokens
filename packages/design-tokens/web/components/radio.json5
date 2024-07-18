@@ -46,7 +46,7 @@
                         'outer-circle-border': { value: '{light.states.line.disabled}' },
                         'outer-circle-background': { value: '{light.states.background.disabled}'},
                         'inner-circle-background': { value: 'transparent'},
-                        caption: { value: '{light.states.icon.disabled}' }
+                        caption: { value: '{light.states.foreground.disabled}' }
                     }
                 }
             },
