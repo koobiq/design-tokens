@@ -143,7 +143,7 @@
                         'outer-circle-border': { value: '{dark.states.line.disabled}' },
                         'outer-circle-background': { value: '{dark.states.background.disabled}'},
                         'inner-circle-background': { value: 'transparent'},
-                        caption: { value: '{dark.states.icon.disabled}' }
+                        caption: { value: '{dark.states.foreground.disabled}' }
                     }
                 }
             },
