@@ -176,7 +176,7 @@
             "font-weight": { value: '500' },
             "font-family": { value: '{font.family.base}' },
             "text-transform": { value: 'null' },
-            "font-feature-settings": { value: '"calt", "ss01", "ss04", "tnum"' }
+            "font-feature-settings": { value: '"calt", "kern", "liga", "ss01", "ss04"' }
         },
         // caption-caps заменять на "caps.normal"
         "caption-caps": {
