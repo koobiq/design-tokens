@@ -13,14 +13,14 @@ const filterObj = {
 function filterOptions(platforms) {
     const platformObj = {};
 
-    platforms.map(p => Object.assign(platformObj, p));
+    platforms.map((p) => Object.assign(platformObj, p));
 
     Object.keys(platformObj).forEach((p) => {
-        platformObj[p].files = platformObj[p].files.map(f => ({
+        platformObj[p].files = platformObj[p].files.map((f) => ({
             ...f,
             ...filterObj,
             options: {
-                ...f.options ?? {},
+                ...(f.options ?? {}),
                 ...filterObj.options
             }
         }));
@@ -30,7 +30,7 @@ function filterOptions(platforms) {
 }
 
 function getSources(theme) {
-    return theme.buildPath.map(pathName => {
+    return theme.buildPath.map((pathName) => {
         if (pathName.startsWith('@')) {
             return join('node_modules', pathName);
         }
@@ -48,7 +48,6 @@ function getConfigs(theme) {
 }
 
 module.exports = (theme) => {
-
     return {
         source: [...getSources(theme)],
         platforms: getConfigs(theme)

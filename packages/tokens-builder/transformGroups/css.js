@@ -1,5 +1,4 @@
 module.exports = (StyleDictionary) => {
-
     StyleDictionary.registerTransformGroup({
         name: 'kbq/css',
         transforms: [

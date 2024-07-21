@@ -17,14 +17,14 @@ const prepareTokens = (package) => {
     copySync(`packages/${package}`, `dist/${package}`);
 
     copyFileSync('./LICENSE', `dist/${package}/LICENSE`);
-}
+};
 
 const updateVersion = (package, version) => {
     const packageContent = JSON.parse(readFileSync(`dist/${package}/package.json`, 'utf8'));
     packageContent.version = version;
 
-    writeFileSync(`dist/${package}/package.json`, JSON.stringify(packageContent, undefined, 2))
-}
+    writeFileSync(`dist/${package}/package.json`, JSON.stringify(packageContent, undefined, 2));
+};
 
 const updateTokensPackage = () => {
     const packagePath = 'dist/design-tokens/package.json';
@@ -41,14 +41,14 @@ const updateTokensPackage = () => {
             import: './web/js/index.mjs',
             default: './web/js/index.mjs'
         }
-    }
+    };
 
-    packageContent.types = "web/index.d.ts";
-    packageContent.module = "web/js/index.mjs";
+    packageContent.types = 'web/index.d.ts';
+    packageContent.module = 'web/js/index.mjs';
     packageContent.exports = exportsConfig;
 
-    writeFileSync(packagePath, JSON.stringify(packageContent, undefined, 2))
-}
+    writeFileSync(packagePath, JSON.stringify(packageContent, undefined, 2));
+};
 
 const currentVersion = JSON.parse(readFileSync('package.json', 'utf8')).version;
 

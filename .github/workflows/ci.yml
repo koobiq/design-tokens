@@ -17,3 +17,8 @@ jobs:
 
       - name: Build packages
         uses: ./.github/workflows/actions/build-packages
+
+      - name: Linters
+        run: |
+          yarn run prettier:lint
+          yarn run eslint

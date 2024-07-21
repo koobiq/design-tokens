@@ -6,7 +6,7 @@
 
 ## How to build a distribution with tokens
 
-- **Clone** this repository;
-- **Install** the packages using: `yarn install`
-- You can **build it** with this command: `yarn run build`
-- Then **find your distribution** in the following folder: `/dist`
+-   **Clone** this repository;
+-   **Install** the packages using: `yarn install`
+-   You can **build it** with this command: `yarn run build`
+-   Then **find your distribution** in the following folder: `/dist`

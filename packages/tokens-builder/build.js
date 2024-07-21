@@ -30,7 +30,6 @@ require('./formats/variables')(StyleDictionary);
 console.log('Build started...');
 console.log('==============================================');
 
-
 module.exports = (themeConfig) => {
     StyleDictionary.registerFileHeader({
         name: 'customHeader',
@@ -40,14 +39,14 @@ module.exports = (themeConfig) => {
 
     if (!themeConfig || themeConfig.length === 0) {
         console.error('Build Failed. Please set ThemeConfig, for example: ', {
-                name: 'default-theme',
-                buildPath: [
-                    `design-tokens/tokens/properties/**/*.json5`,
-                    `design-tokens/tokens/components/**/*.json5`
-                ],
-                outputPath: 'design-tokens/'
-            }
-        )
+            name: 'default-theme',
+            // prettier-ignore
+            buildPath: [
+                `design-tokens/tokens/properties/**/*.json5`,
+                `design-tokens/tokens/components/**/*.json5`
+            ],
+            outputPath: 'design-tokens/'
+        });
         process.exit(0);
     }
 
@@ -63,4 +62,4 @@ module.exports = (themeConfig) => {
 
     console.log('\n==============================================');
     console.log('\nBuild completed!');
-}
+};

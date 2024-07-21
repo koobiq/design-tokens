@@ -1,5 +1,4 @@
 module.exports = (StyleDictionary) => {
-
     StyleDictionary.registerTransform({
         name: 'kbq-attribute/palette',
         type: 'attribute',
