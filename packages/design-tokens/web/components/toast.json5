@@ -31,6 +31,9 @@
                 margin: {
                     right: { value: '{size.s}' },
                 },
+                padding: {
+                    top: { value: '18px' },
+                },
                 'border-radius': { value: '50%' }
             },
             'close-button': {
