@@ -1,3 +1,12 @@
+# 3.0.0-rc.14 (2024-07-26)
+
+### Design Tokens
+
+ * bug fix  **markdown:** md-typography contains old values ([#DS-2683](https://github.com/koobiq/design-tokens/issues/issue/DS-2683)) ([#26](https://github.com/koobiq/design-tokens/issues/26)) ([54b6775](https://github.com/koobiq/design-tokens/commit/54b67756f5418b1aa27e3dcbfcb7e15e3e327b67))
+ * bug fix  **radio:** fixed disabled label color ([#DS-2666](https://github.com/koobiq/design-tokens/issues/issue/DS-2666)) ([#23](https://github.com/koobiq/design-tokens/issues/23)) ([dad4da8](https://github.com/koobiq/design-tokens/commit/dad4da87f61fe94e5353d6a64eae92bf307f4abd))
+ * feature  added prettier and eslint support ([#25](https://github.com/koobiq/design-tokens/issues/25)) ([4ceb96a](https://github.com/koobiq/design-tokens/commit/4ceb96acd342f719d6080ee54c1b8fb05d0b5828))
+ * feature  **typography:** change opentype features and letter-spacing ([#DS-2620](https://github.com/koobiq/design-tokens/issues/issue/DS-2620)) ([#24](https://github.com/koobiq/design-tokens/issues/24)) ([76bb9e3](https://github.com/koobiq/design-tokens/commit/76bb9e368f001ab378aaf5a415b814065e9d39cf))
+
 # 3.0.0-rc.12 (2024-07-16)
 
 ### Design Tokens
