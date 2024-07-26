@@ -1,3 +1,10 @@
+# 3.0.0-rc.15 (2024-07-26)
+
+### Design Tokens
+
+ * bug fix  **button:** size border width ([#29](https://github.com/koobiq/design-tokens/issues/29)) ([4b52ea9](https://github.com/koobiq/design-tokens/commit/4b52ea9cd46a339f8e8404b3d01c48a8cbab7de6))
+ * bug fix  **markdown:** typography ([#DS-2629](https://github.com/koobiq/design-tokens/issues/issue/DS-2629)) ([#28](https://github.com/koobiq/design-tokens/issues/28)) ([c2e8cbb](https://github.com/koobiq/design-tokens/commit/c2e8cbb637c389a62b1c2af87034e578ad0c7acf))
+
 # 3.0.0-rc.14 (2024-07-26)
 
 ### Design Tokens
