@@ -2,7 +2,7 @@
     button: {
         size: {
             height: { value: '{size.3xl}' },
-            'border-width': { value: '{size.3xs}' },
+            'border-width': { value: '{size.border-width}' },
             'border-radius': { value: '{size.s}' },
             'horizontal-padding': { value: '{size.m}' },
             'content-padding': { value: '{size.xs}' }
