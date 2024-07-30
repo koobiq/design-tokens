@@ -53,7 +53,7 @@
                     horizontal: { value: '{size.m}' }
                  },
                 'fade-gradient': {
-                    width: { value: '36px' }
+                    width: { value: '{size.3xl}' }
                 }
             },
             collapse: {
@@ -301,7 +301,7 @@
                     shadow: { value: '0px 9px 8px -12px rgba(108, 115, 148, 0.5)' }
                 },
                 actionbar: {
-                    'fade-gradient': { value: 'linear-gradient(90deg, {light.background.bg-secondary} 0%, {light.background.bg-secondary} 100%);' },
+                    'fade-gradient': { value: 'linear-gradient(90deg, transparent, {light.background.bg-secondary});' },
                     background: { value: '{light.background.bg-secondary}' }
                 },
                 collapse: {
@@ -328,7 +328,7 @@
                     shadow: { value: '0px 9px 8px -12px rgba(108, 115, 148, 0.5)' }
                 },
                 actionbar: {
-                    'fade-gradient': { value: 'linear-gradient(90deg, {light.background.card} 0%, {light.background.card} 100%);' },
+                    'fade-gradient': { value: 'linear-gradient(90deg, transparent, {light.background.card});' },
                     background: { value: '{light.background.card}' }
                 },
                 collapse: {
@@ -566,7 +566,7 @@
                     shadow: { value: '0px 9px 8px -12px rgba(108, 115, 148, 0.5)' }
                 },
                 actionbar: {
-                    'fade-gradient': { value: 'linear-gradient(90deg, {dark.background.bg-secondary} 0%, {dark.background.bg-secondary} 100%);' },
+                    'fade-gradient': { value: 'linear-gradient(90deg, transparent, {dark.background.bg-secondary});' },
                     background: { value: '{dark.background.bg-secondary}' }
                 },
                 collapse: {
@@ -594,7 +594,7 @@
 
                 },
                 actionbar: {
-                    'fade-gradient': { value: 'linear-gradient(90deg, {dark.background.card} 0%, {dark.background.card} 100%);' },
+                    'fade-gradient': { value: 'linear-gradient(90deg, transparent, {dark.background.card});' },
                     background: { value: '{dark.background.card}' }
                 },
                 collapse: {
