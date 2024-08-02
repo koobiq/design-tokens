@@ -1,3 +1,9 @@
+# 3.0.0-rc.16 (2024-08-02)
+
+### Design Tokens
+
+ * feature  **code-block:** fade-gradient improvements: color and width ([#DS-2335](https://github.com/koobiq/design-tokens/issues/issue/DS-2335)) ([#30](https://github.com/koobiq/design-tokens/issues/30)) ([d063300](https://github.com/koobiq/design-tokens/commit/d0633004adb3cc3fc5874531b5fb97e2f53f1d80))
+
 # 3.0.0-rc.15 (2024-07-26)
 
 ### Design Tokens
