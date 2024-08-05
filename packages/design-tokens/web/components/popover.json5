@@ -24,7 +24,7 @@
                 padding: {
                     horizontal: { value: '{size.xxl}' },
                     top: { value: '{size.l}' },
-                    bottom: { value: '{size.xxl}'}
+                    bottom: { value: '{size.xs}'}
                 },
             },
             content: {
