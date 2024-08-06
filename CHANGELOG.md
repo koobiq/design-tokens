@@ -1,3 +1,10 @@
+# 3.0.0 (2024-08-06)
+
+### Design Tokens
+
+ * bug fix  **calendar:** selected item color in dark theme ([#DS-2685](https://github.com/koobiq/design-tokens/issues/issue/DS-2685)) ([#32](https://github.com/koobiq/design-tokens/issues/32)) ([7e214da](https://github.com/koobiq/design-tokens/commit/7e214da3c421660af04a525eb3fcae95976b6b9a))
+ * bug fix  **popover:** header padding bottom ([#DS-2723](https://github.com/koobiq/design-tokens/issues/issue/DS-2723)) [#33](https://github.com/koobiq/design-tokens/issues/33) ([f3adf01](https://github.com/koobiq/design-tokens/commit/f3adf019e7f0dafa1a379ed231c8fbc0158fedbe))
+
 # 3.0.0-rc.16 (2024-08-02)
 
 ### Design Tokens
