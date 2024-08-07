@@ -6,7 +6,10 @@ module.exports = {
                 destination: 'css-tokens.css',
                 format: 'css/variables',
                 filter: 'css-variables',
-                prefix: 'kbq'
+                prefix: 'kbq',
+                options: {
+                    outputReferences: true
+                }
             },
             {
                 destination: 'css-tokens-light.css',
@@ -32,7 +35,9 @@ module.exports = {
                 filter: 'css-variables-font',
                 prefix: 'kbq',
                 options: {
-                    selector: '.kbq-font'
+                    selector: '.kbq-font',
+                    // warnings expected, since global fonts are defined in css-tokens.css
+                    outputReferences: true
                 }
             }
         ]
