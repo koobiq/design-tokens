@@ -13,16 +13,15 @@
         "koobiq"
     ],
     "scripts": {
+        "prebuild": "rimraf dist/",
+        "build:index-common": "yarn run rollup dist/design-tokens/web/js/index.mjs --file dist/design-tokens/web/js/index.cjs --format cjs",
+        "build": "node tools/build.js && yarn run build:index-common",
         "stage:commit": "koobiq-cli stage-commit -c \"Design Tokens\"",
-        "-----Release-----": "----------------------------------------------------------------------------------------",
         "release:publish:ci-github": "koobiq-cli publish-ci-github",
         "release:publish:ci-gitlab": "koobiq-cli publish-ci-gitlab",
-        "-----Build-----": "------------------------------------------------------------------------------------------",
-        "build:index-common": "yarn run rollup dist/design-tokens/web/js/index.mjs --file dist/design-tokens/web/js/index.cjs --format cjs",
-        "build": "rimraf dist && node tools/build.js && yarn run build:index-common",
-        "-----CI-----": "---------------------------------------------------------------------------------------------",
-        "prettier": "prettier '**/*.{md,yml,json,js}' --check",
-        "prettier:fix": "yarn run prettier --write",
+        "prettier": "prettier '**/*.{md,yml,json,js}'",
+        "prettier:lint": "yarn run prettier --check",
+        "prettier:fix": "yarn run prettier --list-different --write",
         "eslint": "eslint .",
         "eslint:fix": "yarn run eslint --fix"
     },
