@@ -12,7 +12,7 @@
                 content: {
                     padding: {
                         top: { value: '{size.xxs}' },
-                        bottom: {value: '{size.l}' },
+                        bottom: { value: '{size.l}' },
                         horizontal: { value: '{size.xl}' }
                     },
                     // Расстояние между нумерацией строк и строками
@@ -51,7 +51,7 @@
                 padding: {
                     vertical: { value: '{size.s}' },
                     horizontal: { value: '{size.m}' }
-                 },
+                },
                 'fade-gradient': {
                     width: { value: '{size.3xl}' }
                 }
@@ -70,16 +70,16 @@
                     }
                 }
             }
-       },
+        },
         font: {
             default: {
-                "font-size": { value: '{typography.mono-codeblock.font-size}' },
-                "line-height": { value: '{typography.mono-codeblock.line-height}' },
-                "letter-spacing": { value: '{typography.mono-codeblock.letter-spacing}' },
-                "font-weight": { value: '{typography.mono-codeblock.font-weight}' },
-                "font-family": { value: '{typography.mono-codeblock.font-family}' },
-                "text-transform": { value: '{typography.mono-codeblock.text-transform}' },
-                "font-feature-settings": { value: '{typography.mono-codeblock.font-feature-settings}' }
+                'font-size': { value: '{typography.mono-codeblock.font-size}' },
+                'line-height': { value: '{typography.mono-codeblock.line-height}' },
+                'letter-spacing': { value: '{typography.mono-codeblock.letter-spacing}' },
+                'font-weight': { value: '{typography.mono-codeblock.font-weight}' },
+                'font-family': { value: '{typography.mono-codeblock.font-family}' },
+                'text-transform': { value: '{typography.mono-codeblock.text-transform}' },
+                'font-feature-settings': { value: '{typography.mono-codeblock.font-feature-settings}' }
             },
             hljs: {
                 addition: {
@@ -255,8 +255,8 @@
                     'font-weight': { value: 'null' }
                 },
                 'title.class': {
-                  'font-style': { value: 'normal' },
-                  'font-weight': { value: 500 }
+                    'font-style': { value: 'normal' },
+                    'font-weight': { value: 500 }
                 },
                 'title.class.inherited': {
                     'font-style': { value: 'null' },
@@ -289,12 +289,12 @@
             }
         },
         light: {
-            'filled': {
+            filled: {
                 container: {
                     background: { value: '{light.background.bg-secondary}' },
                     border: {
                         color: { value: 'transparent' }
-                    },
+                    }
                 },
                 header: {
                     background: { value: '{light.background.bg-secondary}' },
@@ -309,14 +309,16 @@
                         background: { value: 'transparent' }
                     },
                     collapsed: {
-                        background: { value: 'linear-gradient(180deg, hsla(225, 15%, 95%, 0%) 0%, hsla(225, 15%, 95%, 100%) 100%)' }
+                        background: {
+                            value: 'linear-gradient(180deg, hsla(225, 15%, 95%, 0%) 0%, hsla(225, 15%, 95%, 100%) 100%)'
+                        }
                     },
                     'button-expand': {
                         background: { value: '{light.background.bg-secondary}' }
                     }
                 }
             },
-            'outline': {
+            outline: {
                 container: {
                     background: { value: '{light.background.card}' },
                     border: {
@@ -336,7 +338,9 @@
                         background: { value: 'transparent' }
                     },
                     collapsed: {
-                        background: { value: 'linear-gradient(180deg, hsla(0, 0%, 100%, 0%) 0%, hsla(0, 0%, 100%, 100%) 100%)' }
+                        background: {
+                            value: 'linear-gradient(180deg, hsla(0, 0%, 100%, 0%) 0%, hsla(0, 0%, 100%, 100%) 100%)'
+                        }
                     },
                     'button-expand': {
                         background: { value: '{light.background.card}' }
@@ -405,7 +409,7 @@
                     color: { value: 'null' }
                 },
                 'line-numbers': {
-                    color: { value:  '{light.foreground.contrast-secondary}'}
+                    color: { value: '{light.foreground.contrast-secondary}' }
                 },
                 link: {
                     background: { value: 'null' },
@@ -551,10 +555,10 @@
                     background: { value: 'null' },
                     color: { value: 'null' }
                 }
-                }
+            }
         },
         dark: {
-            'filled': {
+            filled: {
                 container: {
                     background: { value: '{dark.background.bg-secondary}' },
                     border: {
@@ -574,14 +578,16 @@
                         background: { value: 'transparent' }
                     },
                     collapsed: {
-                        background: { value: 'linear-gradient(180deg, hsla(229, 15%, 15%, 0%) 0%, hsla(229, 15%, 15%, 1%) 100%)' }
+                        background: {
+                            value: 'linear-gradient(180deg, hsla(229, 15%, 15%, 0%) 0%, hsla(229, 15%, 15%, 1%) 100%)'
+                        }
                     },
                     'button-expand': {
                         background: { value: '{dark.background.bg-secondary}' }
                     }
                 }
             },
-            'outline': {
+            outline: {
                 container: {
                     background: { value: '{dark.background.card}' },
                     border: {
@@ -590,8 +596,7 @@
                 },
                 header: {
                     background: { value: '{dark.background.card}' },
-                    shadow: { value: '0px 9px 8px -12px rgba(108, 115, 148, 0.5)' },
-
+                    shadow: { value: '0px 9px 8px -12px rgba(108, 115, 148, 0.5)' }
                 },
                 actionbar: {
                     'fade-gradient': { value: 'linear-gradient(90deg, transparent, {dark.background.card})' },
@@ -602,7 +607,9 @@
                         background: { value: 'transparent' }
                     },
                     collapsed: {
-                        background: { value: 'linear-gradient(180deg, hsla(229, 15%, 12%, 0%) 0%, hsla(229, 15%, 12%, 1%) 100%)' }
+                        background: {
+                            value: 'linear-gradient(180deg, hsla(229, 15%, 12%, 0%) 0%, hsla(229, 15%, 12%, 1%) 100%)'
+                        }
                     },
                     'button-expand': {
                         background: { value: '{dark.background.card}' }
@@ -671,7 +678,7 @@
                     color: { value: 'null' }
                 },
                 'line-numbers': {
-                    color: { value:  '{dark.foreground.contrast-secondary}'}
+                    color: { value: '{dark.foreground.contrast-secondary}' }
                 },
                 link: {
                     background: { value: 'null' },
@@ -683,7 +690,7 @@
                 },
                 meta: {
                     background: { value: 'null' },
-                    color: { value: '{palette.blue.35}' }
+                    color: { value: '{palette.blue.65}' }
                 },
                 'meta keyword': {
                     background: { value: 'null' },
@@ -691,7 +698,7 @@
                 },
                 'meta string': {
                     background: { value: 'null' },
-                    color: { value: '{palette.blue.35}' }
+                    color: { value: '{palette.blue.65}' }
                 },
                 'meta.prompt': {
                     background: { value: 'null' },
@@ -699,7 +706,7 @@
                 },
                 name: {
                     background: { value: 'null' },
-                    color: { value: '{palette.blue.35}' }
+                    color: { value: '{palette.blue.65}' }
                 },
                 number: {
                     background: { value: 'null' },
@@ -727,7 +734,7 @@
                 },
                 regexp: {
                     background: { value: 'null' },
-                    color: { value: '{palette.green.25}' }
+                    color: { value: '{palette.green.40}' }
                 },
                 section: {
                     background: { value: 'null' },
@@ -751,11 +758,11 @@
                 },
                 'selector-tag': {
                     background: { value: 'null' },
-                    color: { value: '{palette.blue.35}' }
+                    color: { value: '{palette.blue.65}' }
                 },
                 string: {
                     background: { value: 'null' },
-                    color: { value: '{palette.green.25}' }
+                    color: { value: '{palette.green.40}' }
                 },
                 strong: {
                     background: { value: 'null' },
@@ -767,7 +774,7 @@
                 },
                 symbol: {
                     background: { value: 'null' },
-                    color: { value: '{palette.blue.35}' }
+                    color: { value: '{palette.blue.65}' }
                 },
                 tag: {
                     background: { value: 'null' },
@@ -783,7 +790,7 @@
                 },
                 title: {
                     background: { value: 'null' },
-                    color: { value: '{palette.blue.35}' }
+                    color: { value: '{palette.blue.65}' }
                 },
                 'title.class': {
                     background: { value: 'null' },
