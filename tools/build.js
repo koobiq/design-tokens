@@ -4,8 +4,8 @@ build([
     {
         name: 'design-tokens',
         buildPath: [
-            `packages/design-tokens/web/properties/**/*.json5`,
-            `packages/design-tokens/web/components/**/*.json5`
+            `packages/design-tokens/web/properties/**/*.jsonc`,
+            `packages/design-tokens/web/components/**/*.jsonc`
         ],
         outputPath: 'dist/design-tokens/web/'
     }

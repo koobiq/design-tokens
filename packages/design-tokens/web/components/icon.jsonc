@@ -1,0 +1,44 @@
+{
+    "icon": {
+        "light": {
+            "theme": {
+                "color": { "value": "{light.icon.theme}" }
+            },
+            "contrast": {
+                "color": { "value": "{light.icon.contrast}" }
+            },
+            "fade-contrast": {
+                "color": { "value": "{light.icon.contrast-fade}" }
+            },
+            "error": {
+                "color": { "value": "{light.icon.error}" }
+            },
+            "success": {
+                "color": { "value": "{light.icon.success}" }
+            },
+            "warning": {
+                "color": { "value": "{light.icon.warning}" }
+            }
+        },
+        "dark": {
+            "theme": {
+                "color": { "value": "{dark.icon.theme}" }
+            },
+            "contrast": {
+                "color": { "value": "{dark.icon.contrast}" }
+            },
+            "fade-contrast": {
+                "color": { "value": "{dark.icon.contrast-fade}" }
+            },
+            "error": {
+                "color": { "value": "{dark.icon.error}" }
+            },
+            "success": {
+                "color": { "value": "{dark.icon.success}" }
+            },
+            "warning": {
+                "color": { "value": "{dark.icon.warning}" }
+            }
+        }
+    }
+}

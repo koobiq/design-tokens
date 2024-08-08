@@ -20,5 +20,5 @@ jobs:
 
       - name: Linters
         run: |
-          yarn run prettier:lint
+          yarn run prettier
           yarn run eslint

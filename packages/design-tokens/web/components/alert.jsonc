@@ -1,0 +1,319 @@
+{
+    "alert": {
+        "size": {
+            "normal": {
+                "container": {
+                    "border": {
+                        // завести токен для радиуса контейнеров (сейчас 12px алерты, модалки, контейнеры)
+                        "radius": { "value": "{size.m}" }
+                    },
+                    "padding": {
+                        "top": { "value": "0" },
+                        "right": { "value": "{size.s}" },
+                        "bottom": { "value": "0" },
+                        "left": { "value": "{size.s}" }
+                    }
+                },
+                // обертка для содержимого (заголовок, текст, кнопки)
+                "content": {
+                    "padding": {
+                        "top": { "value": "{size.l}" },
+                        "right": { "value": "{size.s}" },
+                        "bottom": { "value": "{size.l}" },
+                        "left": { "value": "{size.m}" }
+                    }
+                },
+                "icon": {
+                    "margin": {
+                        "top": { "value": "{size.l}" },
+                        "right": { "value": "0" },
+                        "bottom": { "value": "{size.l}" },
+                        "left": { "value": "{size.m}" }
+                    },
+                    "padding": {
+                        "top": { "value": "{size.xxs}" }
+                    }
+                },
+                "title": {
+                    "margin": {
+                        "bottom": { "value": "{size.xxs}" }
+                    }
+                },
+                "close-button": {
+                    // переделал токены. см спеку
+                    "margin": {
+                        "top": { "value": "{size.s}" },
+                        "left": { "value": "{size.3xs}" }
+                    }
+                },
+                // не нравится название
+                "button-stack": {
+                    "padding": {
+                        "top": { "value": "{size.s}" },
+                        "bottom": { "value": "{size.3xs}" }
+                    }
+                }
+            },
+            "normal-no-title": {
+                "icon": {
+                    "margin": {
+                        "top": { "value": "{size.l}" }
+                    },
+                    "padding": {
+                        "top": { "value": "{size.3xs}" }
+                    }
+                }
+            },
+            "compact": {
+                "container": {
+                    // удалил мин. высоту. вроде как без нее можно
+                    // 'min-height': { value: '48px'},
+                    // удалил. заменил на токены составных частей (иконка, тайтл). см. ниже
+                    // 'content-gap': {
+                    //     horizontal: { value: '{size.m}' },
+                    //     vertical: { value: '{size.xxs}' }
+                    // },
+                    "border": {
+                        // завести токен для радиуса контейнеров (сейчас 12px алерты, модалки, контейнеры)
+                        "radius": { "value": "{size.m}" }
+                    },
+                    "padding": {
+                        // vertical: { value: '{size.l}' },
+                        // horizontal: { value: '{size.xl}' },
+                        // переделываю структуру, см спеку
+                        "top": { "value": "0" },
+                        "right": { "value": "{size.s}" },
+                        "bottom": { "value": "0" },
+                        "left": { "value": "{size.l}" }
+                    }
+                },
+                // обертка для содержимого (заголовок, текст, кнопки)
+                "content": {
+                    "padding": {
+                        "top": { "value": "{size.m}" },
+                        "right": { "value": "{size.s}" },
+                        "bottom": { "value": "{size.m}" },
+                        "left": { "value": "0" }
+                    }
+                },
+                "icon": {
+                    "margin": {
+                        "top": { "value": "{size.m}" },
+                        "right": { "value": "{size.s}" }
+                    },
+                    "padding": {
+                        "top": { "value": "{size.xxs}" }
+                    }
+                },
+                "title": {
+                    "margin": {
+                        "bottom": { "value": "{size.3xs}" }
+                    }
+                },
+                "close-button": {
+                    "margin": {
+                        "top": { "value": "{size.s}" },
+                        "left": { "value": "{size.3xs}" }
+                    }
+                },
+                "button-stack": {
+                    "padding": {
+                        "top": { "value": "{size.s}" },
+                        "bottom": { "value": "{size.3xs}" }
+                    }
+                }
+            },
+            "compact-no-title": {
+                "icon": {
+                    "margin": {
+                        "top": { "value": "{size.m}" }
+                    },
+                    "padding": {
+                        "top": { "value": "{size.3xs}" }
+                    }
+                }
+            }
+        },
+        "font": {
+            "title": {
+                "font-size": { "value": "{typography.subheading.font-size}" },
+                "line-height": { "value": "{typography.subheading.line-height}" },
+                "letter-spacing": { "value": "{typography.subheading.letter-spacing}" },
+                "font-weight": { "value": "{typography.subheading.font-weight}" },
+                "font-family": { "value": "{typography.subheading.font-family}" },
+                "text-transform": { "value": "{typography.subheading.text-transform}" },
+                "font-feature-settings": { "value": "{typography.subheading.font-feature-settings}" }
+            },
+            "title-compact": {
+                "font-size": { "value": "{typography.text-big-strong.font-size}" },
+                "line-height": { "value": "{typography.text-big-strong.line-height}" },
+                "letter-spacing": { "value": "{typography.text-big-strong.letter-spacing}" },
+                "font-weight": { "value": "{typography.text-big-strong.font-weight}" },
+                "font-family": { "value": "{typography.text-big-strong.font-family}" },
+                "text-transform": { "value": "{typography.text-big-strong.text-transform}" },
+                "font-feature-settings": { "value": "{typography.text-big-strong.font-feature-settings}" }
+            },
+            "text": {
+                "font-size": { "value": "{typography.text-normal.font-size}" },
+                "line-height": { "value": "{typography.text-normal.line-height}" },
+                "letter-spacing": { "value": "{typography.text-normal.letter-spacing}" },
+                "font-weight": { "value": "{typography.text-normal.font-weight}" },
+                "font-family": { "value": "{typography.text-normal.font-family}" },
+                "text-transform": { "value": "{typography.text-normal.text-transform}" },
+                "font-feature-settings": { "value": "{typography.text-normal.font-feature-settings}" }
+            }
+        },
+        "light": {
+            "default": {
+                "contrast": {
+                    "container": {
+                        "background": { "value": "{light.background.contrast-fade}" },
+                        "title": { "value": "{light.foreground.contrast}" },
+                        "text": { "value": "{light.foreground.contrast}" }
+                    }
+                },
+                "error": {
+                    "container": {
+                        "background": { "value": "{light.background.contrast-fade}" },
+                        "title": { "value": "{light.foreground.contrast}" },
+                        "text": { "value": "{light.foreground.contrast}" }
+                    }
+                },
+                "warning": {
+                    "container": {
+                        "background": { "value": "{light.background.contrast-fade}" },
+                        "title": { "value": "{light.foreground.contrast}" },
+                        "text": { "value": "{light.foreground.contrast}" }
+                    }
+                },
+                "success": {
+                    "container": {
+                        "background": { "value": "{light.background.contrast-fade}" },
+                        "title": { "value": "{light.foreground.contrast}" },
+                        "text": { "value": "{light.foreground.contrast}" }
+                    }
+                },
+                "theme": {
+                    "container": {
+                        "background": { "value": "{light.background.contrast-fade}" },
+                        "title": { "value": "{light.foreground.contrast}" },
+                        "text": { "value": "{light.foreground.contrast}" }
+                    }
+                }
+            },
+            "colored": {
+                "contrast": {
+                    "container": {
+                        "background": { "value": "{light.background.contrast-fade}" },
+                        "title": { "value": "{light.foreground.contrast}" },
+                        "text": { "value": "{light.foreground.contrast}" }
+                    }
+                },
+                "error": {
+                    "container": {
+                        "background": { "value": "{light.background.error-fade}" },
+                        "title": { "value": "{light.foreground.contrast}" },
+                        "text": { "value": "{light.foreground.contrast}" }
+                    }
+                },
+                "warning": {
+                    "container": {
+                        "background": { "value": "{light.background.warning-fade}" },
+                        "title": { "value": "{light.foreground.contrast}" },
+                        "text": { "value": "{light.foreground.contrast}" }
+                    }
+                },
+                "success": {
+                    "container": {
+                        "background": { "value": "{light.background.success-fade}" },
+                        "title": { "value": "{light.foreground.contrast}" },
+                        "text": { "value": "{light.foreground.contrast}" }
+                    }
+                },
+                "theme": {
+                    "container": {
+                        "background": { "value": "{light.background.theme-fade}" },
+                        "title": { "value": "{light.foreground.contrast}" },
+                        "text": { "value": "{light.foreground.contrast}" }
+                    }
+                }
+            }
+        },
+        "dark": {
+            "default": {
+                "contrast": {
+                    "container": {
+                        "background": { "value": "{dark.background.contrast-fade}" },
+                        "title": { "value": "{dark.foreground.contrast}" },
+                        "text": { "value": "{dark.foreground.contrast}" }
+                    }
+                },
+                "error": {
+                    "container": {
+                        "background": { "value": "{dark.background.contrast-fade}" },
+                        "title": { "value": "{dark.foreground.contrast}" },
+                        "text": { "value": "{dark.foreground.contrast}" }
+                    }
+                },
+                "warning": {
+                    "container": {
+                        "background": { "value": "{dark.background.contrast-fade}" },
+                        "title": { "value": "{dark.foreground.contrast}" },
+                        "text": { "value": "{dark.foreground.contrast}" }
+                    }
+                },
+                "success": {
+                    "container": {
+                        "background": { "value": "{dark.background.contrast-fade}" },
+                        "title": { "value": "{dark.foreground.contrast}" },
+                        "text": { "value": "{dark.foreground.contrast}" }
+                    }
+                },
+                "theme": {
+                    "container": {
+                        "background": { "value": "{dark.background.contrast-fade}" },
+                        "title": { "value": "{dark.foreground.contrast}" },
+                        "text": { "value": "{dark.foreground.contrast}" }
+                    }
+                }
+            },
+            "colored": {
+                "contrast": {
+                    "container": {
+                        "background": { "value": "{dark.background.contrast-fade}" },
+                        "title": { "value": "{dark.foreground.contrast}" },
+                        "text": { "value": "{dark.foreground.contrast}" }
+                    }
+                },
+                "error": {
+                    "container": {
+                        "background": { "value": "{dark.background.error-fade}" },
+                        "title": { "value": "{dark.foreground.contrast}" },
+                        "text": { "value": "{dark.foreground.contrast}" }
+                    }
+                },
+                "warning": {
+                    "container": {
+                        "background": { "value": "{dark.background.warning-fade}" },
+                        "title": { "value": "{dark.foreground.contrast}" },
+                        "text": { "value": "{dark.foreground.contrast}" }
+                    }
+                },
+                "success": {
+                    "container": {
+                        "background": { "value": "{dark.background.success-fade}" },
+                        "title": { "value": "{dark.foreground.contrast}" },
+                        "text": { "value": "{dark.foreground.contrast}" }
+                    }
+                },
+                "theme": {
+                    "container": {
+                        "background": { "value": "{dark.background.theme-fade}" },
+                        "title": { "value": "{dark.foreground.contrast}" },
+                        "text": { "value": "{dark.foreground.contrast}" }
+                    }
+                }
+            }
+        }
+    }
+}

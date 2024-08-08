@@ -1,0 +1,23 @@
+{
+    "textarea": {
+        "size": {
+            "min-height": { "value": "64px" },
+            "max-height": { "value": "96px" },
+            "padding": {
+                "vertical": { "value": "{size.xs}" },
+                "horizontal": { "value": "{size.m}" }
+            }
+        },
+        "font": {
+            "default": {
+                "font-size": { "value": "{typography.text-normal.font-size}" },
+                "line-height": { "value": "{typography.text-normal.line-height}" },
+                "letter-spacing": { "value": "{typography.text-normal.letter-spacing}" },
+                "font-weight": { "value": "{typography.text-normal.font-weight}" },
+                "font-family": { "value": "{typography.text-normal.font-family}" },
+                "text-transform": { "value": "{typography.text-normal.text-transform}" },
+                "font-feature-settings": { "value": "{typography.text-normal.font-feature-settings}" }
+            }
+        }
+    }
+}
