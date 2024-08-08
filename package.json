@@ -19,9 +19,8 @@
         "stage:commit": "koobiq-cli stage-commit -c \"Design Tokens\"",
         "release:publish:ci-github": "koobiq-cli publish-ci-github",
         "release:publish:ci-gitlab": "koobiq-cli publish-ci-gitlab",
-        "prettier": "prettier '**/*.{md,yml,json,js}'",
-        "prettier:lint": "yarn run prettier --check",
-        "prettier:fix": "yarn run prettier --list-different --write",
+        "prettier": "prettier '**/*.{md,yml,json,jsonc,js}' --check",
+        "prettier:fix": "yarn run prettier --write",
         "eslint": "eslint .",
         "eslint:fix": "yarn run eslint --fix"
     },

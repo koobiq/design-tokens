@@ -42,8 +42,8 @@ module.exports = (themeConfig) => {
             name: 'default-theme',
             // prettier-ignore
             buildPath: [
-                `design-tokens/tokens/properties/**/*.json5`,
-                `design-tokens/tokens/components/**/*.json5`
+                `design-tokens/tokens/properties/**/*.jsonc`,
+                `design-tokens/tokens/components/**/*.jsonc`
             ],
             outputPath: 'design-tokens/'
         });

@@ -1,0 +1,145 @@
+{
+    "risk-level": {
+        "size": {
+            "padding": {
+                "vertical": { "value": "{size.3xs}" },
+                "horizontal": { "value": "{size.s}" }
+            },
+            "border": {
+                "width": { "value": "{size.border-width}" },
+                "radius": { "value": "{size.xxs}" }
+            }
+        },
+        "font": {
+            "text": {
+                "font-size": { "value": "{typography.subheading.font-size}" },
+                "line-height": { "value": "{typography.subheading.line-height}" },
+                "letter-spacing": { "value": "{typography.subheading.letter-spacing}" },
+                "font-weight": { "value": "{typography.subheading.font-weight}" },
+                "font-family": { "value": "{typography.subheading.font-family}" },
+                "text-transform": { "value": "{typography.subheading.text-transform}" },
+                "font-feature-settings": { "value": "{typography.subheading.font-feature-settings}" }
+            }
+        },
+        "light": {
+            "filled": {
+                "fade-off": {
+                    "success": {
+                        "background": { "value": "{light.background.success}" },
+                        "text": { "value": "{light.foreground.white}" }
+                    },
+                    "warning": {
+                        "background": { "value": "{light.background.warning}" },
+                        "text": { "value": "{light.foreground.white}" }
+                    },
+                    "error": {
+                        "background": { "value": "{light.background.error}" },
+                        "text": { "value": "{light.foreground.white}" }
+                    }
+                },
+                "fade-on": {
+                    "contrast": {
+                        "background": { "value": "{light.background.contrast-fade}" },
+                        "text": { "value": "{light.foreground.contrast}" }
+                    },
+                    "success": {
+                        "background": { "value": "{light.background.success-fade}" },
+                        "text": { "value": "{light.foreground.success}" }
+                    },
+                    "warning": {
+                        "background": { "value": "{light.background.warning-fade}" },
+                        "text": { "value": "{light.foreground.warning}" }
+                    },
+                    "error": {
+                        "background": { "value": "{light.background.error-fade}" },
+                        "text": { "value": "{light.foreground.error}" }
+                    }
+                }
+            },
+            "outline": {
+                "fade-on": {
+                    "contrast": {
+                        "background": { "value": "transparent" },
+                        "text": { "value": "{light.foreground.contrast}" },
+                        "border": { "value": "{light.line.contrast-fade}" }
+                    },
+                    "success": {
+                        "background": { "value": "transparent" },
+                        "text": { "value": "{light.foreground.success}" },
+                        "border": { "value": "{light.line.success-fade}" }
+                    },
+                    "warning": {
+                        "background": { "value": "transparent" },
+                        "text": { "value": "{light.foreground.warning}" },
+                        "border": { "value": "{light.line.warning-fade}" }
+                    },
+                    "error": {
+                        "background": { "value": "transparent" },
+                        "text": { "value": "{light.foreground.error}" },
+                        "border": { "value": "{light.line.error-fade}" }
+                    }
+                }
+            }
+        },
+        "dark": {
+            "filled": {
+                "fade-off": {
+                    "success": {
+                        "background": { "value": "{dark.background.success}" },
+                        "text": { "value": "{dark.foreground.white}" }
+                    },
+                    "warning": {
+                        "background": { "value": "{dark.background.warning}" },
+                        "text": { "value": "{dark.foreground.white}" }
+                    },
+                    "error": {
+                        "background": { "value": "{dark.background.error}" },
+                        "text": { "value": "{dark.foreground.white}" }
+                    }
+                },
+                "fade-on": {
+                    "contrast": {
+                        "background": { "value": "{dark.background.contrast-fade}" },
+                        "text": { "value": "{dark.foreground.contrast}" }
+                    },
+                    "success": {
+                        "background": { "value": "{dark.background.success-fade}" },
+                        "text": { "value": "{dark.foreground.success}" }
+                    },
+                    "warning": {
+                        "background": { "value": "{dark.background.warning-fade}" },
+                        "text": { "value": "{dark.foreground.warning}" }
+                    },
+                    "error": {
+                        "background": { "value": "{dark.background.error-fade}" },
+                        "text": { "value": "{dark.foreground.error}" }
+                    }
+                }
+            },
+            "outline": {
+                "fade-on": {
+                    "contrast": {
+                        "background": { "value": "transparent" },
+                        "text": { "value": "{dark.foreground.contrast}" },
+                        "border": { "value": "{dark.line.contrast-fade}" }
+                    },
+                    "success": {
+                        "background": { "value": "transparent" },
+                        "text": { "value": "{dark.foreground.success}" },
+                        "border": { "value": "{dark.line.success-fade}" }
+                    },
+                    "warning": {
+                        "background": { "value": "transparent" },
+                        "text": { "value": "{dark.foreground.warning}" },
+                        "border": { "value": "{dark.line.warning-fade}" }
+                    },
+                    "error": {
+                        "background": { "value": "transparent" },
+                        "text": { "value": "{dark.foreground.error}" },
+                        "border": { "value": "{dark.line.error-fade}" }
+                    }
+                }
+            }
+        }
+    }
+}

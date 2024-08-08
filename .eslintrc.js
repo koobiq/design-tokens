@@ -9,7 +9,10 @@ const config = {
         es2022: true
     },
     ignorePatterns: ['dist', 'node_modules'],
-    extends: ['plugin:prettier/recommended']
+    extends: [
+        // should be last
+        'plugin:prettier/recommended'
+    ]
 };
 
 module.exports = config;
