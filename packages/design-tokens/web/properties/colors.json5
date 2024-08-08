@@ -203,7 +203,7 @@
                 'theme-hover': { value: '{light.theme.palette.value.45}' },
                 'theme-active': { value: '{light.theme.palette.value.40}' },
                 //  CONTRAST
-                disabled: { value: '{light.contrast.palette.value.15A32}' }
+                disabled: { value: '{light.contrast.palette.value.15A32}' },
                 'contrast-hover': { value: '{light.contrast.palette.value.10}' },
                 'contrast-active': { value: '{light.contrast.palette.value.10}' },
                 'contrast-fade-hover': { value: '{light.contrast.palette.value.50}' },
@@ -219,7 +219,7 @@
                 'warning-active': { value: '{light.warning.palette.value.42}' },
                 //  VISITED
                 'visited-hover': { value: '{light.purple.palette.value.50}' },
-                'visited-active': { value: '{light.purple.palette.value.40}' },
+                'visited-active': { value: '{light.purple.palette.value.40}' }
             },
             line: {
                 // THEME
@@ -228,7 +228,7 @@
                 // CONTRAST
                 disabled: { value: '{light.contrast.palette.value.15A32}' },
                 // ERROR
-                'focus-error': { value: '{light.error.palette.value.45}' },
+                'focus-error': { value: '{light.error.palette.value.45}' }
             },
             // TODO: нижнее будет удалено, после удаления из компонентов ↓
             'focused-color': { value: '{light.theme.palette.value.50}' },
@@ -427,7 +427,7 @@
                 'error-less': { value: '{dark.error.palette.value.6}' }, // TODO: будет удалено, после удаления из компонентов
                 //  WARNING
                 'warning-fade-hover': { value: '{dark.warning.palette.value.13}' },
-                'warning-fade-active': { value: '{dark.warning.palette.value.16}' },
+                'warning-fade-active': { value: '{dark.warning.palette.value.16}' }
             },
             foreground: {
                 //  THEME
