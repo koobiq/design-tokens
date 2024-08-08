@@ -6,10 +6,19 @@
 const config = {
     root: true,
     env: {
-        es2022: true
+        es2022: true,
+        commonjs: true,
+        node: true
     },
-    ignorePatterns: ['dist', 'node_modules'],
-    extends: ['plugin:prettier/recommended']
+    extends: [
+        'eslint:recommended',
+        // should be last
+        'plugin:prettier/recommended'
+    ],
+    rules: {
+        'no-useless-escape': 0,
+        'no-prototype-builtins': 0
+    }
 };
 
 module.exports = config;
