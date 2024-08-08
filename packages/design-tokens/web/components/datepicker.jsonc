@@ -1,131 +1,131 @@
 {
-    datepicker: {
-        size: {
-            container: {
-                padding: {
-                    vertical: { value: '{size.m}' }
+    "datepicker": {
+        "size": {
+            "container": {
+                "padding": {
+                    "vertical": { "value": "{size.m}" }
                 },
-                border: {
-                    radius: { value: '{size.s}'}
+                "border": {
+                    "radius": { "value": "{size.s}" }
                 }
             },
-            header: {
-                padding: {
-                    horizontal: { value: '{size.xxs}'}
+            "header": {
+                "padding": {
+                    "horizontal": { "value": "{size.xxs}" }
                 },
-                margin: {
-                    bottom: { value: '{size.3xs}'}
+                "margin": {
+                    "bottom": { "value": "{size.3xs}" }
                 }
             },
-            grid: {
-                padding: {
-                    horizontal: { value: '{size.m}'}
+            "grid": {
+                "padding": {
+                    "horizontal": { "value": "{size.m}" }
                 },
-                'content-gap': {
-                    vertical: { value: '{size.3xs}' }
+                "content-gap": {
+                    "vertical": { "value": "{size.3xs}" }
                 },
-                divider: {
-                    height: { value: '1px' }
+                "divider": {
+                    "height": { "value": "1px" }
                 },
-                cell: {
-                    padding: {
-                        horizontal: { value: '{size.s}' },
-                        vertical: { value: '{size.s}'}
-                     },
-                     border: {
-                        radius: { value: '{size.s}'}
-                     }
+                "cell": {
+                    "padding": {
+                        "horizontal": { "value": "{size.s}" },
+                        "vertical": { "value": "{size.s}" }
+                    },
+                    "border": {
+                        "radius": { "value": "{size.s}" }
+                    }
                 }
             }
         },
-        font: {
-            text: {
-                "font-size": { value: '{typography.text-normal.font-size}' },
-                "line-height": { value: '{typography.text-normal.line-height}' },
-                "letter-spacing": { value: '{typography.text-normal.letter-spacing}' },
-                "font-weight": { value: '{typography.text-normal.font-weight}' },
-                "font-family": { value: '{typography.text-normal.font-family}' },
-                "text-transform": { value: '{typography.text-normal.text-transform}' },
-                "font-feature-settings": { value: '{typography.text-normal.font-feature-settings}' }
+        "font": {
+            "text": {
+                "font-size": { "value": "{typography.text-normal.font-size}" },
+                "line-height": { "value": "{typography.text-normal.line-height}" },
+                "letter-spacing": { "value": "{typography.text-normal.letter-spacing}" },
+                "font-weight": { "value": "{typography.text-normal.font-weight}" },
+                "font-family": { "value": "{typography.text-normal.font-family}" },
+                "text-transform": { "value": "{typography.text-normal.text-transform}" },
+                "font-feature-settings": { "value": "{typography.text-normal.font-feature-settings}" }
             }
         },
-        light: {
-            container: {
-                background: {value: '{light.background.card}'},
-                'box-shadow': { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.16)' }
+        "light": {
+            "container": {
+                "background": { "value": "{light.background.card}" },
+                "box-shadow": { "value": "0px 2px 8px 0px rgba(0, 0, 0, 0.16)" }
             },
-            header: {
-                text: {value: '{light.foreground.contrast-tertiary}'},
-                divider: {value: '{light.line.contrast-fade}'}
+            "header": {
+                "text": { "value": "{light.foreground.contrast-tertiary}" },
+                "divider": { "value": "{light.line.contrast-fade}" }
             },
-            grid: {
-                cell: {
-                    default: {
-                        background: {value: 'transparent'},
-                        text: { value: '{light.foreground.contrast}' }
+            "grid": {
+                "cell": {
+                    "default": {
+                        "background": { "value": "transparent" },
+                        "text": { "value": "{light.foreground.contrast}" }
                     },
-                    today: {
-                        background: {value: 'transparent'},
-                        text: { value: '{light.foreground.theme}' }
+                    "today": {
+                        "background": { "value": "transparent" },
+                        "text": { "value": "{light.foreground.theme}" }
                     },
-                    states: {
-                        hover: {
-                             background: {value: '{light.states.background.transparent-hover}'}
+                    "states": {
+                        "hover": {
+                            "background": { "value": "{light.states.background.transparent-hover}" }
                         },
-                        active: {
-                            background: {value: '{light.states.background.transparent-active}'}
+                        "active": {
+                            "background": { "value": "{light.states.background.transparent-active}" }
                         },
-                        selected: {
-                            background: {value: '{light.background.contrast}'},
-                            text: { value: '{light.foreground.white}' }
+                        "selected": {
+                            "background": { "value": "{light.background.contrast}" },
+                            "text": { "value": "{light.foreground.white}" }
                         },
-                        'selected-hover': {
-                            background: {value: '{light.states.background.contrast-active}'}
+                        "selected-hover": {
+                            "background": { "value": "{light.states.background.contrast-active}" }
                         },
-                        disabled: {
-                            background: {value: 'transparent'},
-                            text: { value: '{light.states.foreground.disabled}' }
+                        "disabled": {
+                            "background": { "value": "transparent" },
+                            "text": { "value": "{light.states.foreground.disabled}" }
                         }
                     }
                 }
             }
         },
-        dark: {
-            container: {
-                background: {value: '{dark.background.card}'},
-                'box-shadow': { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.50)' }
+        "dark": {
+            "container": {
+                "background": { "value": "{dark.background.card}" },
+                "box-shadow": { "value": "0px 2px 8px 0px rgba(0, 0, 0, 0.50)" }
             },
-            header: {
-                text: {value: '{dark.foreground.contrast-tertiary}'},
-                divider: {value: '{dark.line.contrast-fade}'}
+            "header": {
+                "text": { "value": "{dark.foreground.contrast-tertiary}" },
+                "divider": { "value": "{dark.line.contrast-fade}" }
             },
-            grid: {
-                cell: {
-                    default: {
-                        background: {value: 'transparent'},
-                        text: { value: '{dark.foreground.contrast}' }
+            "grid": {
+                "cell": {
+                    "default": {
+                        "background": { "value": "transparent" },
+                        "text": { "value": "{dark.foreground.contrast}" }
                     },
-                    today: {
-                        background: {value: 'transparent'},
-                        text: { value: '{dark.foreground.theme}' }
+                    "today": {
+                        "background": { "value": "transparent" },
+                        "text": { "value": "{dark.foreground.theme}" }
                     },
-                    states: {
-                        hover: {
-                             background: {value: '{dark.states.background.transparent-hover}'}
+                    "states": {
+                        "hover": {
+                            "background": { "value": "{dark.states.background.transparent-hover}" }
                         },
-                        active: {
-                            background: {value: '{dark.states.background.transparent-active}'}
+                        "active": {
+                            "background": { "value": "{dark.states.background.transparent-active}" }
                         },
-                        selected: {
-                            background: {value: '{dark.background.contrast}'},
-                            text: { value: '{dark.foreground.on-contrast}' }
+                        "selected": {
+                            "background": { "value": "{dark.background.contrast}" },
+                            "text": { "value": "{dark.foreground.on-contrast}" }
                         },
-                        'selected-hover': {
-                            background: {value: '{dark.states.background.contrast-active}'}
+                        "selected-hover": {
+                            "background": { "value": "{dark.states.background.contrast-active}" }
                         },
-                        disabled: {
-                            background: {value: 'transparent'},
-                            text: { value: '{dark.states.foreground.disabled}' }
+                        "disabled": {
+                            "background": { "value": "transparent" },
+                            "text": { "value": "{dark.states.foreground.disabled}" }
                         }
                     }
                 }
