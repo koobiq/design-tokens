@@ -9,13 +9,12 @@ module.exports = (StyleDictionary) => {
             const { outputReferences } = options;
 
             // apply custom transformations for tokens
-            dictionary.allProperties = dictionary.allTokens = dictionary.allTokens
-                .flatMap((token) => {
-                    if (typeof token.value === 'object' && token.type === 'font') {
-                        return unwrapObjectTransformer(token);
-                    }
-                    return token;
-                });
+            dictionary.allProperties = dictionary.allTokens = dictionary.allTokens.flatMap((token) => {
+                if (typeof token.value === 'object' && token.type === 'font') {
+                    return unwrapObjectTransformer(token);
+                }
+                return token;
+            });
 
             dictionary.allTokens.forEach((token) => {
                 token.name = token.name.replace(/(light|dark)-/, '');
