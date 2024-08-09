@@ -179,7 +179,7 @@
                 'max-width': { value: '{markdown.size.max-width}'},
                 'margin-top': { value: '{size.m}' },
                 'margin-bottom': { value: '{size.m}' },
-                'margin-top-after-paragraph': { value: '-{size.s}' },
+                'margin-top-after-paragraph': { value: 'calc(-1 * {size.s})' },
                 'ol-number-padding-right': { value: '{size.xxs}' },
                 'ul-padding': { value: '0 0 0 {size.xxl}' },
                 'item-margin-bottom': { value: '{size.xxs}' }
@@ -332,7 +332,7 @@
                 'margin-top': { value: '{size.m}' },
                 'margin-bottom': { value: '{size.m}' },
 
-                'caption-margin-top': { value: '-{size.s}' },
+                'caption-margin-top': { value: 'calc(-1 * {size.s})' },
                 'caption-margin-bottom': { value: '{size.xxl}' },
             },
             font: {
