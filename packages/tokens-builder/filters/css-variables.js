@@ -8,23 +8,23 @@ module.exports = (StyleDictionary) => {
                 !prop.attributes.light &&
                 !prop.attributes.dark &&
                 !prop.attributes.font &&
-                typeof prop.value !== 'object'
+                prop.type !== 'font'
             );
         }
     });
 
     StyleDictionary.registerFilter({
         name: 'css-variables-light',
-        matcher: (prop) => prop.attributes.light && !prop.attributes.palette
+        matcher: (prop) => prop.attributes.light
     });
 
     StyleDictionary.registerFilter({
         name: 'css-variables-dark',
-        matcher: (prop) => prop.attributes.dark && !prop.attributes.palette
+        matcher: (prop) => prop.attributes.dark
     });
 
     StyleDictionary.registerFilter({
         name: 'css-variables-font',
-        matcher: (prop) => prop.attributes.font ||(prop.path.includes('font') && typeof prop.value === 'object')
+        matcher: (prop) => prop.attributes.font || prop.type === 'font'
     });
 };

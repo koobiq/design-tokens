@@ -1,3 +1,5 @@
+const { getMapFromObj } = require('../formats/utils');
+
 module.exports = (StyleDictionary) => {
     StyleDictionary.registerFormat({
         name: 'kbq-scss/palette',
@@ -7,16 +9,3 @@ module.exports = (StyleDictionary) => {
     });
 };
 
-function getMapFromObj(object) {
-    const result = Object.keys(object)
-        .map((key) => {
-            if (key === 'contrast') {
-                return `${key}: ${getMapFromObj(object[key])}`;
-            }
-
-            return `${key}: ${object[key].value},\n`;
-        })
-        .join('');
-
-    return `(\n${result}\n)`;
-}

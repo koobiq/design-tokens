@@ -1,5 +1,5 @@
 const { formatHelpers } = require('style-dictionary');
-const transform = require('style-dictionary/lib/common/transforms');
+const { unwrapObjectTransformer } = require('../formats/utils');
 
 module.exports = (StyleDictionary) => {
     StyleDictionary.registerFormat({
@@ -8,24 +8,14 @@ module.exports = (StyleDictionary) => {
             const selector = options.selector ? options.selector : `:root`;
             const { outputReferences } = options;
 
-            dictionary.allTokens = dictionary.allTokens.flatMap((token) => {
-                // only for typography
-                const shouldUnwrap = typeof token.value === 'object' && typeof token.original.value === 'string';
-                if (shouldUnwrap) {
-                    return Object.keys(token.value).map((key) => {
-                        const subToken = token.value[key];
-                        const res = {
-                            ...subToken,
-                            filePath: token.filePath,
-                            path: [...token.path, key],
-                            name: `kbq-${ [...token.path, key].join('-')}`,
-                        }
-                        res.attributes = { ...transform['attribute/cti'].transformer(res), font: true };
-                        return res;
-                    });
-                }
-                return token;
-            });
+            // apply custom transformations for tokens
+            dictionary.allProperties = dictionary.allTokens = dictionary.allTokens
+                .flatMap((token) => {
+                    if (typeof token.value === 'object' && token.type === 'font') {
+                        return unwrapObjectTransformer(token);
+                    }
+                    return token;
+                });
 
             dictionary.allTokens.forEach((token) => {
                 token.name = token.name.replace(/(light|dark)-/, '');
