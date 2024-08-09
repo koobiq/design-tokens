@@ -113,7 +113,7 @@
             "font-size": { value: '16px' },
             "line-height": { value: '24px' },
             "letter-spacing": { value: 'normal' },
-            "font-weight": { value: '500' },
+            "font-weight": { value: '600' },
             "font-family": { value: '{font.family.base}' },
             "text-transform": { value: 'null' },
             "font-feature-settings": { value: '"calt", "kern", "liga", "ss01", "ss04"' }
@@ -143,7 +143,7 @@
             "font-size": { value: '16px' },
             "line-height": { value: '24px' },
             "letter-spacing": { value: 'normal' },
-            "font-weight": { value: '500' },
+            "font-weight": { value: '600' },
             "font-family": { value: '{font.family.mono}' },
             "text-transform": { value: 'null' },
             "font-feature-settings": { value: 'initial' }
@@ -173,7 +173,7 @@
             "font-size": { value: '14px' },
             "line-height": { value: '20px' },
             "letter-spacing": { value: '-0.006em' },
-            "font-weight": { value: '500' },
+            "font-weight": { value: '600' },
             "font-family": { value: '{font.family.base}' },
             "text-transform": { value: 'null' },
             "font-feature-settings": { value: '"calt", "kern", "liga", "ss01", "ss04"' }
@@ -203,7 +203,7 @@
             "font-size": { value: '14px' },
             "line-height": { value: '20px' },
             "letter-spacing": { value: 'normal' },
-            "font-weight": { value: '500' },
+            "font-weight": { value: '600' },
             "font-family": { value: '{font.family.mono}' },
             "text-transform": { value: 'null' },
             "font-feature-settings": { value: 'initial' }
@@ -223,7 +223,7 @@
             "font-size": { value: '12px' },
             "line-height": { value: '16px' },
             "letter-spacing": { value: 'normal' },
-            "font-weight": { value: '500' },
+            "font-weight": { value: '600' },
             "font-family": { value: '{font.family.base}' },
             "text-transform": { value: 'null' },
             "font-feature-settings": { value: '"calt", "kern", "liga", "ss01", "ss04"' }
@@ -316,7 +316,7 @@
             "font-size": { value: '16px' },
             "line-height": { value: '24px' },
             "letter-spacing": { value: '-0.011em' },
-            "font-weight": { value: '500' },
+            "font-weight": { value: '600' },
             "font-family": { value: '{font.family.base}' },
             "text-transform": { value: 'null' },
             "font-feature-settings": { value: '"calt", "kern", "liga", "ss01", "ss04"' }
@@ -334,7 +334,7 @@
             "font-size": { value: '14px' },
             "line-height": { value: '20px' },
             "letter-spacing": { value: '-0.006em' },
-            "font-weight": { value: '500' },
+            "font-weight": { value: '600' },
             "font-family": { value: '{font.family.base}' },
             "text-transform": { value: 'null' },
             "font-feature-settings": { value: '"calt", "kern", "liga", "ss01", "ss04"' }
@@ -352,7 +352,7 @@
             "font-size": { value: '12px' },
             "line-height": { value: '16px' },
             "letter-spacing": { value: 'normal' },
-            "font-weight": { value: '500' },
+            "font-weight": { value: '600' },
             "font-family": { value: '{font.family.base}' },
             "text-transform": { value: 'null' },
             "font-feature-settings": { value: '"calt", "kern", "liga", "ss01", "ss04"' }
@@ -488,7 +488,7 @@
             "font-size": { value: '16px' },
             "line-height": { value: '24px' },
             "letter-spacing": { value: 'normal' },
-            "font-weight": { value: '500' },
+            "font-weight": { value: '600' },
             "font-family": { value: '{font.family.base}' },
             "text-transform": { value: 'null' },
             "font-feature-settings": { value: '"calt", "ss01", "ss04", "tnum"' }
@@ -506,7 +506,7 @@
             "font-size": { value: '14px' },
             "line-height": { value: '20px' },
             "letter-spacing": { value: '-0.006em' },
-            "font-weight": { value: '500' },
+            "font-weight": { value: '600' },
             "font-family": { value: '{font.family.base}' },
             "text-transform": { value: 'null' },
             "font-feature-settings": { value: '"calt", "ss01", "ss04", "tnum"' }
@@ -524,7 +524,7 @@
             "font-size": { value: '12px' },
             "line-height": { value: '16px' },
             "letter-spacing": { value: 'normal' },
-            "font-weight": { value: '500' },
+            "font-weight": { value: '600' },
             "font-family": { value: '{font.family.base}' },
             "text-transform": { value: 'null' },
             "font-feature-settings": { value: '"calt", "ss01", "ss04", "tnum"' }
@@ -544,7 +544,7 @@
             "font-size": { value: '16px' },
             "line-height": { value: '24px' },
             "letter-spacing": { value: '-0.011em' },
-            "font-weight": { value: '500' },
+            "font-weight": { value: '600' },
             "font-family": { value: '{font.family.base}' },
             "text-transform": { value: 'null' },
             "font-feature-settings": { value: '"calt", "kern", "liga", "ss01", "ss04"' }
@@ -564,7 +564,7 @@
             "font-size": { value: '14px' },
             "line-height": { value: '20px' },
             "letter-spacing": { value: '-0.006em' },
-            "font-weight": { value: '500' },
+            "font-weight": { value: '600' },
             "font-family": { value: '{font.family.base}' },
             "text-transform": { value: 'null' },
             "font-feature-settings": { value: '"calt", "kern", "liga", "ss01", "ss04"' }
@@ -584,7 +584,7 @@
             "font-size": { value: '12px' },
             "line-height": { value: '16px' },
             "letter-spacing": { value: 'normal' },
-            "font-weight": { value: '500' },
+            "font-weight": { value: '600' },
             "font-family": { value: '{font.family.base}' },
             "text-transform": { value: 'null' },
             "font-feature-settings": { value: '"calt", "kern", "liga", "ss01", "ss04"' }
