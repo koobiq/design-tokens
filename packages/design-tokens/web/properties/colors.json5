@@ -77,16 +77,16 @@
             'background-disabled': { value: '{light.contrast.palette.value.95}' },
             'background-less-contrast': { value: '{light.contrast.palette.value.95}' },
             'background-under': { value: '{light.contrast.palette.value.95}' },
-            overlay: { value: '{light.contrast.palette.value.20A32}' },
-            'overlay-inverse': { value: '{light.contrast.palette.value.99A88}' },
-            'overlay-hover': { value: '{light.black.palette.value.A8}' },
-            'overlay-active': { value: '{light.black.palette.value.A16}' },
-            'overlay-disabled': { value: '{light.white.palette.value.A64}' }
+            overlay: { value: '{light.contrast.palette.value."20-A32"}' },
+            'overlay-inverse': { value: '{light.contrast.palette.value."99-A88"}' },
+            'overlay-hover': { value: '{light.black.palette.value."default-A8"}' },
+            'overlay-active': { value: '{light.black.palette.value."default-A16"}' },
+            'overlay-disabled': { value: '{light.white.palette.value."default-A64"}' }
         },
         foreground: {
             //  WHITE
             white: { value: '{light.white.default}' },
-            'white-secondary': { value: '{light.white.palette.value.A72}' },
+            'white-secondary': { value: '{light.white.palette.value."default-A72"}' },
             //  THEME
             theme: { value: '{light.theme.default}' },
             'theme-secondary': { value: '{light.theme.palette.value.50}' },
@@ -172,7 +172,7 @@
                 'contrast-fade-active': { value: '{light.contrast.palette.value.85}' },
                 //  ERROR
                 'error-hover': { value: '{light.error.palette.value.56}' },
-                'error-active': { value: '{light.error.palette.value.51S69}' },
+                'error-active': { value: '{light.error.palette.value."51-S69"}' },
                 'error-fade-hover': { value: '{light.error.palette.value.92}' },
                 'error-fade-active': { value: '{light.error.palette.value.88}' },
                 'error-less': { value: '{light.error.palette.value.99}' }, // TODO: будет удалено, после удаления из компонентов
@@ -182,9 +182,9 @@
                 'warning-fade-active': { value: '{light.error.palette.value.84}' },
                 //  VISITED
                 //  OTHER
-                disabled: { value: '{light.contrast.palette.value.50A16}' },
-                'transparent-hover': { value: '{light.contrast.palette.value.50A8}' },
-                'transparent-active': { value: '{light.contrast.palette.value.50A16}' },
+                disabled: { value: '{light.contrast.palette.value."50-A16"}' },
+                'transparent-hover': { value: '{light.contrast.palette.value."50-A8"}' },
+                'transparent-active': { value: '{light.contrast.palette.value."50-A16"}' },
                 // TODO: нижнее будет удалено, после удаления из компонентов
                 'ghost-hover': { value: 'rgba(106, 115, 150, 0.08)' },
                 'ghost-active': { value: 'rgba(106, 115, 150, 0.16)' }
@@ -194,7 +194,7 @@
                 'theme-hover': { value: '{light.theme.palette.value.45}' },
                 'theme-active': { value: '{light.theme.palette.value.40}' },
                 //  OTHER
-                disabled: { value: '{light.contrast.palette.value.15A32}' },
+                disabled: { value: '{light.contrast.palette.value."15-A32"}' },
                 'visited-hover': { value: '{light.purple.palette.value.40}' },
                 'visited-active': { value: '{light.purple.palette.value.35}' }
             },
@@ -203,7 +203,7 @@
                 'theme-hover': { value: '{light.theme.palette.value.45}' },
                 'theme-active': { value: '{light.theme.palette.value.40}' },
                 //  CONTRAST
-                disabled: { value: '{light.contrast.palette.value.15A32}' },
+                disabled: { value: '{light.contrast.palette.value."15-A32"}' },
                 'contrast-hover': { value: '{light.contrast.palette.value.10}' },
                 'contrast-active': { value: '{light.contrast.palette.value.10}' },
                 'contrast-fade-hover': { value: '{light.contrast.palette.value.50}' },
@@ -226,7 +226,7 @@
                 focus: { value: '{light.theme.palette.value.50}' },
                 'focus-theme': { value: '{light.theme.palette.value.60}' },
                 // CONTRAST
-                disabled: { value: '{light.contrast.palette.value.15A32}' },
+                disabled: { value: '{light.contrast.palette.value."15-A32"}' },
                 // ERROR
                 'focus-error': { value: '{light.error.palette.value.45}' }
             },
@@ -234,7 +234,7 @@
             'focused-color': { value: '{light.theme.palette.value.50}' },
             'focused-color-error': { value: '{light.error.palette.value.50}' },
             'selected-color': { value: '{light.theme.palette.value.95}' },
-            'pressed-shadow': { value: 'inset 0 1px 2px 0 rgba(black, 0.2)' },
+            'pressed-shadow': { value: 'inset 0 1px 2px 0 {light.black.palette.value."default-A20"}' },
             'disabled-opacity': { value: 0.32 }
         },
         others: {
@@ -323,8 +323,8 @@
             'background-disabled': { value: '{dark.contrast.palette.value.95}' },
             'background-less-contrast': { value: '{dark.contrast.palette.value.95}' },
             'background-under': { value: '{dark.contrast.palette.value.95}' },
-            overlay: { value: '{dark.contrast.palette.value.6A64}' },
-            'overlay-inverse': { value: '{dark.contrast.palette.value.12A80}' },
+            overlay: { value: '{dark.contrast.palette.value."6-A64"}' },
+            'overlay-inverse': { value: '{dark.contrast.palette.value."12-A80"}' },
             'overlay-hover': { value: 'rgba(black, 0.08)' },
             'overlay-active': { value: 'rgba(black, 0.16)' },
             'overlay-disabled': { value: 'rgba(white, 0.64)' }
@@ -332,7 +332,7 @@
         foreground: {
             //  WHITE
             white: { value: '{dark.white.default}' },
-            'white-secondary': { value: '{dark.white.palette.value.A72}' },
+            'white-secondary': { value: '{dark.white.palette.value."default-A72"}' },
             //  THEME
             theme: { value: '{dark.theme.palette.value.65}' },
             'theme-secondary': { value: '{dark.theme.palette.value.30}' },
@@ -416,9 +416,9 @@
                 'contrast-active': { value: '{dark.contrast.palette.value.55}' },
                 'contrast-fade-hover': { value: '{dark.contrast.palette.value.25}' },
                 'contrast-fade-active': { value: '{dark.contrast.palette.value.27}' },
-                disabled: { value: '{dark.contrast.palette.value.50A16}' },
-                'transparent-hover': { value: '{dark.contrast.palette.value.50A16}' },
-                'transparent-active': { value: '{dark.contrast.palette.value.85S100A15}' },
+                disabled: { value: '{dark.contrast.palette.value."50-A16"}' },
+                'transparent-hover': { value: '{dark.contrast.palette.value."50-A16"}' },
+                'transparent-active': { value: '{dark.contrast.palette.value."85-S100-A15"}' },
                 //  ERROR
                 'error-hover': { value: '{dark.error.palette.value.42}' },
                 'error-active': { value: '{dark.error.palette.value.39}' },
@@ -467,7 +467,7 @@
                 focus: { value: '{dark.theme.palette.value.50}' },
                 'focus-theme': { value: '{dark.theme.palette.value.60}' },
                 //  CONTRAST
-                disabled: { value: '{dark.contrast.palette.value.50A32}' },
+                disabled: { value: '{dark.contrast.palette.value."50-A32"}' },
                 //  ERROR
                 'focus-error': { value: '{dark.error.palette.value.45}' }
             },

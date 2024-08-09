@@ -686,7 +686,7 @@
                 },
                 literal: {
                     background: { value: 'null' },
-                    color: { value: '{palette.purple.30}' }
+                    color: { value: '{palette.purple.50}' }
                 },
                 meta: {
                     background: { value: 'null' },
@@ -710,7 +710,7 @@
                 },
                 number: {
                     background: { value: 'null' },
-                    color: { value: '{palette.purple.30}' }
+                    color: { value: '{palette.purple.50}' }
                 },
                 operator: {
                     background: { value: 'null' },
