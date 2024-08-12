@@ -58,7 +58,7 @@
             'theme-fade': { value: '{light.theme.palette.value.85}' },
             //  CONTRAST
             contrast: { value: '{light.contrast.palette.value.25}' },
-            'contrast-fade': { value: '{light.contrast.palette.value.87}' },
+            'contrast-fade': { value: '{light.contrast.palette.value.92}' },
             //  ERROR
             error: { value: '{light.error.palette.value.60}' },
             'error-fade': { value: '{light.error.palette.value.90}' },
@@ -89,7 +89,7 @@
             'white-secondary': { value: '{light.white.palette.value."default-A72"}' },
             //  THEME
             theme: { value: '{light.theme.default}' },
-            'theme-secondary': { value: '{light.theme.palette.value.50}' },
+            'theme-secondary': { value: '{light.theme.palette.value.60}' },
             //  CONTRAST
             contrast: { value: '{light.contrast.palette.value.15}' },
             'on-contrast': { value: '{light.contrast.palette.value.100}' },
@@ -135,26 +135,26 @@
             //  SUCCESS
             success: { value: '{light.success.palette.value.40}' },
             //  WARNING
-            warning: { value: '{light.warning.palette.value.45}' },
+            warning: { value: '{light.warning.palette.value.42}' },
             //  VISITED
             visited: { value: '{light.purple.palette.value.55}' }
         },
         line: {
             //  THEME
             theme: { value: '{light.theme.default}' },
-            'theme-fade': { value: '{light.theme.palette.value.85}' },
+            'theme-fade': { value: '{light.theme.palette.value.65}' },
             //  CONTRAST
             contrast: { value: '{light.contrast.palette.value.15}' },
-            'contrast-fade': { value: '{light.contrast.palette.value.84}' },
+            'contrast-fade': { value: '{light.contrast.palette.value.70}' },
             //  ERROR
             error: { value: '{light.error.palette.value.45}' },
-            'error-fade': { value: '{light.error.palette.value.80}' },
+            'error-fade': { value: '{light.error.palette.value.65}' },
             //  SUCCESS
-            success: { value: '{light.success.palette.value.35}' },
-            'success-fade': { value: '{light.success.palette.value.70}' },
+            success: { value: '{light.success.palette.value.40}' },
+            'success-fade': { value: '{light.success.palette.value.45}' },
             //  WARNING
-            warning: { value: '{light.warning.palette.value.42}' },
-            'warning-fade': { value: '{light.warning.palette.value.76}' },
+            warning: { value: '{light.warning.palette.value.45}' },
+            'warning-fade': { value: '{light.warning.palette.value.55}' },
             //  VISITED
             visited: { value: '{light.purple.palette.value.80}' }
         },
