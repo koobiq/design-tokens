@@ -10,7 +10,7 @@ const BASE_PATH = 'packages/design-tokens/web';
 // Original console.log function
 const originalLog = console.log;
 
-console.log = (message, ...params) => {
+console.log = (message) => {
     /*
     Light/dark token names are in the same file but under different selectors
     But Style-Dictionary expects 1 unique token per file, or it will throw warn
@@ -29,10 +29,10 @@ const sdConfig = {
             transformGroup: 'kbq/css',
             filter: (token) =>
                 !['light', 'dark', 'font', 'size', 'typography', 'md-typography', 'palette'].includes(
-                       token.attributes.category
+                    token.attributes.category
                 )
         }
-    },
+    }
 };
 
 const dictionaryMapper = (dictionary, outputReferences) => {
@@ -80,7 +80,8 @@ const main = async () => {
         .filter((file) => path.extname(file).includes(TOKEN_FILE_EXT))
         .map((currentValue) => ({
             destination: `${path.basename(currentValue, `.${TOKEN_FILE_EXT}`)}.css`,
-            filter: (token) => token.name.includes(path.basename(currentValue, `.${TOKEN_FILE_EXT}`)) ||
+            filter: (token) =>
+                token.name.includes(path.basename(currentValue, `.${TOKEN_FILE_EXT}`)) ||
                 path.basename(currentValue, `.${TOKEN_FILE_EXT}`).includes(token.attributes.category),
             format: 'kbq-css/component',
             prefix: 'kbq'
