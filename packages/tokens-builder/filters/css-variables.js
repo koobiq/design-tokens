@@ -7,7 +7,8 @@ module.exports = (StyleDictionary) => {
                 !prop.attributes.palette &&
                 !prop.attributes.light &&
                 !prop.attributes.dark &&
-                !prop.attributes.font
+                !prop.attributes.font &&
+                prop.type !== 'font'
             );
         }
     });
@@ -24,6 +25,6 @@ module.exports = (StyleDictionary) => {
 
     StyleDictionary.registerFilter({
         name: 'css-variables-font',
-        matcher: (prop) => prop.attributes.font
+        matcher: (prop) => prop.attributes.font || prop.type === 'font'
     });
 };
