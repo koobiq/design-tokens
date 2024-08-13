@@ -7,6 +7,20 @@ require('../packages/tokens-builder/build');
 const TOKEN_FILE_EXT = 'json5';
 const BASE_PATH = 'packages/design-tokens/web';
 
+// Original console.log function
+const originalLog = console.log;
+
+console.log = (message, ...params) => {
+    /*
+    Light/dark token names are in the same file but under different selectors
+    But Style-Dictionary expects 1 unique token per file, or it will throw warn
+    So, console output is overwritten to prevent unnecessary errors message
+    */
+    if (!message.includes('token collisions')) {
+        originalLog(message);
+    }
+};
+
 const sdConfig = {
     source: [`${BASE_PATH}/properties/**/*.json5`, `${BASE_PATH}/components/**/*.json5`],
     platforms: {
@@ -15,10 +29,10 @@ const sdConfig = {
             transformGroup: 'kbq/css',
             filter: (token) =>
                 !['light', 'dark', 'font', 'size', 'typography', 'md-typography', 'palette'].includes(
-                    token.attributes.category
+                       token.attributes.category
                 )
         }
-    }
+    },
 };
 
 const dictionaryMapper = (dictionary, outputReferences) => {
