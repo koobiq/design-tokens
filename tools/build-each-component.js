@@ -81,7 +81,7 @@ const main = async () => {
         .map((currentValue) => ({
             destination: `${path.basename(currentValue, `.${TOKEN_FILE_EXT}`)}.css`,
             filter: (token) =>
-                token.name.includes(path.basename(currentValue, `.${TOKEN_FILE_EXT}`)) ||
+                token.attributes.category?.includes(path.basename(currentValue, `.${TOKEN_FILE_EXT}`)) ||
                 path.basename(currentValue, `.${TOKEN_FILE_EXT}`).includes(token.attributes.category),
             format: 'kbq-css/component',
             prefix: 'kbq'
