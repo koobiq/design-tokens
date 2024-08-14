@@ -1,3 +1,12 @@
+# 3.1.0 (2024-08-14)
+
+### Design Tokens
+
+ * bug fix  **typography:** strong weight 500 → 600 ([#DS-2741](https://github.com/koobiq/design-tokens/issues/issue/DS-2741)) ([#37](https://github.com/koobiq/design-tokens/issues/37)) ([d1b9886](https://github.com/koobiq/design-tokens/commit/d1b9886d852764a85a7706d1c9f84d7e86e0c6b1))
+ * feature  added eslint recommended plugin ([#36](https://github.com/koobiq/design-tokens/issues/36)) ([e7a0ba5](https://github.com/koobiq/design-tokens/commit/e7a0ba57b365e9bf739b6f33932fbd3b400ffea9))
+ * feature  removed card component tokens ([#35](https://github.com/koobiq/design-tokens/issues/35)) ([5d6caaf](https://github.com/koobiq/design-tokens/commit/5d6caafa9e34abfb197fe0f6706cbe1a55f6da2c))
+ * feature  support composite typography tokens ([#39](https://github.com/koobiq/design-tokens/issues/39)) ([a357a50](https://github.com/koobiq/design-tokens/commit/a357a509ede6385bb9adaa0b6c0ee8c3057ee0d5))
+
 # 3.0.0 (2024-08-06)
 
 ### Design Tokens
