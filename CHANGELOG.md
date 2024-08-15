@@ -1,3 +1,9 @@
+# 3.2.0 (2024-08-15)
+
+### Design Tokens
+
+ * feature  transformed theme-specific global vars to theme-agnostic ([#DS-2755](https://github.com/koobiq/design-tokens/issues/issue/DS-2755)) ([#42](https://github.com/koobiq/design-tokens/issues/42)) ([b1428d5](https://github.com/koobiq/design-tokens/commit/b1428d507a70652e0ac2add5ca37dacc3a4ff3e7))
+
 # 3.1.0 (2024-08-14)
 
 ### Design Tokens
