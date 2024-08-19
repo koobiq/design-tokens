@@ -1,3 +1,10 @@
+# 3.3.0 (2024-08-19)
+
+### Design Tokens
+
+ * feature  Сontrast Сollibration ([#DS-2003](https://github.com/koobiq/design-tokens/issues/issue/DS-2003)) ([#38](https://github.com/koobiq/design-tokens/issues/38)) ([6a0d033](https://github.com/koobiq/design-tokens/commit/6a0d0330946cbb00f891406f90be27638cf12925))
+ * feature  **tooltip:** updated tokens ([#41](https://github.com/koobiq/design-tokens/issues/41)) ([8f142a9](https://github.com/koobiq/design-tokens/commit/8f142a983ef34c4a153b15112ef4bd47f8413c8c))
+
 # 3.2.0 (2024-08-15)
 
 ### Design Tokens
