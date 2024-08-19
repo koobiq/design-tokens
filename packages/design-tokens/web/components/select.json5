@@ -51,13 +51,13 @@
         light: {
             dropdown: {
                 background: { value: '{light.background.card}' },
-                shadow: { value: '0px 3px 8px 0px rgba(39,51,62,0.2)' }
+                shadow: { value: 'shadow.light.popup' }
             }
         },
         dark: {
             dropdown: {
                 background: { value: '{dark.background.card}' },
-                shadow: { value: '0px 3px 8px 0px rgba(39,51,62,0.5)' }
+                shadow: { value: 'shadow.dark.popup' }
             }
         }
     }
