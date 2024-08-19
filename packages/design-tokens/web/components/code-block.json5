@@ -322,7 +322,7 @@
                 container: {
                     background: { value: '{light.background.card}' },
                     border: {
-                        color: { value: '{light.line.contrast-fade}' }
+                        color: { value: '{light.line.contrast-less}' }
                     }
                 },
                 header: {
@@ -562,7 +562,7 @@
                 container: {
                     background: { value: '{dark.background.bg-secondary}' },
                     border: {
-                        color: { value: '{dark.line.contrast-fade}' }
+                        color: { value: '{dark.line.contrast-less}' }
                     }
                 },
                 header: {

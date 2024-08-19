@@ -56,7 +56,7 @@
             },
             header: {
                 text: {value: '{light.foreground.contrast-tertiary}'},
-                divider: {value: '{light.line.contrast-fade}'}
+                divider: {value: '{light.line.contrast-less}'}
             },
             grid: {
                 cell: {
@@ -97,7 +97,7 @@
             },
             header: {
                 text: {value: '{dark.foreground.contrast-tertiary}'},
-                divider: {value: '{dark.line.contrast-fade}'}
+                divider: {value: '{dark.line.contrast-less}'}
             },
             grid: {
                 cell: {

@@ -13,11 +13,11 @@
         },
         light: {
             background: { value: '{light.background.bg}' },
-            border: { value: '{light.line.contrast-fade}' }
+            border: { value: '{light.line.contrast-less}' }
         },
         dark: {
             background: { value: '{dark.background.bg}' },
-            border: { value: '{dark.line.contrast-fade}' }
+            border: { value: '{dark.line.contrast-less}' }
         }
     },
     'navbar-item': {
