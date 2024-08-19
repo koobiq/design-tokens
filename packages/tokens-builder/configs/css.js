@@ -17,7 +17,8 @@ module.exports = {
                 filter: 'css-variables-light',
                 prefix: 'kbq',
                 options: {
-                    selector: '.kbq-light'
+                    selector: '.kbq-light',
+                    outputReferences: true
                 }
             },
             {
@@ -26,7 +27,8 @@ module.exports = {
                 filter: 'css-variables-dark',
                 prefix: 'kbq',
                 options: {
-                    selector: '.kbq-dark'
+                    selector: '.kbq-dark',
+                    outputReferences: true
                 }
             },
             {

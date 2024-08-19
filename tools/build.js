@@ -1,19 +1,5 @@
 const build = require('../packages/tokens-builder/build');
 
-const errorMessage = 'filtered out token references were found';
-// Original console.log function
-const originalLog = console.log;
-console.log = (message) => {
-    /*
-    Components' fonts use references declared in the file with global styles
-    in current circumstances, file with global styles is expected to be included anyway
-    So, console output is overwritten to prevent unnecessary errors message
-    */
-    if (!message.includes(errorMessage)) {
-        originalLog(message);
-    }
-};
-
 build([
     {
         name: 'design-tokens',

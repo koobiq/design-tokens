@@ -1,4 +1,6 @@
 const transform = require('style-dictionary/lib/common/transforms');
+const getPathFromName = require('style-dictionary/lib/utils/references/getPathFromName');
+const createReferenceRegex = require('style-dictionary/lib/utils/references/createReferenceRegex');
 
 const unwrapObjectTransformer = (token) => {
     return Object.keys(token.value).map((key) => {
@@ -15,6 +17,18 @@ const unwrapObjectTransformer = (token) => {
     }, {});
 };
 
+const resolvePaletteRef = (token, dictionary) => {
+    const regex = createReferenceRegex({});
+
+    const findPalette = (match, variable) => {
+        const [category, item, ...pathName] = getPathFromName(variable);
+        const pathToSemanticPalette = dictionary.tokens[category][item].palette.original.value.replace(/[{}]/g, '');
+        return `{${pathToSemanticPalette}.${pathName[pathName.length - 1]}}`;
+    };
+    token.original.value = token.original.value.replace(regex, findPalette);
+    return token;
+};
+
 const getMapFromObj = (object) => {
     const result = Object.keys(object)
         .map((key) => {
@@ -29,7 +43,25 @@ const getMapFromObj = (object) => {
     return `(\n${result}\n)`;
 };
 
+const applyCustomTransformations = (dictionary) => {
+    dictionary.allProperties = dictionary.allTokens = dictionary.allTokens
+        .flatMap((token) => {
+            if (typeof token.value === 'object' && token.type === 'font') {
+                return unwrapObjectTransformer(token);
+            }
+            if (typeof token.original.value === 'string' && token.original.value.includes('palette.value')) {
+                return resolvePaletteRef(token, dictionary);
+            }
+            return token;
+        })
+        .filter((token) => !token.attributes.palette);
+
+    return dictionary.allTokens;
+};
+
 module.exports = {
     unwrapObjectTransformer,
-    getMapFromObj
+    getMapFromObj,
+    resolvePaletteRef,
+    applyCustomTransformations
 };

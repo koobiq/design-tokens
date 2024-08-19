@@ -1,25 +1,12 @@
+require('../packages/tokens-builder/build');
 const fs = require('fs/promises');
 const path = require('path');
 const StyleDictionary = require('style-dictionary');
 const { formatHelpers } = require('style-dictionary');
-require('../packages/tokens-builder/build');
+const { applyCustomTransformations } = require('../packages/tokens-builder/formats/utils');
 
 const TOKEN_FILE_EXT = 'json5';
 const BASE_PATH = 'packages/design-tokens/web';
-
-// Original console.log function
-const originalLog = console.log;
-
-console.log = (message) => {
-    /*
-    Light/dark token names are in the same file but under different selectors
-    But Style-Dictionary expects 1 unique token per file, or it will throw warn
-    So, console output is overwritten to prevent unnecessary errors message
-    */
-    if (!message.includes('token collisions')) {
-        originalLog(message);
-    }
-};
 
 const sdConfig = {
     source: [`${BASE_PATH}/properties/**/*.json5`, `${BASE_PATH}/components/**/*.json5`],
@@ -27,10 +14,10 @@ const sdConfig = {
         css: {
             buildPath: `dist/design-tokens/web/components/styles/`,
             transformGroup: 'kbq/css',
-            filter: (token) =>
-                !['light', 'dark', 'font', 'size', 'typography', 'md-typography', 'palette'].includes(
-                    token.attributes.category
-                )
+            filter: (token) => !['font', 'size', 'typography', 'md-typography'].includes(token.attributes.category),
+            options: {
+                outputReferences: true
+            }
         }
     }
 };
@@ -45,9 +32,14 @@ StyleDictionary.registerFormat({
     formatter: function ({ dictionary, options = {} }) {
         const { outputReferences, selector = ':root', darkThemeSelector = '.kbq-dark' } = options;
 
+        const allTokens = applyCustomTransformations(dictionary);
+
         dictionary.allTokens.forEach((token) => {
             token.name = token.name.replace(/(light|dark)-/, '');
         });
+        dictionary.allTokens = dictionary.allProperties = allTokens.filter(
+            (token) => !['light', 'dark'].includes(token.attributes.category)
+        );
 
         // formatting function expects dictionary as input, so here initialize a copy to work with different tokens
         const baseDictionary = { ...dictionary };
@@ -82,7 +74,9 @@ const main = async () => {
             destination: `${path.basename(currentValue, `.${TOKEN_FILE_EXT}`)}.css`,
             filter: (token) =>
                 token.attributes.category?.includes(path.basename(currentValue, `.${TOKEN_FILE_EXT}`)) ||
-                path.basename(currentValue, `.${TOKEN_FILE_EXT}`).includes(token.attributes.category),
+                path.basename(currentValue, `.${TOKEN_FILE_EXT}`).includes(token.attributes.category) ||
+                // give access to light/dark/palette tokens to resolve reference manually
+                ['light', 'dark', 'palette'].includes(token.attributes.category),
             format: 'kbq-css/component',
             prefix: 'kbq'
         }));

@@ -15,12 +15,12 @@ module.exports = (StyleDictionary) => {
 
     StyleDictionary.registerFilter({
         name: 'css-variables-light',
-        matcher: (prop) => prop.attributes.light && !prop.attributes.palette
+        matcher: (prop) => prop.attributes.light
     });
 
     StyleDictionary.registerFilter({
         name: 'css-variables-dark',
-        matcher: (prop) => prop.attributes.dark && !prop.attributes.palette
+        matcher: (prop) => prop.attributes.dark
     });
 
     StyleDictionary.registerFilter({
