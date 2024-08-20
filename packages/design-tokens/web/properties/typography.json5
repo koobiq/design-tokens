@@ -113,7 +113,7 @@
             "font-size": { value: '16px' },
             "line-height": { value: '24px' },
             "letter-spacing": { value: 'normal' },
-            "font-weight": { value: '600' },
+            "font-weight": { value: '500' },
             "font-family": { value: '{font.family.base}' },
             "text-transform": { value: 'null' },
             "font-feature-settings": { value: '"calt", "kern", "liga", "ss01", "ss04"' }
@@ -123,7 +123,7 @@
             "font-size": { value: '16px' },
             "line-height": { value: '24px' },
             "letter-spacing": { value: '0.08em' },
-            "font-weight": { value: '600' },
+            "font-weight": { value: '400' },
             "font-family": { value: '{font.family.base}' },
             "text-transform": { value: 'uppercase' },
             "font-feature-settings": { value: '"calt", "kern", "liga", "ss01", "ss04"' }
@@ -143,7 +143,7 @@
             "font-size": { value: '16px' },
             "line-height": { value: '24px' },
             "letter-spacing": { value: 'normal' },
-            "font-weight": { value: '600' },
+            "font-weight": { value: '700' },
             "font-family": { value: '{font.family.mono}' },
             "text-transform": { value: 'null' },
             "font-feature-settings": { value: 'initial' }
@@ -173,7 +173,7 @@
             "font-size": { value: '14px' },
             "line-height": { value: '20px' },
             "letter-spacing": { value: '-0.006em' },
-            "font-weight": { value: '600' },
+            "font-weight": { value: '500' },
             "font-family": { value: '{font.family.base}' },
             "text-transform": { value: 'null' },
             "font-feature-settings": { value: '"calt", "kern", "liga", "ss01", "ss04"' }
@@ -203,7 +203,7 @@
             "font-size": { value: '14px' },
             "line-height": { value: '20px' },
             "letter-spacing": { value: 'normal' },
-            "font-weight": { value: '600' },
+            "font-weight": { value: '700' },
             "font-family": { value: '{font.family.mono}' },
             "text-transform": { value: 'null' },
             "font-feature-settings": { value: 'initial' }
@@ -223,7 +223,7 @@
             "font-size": { value: '12px' },
             "line-height": { value: '16px' },
             "letter-spacing": { value: 'normal' },
-            "font-weight": { value: '600' },
+            "font-weight": { value: '500' },
             "font-family": { value: '{font.family.base}' },
             "text-transform": { value: 'null' },
             "font-feature-settings": { value: '"calt", "kern", "liga", "ss01", "ss04"' }
@@ -312,6 +312,15 @@
             "text-transform": { value: 'null' },
             "font-feature-settings": { value: '"calt", "kern", "liga", "ss01", "ss04"' }
         },
+        'text-big-medium': {
+            "font-size": { value: '16px' },
+            "line-height": { value: '24px' },
+            "letter-spacing": { value: '-0.011em' },
+            "font-weight": { value: '500' },
+            "font-family": { value: '{font.family.base}' },
+            "text-transform": { value: 'null' },
+            "font-feature-settings": { value: '"calt", "kern", "liga", "ss01", "ss04"' }
+        },
         'text-big-strong': {
             "font-size": { value: '16px' },
             "line-height": { value: '24px' },
@@ -330,6 +339,15 @@
             "text-transform": { value: 'null' },
             "font-feature-settings": { value: '"calt", "kern", "liga", "ss01", "ss04"' }
         },
+        "text-normal-medium": {
+            "font-size": { value: '14px' },
+            "line-height": { value: '20px' },
+            "letter-spacing": { value: '-0.006em' },
+            "font-weight": { value: '500' },
+            "font-family": { value: '{font.family.base}' },
+            "text-transform": { value: 'null' },
+            "font-feature-settings": { value: '"calt", "kern", "liga", "ss01", "ss04"' }
+        },
         "text-normal-strong": {
             "font-size": { value: '14px' },
             "line-height": { value: '20px' },
@@ -344,6 +362,15 @@
             "line-height": { value: '16px' },
             "letter-spacing": { value: 'normal' },
             "font-weight": { value: 'normal' },
+            "font-family": { value: '{font.family.base}' },
+            "text-transform": { value: 'null' },
+            "font-feature-settings": { value: '"calt", "kern", "liga", "ss01", "ss04"' }
+        },
+        "text-compact-medium": {
+            "font-size": { value: '12px' },
+            "line-height": { value: '16px' },
+            "letter-spacing": { value: 'normal' },
+            "font-weight": { value: '500' },
             "font-family": { value: '{font.family.base}' },
             "text-transform": { value: 'null' },
             "font-feature-settings": { value: '"calt", "kern", "liga", "ss01", "ss04"' }
@@ -370,7 +397,7 @@
             "font-size": { value: '16px' },
             "line-height": { value: '24px' },
             "letter-spacing": { value: '0.08em' },
-            "font-weight": { value: '600' },
+            "font-weight": { value: '500' },
             "font-family": { value: '{font.family.base}' },
             "text-transform": { value: 'uppercase' },
             "font-feature-settings": { value: '"calt", "case", "kern", "liga", "ss01", "ss04"' }
@@ -388,7 +415,7 @@
             "font-size": { value: '14px' },
             "line-height": { value: '20px' },
             "letter-spacing": { value: '0.08em' },
-            "font-weight": { value: '600' },
+            "font-weight": { value: '500' },
             "font-family": { value: '{font.family.base}' },
             "text-transform": { value: 'uppercase' },
             "font-feature-settings": { value: '"calt", "case", "kern", "liga", "ss01", "ss04"' }
@@ -406,7 +433,7 @@
             "font-size": { value: '12px' },
             "line-height": { value: '16px' },
             "letter-spacing": { value: '1px' },
-            "font-weight": { value: '600' },
+            "font-weight": { value: '500' },
             "font-family": { value: '{font.family.base}' },
             "text-transform": { value: 'uppercase' },
             "font-feature-settings": { value: '"calt", "case", "kern", "liga", "ss01", "ss04"' }
@@ -488,7 +515,7 @@
             "font-size": { value: '16px' },
             "line-height": { value: '24px' },
             "letter-spacing": { value: 'normal' },
-            "font-weight": { value: '600' },
+            "font-weight": { value: '500' },
             "font-family": { value: '{font.family.base}' },
             "text-transform": { value: 'null' },
             "font-feature-settings": { value: '"calt", "ss01", "ss04", "tnum"' }
@@ -506,7 +533,7 @@
             "font-size": { value: '14px' },
             "line-height": { value: '20px' },
             "letter-spacing": { value: '-0.006em' },
-            "font-weight": { value: '600' },
+            "font-weight": { value: '500' },
             "font-family": { value: '{font.family.base}' },
             "text-transform": { value: 'null' },
             "font-feature-settings": { value: '"calt", "ss01", "ss04", "tnum"' }
@@ -524,7 +551,7 @@
             "font-size": { value: '12px' },
             "line-height": { value: '16px' },
             "letter-spacing": { value: 'normal' },
-            "font-weight": { value: '600' },
+            "font-weight": { value: '500' },
             "font-family": { value: '{font.family.base}' },
             "text-transform": { value: 'null' },
             "font-feature-settings": { value: '"calt", "ss01", "ss04", "tnum"' }
@@ -544,7 +571,7 @@
             "font-size": { value: '16px' },
             "line-height": { value: '24px' },
             "letter-spacing": { value: '-0.011em' },
-            "font-weight": { value: '600' },
+            "font-weight": { value: '500' },
             "font-family": { value: '{font.family.base}' },
             "text-transform": { value: 'null' },
             "font-feature-settings": { value: '"calt", "kern", "liga", "ss01", "ss04"' }
@@ -564,7 +591,7 @@
             "font-size": { value: '14px' },
             "line-height": { value: '20px' },
             "letter-spacing": { value: '-0.006em' },
-            "font-weight": { value: '600' },
+            "font-weight": { value: '500' },
             "font-family": { value: '{font.family.base}' },
             "text-transform": { value: 'null' },
             "font-feature-settings": { value: '"calt", "kern", "liga", "ss01", "ss04"' }
@@ -584,7 +611,7 @@
             "font-size": { value: '12px' },
             "line-height": { value: '16px' },
             "letter-spacing": { value: 'normal' },
-            "font-weight": { value: '600' },
+            "font-weight": { value: '500' },
             "font-family": { value: '{font.family.base}' },
             "text-transform": { value: 'null' },
             "font-feature-settings": { value: '"calt", "kern", "liga", "ss01", "ss04"' }
