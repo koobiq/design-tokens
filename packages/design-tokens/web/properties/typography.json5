@@ -312,7 +312,7 @@
             "text-transform": { value: 'null' },
             "font-feature-settings": { value: '"calt", "kern", "liga", "ss01", "ss04"' }
         },
-        'text-big-strong': {
+        'text-big-medium': {
             "font-size": { value: '16px' },
             "line-height": { value: '24px' },
             "letter-spacing": { value: '-0.011em' },
@@ -321,7 +321,7 @@
             "text-transform": { value: 'null' },
             "font-feature-settings": { value: '"calt", "kern", "liga", "ss01", "ss04"' }
         },
-        'text-big-bold': {
+        'text-big-strong': {
             "font-size": { value: '16px' },
             "line-height": { value: '24px' },
             "letter-spacing": { value: '-0.011em' },
@@ -339,7 +339,7 @@
             "text-transform": { value: 'null' },
             "font-feature-settings": { value: '"calt", "kern", "liga", "ss01", "ss04"' }
         },
-        "text-normal-strong": {
+        "text-normal-medium": {
             "font-size": { value: '14px' },
             "line-height": { value: '20px' },
             "letter-spacing": { value: '-0.006em' },
@@ -348,7 +348,7 @@
             "text-transform": { value: 'null' },
             "font-feature-settings": { value: '"calt", "kern", "liga", "ss01", "ss04"' }
         },
-        "text-normal-bold": {
+        "text-normal-strong": {
             "font-size": { value: '14px' },
             "line-height": { value: '20px' },
             "letter-spacing": { value: '-0.006em' },
@@ -366,7 +366,7 @@
             "text-transform": { value: 'null' },
             "font-feature-settings": { value: '"calt", "kern", "liga", "ss01", "ss04"' }
         },
-        "text-compact-strong": {
+        "text-compact-medium": {
             "font-size": { value: '12px' },
             "line-height": { value: '16px' },
             "letter-spacing": { value: 'normal' },
@@ -375,7 +375,7 @@
             "text-transform": { value: 'null' },
             "font-feature-settings": { value: '"calt", "kern", "liga", "ss01", "ss04"' }
         },
-        "text-compact-bold": {
+        "text-compact-strong": {
             "font-size": { value: '12px' },
             "line-height": { value: '16px' },
             "letter-spacing": { value: 'normal' },
