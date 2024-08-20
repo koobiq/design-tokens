@@ -1,3 +1,9 @@
+## 3.3.1 (2024-08-20)
+
+### Design Tokens
+
+ * bug fix  **typography:** font-weight for strong ([#DS-2762](https://github.com/koobiq/design-tokens/issues/issue/DS-2762)) ([#43](https://github.com/koobiq/design-tokens/issues/43)) ([a61d650](https://github.com/koobiq/design-tokens/commit/a61d650175914dc3ad68ffbb867260bc1c0b2600))
+
 # 3.3.0 (2024-08-19)
 
 ### Design Tokens
