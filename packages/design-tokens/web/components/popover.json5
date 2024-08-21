@@ -84,7 +84,7 @@
                 }
             },
             footer: {
-                'scroll-shadow': { value: 'shadow.light.overflow-normal-top'}
+                'scroll-shadow': { value: '{shadow.light.overflow-normal-top}'}
             }
         },
         dark: {
@@ -96,7 +96,7 @@
                 text: {
                     color: { value: '{dark.foreground.contrast}' }
                 },
-                'scroll-shadow': { value: 'shadow.dark.overflow-normal-bottom'},
+                'scroll-shadow': { value: '{shadow.dark.overflow-normal-bottom}'},
             },
             content: {
                 text: {
@@ -104,7 +104,7 @@
                 }
             },
             footer: {
-                'scroll-shadow': { value: 'shadow.dark.overflow-normal-top'}
+                'scroll-shadow': { value: '{shadow.dark.overflow-normal-top}'}
             }
         },
 }

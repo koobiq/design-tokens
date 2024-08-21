@@ -1,20 +1,17 @@
 {
     shadow: {
         light: {
-            'overflow-compact-top':      { value: ' 0px -1px 0px 0px {light.contrast.palette.value."50-A16"}' },
-            'overflow-compact-right':    { value: ' 1px  0px 0px 0px {light.contrast.palette.value."50-A16"}' },
-            'overflow-compact-bottom':   { value: ' 0px  1px 0px 0px {light.contrast.palette.value."50-A16"}' },
-            'overflow-compact-left':     { value: '-1px  0px 0px 0px {light.contrast.palette.value."50-A16"}' },
-            'overflow-normal-top':       { value: ' 0px 9px  8px -12px {light.contrast.palette.value.60}' },
-            'overflow-normal-right':     { value: ' 0px 9px -8px -12px {light.contrast.palette.value.60}' },
-            'overflow-normal-left':      { value: '-9px 0px -8px -12px {light.contrast.palette.value.60}' },
-            'overflow-normal-bottom':    { value: ' 9px 0   -8px -12px {light.contrast.palette.value.60}' },
-            card: { value: 
-                '0 0px 0 1px {light.shadow.outline}, 0 1px 6px 0 {light.shadow.key}, 0 1px 6px 0 {light.shadow.ambient}', },
-            popup: { value: 
-                '0 0 0 1px {light.shadow.outline}, 0 2px 8px {light.shadow.key}, 0 3px 8px {light.shadow.ambient}' },
-            overlay: { value: 
-                '0 0 0 1px {light.shadow.outline}, 0 3px 16px {light.shadow.key}, 0 4px 32px {light.shadow.ambient}' },
+            'overflow-compact-top':   { value: ' 0px -1px 0px 0px {light.contrast.palette.value."6-A12"}' },
+            'overflow-compact-right': { value: ' 1px  0px 0px 0px {light.contrast.palette.value."6-A12"}' },
+            'overflow-compact-bottom':{ value: ' 0px  1px 0px 0px {light.contrast.palette.value."6-A12"}' },
+            'overflow-compact-left':  { value: '-1px  0px 0px 0px {light.contrast.palette.value."6-A12"}' },
+            'overflow-normal-top':    { value: ' 0px 9px  8px -12px {light.contrast.palette.value.60}' },
+            'overflow-normal-right':  { value: ' 0px 9px -8px -12px {light.contrast.palette.value.60}' },
+            'overflow-normal-left':   { value: '-9px 0px -8px -12px {light.contrast.palette.value.60}' },
+            'overflow-normal-bottom': { value: ' 9px 0   -8px -12px {light.contrast.palette.value.60}' },
+            card: { value: '0 0px 0 1px {light.shadow.outline}, 0 1px 6px 0 {light.shadow.key}, 0 1px 6px 0 {light.shadow.ambient}' },
+            popup: { value: '0 0 0 1px {light.shadow.outline}, 0 2px 8px {light.shadow.key}, 0 3px 8px {light.shadow.ambient}' },
+            overlay: { value: '0 0 0 1px {light.shadow.outline}, 0 3px 16px {light.shadow.key}, 0 4px 32px {light.shadow.ambient}' },
         },
         dark: {
             'overflow-compact-top':    { value: ' 0px -1px 0px 0px {dark.shadow.outline}' },
