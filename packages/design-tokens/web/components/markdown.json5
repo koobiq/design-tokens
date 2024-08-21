@@ -234,12 +234,12 @@
             light: {
                 text: { value: '{light.foreground.contrast}' },
                 background: { value: '{light.background.background-less-contrast}' },
-                border: { value: '{light.foreground.divider}' }
+                border: { value: '{light.line.contrast-less}' }
             },
             dark: {
                 text: { value: '{dark.foreground.contrast}' },
                 background: { value: '{dark.background.background-less-contrast}' },
-                border: { value: '{dark.foreground.divider}' }
+                border: { value: '{dark.line.contrast-less}' }
             },
             size: {
                 'max-width': { value: '{markdown.size.max-width}'},
@@ -349,10 +349,10 @@
         },
         hr: {
             light: {
-                color: { value: '{light.foreground.divider}' },
+                color: { value: '{light.line.contrast-less}' },
             },
             dark: {
-                color: { value: '{dark.foreground.divider}' }
+                color: { value: '{dark.line.contrast-less}' }
             },
             size: {
                 'width': { value: '1px'},
@@ -363,12 +363,12 @@
             light: {
                 header: { value: '{light.foreground.text-less-contrast}' },
                 body: { value: '{light.foreground.contrast}' },
-                border: { value: '{light.foreground.divider}' }
+                border: { value: '{light.line.contrast-less}' }
             },
             dark: {
                 header: { value: '{dark.foreground.text-less-contrast}' },
                 body: { value: '{dark.foreground.contrast}' },
-                border: { value: '{dark.foreground.divider}' }
+                border: { value: '{dark.line.contrast-less}' }
             },
             size: {
                 'border-width': { value: '{size.border-width}'},

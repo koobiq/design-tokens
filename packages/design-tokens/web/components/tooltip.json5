@@ -38,33 +38,33 @@
                 'fade-on': {
                     background: { value: '{light.background.card}' },
                     text: { value: '{light.foreground.contrast}' },
-                    shadow: { value: '0 2px 4px 0 rgba(39, 51, 62, 0.2)' }
+                    shadow: { value: '{shadow.light.popup}' }
                 },
                 'fade-off': {
                     background: { value: '{light.background.night}' },
                     text: { value: '{light.foreground.white}' },
-                    shadow: { value: '0 2px 4px 0 rgba(39, 51, 62, 0.2)' }
+                    shadow: { value: '{shadow.light.popup}' }
                 }
             },
             theme: {
                 'fade-off': {
                     background: { value: '{light.background.theme}' },
                     text: { value: '{light.foreground.white}' },
-                    shadow: { value: '0 2px 4px 0 rgba(39, 51, 62, 0.2)' }
+                    shadow: { value: '{shadow.light.popup}' }
                 }
             },
             warning: {
                 'fade-off': {
                     background: { value: '{light.background.warning}' },
                     text: { value: '{light.foreground.white}' },
-                    shadow: { value: '0 2px 4px 0 rgba(39, 51, 62, 0.2)' }
+                    shadow: { value: '{shadow.light.popup}' }
                 }
             },
             error: {
                 'fade-off': {
                     background: { value: '{light.background.error}' },
                     text: { value: '{light.foreground.white}' },
-                    shadow: { value: '0 2px 4px 0 rgba(39, 51, 62, 0.2)' }
+                    shadow: { value: '{shadow.dark.popup}' }
                 }
             }
         },
@@ -73,33 +73,33 @@
                 'fade-on': {
                     background: { value: '{dark.background.card}' },
                     text: { value: '{dark.foreground.contrast}' },
-                    shadow: { value: '0 2px 4px 0 rgba(39, 51, 62, 0.5)' }
+                    shadow: { value: '{shadow.dark.popup}' }
                 },
                 'fade-off': {
                     background: { value: '{dark.background.night}' },
                     text: { value: '{dark.foreground.white}' },
-                    shadow: { value: '0 2px 4px 0 rgba(39, 51, 62, 0.5)' }
+                    shadow: { value: '{shadow.dark.popup}' }
                 }
             },
             theme: {
                 'fade-off': {
                     background: { value: '{dark.background.theme}' },
                     text: { value: '{dark.foreground.white}' },
-                    shadow: { value: '0 2px 4px 0 rgba(39, 51, 62, 0.5)' }
+                    shadow: { value: '{shadow.dark.popup}' }
                 }
             },
             warning: {
                 'fade-off': {
                     background: { value: '{light.background.warning}' },
                     text: { value: '{light.foreground.white}' },
-                    shadow: { value: '0 2px 4px 0 rgba(39, 51, 62, 0.2)' }
+                    shadow: { value: '{shadow.dark.popup}' }
                 }
             },
             error: {
                 'fade-off': {
                     background: { value: '{light.background.error}' },
                     text: { value: '{light.foreground.white}' },
-                    shadow: { value: '0 2px 4px 0 rgba(39, 51, 62, 0.2)' }
+                    shadow: { value: '{shadow.dark.popup}' }
                 }
             }
         },
