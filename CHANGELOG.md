@@ -1,3 +1,9 @@
+# 3.4.0 (2024-09-02)
+
+### Design Tokens
+
+ * feature  shadows and subtle divider ([#DS-2175](https://github.com/koobiq/design-tokens/issues/issue/DS-2175)) ([#45](https://github.com/koobiq/design-tokens/issues/45)) ([3ef0c63](https://github.com/koobiq/design-tokens/commit/3ef0c638968ac773f9cbc8cc483dd138e9ef7e2f))
+
 ## 3.3.1 (2024-08-20)
 
 ### Design Tokens
