@@ -200,20 +200,20 @@
             light: {
                 text: { value: '{light.foreground.contrast}' },
                 line: { value: '{light.foreground.border}' },
-                background: { value: 'transparent' },
+                background: { value: 'light.background.contrast-fade' },
                 border: { value: 'transparent' }
             },
             dark: {
                 text: { value: '{dark.foreground.contrast}' },
                 line: { value: '{dark.foreground.border}' },
-                background: { value: 'transparent' },
+                background: { value: 'dark.background.contrast-fade' },
                 border: { value: 'transparent' }
             },
             size: {
                 'max-width': { value: '{markdown.size.max-width}'},
-                'margin-top': { value: '{size.m}' },
-                'margin-bottom': { value: '{size.m}' },
-                'padding': { value: '{size.3xs} {size.m}' },
+                'margin-top': { value: '{size.xl}' },
+                'margin-bottom': { value: '{size.xl}' },
+                'padding': { value: '{size.m} {size.l}' },
                 'line-width': { value: '{size.xxs}' },
                 'border-radius': { value: '0' },
                 'border-width': { value: '0' },
@@ -243,10 +243,10 @@
             },
             size: {
                 'max-width': { value: '{markdown.size.max-width}'},
-                'multiline-margin-top': { value: '{size.m}' },
+                'multiline-margin-top': { value: '{size.s}' },
                 'multiline-margin-bottom': { value: '{size.xxl}' },
                 'inline-padding': { value: '0 {size.xxs}' },
-                'multiline-padding': { value: '{size.m} {size.l}' },
+                'multiline-padding': { value: '14px {size.xl}' },
                 'border-radius': { value: '{size.border-radius}' },
                 'border-width': { value: '{size.border-width}' },
             },
