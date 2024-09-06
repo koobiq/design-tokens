@@ -3,12 +3,12 @@
         size: {
             container: {
                 padding: {
-                    left: { value: '{size.m}'},
+                    left: { value: '{size.m}' },
                     right: { value: '{size.m}' },
                     vertical: { value: '{size.xs}' }
                 },
                 'content-gap': {
-                    horizontal: { value: '{size.s}'},
+                    horizontal: { value: '{size.s}' },
                     vertical: { value: '{size.3xs}' }
                 },
                 'focus-outline': {
@@ -22,14 +22,14 @@
             },
             header: {
                 padding: {
-                    top: { value: '{size.s}'},
+                    top: { value: '{size.s}' },
                     bottom: { value: '{size.xxs}' },
                     horizontal: { value: '{size.m}' }
                 }
             },
             subheading: {
                 padding: {
-                    top: { value: '{size.m}'},
+                    top: { value: '{size.m}' },
                     bottom: { value: '{size.xxs}' },
                     horizontal: { value: '{size.m}' }
                 }
@@ -37,46 +37,46 @@
         },
         font: {
             text: {
-                "font-size": { value: '{typography.text-normal.font-size}' },
-                "line-height": { value: '{typography.text-normal.line-height}' },
-                "letter-spacing": { value: '{typography.text-normal.letter-spacing}' },
-                "font-weight": { value: '{typography.text-normal.font-weight}' },
-                "font-family": { value: '{typography.text-normal.font-family}' },
-                "text-transform": { value: '{typography.text-normal.text-transform}' },
-                "font-feature-settings": { value: '{typography.text-normal.font-feature-settings}' }
+                'font-size': { value: '{typography.text-normal.font-size}' },
+                'line-height': { value: '{typography.text-normal.line-height}' },
+                'letter-spacing': { value: '{typography.text-normal.letter-spacing}' },
+                'font-weight': { value: '{typography.text-normal.font-weight}' },
+                'font-family': { value: '{typography.text-normal.font-family}' },
+                'text-transform': { value: '{typography.text-normal.text-transform}' },
+                'font-feature-settings': { value: '{typography.text-normal.font-feature-settings}' }
             },
             caption: {
-                "font-size": { value: '{typography.text-compact.font-size}' },
-                "line-height": { value: '{typography.text-compact.line-height}' },
-                "letter-spacing": { value: '{typography.text-compact.letter-spacing}' },
-                "font-weight": { value: '{typography.text-compact.font-weight}' },
-                "font-family": { value: '{typography.text-compact.font-family}' },
-                "text-transform": { value: '{typography.text-compact.text-transform}' },
-                "font-feature-settings": { value: '{typography.text-compact.font-feature-settings}' }
+                'font-size': { value: '{typography.text-compact.font-size}' },
+                'line-height': { value: '{typography.text-compact.line-height}' },
+                'letter-spacing': { value: '{typography.text-compact.letter-spacing}' },
+                'font-weight': { value: '{typography.text-compact.font-weight}' },
+                'font-family': { value: '{typography.text-compact.font-family}' },
+                'text-transform': { value: '{typography.text-compact.text-transform}' },
+                'font-feature-settings': { value: '{typography.text-compact.font-feature-settings}' }
             },
             header: {
-                "font-size": { value: '{typography.text-big-strong.font-size}' },
-                "line-height": { value: '{typography.text-big-strong.line-height}' },
-                "letter-spacing": { value: '{typography.text-big-strong.letter-spacing}' },
-                "font-weight": { value: '{typography.text-big-strong.font-weight}' },
-                "font-family": { value: '{typography.text-big-strong.font-family}' },
-                "text-transform": { value: '{typography.text-big-strong.text-transform}' },
-                "font-feature-settings": { value: '{typography.text-big-strong.font-feature-settings}' }
+                'font-size': { value: '{typography.text-big-strong.font-size}' },
+                'line-height': { value: '{typography.text-big-strong.line-height}' },
+                'letter-spacing': { value: '{typography.text-big-strong.letter-spacing}' },
+                'font-weight': { value: '{typography.text-big-strong.font-weight}' },
+                'font-family': { value: '{typography.text-big-strong.font-family}' },
+                'text-transform': { value: '{typography.text-big-strong.text-transform}' },
+                'font-feature-settings': { value: '{typography.text-big-strong.font-feature-settings}' }
             },
             subheading: {
-                "font-size": { value: '{typography.caps-compact-strong.font-size}' },
-                "line-height": { value: '{typography.caps-compact-strong.line-height}' },
-                "letter-spacing": { value: '{typography.caps-compact-strong.letter-spacing}' },
-                "font-weight": { value: '{typography.caps-compact-strong.font-weight}' },
-                "font-family": { value: '{typography.caps-compact-strong.font-family}' },
-                "text-transform": { value: '{typography.caps-compact-strong.text-transform}' },
-                "font-feature-settings": { value: '{typography.caps-compact-strong.font-feature-settings}' }
+                'font-size': { value: '{typography.caps-compact-strong.font-size}' },
+                'line-height': { value: '{typography.caps-compact-strong.line-height}' },
+                'letter-spacing': { value: '{typography.caps-compact-strong.letter-spacing}' },
+                'font-weight': { value: '{typography.caps-compact-strong.font-weight}' },
+                'font-family': { value: '{typography.caps-compact-strong.font-family}' },
+                'text-transform': { value: '{typography.caps-compact-strong.text-transform}' },
+                'font-feature-settings': { value: '{typography.caps-compact-strong.font-feature-settings}' }
             }
         },
         light: {
             default: {
                 container: {
-                    background: { value: 'transparent'},
+                    background: { value: 'transparent' }
                 },
                 text: {
                     color: { value: '{light.foreground.contrast}' }
@@ -94,7 +94,7 @@
             states: {
                 hover: {
                     container: {
-                        background: { value: '{light.states.background.transparent-hover}'},
+                        background: { value: '{light.states.background.transparent-hover}' }
                     },
                     text: {
                         color: { value: '{light.foreground.contrast}' }
@@ -108,7 +108,7 @@
                 },
                 selected: {
                     container: {
-                        background: { value: '{light.background.theme-fade}'},
+                        background: { value: '{light.background.theme-less}' }
                     },
                     text: {
                         color: { value: '{light.foreground.contrast}' }
@@ -122,7 +122,7 @@
                 },
                 'selected-hover': {
                     container: {
-                        background: { value: '{light.states.background.theme-fade-hover}'},
+                        background: { value: '{light.states.background.theme-less-hover}' }
                     },
                     text: {
                         color: { value: '{light.foreground.contrast}' }
@@ -136,12 +136,12 @@
                 },
                 focused: {
                     'focus-outline': {
-                        color: { value: '{light.states.line.focus-theme}'}
+                        color: { value: '{light.states.line.focus-theme}' }
                     }
                 },
                 disabled: {
                     container: {
-                        background: { value: 'transparent'},
+                        background: { value: 'transparent' }
                     },
                     text: {
                         color: { value: '{light.states.foreground.disabled}' }
@@ -161,7 +161,7 @@
         dark: {
             default: {
                 container: {
-                    background: { value: 'transparent'},
+                    background: { value: 'transparent' }
                 },
                 text: {
                     color: { value: '{dark.foreground.contrast}' }
@@ -179,7 +179,7 @@
             states: {
                 hover: {
                     container: {
-                        background: { value: '{dark.states.background.transparent-hover}'},
+                        background: { value: '{dark.states.background.transparent-hover}' }
                     },
                     text: {
                         color: { value: '{dark.foreground.contrast}' }
@@ -193,7 +193,7 @@
                 },
                 selected: {
                     container: {
-                        background: { value: '{dark.background.theme-fade}'},
+                        background: { value: '{dark.background.theme-less}' }
                     },
                     text: {
                         color: { value: '{dark.foreground.contrast}' }
@@ -207,7 +207,7 @@
                 },
                 'selected-hover': {
                     container: {
-                        background: { value: '{dark.states.background.theme-fade-hover}'},
+                        background: { value: '{dark.states.background.theme-less-hover}' }
                     },
                     text: {
                         color: { value: '{dark.foreground.contrast}' }
@@ -221,12 +221,12 @@
                 },
                 focused: {
                     'focus-outline': {
-                        color: { value: '{dark.states.line.focus-theme}'}
+                        color: { value: '{dark.states.line.focus-theme}' }
                     }
                 },
                 disabled: {
                     container: {
-                        background: { value: 'transparent'},
+                        background: { value: 'transparent' }
                     },
                     text: {
                         color: { value: '{dark.states.foreground.disabled}' }

@@ -56,6 +56,7 @@
             //  THEME
             theme: { value: '{light.theme.default.value}' },
             'theme-fade': { value: '{light.theme.palette.value.85}' },
+            'theme-less': { value: '{light.theme.palette.value.94}' },
             //  CONTRAST
             contrast: { value: '{light.contrast.palette.value.25}' },
             'contrast-fade': { value: '{light.contrast.palette.value.92}' },
@@ -143,9 +144,10 @@
             //  THEME
             theme: { value: '{light.theme.default}' },
             'theme-fade': { value: '{light.theme.palette.value.65}' },
+            'theme-less': { value: '{light.theme.palette.value.85}' },
             //  CONTRAST
             contrast: { value: '{light.contrast.palette.value.15}' },
-            'contrast-fade': { value: '{light.contrast.palette.value.70}' },
+            'contrast-fade': { value: '{light.contrast.palette.value.80}' },
             'contrast-less': { value: '{light.contrast.palette.value."6-A12"}' },
             //  ERROR
             error: { value: '{light.error.palette.value.45}' },
@@ -162,7 +164,7 @@
         shadow: {
             outline: { value: '{light.contrast.palette.value."6-A3"}' },
             key: { value: '{light.contrast.palette.value."6-A6"}' },
-            ambient: { value: '{light.contrast.palette.value."6-A12"}' },
+            ambient: { value: '{light.contrast.palette.value."6-A12"}' }
         },
         states: {
             background: {
@@ -171,6 +173,8 @@
                 'theme-active': { value: '{light.theme.palette.value.39}' },
                 'theme-fade-hover': { value: '{light.theme.palette.value.91}' },
                 'theme-fade-active': { value: '{light.theme.palette.value.88}' },
+                'theme-less-hover': { value: '{light.theme.palette.value.90}' },
+                'theme-less-active': { value: '{light.theme.palette.value.94}' },
                 //  CONTRAST
                 'contrast-hover': { value: '{light.contrast.palette.value.20}' },
                 'contrast-active': { value: '{light.contrast.palette.value.15}' },
@@ -304,6 +308,7 @@
             //  THEME
             theme: { value: '{dark.theme.default.value}' },
             'theme-fade': { value: '{dark.theme.palette.value.20}' },
+            'theme-less': { value: '{dark.theme.palette.value.18}' },
             //  CONTRAST
             bg: { value: '{dark.contrast.palette.value.12}' },
             'bg-secondary': { value: '{dark.contrast.palette.value.16}' },
@@ -395,6 +400,7 @@
             //  THEME
             theme: { value: '{dark.theme.palette.value.65}' },
             'theme-fade': { value: '{dark.theme.palette.value.30}' },
+            'theme-less': { value: '{dark.theme.palette.value.27}' },
             //  CONTRAST
             contrast: { value: '{dark.contrast.palette.value.100}' },
             'contrast-fade': { value: '{dark.contrast.palette.value.30}' },
@@ -414,7 +420,7 @@
         shadow: {
             outline: { value: '{dark.contrast.palette.value."85-S100-A15"}' },
             key: { value: 'transparent' },
-            ambient: { value: 'transparent' },
+            ambient: { value: 'transparent' }
         },
         states: {
             background: {
@@ -423,6 +429,8 @@
                 'theme-active': { value: '{dark.theme.palette.value.39}' },
                 'theme-fade-hover': { value: '{dark.theme.palette.value.18}' },
                 'theme-fade-active': { value: '{dark.theme.palette.value.21}' },
+                'theme-less-hover': { value: '{dark.theme.palette.value.15}' },
+                'theme-less-active': { value: '{dark.theme.palette.value.18}' },
                 //  CONTRAST
                 'contrast-hover': { value: '{dark.contrast.palette.value.80}' },
                 'contrast-active': { value: '{dark.contrast.palette.value.55}' },
