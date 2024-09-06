@@ -202,7 +202,7 @@
                 },
                 selected: {
                     container: {
-                        background: { value: '{dark.background.theme-fade}' }
+                        background: { value: '{dark.background.theme-less}' }
                     },
                     text: {
                         color: { value: '{dark.foreground.contrast}' }
@@ -222,7 +222,7 @@
                 },
                 'selected-hover': {
                     container: {
-                        background: { value: '{dark.states.background.theme-fade-hover}' }
+                        background: { value: '{dark.states.background.theme-less-hover}' }
                     },
                     text: {
                         color: { value: '{dark.foreground.contrast}' }
