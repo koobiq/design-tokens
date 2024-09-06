@@ -1,3 +1,9 @@
+# 3.5.0 (2024-09-06)
+
+### Design Tokens
+
+ * feature  **colors:** added new tokens and updated contrast-fade for our lines ([#46](https://github.com/koobiq/design-tokens/issues/46)) ([b2deabe](https://github.com/koobiq/design-tokens/commit/b2deabea754bae615abd113f8e1ab330741b8034))
+
 # 3.4.0 (2024-09-02)
 
 ### Design Tokens
