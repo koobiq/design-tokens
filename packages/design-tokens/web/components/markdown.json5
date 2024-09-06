@@ -329,8 +329,8 @@
             },
             size: {
                 'max-width': { value: '{markdown.size.max-width}'},
-                'margin-top': { value: '{size.m}' },
-                'margin-bottom': { value: '{size.m}' },
+                'margin-top': { value: '{size.s}' },
+                'margin-bottom': { value: '{size.s}' },
 
                 'caption-margin-top': { value: '-{size.s}' },
                 'caption-margin-bottom': { value: '{size.xxl}' },
@@ -356,7 +356,7 @@
             },
             size: {
                 'width': { value: '1px'},
-                'margin-vertical': { value: '{size.xxl}' },
+                'margin-vertical': { value: '{size.l}' },
             },
         },
         table: {
