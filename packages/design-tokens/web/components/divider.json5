@@ -15,10 +15,10 @@
             }
         },
         light: {
-            color: { value: '{light.line.contrast-fade}' }
+            color: { value: '{light.line.contrast-less}' }
         },
         dark: {
-            color: { value: '{dark.line.contrast-fade}' }
+            color: { value: '{dark.line.contrast-less}' }
         }
     }
 }

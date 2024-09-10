@@ -74,7 +74,7 @@
                     background: { value: '{light.background.card}' },
                     title: { value: '{light.foreground.contrast}' },
                     text: { value: '{light.foreground.contrast-secondary}' },
-                    shadow: { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.16)'}
+                    shadow: { value: '{shadow.light.popup}'}
                 }
             },
             error: {
@@ -82,7 +82,7 @@
                     background: { value: '{light.background.card}' },
                     title: { value: '{light.foreground.contrast}' },
                     text: { value: '{light.foreground.contrast-secondary}' },
-                    shadow: { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.16)'}
+                    shadow: { value: '{shadow.light.popup}'}
                 }
             },
             warning: {
@@ -90,7 +90,7 @@
                     background: { value: '{light.background.card}' },
                     title: { value: '{light.foreground.contrast}' },
                     text: { value: '{light.foreground.contrast-secondary}' },
-                    shadow: { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.16)'}
+                    shadow: { value: '{shadow.light.popup}'}
                 }
             },
             success: {
@@ -98,7 +98,7 @@
                     background: { value: '{light.background.card}' },
                     title: { value: '{light.foreground.contrast}' },
                     text: { value: '{light.foreground.contrast-secondary}' },
-                    shadow: { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.16)'}
+                    shadow: { value: '{shadow.light.popup}'}
                 }
             }
         },
@@ -108,7 +108,7 @@
                     background: { value: '{dark.background.card}' },
                     title: { value: '{dark.foreground.contrast}' },
                     text: { value: '{dark.foreground.contrast-secondary}' },
-                    shadow: { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.16)'}
+                    shadow: { value: '{shadow.dark.popup}'}
                 }
             },
             error: {
@@ -116,7 +116,7 @@
                     background: { value: '{dark.background.card}' },
                     title: { value: '{dark.foreground.contrast}' },
                     text: { value: '{dark.foreground.contrast-secondary}' },
-                    shadow: { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.16)'}
+                    shadow: { value: '{shadow.dark.popup}'}
                 }
             },
             warning: {
@@ -124,7 +124,7 @@
                     background: { value: '{dark.background.card}' },
                     title: { value: '{dark.foreground.contrast}' },
                     text: { value: '{dark.foreground.contrast-secondary}' },
-                    shadow: { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.16)'}
+                    shadow: { value: '{shadow.dark.popup}'}
                 }
             },
             success: {
@@ -132,7 +132,7 @@
                     background: { value: '{dark.background.card}' },
                     title: { value: '{dark.foreground.contrast}' },
                     text: { value: '{dark.foreground.contrast-secondary}' },
-                    shadow: { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.16)'}
+                    shadow: { value: '{shadow.dark.popup}'}
                 }
             }
         }

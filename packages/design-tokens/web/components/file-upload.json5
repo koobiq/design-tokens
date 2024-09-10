@@ -193,7 +193,7 @@
                     },
                     grid: {
                         divider: {
-                            color: { value: '{light.line.contrast-fade}' }
+                            color: { value: '{light.line.contrast-less}' }
                          }
                     }
                 },
@@ -350,7 +350,7 @@
                     },
                     grid: {
                         divider: {
-                            color: { value: '{dark.line.contrast-fade}' }
+                            color: { value: '{dark.line.contrast-less}' }
                          }
                     }
                 },

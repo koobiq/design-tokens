@@ -6,8 +6,8 @@
                 radius: { value: '{size.s}' }
             },
             padding: {
-                horizontal: { value: '{size.l}'},
-                vertical: { value: '{size.xs}' }
+                horizontal: { value: '{size.m}'},
+                vertical: { value: '{size.s}' }
             },
             arrow: {
                 size: { value: '{size.m}' }
@@ -15,13 +15,22 @@
         },
         font: {
             default: {
-                "font-size": { value: '{typography.text-normal.font-size}' },
-                "line-height": { value: '{typography.text-normal.line-height}' },
-                "letter-spacing": { value: '{typography.text-normal.letter-spacing}' },
-                "font-weight": { value: '{typography.text-normal.font-weight}' },
-                "font-family": { value: '{typography.text-normal.font-family}' },
-                "text-transform": { value: '{typography.text-normal.text-transform}' },
-                "font-feature-settings": { value: '{typography.text-normal.font-feature-settings}' }
+                "font-size": { value: '{typography.text-compact.font-size}' },
+                "line-height": { value: '{typography.text-compact.line-height}' },
+                "letter-spacing": { value: '{typography.text-compact.letter-spacing}' },
+                "font-weight": { value: '{typography.text-compact.font-weight}' },
+                "font-family": { value: '{typography.text-compact.font-family}' },
+                "text-transform": { value: '{typography.text-compact.text-transform}' },
+                "font-feature-settings": { value: '{typography.text-compact.font-feature-settings}' }
+            },
+            title: {
+               "font-size": { value: '{typography.text-compact.font-size}' },
+                "line-height": { value: '{typography.text-compact.line-height}' },
+                "letter-spacing": { value: '{typography.text-compact.letter-spacing}' },
+                "font-weight": { value: '{typography.text-compact.font-weight}' },
+                "font-family": { value: '{typography.text-compact.font-family}' },
+                "text-transform": { value: '{typography.text-compact.text-transform}' },
+                "font-feature-settings": { value: '{typography.text-compact.font-feature-settings}' } 
             }
         },
         light: {
@@ -29,19 +38,33 @@
                 'fade-on': {
                     background: { value: '{light.background.card}' },
                     text: { value: '{light.foreground.contrast}' },
-                    shadow: { value: '0 2px 4px 0 rgba(39, 51, 62, 0.2)' }
+                    shadow: { value: '{shadow.light.popup}' }
                 },
                 'fade-off': {
                     background: { value: '{light.background.night}' },
                     text: { value: '{light.foreground.white}' },
-                    shadow: { value: '0 2px 4px 0 rgba(39, 51, 62, 0.2)' }
+                    shadow: { value: '{shadow.light.popup}' }
                 }
             },
             theme: {
                 'fade-off': {
                     background: { value: '{light.background.theme}' },
                     text: { value: '{light.foreground.white}' },
-                    shadow: { value: '0 2px 4px 0 rgba(39, 51, 62, 0.2)' }
+                    shadow: { value: '{shadow.light.popup}' }
+                }
+            },
+            warning: {
+                'fade-off': {
+                    background: { value: '{light.background.warning}' },
+                    text: { value: '{light.foreground.white}' },
+                    shadow: { value: '{shadow.light.popup}' }
+                }
+            },
+            error: {
+                'fade-off': {
+                    background: { value: '{light.background.error}' },
+                    text: { value: '{light.foreground.white}' },
+                    shadow: { value: '{shadow.dark.popup}' }
                 }
             }
         },
@@ -50,19 +73,33 @@
                 'fade-on': {
                     background: { value: '{dark.background.card}' },
                     text: { value: '{dark.foreground.contrast}' },
-                    shadow: { value: '0 2px 4px 0 rgba(39, 51, 62, 0.5)' }
+                    shadow: { value: '{shadow.dark.popup}' }
                 },
                 'fade-off': {
                     background: { value: '{dark.background.night}' },
                     text: { value: '{dark.foreground.white}' },
-                    shadow: { value: '0 2px 4px 0 rgba(39, 51, 62, 0.5)' }
+                    shadow: { value: '{shadow.dark.popup}' }
                 }
             },
             theme: {
                 'fade-off': {
                     background: { value: '{dark.background.theme}' },
                     text: { value: '{dark.foreground.white}' },
-                    shadow: { value: '0 2px 4px 0 rgba(39, 51, 62, 0.5)' }
+                    shadow: { value: '{shadow.dark.popup}' }
+                }
+            },
+            warning: {
+                'fade-off': {
+                    background: { value: '{light.background.warning}' },
+                    text: { value: '{light.foreground.white}' },
+                    shadow: { value: '{shadow.dark.popup}' }
+                }
+            },
+            error: {
+                'fade-off': {
+                    background: { value: '{light.background.error}' },
+                    text: { value: '{light.foreground.white}' },
+                    shadow: { value: '{shadow.dark.popup}' }
                 }
             }
         },

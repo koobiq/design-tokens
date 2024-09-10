@@ -52,11 +52,11 @@
         light: {
             container: {
                 background: {value: '{light.background.card}'},
-                'box-shadow': { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.16)' }
+                'box-shadow': { value: '{shadow.light.popup}' }
             },
             header: {
                 text: {value: '{light.foreground.contrast-tertiary}'},
-                divider: {value: '{light.line.contrast-fade}'}
+                divider: {value: '{light.line.contrast-less}'}
             },
             grid: {
                 cell: {
@@ -93,11 +93,11 @@
         dark: {
             container: {
                 background: {value: '{dark.background.card}'},
-                'box-shadow': { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.50)' }
+                'box-shadow': { value: '{shadow.dark.popup}' }
             },
             header: {
                 text: {value: '{dark.foreground.contrast-tertiary}'},
-                divider: {value: '{dark.line.contrast-fade}'}
+                divider: {value: '{dark.line.contrast-less}'}
             },
             grid: {
                 cell: {
@@ -118,7 +118,7 @@
                         },
                         selected: {
                             background: {value: '{dark.background.contrast}'},
-                            text: { value: '{dark.foreground.white}' }
+                            text: { value: '{dark.foreground.on-contrast}' }
                         },
                         'selected-hover': {
                             background: {value: '{dark.states.background.contrast-active}'}

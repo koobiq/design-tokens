@@ -24,7 +24,7 @@
                 padding: {
                     horizontal: { value: '{size.xxl}' },
                     top: { value: '{size.l}' },
-                    bottom: { value: '{size.xxl}'}
+                    bottom: { value: '{size.xs}'}
                 },
             },
             content: {
@@ -70,13 +70,13 @@
         light: {
             container: {
                 background: { value: '{light.background.card}' },
-                'box-shadow': { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.16)' }
+                'box-shadow': { value: '{shadow.light.popup}' }
             },
             header: {
                 text: {
                     color: { value: '{light.foreground.contrast}' }
                 },
-                'scroll-shadow': { value: '0px 9px 8px -12px rgba(106, 115, 151, 0.50)'},
+                'scroll-shadow': { value: '{shadow.light.overflow-normal-bottom}'},
             },
             content: {
                 text: {
@@ -84,19 +84,19 @@
                 }
             },
             footer: {
-                'scroll-shadow': { value: '0px -9px 8px -12px rgba(106, 115, 151, 0.50)'}
+                'scroll-shadow': { value: '{shadow.light.overflow-normal-top}'}
             }
         },
         dark: {
             container: {
                 background: { value: '{dark.background.card}' },
-                'box-shadow': { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.50)' }
+                'box-shadow': { value: '{shadow.dark.popup}' }
             },
             header: {
                 text: {
                     color: { value: '{dark.foreground.contrast}' }
                 },
-                'scroll-shadow': { value: '0px 9px 8px -12px rgba(106, 115, 151, 0.50)'},
+                'scroll-shadow': { value: '{shadow.dark.overflow-normal-bottom}'},
             },
             content: {
                 text: {
@@ -104,7 +104,7 @@
                 }
             },
             footer: {
-                'scroll-shadow': { value: '0px -9px 8px -12px rgba(106, 115, 151, 0.50)'}
+                'scroll-shadow': { value: '{shadow.dark.overflow-normal-top}'}
             }
         },
 }

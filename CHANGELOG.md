@@ -1,3 +1,50 @@
+# 3.5.0 (2024-09-06)
+
+### Design Tokens
+
+ * feature  **colors:** added new tokens and updated contrast-fade for our lines ([#46](https://github.com/koobiq/design-tokens/issues/46)) ([b2deabe](https://github.com/koobiq/design-tokens/commit/b2deabea754bae615abd113f8e1ab330741b8034))
+
+# 3.4.0 (2024-09-02)
+
+### Design Tokens
+
+ * feature  shadows and subtle divider ([#DS-2175](https://github.com/koobiq/design-tokens/issues/issue/DS-2175)) ([#45](https://github.com/koobiq/design-tokens/issues/45)) ([3ef0c63](https://github.com/koobiq/design-tokens/commit/3ef0c638968ac773f9cbc8cc483dd138e9ef7e2f))
+
+## 3.3.1 (2024-08-20)
+
+### Design Tokens
+
+ * bug fix  **typography:** font-weight for strong ([#DS-2762](https://github.com/koobiq/design-tokens/issues/issue/DS-2762)) ([#43](https://github.com/koobiq/design-tokens/issues/43)) ([a61d650](https://github.com/koobiq/design-tokens/commit/a61d650175914dc3ad68ffbb867260bc1c0b2600))
+
+# 3.3.0 (2024-08-19)
+
+### Design Tokens
+
+ * feature  Сontrast Сollibration ([#DS-2003](https://github.com/koobiq/design-tokens/issues/issue/DS-2003)) ([#38](https://github.com/koobiq/design-tokens/issues/38)) ([6a0d033](https://github.com/koobiq/design-tokens/commit/6a0d0330946cbb00f891406f90be27638cf12925))
+ * feature  **tooltip:** updated tokens ([#41](https://github.com/koobiq/design-tokens/issues/41)) ([8f142a9](https://github.com/koobiq/design-tokens/commit/8f142a983ef34c4a153b15112ef4bd47f8413c8c))
+
+# 3.2.0 (2024-08-15)
+
+### Design Tokens
+
+ * feature  transformed theme-specific global vars to theme-agnostic ([#DS-2755](https://github.com/koobiq/design-tokens/issues/issue/DS-2755)) ([#42](https://github.com/koobiq/design-tokens/issues/42)) ([b1428d5](https://github.com/koobiq/design-tokens/commit/b1428d507a70652e0ac2add5ca37dacc3a4ff3e7))
+
+# 3.1.0 (2024-08-14)
+
+### Design Tokens
+
+ * bug fix  **typography:** strong weight 500 → 600 ([#DS-2741](https://github.com/koobiq/design-tokens/issues/issue/DS-2741)) ([#37](https://github.com/koobiq/design-tokens/issues/37)) ([d1b9886](https://github.com/koobiq/design-tokens/commit/d1b9886d852764a85a7706d1c9f84d7e86e0c6b1))
+ * feature  added eslint recommended plugin ([#36](https://github.com/koobiq/design-tokens/issues/36)) ([e7a0ba5](https://github.com/koobiq/design-tokens/commit/e7a0ba57b365e9bf739b6f33932fbd3b400ffea9))
+ * feature  removed card component tokens ([#35](https://github.com/koobiq/design-tokens/issues/35)) ([5d6caaf](https://github.com/koobiq/design-tokens/commit/5d6caafa9e34abfb197fe0f6706cbe1a55f6da2c))
+ * feature  support composite typography tokens ([#39](https://github.com/koobiq/design-tokens/issues/39)) ([a357a50](https://github.com/koobiq/design-tokens/commit/a357a509ede6385bb9adaa0b6c0ee8c3057ee0d5))
+
+# 3.0.0 (2024-08-06)
+
+### Design Tokens
+
+ * bug fix  **calendar:** selected item color in dark theme ([#DS-2685](https://github.com/koobiq/design-tokens/issues/issue/DS-2685)) ([#32](https://github.com/koobiq/design-tokens/issues/32)) ([7e214da](https://github.com/koobiq/design-tokens/commit/7e214da3c421660af04a525eb3fcae95976b6b9a))
+ * bug fix  **popover:** header padding bottom ([#DS-2723](https://github.com/koobiq/design-tokens/issues/issue/DS-2723)) [#33](https://github.com/koobiq/design-tokens/issues/33) ([f3adf01](https://github.com/koobiq/design-tokens/commit/f3adf019e7f0dafa1a379ed231c8fbc0158fedbe))
+
 # 3.0.0-rc.16 (2024-08-02)
 
 ### Design Tokens

@@ -17,13 +17,13 @@
         light: {
             container: {
                 background: { value: '{light.background.card}' },
-                'box-shadow': { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.16)'}
+                'box-shadow': { value: '{shadow.light.popup}'}
             }
         },
         dark: {
             container: {
                 background: { value: '{dark.background.card}' },
-                'box-shadow': { value: '0px 2px 8px 0px rgba(0, 0, 0, 0.50)'}
+                'box-shadow': { value: '{shadow.dark.popup}'}
             }
         }
     }

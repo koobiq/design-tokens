@@ -18,29 +18,30 @@
         },
         contrast: {
             default: { value: '{palette.grey.50}' },
-            palette: { value: '{palette.grey}' },
+            palette: { value: '{palette.grey}' }
         },
-        // neutral будет удалено после удаления из компонентов
+        // TODO: neuntral убрать из компонентов
         neutral: {
-            white: { value: '{palette.white.default}'},
-            black: { value: '{palette.black.default}'}
+            white: { value: '{palette.white.default}' },
+            black: { value: '{palette.black.default}' }
         },
         white: {
-            default: {value: '{palette.white.default}'},
-            palette: {value: '{palette.white}'},
+            default: { value: '{palette.white.default}' },
+            palette: { value: '{palette.white}' }
         },
-        black: { 
-            default: {value: '{palette.black.default}'},
-            palette: {value: '{palette.black}'},
+        black: {
+            default: { value: '{palette.black.default}' },
+            palette: { value: '{palette.black}' }
         },
         brand: {
-            default: { value: '{palette.red.50}'},
-            palette: { value: '{palette.red}'}
+            default: { value: '{palette.red.50}' },
+            palette: { value: '{palette.red}' }
         },
         purple: {
-            default: { value: '{palette.purple.50}'},
-            palette: {value: '{palette.purple}'},
+            default: { value: '{palette.purple.50}' },
+            palette: { value: '{palette.purple}' }
         },
+        // TODO: УТОЧНИТЬ: нудно ли info убрать из компонентов? В темной теме был комментарий с info и secondary
         info: {
             default: { value: '{palette.cyan.50}' },
             palette: { value: '{palette.cyan}' }
@@ -48,143 +49,202 @@
         // будет удалено, после удаления из компонентов ↑
         background: {
             bg: { value: '{light.white.default}' },
-            'bg-secondary': { value: '{light.contrast.palette.value.95}'},
-            'bg-tertiary': { value: '{light.contrast.palette.value.97}'},
+            'bg-secondary': { value: '{light.contrast.palette.value.95}' },
+            'bg-tertiary': { value: '{light.contrast.palette.value.97}' },
+            night: { value: '{light.contrast.palette.value.25}' },
             card: { value: '{light.contrast.palette.value.100}' },
+            //  THEME
+            theme: { value: '{light.theme.default.value}' },
+            'theme-fade': { value: '{light.theme.palette.value.85}' },
+            'theme-less': { value: '{light.theme.palette.value.94}' },
+            //  CONTRAST
             contrast: { value: '{light.contrast.palette.value.25}' },
             'contrast-fade': { value: '{light.contrast.palette.value.92}' },
-            night: { value: '{light.contrast.palette.value.25}'},
+            //  ERROR
             error: { value: '{light.error.palette.value.60}' },
-            'error-fade':{ value: '{light.error.palette.value.94}' },
+            'error-fade': { value: '{light.error.palette.value.90}' },
             'error-less': { value: '{light.error.palette.value.99}' },
+            //  SUCCESS
             success: { value: '{light.success.palette.value.45}' },
-            'success-fade': { value: '{light.success.palette.value.88}' },
-            theme: { value: '{light.theme.default.value}' },
-            'theme-fade': { value: '{light.theme.palette.value.92}' },
+            'success-fade': { value: '{light.success.palette.value.80}' },
+            //  WARNING
             warning: { value: '{light.warning.palette.value.50}' },
-            'warning-fade': { value: '{light.warning.palette.value.90}' },
+            'warning-fade': { value: '{light.warning.palette.value.85}' },
+            //  VISITED
+            //  OTHER
             transparent: { value: 'transparent' },
-            background: { value: '{light.white.default}' }, // будет удалено, после удаления из компонентов
+            // TODO: убрать все нижние параметры из компонентов
+            background: { value: '{light.white.default}' },
             'background-disabled': { value: '{light.contrast.palette.value.95}' },
             'background-less-contrast': { value: '{light.contrast.palette.value.95}' },
             'background-under': { value: '{light.contrast.palette.value.95}' },
-            overlay: { value: '{light.contrast.palette.value.A32}'},
-            'overlay-inverse': { value: '{light.contrast.palette.value.A88}'},
-            'overlay-hover': { value: 'rgba(black, 0.08)' },
-            'overlay-active': { value: 'rgba(black, 0.16)' },
-            'overlay-disabled': { value: 'rgba(white, 0.64)' },
+            overlay: { value: '{light.contrast.palette.value."20-A32"}' },
+            'overlay-inverse': { value: '{light.contrast.palette.value."99-A88"}' },
+            'overlay-hover': { value: '{light.black.palette.value."default-A8"}' },
+            'overlay-active': { value: '{light.black.palette.value."default-A16"}' },
+            'overlay-disabled': { value: '{light.white.palette.value."default-A64"}' }
         },
         foreground: {
+            //  WHITE
             white: { value: '{light.white.default}' },
-            'white-secondary': { value: '{light.white.palette.value.A72}' },
+            'white-secondary': { value: '{light.white.palette.value."default-A72"}' },
+            //  THEME
             theme: { value: '{light.theme.default}' },
             'theme-secondary': { value: '{light.theme.palette.value.60}' },
+            //  CONTRAST
+            contrast: { value: '{light.contrast.palette.value.15}' },
             'on-contrast': { value: '{light.contrast.palette.value.100}' },
-            'contrast': { value: '{light.contrast.palette.value.15}' },
             'contrast-secondary': { value: '{light.contrast.palette.value.50}' },
-            'contrast-tertiary': { value: '{light.contrast.palette.value.70}' },
-            success: { value: '{light.success.palette.value.35}' },
-            'success-less': { value: '{light.success.palette.value.90}' }, // будет удалено, после удаления из компонентов
-            'success-secondary': { value: '{light.success.palette.value.45}' },
-            warning: { value: '{light.warning.palette.value.40}' },
-            'warning-secondary': { value: '{light.warning.palette.value.45}' },
-            error: { value: '{light.error.palette.value.45}' },
+            'contrast-tertiary': { value: '{light.contrast.palette.value.60}' },
+            //  ERROR
+            error: { value: '{light.error.palette.value.40}' },
             'error-secondary': { value: '{light.error.palette.value.50}' },
             'error-tertiary': { value: '{light.error.palette.value.70}' },
+            'error-less': { value: '{light.error.palette.value.90}' }, // TODO: будет удалено, после удаления из компонентов
+            //  SUCCESS
+            success: { value: '{light.success.palette.value.30}' },
+            'success-less': { value: '{light.success.palette.value.90}' }, // TODO: будет удалено, после удаления из компонентов
+            'success-secondary': { value: '{light.success.palette.value.45}' },
+            //  WARNING
+            warning: { value: '{light.warning.palette.value.33}' },
+            'warning-secondary': { value: '{light.warning.palette.value.45}' },
+            //  VISITED
             visited: { value: '{light.purple.palette.value.45}' },
-            'error-less': { value: '{light.error.palette.value.90}' }, // будет удалено, после удаления из компонентов
-            text: { value: '{light.contrast.palette.value.15}' }, // будет удалено, после удаления из компонентов
-            'text-less-contrast': { value: '{light.contrast.palette.value.50}'},
+            //  OTHER
+            // TODO: убрать все нижние параметры из компонентов
+            text: { value: '{light.contrast.palette.value.15}' },
+            'text-less-contrast': { value: '{light.contrast.palette.value.50}' },
             'text-disabled': { value: '{light.contrast.palette.value.70}' },
             'text-error': { value: '{light.error.palette.value.50}' },
             'text-success': { value: '{light.success.palette.value.44}' },
-            divider: { value: '{light.contrast.palette.value.90}' },
-            border: { value: '{light.contrast.palette.value.80}' },
-            icon: { value: '{light.contrast.palette.value.70}' }
-		  },
+            divider: { value: '{light.line.contrast-less}' },
+            border: { value: '{light.line.contrast-fade}' },
+            icon: { value: '{light.icon.contrast-fade}' }
+        },
         icon: {
-            'on-contrast': { value: '{light.contrast.palette.value.100}'},
+            //  WHITE
             white: { value: '{light.white.default}' },
+            //  THEME
             theme: { value: '{light.theme.default}' },
+            'theme-fade': { value: '{light.theme.palette.value.40}' },
+            //  CONTRAST
             contrast: { value: '{light.contrast.palette.value.15}' },
+            'on-contrast': { value: '{light.contrast.palette.value.100}' },
             'contrast-fade': { value: '{light.contrast.palette.value.60}' },
-            success: { value: '{light.success.palette.value.45}' },
-            warning: { value: '{light.warning.palette.value.48}' },
-            error	: { value: '{light.error.palette.value.50}' },
-            visited: { value: '{light.purple.palette.value.55}' },
+            //  ERROR
+            error: { value: '{light.error.palette.value.45}' },
+            //  SUCCESS
+            success: { value: '{light.success.palette.value.40}' },
+            //  WARNING
+            warning: { value: '{light.warning.palette.value.42}' },
+            //  VISITED
+            visited: { value: '{light.purple.palette.value.55}' }
         },
         line: {
+            //  THEME
             theme: { value: '{light.theme.default}' },
-            'theme-fade': { value: '{light.theme.palette.value.80}' },
+            'theme-fade': { value: '{light.theme.palette.value.65}' },
+            'theme-less': { value: '{light.theme.palette.value.85}' },
+            //  CONTRAST
             contrast: { value: '{light.contrast.palette.value.15}' },
-            'contrast-fade': { value: '{light.contrast.palette.value.85}' },
-            success: { value: '{light.success.palette.value.35}' },
-            'success-fade': { value: '{light.success.palette.value.60}' },
-            warning: { value: '{light.warning.palette.value.42}' },
-            'warning-fade': { value: '{light.warning.palette.value.70}' },
+            'contrast-fade': { value: '{light.contrast.palette.value.80}' },
+            'contrast-less': { value: '{light.contrast.palette.value."6-A12"}' },
+            //  ERROR
             error: { value: '{light.error.palette.value.45}' },
-            'error-fade': { value: '{light.error.palette.value.80}' },
-            visited: {  value: '{light.purple.palette.value.80}'  }
+            'error-fade': { value: '{light.error.palette.value.65}' },
+            //  SUCCESS
+            success: { value: '{light.success.palette.value.40}' },
+            'success-fade': { value: '{light.success.palette.value.45}' },
+            //  WARNING
+            warning: { value: '{light.warning.palette.value.45}' },
+            'warning-fade': { value: '{light.warning.palette.value.55}' },
+            //  VISITED
+            visited: { value: '{light.purple.palette.value.80}' }
+        },
+        shadow: {
+            outline: { value: '{light.contrast.palette.value."6-A3"}' },
+            key: { value: '{light.contrast.palette.value."6-A6"}' },
+            ambient: { value: '{light.contrast.palette.value."6-A12"}' }
         },
         states: {
             background: {
-                disabled: { value: '{light.contrast.palette.value.A16}' },
-                'transparent-hover': { value: '{light.contrast.palette.value.A8}'},
-                'transparent-active': { value: '{light.contrast.palette.value.A16}'},
-                'contrast-hover': { value: '#2C2F3C' },
-                'contrast-active': {  value: '#1C2233' },
-                'contrast-fade-hover': {  value: '#DCDEE6' },
-                'contrast-fade-active': {  value: '#D2D4DF' },
-                'theme-hover': {  value: '{light.theme.palette.value.45}' },
-                'theme-active': {  value: '{light.theme.palette.value.39}' },
-                'theme-fade-hover': {  value: '{light.theme.palette.value.91}' },
-                'theme-fade-active': {  value: '{light.theme.palette.value.88}' },
-                'error-hover': {  value: '#EA4732' },
-                'error-active':  {  value: '#D8412D' },
-                'error-fade-hover':  {  value: '#FFD9D4' },
-                'error-fade-active': {  value: '#FEC9C2' },
-                'warning-fade-hover':  {  value: '#FFE6BC' },
-                'warning-fade-active': {  value: '#FFE0AB' },
-                'error-less': { value: '{light.error.palette.value.99}' }, // будет удалено, после удаления из компонентов
-                'ghost-hover': { value: 'rgba(106, 115, 150, 0.08)' }, // будет удалено, после удаления из компонентов
-                'ghost-active': { value: 'rgba(106, 115, 150, 0.16)' }, // будет удалено, после удаления из компонентов
+                //  THEME
+                'theme-hover': { value: '{light.theme.palette.value.45}' },
+                'theme-active': { value: '{light.theme.palette.value.39}' },
+                'theme-fade-hover': { value: '{light.theme.palette.value.91}' },
+                'theme-fade-active': { value: '{light.theme.palette.value.88}' },
+                'theme-less-hover': { value: '{light.theme.palette.value.90}' },
+                'theme-less-active': { value: '{light.theme.palette.value.94}' },
+                //  CONTRAST
+                'contrast-hover': { value: '{light.contrast.palette.value.20}' },
+                'contrast-active': { value: '{light.contrast.palette.value.15}' },
+                'contrast-fade-hover': { value: '{light.contrast.palette.value.88}' },
+                'contrast-fade-active': { value: '{light.contrast.palette.value.85}' },
+                //  ERROR
+                'error-hover': { value: '{light.error.palette.value.56}' },
+                'error-active': { value: '{light.error.palette.value."51-S69"}' },
+                'error-fade-hover': { value: '{light.error.palette.value.92}' },
+                'error-fade-active': { value: '{light.error.palette.value.88}' },
+                'error-less': { value: '{light.error.palette.value.99}' }, // TODO: будет удалено, после удаления из компонентов
+                //  SUCCESS
+                //  WARNING
+                'warning-fade-hover': { value: '{light.warning.palette.value.87}' },
+                'warning-fade-active': { value: '{light.error.palette.value.84}' },
+                //  VISITED
+                //  OTHER
+                disabled: { value: '{light.contrast.palette.value."50-A16"}' },
+                'transparent-hover': { value: '{light.contrast.palette.value."50-A8"}' },
+                'transparent-active': { value: '{light.contrast.palette.value."50-A16"}' },
+                // TODO: нижнее будет удалено, после удаления из компонентов
+                'ghost-hover': { value: 'rgba(106, 115, 150, 0.08)' },
+                'ghost-active': { value: 'rgba(106, 115, 150, 0.16)' }
             },
             foreground: {
-                disabled: { value: '{light.contrast.palette.value.70}' },
+                //  THEME
                 'theme-hover': { value: '{light.theme.palette.value.45}' },
                 'theme-active': { value: '{light.theme.palette.value.40}' },
-                'visited-hover': {  value: '{light.purple.palette.value.40}'  },
-                'visited-active': {  value: '{light.purple.palette.value.35}'  },
+                //  OTHER
+                disabled: { value: '{light.contrast.palette.value."15-A32"}' },
+                'visited-hover': { value: '{light.purple.palette.value.40}' },
+                'visited-active': { value: '{light.purple.palette.value.35}' }
             },
             icon: {
-                disabled: { value: '{light.contrast.palette.value.80}' },
+                //  THEME
                 'theme-hover': { value: '{light.theme.palette.value.45}' },
                 'theme-active': { value: '{light.theme.palette.value.40}' },
+                //  CONTRAST
+                disabled: { value: '{light.contrast.palette.value."15-A32"}' },
                 'contrast-hover': { value: '{light.contrast.palette.value.10}' },
                 'contrast-active': { value: '{light.contrast.palette.value.10}' },
                 'contrast-fade-hover': { value: '{light.contrast.palette.value.50}' },
                 'contrast-fade-active': { value: '{light.contrast.palette.value.40}' },
+                //  ERROR
                 'error-hover': { value: '{light.error.palette.value.45}' },
                 'error-active': { value: '{light.error.palette.value.40}' },
+                //  SUCCESS
                 'success-hover': { value: '{light.success.palette.value.40}' },
                 'success-active': { value: '{light.success.palette.value.30}' },
+                //  WARNING
                 'warning-hover': { value: '{light.warning.palette.value.45}' },
                 'warning-active': { value: '{light.warning.palette.value.42}' },
-                'visited-hover': {  value: '{light.purple.palette.value.50}'  },
-                'visited-active': {  value: '{light.purple.palette.value.40}'  },
-
-			},
+                //  VISITED
+                'visited-hover': { value: '{light.purple.palette.value.50}' },
+                'visited-active': { value: '{light.purple.palette.value.40}' }
+            },
             line: {
-                disabled: { value: '{light.contrast.palette.value.87}' },
+                // THEME
                 focus: { value: '{light.theme.palette.value.50}' },
                 'focus-theme': { value: '{light.theme.palette.value.60}' },
-                'focus-error': { value: '{light.error.palette.value.45}' },
+                // CONTRAST
+                disabled: { value: '{light.contrast.palette.value."15-A32"}' },
+                // ERROR
+                'focus-error': { value: '{light.error.palette.value.45}' }
             },
-            // будет удалено, после удаления из компонентов ↓
+            // TODO: нижнее будет удалено, после удаления из компонентов ↓
             'focused-color': { value: '{light.theme.palette.value.50}' },
             'focused-color-error': { value: '{light.error.palette.value.50}' },
             'selected-color': { value: '{light.theme.palette.value.95}' },
-            'pressed-shadow': { value: 'inset 0 1px 2px 0 rgba(black, 0.2)' },
+            'pressed-shadow': { value: 'inset 0 1px 2px 0 {light.black.palette.value."default-A20"}' },
             'disabled-opacity': { value: 0.32 }
         },
         others: {
@@ -211,184 +271,227 @@
         },
         contrast: {
             default: { value: '{palette.grey.50}' },
-            palette: { value: '{palette.grey}' },
+            palette: { value: '{palette.grey}' }
         },
-        // neutral будет удалено после удаления из компонентов
+        // TODO: neutral из компонентов
         neutral: {
-            white: { value: '{palette.white.default}'},
-            black: { value: '{palette.black.default}'}
+            white: { value: '{palette.white.default}' },
+            black: { value: '{palette.black.default}' }
         },
         white: {
-            default: {value: '{palette.white.default}'},
-            palette: {value: '{palette.white}'},
+            default: { value: '{palette.white.default}' },
+            palette: { value: '{palette.white}' }
         },
         black: {
-            default: {value: '{palette.black.default}'},
-            palette: {value: '{palette.black}'},
+            default: { value: '{palette.black.default}' },
+            palette: { value: '{palette.black}' }
         },
         brand: {
-            default: { value: '{palette.red.50}'},
-            palette: { value: '{palette.red}'}
+            default: { value: '{palette.red.50}' },
+            palette: { value: '{palette.red}' }
         },
         purple: {
-            default: { value: '{palette.purple.50}'},
-            palette: {value: '{palette.purple}'},
+            default: { value: '{palette.purple.50}' },
+            palette: { value: '{palette.purple}' }
         },
-        // будет удалено, после удаления из компонентов ↓
+        // TODO: secondary из компонентов
         secondary: {
             default: { value: '{palette.grey.50}' },
             palette: { value: '{palette.grey}' }
         },
+        // TODO: info из компонентов
         info: {
             default: { value: '{palette.cyan.50}' },
             palette: { value: '{palette.cyan}' }
         },
-        // будет удалено, после удаления из компонентов ↑
         background: {
+            //  THEME
+            theme: { value: '{dark.theme.default.value}' },
+            'theme-fade': { value: '{dark.theme.palette.value.20}' },
+            'theme-less': { value: '{dark.theme.palette.value.18}' },
+            //  CONTRAST
             bg: { value: '{dark.contrast.palette.value.12}' },
-            'bg-secondary': { value: '{dark.contrast.palette.value.15}'},
-            'bg-tertiary': { value: '{dark.contrast.palette.value.14}'},
+            'bg-secondary': { value: '{dark.contrast.palette.value.16}' },
+            'bg-tertiary': { value: '{dark.contrast.palette.value.14}' },
+            night: { value: '{dark.contrast.palette.value.25}' },
             card: { value: '{dark.contrast.palette.value.15}' },
             contrast: { value: '{dark.contrast.palette.value.90}' },
-            'contrast-fade': { value: '{dark.contrast.palette.value.22}' },
-            night: { value: '{dark.contrast.palette.value.25}'},
-            error: { value: '{dark.error.palette.value.40}' },
-            'error-fade':{ value: '{dark.error.palette.value.15}' },
+            'contrast-fade': { value: '{dark.contrast.palette.value.25}' },
+            //  ERROR
+            error: { value: '{dark.error.palette.value.41}' },
+            'error-fade': { value: '{dark.error.palette.value.15}' },
             'error-less': { value: '{dark.error.palette.value.6}' }, // удалить после удаления из компонентов
-            success: { value: '{dark.success.palette.value.35}' },
-            'success-fade': { value: '{dark.success.palette.value.15}' },
-            theme: { value: '{dark.theme.default.value}' },
-            'theme-fade': { value: '{dark.theme.palette.value.15}' },
-            warning: { value: '{dark.warning.palette.value.42}' },
+            //  SUCCESS
+            success: { value: '{dark.success.palette.value.40}' },
+            'success-fade': { value: '{dark.success.palette.value.12}' },
+            //  WARNING
+            warning: { value: '{dark.warning.palette.value.39}' },
             'warning-fade': { value: '{dark.warning.palette.value.14}' },
+            //  OTHER
             transparent: { value: 'transparent' },
-            // будет удалено, после удаления из компонентов ↓
+            // TODO: убрать все нижние параметры из компонентов
             background: { value: '{dark.white.default}' },
             'background-disabled': { value: '{dark.contrast.palette.value.95}' },
             'background-less-contrast': { value: '{dark.contrast.palette.value.95}' },
             'background-under': { value: '{dark.contrast.palette.value.95}' },
-            overlay: { value: '{dark.contrast.palette.value.A64L6}'},
-            'overlay-inverse': { value: '{dark.contrast.palette.value.A80L12}'},
+            overlay: { value: '{dark.contrast.palette.value."6-A64"}' },
+            'overlay-inverse': { value: '{dark.contrast.palette.value."12-A80"}' },
             'overlay-hover': { value: 'rgba(black, 0.08)' },
             'overlay-active': { value: 'rgba(black, 0.16)' },
-            'overlay-disabled': { value: 'rgba(white, 0.64)' },
+            'overlay-disabled': { value: 'rgba(white, 0.64)' }
         },
         foreground: {
-            white: { value: '{dark.contrast.palette.value.100}' },
-            'white-secondary': { value: '{dark.white.palette.value.A72}' },
+            //  WHITE
+            white: { value: '{dark.white.default}' },
+            'white-secondary': { value: '{dark.white.palette.value."default-A72"}' },
+            //  THEME
             theme: { value: '{dark.theme.palette.value.65}' },
-            'theme-secondary': { value: '{dark.theme.palette.value.40}' },
+            'theme-secondary': { value: '{dark.theme.palette.value.30}' },
+            //  CONTRAST
+            contrast: { value: '{dark.contrast.palette.value.80}' },
             'on-contrast': { value: '{dark.contrast.palette.value.15}' },
-            'contrast': { value: '{dark.contrast.palette.value.85}' },
             'contrast-secondary': { value: '{dark.contrast.palette.value.60}' },
             'contrast-tertiary': { value: '{dark.contrast.palette.value.45}' },
-            success: { value: '{dark.success.palette.value.45}' },
-            // будет удалено, после удаления из компонентов ↓
-            'success-less': { value: '{dark.success.palette.value.90}' },
-            //
-            'success-secondary': { value: '{dark.success.palette.value.40}' },
-            warning: { value: '{dark.warning.palette.value.55}' },
-            'warning-secondary': { value: '{dark.warning.palette.value.40}' },
-            error: { value: '{dark.error.palette.value.70}' },
+            //  ERROR
+            error: { value: '{dark.error.palette.value.60}' },
             'error-secondary': { value: '{dark.error.palette.value.40}' },
             'error-tertiary': { value: '{dark.error.palette.value.25}' },
+            'error-less': { value: '{dark.error.palette.value.90}' }, // TODO: будет удалено, после удаления из компонентов
+            //  SUCCESS
+            success: { value: '{dark.success.palette.value.45}' },
+            'success-less': { value: '{dark.success.palette.value.90}' }, // TODO: будет удалено, после удаления из компонентов
+            'success-secondary': { value: '{dark.success.palette.value.40}' },
+            //  WARNING
+            warning: { value: '{dark.warning.palette.value.60}' },
+            'warning-secondary': { value: '{dark.warning.palette.value.40}' },
+            //  VISITED
             visited: { value: '{dark.purple.palette.value.50}' },
-            // будет удалено, после удаления из компонентов ↓
-            'error-less': { value: '{dark.error.palette.value.90}' },
-            // будет удалено, после удаления из компонентов ↓
+            //  OTHER
+            // TODO: убрать все нижние параметры из компонентов
             text: { value: '{dark.contrast.palette.value.15}' },
-            'text-less-contrast': { value: '{dark.contrast.palette.value.50}'},
+            'text-less-contrast': { value: '{dark.contrast.palette.value.50}' },
             'text-disabled': { value: '{dark.contrast.palette.value.70}' },
             'text-error': { value: '{dark.error.palette.value.50}' },
             'text-success': { value: '{dark.success.palette.value.44}' },
-            divider: { value: '{dark.contrast.palette.value.90}' },
-            border: { value: '{dark.contrast.palette.value.80}' },
-            icon: { value: '{dark.contrast.palette.value.70}' }
-		  },
+            divider: { value: '{dark.line.contrast-less}' },
+            border: { value: '{dark.line.contrast-fade}' },
+            icon: { value: '{dark.icon.contrast-fade}' }
+        },
         icon: {
-            'on-contrast': { value: '{dark.contrast.palette.value.15}'},
-            white: { value: '{dark.contrast.palette.value.100}' },
+            //  WHITE
+            white: { value: '{dark.white.default}' },
+            //  THEME
             theme: { value: '{dark.theme.palette.value.65}' },
-            contrast: { value: '{dark.contrast.palette.value.85}' },
+            'theme-fade': { value: '{dark.contrast.palette.value.30}' },
+            //  CONTRAST
+            contrast: { value: '{dark.contrast.palette.value.80}' },
+            'on-contrast': { value: '{dark.contrast.palette.value.15}' },
             'contrast-fade': { value: '{dark.contrast.palette.value.45}' },
-            success: { value: '{dark.success.palette.value.40}' },
-            warning: { value: '{dark.warning.palette.value.40}' },
-            error	: { value: '{dark.error.palette.value.65}' },
-            visited: { value: '{dark.purple.palette.value.50}' },
-		},
+            //  ERROR
+            error: { value: '{dark.error.palette.value.60}' },
+            //  SUCCESS
+            success: { value: '{dark.success.palette.value.45}' },
+            //  WARNING
+            warning: { value: '{dark.warning.palette.value.60}' },
+            //  VISITED
+            visited: { value: '{dark.purple.palette.value.50}' }
+        },
         line: {
-            theme: { value: '{dark.theme.default}' },
-            'theme-fade': { value: '{dark.theme.palette.value.35}' },
+            //  THEME
+            theme: { value: '{dark.theme.palette.value.65}' },
+            'theme-fade': { value: '{dark.theme.palette.value.30}' },
+            'theme-less': { value: '{dark.theme.palette.value.27}' },
+            //  CONTRAST
             contrast: { value: '{dark.contrast.palette.value.100}' },
-            'contrast-fade': { value: '{dark.contrast.palette.value.20}' },
+            'contrast-fade': { value: '{dark.contrast.palette.value.30}' },
+            'contrast-less': { value: '{dark.contrast.palette.value.22}' },
+            //  ERROR
+            error: { value: '{dark.error.palette.value.35}' },
+            'error-fade': { value: '{dark.error.palette.value.35}' },
+            //  SUCCESS
             success: { value: '{dark.success.palette.value.35}' },
             'success-fade': { value: '{dark.success.palette.value.20}' },
+            //  WARNING
             warning: { value: '{dark.warning.palette.value.42}' },
             'warning-fade': { value: '{dark.warning.palette.value.20}' },
-            error: { value: '{dark.error.palette.value.35}' },
-            'error-fade': { value: '{dark.error.palette.value.25}' },
-            visited: {  value: '{dark.purple.palette.value.30}'  }
-		},
+            //  VISITED
+            visited: { value: '{dark.purple.palette.value.30}' }
+        },
+        shadow: {
+            outline: { value: '{dark.contrast.palette.value."85-S100-A15"}' },
+            key: { value: 'transparent' },
+            ambient: { value: 'transparent' }
+        },
         states: {
             background: {
-                //  DISABLE
-                disabled: { value: '{dark.contrast.palette.value.A16}' },
-                //  TRANSPARENT
-                'transparent-hover': { value: '{dark.contrast.palette.value.A16}'},
-                'transparent-active': { value: '{dark.contrast.palette.value.А15L85}'},
-                //  CONTRAST
-                'contrast-hover': { value: '#C2C4C8' },
-                'contrast-active': {  value: '#858991' },
-                'contrast-fade-hover': {  value: '#353748' },
-                'contrast-fade-active': {  value: '#3A3C4E' },
                 //  THEME
-                'theme-hover': {  value: '{dark.theme.palette.value.45}' },
-                'theme-active': {  value: '{dark.theme.palette.value.39}' },
-                'theme-fade-hover': {  value: '{dark.theme.palette.value.18}' },
-                'theme-fade-active': {  value: '{dark.theme.palette.value.21}' },
+                'theme-hover': { value: '{dark.theme.palette.value.45}' },
+                'theme-active': { value: '{dark.theme.palette.value.39}' },
+                'theme-fade-hover': { value: '{dark.theme.palette.value.18}' },
+                'theme-fade-active': { value: '{dark.theme.palette.value.21}' },
+                'theme-less-hover': { value: '{dark.theme.palette.value.15}' },
+                'theme-less-active': { value: '{dark.theme.palette.value.18}' },
+                //  CONTRAST
+                'contrast-hover': { value: '{dark.contrast.palette.value.80}' },
+                'contrast-active': { value: '{dark.contrast.palette.value.55}' },
+                'contrast-fade-hover': { value: '{dark.contrast.palette.value.25}' },
+                'contrast-fade-active': { value: '{dark.contrast.palette.value.27}' },
+                disabled: { value: '{dark.contrast.palette.value."50-A16"}' },
+                'transparent-hover': { value: '{dark.contrast.palette.value."50-A16"}' },
+                'transparent-active': { value: '{dark.contrast.palette.value."85-S100-A15"}' },
                 //  ERROR
-                'error-hover': {  value: '#D21B03' },
-                'error-active':  {  value: '#C21903' },
-                'error-fade-hover':  {  value: '#430800' },
-                'error-fade-active': {  value: '#530A01' },
+                'error-hover': { value: '{dark.error.palette.value.42}' },
+                'error-active': { value: '{dark.error.palette.value.39}' },
+                'error-fade-hover': { value: '{dark.error.palette.value.13}' },
+                'error-fade-active': { value: '{dark.error.palette.value.16}' },
+                'error-less': { value: '{dark.error.palette.value.6}' }, // TODO: будет удалено, после удаления из компонентов
                 //  WARNING
-                'warning-fade-hover':  {  value: '#432A00' },
-                'warning-fade-active': {  value: '#543500' },
-                //  OTHER
-                'error-less': { value: '{dark.error.palette.value.6}' }, // будет удалено, после удаления из компонентов
-			},
+                'warning-fade-hover': { value: '{dark.warning.palette.value.13}' },
+                'warning-fade-active': { value: '{dark.warning.palette.value.16}' }
+            },
             foreground: {
-                disabled: { value: '{dark.contrast.palette.value.30}' },
+                //  THEME
                 'theme-hover': { value: '{dark.theme.palette.value.65}' },
                 'theme-active': { value: '{dark.theme.palette.value.70}' },
-                'visited-hover': {  value: '{dark.purple.palette.value.55}'  },
-                'visited-active': {  value: '{dark.purple.palette.value.60}'  },
-			},
+                //  CONTRAST
+                disabled: { value: '{dark.contrast.palette.value.40}' },
+                //  VISITED
+                'visited-hover': { value: '{dark.purple.palette.value.55}' },
+                'visited-active': { value: '{dark.purple.palette.value.60}' }
+            },
             icon: {
-                disabled: { value: '{dark.contrast.palette.value.30}' },
+                //  THEME
                 'theme-hover': { value: '{dark.theme.palette.value.45}' },
                 'theme-active': { value: '{dark.theme.palette.value.40}' },
+                //  CONTRAST
                 'contrast-hover': { value: '{dark.contrast.palette.value.90}' },
                 'contrast-active': { value: '{dark.contrast.palette.value.80}' },
                 'contrast-fade-hover': { value: '{dark.contrast.palette.value.50}' },
                 'contrast-fade-active': { value: '{dark.contrast.palette.value.40}' },
+                disabled: { value: '{dark.contrast.palette.value.30}' },
+                //  ERROR
                 'error-hover': { value: '{dark.error.palette.value.50}' },
                 'error-active': { value: '{dark.error.palette.value.40}' },
+                //  SUCCESS
                 'success-hover': { value: '{dark.success.palette.value.40}' },
                 'success-active': { value: '{dark.success.palette.value.30}' },
+                //  WARNING
                 'warning-hover': { value: '{dark.warning.palette.value.45}' },
                 'warning-active': { value: '{dark.warning.palette.value.42}' },
-                'visited-hover': {  value: '{dark.purple.palette.value.55}'  },
-                'visited-active': {  value: '{dark.purple.palette.value.60}'  },
-
-			},
+                //  VISITED
+                'visited-hover': { value: '{dark.purple.palette.value.55}' },
+                'visited-active': { value: '{dark.purple.palette.value.60}' }
+            },
             line: {
-                disabled: { value: '{dark.contrast.palette.value.A32L50}' },
+                //  THEME
                 focus: { value: '{dark.theme.palette.value.50}' },
                 'focus-theme': { value: '{dark.theme.palette.value.60}' },
-                'focus-error': { value: '{dark.error.palette.value.45}' },
+                //  CONTRAST
+                disabled: { value: '{dark.contrast.palette.value."50-A32"}' },
+                //  ERROR
+                'focus-error': { value: '{dark.error.palette.value.45}' }
             },
-            // будет удалено, после удаления из компонентов ↓
+            // TODO: будет удалено, после удаления из компонентов ↓
             'focused-color': { value: '{dark.theme.palette.value.50}' },
             'focused-color-error': { value: '{dark.error.palette.value.50}' },
             'selected-color': { value: '{dark.theme.palette.value.95}' },
@@ -396,7 +499,7 @@
             'disabled-opacity': { value: 0.32 }
         },
         others: {
-		    	brand: { value: '{dark.brand.default}' }
-		    }
+            brand: { value: '{dark.brand.default}' }
+        }
     }
 }
