@@ -212,7 +212,7 @@
             size: {
                 'max-width': { value: '{markdown.size.max-width}'},
                 'margin-top': { value: '{size.xl}' },
-                'margin-bottom': { value: '{size.xl}' },
+                'margin-bottom': { value: '{size.xxl}' },
                 'padding': { value: '{size.m} {size.l}' },
                 'line-width': { value: '{size.xxs}' },
                 'border-radius': { value: '0' },
@@ -373,7 +373,7 @@
             size: {
                 'border-width': { value: '{size.border-width}'},
                 'padding': { value: '{size.s}' },
-                'margin-bottom': { value: '{size.m}' }
+                'margin-bottom': { value: '{size.l}' }
             },
             font: {
                 header: {
