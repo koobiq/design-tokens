@@ -148,7 +148,7 @@
             //  CONTRAST
             contrast: { value: '{light.contrast.palette.value.15}' },
             'contrast-fade': { value: '{light.contrast.palette.value.80}' },
-            'contrast-less': { value: '{light.contrast.palette.value."6-A12"}' },
+            'contrast-less': { value: '{light.contrast.palette.value."16"}' },
             //  ERROR
             error: { value: '{light.error.palette.value.45}' },
             'error-fade': { value: '{light.error.palette.value.65}' },
