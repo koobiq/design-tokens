@@ -4,7 +4,7 @@
             theme: {
                 default: {
                     border: { value: '{light.line.contrast-fade}' },
-                    color: { value: '{light.neutral.white}' },
+                    color: { value: '{light.icon.white}' },
                     text: { value: '{light.foreground.contrast}' },
                     background: { value: '{light.background.bg}' },
                     caption: { value: '{light.foreground.contrast-secondary}' }
@@ -45,7 +45,7 @@
             error: {
                 default: {
                     border: { value: '{light.line.error}' },
-                    color: { value: '{light.neutral.white}' },
+                    color: { value: '{light.icon.white}' },
                     text: { value: '{light.foreground.contrast}' },
                     background: { value: '{light.states.background.error-less}' },
                     caption: { value: '{light.foreground.contrast-secondary}' }
@@ -88,7 +88,7 @@
             theme: {
                 default: {
                     border: { value: '{dark.line.contrast-fade}' },
-                    color: { value: '{dark.neutral.white}' },
+                    color: { value: '{dark.icon.white}' },
                     text: { value: '{dark.foreground.contrast}' },
                     background: { value: '{dark.background.bg}' },
                     caption: { value: '{dark.foreground.contrast-secondary}' }
@@ -129,7 +129,7 @@
             error: {
                 default: {
                     border: { value: '{dark.line.error}' },
-                    color: { value: '{dark.neutral.white}' },
+                    color: { value: '{dark.icon.white}' },
                     text: { value: '{dark.foreground.contrast}' },
                     background: { value: '{dark.states.background.error-less}' },
                     caption: { value: '{dark.foreground.contrast-secondary}' }

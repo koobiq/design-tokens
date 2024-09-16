@@ -199,13 +199,13 @@
         blockquote: {
             light: {
                 text: { value: '{light.foreground.contrast}' },
-                line: { value: '{light.foreground.border}' },
+                line: { value: '{light.line.contrast-less}' },
                 background: { value: 'transparent' },
                 border: { value: 'transparent' }
             },
             dark: {
                 text: { value: '{dark.foreground.contrast}' },
-                line: { value: '{dark.foreground.border}' },
+                line: { value: '{dark.line.contrast-less}' },
                 background: { value: 'transparent' },
                 border: { value: 'transparent' }
             },
@@ -233,12 +233,12 @@
         code: {
             light: {
                 text: { value: '{light.foreground.contrast}' },
-                background: { value: '{light.background.background-less-contrast}' },
+                background: { value: '{light.background.contrast-fade}' },
                 border: { value: '{light.line.contrast-less}' }
             },
             dark: {
                 text: { value: '{dark.foreground.contrast}' },
-                background: { value: '{dark.background.background-less-contrast}' },
+                background: { value: '{dark.background.contrast-fade}' },
                 border: { value: '{dark.line.contrast-less}' }
             },
             size: {
@@ -322,10 +322,10 @@
         },
         image: {
             light: {
-                'caption-text': { value: '{light.foreground.text-less-contrast}' }
+                'caption-text': { value: '{light.foreground.contrast-secondary}' }
             },
             dark: {
-                'caption-text': { value: '{dark.foreground.text-less-contrast}' }
+                'caption-text': { value: '{dark.foreground.contrast-secondary}' }
             },
             size: {
                 'max-width': { value: '{markdown.size.max-width}'},
@@ -361,12 +361,12 @@
         },
         table: {
             light: {
-                header: { value: '{light.foreground.text-less-contrast}' },
+                header: { value: '{light.foreground.contrast-secondary}' },
                 body: { value: '{light.foreground.contrast}' },
                 border: { value: '{light.line.contrast-less}' }
             },
             dark: {
-                header: { value: '{dark.foreground.text-less-contrast}' },
+                header: { value: '{dark.foreground.contrast-secondary}' },
                 body: { value: '{dark.foreground.contrast}' },
                 border: { value: '{dark.line.contrast-less}' }
             },
