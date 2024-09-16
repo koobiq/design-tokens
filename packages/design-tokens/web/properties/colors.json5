@@ -20,11 +20,6 @@
             default: { value: '{palette.grey.50}' },
             palette: { value: '{palette.grey}' }
         },
-        // TODO: neuntral убрать из компонентов
-        neutral: {
-            white: { value: '{palette.white.default}' },
-            black: { value: '{palette.black.default}' }
-        },
         white: {
             default: { value: '{palette.white.default}' },
             palette: { value: '{palette.white}' }
@@ -33,20 +28,10 @@
             default: { value: '{palette.black.default}' },
             palette: { value: '{palette.black}' }
         },
-        brand: {
-            default: { value: '{palette.red.50}' },
-            palette: { value: '{palette.red}' }
-        },
         purple: {
             default: { value: '{palette.purple.50}' },
             palette: { value: '{palette.purple}' }
         },
-        // TODO: УТОЧНИТЬ: нудно ли info убрать из компонентов? В темной теме был комментарий с info и secondary
-        info: {
-            default: { value: '{palette.cyan.50}' },
-            palette: { value: '{palette.cyan}' }
-        },
-        // будет удалено, после удаления из компонентов ↑
         background: {
             bg: { value: '{light.white.default}' },
             'bg-secondary': { value: '{light.contrast.palette.value.95}' },
@@ -70,19 +55,10 @@
             //  WARNING
             warning: { value: '{light.warning.palette.value.50}' },
             'warning-fade': { value: '{light.warning.palette.value.85}' },
-            //  VISITED
             //  OTHER
             transparent: { value: 'transparent' },
-            // TODO: убрать все нижние параметры из компонентов
-            background: { value: '{light.white.default}' },
-            'background-disabled': { value: '{light.contrast.palette.value.95}' },
-            'background-less-contrast': { value: '{light.contrast.palette.value.95}' },
-            'background-under': { value: '{light.contrast.palette.value.95}' },
             overlay: { value: '{light.contrast.palette.value."20-A32"}' },
             'overlay-inverse': { value: '{light.contrast.palette.value."99-A88"}' },
-            'overlay-hover': { value: '{light.black.palette.value."default-A8"}' },
-            'overlay-active': { value: '{light.black.palette.value."default-A16"}' },
-            'overlay-disabled': { value: '{light.white.palette.value."default-A64"}' }
         },
         foreground: {
             //  WHITE
@@ -100,26 +76,16 @@
             error: { value: '{light.error.palette.value.40}' },
             'error-secondary': { value: '{light.error.palette.value.50}' },
             'error-tertiary': { value: '{light.error.palette.value.70}' },
-            'error-less': { value: '{light.error.palette.value.90}' }, // TODO: будет удалено, после удаления из компонентов
+            'error-less': { value: '{light.error.palette.value.90}' },
             //  SUCCESS
             success: { value: '{light.success.palette.value.30}' },
-            'success-less': { value: '{light.success.palette.value.90}' }, // TODO: будет удалено, после удаления из компонентов
+            'success-less': { value: '{light.success.palette.value.90}' },
             'success-secondary': { value: '{light.success.palette.value.45}' },
             //  WARNING
             warning: { value: '{light.warning.palette.value.33}' },
             'warning-secondary': { value: '{light.warning.palette.value.45}' },
             //  VISITED
             visited: { value: '{light.purple.palette.value.45}' },
-            //  OTHER
-            // TODO: убрать все нижние параметры из компонентов
-            text: { value: '{light.contrast.palette.value.15}' },
-            'text-less-contrast': { value: '{light.contrast.palette.value.50}' },
-            'text-disabled': { value: '{light.contrast.palette.value.70}' },
-            'text-error': { value: '{light.error.palette.value.50}' },
-            'text-success': { value: '{light.success.palette.value.44}' },
-            divider: { value: '{light.line.contrast-less}' },
-            border: { value: '{light.line.contrast-fade}' },
-            icon: { value: '{light.icon.contrast-fade}' }
         },
         icon: {
             //  WHITE
@@ -195,9 +161,6 @@
                 disabled: { value: '{light.contrast.palette.value."50-A16"}' },
                 'transparent-hover': { value: '{light.contrast.palette.value."50-A8"}' },
                 'transparent-active': { value: '{light.contrast.palette.value."50-A16"}' },
-                // TODO: нижнее будет удалено, после удаления из компонентов
-                'ghost-hover': { value: 'rgba(106, 115, 150, 0.08)' },
-                'ghost-active': { value: 'rgba(106, 115, 150, 0.16)' }
             },
             foreground: {
                 //  THEME
@@ -241,15 +204,8 @@
                 'focus-error': { value: '{light.error.palette.value.45}' }
             },
             // TODO: нижнее будет удалено, после удаления из компонентов ↓
-            'focused-color': { value: '{light.theme.palette.value.50}' },
-            'focused-color-error': { value: '{light.error.palette.value.50}' },
-            'selected-color': { value: '{light.theme.palette.value.95}' },
-            'pressed-shadow': { value: 'inset 0 1px 2px 0 {light.black.palette.value."default-A20"}' },
             'disabled-opacity': { value: 0.32 }
         },
-        others: {
-            brand: { value: '{light.brand.default}' }
-        }
     },
     // DARK THEME
     dark: {
@@ -273,11 +229,6 @@
             default: { value: '{palette.grey.50}' },
             palette: { value: '{palette.grey}' }
         },
-        // TODO: neutral из компонентов
-        neutral: {
-            white: { value: '{palette.white.default}' },
-            black: { value: '{palette.black.default}' }
-        },
         white: {
             default: { value: '{palette.white.default}' },
             palette: { value: '{palette.white}' }
@@ -286,23 +237,9 @@
             default: { value: '{palette.black.default}' },
             palette: { value: '{palette.black}' }
         },
-        brand: {
-            default: { value: '{palette.red.50}' },
-            palette: { value: '{palette.red}' }
-        },
         purple: {
             default: { value: '{palette.purple.50}' },
             palette: { value: '{palette.purple}' }
-        },
-        // TODO: secondary из компонентов
-        secondary: {
-            default: { value: '{palette.grey.50}' },
-            palette: { value: '{palette.grey}' }
-        },
-        // TODO: info из компонентов
-        info: {
-            default: { value: '{palette.cyan.50}' },
-            palette: { value: '{palette.cyan}' }
         },
         background: {
             //  THEME
@@ -329,16 +266,8 @@
             'warning-fade': { value: '{dark.warning.palette.value.14}' },
             //  OTHER
             transparent: { value: 'transparent' },
-            // TODO: убрать все нижние параметры из компонентов
-            background: { value: '{dark.white.default}' },
-            'background-disabled': { value: '{dark.contrast.palette.value.95}' },
-            'background-less-contrast': { value: '{dark.contrast.palette.value.95}' },
-            'background-under': { value: '{dark.contrast.palette.value.95}' },
-            overlay: { value: '{dark.contrast.palette.value."6-A64"}' },
-            'overlay-inverse': { value: '{dark.contrast.palette.value."12-A80"}' },
-            'overlay-hover': { value: 'rgba(black, 0.08)' },
-            'overlay-active': { value: 'rgba(black, 0.16)' },
-            'overlay-disabled': { value: 'rgba(white, 0.64)' }
+            overlay: { value: '{light.contrast.palette.value."6-A64"}' },
+            'overlay-inverse': { value: '{light.contrast.palette.value."12-A80"}' },
         },
         foreground: {
             //  WHITE
@@ -366,16 +295,6 @@
             'warning-secondary': { value: '{dark.warning.palette.value.40}' },
             //  VISITED
             visited: { value: '{dark.purple.palette.value.50}' },
-            //  OTHER
-            // TODO: убрать все нижние параметры из компонентов
-            text: { value: '{dark.contrast.palette.value.15}' },
-            'text-less-contrast': { value: '{dark.contrast.palette.value.50}' },
-            'text-disabled': { value: '{dark.contrast.palette.value.70}' },
-            'text-error': { value: '{dark.error.palette.value.50}' },
-            'text-success': { value: '{dark.success.palette.value.44}' },
-            divider: { value: '{dark.line.contrast-less}' },
-            border: { value: '{dark.line.contrast-fade}' },
-            icon: { value: '{dark.icon.contrast-fade}' }
         },
         icon: {
             //  WHITE
@@ -491,15 +410,7 @@
                 //  ERROR
                 'focus-error': { value: '{dark.error.palette.value.45}' }
             },
-            // TODO: будет удалено, после удаления из компонентов ↓
-            'focused-color': { value: '{dark.theme.palette.value.50}' },
-            'focused-color-error': { value: '{dark.error.palette.value.50}' },
-            'selected-color': { value: '{dark.theme.palette.value.95}' },
-            'pressed-shadow': { value: 'inset 0 1px 2px 0 rgba(black, 0.2)' },
             'disabled-opacity': { value: 0.32 }
-        },
-        others: {
-            brand: { value: '{dark.brand.default}' }
         }
     }
 }

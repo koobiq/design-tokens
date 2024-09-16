@@ -4,13 +4,13 @@
             shadow: { value: '{shadow.light.popup}' },
             border: { value: 'transparent' },
             background: { value: '{light.background.card}' },
-            'footer-background': { value: '{light.background.background-disabled}'}
+            'footer-background': { value: '{light.background.card}'}
         },
         dark: {
             shadow: { value: '{shadow.dark.popup}' },
             border: { value: 'transparent' },
             background: { value: '{dark.background.card}' },
-            'footer-background': { value: 'transparent' }
+            'footer-background': { value: '{dark.background.card}'}
         }
     }
 }

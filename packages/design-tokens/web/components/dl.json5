@@ -40,7 +40,7 @@
         },
         light: {
             term: {
-                color: { value: '{light.foreground.text-less-contrast}'}
+                color: { value: '{light.foreground.contrast-secondary}'}
             },
             description: {
                 color: { value: '{light.foreground.contrast}'}
@@ -48,7 +48,7 @@
         },
         dark: {
             term: {
-                color: { value: '{dark.foreground.text-less-contrast}'}
+                color: { value: '{dark.foreground.contrast-secondary}'}
             },
             description: {
                 color: { value: '{dark.foreground.contrast}'}
