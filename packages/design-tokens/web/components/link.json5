@@ -68,10 +68,10 @@
                 'outline-width': { value: '2px' }
             },
             compact: {
-                'content-padding': { value: '{size.3xs}' }
+                'content-padding': { value: '{size.xxs}' }
             },
             normal: {
-                'content-padding': { value: '{size.3xs}' }
+                'content-padding': { value: '{size.xxs}' }
             },
             big: {
                 'content-padding': { value: '{size.xxs}' }

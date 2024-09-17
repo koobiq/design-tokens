@@ -5,101 +5,101 @@
                 container: {
                     border: {
                         radius: { value: '{size.s}' },
-                        width: { value: '1px'}
+                        width: { value: '1px' }
                     },
                     'content-gap': {
-                        horizontal: {value: '{size.s}'}
+                        horizontal: { value: '{size.s}' }
                     },
                     padding: {
-                        vertical: { value: '{size.m}'},
-                        horizontal: { value: '{size.m}'}
+                        vertical: { value: '{size.m}' },
+                        horizontal: { value: '{size.m}' }
                     }
                 },
                 'text-block': {
-                        padding: {
-                            vertical: { value: '{size.3xs}' }
-                        },
-                        'content-gap': {
-                            horizontal: {value: '{size.xxs}' }
-                        }
+                    padding: {
+                        vertical: { value: '{size.3xs}' }
+                    },
+                    'content-gap': {
+                        horizontal: { value: '{size.xxs}' }
+                    }
                 }
             },
             multiple: {
                 big: {
                     container: {
-                        'min-height': { value: '160px'},
-                        'min-width': { value: '320px'},
+                        'min-height': { value: '160px' },
+                        'min-width': { value: '320px' },
                         border: {
                             radius: { value: '{size.s}' },
-                            width: { value: '1px'},
+                            width: { value: '1px' }
                         },
                         'content-gap': {
                             horizontal: { value: '{size.m}' }
                         },
                         padding: {
-                            vertical: { value: '{size.xxl}'},
-                            horizontal: { value: '{size.xxl}'}
+                            vertical: { value: '{size.xxl}' },
+                            horizontal: { value: '{size.xxl}' }
                         }
                     },
                     'text-block': {
                         'content-gap': {
                             vertical: { value: '0px' },
-                            horizontal: {value: '{size.xxs}'}
-                        },
+                            horizontal: { value: '{size.xxs}' }
+                        }
                     },
-                    'grid': {
+                    grid: {
                         cell: {
                             padding: {
-                                horizontal: { value: '{size.s}'},
-                                vertical: { value: '{size.s}'}
+                                horizontal: { value: '{size.s}' },
+                                vertical: { value: '{size.s}' }
                             },
                             'content-gap': {
-                                horizontal: { value: '{size.xxs}'}
+                                horizontal: { value: '{size.xxs}' }
                             }
                         }
                     }
                 }
-            },
+            }
         },
         font: {
             single: {
                 'text-block': {
-                    "font-size": { value: '{typography.text-normal.font-size}' },
-                    "line-height": { value: '{typography.text-normal.line-height}' },
-                    "letter-spacing": { value: '{typography.text-normal.letter-spacing}' },
-                    "font-weight": { value: '{typography.text-normal.font-weight}' },
-                    "font-family": { value: '{typography.text-normal.font-family}' },
-                    "text-transform": { value: '{typography.text-normal.text-transform}' },
-                    "font-feature-settings": { value: '{typography.text-normal.font-feature-settings}' }
+                    'font-size': { value: '{typography.text-normal.font-size}' },
+                    'line-height': { value: '{typography.text-normal.line-height}' },
+                    'letter-spacing': { value: '{typography.text-normal.letter-spacing}' },
+                    'font-weight': { value: '{typography.text-normal.font-weight}' },
+                    'font-family': { value: '{typography.text-normal.font-family}' },
+                    'text-transform': { value: '{typography.text-normal.text-transform}' },
+                    'font-feature-settings': { value: '{typography.text-normal.font-feature-settings}' }
                 }
             },
             multiple: {
                 title: {
-                    "font-size": { value: '{typography.subheading.font-size}' },
-                    "line-height": { value: '{typography.subheading.line-height}' },
-                    "letter-spacing": { value: '{typography.subheading.letter-spacing}' },
-                    "font-weight": { value: '{typography.subheading.font-weight}' },
-                    "font-family": { value: '{typography.subheading.font-family}' },
-                    "text-transform": { value: '{typography.subheading.text-transform}' },
-                    "font-feature-settings": { value: '{typography.subheading.font-feature-settings}' }
+                    'font-size': { value: '{typography.subheading.font-size}' },
+                    'line-height': { value: '{typography.subheading.line-height}' },
+                    'letter-spacing': { value: '{typography.subheading.letter-spacing}' },
+                    'font-weight': { value: '{typography.subheading.font-weight}' },
+                    'font-family': { value: '{typography.subheading.font-family}' },
+                    'text-transform': { value: '{typography.subheading.text-transform}' },
+                    'font-feature-settings': { value: '{typography.subheading.font-feature-settings}' }
                 },
                 'text-block': {
-                    "font-size": { value: '{typography.text-normal.font-size}' },
-                    "line-height": { value: '{typography.text-normal.line-height}' },
-                    "letter-spacing": { value: '{typography.text-normal.letter-spacing}' },
-                    "font-weight": { value: '{typography.text-normal.font-weight}' },
-                    "font-family": { value: '{typography.text-normal.font-family}' },
-                    "text-transform": { value: '{typography.text-normal.text-transform}' },
-                    "font-feature-settings": { value: '{typography.text-normal.font-feature-settings}' }
+                    'font-size': { value: '{typography.text-normal.font-size}' },
+                    'line-height': { value: '{typography.text-normal.line-height}' },
+                    'letter-spacing': { value: '{typography.text-normal.letter-spacing}' },
+                    'font-weight': { value: '{typography.text-normal.font-weight}' },
+                    'font-family': { value: '{typography.text-normal.font-family}' },
+                    'text-transform': { value: '{typography.text-normal.text-transform}' },
+                    'font-feature-settings': { value: '{typography.text-normal.font-feature-settings}' }
                 },
                 grid: {
-                    "font-size": { value: '{typography.text-normal.font-size}' },
-                    "line-height": { value: '{typography.text-normal.line-height}' },
-                    "letter-spacing": { value: '{typography.text-normal.letter-spacing}' },
-                    "font-weight": { value: '{typography.text-normal.font-weight}' },
-                    "font-family": { value: '{typography.text-normal.font-family}' },
-                    "text-transform": { value: '{typography.text-normal.text-transform}' },
-                    "font-feature-settings": { value: '{typography.text-normal.font-feature-settings}' }
+                    'font-size': { value: '{typography.text-normal.font-size}' },
+                    'line-height': { value: '{typography.text-normal.line-height}' },
+                    'letter-spacing': { value: '{typography.text-normal.letter-spacing}' },
+                    'font-weight': { value: '{typography.text-normal.font-weight}' },
+                    'font-family': { value: '{typography.text-normal.font-family}' },
+                    'text-transform': { value: '{typography.text-normal.text-transform}' },
+                    'font-feature-settings': { value: '{typography.text-normal.font-feature-settings}' }
                 }
             }
         },
@@ -107,8 +107,8 @@
             single: {
                 default: {
                     container: {
-                        border: { value: '{light.line.contrast-fade}'},
-                        background: { value: '{light.background.bg}'},
+                        border: { value: '{light.line.contrast-fade}' },
+                        background: { value: '{light.background.bg}' }
                     },
                     'upload-icon': {
                         color: { value: '{light.icon.contrast-fade}' }
@@ -117,7 +117,7 @@
                         color: { value: '{light.icon.contrast-fade}' }
                     },
                     'text-block': {
-                       color: { value: '{light.foreground.contrast}' }
+                        color: { value: '{light.foreground.contrast}' }
                     },
                     'icon-button': {
                         color: { value: '{light.icon.contrast}' }
@@ -126,13 +126,13 @@
                 states: {
                     'on-drag': {
                         container: {
-                            border: { value: '{light.line.theme-fade}'},
-                            background: { value: '{light.background.theme-fade}'},
+                            border: { value: '{light.line.theme-fade}' },
+                            background: { value: '{light.background.theme-fade}' }
                         },
                         'upload-icon': {
                             color: { value: '{light.icon.contrast-fade}' }
                         },
-                       'left-icon': {
+                        'left-icon': {
                             color: { value: '{light.icon.contrast-fade}' }
                         },
                         'text-block': {
@@ -141,8 +141,8 @@
                     },
                     error: {
                         container: {
-                            border: { value: '{light.line.error}'},
-                            background: { value: '{light.states.background.error-less}'},
+                            border: { value: '{light.line.error}' },
+                            background: { value: '{light.states.background.error-less}' }
                         },
                         'left-icon': {
                             color: { value: '{light.icon.error}' }
@@ -153,8 +153,8 @@
                     },
                     disabled: {
                         container: {
-                            border: { value: '{light.states.line.disabled}'},
-                            background: { value: '{light.states.background.disabled}'},
+                            border: { value: '{light.states.line.disabled}' },
+                            background: { value: '{light.states.background.disabled}' }
                         },
                         'upload-icon': {
                             color: { value: '{light.states.icon.disabled}' }
@@ -166,9 +166,9 @@
                             color: { value: '{light.states.foreground.disabled}' }
                         }
                     },
-                    'focused': {
+                    focused: {
                         'focus-outline': {
-                            color: { value: '{light.states.line.focus-theme}'}
+                            color: { value: '{light.states.line.focus-theme}' }
                         }
                     }
                 }
@@ -176,8 +176,8 @@
             multiple: {
                 default: {
                     container: {
-                        border: { value: '{light.line.contrast-fade}'},
-                        background: { value: '{light.background.bg}'},
+                        border: { value: '{light.line.contrast-fade}' },
+                        background: { value: '{light.background.bg}' }
                     },
                     'upload-icon': {
                         color: { value: '{light.icon.contrast-fade}' }
@@ -186,7 +186,7 @@
                         color: { value: '{light.icon.contrast-fade}' }
                     },
                     'text-block': {
-                       color: { value: '{light.foreground.contrast}' }
+                        color: { value: '{light.foreground.contrast}' }
                     },
                     'icon-button': {
                         color: { value: '{light.icon.contrast}' }
@@ -194,7 +194,7 @@
                     grid: {
                         divider: {
                             color: { value: '{light.line.contrast-less}' }
-                         }
+                        }
                     }
                 },
                 states: {
@@ -211,20 +211,20 @@
                         },
                         'icon-button': {
                             color: { value: '{light.icon.contrast}' }
-                         },
+                        },
                         'text-block': {
                             color: { value: '{light.foreground.contrast}' }
                         },
                         grid: {
                             divider: {
-                                color: { value: '{light.line.theme-fade}' }
+                                color: { value: '{light.line.contrast-less}' }
                             }
                         }
                     },
                     error: {
                         grid: {
                             cell: {
-                                background: { value: '{light.states.background.error-less}'}
+                                background: { value: '{light.states.background.error-less}' }
                             }
                         },
                         'left-icon': {
@@ -239,8 +239,8 @@
                     },
                     disabled: {
                         container: {
-                            border: { value: '{light.states.line.disabled}'},
-                            background: { value: '{light.states.background.disabled}'},
+                            border: { value: '{light.states.line.disabled}' },
+                            background: { value: '{light.states.background.disabled}' }
                         },
                         'upload-icon': {
                             color: { value: '{light.states.icon.disabled}' }
@@ -264,8 +264,8 @@
             single: {
                 default: {
                     container: {
-                        border: { value: '{dark.line.contrast-fade}'},
-                        background: { value: '{dark.background.bg}'},
+                        border: { value: '{dark.line.contrast-fade}' },
+                        background: { value: '{dark.background.bg}' }
                     },
                     'upload-icon': {
                         color: { value: '{dark.icon.contrast-fade}' }
@@ -274,7 +274,7 @@
                         color: { value: '{dark.icon.contrast-fade}' }
                     },
                     'text-block': {
-                       color: { value: '{dark.foreground.contrast}' }
+                        color: { value: '{dark.foreground.contrast}' }
                     },
                     'icon-button': {
                         color: { value: '{dark.icon.contrast}' }
@@ -283,13 +283,13 @@
                 states: {
                     'on-drag': {
                         container: {
-                            border: { value: '{dark.line.theme-fade}'},
-                            background: { value: '{dark.background.theme-fade}'},
+                            border: { value: '{dark.line.theme-fade}' },
+                            background: { value: '{dark.background.theme-fade}' }
                         },
                         'upload-icon': {
                             color: { value: '{dark.icon.contrast-fade}' }
                         },
-                       'left-icon': {
+                        'left-icon': {
                             color: { value: '{dark.icon.contrast-fade}' }
                         },
                         'text-block': {
@@ -298,8 +298,8 @@
                     },
                     error: {
                         container: {
-                            border: { value: '{dark.line.error}'},
-                            background: { value: '{dark.states.background.error-less}'},
+                            border: { value: '{dark.line.error}' },
+                            background: { value: '{dark.states.background.error-less}' }
                         },
                         'left-icon': {
                             color: { value: '{dark.icon.error}' }
@@ -310,8 +310,8 @@
                     },
                     disabled: {
                         container: {
-                            border: { value: '{dark.states.line.disabled}'},
-                            background: { value: '{dark.states.background.disabled}'},
+                            border: { value: '{dark.states.line.disabled}' },
+                            background: { value: '{dark.states.background.disabled}' }
                         },
                         'upload-icon': {
                             color: { value: '{dark.states.icon.disabled}' }
@@ -323,9 +323,9 @@
                             color: { value: '{dark.states.foreground.disabled}' }
                         }
                     },
-                    'focused': {
+                    focused: {
                         'focus-outline': {
-                            color: { value: '{dark.states.line.focus-theme}'}
+                            color: { value: '{dark.states.line.focus-theme}' }
                         }
                     }
                 }
@@ -333,8 +333,8 @@
             multiple: {
                 default: {
                     container: {
-                        border: { value: '{dark.line.contrast-fade}'},
-                        background: { value: '{dark.background.bg}'},
+                        border: { value: '{dark.line.contrast-fade}' },
+                        background: { value: '{dark.background.bg}' }
                     },
                     'upload-icon': {
                         color: { value: '{dark.icon.contrast-fade}' }
@@ -343,7 +343,7 @@
                         color: { value: '{dark.icon.contrast-fade}' }
                     },
                     'text-block': {
-                       color: { value: '{dark.foreground.contrast}' }
+                        color: { value: '{dark.foreground.contrast}' }
                     },
                     'icon-button': {
                         color: { value: '{dark.icon.contrast}' }
@@ -351,7 +351,7 @@
                     grid: {
                         divider: {
                             color: { value: '{dark.line.contrast-less}' }
-                         }
+                        }
                     }
                 },
                 states: {
@@ -368,7 +368,7 @@
                         },
                         'icon-button': {
                             color: { value: '{dark.icon.contrast}' }
-                         },
+                        },
                         'text-block': {
                             color: { value: '{dark.foreground.contrast}' }
                         },
@@ -381,7 +381,7 @@
                     error: {
                         grid: {
                             cell: {
-                                background: { value: '{dark.states.background.error-less}'}
+                                background: { value: '{dark.states.background.error-less}' }
                             }
                         },
                         'left-icon': {
@@ -396,8 +396,8 @@
                     },
                     disabled: {
                         container: {
-                            border: { value: '{dark.states.line.disabled}'},
-                            background: { value: '{dark.states.background.disabled}'},
+                            border: { value: '{dark.states.line.disabled}' },
+                            background: { value: '{dark.states.background.disabled}' }
                         },
                         'upload-icon': {
                             color: { value: '{dark.states.icon.disabled}' }

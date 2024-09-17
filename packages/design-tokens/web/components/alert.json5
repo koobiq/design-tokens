@@ -40,10 +40,9 @@
                     }
                 },
                 'close-button': {
-                    // переделал токены. см спеку
                     margin: {
-                        top: { value: '{size.s}' },
-                        left: { value: '{size.3xs}' }
+                        top: { value: '14px' },
+                        left: { value: '6px' }
                     }
                 },
                 // не нравится название
