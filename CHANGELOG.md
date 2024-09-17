@@ -1,3 +1,9 @@
+## 3.6.1 (2024-09-17)
+
+### Design Tokens
+
+ * bug fix  **colors:** sync states-line-disabled with figma ([#49](https://github.com/koobiq/design-tokens/issues/49)) ([0a152e7](https://github.com/koobiq/design-tokens/commit/0a152e7c5c56630a9fcc5c9bb57c093d1bc4ad70))
+
 # 3.6.0 (2024-09-17)
 
 ### Design Tokens
