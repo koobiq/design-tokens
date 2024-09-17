@@ -217,7 +217,7 @@
                         },
                         grid: {
                             divider: {
-                                color: { value: '{light.line.theme-fade}' }
+                                color: { value: '{light.line.contrast-less}' }
                             }
                         }
                     },
