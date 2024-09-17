@@ -1,3 +1,9 @@
+# 3.6.0 (2024-09-17)
+
+### Design Tokens
+
+ * feature  **spacing:** fix spacing for our new icons ([#47](https://github.com/koobiq/design-tokens/issues/47)) ([730b03f](https://github.com/koobiq/design-tokens/commit/730b03f58b6df99b29dc103d6919255a89efc581))
+
 # 3.5.0 (2024-09-06)
 
 ### Design Tokens
