@@ -236,7 +236,7 @@
                 focus: { value: '{light.theme.palette.value.50}' },
                 'focus-theme': { value: '{light.theme.palette.value.60}' },
                 // CONTRAST
-                disabled: { value: '{light.contrast.palette.value."15-A32"}' },
+                disabled: { value: '{light.contrast.palette.value."50-A32"}' },
                 // ERROR
                 'focus-error': { value: '{light.error.palette.value.45}' }
             },
