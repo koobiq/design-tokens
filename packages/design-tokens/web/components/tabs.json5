@@ -480,6 +480,9 @@
                         vertical: { value: '{size.xs}' }
                     },
                 },
+                stack: {
+                    'min-height': { value: '48px' }
+                }
             },
             font: {
                 default: {
