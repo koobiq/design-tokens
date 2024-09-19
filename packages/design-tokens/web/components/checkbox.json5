@@ -34,7 +34,7 @@
                         outline: { value: '1px solid {light.states.line.focus-theme}' }
                     },
                     disabled: {
-                        border: { value: '{light.line.contrast-fade}' },
+                        border: { value: '{light.states.line.disabled}' },
                         color: { value: '{light.states.icon.disabled}' },
                         text: { value: '{light.states.foreground.disabled}' },
                         background: { value: '{light.states.background.disabled}' },
@@ -75,7 +75,7 @@
                         outline: { value: '1px solid {light.states.line.focus-error}' }
                     },
                     disabled: {
-                        border: { value: '{light.line.contrast-fade}' },
+                        border: { value: '{light.states.line.disabled}' },
                         color: { value: '{light.states.icon.disabled}' },
                         text: { value: '{light.states.foreground.disabled}' },
                         background: { value: '{light.states.background.disabled}' },
