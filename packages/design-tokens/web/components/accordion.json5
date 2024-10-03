@@ -1,0 +1,128 @@
+{
+    accordion: {
+        size: {
+            item: {
+                header: {
+                    height: { value: '36px' },
+                    variant: {
+                        fill: {
+                            // uses in 1 case:
+                            // - Accordion Item with trigger BEFORE Title
+                            padding: {
+                                //		vertical  horizontal
+                                value: '{size.xs} {size.s}'
+                            }
+                        },
+                        hug: {
+                            // uses in 2 cases:
+                            // - Accordion Item with trigger AFTER Title
+                            // - Accordion Item with SEPARATE trigger
+                            padding: {
+                                //         top      right    bottom    left
+                                value: '{size.xs} {size.s} {size.xs} {size.m}'
+                            }
+                        }
+                    }
+                },
+                content: {
+                    padding: {
+                        //      top   right   bottom    left
+                        value: '0px {size.m} {size.s} {size.m}'
+                    }
+                }
+            }
+        },
+        font: {
+            item: {
+                header: {
+                    text: {
+                        'font-size': { value: '{typography.text-big.font-size}' },
+                        'line-height': { value: '{typography.text-big.line-height}' },
+                        'letter-spacing': { value: '{typography.text-big.letter-spacing}' },
+                        'font-weight': { value: '{typography.text-big.font-weight}' },
+                        'font-family': { value: '{typography.text-big.font-family}' },
+                        'text-transform': { value: '{typography.text-big.text-transform}' },
+                        'font-feature-settings': { value: '{typography.text-big.font-feature-settings}' }
+                    }
+                },
+                content: {
+                    text: {
+                        'font-size': { value: '{typography.text-normal.font-size}' },
+                        'line-height': { value: '{typography.text-normal.line-height}' },
+                        'letter-spacing': { value: '{typography.text-normal.letter-spacing}' },
+                        'font-weight': { value: '{typography.text-normal.font-weight}' },
+                        'font-family': { value: '{typography.text-normal.font-family}' },
+                        'text-transform': { value: '{typography.text-normal.text-transform}' },
+                        'font-feature-settings': { value: '{typography.text-normal.font-feature-settings}' }
+                    }
+                }
+            }
+        },
+        light: {
+            item: {
+                default: {
+                    background: { value: 'transparent' },
+                    text: {
+                        color: { value: '{light.foreground.contrast}' }
+                    },
+                    icon: {
+                        color: { value: '{light.icon.contrast-fade}' }
+                    }
+                },
+                states: {
+                    hover: {
+                        icon: {
+                            color: { value: '{light.icon.contrast}' }
+                        }
+                    },
+                    focus: {
+                        border: {
+                            color: { value: '{light.line.theme}' }
+                        }
+                    },
+                    disabled: {
+                        text: {
+                            color: { value: '{light.foreground.contrast-secondary}' }
+                        },
+                        icon: {
+                            color: { value: '{light.states.icon.disabled}' }
+                        }
+                    }
+                }
+            }
+        },
+        dark: {
+            item: {
+                default: {
+                    background: { value: 'transparent' },
+                    text: {
+                        color: { value: '{dark.foreground.contrast}' }
+                    },
+                    icon: {
+                        color: { value: '{dark.icon.contrast-fade}' }
+                    }
+                },
+                states: {
+                    hover: {
+                        icon: {
+                            color: { value: '{dark.icon.contrast}' }
+                        }
+                    },
+                    focus: {
+                        border: {
+                            color: { value: '{dark.line.theme}' }
+                        }
+                    },
+                    disabled: {
+                        text: {
+                            color: { value: '{dark.foreground.contrast-secondary}' }
+                        },
+                        icon: {
+                            color: { value: '{dark.states.icon.disabled}' }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
