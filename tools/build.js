@@ -11,7 +11,7 @@ build([
     }
 ]);
 
-const { copySync, copyFileSync, writeFileSync, readFileSync, renameSync } = require('fs-extra');
+const { copySync, copyFileSync, writeFileSync, readFileSync } = require('fs-extra');
 
 const prepareTokens = (package) => {
     copySync(`packages/${package}`, `dist/${package}`);
@@ -58,5 +58,4 @@ prepareTokens('tokens-builder');
 updateVersion('tokens-builder', currentVersion);
 updateVersion('design-tokens', currentVersion);
 
-renameSync('dist/design-tokens/web/js/index.js', 'dist/design-tokens/web/js/index.mjs');
 updateTokensPackage();
