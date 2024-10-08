@@ -1,3 +1,9 @@
+## 3.7.2 (2024-10-08)
+
+### Design Tokens
+
+ * bug fix  **build:** resolve import css-files ([#56](https://github.com/koobiq/design-tokens/issues/56)) ([bb9dfd7](https://github.com/koobiq/design-tokens/commit/bb9dfd74577229131e25bf9b30dd8febf59a443a))
+
 ## 3.7.1 (2024-10-08)
 
 ### Design Tokens
