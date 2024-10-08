@@ -7,11 +7,11 @@ module.exports = {
                 format: 'javascript/es6'
             },
             {
-                destination: 'js/index.cjs',
+                destination: 'js/index.js',
                 format: 'javascript/module-flat'
             },
             {
-                destination: 'index.d.ts',
+                destination: 'js/index.d.ts',
                 format: 'typescript/es6-declarations'
             }
         ]

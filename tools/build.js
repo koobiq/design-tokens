@@ -32,18 +32,17 @@ const updateTokensPackage = () => {
     const exportsConfig = {
         ...packageContent.exports,
         './*': {
-            require: './web/js/*',
-            import: './web/js/*',
             default: './*'
         },
         '.': {
-            require: './web/js/index.cjs',
-            import: './web/js/index.mjs',
-            default: './web/js/index.mjs'
+            types: './web/js/index.d.ts',
+            require: './web/js/index.js',
+            import: './web/js/index.mjs'
         }
     };
 
-    packageContent.types = 'web/index.d.ts';
+    packageContent.types = 'web/js/index.d.ts';
+    packageContent.main = 'web/js/index.js';
     packageContent.module = 'web/js/index.mjs';
     packageContent.exports = exportsConfig;
 
