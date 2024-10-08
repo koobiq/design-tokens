@@ -1,3 +1,10 @@
+## 3.7.1 (2024-10-08)
+
+### Design Tokens
+
+ * feature  **markdown:** markdown fixes ([#DS-2629](https://github.com/koobiq/design-tokens/issues/issue/DS-2629)) ([#31](https://github.com/koobiq/design-tokens/issues/31)) ([edf4519](https://github.com/koobiq/design-tokens/commit/edf4519d5759ee8a8968ae658c0c57075e4423ee))
+ * feature  **tokens:** added tokens for accordion ([#53](https://github.com/koobiq/design-tokens/issues/53)) ([503f747](https://github.com/koobiq/design-tokens/commit/503f747d20ffd337f5209d2f7424a4c22379d960))
+
 # 3.7.0 (2024-10-04)
 
 ### Design Tokens
