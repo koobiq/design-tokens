@@ -41,8 +41,8 @@
                 },
                 'close-button': {
                     margin: {
-                        top: { value: '14px' },
-                        left: { value: '6px' }
+                        top: { value: '10px' },
+                        left: { value: '{size.3xs}' }
                     }
                 },
                 // не нравится название
@@ -111,7 +111,7 @@
                 },
                 'close-button': {
                     margin: {
-                        top: { value: '{size.s}' },
+                        top: { value: '10px' },
                         left: { value: '{size.3xs}' }
                     }
                 },
