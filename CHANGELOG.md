@@ -1,3 +1,7 @@
+## 3.7.3 (2024-10-11)
+
+* bug fix  **shadows:** overflow normal offset ([#58](https://github.com/koobiq/design-tokens/issues/58)) ([1ea00f6d](https://github.com/koobiq/design-tokens/commit/1ea00f6d04e3b1125bec7231852e50add1bec51f))
+
 ## 3.7.2 (2024-10-08)
 
 ### Design Tokens
