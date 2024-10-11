@@ -204,7 +204,7 @@
                 'theme-hover': { value: '{light.theme.palette.value.45}' },
                 'theme-active': { value: '{light.theme.palette.value.40}' },
                 //  OTHER
-                disabled: { value: '{light.contrast.palette.value."15-A32"}' },
+                disabled: { value: '{light.contrast.palette.value."60-A60"}' },
                 'visited-hover': { value: '{light.purple.palette.value.40}' },
                 'visited-active': { value: '{light.purple.palette.value.35}' }
             },
@@ -213,7 +213,7 @@
                 'theme-hover': { value: '{light.theme.palette.value.45}' },
                 'theme-active': { value: '{light.theme.palette.value.40}' },
                 //  CONTRAST
-                disabled: { value: '{light.contrast.palette.value."15-A32"}' },
+                disabled: { value: '{light.contrast.palette.value."60-A60"}' },
                 'contrast-hover': { value: '{light.contrast.palette.value.10}' },
                 'contrast-active': { value: '{light.contrast.palette.value.10}' },
                 'contrast-fade-hover': { value: '{light.contrast.palette.value.50}' },
@@ -454,7 +454,7 @@
                 'theme-hover': { value: '{dark.theme.palette.value.65}' },
                 'theme-active': { value: '{dark.theme.palette.value.70}' },
                 //  CONTRAST
-                disabled: { value: '{dark.contrast.palette.value.40}' },
+                disabled: { value: '{dark.contrast.palette.value."65-A60"}' },
                 //  VISITED
                 'visited-hover': { value: '{dark.purple.palette.value.55}' },
                 'visited-active': { value: '{dark.purple.palette.value.60}' }
@@ -468,7 +468,7 @@
                 'contrast-active': { value: '{dark.contrast.palette.value.80}' },
                 'contrast-fade-hover': { value: '{dark.contrast.palette.value.50}' },
                 'contrast-fade-active': { value: '{dark.contrast.palette.value.40}' },
-                disabled: { value: '{dark.contrast.palette.value.30}' },
+                disabled: { value: '{dark.contrast.palette.value."65-A60"}' },
                 //  ERROR
                 'error-hover': { value: '{dark.error.palette.value.50}' },
                 'error-active': { value: '{dark.error.palette.value.40}' },
