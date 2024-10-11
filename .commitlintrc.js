@@ -9,7 +9,7 @@ const config = {
         'type-enum': [
             2,
             'always',
-            ['feat', 'feature', 'fix', 'refactor', 'docs', 'build', 'test', 'ci', 'chore', 'fonts']
+            ['feat', 'feature', 'fix', 'refactor', 'docs', 'build', 'test', 'ci', 'chore', 'fonts', 'shadows']
         ]
     }
 };
