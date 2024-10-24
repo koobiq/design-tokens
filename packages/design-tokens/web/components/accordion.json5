@@ -69,6 +69,9 @@
                         color: { value: '{light.icon.contrast-fade}' }
                     }
                 },
+                header: {
+                    'scroll-shadow': { value: '{shadow.light.overflow-normal-bottom}' }
+                },
                 states: {
                     hover: {
                         icon: {
@@ -101,6 +104,9 @@
                     icon: {
                         color: { value: '{dark.icon.contrast-fade}' }
                     }
+                },
+                header: {
+                    'scroll-shadow': { value: '{shadow.dark.overflow-normal-bottom}' }
                 },
                 states: {
                     hover: {

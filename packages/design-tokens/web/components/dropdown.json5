@@ -7,7 +7,7 @@
                     max: { value: '640px' }
                 },
                 padding: {
-                    vertical: { value: '{size.xxs}'}
+                    vertical: { value: '{size.xxs}' }
                 },
                 border: {
                     radius: { value: '{size.s}' }
@@ -17,13 +17,15 @@
         light: {
             container: {
                 background: { value: '{light.background.card}' },
-                'box-shadow': { value: '{shadow.light.popup}'}
+                'box-shadow': { value: '{shadow.light.popup}' },
+                shadow: { value: '{shadow.light.popup}' }
             }
         },
         dark: {
             container: {
                 background: { value: '{dark.background.card}' },
-                'box-shadow': { value: '{shadow.dark.popup}'}
+                'box-shadow': { value: '{shadow.dark.popup}' },
+                shadow: { value: '{shadow.dark.popup}' }
             }
         }
     }

@@ -298,7 +298,8 @@
                 },
                 header: {
                     background: { value: '{light.background.bg-secondary}' },
-                    shadow: { value: '{shadow.light.overflow-compact-bottom}' }
+                    shadow: { value: '{shadow.light.overflow-compact-bottom}' },
+                    'scroll-shadow': { value: '{shadow.light.overflow-normal-bottom}' }
                 },
                 actionbar: {
                     'fade-gradient': { value: 'linear-gradient(90deg, transparent, {light.background.bg-secondary})' },
@@ -567,7 +568,8 @@
                 },
                 header: {
                     background: { value: '{dark.background.bg-secondary}' },
-                    shadow: { value: '{shadow.dark.overflow-compact-bottom}' }
+                    shadow: { value: '{shadow.dark.overflow-compact-bottom}' },
+                    'scroll-shadow': { value: '{shadow.dark.overflow-normal-bottom}' }
                 },
                 actionbar: {
                     'fade-gradient': { value: 'linear-gradient(90deg, transparent, {dark.background.bg-secondary})' },
@@ -596,7 +598,8 @@
                 },
                 header: {
                     background: { value: '{dark.background.card}' },
-                    shadow: { value: '{shadow.dark.overflow-compact-bottom}' }
+                    shadow: { value: '{shadow.dark.overflow-compact-bottom}' },
+                    'scroll-shadow': { value: '{shadow.dark.overflow-normal-bottom}' }
                 },
                 actionbar: {
                     'fade-gradient': { value: 'linear-gradient(90deg, transparent, {dark.background.card})' },

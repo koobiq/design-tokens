@@ -1,14 +1,14 @@
 {
-    'modal': {
+    modal: {
         size: {
             small: {
-                width: { value: '400px'}
+                width: { value: '400px' }
             },
             medium: {
-                width: { value: '640px'}
+                width: { value: '640px' }
             },
             large: {
-                width: { value: '960px'}
+                width: { value: '960px' }
             },
             border: {
                 radius: { value: '{size.s}' }
@@ -17,12 +17,12 @@
                 padding: {
                     vertical: { value: '{size.l}' },
                     left: { value: '{size.xxl}' },
-                    right: { value: '{size.5xl}'}
+                    right: { value: '{size.5xl}' }
                 }
             },
             'close-button': {
                 margin: {
-                    left: { value: '{size.s}'}
+                    left: { value: '{size.s}' }
                 }
             },
             content: {
@@ -43,26 +43,26 @@
                 'content-gap': {
                     horizontal: { value: '{size.l}' }
                 }
-            },
+            }
         },
         font: {
             header: {
-                "font-size": { value: '{typography.title.font-size}' },
-                "line-height": { value: '{typography.title.line-height}' },
-                "letter-spacing": { value: '{typography.title.letter-spacing}' },
-                "font-weight": { value: '{typography.title.font-weight}' },
-                "font-family": { value: '{typography.title.font-family}' },
-                "text-transform": { value: '{typography.title.text-transform}' },
-                "font-feature-settings": { value: '{typography.title.font-feature-settings}' }
+                'font-size': { value: '{typography.title.font-size}' },
+                'line-height': { value: '{typography.title.line-height}' },
+                'letter-spacing': { value: '{typography.title.letter-spacing}' },
+                'font-weight': { value: '{typography.title.font-weight}' },
+                'font-family': { value: '{typography.title.font-family}' },
+                'text-transform': { value: '{typography.title.text-transform}' },
+                'font-feature-settings': { value: '{typography.title.font-feature-settings}' }
             },
             content: {
-                "font-size": { value: '{typography.text-normal.font-size}' },
-                "line-height": { value: '{typography.text-normal.line-height}' },
-                "letter-spacing": { value: '{typography.text-normal.letter-spacing}' },
-                "font-weight": { value: '{typography.text-normal.font-weight}' },
-                "font-family": { value: '{typography.text-normal.font-family}' },
-                "text-transform": { value: '{typography.text-normal.text-transform}' },
-                "font-feature-settings": { value: '{typography.text-normal.font-feature-settings}' }
+                'font-size': { value: '{typography.text-normal.font-size}' },
+                'line-height': { value: '{typography.text-normal.line-height}' },
+                'letter-spacing': { value: '{typography.text-normal.letter-spacing}' },
+                'font-weight': { value: '{typography.text-normal.font-weight}' },
+                'font-family': { value: '{typography.text-normal.font-family}' },
+                'text-transform': { value: '{typography.text-normal.text-transform}' },
+                'font-feature-settings': { value: '{typography.text-normal.font-feature-settings}' }
             }
         },
         light: {
@@ -71,7 +71,8 @@
             },
             container: {
                 background: { value: '{light.background.card}' },
-                'box-shadow': { value: '{shadow.light.overlay}' }
+                'box-shadow': { value: '{shadow.light.overlay}' },
+                shadow: { value: '{shadow.light.overlay}' }
             },
             'close-button': {
                 color: { value: '{light.icon.contrast}' }
@@ -93,7 +94,8 @@
             },
             container: {
                 background: { value: '{dark.background.card}' },
-                'box-shadow': { value: '{shadow.dark.overlay}' }
+                'box-shadow': { value: '{shadow.dark.overlay}' },
+                shadow: { value: '{shadow.dark.overlay}' }
             },
             'close-button': {
                 color: { value: '{dark.icon.contrast}' }
