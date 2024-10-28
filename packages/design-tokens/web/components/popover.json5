@@ -70,7 +70,7 @@
         light: {
             container: {
                 background: { value: '{light.background.card}' },
-                'box-shadow': { value: '{shadow.light.popup}' }
+                shadow: { value: '{shadow.light.popup}' }
             },
             header: {
                 text: {
@@ -90,9 +90,6 @@
         dark: {
             container: {
                 background: { value: '{dark.background.card}' },
-                'box-shadow': { value: '{shadow.dark.popup}' },
-                // 'shadow' - для контейнеров
-                // 'scroll-shadow' - для теней при прокрутке
                 shadow: { value: '{shadow.light.popup}' }
             },
             header: {

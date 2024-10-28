@@ -17,14 +17,12 @@
         light: {
             container: {
                 background: { value: '{light.background.card}' },
-                'box-shadow': { value: '{shadow.light.popup}' },
                 shadow: { value: '{shadow.light.popup}' }
             }
         },
         dark: {
             container: {
                 background: { value: '{dark.background.card}' },
-                'box-shadow': { value: '{shadow.dark.popup}' },
                 shadow: { value: '{shadow.dark.popup}' }
             }
         }

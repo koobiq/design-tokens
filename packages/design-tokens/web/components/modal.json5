@@ -71,7 +71,6 @@
             },
             container: {
                 background: { value: '{light.background.card}' },
-                'box-shadow': { value: '{shadow.light.overlay}' },
                 shadow: { value: '{shadow.light.overlay}' }
             },
             'close-button': {
@@ -94,7 +93,6 @@
             },
             container: {
                 background: { value: '{dark.background.card}' },
-                'box-shadow': { value: '{shadow.dark.overlay}' },
                 shadow: { value: '{shadow.dark.overlay}' }
             },
             'close-button': {
