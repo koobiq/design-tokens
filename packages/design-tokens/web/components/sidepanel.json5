@@ -1,5 +1,5 @@
 {
-    'sidepanel': {
+    sidepanel: {
         size: {
             small: {
                 width: { value: '400px' }
@@ -41,36 +41,40 @@
         },
         font: {
             header: {
-                "font-size": { value: '{typography.title.font-size}' },
-                "line-height": { value: '{typography.title.line-height}' },
-                "letter-spacing": { value: '{typography.title.letter-spacing}' },
-                "font-weight": { value: '{typography.title.font-weight}' },
-                "font-family": { value: '{typography.title.font-family}' },
-                "text-transform": { value: '{typography.title.text-transform}' },
-                "font-feature-settings": { value: '{typography.title.font-feature-settings}' }
+                'font-size': { value: '{typography.title.font-size}' },
+                'line-height': { value: '{typography.title.line-height}' },
+                'letter-spacing': { value: '{typography.title.letter-spacing}' },
+                'font-weight': { value: '{typography.title.font-weight}' },
+                'font-family': { value: '{typography.title.font-family}' },
+                'text-transform': { value: '{typography.title.text-transform}' },
+                'font-feature-settings': { value: '{typography.title.font-feature-settings}' }
             },
             content: {
-                "font-size": { value: '{typography.text-normal.font-size}' },
-                "line-height": { value: '{typography.text-normal.line-height}' },
-                "letter-spacing": { value: '{typography.text-normal.letter-spacing}' },
-                "font-weight": { value: '{typography.text-normal.font-weight}' },
-                "font-family": { value: '{typography.text-normal.font-family}' },
-                "text-transform": { value: '{typography.text-normal.text-transform}' },
-                "font-feature-settings": { value: '{typography.text-normal.font-feature-settings}' }
+                'font-size': { value: '{typography.text-normal.font-size}' },
+                'line-height': { value: '{typography.text-normal.line-height}' },
+                'letter-spacing': { value: '{typography.text-normal.letter-spacing}' },
+                'font-weight': { value: '{typography.text-normal.font-weight}' },
+                'font-family': { value: '{typography.text-normal.font-family}' },
+                'text-transform': { value: '{typography.text-normal.text-transform}' },
+                'font-feature-settings': { value: '{typography.text-normal.font-feature-settings}' }
             }
         },
         light: {
-             overlay: {
+            overlay: {
                 background: { value: '{light.background.overlay}' }
             },
             container: {
                 background: { value: '{light.background.card}' },
-                'box-shadow': { value: '{shadow.light.overlay}' }
+                shadow: { value: '{shadow.light.overlay}' }
             },
             header: {
                 text: {
                     color: { value: '{light.foreground.contrast}' }
-                }
+                },
+                'scroll-shadow': { value: '{shadow.light.overflow-normal-bottom}' }
+            },
+            footer: {
+                'scroll-shadow': { value: '{shadow.light.overflow-normal-top}' }
             },
             content: {
                 text: {
@@ -79,17 +83,21 @@
             }
         },
         dark: {
-             overlay: {
+            overlay: {
                 background: { value: '{dark.background.overlay}' }
             },
             container: {
                 background: { value: '{dark.background.card}' },
-                'box-shadow': { value: '{shadow.dark.overlay}' }
+                shadow: { value: '{shadow.dark.overlay}' }
             },
             header: {
                 text: {
                     color: { value: '{dark.foreground.contrast}' }
-                }
+                },
+                'scroll-shadow': { value: '{shadow.dark.overflow-normal-bottom}' }
+            },
+            footer: {
+                'scroll-shadow': { value: '{shadow.dark.overflow-normal-top}' }
             },
             content: {
                 text: {
