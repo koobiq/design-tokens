@@ -200,13 +200,13 @@
             light: {
                 text: { value: '{light.foreground.contrast}' },
                 line: { value: '{light.line.contrast-less}' },
-                background: { value: 'transparent' },
+                background: { value: '{light.background.contrast-fade}' },
                 border: { value: 'transparent' }
             },
             dark: {
                 text: { value: '{dark.foreground.contrast}' },
                 line: { value: '{dark.line.contrast-less}' },
-                background: { value: 'transparent' },
+                background: { value: '{dark.background.contrast-fade}' },
                 border: { value: 'transparent' }
             },
             size: {
