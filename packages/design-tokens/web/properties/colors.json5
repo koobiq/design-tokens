@@ -151,7 +151,7 @@
                 'error-active': { value: '{light.error.palette.value."51-S69"}' },
                 'error-fade-hover': { value: '{light.error.palette.value.92}' },
                 'error-fade-active': { value: '{light.error.palette.value.88}' },
-                'error-less': { value: '{light.error.palette.value.99}' }, // TODO: будет удалено, после удаления из компонентов
+                'error-less': { value: '{light.error.palette.value.99}' },
                 //  SUCCESS
                 //  WARNING
                 'warning-fade-hover': { value: '{light.warning.palette.value.87}' },
@@ -203,7 +203,6 @@
                 // ERROR
                 'focus-error': { value: '{light.error.palette.value.45}' }
             },
-            // TODO: нижнее будет удалено, после удаления из компонентов ↓
             'disabled-opacity': { value: 0.32 }
         },
     },
@@ -363,7 +362,7 @@
                 'error-active': { value: '{dark.error.palette.value.39}' },
                 'error-fade-hover': { value: '{dark.error.palette.value.13}' },
                 'error-fade-active': { value: '{dark.error.palette.value.16}' },
-                'error-less': { value: '{dark.error.palette.value.6}' }, // TODO: будет удалено, после удаления из компонентов
+                'error-less': { value: '{dark.error.palette.value.6}' },
                 //  WARNING
                 'warning-fade-hover': { value: '{dark.warning.palette.value.13}' },
                 'warning-fade-active': { value: '{dark.warning.palette.value.16}' }
