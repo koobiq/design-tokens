@@ -83,208 +83,208 @@
             },
             hljs: {
                 addition: {
-                    'font-style': { value: 'null' },
-                    'font-weight': { value: 'null' }
+                    'font-style': { value: '' },
+                    'font-weight': { value: '' }
                 },
                 attr: {
-                    'font-style': { value: 'null' },
-                    'font-weight': { value: 'null' }
+                    'font-style': { value: '' },
+                    'font-weight': { value: '' }
                 },
                 attribute: {
-                    'font-style': { value: 'null' },
-                    'font-weight': { value: 'null' }
+                    'font-style': { value: '' },
+                    'font-weight': { value: '' }
                 },
                 built_in: {
-                    'font-style': { value: 'null' },
-                    'font-weight': { value: 'null' }
+                    'font-style': { value: '' },
+                    'font-weight': { value: '' }
                 },
                 bullet: {
-                    'font-style': { value: 'null' },
-                    'font-weight': { value: 'null' }
+                    'font-style': { value: '' },
+                    'font-weight': { value: '' }
                 },
                 'char.escape': {
-                    'font-style': { value: 'null' },
-                    'font-weight': { value: 'null' }
+                    'font-style': { value: '' },
+                    'font-weight': { value: '' }
                 },
                 class: {
-                    'font-style': { value: 'null' },
-                    'font-weight': { value: 'null' }
+                    'font-style': { value: '' },
+                    'font-weight': { value: '' }
                 },
                 code: {
-                    'font-style': { value: 'null' },
-                    'font-weight': { value: 'null' }
+                    'font-style': { value: '' },
+                    'font-weight': { value: '' }
                 },
                 comment: {
-                    'font-style': { value: 'null' },
-                    'font-weight': { value: 'null' }
+                    'font-style': { value: '' },
+                    'font-weight': { value: '' }
                 },
                 deletion: {
-                    'font-style': { value: 'null' },
-                    'font-weight': { value: 'null' }
+                    'font-style': { value: '' },
+                    'font-weight': { value: '' }
                 },
                 doctag: {
-                    'font-style': { value: 'null' },
-                    'font-weight': { value: 'null' }
+                    'font-style': { value: '' },
+                    'font-weight': { value: '' }
                 },
                 emphasis: {
-                    'font-style': { value: 'null' },
-                    'font-weight': { value: 'null' }
+                    'font-style': { value: '' },
+                    'font-weight': { value: '' }
                 },
                 formula: {
-                    'font-style': { value: 'null' },
-                    'font-weight': { value: 'null' }
+                    'font-style': { value: '' },
+                    'font-weight': { value: '' }
                 },
                 function: {
-                    'font-style': { value: 'null' },
-                    'font-weight': { value: 'null' }
+                    'font-style': { value: '' },
+                    'font-weight': { value: '' }
                 },
                 keyword: {
-                    'font-style': { value: 'null' },
-                    'font-weight': { value: 'null' }
+                    'font-style': { value: '' },
+                    'font-weight': { value: '' }
                 },
                 link: {
-                    'font-style': { value: 'null' },
-                    'font-weight': { value: 'null' }
+                    'font-style': { value: '' },
+                    'font-weight': { value: '' }
                 },
                 literal: {
-                    'font-style': { value: 'null' },
-                    'font-weight': { value: 'null' }
+                    'font-style': { value: '' },
+                    'font-weight': { value: '' }
                 },
                 meta: {
-                    'font-style': { value: 'null' },
-                    'font-weight': { value: 'null' }
+                    'font-style': { value: '' },
+                    'font-weight': { value: '' }
                 },
                 'meta keyword': {
-                    'font-style': { value: 'null' },
-                    'font-weight': { value: 'null' }
+                    'font-style': { value: '' },
+                    'font-weight': { value: '' }
                 },
                 'meta string': {
-                    'font-style': { value: 'null' },
-                    'font-weight': { value: 'null' }
+                    'font-style': { value: '' },
+                    'font-weight': { value: '' }
                 },
                 'meta.prompt': {
-                    'font-style': { value: 'null' },
-                    'font-weight': { value: 'null' }
+                    'font-style': { value: '' },
+                    'font-weight': { value: '' }
                 },
                 name: {
-                    'font-style': { value: 'null' },
-                    'font-weight': { value: 'null' }
+                    'font-style': { value: '' },
+                    'font-weight': { value: '' }
                 },
                 number: {
-                    'font-style': { value: 'null' },
-                    'font-weight': { value: 'null' }
+                    'font-style': { value: '' },
+                    'font-weight': { value: '' }
                 },
                 operator: {
-                    'font-style': { value: 'null' },
-                    'font-weight': { value: 'null' }
+                    'font-style': { value: '' },
+                    'font-weight': { value: '' }
                 },
                 params: {
-                    'font-style': { value: 'null' },
-                    'font-weight': { value: 'null' }
+                    'font-style': { value: '' },
+                    'font-weight': { value: '' }
                 },
                 property: {
-                    'font-style': { value: 'null' },
-                    'font-weight': { value: 'null' }
+                    'font-style': { value: '' },
+                    'font-weight': { value: '' }
                 },
                 punctuation: {
-                    'font-style': { value: 'null' },
-                    'font-weight': { value: 'null' }
+                    'font-style': { value: '' },
+                    'font-weight': { value: '' }
                 },
                 quote: {
-                    'font-style': { value: 'null' },
-                    'font-weight': { value: 'null' }
+                    'font-style': { value: '' },
+                    'font-weight': { value: '' }
                 },
                 regexp: {
-                    'font-style': { value: 'null' },
-                    'font-weight': { value: 'null' }
+                    'font-style': { value: '' },
+                    'font-weight': { value: '' }
                 },
                 section: {
-                    'font-style': { value: 'null' },
-                    'font-weight': { value: 'null' }
+                    'font-style': { value: '' },
+                    'font-weight': { value: '' }
                 },
                 'selector-attr': {
-                    'font-style': { value: 'null' },
-                    'font-weight': { value: 'null' }
+                    'font-style': { value: '' },
+                    'font-weight': { value: '' }
                 },
                 'selector-class': {
-                    'font-style': { value: 'null' },
-                    'font-weight': { value: 'null' }
+                    'font-style': { value: '' },
+                    'font-weight': { value: '' }
                 },
                 'selector-id': {
-                    'font-style': { value: 'null' },
-                    'font-weight': { value: 'null' }
+                    'font-style': { value: '' },
+                    'font-weight': { value: '' }
                 },
                 'selector-pseudo': {
-                    'font-style': { value: 'null' },
-                    'font-weight': { value: 'null' }
+                    'font-style': { value: '' },
+                    'font-weight': { value: '' }
                 },
                 'selector-tag': {
-                    'font-style': { value: 'null' },
-                    'font-weight': { value: 'null' }
+                    'font-style': { value: '' },
+                    'font-weight': { value: '' }
                 },
                 string: {
-                    'font-style': { value: 'null' },
-                    'font-weight': { value: 'null' }
+                    'font-style': { value: '' },
+                    'font-weight': { value: '' }
                 },
                 strong: {
-                    'font-style': { value: 'null' },
-                    'font-weight': { value: 'null' }
+                    'font-style': { value: '' },
+                    'font-weight': { value: '' }
                 },
                 subst: {
-                    'font-style': { value: 'null' },
-                    'font-weight': { value: 'null' }
+                    'font-style': { value: '' },
+                    'font-weight': { value: '' }
                 },
                 symbol: {
-                    'font-style': { value: 'null' },
-                    'font-weight': { value: 'null' }
+                    'font-style': { value: '' },
+                    'font-weight': { value: '' }
                 },
                 tag: {
-                    'font-style': { value: 'null' },
-                    'font-weight': { value: 'null' }
+                    'font-style': { value: '' },
+                    'font-weight': { value: '' }
                 },
                 'template-tag': {
-                    'font-style': { value: 'null' },
-                    'font-weight': { value: 'null' }
+                    'font-style': { value: '' },
+                    'font-weight': { value: '' }
                 },
                 'template-variable': {
-                    'font-style': { value: 'null' },
-                    'font-weight': { value: 'null' }
+                    'font-style': { value: '' },
+                    'font-weight': { value: '' }
                 },
                 title: {
-                    'font-style': { value: 'null' },
-                    'font-weight': { value: 'null' }
+                    'font-style': { value: '' },
+                    'font-weight': { value: '' }
                 },
                 'title.class': {
                     'font-style': { value: 'normal' },
                     'font-weight': { value: 500 }
                 },
                 'title.class.inherited': {
-                    'font-style': { value: 'null' },
-                    'font-weight': { value: 'null' }
+                    'font-style': { value: '' },
+                    'font-weight': { value: '' }
                 },
                 'title.function': {
-                    'font-style': { value: 'null' },
-                    'font-weight': { value: 'null' }
+                    'font-style': { value: '' },
+                    'font-weight': { value: '' }
                 },
                 'title.function.invoke': {
-                    'font-style': { value: 'null' },
-                    'font-weight': { value: 'null' }
+                    'font-style': { value: '' },
+                    'font-weight': { value: '' }
                 },
                 type: {
-                    'font-style': { value: 'null' },
-                    'font-weight': { value: 'null' }
+                    'font-style': { value: '' },
+                    'font-weight': { value: '' }
                 },
                 variable: {
-                    'font-style': { value: 'null' },
-                    'font-weight': { value: 'null' }
+                    'font-style': { value: '' },
+                    'font-weight': { value: '' }
                 },
                 'variable.constant': {
-                    'font-style': { value: 'null' },
-                    'font-weight': { value: 'null' }
+                    'font-style': { value: '' },
+                    'font-weight': { value: '' }
                 },
                 'variable.language': {
-                    'font-style': { value: 'null' },
-                    'font-weight': { value: 'null' }
+                    'font-style': { value: '' },
+                    'font-weight': { value: '' }
                 }
             }
         },
@@ -353,35 +353,35 @@
                     color: { value: '{palette.green.25}' }
                 },
                 attr: {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 attribute: {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 built_in: {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 bullet: {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'char.escape': {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 class: {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 code: {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 comment: {
-                    background: { value: 'null' },
+                    background: { value: '' },
                     color: { value: '{palette.grey.60}' }
                 },
                 deletion: {
@@ -389,171 +389,171 @@
                     color: { value: '{palette.red.35}' }
                 },
                 doctag: {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 emphasis: {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 formula: {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 function: {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 keyword: {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'line-numbers': {
                     color: { value: '{light.foreground.contrast-secondary}' }
                 },
                 link: {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 literal: {
-                    background: { value: 'null' },
+                    background: { value: '' },
                     color: { value: '{palette.purple.30}' }
                 },
                 meta: {
-                    background: { value: 'null' },
+                    background: { value: '' },
                     color: { value: '{palette.blue.35}' }
                 },
                 'meta keyword': {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'meta string': {
-                    background: { value: 'null' },
+                    background: { value: '' },
                     color: { value: '{palette.blue.35}' }
                 },
                 'meta.prompt': {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 name: {
-                    background: { value: 'null' },
+                    background: { value: '' },
                     color: { value: '{palette.blue.35}' }
                 },
                 number: {
-                    background: { value: 'null' },
+                    background: { value: '' },
                     color: { value: '{palette.purple.30}' }
                 },
                 operator: {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 params: {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 property: {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 punctuation: {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 quote: {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 regexp: {
-                    background: { value: 'null' },
+                    background: { value: '' },
                     color: { value: '{palette.green.25}' }
                 },
                 section: {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'selector-attr': {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'selector-class': {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'selector-id': {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'selector-pseudo': {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'selector-tag': {
-                    background: { value: 'null' },
+                    background: { value: '' },
                     color: { value: '{palette.blue.35}' }
                 },
                 string: {
-                    background: { value: 'null' },
+                    background: { value: '' },
                     color: { value: '{palette.green.25}' }
                 },
                 strong: {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 subst: {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 symbol: {
-                    background: { value: 'null' },
+                    background: { value: '' },
                     color: { value: '{palette.blue.35}' }
                 },
                 tag: {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'template-tag': {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'template-variable': {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 title: {
-                    background: { value: 'null' },
+                    background: { value: '' },
                     color: { value: '{palette.blue.35}' }
                 },
                 'title.class': {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'title.class.inherited': {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'title.function': {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'title.function.invoke': {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 type: {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 variable: {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'variable-constant': {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'variable-language': {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 }
             }
         },
@@ -622,35 +622,35 @@
                     color: { value: '{palette.green.25}' }
                 },
                 attr: {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 attribute: {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 built_in: {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 bullet: {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'char.escape': {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 class: {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 code: {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 comment: {
-                    background: { value: 'null' },
+                    background: { value: '' },
                     color: { value: '{palette.grey.60}' }
                 },
                 deletion: {
@@ -658,171 +658,171 @@
                     color: { value: '{palette.red.35}' }
                 },
                 doctag: {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 emphasis: {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 formula: {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 function: {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 keyword: {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'line-numbers': {
                     color: { value: '{dark.foreground.contrast-secondary}' }
                 },
                 link: {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 literal: {
-                    background: { value: 'null' },
+                    background: { value: '' },
                     color: { value: '{palette.purple.60}' }
                 },
                 meta: {
-                    background: { value: 'null' },
+                    background: { value: '' },
                     color: { value: '{palette.blue.65}' }
                 },
                 'meta keyword': {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'meta string': {
-                    background: { value: 'null' },
+                    background: { value: '' },
                     color: { value: '{palette.blue.65}' }
                 },
                 'meta.prompt': {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 name: {
-                    background: { value: 'null' },
+                    background: { value: '' },
                     color: { value: '{palette.blue.65}' }
                 },
                 number: {
-                    background: { value: 'null' },
+                    background: { value: '' },
                     color: { value: '{palette.purple.60}' }
                 },
                 operator: {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 params: {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 property: {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 punctuation: {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 quote: {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 regexp: {
-                    background: { value: 'null' },
+                    background: { value: '' },
                     color: { value: '{palette.green.40}' }
                 },
                 section: {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'selector-attr': {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'selector-class': {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'selector-id': {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'selector-pseudo': {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'selector-tag': {
-                    background: { value: 'null' },
+                    background: { value: '' },
                     color: { value: '{palette.blue.65}' }
                 },
                 string: {
-                    background: { value: 'null' },
+                    background: { value: '' },
                     color: { value: '{palette.green.40}' }
                 },
                 strong: {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 subst: {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 symbol: {
-                    background: { value: 'null' },
+                    background: { value: '' },
                     color: { value: '{palette.blue.65}' }
                 },
                 tag: {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'template-tag': {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'template-variable': {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 title: {
-                    background: { value: 'null' },
+                    background: { value: '' },
                     color: { value: '{palette.blue.65}' }
                 },
                 'title.class': {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'title.class.inherited': {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'title.function': {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'title.function.invoke': {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 type: {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 variable: {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'variable-constant': {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'variable-language': {
-                    background: { value: 'null' },
-                    color: { value: 'null' }
+                    background: { value: '' },
+                    color: { value: '' }
                 }
             }
         }
