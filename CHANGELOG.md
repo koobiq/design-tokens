@@ -1,3 +1,9 @@
+## 3.8.1 (2024-11-13)
+
+### Design Tokens
+
+ * bug fix  scss output for empty string ([#64](https://github.com/koobiq/design-tokens/issues/64)) ([55228d2](https://github.com/koobiq/design-tokens/commit/55228d271cc89d54642d6b7ad1a937c2f5a0056e))
+
 # 3.8.0 (2024-11-13)
 
 ### Design Tokens
