@@ -10,7 +10,7 @@
             size: {
                 'max-width': { value: '{markdown.size.max-width}'},
                 'margin-top': { value: '0' },
-                'margin-bottom': { value: '{size.m}' },
+                'margin-bottom': { value: '{size.l}' },
             },
             font: {
                 default: {
@@ -33,7 +33,7 @@
             },
             size: {
                 'max-width': { value: '{markdown.size.max-width}'},
-                'margin-top': { value: '{size.3xl}' },
+                'margin-top': { value: '{size.xxl}' },
                 'margin-bottom': { value: '{size.m}' },
             },
             font: {
@@ -57,7 +57,7 @@
             },
             size: {
                 'max-width': { value: '{markdown.size.max-width}'},
-                'margin-top': { value: '28px' },
+                'margin-top': { value: '{size.xxl}' },
                 'margin-bottom': { value: '{size.m}' },
             },
             font: {
@@ -106,7 +106,7 @@
             size: {
                 'max-width': { value: '{markdown.size.max-width}'},
                 'margin-top': { value: '{size.xxl}' },
-                'margin-bottom': { value: '{size.m}' },
+                'margin-bottom': { value: '{size.s}' },
             },
             font: {
                 default: {
@@ -130,7 +130,7 @@
             size: {
                 'max-width': { value: '{markdown.size.max-width}'},
                 'margin-top': { value: '{size.xxl}' },
-                'margin-bottom': { value: '{size.m}' },
+                'margin-bottom': { value: '{size.s}' },
             },
             font: {
                 default: {
@@ -182,7 +182,7 @@
                 'margin-top-after-paragraph': { value: '-{size.s}' },
                 'ol-number-padding-right': { value: '{size.xxs}' },
                 'ul-padding': { value: '0 0 0 {size.xxl}' },
-                'item-margin-bottom': { value: '{size.s}' }
+                'item-margin-bottom': { value: '{size.xxs}' }
             },
             font: {
                 default: {
@@ -199,21 +199,21 @@
         blockquote: {
             light: {
                 text: { value: '{light.foreground.contrast}' },
-                line: { value: '{light.foreground.border}' },
+                line: { value: '{light.line.contrast-less}' },
                 background: { value: '{light.background.contrast-fade}' },
                 border: { value: 'transparent' }
             },
             dark: {
                 text: { value: '{dark.foreground.contrast}' },
-                line: { value: '{dark.foreground.border}' },
+                line: { value: '{dark.line.contrast-less}' },
                 background: { value: '{dark.background.contrast-fade}' },
                 border: { value: 'transparent' }
             },
             size: {
                 'max-width': { value: '{markdown.size.max-width}'},
-                'margin-top': { value: '{size.xl}' },
-                'margin-bottom': { value: '{size.xxl}' },
-                'padding': { value: '{size.m} {size.l}' },
+                'margin-top': { value: '{size.m}' },
+                'margin-bottom': { value: '{size.m}' },
+                'padding': { value: '{size.3xs} {size.m}' },
                 'line-width': { value: '{size.xxs}' },
                 'border-radius': { value: '0' },
                 'border-width': { value: '0' },
@@ -233,20 +233,20 @@
         code: {
             light: {
                 text: { value: '{light.foreground.contrast}' },
-                background: { value: '{light.background.background-less-contrast}' },
+                background: { value: '{light.background.contrast-fade}' },
                 border: { value: '{light.line.contrast-less}' }
             },
             dark: {
                 text: { value: '{dark.foreground.contrast}' },
-                background: { value: '{dark.background.background-less-contrast}' },
+                background: { value: '{dark.background.contrast-fade}' },
                 border: { value: '{dark.line.contrast-less}' }
             },
             size: {
                 'max-width': { value: '{markdown.size.max-width}'},
-                'multiline-margin-top': { value: '{size.s}' },
+                'multiline-margin-top': { value: '{size.m}' },
                 'multiline-margin-bottom': { value: '{size.xxl}' },
                 'inline-padding': { value: '0 {size.xxs}' },
-                'multiline-padding': { value: '14px {size.xl}' },
+                'multiline-padding': { value: '{size.m} {size.l}' },
                 'border-radius': { value: '{size.border-radius}' },
                 'border-width': { value: '{size.border-width}' },
             },
@@ -322,15 +322,15 @@
         },
         image: {
             light: {
-                'caption-text': { value: '{light.foreground.text-less-contrast}' }
+                'caption-text': { value: '{light.foreground.contrast-secondary}' }
             },
             dark: {
-                'caption-text': { value: '{dark.foreground.text-less-contrast}' }
+                'caption-text': { value: '{dark.foreground.contrast-secondary}' }
             },
             size: {
                 'max-width': { value: '{markdown.size.max-width}'},
-                'margin-top': { value: '{size.s}' },
-                'margin-bottom': { value: '{size.s}' },
+                'margin-top': { value: '{size.m}' },
+                'margin-bottom': { value: '{size.m}' },
 
                 'caption-margin-top': { value: '-{size.s}' },
                 'caption-margin-bottom': { value: '{size.xxl}' },
@@ -356,24 +356,24 @@
             },
             size: {
                 'width': { value: '1px'},
-                'margin-vertical': { value: '{size.l}' },
+                'margin-vertical': { value: '{size.xxl}' },
             },
         },
         table: {
             light: {
-                header: { value: '{light.foreground.text-less-contrast}' },
+                header: { value: '{light.foreground.contrast-secondary}' },
                 body: { value: '{light.foreground.contrast}' },
                 border: { value: '{light.line.contrast-less}' }
             },
             dark: {
-                header: { value: '{dark.foreground.text-less-contrast}' },
+                header: { value: '{dark.foreground.contrast-secondary}' },
                 body: { value: '{dark.foreground.contrast}' },
                 border: { value: '{dark.line.contrast-less}' }
             },
             size: {
                 'border-width': { value: '{size.border-width}'},
                 'padding': { value: '{size.s}' },
-                'margin-bottom': { value: '{size.l}' }
+                'margin-bottom': { value: '{size.m}' }
             },
             font: {
                 header: {
