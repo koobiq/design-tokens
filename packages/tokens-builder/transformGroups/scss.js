@@ -6,7 +6,8 @@ module.exports = (StyleDictionary) => {
             'kbq-attribute/palette',
             'kbq-attribute/typography',
             'kbq-attribute/md-typography',
-            'name/cti/kebab'
+            'name/cti/kebab',
+            'kbq-scss/value'
         ]
     });
 };
