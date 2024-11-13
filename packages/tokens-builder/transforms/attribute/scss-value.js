@@ -3,7 +3,7 @@ module.exports = (StyleDictionary) => {
         name: 'kbq-scss/value',
         type: 'value',
         transformer: (token) => {
-            if (typeof token.value === 'string' && !token.value) {
+            if (token.value === '') {
                 return null;
             }
             return token.value;
