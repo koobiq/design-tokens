@@ -1,3 +1,15 @@
+# 3.8.0 (2024-11-13)
+
+### Design Tokens
+
+ * bug fix  fix null ([#62](https://github.com/koobiq/design-tokens/issues/62)) ([980b052](https://github.com/koobiq/design-tokens/commit/980b05218d3bbec29083d77f8dffc38ab70450b0))
+
+ * bug fix  **chore:** added rule for shadows changes ([#60](https://github.com/koobiq/design-tokens/issues/60)) ([9b01268](https://github.com/koobiq/design-tokens/commit/9b012684c4391baab3ab186557e3576f3c17d2c1))
+ * bug fix  **palette:** grey-100-a90 was updated ([#63](https://github.com/koobiq/design-tokens/issues/63)) ([ad66cd8](https://github.com/koobiq/design-tokens/commit/ad66cd8824664b0015fab4849442ff01d6bd4fce))
+ * feature  **colors:** delete deprecated tokens, remove it from components ([#48](https://github.com/koobiq/design-tokens/issues/48)) ([fc30de0](https://github.com/koobiq/design-tokens/commit/fc30de099ce295b57570452d5e871d0b5d2af99c))
+ * feature  **docs:** added/updated shadows tokens ([#61](https://github.com/koobiq/design-tokens/issues/61)) ([8c945e8](https://github.com/koobiq/design-tokens/commit/8c945e85fcc1b1e1ee4b6659fb2b3493ebd270b9))
+ * feature  **palette:** updated disable values for states-icons/states-foreground ([#59](https://github.com/koobiq/design-tokens/issues/59)) ([2635711](https://github.com/koobiq/design-tokens/commit/2635711d40fb28b238f004df9f4af6ff8045acf5))
+
 ## 3.7.3 (2024-10-11)
 
 * bug fix  **shadows:** overflow normal offset ([#58](https://github.com/koobiq/design-tokens/issues/58)) ([1ea00f6d](https://github.com/koobiq/design-tokens/commit/1ea00f6d04e3b1125bec7231852e50add1bec51f))
