@@ -72,6 +72,24 @@
             'text-transform': { value: '{typography.mono-big.text-transform}' },
             'font-feature-settings': { value: '{typography.mono-big.font-feature-settings}' }
         },
+        'md-inline-code': {
+            'font-size': { value: '{typography.mono-normal.font-size}' },
+            'line-height': { value: '{typography.mono-normal.line-height}' },
+            'letter-spacing': { value: '{typography.mono-normal.letter-spacing}' },
+            'font-weight': { value: '{typography.mono-normal.font-weight}' },
+            'font-family': { value: '{typography.mono-normal.font-family}' },
+            'text-transform': { value: '{typography.mono-normal.text-transform}' },
+            'font-feature-settings': { value: '{typography.mono-normal.font-feature-settings}' }
+        },
+        'md-inline-code-as-link': {
+            'font-size': { value: '{typography.mono-normal-medium.font-size}' },
+            'line-height': { value: '{typography.mono-normal-medium.line-height}' },
+            'letter-spacing': { value: '{typography.mono-normal-medium.letter-spacing}' },
+            'font-weight': { value: '{typography.mono-normal-medium.font-weight}' },
+            'font-family': { value: '{typography.mono-normal-medium.font-family}' },
+            'text-transform': { value: '{typography.mono-normal-medium.text-transform}' },
+            'font-feature-settings': { value: '{typography.mono-normal-medium.font-feature-settings}' }
+        },
         'md-caption': {
             'font-size': { value: '{typography.text-normal.font-size}' },
             'line-height': { value: '{typography.text-normal.line-height}' },
