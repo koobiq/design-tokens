@@ -1,3 +1,10 @@
+# 3.9.0 (2024-12-06)
+
+### Design Tokens
+
+ * bug fix  **typography:** font-weight for strong italics, tabulars (DS-3166)) ([#65](https://github.com/koobiq/design-tokens/issues/65)) ([0020f64](https://github.com/koobiq/design-tokens/commit/0020f6470191db2b0f0052e4800f67d5d33b94a7))
+ * feature  **typography:** added new typo styles for our new inline code component ([#66](https://github.com/koobiq/design-tokens/issues/66)) ([e29c8dc](https://github.com/koobiq/design-tokens/commit/e29c8dc86dc665431656a1fb3fe7824fb69c0f9b))
+
 ## 3.8.1 (2024-11-13)
 
 ### Design Tokens
