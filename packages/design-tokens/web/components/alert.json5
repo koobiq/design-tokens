@@ -210,28 +210,28 @@
                 },
                 error: {
                     container: {
-                        background: { value: '{light.background.error-fade}' },
+                        background: { value: '{light.background.error-less}' },
                         title: { value: '{light.foreground.contrast}' },
                         text: { value: '{light.foreground.contrast}' }
                     }
                 },
                 warning: {
                     container: {
-                        background: { value: '{light.background.warning-fade}' },
+                        background: { value: '{light.background.warning-less}' },
                         title: { value: '{light.foreground.contrast}' },
                         text: { value: '{light.foreground.contrast}' }
                     }
                 },
                 success: {
                     container: {
-                        background: { value: '{light.background.success-fade}' },
+                        background: { value: '{light.background.success-less}' },
                         title: { value: '{light.foreground.contrast}' },
                         text: { value: '{light.foreground.contrast}' }
                     }
                 },
                 theme: {
                     container: {
-                        background: { value: '{light.background.theme-fade}' },
+                        background: { value: '{light.background.theme-less}' },
                         title: { value: '{light.foreground.contrast}' },
                         text: { value: '{light.foreground.contrast}' }
                     }
@@ -287,28 +287,28 @@
                 },
                 error: {
                     container: {
-                        background: { value: '{dark.background.error-fade}' },
+                        background: { value: '{dark.background.error-less}' },
                         title: { value: '{dark.foreground.contrast}' },
                         text: { value: '{dark.foreground.contrast}' }
                     }
                 },
                 warning: {
                     container: {
-                        background: { value: '{dark.background.warning-fade}' },
+                        background: { value: '{dark.background.warning-less}' },
                         title: { value: '{dark.foreground.contrast}' },
                         text: { value: '{dark.foreground.contrast}' }
                     }
                 },
                 success: {
                     container: {
-                        background: { value: '{dark.background.success-fade}' },
+                        background: { value: '{dark.background.success-less}' },
                         title: { value: '{dark.foreground.contrast}' },
                         text: { value: '{dark.foreground.contrast}' }
                     }
                 },
                 theme: {
                     container: {
-                        background: { value: '{dark.background.theme-fade}' },
+                        background: { value: '{dark.background.theme-less}' },
                         title: { value: '{dark.foreground.contrast}' },
                         text: { value: '{dark.foreground.contrast}' }
                     }
