@@ -66,7 +66,7 @@
                     },
                     focused: {
                         border: { value: '{light.states.line.focus-error}' },
-                        background: { value: '{light.states.background.error-less}'},
+                        background: { value: '{light.background.error-less}'},
                         'circle-background': { value: '{light.icon.error}'},
                         'focus-outline': { value: '{light.states.line.focus-error}' }
                     },
@@ -150,7 +150,7 @@
                     },
                     focused: {
                         border: { value: '{dark.states.line.focus-error}' },
-                        background: { value: '{dark.states.background.error-less}'},
+                        background: { value: '{dark.background.error-less}'},
                         'circle-background': { value: '{dark.icon.error}'},
                         'focus-outline': { value: '{dark.states.line.focus-error}' }
                     },

@@ -79,7 +79,7 @@
                     },
                     focused: {
                         'outer-circle-border': { value: 'transparent' },
-                        'outer-circle-background': { value: '{light.states.background.error-less}'},
+                        'outer-circle-background': { value: '{light.background.error-less}'},
                         'inner-circle-background': { value: 'transparent'},
                          'outer-circle-shadow': { value: '0 0 0.1px 2px {light.states.line.focus-error}'}
                     },
@@ -176,7 +176,7 @@
                     },
                     focused: {
                         'outer-circle-border': { value: 'transparent' },
-                        'outer-circle-background': { value: '{dark.states.background.error-less}'},
+                        'outer-circle-background': { value: '{dark.background.error-less}'},
                         'inner-circle-background': { value: 'transparent'},
                          'outer-circle-shadow': { value: '0 0 0.1px 2px {dark.states.line.focus-error}'}
                     },

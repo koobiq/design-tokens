@@ -47,7 +47,7 @@
                     border: { value: '{light.line.error}' },
                     color: { value: '{light.icon.white}' },
                     text: { value: '{light.foreground.contrast}' },
-                    background: { value: '{light.states.background.error-less}' },
+                    background: { value: '{light.background.error-less}' },
                     caption: { value: '{light.foreground.contrast-secondary}' }
                 },
 
@@ -66,7 +66,7 @@
                     },
                     focused: {
                         border: { value: '{light.line.error}' },
-                        background: { value: '{light.states.background.error-less}' },
+                        background: { value: '{light.background.error-less}' },
                         outline: { value: '1px solid {light.states.line.focus-error}' }
                     },
                     'checked-focused': {
@@ -131,7 +131,7 @@
                     border: { value: '{dark.line.error}' },
                     color: { value: '{dark.icon.white}' },
                     text: { value: '{dark.foreground.contrast}' },
-                    background: { value: '{dark.states.background.error-less}' },
+                    background: { value: '{dark.background.error-less}' },
                     caption: { value: '{dark.foreground.contrast-secondary}' }
                 },
 
@@ -150,7 +150,7 @@
                     },
                     focused: {
                         border: { value: '{dark.line.error}' },
-                        background: { value: '{dark.states.background.error-less}' },
+                        background: { value: '{dark.background.error-less}' },
                         outline: { value: '1px solid {dark.states.line.focus-error}' }
                     },
                     'checked-focused': {
