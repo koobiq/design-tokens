@@ -52,7 +52,7 @@
                     background: { value: '{dark.contrast.palette.value."50-A48"}' }
                 },
                 hover: {
-                    background: { value: '{dark.contrast.palette.value."50-A48"}' }
+                    background: { value: '{dark.contrast.palette.value."50-A60"}' }
                 },
                 active: {
                     background: { value: '{dark.contrast.palette.value."50-A80"}' }
