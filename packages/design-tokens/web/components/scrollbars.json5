@@ -17,15 +17,15 @@
             }
         },
         light: {
-            'thumb': {
+            thumb: {
                 default: {
-                    background: { value: '{light.icon.contrast-fade}' }
+                    background: { value: '{light.contrast.palette.value."50-A32"}' }
                 },
                 hover: {
-                    background: { value: '{light.states.icon.contrast-fade-hover}' }
+                    background: { value: '{light.contrast.palette.value."50-A48"}' }
                 },
                 active: {
-                    background: { value: '{light.states.icon.contrast-fade-active}' }
+                    background: { value: '{light.contrast.palette.value."20-A55"}' }
                 },
                 disabled: {
                     background: { value: '{light.states.icon.disabled}' }
@@ -47,15 +47,15 @@
             }
         },
         dark: {
-            'thumb': {
+            thumb: {
                 default: {
-                    background: { value: '{dark.icon.contrast-fade}' }
+                    background: { value: '{dark.contrast.palette.value."50-A48"}' }
                 },
                 hover: {
-                    background: { value: '{dark.states.icon.contrast-fade-hover}' }
+                    background: { value: '{dark.contrast.palette.value."50-A60"}' }
                 },
                 active: {
-                    background: { value: '{dark.states.icon.contrast-fade-active}' }
+                    background: { value: '{dark.contrast.palette.value."50-A80"}' }
                 },
                 disabled: {
                     background: { value: '{dark.states.icon.disabled}' }
