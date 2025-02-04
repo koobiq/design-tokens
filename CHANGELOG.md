@@ -1,3 +1,9 @@
+# 3.10.0 (2025-02-04)
+
+### Design Tokens
+
+ * feature  **palette:** colors adjustments ([#DS-3321](https://github.com/koobiq/design-tokens/issues/issue/DS-3321)) ([#67](https://github.com/koobiq/design-tokens/issues/67)) ([2a96bb2](https://github.com/koobiq/design-tokens/commit/2a96bb253506c51c2ec4b967e21cdf879ea0bf06))
+
 # 3.9.0 (2024-12-06)
 
 ### Design Tokens
