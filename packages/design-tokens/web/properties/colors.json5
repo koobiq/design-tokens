@@ -34,27 +34,29 @@
         },
         background: {
             bg: { value: '{light.white.default}' },
-            'bg-secondary': { value: '{light.contrast.palette.value.95}' },
-            'bg-tertiary': { value: '{light.contrast.palette.value.97}' },
+            'bg-secondary': { value: '{light.contrast.palette.value.97}' },
+            'bg-tertiary': { value: '{light.contrast.palette.value.95}' },
             night: { value: '{light.contrast.palette.value.25}' },
             card: { value: '{light.contrast.palette.value.100}' },
             //  THEME
             theme: { value: '{light.theme.default.value}' },
-            'theme-fade': { value: '{light.theme.palette.value.85}' },
+            'theme-fade': { value: '{light.theme.palette.value.88}' },
             'theme-less': { value: '{light.theme.palette.value.94}' },
             //  CONTRAST
             contrast: { value: '{light.contrast.palette.value.25}' },
             'contrast-fade': { value: '{light.contrast.palette.value.92}' },
             //  ERROR
             error: { value: '{light.error.palette.value.60}' },
-            'error-fade': { value: '{light.error.palette.value.90}' },
-            'error-less': { value: '{light.error.palette.value.99}' },
+            'error-fade': { value: '{light.error.palette.value.89}' },
+            'error-less': { value: '{light.error.palette.value.94}' },
             //  SUCCESS
             success: { value: '{light.success.palette.value.45}' },
             'success-fade': { value: '{light.success.palette.value.80}' },
+            'success-less': { value: '{light.success.palette.value.89}' },
             //  WARNING
             warning: { value: '{light.warning.palette.value.50}' },
             'warning-fade': { value: '{light.warning.palette.value.85}' },
+            'warning-less': { value: '{light.warning.palette.value.90}' },
             //  OTHER
             transparent: { value: 'transparent' },
             overlay: { value: '{light.contrast.palette.value."20-A32"}' },
@@ -76,7 +78,7 @@
             error: { value: '{light.error.palette.value.40}' },
             'error-secondary': { value: '{light.error.palette.value.50}' },
             'error-tertiary': { value: '{light.error.palette.value.70}' },
-            'error-less': { value: '{light.error.palette.value.90}' },
+            'error-less': { value: '{light.error.palette.value.70}' },
             //  SUCCESS
             success: { value: '{light.success.palette.value.30}' },
             'success-less': { value: '{light.success.palette.value.90}' },
@@ -137,10 +139,10 @@
                 //  THEME
                 'theme-hover': { value: '{light.theme.palette.value.45}' },
                 'theme-active': { value: '{light.theme.palette.value.39}' },
-                'theme-fade-hover': { value: '{light.theme.palette.value.91}' },
-                'theme-fade-active': { value: '{light.theme.palette.value.88}' },
-                'theme-less-hover': { value: '{light.theme.palette.value.90}' },
-                'theme-less-active': { value: '{light.theme.palette.value.94}' },
+                'theme-fade-hover': { value: '{light.theme.palette.value.85}' },
+                'theme-fade-active': { value: '{light.theme.palette.value.83}' },
+                'theme-less-hover': { value: '{light.theme.palette.value.92}' },
+                'theme-less-active': { value: '{light.theme.palette.value.90}' },
                 //  CONTRAST
                 'contrast-hover': { value: '{light.contrast.palette.value.20}' },
                 'contrast-active': { value: '{light.contrast.palette.value.15}' },
@@ -149,18 +151,27 @@
                 //  ERROR
                 'error-hover': { value: '{light.error.palette.value.56}' },
                 'error-active': { value: '{light.error.palette.value."51-S69"}' },
-                'error-fade-hover': { value: '{light.error.palette.value.92}' },
-                'error-fade-active': { value: '{light.error.palette.value.88}' },
-                'error-less': { value: '{light.error.palette.value.99}' },
+                'error-fade-hover': { value: '{light.error.palette.value.87}' },
+                'error-fade-active': { value: '{light.error.palette.value.85}' },
+                'error-less-hover': { value: '{light.error.palette.value.92}' },
+                'error-less-active': { value: '{light.error.palette.value.89}' },
                 //  SUCCESS
+                'success-fade-hover': { value: '{light.success.palette.value.76}' },
+                'success-fade-active': { value: '{light.success.palette.value.84}' },
+                'success-less-hover': { value: '{light.success.palette.value.84}' },
+                'success-less-active': { value: '{light.success.palette.value.81}' },
                 //  WARNING
-                'warning-fade-hover': { value: '{light.warning.palette.value.87}' },
-                'warning-fade-active': { value: '{light.error.palette.value.84}' },
-                //  VISITED
+                'warning-fade-hover': { value: '{light.warning.palette.value.77}' },
+                'warning-fade-active': { value: '{light.error.palette.value.73}' },
+                'warning-less-hover': { value: '{light.warning.palette.value.86}' },
+                'warning-less-active': { value: '{light.warning.palette.value.82}' },
                 //  OTHER
                 disabled: { value: '{light.contrast.palette.value."50-A16"}' },
                 'transparent-hover': { value: '{light.contrast.palette.value."50-A8"}' },
                 'transparent-active': { value: '{light.contrast.palette.value."50-A16"}' },
+                // states-bg-error-less — deprecated. use bg-error-less
+                // light.states.bg.error-less удалить
+                'error-less': { value: '{light.error.palette.value.99}' },
             },
             foreground: {
                 //  THEME
@@ -241,28 +252,30 @@
             palette: { value: '{palette.purple}' }
         },
         background: {
-            //  THEME
-            theme: { value: '{dark.theme.default.value}' },
-            'theme-fade': { value: '{dark.theme.palette.value.20}' },
-            'theme-less': { value: '{dark.theme.palette.value.18}' },
-            //  CONTRAST
             bg: { value: '{dark.contrast.palette.value.12}' },
             'bg-secondary': { value: '{dark.contrast.palette.value.16}' },
             'bg-tertiary': { value: '{dark.contrast.palette.value.14}' },
             night: { value: '{dark.contrast.palette.value.25}' },
             card: { value: '{dark.contrast.palette.value.15}' },
+            //  THEME
+            theme: { value: '{dark.theme.default.value}' },
+            'theme-fade': { value: '{dark.theme.palette.value.24}' },
+            'theme-less': { value: '{dark.theme.palette.value.15}' },
+            //  CONTRAST
             contrast: { value: '{dark.contrast.palette.value.90}' },
             'contrast-fade': { value: '{dark.contrast.palette.value.25}' },
             //  ERROR
             error: { value: '{dark.error.palette.value.41}' },
-            'error-fade': { value: '{dark.error.palette.value.15}' },
-            'error-less': { value: '{dark.error.palette.value.6}' }, // удалить после удаления из компонентов
+            'error-fade': { value: '{dark.error.palette.value.20}' },
+            'error-less': { value: '{dark.error.palette.value.13}' },
             //  SUCCESS
             success: { value: '{dark.success.palette.value.40}' },
-            'success-fade': { value: '{dark.success.palette.value.12}' },
+            'success-fade': { value: '{dark.success.palette.value.15}' },
+            'success-less': { value: '{dark.success.palette.value.9}' }, // подобрать оттенок
             //  WARNING
             warning: { value: '{dark.warning.palette.value.39}' },
-            'warning-fade': { value: '{dark.warning.palette.value.14}' },
+            'warning-fade': { value: '{dark.warning.palette.value.15}' },
+            'warning-less': { value: '{dark.warning.palette.value.9}' }, // подобрать оттенок
             //  OTHER
             transparent: { value: 'transparent' },
             overlay: { value: '{light.contrast.palette.value."6-A64"}' },
@@ -274,7 +287,7 @@
             'white-secondary': { value: '{dark.white.palette.value."default-A72"}' },
             //  THEME
             theme: { value: '{dark.theme.palette.value.65}' },
-            'theme-secondary': { value: '{dark.theme.palette.value.30}' },
+            'theme-secondary': { value: '{dark.theme.palette.value.45}' },
             //  CONTRAST
             contrast: { value: '{dark.contrast.palette.value.80}' },
             'on-contrast': { value: '{dark.contrast.palette.value.15}' },
@@ -282,9 +295,9 @@
             'contrast-tertiary': { value: '{dark.contrast.palette.value.45}' },
             //  ERROR
             error: { value: '{dark.error.palette.value.60}' },
-            'error-secondary': { value: '{dark.error.palette.value.40}' },
-            'error-tertiary': { value: '{dark.error.palette.value.25}' },
-            'error-less': { value: '{dark.error.palette.value.90}' }, // TODO: будет удалено, после удаления из компонентов
+            'error-secondary': { value: '{dark.error.palette.value.39}' },
+            'error-tertiary': { value: '{dark.error.palette.value.28}' },
+            'error-less': { value: '{dark.error.palette.value.28}' }, // TODO: будет удалено, после удаления из компонентов
             //  SUCCESS
             success: { value: '{dark.success.palette.value.45}' },
             'success-less': { value: '{dark.success.palette.value.90}' }, // TODO: будет удалено, после удаления из компонентов
@@ -345,27 +358,38 @@
                 //  THEME
                 'theme-hover': { value: '{dark.theme.palette.value.45}' },
                 'theme-active': { value: '{dark.theme.palette.value.39}' },
-                'theme-fade-hover': { value: '{dark.theme.palette.value.18}' },
-                'theme-fade-active': { value: '{dark.theme.palette.value.21}' },
+                'theme-fade-hover': { value: '{dark.theme.palette.value.26}' },
+                'theme-fade-active': { value: '{dark.theme.palette.value.28}' },
                 'theme-less-hover': { value: '{dark.theme.palette.value.15}' },
-                'theme-less-active': { value: '{dark.theme.palette.value.18}' },
+                'theme-less-active': { value: '{dark.theme.palette.value.19}' },
                 //  CONTRAST
                 'contrast-hover': { value: '{dark.contrast.palette.value.80}' },
                 'contrast-active': { value: '{dark.contrast.palette.value.55}' },
                 'contrast-fade-hover': { value: '{dark.contrast.palette.value.25}' },
                 'contrast-fade-active': { value: '{dark.contrast.palette.value.27}' },
-                disabled: { value: '{dark.contrast.palette.value."50-A16"}' },
-                'transparent-hover': { value: '{dark.contrast.palette.value."50-A16"}' },
-                'transparent-active': { value: '{dark.contrast.palette.value."85-S100-A15"}' },
                 //  ERROR
                 'error-hover': { value: '{dark.error.palette.value.42}' },
                 'error-active': { value: '{dark.error.palette.value.39}' },
-                'error-fade-hover': { value: '{dark.error.palette.value.13}' },
-                'error-fade-active': { value: '{dark.error.palette.value.16}' },
-                'error-less': { value: '{dark.error.palette.value.6}' },
+                'error-fade-hover': { value: '{dark.error.palette.value.22}' },
+                'error-fade-active': { value: '{dark.error.palette.value.24}' },
+                'error-less-hover': { value: '{dark.error.palette.value.15}' },
+                'error-less-active': { value: '{dark.error.palette.value.17}' },
                 //  WARNING
-                'warning-fade-hover': { value: '{dark.warning.palette.value.13}' },
-                'warning-fade-active': { value: '{dark.warning.palette.value.16}' }
+                'warning-fade-hover': { value: '{dark.warning.palette.value.16}' },
+                'warning-fade-active': { value: '{dark.warning.palette.value.18}' },
+                'warning-less-hover': { value: '{dark.warning.palette.value.11}' },
+                'warning-less-active': { value: '{dark.warning.palette.value.12}' },
+                // SUCCESS
+                'success-fade-hover': { value: '{dark.success.palette.value.17}' },
+                'success-fade-active': { value: '{dark.success.palette.value.19}' },
+                'success-less-hover': { value: '{dark.success.palette.value.11}' },
+                'success-less-active': { value: '{dark.success.palette.value.12}' },
+                // OTHER
+                disabled: { value: '{dark.contrast.palette.value."50-A16"}' },
+                'transparent-hover': { value: '{dark.contrast.palette.value."50-A16"}' },
+                'transparent-active': { value: '{dark.contrast.palette.value."85-S100-A15"}' },
+                // states-bg-error-less — deprecated. use bg-error-less
+                'error-less': { value: '{dark.error.palette.value.13}' },
             },
             foreground: {
                 //  THEME

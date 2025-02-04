@@ -142,7 +142,7 @@
                     error: {
                         container: {
                             border: { value: '{light.line.error}' },
-                            background: { value: '{light.states.background.error-less}' }
+                            background: { value: '{light.background.error-less}' }
                         },
                         'left-icon': {
                             color: { value: '{light.icon.error}' }
@@ -224,7 +224,7 @@
                     error: {
                         grid: {
                             cell: {
-                                background: { value: '{light.states.background.error-less}' }
+                                background: { value: '{light.background.error-less}' }
                             }
                         },
                         'left-icon': {
@@ -299,7 +299,7 @@
                     error: {
                         container: {
                             border: { value: '{dark.line.error}' },
-                            background: { value: '{dark.states.background.error-less}' }
+                            background: { value: '{dark.background.error-less}' }
                         },
                         'left-icon': {
                             color: { value: '{dark.icon.error}' }
@@ -381,7 +381,7 @@
                     error: {
                         grid: {
                             cell: {
-                                background: { value: '{dark.states.background.error-less}' }
+                                background: { value: '{dark.background.error-less}' }
                             }
                         },
                         'left-icon': {

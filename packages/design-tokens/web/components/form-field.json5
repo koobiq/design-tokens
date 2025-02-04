@@ -55,7 +55,7 @@
                     border: {
                         color: { value: '{light.line.error}' }
                     },
-                    background: { value: '{light.states.background.error-less}' },
+                    background: { value: '{light.background.error-less}' },
                     placeholder: { value: '{light.foreground.error-tertiary}' },
                     text: { value: '{light.foreground.error}' }
                 },
@@ -103,8 +103,8 @@
                     border: {
                         color: { value: '{dark.line.error}' }
                     },
-                    background: { value: '{dark.states.background.error-less}' },
-                    placeholder: { value: '{dark.foreground.error-tertiary}' },
+                    background: { value: '{dark.background.error-less}' },
+                    placeholder: { value: '{dark.foreground.error-secondary}' },
                     text: { value: '{dark.foreground.error}' }
                 },
                 'error-focused': {
