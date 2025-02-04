@@ -29,7 +29,19 @@ const getMapFromObj = (object) => {
     return `(\n${result}\n)`;
 };
 
+const applyCustomTransformations = (dictionary) => {
+    dictionary.allProperties = dictionary.allTokens = dictionary.allTokens.flatMap((token) => {
+        if (typeof token.value === 'object' && token.type === 'font') {
+            return unwrapObjectTransformer(token);
+        }
+        return token;
+    });
+
+    return dictionary.allTokens;
+};
+
 module.exports = {
     unwrapObjectTransformer,
-    getMapFromObj
+    getMapFromObj,
+    applyCustomTransformations
 };
