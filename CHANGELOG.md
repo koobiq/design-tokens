@@ -1,3 +1,9 @@
+# 3.11.0 (2025-02-19)
+
+### Design Tokens
+
+ * feature  **palette:** adding new values into grey palette ([#68](https://github.com/koobiq/design-tokens/issues/68)) ([fba2c19](https://github.com/koobiq/design-tokens/commit/fba2c19218e041f1e8278d5602d98f29966414a3))
+
 # 3.10.0 (2025-02-04)
 
 ### Design Tokens
