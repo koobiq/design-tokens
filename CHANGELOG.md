@@ -3,6 +3,7 @@
 ### Design Tokens
 
  * feature  **palette:** adding new values into grey palette ([#68](https://github.com/koobiq/design-tokens/issues/68)) ([fba2c19](https://github.com/koobiq/design-tokens/commit/fba2c19218e041f1e8278d5602d98f29966414a3))
+ * feature  **palette:** added orange palette ([#69](https://github.com/koobiq/design-tokens/issues/69)) ([24b876f](https://github.com/koobiq/design-tokens/commit/24b876fd476bf75fb1de87fc97213f199520a919))
 
 # 3.10.0 (2025-02-04)
 
