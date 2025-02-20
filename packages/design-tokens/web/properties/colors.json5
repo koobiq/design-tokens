@@ -382,7 +382,7 @@
                 'warning-less-hover': { value: '{dark.warning.palette.value.11}' },
                 'warning-less-active': { value: '{dark.warning.palette.value.12}' },
                 // SUCCESS
-                'success-hover': { value: '{dark.success.palette.value.39}' },
+                'success-hover': { value: '{dark.success.palette.value.38}' },
                 'success-active': { value: '{dark.success.palette.value.35}' },
                 'success-fade-hover': { value: '{dark.success.palette.value.17}' },
                 'success-fade-active': { value: '{dark.success.palette.value.19}' },
