@@ -44,7 +44,7 @@
             'theme-less': { value: '{light.theme.palette.value.94}' },
             //  CONTRAST
             contrast: { value: '{light.contrast.palette.value.25}' },
-            'contrast-fade': { value: '{light.contrast.palette.value.92}' },
+            'contrast-fade': { value: '{light.contrast.palette.value.90}' },
             //  ERROR
             error: { value: '{light.error.palette.value.60}' },
             'error-fade': { value: '{light.error.palette.value.89}' },
@@ -60,7 +60,7 @@
             //  OTHER
             transparent: { value: 'transparent' },
             overlay: { value: '{light.contrast.palette.value."20-A32"}' },
-            'overlay-inverse': { value: '{light.contrast.palette.value."99-A88"}' },
+            'overlay-inverse': { value: '{light.contrast.palette.value."99-A88"}' }
         },
         foreground: {
             //  WHITE
@@ -87,7 +87,7 @@
             warning: { value: '{light.warning.palette.value.33}' },
             'warning-secondary': { value: '{light.warning.palette.value.45}' },
             //  VISITED
-            visited: { value: '{light.purple.palette.value.45}' },
+            visited: { value: '{light.purple.palette.value.45}' }
         },
         icon: {
             //  WHITE
@@ -173,7 +173,7 @@
                 'transparent-active': { value: '{light.contrast.palette.value."50-A16"}' },
                 // states-bg-error-less — deprecated. use bg-error-less
                 // light.states.bg.error-less удалить
-                'error-less': { value: '{light.error.palette.value.99}' },
+                'error-less': { value: '{light.error.palette.value.99}' }
             },
             foreground: {
                 //  THEME
@@ -217,7 +217,7 @@
                 'focus-error': { value: '{light.error.palette.value.45}' }
             },
             'disabled-opacity': { value: 0.32 }
-        },
+        }
     },
     // DARK THEME
     dark: {
@@ -281,7 +281,7 @@
             //  OTHER
             transparent: { value: 'transparent' },
             overlay: { value: '{light.contrast.palette.value."6-A64"}' },
-            'overlay-inverse': { value: '{light.contrast.palette.value."12-A80"}' },
+            'overlay-inverse': { value: '{light.contrast.palette.value."12-A80"}' }
         },
         foreground: {
             //  WHITE
@@ -308,7 +308,7 @@
             warning: { value: '{dark.warning.palette.value.60}' },
             'warning-secondary': { value: '{dark.warning.palette.value.40}' },
             //  VISITED
-            visited: { value: '{dark.purple.palette.value.50}' },
+            visited: { value: '{dark.purple.palette.value.50}' }
         },
         icon: {
             //  WHITE
@@ -393,7 +393,7 @@
                 'transparent-hover': { value: '{dark.contrast.palette.value."50-A16"}' },
                 'transparent-active': { value: '{dark.contrast.palette.value."85-S100-A15"}' },
                 // states-bg-error-less — deprecated. use bg-error-less
-                'error-less': { value: '{dark.error.palette.value.13}' },
+                'error-less': { value: '{dark.error.palette.value.13}' }
             },
             foreground: {
                 //  THEME
