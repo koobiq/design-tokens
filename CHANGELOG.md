@@ -1,3 +1,9 @@
+## 3.11.2 (2025-02-20)
+
+### Design Tokens
+
+ * bug fix  **colors:** states-bg-theme-less-alias ([#DS-3400](https://github.com/koobiq/design-tokens/issues/issue/DS-3400)) ([#71](https://github.com/koobiq/design-tokens/issues/71)) ([6df522a](https://github.com/koobiq/design-tokens/commit/6df522ad84526340df6f4e57a67c1261b4496612))
+
 ## 3.11.1 (2025-02-20)
 
 ### Design Tokens
