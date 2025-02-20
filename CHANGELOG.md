@@ -1,3 +1,10 @@
+## 3.11.1 (2025-02-20)
+
+### Design Tokens
+
+ * bug fix  build fix ([a35c5b4](https://github.com/koobiq/design-tokens/commit/a35c5b4cce4c1a7d9821f9cceb183e2594c5f9b0))
+ * feature  **colors:** add states-bg-success ([#DS-3391](https://github.com/koobiq/design-tokens/issues/issue/DS-3391)) ([#72](https://github.com/koobiq/design-tokens/issues/72)) ([f1e8116](https://github.com/koobiq/design-tokens/commit/f1e8116f85429704c85c7b3654a3ad076555a584))
+
 # 3.11.0 (2025-02-19)
 
 ### Design Tokens
