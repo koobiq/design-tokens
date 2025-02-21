@@ -168,7 +168,7 @@
                 'warning-less-hover': { value: '{light.warning.palette.value.86}' },
                 'warning-less-active': { value: '{light.warning.palette.value.82}' },
                 //  OTHER
-                disabled: { value: '{light.contrast.palette.value."50-A16"}' },
+                disabled: { value: '{palette.black.A5}' },
                 'transparent-hover': { value: '{light.contrast.palette.value."50-A8"}' },
                 'transparent-active': { value: '{light.contrast.palette.value."50-A16"}' },
                 // states-bg-error-less — deprecated. use bg-error-less

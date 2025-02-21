@@ -2,11 +2,13 @@
     palette: {
         black: {
             default: { value: 'hsla(0, 0%, 0%, 100%)' },
+            // New standard
+            A5: { value: 'rgba(0, 0, 0, 0.05)' },
+            // OLD (need to rewrite with new standard)
             '"default-A8"': { value: 'rgba(0, 0, 0, 0.08)' },
             '"default-A16"': { value: 'rgba(0, 0, 0, 0.16)' },
             '"default-A20"': { value: 'rgba(0, 0, 0, 0.20)' },
             '"default-A50"': { value: 'rgba(0, 0, 0, 0.50)' },
-            // OLD
             A50: { value: 'rgba(0, 0, 0, 0.50)' }
         },
         blue: {
@@ -606,7 +608,7 @@
             '97': { value: 'hsla(26, 97%, 97%, 100%)' },
             '98': { value: 'hsla(26, 97%, 98%, 100%)' },
             '99': { value: 'hsla(26, 97%, 99%, 100%)' },
-            '100': { value: 'hsla(26, 97%, 100%, 100%)' },
+            '100': { value: 'hsla(26, 97%, 100%, 100%)' }
         },
         purple: {
             '0': { value: 'hsla(277, 72%, 0%, 100%)' },
