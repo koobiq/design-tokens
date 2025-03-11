@@ -127,7 +127,7 @@
         light: {
             default: {
                 title: { value: '{light.foreground.contrast}' },
-                color: { value: '{light.foreground.contrast-fade}' }
+                color: { value: '{light.foreground.contrast-secondary}' }
             },
             error: {
                 title: { value: '{light.foreground.error}' },
@@ -137,7 +137,7 @@
         dark: {
             default: {
                 title: { value: '{light.foreground.contrast}' },
-                color: { value: '{light.foreground.contrast-fade}' }
+                color: { value: '{light.foreground.contrast-secondary}' }
             },
             error: {
                 title: { value: '{light.foreground.error}' },
