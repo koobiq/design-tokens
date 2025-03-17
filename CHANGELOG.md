@@ -1,3 +1,11 @@
+# 3.12.0 (2025-03-17)
+
+### Design Tokens
+
+ * feature  **colors:** add bg-contrast-less ([#DS-3467](https://github.com/koobiq/design-tokens/issues/issue/DS-3467)) ([35ac786](https://github.com/koobiq/design-tokens/commit/35ac786d761d612fd78659b869dd83cdf3524c16))
+ * feature  **colors:** Increase contrast for bg-contrast-fade and opacity for states-bg-disable ([#DS-3158](https://github.com/koobiq/design-tokens/issues/issue/DS-3158)) ([#73](https://github.com/koobiq/design-tokens/issues/73)) ([b3f518e](https://github.com/koobiq/design-tokens/commit/b3f518e9373c306b6b7ae7968090f515e672b5c2))
+ * feature  overlay empty state text styles ([#DS-3009](https://github.com/koobiq/design-tokens/issues/issue/DS-3009)) ([#74](https://github.com/koobiq/design-tokens/issues/74)) ([9298715](https://github.com/koobiq/design-tokens/commit/9298715fd2db0e045e5a65d2870a15e66bf6a274))
+
 ## 3.11.2 (2025-02-20)
 
 ### Design Tokens

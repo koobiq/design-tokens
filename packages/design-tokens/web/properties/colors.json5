@@ -45,6 +45,7 @@
             //  CONTRAST
             contrast: { value: '{light.contrast.palette.value.25}' },
             'contrast-fade': { value: '{light.contrast.palette.value.90}' },
+            'contrast-less': { value: '{light.contrast.palette.value.96}' },
             //  ERROR
             error: { value: '{light.error.palette.value.60}' },
             'error-fade': { value: '{light.error.palette.value.89}' },
@@ -148,6 +149,8 @@
                 'contrast-active': { value: '{light.contrast.palette.value.15}' },
                 'contrast-fade-hover': { value: '{light.contrast.palette.value.88}' },
                 'contrast-fade-active': { value: '{light.contrast.palette.value.85}' },
+                'contrast-less-hover': { value: '{light.contrast.palette.value.93}' },
+                'contrast-less-active': { value: '{light.contrast.palette.value.91}' },
                 //  ERROR
                 'error-hover': { value: '{light.error.palette.value.56}' },
                 'error-active': { value: '{light.error.palette.value."51-S69"}' },
@@ -266,6 +269,7 @@
             //  CONTRAST
             contrast: { value: '{dark.contrast.palette.value.90}' },
             'contrast-fade': { value: '{dark.contrast.palette.value.25}' },
+            'contrast-less': { value: '{dark.contrast.palette.value.17}' },
             //  ERROR
             error: { value: '{dark.error.palette.value.41}' },
             'error-fade': { value: '{dark.error.palette.value.20}' },
@@ -369,6 +373,8 @@
                 'contrast-active': { value: '{dark.contrast.palette.value.55}' },
                 'contrast-fade-hover': { value: '{dark.contrast.palette.value.25}' },
                 'contrast-fade-active': { value: '{dark.contrast.palette.value.27}' },
+                'contrast-less-hover': { value: '{dark.contrast.palette.value.19}' },
+                'contrast-less-active': { value: '{dark.contrast.palette.value.21}' },
                 //  ERROR
                 'error-hover': { value: '{dark.error.palette.value.42}' },
                 'error-active': { value: '{dark.error.palette.value.39}' },
