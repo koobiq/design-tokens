@@ -11,7 +11,6 @@
 -   You can **build it** with this command: `yarn run build`
 -   Then **find your distribution** in the following folder: `/dist`
 
-
 Here’s a clearer and more structured version for both developers and designers:
 
 ---
@@ -24,14 +23,17 @@ All releases must be made from `release branches` or `main`.
 ### 🔄 Simple Release
 
 1. **Switch to `main`:**
-   ```sh
-   git checkout main
-   ```  
+    ```sh
+    git checkout main
+    ```
 2. **Run the release command:**
-   ```sh
-   yarn run stage:commit
-   ```  
-   This command will:
+
+    ```sh
+    yarn run stage:commit
+    ```
+
+    This command will:
+
     - Prompt you to choose the version bump (**needs validation**).
     - Ask for a **release name** (**needs validation**).
     - Generate a **changelog** (**needs validation**).
@@ -46,9 +48,9 @@ All releases must be made from `release branches` or `main`.
 ### 🔥Major Version Release
 
 1. **Create a new release branch from `main`**
-   ```sh
-   git checkout -b 1.0.x main
-   ```  
+    ```sh
+    git checkout -b 1.0.x main
+    ```
 2. **Follow steps 2 and 3 from the Simple Release section.**
 
 ---
@@ -57,9 +59,9 @@ All releases must be made from `release branches` or `main`.
 
 1. **Create a new branch from the existing release branch**
     - Example: If the current branch is `3.0.x`, create a new branch:
-      ```sh
-      git checkout -b 3.1.x 3.0.x
-      ```  
+        ```sh
+        git checkout -b 3.1.x 3.0.x
+        ```
 2. **Follow steps 2 and 3 from the Simple Release section.**
 
 ---
