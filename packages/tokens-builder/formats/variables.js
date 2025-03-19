@@ -1,5 +1,5 @@
 const { formatHelpers } = require('style-dictionary');
-const { unwrapObjectTransformer } = require('../formats/utils');
+const { applyCustomTransformations } = require('../formats/utils');
 
 module.exports = (StyleDictionary) => {
     StyleDictionary.registerFormat({
@@ -8,13 +8,7 @@ module.exports = (StyleDictionary) => {
             const selector = options.selector ? options.selector : `:root`;
             const { outputReferences } = options;
 
-            // apply custom transformations for tokens
-            dictionary.allProperties = dictionary.allTokens = dictionary.allTokens.flatMap((token) => {
-                if (typeof token.value === 'object' && token.type === 'font') {
-                    return unwrapObjectTransformer(token);
-                }
-                return token;
-            });
+            applyCustomTransformations(dictionary);
 
             dictionary.allTokens.forEach((token) => {
                 token.name = token.name.replace(/(light|dark)-/, '');
