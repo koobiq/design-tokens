@@ -1,461 +1,582 @@
 {
     tabs: {
-        size: {
-            'tab-item': {
-                padding: {
-                    horizontal: { value: '{size.m}' },
-                    vertical: { value: '{size.xs}' }
-                },
-                'content-gap': {
-                    horizontal: { value: '{size.xxs}' }
-                },
-                border: {
-                    radius: { value: '{size.s}' }
-                },
-                'focus-outline': {
-                    width: { value: '{size.3xs}' }
-                }
-            },
-            'tab-stack': {
-                horizontal: {
-                    // радиус задан у tab-item, а это для чего ?
+        segmented: {
+            size: {
+                'tab-item': {
+                    padding: {
+                        horizontal: { value: '{size.m}' },
+                        vertical: { value: '{size.xs}' }
+                    },
+                    'content-gap': {
+                        horizontal: { value: '{size.xxs}' }
+                    },
                     border: {
                         radius: { value: '{size.s}' }
+                    },
+                    'focus-outline': {
+                        width: { value: '{size.3xs}' }
                     }
                 },
-                vertical: {
-                    'content-gap': {
-                        vertical: { value: '{size.s}' }
-                    }
-                }
-            }
-        },
-        font: {
-            text: {
-                'font-size': { value: '{typography.text-normal-medium.font-size}' },
-                'line-height': { value: '{typography.text-normal-medium.line-height}' },
-                'letter-spacing': { value: '{typography.text-normal-medium.letter-spacing}' },
-                'font-weight': { value: '{typography.text-normal-medium.font-weight}' },
-                'font-family': { value: '{typography.text-normal-medium.font-family}' },
-                'text-transform': { value: '{typography.text-normal-medium.text-transform}' },
-                'font-feature-settings': { value: '{typography.text-normal-medium.font-feature-settings}' }
-            }
-        },
-        light: {
-            'tab-item': {
-                filled: {
-                    'on-background': {
-                        default: {
-                            background: { value: 'transparent' },
-                            text: {
-                                color: { value: '{light.foreground.contrast}' }
-                            },
-                            icon: {
-                                color: { value: '{light.icon.contrast}' }
-                            }
-                        },
-                        states: {
-                            hover: {
-                                background: { value: '{light.states.background.transparent-hover}' }
-                            },
-                            focused: {
-                                'focus-outline': {
-                                    color: { value: '{light.states.line.focus-theme}' }
-                                }
-                            },
-                            selected: {
-                                background: { value: '{light.states.background.transparent-active}' }
-                            },
-                            'selected-hover': {
-                                background: { value: '{light.states.background.transparent-active}' }
-                            },
-                            'selected-disabled': {
-                                background: { value: '{light.states.background.transparent-active}' },
-                                text: {
-                                    color: { value: '{light.states.foreground.disabled}' }
-                                },
-                                icon: {
-                                    color: { value: '{light.states.icon.disabled}' }
-                                }
-                            },
-                            disabled: {
-                                background: { value: 'transparent' },
-                                text: {
-                                    color: { value: '{light.states.foreground.disabled}' }
-                                },
-                                icon: {
-                                    color: { value: '{light.states.icon.disabled}' }
-                                }
-                            }
+                'tab-stack': {
+                    horizontal: {
+                        // радиус задан у tab-item, а это для чего ?
+                        border: {
+                            radius: { value: '{size.s}' }
                         }
                     },
-                    'on-surface': {
-                        default: {
-                            background: { value: 'transparent' },
-                            text: {
-                                color: { value: '{light.foreground.contrast}' }
-                            },
-                            icon: {
-                                color: { value: '{light.icon.contrast}' }
-                            }
-                        },
-                        states: {
-                            hover: {
-                                background: { value: '{light.states.background.transparent-hover}' }
-                            },
-                            focused: {
-                                'focus-outline': {
-                                    color: { value: '{light.states.line.focus-theme}' }
-                                }
-                            },
-                            selected: {
-                                background: { value: '{light.states.background.transparent-active}' }
-                            },
-                            'selected-hover': {
-                                background: { value: '{light.states.background.transparent-active}' }
-                            },
-                            'selected-disabled': {
-                                background: { value: '{light.states.background.transparent-active}' },
-                                text: {
-                                    color: { value: '{light.states.foreground.disabled}' }
-                                },
-                                icon: {
-                                    color: { value: '{light.states.icon.disabled}' }
-                                }
-                            },
-                            disabled: {
-                                background: { value: 'transparent' },
-                                text: {
-                                    color: { value: '{light.states.foreground.disabled}' }
-                                },
-                                icon: {
-                                    color: { value: '{light.states.icon.disabled}' }
-                                }
-                            }
-                        }
-                    }
-                },
-                //
-                transparent: {
-                    'on-background': {
-                        default: {
-                            background: { value: 'transparent' },
-                            text: {
-                                color: { value: '{light.foreground.contrast}' }
-                            },
-                            icon: {
-                                color: { value: '{light.icon.contrast}' }
-                            }
-                        },
-                        states: {
-                            hover: {
-                                background: { value: '{light.states.background.transparent-hover}' }
-                            },
-                            focused: {
-                                'focus-outline': {
-                                    color: { value: '{light.states.line.focus-theme}' }
-                                }
-                            },
-                            selected: {
-                                background: { value: '{light.states.background.transparent-active}' }
-                            },
-                            'selected-hover': {
-                                background: { value: '{light.states.background.transparent-active}' }
-                            },
-                            'selected-disabled': {
-                                background: { value: '{light.states.background.transparent-active}' },
-                                text: {
-                                    color: { value: '{light.states.foreground.disabled}' }
-                                },
-                                icon: {
-                                    color: { value: '{light.states.icon.disabled}' }
-                                }
-                            },
-                            disabled: {
-                                background: { value: 'transparent' },
-                                text: {
-                                    color: { value: '{light.states.foreground.disabled}' }
-                                },
-                                icon: {
-                                    color: { value: '{light.states.icon.disabled}' }
-                                }
-                            }
-                        }
-                    },
-                    'on-surface': {
-                        default: {
-                            background: { value: 'transparent' },
-                            text: {
-                                color: { value: '{light.foreground.contrast}' }
-                            },
-                            icon: {
-                                color: { value: '{light.icon.contrast}' }
-                            }
-                        },
-                        states: {
-                            hover: {
-                                background: { value: '{light.states.background.transparent-hover}' }
-                            },
-                            focused: {
-                                'focus-outline': {
-                                    color: { value: '{light.states.line.focus-theme}' }
-                                }
-                            },
-                            selected: {
-                                background: { value: '{light.states.background.transparent-active}' }
-                            },
-                            'selected-hover': {
-                                background: { value: '{light.states.background.transparent-active}' }
-                            },
-                            'selected-disabled': {
-                                background: { value: '{light.states.background.transparent-active}' },
-                                text: {
-                                    color: { value: '{light.states.foreground.disabled}' }
-                                },
-                                icon: {
-                                    color: { value: '{light.states.icon.disabled}' }
-                                }
-                            },
-                            disabled: {
-                                background: { value: 'transparent' },
-                                text: {
-                                    color: { value: '{light.states.foreground.disabled}' }
-                                },
-                                icon: {
-                                    color: { value: '{light.states.icon.disabled}' }
-                                }
-                            }
+                    vertical: {
+                        'content-gap': {
+                            vertical: { value: '{size.s}' }
                         }
                     }
                 }
             },
-            'tab-stack': {
-                filled: {
-                    'on-background': {
-                        background: { value: '{light.background.bg}' }
-                    },
-                    'on-surface': {
-                        background: { value: '{light.background.contrast-fade}' }
-                    }
-                },
-                // TODO: Добавить дополнительные стили для :hover/:focus
-                transparent: {
-                    'on-background': {
-                        background: { value: 'transparent' }
-                    },
-                    'on-surface': {
-                        background: { value: 'transparent' }
-                    }
+            font: {
+                text: {
+                    'font-size': { value: '{button.font.default.font-size}' },
+                    'line-height': { value: '{button.font.default.line-height}' },
+                    'letter-spacing': { value: '{button.font.default.letter-spacing}' },
+                    'font-weight': { value: '{button.font.default.font-weight}' },
+                    'font-family': { value: '{button.font.default.font-family}' },
+                    'text-transform': { value: '{button.font.default.text-transform}' },
+                    'font-feature-settings': { value: '{button.font.default.font-feature-settings}' }
                 }
-            }
-        },
-        dark: {
-            'tab-item': {
-                filled: {
-                    'on-background': {
-                        default: {
-                            background: { value: 'transparent' },
-                            text: {
-                                color: { value: '{dark.foreground.contrast}' }
-                            },
-                            icon: {
-                                color: { value: '{dark.icon.contrast}' }
-                            }
-                        },
-                        states: {
-                            hover: {
-                                background: { value: '{dark.states.background.transparent-hover}' }
-                            },
-                            focused: {
-                                'focus-outline': {
-                                    color: { value: '{dark.states.line.focus-theme}' }
-                                }
-                            },
-                            selected: {
-                                background: { value: '{dark.states.background.transparent-active}' }
-                            },
-                            'selected-hover': {
-                                background: { value: '{dark.states.background.transparent-active}' }
-                            },
-                            'selected-disabled': {
-                                background: { value: '{dark.states.background.transparent-active}' },
-                                text: {
-                                    color: { value: '{dark.states.foreground.disabled}' }
-                                },
-                                icon: {
-                                    color: { value: '{dark.states.icon.disabled}' }
-                                }
-                            },
-                            disabled: {
+            },
+            light: {
+                'tab-item': {
+                    filled: {
+                        'on-background': {
+                                    default: {
                                 background: { value: 'transparent' },
                                 text: {
-                                    color: { value: '{dark.states.foreground.disabled}' }
+                                    color: { value: '{light.foreground.contrast}' }
                                 },
                                 icon: {
-                                    color: { value: '{dark.states.icon.disabled}' }
+                                    color: { value: '{light.icon.contrast}' }
+                                }
+                            },
+                            states: {
+                                hover: {
+                                    background: { value: '{light.states.background.transparent-hover}' }
+                                },
+                                focused: {
+                                    'focus-outline': {
+                                        color: { value: '{light.states.line.focus-theme}' }
+                                    }
+                                },
+                                selected: {
+                                    background: { value: '{light.states.background.transparent-active}' }
+                                },
+                                'selected-hover': {
+                                    background: { value: '{light.states.background.transparent-active}' }
+                                },
+                                'selected-disabled': {
+                                    background: { value: '{light.states.background.transparent-active}' },
+                                    text: {
+                                        color: { value: '{light.states.foreground.disabled}' }
+                                    },
+                                    icon: {
+                                        color: { value: '{light.states.icon.disabled}' }
+                                    }
+                                },
+                                disabled: {
+                                    background: { value: 'transparent' },
+                                    text: {
+                                        color: { value: '{light.states.foreground.disabled}' }
+                                    },
+                                    icon: {
+                                        color: { value: '{light.states.icon.disabled}' }
+                                    }
+                                }
+                            }
+                        },
+                        'on-surface': {
+                                    default: {
+                                background: { value: 'transparent' },
+                                text: {
+                                    color: { value: '{light.foreground.contrast}' }
+                                },
+                                icon: {
+                                    color: { value: '{light.icon.contrast}' }
+                                }
+                            },
+                            states: {
+                                hover: {
+                                    background: { value: '{light.states.background.transparent-hover}' }
+                                },
+                                focused: {
+                                    'focus-outline': {
+                                        color: { value: '{light.states.line.focus-theme}' }
+                                    }
+                                },
+                                selected: {
+                                    background: { value: '{light.states.background.transparent-active}' }
+                                },
+                                'selected-hover': {
+                                    background: { value: '{light.states.background.transparent-active}' }
+                                },
+                                'selected-disabled': {
+                                    background: { value: '{light.states.background.transparent-active}' },
+                                    text: {
+                                        color: { value: '{light.states.foreground.disabled}' }
+                                    },
+                                    icon: {
+                                        color: { value: '{light.states.icon.disabled}' }
+                                    }
+                                },
+                                disabled: {
+                                    background: { value: 'transparent' },
+                                    text: {
+                                        color: { value: '{light.states.foreground.disabled}' }
+                                    },
+                                    icon: {
+                                        color: { value: '{light.states.icon.disabled}' }
+                                    }
                                 }
                             }
                         }
                     },
-                    'on-surface': {
-                        default: {
-                            background: { value: 'transparent' },
-                            text: {
-                                color: { value: '{dark.foreground.contrast}' }
-                            },
-                            icon: {
-                                color: { value: '{dark.icon.contrast}' }
-                            }
-                        },
-                        states: {
-                            hover: {
-                                background: { value: '{dark.states.background.transparent-hover}' }
-                            },
-                            focused: {
-                                'focus-outline': {
-                                    color: { value: '{dark.states.line.focus-theme}' }
-                                }
-                            },
-                            selected: {
-                                background: { value: '{dark.states.background.transparent-active}' }
-                            },
-                            'selected-hover': {
-                                background: { value: '{dark.states.background.transparent-active}' }
-                            },
-                            'selected-disabled': {
-                                background: { value: '{dark.states.background.transparent-active}' },
-                                text: {
-                                    color: { value: '{dark.states.foreground.disabled}' }
-                                },
-                                icon: {
-                                    color: { value: '{dark.states.icon.disabled}' }
-                                }
-                            },
-                            disabled: {
+                    //
+                    transparent: {
+                        'on-background': {
+                                    default: {
                                 background: { value: 'transparent' },
                                 text: {
-                                    color: { value: '{dark.states.foreground.disabled}' }
+                                    color: { value: '{light.foreground.contrast}' }
                                 },
                                 icon: {
-                                    color: { value: '{dark.states.icon.disabled}' }
+                                    color: { value: '{light.icon.contrast}' }
+                                }
+                            },
+                            states: {
+                                hover: {
+                                    background: { value: '{light.states.background.transparent-hover}' }
+                                },
+                                focused: {
+                                    'focus-outline': {
+                                        color: { value: '{light.states.line.focus-theme}' }
+                                    }
+                                },
+                                selected: {
+                                    background: { value: '{light.states.background.transparent-active}' }
+                                },
+                                'selected-hover': {
+                                    background: { value: '{light.states.background.transparent-active}' }
+                                },
+                                'selected-disabled': {
+                                    background: { value: '{light.states.background.transparent-active}' },
+                                    text: {
+                                        color: { value: '{light.states.foreground.disabled}' }
+                                    },
+                                    icon: {
+                                        color: { value: '{light.states.icon.disabled}' }
+                                    }
+                                },
+                                disabled: {
+                                    background: { value: 'transparent' },
+                                    text: {
+                                        color: { value: '{light.states.foreground.disabled}' }
+                                    },
+                                    icon: {
+                                        color: { value: '{light.states.icon.disabled}' }
+                                    }
+                                }
+                            }
+                        },
+                        'on-surface': {
+                                    default: {
+                                background: { value: 'transparent' },
+                                text: {
+                                    color: { value: '{light.foreground.contrast}' }
+                                },
+                                icon: {
+                                    color: { value: '{light.icon.contrast}' }
+                                }
+                            },
+                            states: {
+                                hover: {
+                                    background: { value: '{light.states.background.transparent-hover}' }
+                                },
+                                focused: {
+                                    'focus-outline': {
+                                        color: { value: '{light.states.line.focus-theme}' }
+                                    }
+                                },
+                                selected: {
+                                    background: { value: '{light.states.background.transparent-active}' }
+                                },
+                                'selected-hover': {
+                                    background: { value: '{light.states.background.transparent-active}' }
+                                },
+                                'selected-disabled': {
+                                    background: { value: '{light.states.background.transparent-active}' },
+                                    text: {
+                                        color: { value: '{light.states.foreground.disabled}' }
+                                    },
+                                    icon: {
+                                        color: { value: '{light.states.icon.disabled}' }
+                                    }
+                                },
+                                disabled: {
+                                    background: { value: 'transparent' },
+                                    text: {
+                                        color: { value: '{light.states.foreground.disabled}' }
+                                    },
+                                    icon: {
+                                        color: { value: '{light.states.icon.disabled}' }
+                                    }
                                 }
                             }
                         }
                     }
                 },
-                //
-                transparent: {
-                    'on-background': {
-                        default: {
-                            background: { value: 'transparent' },
-                            text: {
-                                color: { value: '{dark.foreground.contrast}' }
-                            },
-                            icon: {
-                                color: { value: '{dark.icon.contrast}' }
-                            }
+                'tab-stack': {
+                    filled: {
+                        'on-background': {
+                            background: { value: '{light.background.bg}' }
                         },
-                        states: {
-                            hover: {
-                                background: { value: '{dark.states.background.transparent-hover}' }
-                            },
-                            focused: {
-                                'focus-outline': {
-                                    color: { value: '{dark.states.line.focus-theme}' }
-                                }
-                            },
-                            selected: {
-                                background: { value: '{dark.states.background.transparent-active}' }
-                            },
-                            'selected-hover': {
-                                background: { value: '{dark.states.background.transparent-active}' }
-                            },
-                            'selected-disabled': {
-                                background: { value: '{dark.states.background.transparent-active}' },
-                                text: {
-                                    color: { value: '{dark.states.foreground.disabled}' }
-                                },
-                                icon: {
-                                    color: { value: '{dark.states.icon.disabled}' }
-                                }
-                            },
-                            disabled: {
-                                background: { value: 'transparent' },
-                                text: {
-                                    color: { value: '{dark.states.foreground.disabled}' }
-                                },
-                                icon: {
-                                    color: { value: '{dark.states.icon.disabled}' }
-                                }
-                            }
+                        'on-surface': {
+                            background: { value: '{light.background.contrast-fade}' }
                         }
                     },
-                    'on-surface': {
-                        default: {
-                            background: { value: 'transparent' },
-                            text: {
-                                color: { value: '{dark.foreground.contrast}' }
-                            },
-                            icon: {
-                                color: { value: '{dark.icon.contrast}' }
-                            }
+                    // TODO: Добавить дополнительные стили для :hover/:focus
+                    transparent: {
+                        'on-background': {
+                            background: { value: 'transparent' }
                         },
-                        states: {
-                            hover: {
-                                background: { value: '{dark.states.background.transparent-hover}' }
-                            },
-                            focused: {
-                                'focus-outline': {
-                                    color: { value: '{dark.states.line.focus-theme}' }
-                                }
-                            },
-                            selected: {
-                                background: { value: '{dark.states.background.transparent-active}' }
-                            },
-                            'selected-hover': {
-                                background: { value: '{dark.states.background.transparent-active}' }
-                            },
-                            'selected-disabled': {
-                                background: { value: '{dark.states.background.transparent-active}' },
-                                text: {
-                                    color: { value: '{dark.states.foreground.disabled}' }
-                                },
-                                icon: {
-                                    color: { value: '{dark.states.icon.disabled}' }
-                                }
-                            },
-                            disabled: {
-                                background: { value: 'transparent' },
-                                text: {
-                                    color: { value: '{dark.states.foreground.disabled}' }
-                                },
-                                icon: {
-                                    color: { value: '{dark.states.icon.disabled}' }
-                                }
-                            }
+                        'on-surface': {
+                            background: { value: 'transparent' }
                         }
                     }
                 }
             },
-            'tab-stack': {
-                filled: {
-                    'on-background': {
-                        background: { value: '{dark.background.bg}' }
+            dark: {
+                'tab-item': {
+                    filled: {
+                        'on-background': {
+                                    default: {
+                                background: { value: 'transparent' },
+                                text: {
+                                    color: { value: '{dark.foreground.contrast}' }
+                                },
+                                icon: {
+                                    color: { value: '{dark.icon.contrast}' }
+                                }
+                            },
+                            states: {
+                                hover: {
+                                    background: { value: '{dark.states.background.transparent-hover}' }
+                                },
+                                focused: {
+                                    'focus-outline': {
+                                        color: { value: '{dark.states.line.focus-theme}' }
+                                    }
+                                },
+                                selected: {
+                                    background: { value: '{dark.states.background.transparent-active}' }
+                                },
+                                'selected-hover': {
+                                    background: { value: '{dark.states.background.transparent-active}' }
+                                },
+                                'selected-disabled': {
+                                    background: { value: '{dark.states.background.transparent-active}' },
+                                    text: {
+                                        color: { value: '{dark.states.foreground.disabled}' }
+                                    },
+                                    icon: {
+                                        color: { value: '{dark.states.icon.disabled}' }
+                                    }
+                                },
+                                disabled: {
+                                    background: { value: 'transparent' },
+                                    text: {
+                                        color: { value: '{dark.states.foreground.disabled}' }
+                                    },
+                                    icon: {
+                                        color: { value: '{dark.states.icon.disabled}' }
+                                    }
+                                }
+                            }
+                        },
+                        'on-surface': {
+                                    default: {
+                                background: { value: 'transparent' },
+                                text: {
+                                    color: { value: '{dark.foreground.contrast}' }
+                                },
+                                icon: {
+                                    color: { value: '{dark.icon.contrast}' }
+                                }
+                            },
+                            states: {
+                                hover: {
+                                    background: { value: '{dark.states.background.transparent-hover}' }
+                                },
+                                focused: {
+                                    'focus-outline': {
+                                        color: { value: '{dark.states.line.focus-theme}' }
+                                    }
+                                },
+                                selected: {
+                                    background: { value: '{dark.states.background.transparent-active}' }
+                                },
+                                'selected-hover': {
+                                    background: { value: '{dark.states.background.transparent-active}' }
+                                },
+                                'selected-disabled': {
+                                    background: { value: '{dark.states.background.transparent-active}' },
+                                    text: {
+                                        color: { value: '{dark.states.foreground.disabled}' }
+                                    },
+                                    icon: {
+                                        color: { value: '{dark.states.icon.disabled}' }
+                                    }
+                                },
+                                disabled: {
+                                    background: { value: 'transparent' },
+                                    text: {
+                                        color: { value: '{dark.states.foreground.disabled}' }
+                                    },
+                                    icon: {
+                                        color: { value: '{dark.states.icon.disabled}' }
+                                    }
+                                }
+                            }
+                        }
                     },
-                    'on-surface': {
-                        background: { value: '{dark.background.contrast-fade}' }
+                    //
+                    transparent: {
+                        'on-background': {
+                                    default: {
+                                background: { value: 'transparent' },
+                                text: {
+                                    color: { value: '{dark.foreground.contrast}' }
+                                },
+                                icon: {
+                                    color: { value: '{dark.icon.contrast}' }
+                                }
+                            },
+                            states: {
+                                hover: {
+                                    background: { value: '{dark.states.background.transparent-hover}' }
+                                },
+                                focused: {
+                                    'focus-outline': {
+                                        color: { value: '{dark.states.line.focus-theme}' }
+                                    }
+                                },
+                                selected: {
+                                    background: { value: '{dark.states.background.transparent-active}' }
+                                },
+                                'selected-hover': {
+                                    background: { value: '{dark.states.background.transparent-active}' }
+                                },
+                                'selected-disabled': {
+                                    background: { value: '{dark.states.background.transparent-active}' },
+                                    text: {
+                                        color: { value: '{dark.states.foreground.disabled}' }
+                                    },
+                                    icon: {
+                                        color: { value: '{dark.states.icon.disabled}' }
+                                    }
+                                },
+                                disabled: {
+                                    background: { value: 'transparent' },
+                                    text: {
+                                        color: { value: '{dark.states.foreground.disabled}' }
+                                    },
+                                    icon: {
+                                        color: { value: '{dark.states.icon.disabled}' }
+                                    }
+                                }
+                            }
+                        },
+                        'on-surface': {
+                                    default: {
+                                background: { value: 'transparent' },
+                                text: {
+                                    color: { value: '{dark.foreground.contrast}' }
+                                },
+                                icon: {
+                                    color: { value: '{dark.icon.contrast}' }
+                                }
+                            },
+                            states: {
+                                hover: {
+                                    background: { value: '{dark.states.background.transparent-hover}' }
+                                },
+                                focused: {
+                                    'focus-outline': {
+                                        color: { value: '{dark.states.line.focus-theme}' }
+                                    }
+                                },
+                                selected: {
+                                    background: { value: '{dark.states.background.transparent-active}' }
+                                },
+                                'selected-hover': {
+                                    background: { value: '{dark.states.background.transparent-active}' }
+                                },
+                                'selected-disabled': {
+                                    background: { value: '{dark.states.background.transparent-active}' },
+                                    text: {
+                                        color: { value: '{dark.states.foreground.disabled}' }
+                                    },
+                                    icon: {
+                                        color: { value: '{dark.states.icon.disabled}' }
+                                    }
+                                },
+                                disabled: {
+                                    background: { value: 'transparent' },
+                                    text: {
+                                        color: { value: '{dark.states.foreground.disabled}' }
+                                    },
+                                    icon: {
+                                        color: { value: '{dark.states.icon.disabled}' }
+                                    }
+                                }
+                            }
+                        }
                     }
                 },
-                //
-                transparent: {
-                    'on-background': {
-                        background: { value: 'transparent' }
+                'tab-stack': {
+                    filled: {
+                        'on-background': {
+                            background: { value: '{dark.background.bg}' }
+                        },
+                        'on-surface': {
+                            background: { value: '{dark.background.contrast-fade}' }
+                        }
                     },
-                    'on-surface': {
-                        background: { value: 'transparent' }
+                    //
+                    transparent: {
+                        'on-background': {
+                            background: { value: 'transparent' }
+                        },
+                        'on-surface': {
+                            background: { value: 'transparent' }
+                        }
                     }
                 }
             }
+        },
+        underlined: {
+            size: {
+                container: {
+                    padding: { value: '8px' },
+                    'min-width': { value: '44px' },
+                    // нижнее подчеркивание выбранного таба
+                    border: {
+                        // top-left | top-right | bottom-right | bottom-lef
+                        radius: { value: '{size.s} {size.s} 0 0' },
+                        width: { value: '3px' }
+                    },
+                },
+                content: {
+                    // стиль как у кнопки
+                    'min-heigth': { value: '{button.size.height}' },
+                    'border-radius': { value: '{button.size.border-radius}'},
+                    padding: {
+                        horizontal: { value: '{button.size.horizontal-padding}' },
+                        vertical: { value: '{size.xs}' }
+                    },
+                },
+                stack: {
+                    'min-height': { value: '48px' }
+                }
+            },
+            font: {
+                default: {
+                    "font-size": { value: '{button.font.default.font-size}' },
+                    "line-height": { value: '{button.font.default.line-height}' },
+                    "letter-spacing": { value: '{button.font.default.letter-spacing}' },
+                    "font-weight": { value: '{button.font.default.font-weight}' },
+                    "font-family": { value: '{button.font.default.font-family}' },
+                    "text-transform": { value: '{button.font.default.text-transform}' },
+                    "font-feature-settings": { value: '{button.font.default.font-feature-settings}' }
+                }
+            },
+            light: {
+                'tab-item': {
+                    container: {
+                        border: { value: '{light.line.contrast}' },
+                        state: {
+                            selected: {
+                                border: { value: '{light.line.contrast}' },
+                            },
+                            disabled: {
+                                border: { value: '{light.states.line.disabled}' },
+                            },
+                        },
+                    },
+                    content: {
+                        background: { value: 'transparent'},
+                        color: { value: '{light.foreground.contrast-secondary}' },
+                        icon: { value: '{light.icon.contrast}' },
+                        state: {
+                            hover: {
+                                background: { value: 'light.states.background.transparent-hover'},
+                            },
+                            active: {
+                                background: { value: 'light.states.background.transparent-active'},
+                            },
+                            empty: {
+                                color: { value: '{light.foreground.contrast-secondary}' },
+                                icon: { value: '{light.icon.contrast}' }
+                            },
+                            disabled: {
+                                background: { value: 'transparent'},
+                                color: { value: '{light.states.foreground.disabled}' },
+                                icon: { value: '{light.states.icon.disabled}' },
+                            }
+                        }
+                    }
+                },
+                'tab-stack': {
+                    background: { value: '{light.background.bg}' },
+                    border: { value: '{light.line.contrast-less}' }
+                }
+            },
+            dark: {
+                'tab-item': {
+                    container: {
+                        border: { value: '{dark.line.contrast}' },
+                        state: {
+                            selected: {
+                                border: { value: '{dark.line.contrast}' },
+                            },
+                            disabled: {
+                                border: { value: '{dark.states.line.disabled}' },
+                            },
+                        },
+                    },
+                    content: {
+                        background: { value: 'transparent'},
+                        color: { value: '{dark.foreground.contrast-secondary}' },
+                        icon: { value: '{dark.icon.contrast}' },
+                        state: {
+                            hover: {
+                                background: { value: 'dark.states.background.transparent-hover'},
+                            },
+                            active: {
+                                background: { value: 'dark.states.background.transparent-active'},
+                            },
+                            empty: {
+                                color: { value: '{dark.foreground.contrast-secondary}' },
+                                icon: { value: '{dark.icon.contrast}' }
+                            },
+                            disabled: {
+                                background: { value: 'transparent'},
+                                color: { value: '{dark.states.foreground.disabled}' },
+                                icon: { value: '{dark.states.icon.disabled}' },
+                            }
+                        }
+                    }
+                },
+                'tab-stack': {
+                    background: { value: '{dark.background.bg}' },
+                    border: { value: '{dark.line.contrast-less}' }
+                }
+            },
         }
     }
 }
