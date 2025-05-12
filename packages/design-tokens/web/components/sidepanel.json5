@@ -2,106 +2,106 @@
     sidepanel: {
         size: {
             small: {
-                width: { value: '400px' }
+                width: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '400px' }
             },
             medium: {
-                width: { value: '640px' }
+                width: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '640px' }
             },
             large: {
-                width: { value: '960px' }
+                width: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '960px' }
             },
             header: {
                 padding: {
-                    vertical: { value: '{size.l}' },
-                    left: { value: '{size.3xl}' },
-                    right: { value: '{size.m}' }
+                    vertical: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.l}' },
+                    left: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.3xl}' },
+                    right: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.m}' }
                 }
             },
             'close-button': {
                 margin: {
-                    left: { value: '{size.s}' }
+                    left: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.s}' }
                 }
             },
             content: {
                 padding: {
-                    horizontal: { value: '{size.3xl}' },
-                    bottom: { value: '{size.xxl}' }
+                    horizontal: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.3xl}' },
+                    bottom: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.xxl}' }
                 }
             },
             footer: {
                 padding: {
-                    top: { value: '{size.s}' },
-                    bottom: { value: '{size.3xl}' },
-                    horizontal: { value: '{size.3xl}' }
+                    top: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.s}' },
+                    bottom: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.3xl}' },
+                    horizontal: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.3xl}' }
                 },
                 'content-gap': {
-                    horizontal: { value: '{size.l}' }
+                    horizontal: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.l}' }
                 }
             }
         },
         font: {
             header: {
-                'font-size': { value: '{typography.title.font-size}' },
-                'line-height': { value: '{typography.title.line-height}' },
-                'letter-spacing': { value: '{typography.title.letter-spacing}' },
-                'font-weight': { value: '{typography.title.font-weight}' },
-                'font-family': { value: '{typography.title.font-family}' },
-                'text-transform': { value: '{typography.title.text-transform}' },
-                'font-feature-settings': { value: '{typography.title.font-feature-settings}' }
+                'font-size': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.title.font-size}' },
+                'line-height': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.title.line-height}' },
+                'letter-spacing': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.title.letter-spacing}' },
+                'font-weight': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.title.font-weight}' },
+                'font-family': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.title.font-family}' },
+                'text-transform': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.title.text-transform}' },
+                'font-feature-settings': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.title.font-feature-settings}' }
             },
             content: {
-                'font-size': { value: '{typography.text-normal.font-size}' },
-                'line-height': { value: '{typography.text-normal.line-height}' },
-                'letter-spacing': { value: '{typography.text-normal.letter-spacing}' },
-                'font-weight': { value: '{typography.text-normal.font-weight}' },
-                'font-family': { value: '{typography.text-normal.font-family}' },
-                'text-transform': { value: '{typography.text-normal.text-transform}' },
-                'font-feature-settings': { value: '{typography.text-normal.font-feature-settings}' }
+                'font-size': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.font-size}' },
+                'line-height': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.line-height}' },
+                'letter-spacing': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.letter-spacing}' },
+                'font-weight': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.font-weight}' },
+                'font-family': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.font-family}' },
+                'text-transform': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.text-transform}' },
+                'font-feature-settings': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.font-feature-settings}' }
             }
         },
         light: {
             overlay: {
-                background: { value: '{light.background.overlay}' }
+                background: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.background.overlay}' }
             },
             container: {
-                background: { value: '{light.background.card}' },
-                shadow: { value: '{shadow.light.overlay}' }
+                background: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.background.card}' },
+                shadow: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{shadow.light.overlay}' }
             },
             header: {
                 text: {
-                    color: { value: '{light.foreground.contrast}' }
+                    color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.contrast}' }
                 },
-                'scroll-shadow': { value: '{shadow.light.overflow-normal-bottom}' }
+                'scroll-shadow': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{shadow.light.overflow-normal-bottom}' }
             },
             footer: {
-                'scroll-shadow': { value: '{shadow.light.overflow-normal-top}' }
+                'scroll-shadow': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{shadow.light.overflow-normal-top}' }
             },
             content: {
                 text: {
-                    color: { value: '{light.foreground.contrast}' }
+                    color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.contrast}' }
                 }
             }
         },
         dark: {
             overlay: {
-                background: { value: '{dark.background.overlay}' }
+                background: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.background.overlay}' }
             },
             container: {
-                background: { value: '{dark.background.card}' },
-                shadow: { value: '{shadow.dark.overlay}' }
+                background: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.background.card}' },
+                shadow: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{shadow.dark.overlay}' }
             },
             header: {
                 text: {
-                    color: { value: '{dark.foreground.contrast}' }
+                    color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.contrast}' }
                 },
-                'scroll-shadow': { value: '{shadow.dark.overflow-normal-bottom}' }
+                'scroll-shadow': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{shadow.dark.overflow-normal-bottom}' }
             },
             footer: {
-                'scroll-shadow': { value: '{shadow.dark.overflow-normal-top}' }
+                'scroll-shadow': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{shadow.dark.overflow-normal-top}' }
             },
             content: {
                 text: {
-                    color: { value: '{dark.foreground.contrast}' }
+                    color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.contrast}' }
                 }
             }
         }

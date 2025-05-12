@@ -1,19 +1,19 @@
 {
     option: {
         size: {
-            'horizontal-padding': { value: '{size.m}' },
-            height: { value: '{size.3xl}' },
-            'border-width': { value: '2px' }
+            'horizontal-padding': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.m}' },
+            height: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.3xl}' },
+            'border-width': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '2px' }
         },
         font: {
             default: {
-                "font-size": { value: '{typography.text-big.font-size}' },
-                "line-height": { value: '{typography.text-big.line-height}' },
-                "letter-spacing": { value: '{typography.text-big.letter-spacing}' },
-                "font-weight": { value: '{typography.text-big.font-weight}' },
-                "font-family": { value: '{typography.text-big.font-family}' },
-                "text-transform": { value: '{typography.text-big.text-transform}' },
-                "font-feature-settings": { value: '{typography.text-big.font-feature-settings}' }
+                "font-size": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-big.font-size}' },
+                "line-height": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-big.line-height}' },
+                "letter-spacing": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-big.letter-spacing}' },
+                "font-weight": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-big.font-weight}' },
+                "font-family": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-big.font-family}' },
+                "text-transform": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-big.text-transform}' },
+                "font-feature-settings": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-big.font-feature-settings}' }
             }
         }
     }

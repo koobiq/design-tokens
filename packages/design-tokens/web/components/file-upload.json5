@@ -4,57 +4,57 @@
             single: {
                 container: {
                     border: {
-                        radius: { value: '{size.s}' },
-                        width: { value: '1px' }
+                        radius: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.s}' },
+                        width: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '1px' }
                     },
                     'content-gap': {
-                        horizontal: { value: '{size.s}' }
+                        horizontal: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.s}' }
                     },
                     padding: {
-                        vertical: { value: '{size.m}' },
-                        horizontal: { value: '{size.m}' }
+                        vertical: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.m}' },
+                        horizontal: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.m}' }
                     }
                 },
                 'text-block': {
                     padding: {
-                        vertical: { value: '{size.3xs}' }
+                        vertical: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.3xs}' }
                     },
                     'content-gap': {
-                        horizontal: { value: '{size.xxs}' }
+                        horizontal: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.xxs}' }
                     }
                 }
             },
             multiple: {
                 big: {
                     container: {
-                        'min-height': { value: '160px' },
-                        'min-width': { value: '320px' },
+                        'min-height': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '160px' },
+                        'min-width': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '320px' },
                         border: {
-                            radius: { value: '{size.s}' },
-                            width: { value: '1px' }
+                            radius: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.s}' },
+                            width: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '1px' }
                         },
                         'content-gap': {
-                            horizontal: { value: '{size.m}' }
+                            horizontal: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.m}' }
                         },
                         padding: {
-                            vertical: { value: '{size.xxl}' },
-                            horizontal: { value: '{size.xxl}' }
+                            vertical: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.xxl}' },
+                            horizontal: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.xxl}' }
                         }
                     },
                     'text-block': {
                         'content-gap': {
-                            vertical: { value: '0px' },
-                            horizontal: { value: '{size.xxs}' }
+                            vertical: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '0px' },
+                            horizontal: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.xxs}' }
                         }
                     },
                     grid: {
                         cell: {
                             padding: {
-                                horizontal: { value: '{size.s}' },
-                                vertical: { value: '{size.s}' }
+                                horizontal: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.s}' },
+                                vertical: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.s}' }
                             },
                             'content-gap': {
-                                horizontal: { value: '{size.xxs}' }
+                                horizontal: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.xxs}' }
                             }
                         }
                     }
@@ -64,42 +64,42 @@
         font: {
             single: {
                 'text-block': {
-                    'font-size': { value: '{typography.text-normal.font-size}' },
-                    'line-height': { value: '{typography.text-normal.line-height}' },
-                    'letter-spacing': { value: '{typography.text-normal.letter-spacing}' },
-                    'font-weight': { value: '{typography.text-normal.font-weight}' },
-                    'font-family': { value: '{typography.text-normal.font-family}' },
-                    'text-transform': { value: '{typography.text-normal.text-transform}' },
-                    'font-feature-settings': { value: '{typography.text-normal.font-feature-settings}' }
+                    'font-size': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.font-size}' },
+                    'line-height': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.line-height}' },
+                    'letter-spacing': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.letter-spacing}' },
+                    'font-weight': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.font-weight}' },
+                    'font-family': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.font-family}' },
+                    'text-transform': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.text-transform}' },
+                    'font-feature-settings': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.font-feature-settings}' }
                 }
             },
             multiple: {
                 title: {
-                    'font-size': { value: '{typography.subheading.font-size}' },
-                    'line-height': { value: '{typography.subheading.line-height}' },
-                    'letter-spacing': { value: '{typography.subheading.letter-spacing}' },
-                    'font-weight': { value: '{typography.subheading.font-weight}' },
-                    'font-family': { value: '{typography.subheading.font-family}' },
-                    'text-transform': { value: '{typography.subheading.text-transform}' },
-                    'font-feature-settings': { value: '{typography.subheading.font-feature-settings}' }
+                    'font-size': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.subheading.font-size}' },
+                    'line-height': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.subheading.line-height}' },
+                    'letter-spacing': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.subheading.letter-spacing}' },
+                    'font-weight': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.subheading.font-weight}' },
+                    'font-family': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.subheading.font-family}' },
+                    'text-transform': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.subheading.text-transform}' },
+                    'font-feature-settings': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.subheading.font-feature-settings}' }
                 },
                 'text-block': {
-                    'font-size': { value: '{typography.text-normal.font-size}' },
-                    'line-height': { value: '{typography.text-normal.line-height}' },
-                    'letter-spacing': { value: '{typography.text-normal.letter-spacing}' },
-                    'font-weight': { value: '{typography.text-normal.font-weight}' },
-                    'font-family': { value: '{typography.text-normal.font-family}' },
-                    'text-transform': { value: '{typography.text-normal.text-transform}' },
-                    'font-feature-settings': { value: '{typography.text-normal.font-feature-settings}' }
+                    'font-size': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.font-size}' },
+                    'line-height': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.line-height}' },
+                    'letter-spacing': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.letter-spacing}' },
+                    'font-weight': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.font-weight}' },
+                    'font-family': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.font-family}' },
+                    'text-transform': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.text-transform}' },
+                    'font-feature-settings': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.font-feature-settings}' }
                 },
                 grid: {
-                    'font-size': { value: '{typography.text-normal.font-size}' },
-                    'line-height': { value: '{typography.text-normal.line-height}' },
-                    'letter-spacing': { value: '{typography.text-normal.letter-spacing}' },
-                    'font-weight': { value: '{typography.text-normal.font-weight}' },
-                    'font-family': { value: '{typography.text-normal.font-family}' },
-                    'text-transform': { value: '{typography.text-normal.text-transform}' },
-                    'font-feature-settings': { value: '{typography.text-normal.font-feature-settings}' }
+                    'font-size': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.font-size}' },
+                    'line-height': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.line-height}' },
+                    'letter-spacing': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.letter-spacing}' },
+                    'font-weight': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.font-weight}' },
+                    'font-family': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.font-family}' },
+                    'text-transform': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.text-transform}' },
+                    'font-feature-settings': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.font-feature-settings}' }
                 }
             }
         },
@@ -107,68 +107,68 @@
             single: {
                 default: {
                     container: {
-                        border: { value: '{light.line.contrast-fade}' },
-                        background: { value: '{light.background.bg}' }
+                        border: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.line.contrast-fade}' },
+                        background: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.background.bg}' }
                     },
                     'upload-icon': {
-                        color: { value: '{light.icon.contrast-fade}' }
+                        color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.icon.contrast-fade}' }
                     },
                     'left-icon': {
-                        color: { value: '{light.icon.contrast-fade}' }
+                        color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.icon.contrast-fade}' }
                     },
                     'text-block': {
-                        color: { value: '{light.foreground.contrast}' }
+                        color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.contrast}' }
                     },
                     'icon-button': {
-                        color: { value: '{light.icon.contrast}' }
+                        color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.icon.contrast}' }
                     }
                 },
                 states: {
                     'on-drag': {
                         container: {
-                            border: { value: '{light.line.theme-fade}' },
-                            background: { value: '{light.background.theme-fade}' }
+                            border: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.line.theme-fade}' },
+                            background: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.background.theme-fade}' }
                         },
                         'upload-icon': {
-                            color: { value: '{light.icon.contrast-fade}' }
+                            color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.icon.contrast-fade}' }
                         },
                         'left-icon': {
-                            color: { value: '{light.icon.contrast-fade}' }
+                            color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.icon.contrast-fade}' }
                         },
                         'text-block': {
-                            color: { value: '{light.foreground.contrast}' }
+                            color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.contrast}' }
                         }
                     },
                     error: {
                         container: {
-                            border: { value: '{light.line.error}' },
-                            background: { value: '{light.background.error-less}' }
+                            border: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.line.error}' },
+                            background: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.background.error-less}' }
                         },
                         'left-icon': {
-                            color: { value: '{light.icon.error}' }
+                            color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.icon.error}' }
                         },
                         'text-block': {
-                            color: { value: '{light.foreground.error}' }
+                            color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.error}' }
                         }
                     },
                     disabled: {
                         container: {
-                            border: { value: '{light.states.line.disabled}' },
-                            background: { value: '{light.states.background.disabled}' }
+                            border: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.states.line.disabled}' },
+                            background: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.states.background.disabled}' }
                         },
                         'upload-icon': {
-                            color: { value: '{light.states.icon.disabled}' }
+                            color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.states.icon.disabled}' }
                         },
                         'left-icon': {
-                            color: { value: '{light.states.icon.disabled}' }
+                            color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.states.icon.disabled}' }
                         },
                         'text-block': {
-                            color: { value: '{light.states.foreground.disabled}' }
+                            color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.states.foreground.disabled}' }
                         }
                     },
                     focused: {
                         'focus-outline': {
-                            color: { value: '{light.states.line.focus-theme}' }
+                            color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.states.line.focus-theme}' }
                         }
                     }
                 }
@@ -176,84 +176,84 @@
             multiple: {
                 default: {
                     container: {
-                        border: { value: '{light.line.contrast-fade}' },
-                        background: { value: '{light.background.bg}' }
+                        border: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.line.contrast-fade}' },
+                        background: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.background.bg}' }
                     },
                     'upload-icon': {
-                        color: { value: '{light.icon.contrast-fade}' }
+                        color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.icon.contrast-fade}' }
                     },
                     'left-icon': {
-                        color: { value: '{light.icon.contrast-fade}' }
+                        color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.icon.contrast-fade}' }
                     },
                     'text-block': {
-                        color: { value: '{light.foreground.contrast}' }
+                        color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.contrast}' }
                     },
                     'icon-button': {
-                        color: { value: '{light.icon.contrast}' }
+                        color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.icon.contrast}' }
                     },
                     grid: {
                         divider: {
-                            color: { value: '{light.line.contrast-less}' }
+                            color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.line.contrast-less}' }
                         }
                     }
                 },
                 states: {
                     'on-drag': {
                         container: {
-                            border: { value: '{light.line.theme-fade}' },
-                            background: { value: '{light.background.theme-fade}' }
+                            border: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.line.theme-fade}' },
+                            background: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.background.theme-fade}' }
                         },
                         'upload-icon': {
-                            color: { value: '{light.icon.contrast-fade}' }
+                            color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.icon.contrast-fade}' }
                         },
                         'left-icon': {
-                            color: { value: '{light.icon.contrast-fade}' }
+                            color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.icon.contrast-fade}' }
                         },
                         'icon-button': {
-                            color: { value: '{light.icon.contrast}' }
+                            color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.icon.contrast}' }
                         },
                         'text-block': {
-                            color: { value: '{light.foreground.contrast}' }
+                            color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.contrast}' }
                         },
                         grid: {
                             divider: {
-                                color: { value: '{light.line.contrast-less}' }
+                                color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.line.contrast-less}' }
                             }
                         }
                     },
                     error: {
                         grid: {
                             cell: {
-                                background: { value: '{light.background.error-less}' }
+                                background: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.background.error-less}' }
                             }
                         },
                         'left-icon': {
-                            color: { value: '{light.icon.error}' }
+                            color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.icon.error}' }
                         },
                         'text-block': {
-                            color: { value: '{light.foreground.error}' }
+                            color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.error}' }
                         },
                         'icon-button': {
-                            color: { value: '{light.icon.error}' }
+                            color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.icon.error}' }
                         }
                     },
                     disabled: {
                         container: {
-                            border: { value: '{light.states.line.disabled}' },
-                            background: { value: '{light.states.background.disabled}' }
+                            border: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.states.line.disabled}' },
+                            background: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.states.background.disabled}' }
                         },
                         'upload-icon': {
-                            color: { value: '{light.states.icon.disabled}' }
+                            color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.states.icon.disabled}' }
                         },
                         'left-icon': {
-                            color: { value: '{light.states.icon.disabled}' }
+                            color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.states.icon.disabled}' }
                         },
                         'text-block': {
-                            color: { value: '{light.states.foreground.disabled}' }
+                            color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.states.foreground.disabled}' }
                         },
                         grid: {
                             divider: {
-                                color: { value: '{light.states.line.disabled}' }
+                                color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.states.line.disabled}' }
                             }
                         }
                     }
@@ -264,68 +264,68 @@
             single: {
                 default: {
                     container: {
-                        border: { value: '{dark.line.contrast-fade}' },
-                        background: { value: '{dark.background.bg}' }
+                        border: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.line.contrast-fade}' },
+                        background: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.background.bg}' }
                     },
                     'upload-icon': {
-                        color: { value: '{dark.icon.contrast-fade}' }
+                        color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.icon.contrast-fade}' }
                     },
                     'left-icon': {
-                        color: { value: '{dark.icon.contrast-fade}' }
+                        color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.icon.contrast-fade}' }
                     },
                     'text-block': {
-                        color: { value: '{dark.foreground.contrast}' }
+                        color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.contrast}' }
                     },
                     'icon-button': {
-                        color: { value: '{dark.icon.contrast}' }
+                        color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.icon.contrast}' }
                     }
                 },
                 states: {
                     'on-drag': {
                         container: {
-                            border: { value: '{dark.line.theme-fade}' },
-                            background: { value: '{dark.background.theme-fade}' }
+                            border: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.line.theme-fade}' },
+                            background: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.background.theme-fade}' }
                         },
                         'upload-icon': {
-                            color: { value: '{dark.icon.contrast-fade}' }
+                            color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.icon.contrast-fade}' }
                         },
                         'left-icon': {
-                            color: { value: '{dark.icon.contrast-fade}' }
+                            color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.icon.contrast-fade}' }
                         },
                         'text-block': {
-                            color: { value: '{dark.foreground.contrast}' }
+                            color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.contrast}' }
                         }
                     },
                     error: {
                         container: {
-                            border: { value: '{dark.line.error}' },
-                            background: { value: '{dark.background.error-less}' }
+                            border: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.line.error}' },
+                            background: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.background.error-less}' }
                         },
                         'left-icon': {
-                            color: { value: '{dark.icon.error}' }
+                            color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.icon.error}' }
                         },
                         'text-block': {
-                            color: { value: '{dark.foreground.error}' }
+                            color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.error}' }
                         }
                     },
                     disabled: {
                         container: {
-                            border: { value: '{dark.states.line.disabled}' },
-                            background: { value: '{dark.states.background.disabled}' }
+                            border: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.states.line.disabled}' },
+                            background: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.states.background.disabled}' }
                         },
                         'upload-icon': {
-                            color: { value: '{dark.states.icon.disabled}' }
+                            color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.states.icon.disabled}' }
                         },
                         'left-icon': {
-                            color: { value: '{dark.states.icon.disabled}' }
+                            color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.states.icon.disabled}' }
                         },
                         'text-block': {
-                            color: { value: '{dark.states.foreground.disabled}' }
+                            color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.states.foreground.disabled}' }
                         }
                     },
                     focused: {
                         'focus-outline': {
-                            color: { value: '{dark.states.line.focus-theme}' }
+                            color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.states.line.focus-theme}' }
                         }
                     }
                 }
@@ -333,84 +333,84 @@
             multiple: {
                 default: {
                     container: {
-                        border: { value: '{dark.line.contrast-fade}' },
-                        background: { value: '{dark.background.bg}' }
+                        border: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.line.contrast-fade}' },
+                        background: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.background.bg}' }
                     },
                     'upload-icon': {
-                        color: { value: '{dark.icon.contrast-fade}' }
+                        color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.icon.contrast-fade}' }
                     },
                     'left-icon': {
-                        color: { value: '{dark.icon.contrast-fade}' }
+                        color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.icon.contrast-fade}' }
                     },
                     'text-block': {
-                        color: { value: '{dark.foreground.contrast}' }
+                        color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.contrast}' }
                     },
                     'icon-button': {
-                        color: { value: '{dark.icon.contrast}' }
+                        color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.icon.contrast}' }
                     },
                     grid: {
                         divider: {
-                            color: { value: '{dark.line.contrast-less}' }
+                            color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.line.contrast-less}' }
                         }
                     }
                 },
                 states: {
                     'on-drag': {
                         container: {
-                            border: { value: '{dark.line.theme-fade}' },
-                            background: { value: '{dark.background.theme-fade}' }
+                            border: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.line.theme-fade}' },
+                            background: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.background.theme-fade}' }
                         },
                         'upload-icon': {
-                            color: { value: '{dark.icon.contrast-fade}' }
+                            color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.icon.contrast-fade}' }
                         },
                         'left-icon': {
-                            color: { value: '{dark.icon.contrast-fade}' }
+                            color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.icon.contrast-fade}' }
                         },
                         'icon-button': {
-                            color: { value: '{dark.icon.contrast}' }
+                            color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.icon.contrast}' }
                         },
                         'text-block': {
-                            color: { value: '{dark.foreground.contrast}' }
+                            color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.contrast}' }
                         },
                         grid: {
                             divider: {
-                                color: { value: '{dark.line.theme-fade}' }
+                                color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.line.theme-fade}' }
                             }
                         }
                     },
                     error: {
                         grid: {
                             cell: {
-                                background: { value: '{dark.background.error-less}' }
+                                background: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.background.error-less}' }
                             }
                         },
                         'left-icon': {
-                            color: { value: '{dark.icon.error}' }
+                            color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.icon.error}' }
                         },
                         'text-block': {
-                            color: { value: '{dark.foreground.error}' }
+                            color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.error}' }
                         },
                         'icon-button': {
-                            color: { value: '{dark.icon.error}' }
+                            color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.icon.error}' }
                         }
                     },
                     disabled: {
                         container: {
-                            border: { value: '{dark.states.line.disabled}' },
-                            background: { value: '{dark.states.background.disabled}' }
+                            border: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.states.line.disabled}' },
+                            background: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.states.background.disabled}' }
                         },
                         'upload-icon': {
-                            color: { value: '{dark.states.icon.disabled}' }
+                            color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.states.icon.disabled}' }
                         },
                         'left-icon': {
-                            color: { value: '{dark.states.icon.disabled}' }
+                            color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.states.icon.disabled}' }
                         },
                         'text-block': {
-                            color: { value: '{dark.states.foreground.disabled}' }
+                            color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.states.foreground.disabled}' }
                         },
                         grid: {
                             divider: {
-                                color: { value: '{dark.states.line.disabled}' }
+                                color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.states.line.disabled}' }
                             }
                         }
                     }

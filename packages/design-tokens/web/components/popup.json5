@@ -1,16 +1,16 @@
 {
     popup: {
         light: {
-            shadow: { value: '{shadow.light.popup}' },
-            border: { value: 'transparent' },
-            background: { value: '{light.background.card}' },
-            'footer-background': { value: '{light.background.card}'}
+            shadow: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{shadow.light.popup}' },
+            border: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: 'transparent' },
+            background: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.background.card}' },
+            'footer-background': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.background.card}'}
         },
         dark: {
-            shadow: { value: '{shadow.dark.popup}' },
-            border: { value: 'transparent' },
-            background: { value: '{dark.background.card}' },
-            'footer-background': { value: '{dark.background.card}'}
+            shadow: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{shadow.dark.popup}' },
+            border: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: 'transparent' },
+            background: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.background.card}' },
+            'footer-background': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.background.card}'}
         }
     }
 }

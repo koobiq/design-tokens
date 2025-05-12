@@ -2,412 +2,412 @@
     markdown: {
         h1: {
             light: {
-                color: { value: '{light.foreground.contrast}' }
+                color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.contrast}' }
             },
             dark: {
-                color: { value: '{dark.foreground.contrast}' }
+                color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.contrast}' }
             },
             size: {
-                'max-width': { value: '{markdown.size.max-width}'},
-                'margin-top': { value: '0' },
-                'margin-bottom': { value: '{size.l}' },
+                'max-width': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{markdown.size.max-width}'},
+                'margin-top': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '0' },
+                'margin-bottom': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.l}' },
             },
             font: {
                 default: {
-                    "font-size": { value: '{md-typography.md-h1.font-size}' },
-                    "line-height": { value: '{md-typography.md-h1.line-height}' },
-                    "letter-spacing": { value: '{md-typography.md-h1.letter-spacing}' },
-                    "font-weight": { value: '{md-typography.md-h1.font-weight}' },
-                    "font-family": { value: '{md-typography.md-h1.font-family}' },
-                    "text-transform": { value: '{md-typography.md-h1.text-transform}' },
-                    "font-feature-settings": { value: '{md-typography.md-h1.font-feature-settings}' }
+                    "font-size": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-h1.font-size}' },
+                    "line-height": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-h1.line-height}' },
+                    "letter-spacing": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-h1.letter-spacing}' },
+                    "font-weight": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-h1.font-weight}' },
+                    "font-family": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-h1.font-family}' },
+                    "text-transform": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-h1.text-transform}' },
+                    "font-feature-settings": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-h1.font-feature-settings}' }
                 }
             }
         },
         h2: {
             light: {
-                color: { value: '{light.foreground.contrast}' }
+                color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.contrast}' }
             },
             dark: {
-                color: { value: '{dark.foreground.contrast}' }
+                color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.contrast}' }
             },
             size: {
-                'max-width': { value: '{markdown.size.max-width}'},
-                'margin-top': { value: '{size.xxl}' },
-                'margin-bottom': { value: '{size.m}' },
+                'max-width': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{markdown.size.max-width}'},
+                'margin-top': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.xxl}' },
+                'margin-bottom': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.m}' },
             },
             font: {
                 default: {
-                    "font-size": { value: '{md-typography.md-h2.font-size}' },
-                    "line-height": { value: '{md-typography.md-h2.line-height}' },
-                    "letter-spacing": { value: '{md-typography.md-h2.letter-spacing}' },
-                    "font-weight": { value: '{md-typography.md-h2.font-weight}' },
-                    "font-family": { value: '{md-typography.md-h2.font-family}' },
-                    "text-transform": { value: '{md-typography.md-h2.text-transform}' },
-                    "font-feature-settings": { value: '{md-typography.md-h2.font-feature-settings}' },
+                    "font-size": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-h2.font-size}' },
+                    "line-height": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-h2.line-height}' },
+                    "letter-spacing": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-h2.letter-spacing}' },
+                    "font-weight": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-h2.font-weight}' },
+                    "font-family": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-h2.font-family}' },
+                    "text-transform": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-h2.text-transform}' },
+                    "font-feature-settings": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-h2.font-feature-settings}' },
                 }
             }
         },
         h3: {
             light: {
-                color: { value: '{light.foreground.contrast}' }
+                color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.contrast}' }
             },
             dark: {
-                color: { value: '{dark.foreground.contrast}' }
+                color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.contrast}' }
             },
             size: {
-                'max-width': { value: '{markdown.size.max-width}'},
-                'margin-top': { value: '{size.xxl}' },
-                'margin-bottom': { value: '{size.m}' },
+                'max-width': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{markdown.size.max-width}'},
+                'margin-top': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.xxl}' },
+                'margin-bottom': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.m}' },
             },
             font: {
                 default: {
-                    "font-size": { value: '{md-typography.md-h3.font-size}' },
-                    "line-height": { value: '{md-typography.md-h3.line-height}' },
-                    "letter-spacing": { value: '{md-typography.md-h3.letter-spacing}' },
-                    "font-weight": { value: '{md-typography.md-h3.font-weight}' },
-                    "font-family": { value: '{md-typography.md-h3.font-family}' },
-                    "text-transform": { value: '{md-typography.md-h3.text-transform}' },
-                    "font-feature-settings": { value: '{md-typography.md-h3.font-feature-settings}' }
+                    "font-size": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-h3.font-size}' },
+                    "line-height": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-h3.line-height}' },
+                    "letter-spacing": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-h3.letter-spacing}' },
+                    "font-weight": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-h3.font-weight}' },
+                    "font-family": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-h3.font-family}' },
+                    "text-transform": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-h3.text-transform}' },
+                    "font-feature-settings": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-h3.font-feature-settings}' }
                 }
             }
         },
         h4: {
             light: {
-                color: { value: '{light.foreground.contrast}' }
+                color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.contrast}' }
             },
             dark: {
-                color: { value: '{dark.foreground.contrast}' }
+                color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.contrast}' }
             },
             size: {
-                'max-width': { value: '{markdown.size.max-width}'},
-                'margin-top': { value: '{size.xxl}' },
-                'margin-bottom': { value: '{size.m}' },
+                'max-width': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{markdown.size.max-width}'},
+                'margin-top': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.xxl}' },
+                'margin-bottom': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.m}' },
             },
             font: {
                 default: {
-                    "font-size": { value: '{md-typography.md-h4.font-size}' },
-                    "line-height": { value: '{md-typography.md-h4.line-height}' },
-                    "letter-spacing": { value: '{md-typography.md-h4.letter-spacing}' },
-                    "font-weight": { value: '{md-typography.md-h4.font-weight}' },
-                    "font-family": { value: '{md-typography.md-h4.font-family}' },
-                    "text-transform": { value: '{md-typography.md-h4.text-transform}' },
-                    "font-feature-settings": { value: '{md-typography.md-h4.font-feature-settings}' },
+                    "font-size": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-h4.font-size}' },
+                    "line-height": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-h4.line-height}' },
+                    "letter-spacing": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-h4.letter-spacing}' },
+                    "font-weight": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-h4.font-weight}' },
+                    "font-family": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-h4.font-family}' },
+                    "text-transform": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-h4.text-transform}' },
+                    "font-feature-settings": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-h4.font-feature-settings}' },
                 }
             }
         },
         h5: {
             light: {
-                color: { value: '{light.foreground.contrast}' }
+                color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.contrast}' }
             },
             dark: {
-                color: { value: '{dark.foreground.contrast}' }
+                color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.contrast}' }
             },
             size: {
-                'max-width': { value: '{markdown.size.max-width}'},
-                'margin-top': { value: '{size.xxl}' },
-                'margin-bottom': { value: '{size.s}' },
+                'max-width': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{markdown.size.max-width}'},
+                'margin-top': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.xxl}' },
+                'margin-bottom': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.s}' },
             },
             font: {
                 default: {
-                    "font-size": { value: '{md-typography.md-h5.font-size}' },
-                    "line-height": { value: '{md-typography.md-h5.line-height}' },
-                    "letter-spacing": { value: '{md-typography.md-h5.letter-spacing}' },
-                    "font-weight": { value: '{md-typography.md-h5.font-weight}' },
-                    "font-family": { value: '{md-typography.md-h5.font-family}' },
-                    "text-transform": { value: '{md-typography.md-h5.text-transform}' },
-                    "font-feature-settings": { value: '{md-typography.md-h5.font-feature-settings}' }
+                    "font-size": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-h5.font-size}' },
+                    "line-height": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-h5.line-height}' },
+                    "letter-spacing": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-h5.letter-spacing}' },
+                    "font-weight": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-h5.font-weight}' },
+                    "font-family": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-h5.font-family}' },
+                    "text-transform": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-h5.text-transform}' },
+                    "font-feature-settings": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-h5.font-feature-settings}' }
                 }
             }
         },
         h6: {
             light: {
-                color: { value: '{light.foreground.contrast}' }
+                color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.contrast}' }
             },
             dark: {
-                color: { value: '{dark.foreground.contrast}' }
+                color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.contrast}' }
             },
             size: {
-                'max-width': { value: '{markdown.size.max-width}'},
-                'margin-top': { value: '{size.xxl}' },
-                'margin-bottom': { value: '{size.s}' },
+                'max-width': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{markdown.size.max-width}'},
+                'margin-top': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.xxl}' },
+                'margin-bottom': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.s}' },
             },
             font: {
                 default: {
-                    "font-size": { value: '{md-typography.md-h6.font-size}' },
-                    "line-height": { value: '{md-typography.md-h6.line-height}' },
-                    "letter-spacing": { value: '{md-typography.md-h6.letter-spacing}' },
-                    "font-weight": { value: '{md-typography.md-h6.font-weight}' },
-                    "font-family": { value: '{md-typography.md-h6.font-family}' },
-                    "text-transform": { value: '{md-typography.md-h6.text-transform}' },
-                    "font-feature-settings": { value: '{md-typography.md-h6.font-feature-settings}' }
+                    "font-size": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-h6.font-size}' },
+                    "line-height": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-h6.line-height}' },
+                    "letter-spacing": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-h6.letter-spacing}' },
+                    "font-weight": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-h6.font-weight}' },
+                    "font-family": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-h6.font-family}' },
+                    "text-transform": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-h6.text-transform}' },
+                    "font-feature-settings": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-h6.font-feature-settings}' }
                 }
             }
         },
         p: {
             light: {
-                color: { value: '{light.foreground.contrast}' }
+                color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.contrast}' }
             },
             dark: {
-                color: { value: '{dark.foreground.contrast}' }
+                color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.contrast}' }
             },
             size: {
-                'max-width': { value: '{markdown.size.max-width}'},
-                'margin-top': { value: '{size.m}' },
-                'margin-bottom': { value: '{size.m}' },
+                'max-width': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{markdown.size.max-width}'},
+                'margin-top': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.m}' },
+                'margin-bottom': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.m}' },
             },
             font: {
                 default: {
-                    "font-size": { value: '{md-typography.md-body.font-size}' },
-                    "line-height": { value: '{md-typography.md-body.line-height}' },
-                    "letter-spacing": { value: '{md-typography.md-body.letter-spacing}' },
-                    "font-weight": { value: '{md-typography.md-body.font-weight}' },
-                    "font-family": { value: '{md-typography.md-body.font-family}' },
-                    "text-transform": { value: '{md-typography.md-body.text-transform}' },
-                    "font-feature-settings": { value: '{md-typography.md-body.font-feature-settings}' }
+                    "font-size": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-body.font-size}' },
+                    "line-height": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-body.line-height}' },
+                    "letter-spacing": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-body.letter-spacing}' },
+                    "font-weight": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-body.font-weight}' },
+                    "font-family": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-body.font-family}' },
+                    "text-transform": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-body.text-transform}' },
+                    "font-feature-settings": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-body.font-feature-settings}' }
                 }
             }
         },
         list: {
             light: {
-                color: { value: '{light.foreground.contrast}' }
+                color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.contrast}' }
             },
             dark: {
-                color: { value: '{dark.foreground.contrast}' }
+                color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.contrast}' }
             },
             size: {
-                'max-width': { value: '{markdown.size.max-width}'},
-                'margin-top': { value: '{size.m}' },
-                'margin-bottom': { value: '{size.m}' },
-                'margin-top-after-paragraph': { value: '-{size.s}' },
-                'ol-number-padding-right': { value: '{size.xxs}' },
-                'ul-padding': { value: '0 0 0 {size.xxl}' },
-                'item-margin-bottom': { value: '{size.xxs}' }
+                'max-width': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{markdown.size.max-width}'},
+                'margin-top': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.m}' },
+                'margin-bottom': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.m}' },
+                'margin-top-after-paragraph': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '-{size.s}' },
+                'ol-number-padding-right': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.xxs}' },
+                'ul-padding': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '0 0 0 {size.xxl}' },
+                'item-margin-bottom': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.xxs}' }
             },
             font: {
                 default: {
-                    "font-size": { value: '{md-typography.md-body.font-size}' },
-                    "line-height": { value: '{md-typography.md-body.line-height}' },
-                    "letter-spacing": { value: '{md-typography.md-body.letter-spacing}' },
-                    "font-weight": { value: '{md-typography.md-body.font-weight}' },
-                    "font-family": { value: '{md-typography.md-body.font-family}' },
-                    "text-transform": { value: '{md-typography.md-body.text-transform}' },
-                    "font-feature-settings": { value: '{md-typography.md-body.font-feature-settings}' }
+                    "font-size": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-body.font-size}' },
+                    "line-height": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-body.line-height}' },
+                    "letter-spacing": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-body.letter-spacing}' },
+                    "font-weight": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-body.font-weight}' },
+                    "font-family": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-body.font-family}' },
+                    "text-transform": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-body.text-transform}' },
+                    "font-feature-settings": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-body.font-feature-settings}' }
                 }
             }
         },
         blockquote: {
             light: {
-                text: { value: '{light.foreground.contrast}' },
-                line: { value: '{light.line.contrast-less}' },
-                background: { value: '{light.background.contrast-fade}' },
-                border: { value: 'transparent' }
+                text: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.contrast}' },
+                line: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.line.contrast-less}' },
+                background: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.background.contrast-fade}' },
+                border: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: 'transparent' }
             },
             dark: {
-                text: { value: '{dark.foreground.contrast}' },
-                line: { value: '{dark.line.contrast-less}' },
-                background: { value: '{dark.background.contrast-fade}' },
-                border: { value: 'transparent' }
+                text: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.contrast}' },
+                line: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.line.contrast-less}' },
+                background: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.background.contrast-fade}' },
+                border: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: 'transparent' }
             },
             size: {
-                'max-width': { value: '{markdown.size.max-width}'},
-                'margin-top': { value: '{size.m}' },
-                'margin-bottom': { value: '{size.m}' },
-                'padding': { value: '{size.3xs} {size.m}' },
-                'line-width': { value: '{size.xxs}' },
-                'border-radius': { value: '0' },
-                'border-width': { value: '0' },
+                'max-width': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{markdown.size.max-width}'},
+                'margin-top': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.m}' },
+                'margin-bottom': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.m}' },
+                'padding': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.3xs} {size.m}' },
+                'line-width': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.xxs}' },
+                'border-radius': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '0' },
+                'border-width': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '0' },
             },
             font: {
                 default: {
-                    "font-size": { value: '{md-typography.md-body.font-size}' },
-                    "line-height": { value: '{md-typography.md-body.line-height}' },
-                    "letter-spacing": { value: '{md-typography.md-body.letter-spacing}' },
-                    "font-weight": { value: '{md-typography.md-body.font-weight}' },
-                    "font-family": { value: '{md-typography.md-body.font-family}' },
-                    "text-transform": { value: '{md-typography.md-body.text-transform}' },
-                    "font-feature-settings": { value: '{md-typography.md-body.font-feature-settings}' }
+                    "font-size": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-body.font-size}' },
+                    "line-height": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-body.line-height}' },
+                    "letter-spacing": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-body.letter-spacing}' },
+                    "font-weight": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-body.font-weight}' },
+                    "font-family": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-body.font-family}' },
+                    "text-transform": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-body.text-transform}' },
+                    "font-feature-settings": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-body.font-feature-settings}' }
                 }
             }
         },
         code: {
             light: {
-                text: { value: '{light.foreground.contrast}' },
-                background: { value: '{light.background.contrast-fade}' },
-                border: { value: '{light.line.contrast-less}' }
+                text: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.contrast}' },
+                background: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.background.contrast-fade}' },
+                border: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.line.contrast-less}' }
             },
             dark: {
-                text: { value: '{dark.foreground.contrast}' },
-                background: { value: '{dark.background.contrast-fade}' },
-                border: { value: '{dark.line.contrast-less}' }
+                text: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.contrast}' },
+                background: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.background.contrast-fade}' },
+                border: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.line.contrast-less}' }
             },
             size: {
-                'max-width': { value: '{markdown.size.max-width}'},
-                'multiline-margin-top': { value: '{size.m}' },
-                'multiline-margin-bottom': { value: '{size.xxl}' },
-                'inline-padding': { value: '0 {size.xxs}' },
-                'multiline-padding': { value: '{size.m} {size.l}' },
-                'border-radius': { value: '{size.border-radius}' },
-                'border-width': { value: '{size.border-width}' },
+                'max-width': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{markdown.size.max-width}'},
+                'multiline-margin-top': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.m}' },
+                'multiline-margin-bottom': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.xxl}' },
+                'inline-padding': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '0 {size.xxs}' },
+                'multiline-padding': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.m} {size.l}' },
+                'border-radius': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.border-radius}' },
+                'border-width': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.border-width}' },
             },
             font: {
                 default: {
-                    "font-size": { value: '{md-typography.md-body-mono.font-size}' },
-                    "line-height": { value: '{md-typography.md-body-mono.line-height}' },
-                    "letter-spacing": { value: '{md-typography.md-body-mono.letter-spacing}' },
-                    "font-weight": { value: '{md-typography.md-body-mono.font-weight}' },
-                    "font-family": { value: '{md-typography.md-body-mono.font-family}' },
-                    "text-transform": { value: '{md-typography.md-body-mono.text-transform}' },
-                    "font-feature-settings": { value: '{md-typography.md-body-mono.font-feature-settings}' },
+                    "font-size": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-body-mono.font-size}' },
+                    "line-height": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-body-mono.line-height}' },
+                    "letter-spacing": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-body-mono.letter-spacing}' },
+                    "font-weight": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-body-mono.font-weight}' },
+                    "font-family": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-body-mono.font-family}' },
+                    "text-transform": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-body-mono.text-transform}' },
+                    "font-feature-settings": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-body-mono.font-feature-settings}' },
                 }
             }
         },
         link: {
             light: {
-                text: { value: '{link.light.text}' },
-                'border-bottom': { value: '{link.light.border-bottom}' },
+                text: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{link.light.text}' },
+                'border-bottom': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{link.light.border-bottom}' },
 
                 'state-visited': {
-                    'text': { value: '{link.light.state-visited.text}' },
-                    'border-bottom': { value: '{link.light.state-visited.border-bottom}' }
+                    'text': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{link.light.state-visited.text}' },
+                    'border-bottom': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{link.light.state-visited.border-bottom}' }
                 },
                 'state-hover': {
-                    'text': { value: '{link.light.state-hover.text}' },
-                    'border-bottom': { value: '{link.light.state-hover.border-bottom}' }
+                    'text': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{link.light.state-hover.text}' },
+                    'border-bottom': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{link.light.state-hover.border-bottom}' }
                 },
 
-                'state-active': { value: '{link.light.state-active.text}' },
+                'state-active': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{link.light.state-active.text}' },
 
                 'state-focused': {
-                    outline: { value: '{link.light.state-focused.outline}' }
+                    outline: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{link.light.state-focused.outline}' }
                 }
             },
             dark: {
-                text: { value: '{link.dark.text}' },
-                'border-bottom': { value: '{link.dark.border-bottom}' },
+                text: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{link.dark.text}' },
+                'border-bottom': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{link.dark.border-bottom}' },
 
                 'state-visited': {
-                    'text': { value: '{link.dark.state-visited.text}' },
-                    'border-bottom': { value: '{link.dark.state-visited.border-bottom}' }
+                    'text': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{link.dark.state-visited.text}' },
+                    'border-bottom': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{link.dark.state-visited.border-bottom}' }
                 },
                 'state-hover': {
-                    'text': { value: '{link.dark.state-hover.text}' },
-                    'border-bottom': { value: '{link.dark.state-hover.border-bottom}' }
+                    'text': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{link.dark.state-hover.text}' },
+                    'border-bottom': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{link.dark.state-hover.border-bottom}' }
                 },
 
-                'state-active': { value: '{link.dark.state-active.text}' },
+                'state-active': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{link.dark.state-active.text}' },
 
                 'state-focused': {
-                    outline: { value: '{link.dark.state-focused.outline}' }
+                    outline: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{link.dark.state-focused.outline}' }
                 }
             },
             size: {
-                'icon-margin': { value: '{link.size.normal.content-padding}' },
+                'icon-margin': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{link.size.normal.content-padding}' },
                 'state-focused': {
-                    'outline-offset': { value: '{link.size.state-focused.outline-offset}' },
-                    'outline-width': { value: '{link.size.state-focused.outline-width}' }
+                    'outline-offset': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{link.size.state-focused.outline-offset}' },
+                    'outline-width': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{link.size.state-focused.outline-width}' }
                 }
             },
             font: {
                 default: {
-                    "font-size": { value: '{md-typography.md-body.font-size}' },
-                    "line-height": { value: '{md-typography.md-body.line-height}' },
-                    "letter-spacing": { value: '{md-typography.md-body.letter-spacing}' },
-                    "font-weight": { value: '{md-typography.md-body.font-weight}' },
-                    "font-family": { value: '{md-typography.md-body.font-family}' },
-                    "text-transform": { value: '{md-typography.md-body.text-transform}' },
-                    "font-feature-settings": { value: '{md-typography.md-body.font-feature-settings}' }
+                    "font-size": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-body.font-size}' },
+                    "line-height": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-body.line-height}' },
+                    "letter-spacing": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-body.letter-spacing}' },
+                    "font-weight": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-body.font-weight}' },
+                    "font-family": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-body.font-family}' },
+                    "text-transform": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-body.text-transform}' },
+                    "font-feature-settings": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-body.font-feature-settings}' }
                 }
             }
         },
         image: {
             light: {
-                'caption-text': { value: '{light.foreground.contrast-secondary}' }
+                'caption-text': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.contrast-secondary}' }
             },
             dark: {
-                'caption-text': { value: '{dark.foreground.contrast-secondary}' }
+                'caption-text': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.contrast-secondary}' }
             },
             size: {
-                'max-width': { value: '{markdown.size.max-width}'},
-                'margin-top': { value: '{size.m}' },
-                'margin-bottom': { value: '{size.m}' },
+                'max-width': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{markdown.size.max-width}'},
+                'margin-top': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.m}' },
+                'margin-bottom': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.m}' },
 
-                'caption-margin-top': { value: '-{size.s}' },
-                'caption-margin-bottom': { value: '{size.xxl}' },
+                'caption-margin-top': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '-{size.s}' },
+                'caption-margin-bottom': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.xxl}' },
             },
             font: {
                 'caption': {
-                    "font-size": { value: '{md-typography.md-caption.font-size}' },
-                    "line-height": { value: '{md-typography.md-caption.line-height}' },
-                    "letter-spacing": { value: '{md-typography.md-caption.letter-spacing}' },
-                    "font-weight": { value: '{md-typography.md-caption.font-weight}' },
-                    "font-family": { value: '{md-typography.md-caption.font-family}' },
-                    "text-transform": { value: '{md-typography.md-caption.text-transform}' },
-                    "font-feature-settings": { value: '{md-typography.md-caption.font-feature-settings}' }
+                    "font-size": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-caption.font-size}' },
+                    "line-height": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-caption.line-height}' },
+                    "letter-spacing": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-caption.letter-spacing}' },
+                    "font-weight": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-caption.font-weight}' },
+                    "font-family": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-caption.font-family}' },
+                    "text-transform": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-caption.text-transform}' },
+                    "font-feature-settings": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-caption.font-feature-settings}' }
                 }
             }
         },
         hr: {
             light: {
-                color: { value: '{light.line.contrast-less}' },
+                color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.line.contrast-less}' },
             },
             dark: {
-                color: { value: '{dark.line.contrast-less}' }
+                color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.line.contrast-less}' }
             },
             size: {
-                'width': { value: '1px'},
-                'margin-vertical': { value: '{size.xxl}' },
+                'width': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '1px'},
+                'margin-vertical': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.xxl}' },
             },
         },
         table: {
             light: {
-                header: { value: '{light.foreground.contrast-secondary}' },
-                body: { value: '{light.foreground.contrast}' },
-                border: { value: '{light.line.contrast-less}' }
+                header: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.contrast-secondary}' },
+                body: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.contrast}' },
+                border: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.line.contrast-less}' }
             },
             dark: {
-                header: { value: '{dark.foreground.contrast-secondary}' },
-                body: { value: '{dark.foreground.contrast}' },
-                border: { value: '{dark.line.contrast-less}' }
+                header: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.contrast-secondary}' },
+                body: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.contrast}' },
+                border: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.line.contrast-less}' }
             },
             size: {
-                'border-width': { value: '{size.border-width}'},
-                'padding': { value: '{size.s}' },
-                'margin-bottom': { value: '{size.m}' }
+                'border-width': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.border-width}'},
+                'padding': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.s}' },
+                'margin-bottom': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.m}' }
             },
             font: {
                 header: {
-                    "font-size": { value: '{md-typography.md-table-header.font-size}' },
-                    "line-height": { value: '{md-typography.md-table-header.line-height}' },
-                    "letter-spacing": { value: '{md-typography.md-table-header.letter-spacing}' },
-                    "font-weight": { value: '{md-typography.md-table-header.font-weight}' },
-                    "font-family": { value: '{md-typography.md-table-header.font-family}' },
-                    "text-transform": { value: '{md-typography.md-table-header.text-transform}' },
-                    "font-feature-settings": { value: '{md-typography.md-table-header.font-feature-settings}' }
+                    "font-size": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-table-header.font-size}' },
+                    "line-height": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-table-header.line-height}' },
+                    "letter-spacing": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-table-header.letter-spacing}' },
+                    "font-weight": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-table-header.font-weight}' },
+                    "font-family": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-table-header.font-family}' },
+                    "text-transform": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-table-header.text-transform}' },
+                    "font-feature-settings": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-table-header.font-feature-settings}' }
                 },
                 body: {
-                    "font-size": { value: '{md-typography.md-table-cell.font-size}' },
-                    "line-height": { value: '{md-typography.md-table-cell.line-height}' },
-                    "letter-spacing": { value: '{md-typography.md-table-cell.letter-spacing}' },
-                    "font-weight": { value: '{md-typography.md-table-cell.font-weight}' },
-                    "font-family": { value: '{md-typography.md-table-cell.font-family}' },
-                    "text-transform": { value: '{md-typography.md-table-cell.text-transform}' },
-                    "font-feature-settings": { value: '{md-typography.md-table-cell.font-feature-settings}' }
+                    "font-size": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-table-cell.font-size}' },
+                    "line-height": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-table-cell.line-height}' },
+                    "letter-spacing": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-table-cell.letter-spacing}' },
+                    "font-weight": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-table-cell.font-weight}' },
+                    "font-family": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-table-cell.font-family}' },
+                    "text-transform": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-table-cell.text-transform}' },
+                    "font-feature-settings": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-table-cell.font-feature-settings}' }
                 }
             }
         },
         size: {
-            'max-width': { value: '650px' }
+            'max-width': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '650px' }
         },
         font: {
             default: {
-                "font-size": { value: '{md-typography.md-body.font-size}' },
-                "line-height": { value: '{md-typography.md-body.line-height}' },
-                "letter-spacing": { value: '{md-typography.md-body.letter-spacing}' },
-                "font-weight": { value: '{md-typography.md-body.font-weight}' },
-                "font-family": { value: '{md-typography.md-body.font-family}' },
-                "text-transform": { value: '{md-typography.md-body.text-transform}' },
-                "font-feature-settings": { value: '{md-typography.md-body.font-feature-settings}' }
+                "font-size": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-body.font-size}' },
+                "line-height": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-body.line-height}' },
+                "letter-spacing": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-body.letter-spacing}' },
+                "font-weight": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-body.font-weight}' },
+                "font-family": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-body.font-family}' },
+                "text-transform": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-body.text-transform}' },
+                "font-feature-settings": { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{md-typography.md-body.font-feature-settings}' }
             }
         }
     }
