@@ -18,16 +18,19 @@
                             // - Accordion Item with trigger AFTER Title
                             // - Accordion Item with SEPARATE trigger
                             padding: {
+
+                                deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value',
                                 //         top      right    bottom    left
-                                deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.xs} {size.s} {size.xs} {size.m}'
+                                value: '{size.xs} {size.s} {size.xs} {size.m}'
                             }
                         }
                     }
                 },
                 content: {
                     padding: {
+                        deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value',
                         //      top   right   bottom    left
-                        deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '0px {size.m} {size.s} {size.m}'
+                        value: '0px {size.m} {size.s} {size.m}'
                     }
                 }
             }
