@@ -5,8 +5,7 @@ module.exports = (StyleDictionary) => {
     StyleDictionary.registerFormat({
         name: 'kbq-css/variables',
         formatter: function ({ dictionary, options = {}, file }) {
-            const selector = options.selector ? options.selector : `:root`;
-            const { outputReferences } = options;
+            const { outputReferences, selector = ':root' } = options;
 
             // apply custom transformations for tokens
             dictionary.allProperties = dictionary.allTokens = dictionary.allTokens.flatMap((token) => {

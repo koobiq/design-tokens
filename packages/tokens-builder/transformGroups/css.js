@@ -9,7 +9,8 @@ module.exports = (StyleDictionary) => {
             'kbq-attribute/dark',
             'name/cti/kebab',
             'color/css',
-            'kbq/prefix'
+            'kbq/prefix',
+            'kbq-attribute/comment'
         ]
     });
 };

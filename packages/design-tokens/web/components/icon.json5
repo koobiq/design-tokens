@@ -2,42 +2,42 @@
     icon: {
         light: {
             theme: {
-                color: { value: '{light.icon.theme}' }
+                color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{light.icon.theme}' }
             },
             contrast: {
-                color: { value: '{light.icon.contrast}' }
+                color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{light.icon.contrast}' }
             },
             'fade-contrast': {
-                color: { value: '{light.icon.contrast-fade}' }
+                color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{light.icon.contrast-fade}' }
             },
             error: {
-                color: { value: '{light.icon.error}' }
+                color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{light.icon.error}' }
             },
             success: {
-                color: { value: '{light.icon.success}' }
+                color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{light.icon.success}' }
             },
             warning: {
-                color: { value: '{light.icon.warning}' }
+                color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{light.icon.warning}' }
             }
         },
         dark: {
             theme: {
-                color: { value: '{dark.icon.theme}' }
+                color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{dark.icon.theme}' }
             },
             contrast: {
-                color: { value: '{dark.icon.contrast}' }
+                color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{dark.icon.contrast}' }
             },
             'fade-contrast': {
-                color: { value: '{dark.icon.contrast-fade}' }
+                color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{dark.icon.contrast-fade}' }
             },
             error: {
-                color: { value: '{dark.icon.error}' }
+                color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{dark.icon.error}' }
             },
             success: {
-                color: { value: '{dark.icon.success}' }
+                color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{dark.icon.success}' }
             },
             warning: {
-                color: { value: '{dark.icon.warning}' }
+                color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{dark.icon.warning}' }
             }
         }
     }

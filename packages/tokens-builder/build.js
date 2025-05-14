@@ -9,6 +9,7 @@ require('./transforms/attribute/prefix')(StyleDictionary);
 require('./transforms/attribute/font')(StyleDictionary);
 require('./transforms/attribute/theme')(StyleDictionary);
 require('./transforms/attribute/scss-value')(StyleDictionary);
+require('./transforms/attribute/deprecation-comment')(StyleDictionary);
 
 // ==== Include custom filters ====
 require('./filters/palette')(StyleDictionary);

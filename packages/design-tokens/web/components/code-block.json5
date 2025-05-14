@@ -3,826 +3,826 @@
         size: {
             container: {
                 border: {
-                    width: { value: '1px' },
-                    radius: { value: '{size.m}' }
+                    width: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '1px' },
+                    radius: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{size.m}' }
                 }
             },
             // Разные паддинги для кейсов с хедером и без
             'with-header': {
                 content: {
                     padding: {
-                        top: { value: '{size.xxs}' },
-                        bottom: { value: '{size.l}' },
-                        horizontal: { value: '{size.xl}' }
+                        top: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{size.xxs}' },
+                        bottom: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{size.l}' },
+                        horizontal: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{size.xl}' }
                     },
                     // Расстояние между нумерацией строк и строками
                     'content-gap': {
-                        horizontal: { value: '{size.m}' }
+                        horizontal: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{size.m}' }
                     }
                 }
             },
             'no-header': {
                 content: {
                     padding: {
-                        vertical: { value: '14px' },
-                        horizontal: { value: '20px' }
+                        vertical: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '14px' },
+                        horizontal: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '20px' }
                     },
                     // Расстояние между нумерацией строк и строками
                     'content-gap': {
-                        horizontal: { value: '{size.m}' }
+                        horizontal: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{size.m}' }
                     }
                 }
             },
             //
             header: {
                 padding: {
-                    vertical: { value: '{size.s}' },
-                    left: { value: '{size.m}' },
-                    right: { value: '{size.s}' }
+                    vertical: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{size.s}' },
+                    left: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{size.m}' },
+                    right: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{size.s}' }
                 },
                 'content-gap': {
-                    horizontal: { value: '{size.l}' }
+                    horizontal: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{size.l}' }
                 }
             },
             actionbar: {
                 'content-gap': {
-                    horizontal: { value: '{size.3xs}' }
+                    horizontal: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{size.3xs}' }
                 },
                 padding: {
-                    vertical: { value: '{size.s}' },
-                    horizontal: { value: '{size.m}' }
+                    vertical: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{size.s}' },
+                    horizontal: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{size.m}' }
                 },
                 'fade-gradient': {
-                    width: { value: '{size.3xl}' }
+                    width: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{size.3xl}' }
                 }
             },
             collapse: {
                 expanded: {
                     padding: {
-                        top: { value: '0' },
-                        bottom: { value: '{size.l}' }
+                        top: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '0' },
+                        bottom: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{size.l}' }
                     }
                 },
                 collapsed: {
                     padding: {
-                        top: { value: '{size.3xl}' },
-                        bottom: { value: '{size.l}' }
+                        top: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{size.3xl}' },
+                        bottom: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{size.l}' }
                     }
                 }
             }
         },
         font: {
             default: {
-                'font-size': { value: '{typography.mono-codeblock.font-size}' },
-                'line-height': { value: '{typography.mono-codeblock.line-height}' },
-                'letter-spacing': { value: '{typography.mono-codeblock.letter-spacing}' },
-                'font-weight': { value: '{typography.mono-codeblock.font-weight}' },
-                'font-family': { value: '{typography.mono-codeblock.font-family}' },
-                'text-transform': { value: '{typography.mono-codeblock.text-transform}' },
-                'font-feature-settings': { value: '{typography.mono-codeblock.font-feature-settings}' }
+                'font-size': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.mono-codeblock.font-size}' },
+                'line-height': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.mono-codeblock.line-height}' },
+                'letter-spacing': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.mono-codeblock.letter-spacing}' },
+                'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.mono-codeblock.font-weight}' },
+                'font-family': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.mono-codeblock.font-family}' },
+                'text-transform': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.mono-codeblock.text-transform}' },
+                'font-feature-settings': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.mono-codeblock.font-feature-settings}' }
             },
             hljs: {
                 addition: {
-                    'font-style': { value: '' },
-                    'font-weight': { value: '' }
+                    'font-style': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 attr: {
-                    'font-style': { value: '' },
-                    'font-weight': { value: '' }
+                    'font-style': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 attribute: {
-                    'font-style': { value: '' },
-                    'font-weight': { value: '' }
+                    'font-style': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 built_in: {
-                    'font-style': { value: '' },
-                    'font-weight': { value: '' }
+                    'font-style': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 bullet: {
-                    'font-style': { value: '' },
-                    'font-weight': { value: '' }
+                    'font-style': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 'char.escape': {
-                    'font-style': { value: '' },
-                    'font-weight': { value: '' }
+                    'font-style': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 class: {
-                    'font-style': { value: '' },
-                    'font-weight': { value: '' }
+                    'font-style': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 code: {
-                    'font-style': { value: '' },
-                    'font-weight': { value: '' }
+                    'font-style': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 comment: {
-                    'font-style': { value: '' },
-                    'font-weight': { value: '' }
+                    'font-style': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 deletion: {
-                    'font-style': { value: '' },
-                    'font-weight': { value: '' }
+                    'font-style': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 doctag: {
-                    'font-style': { value: '' },
-                    'font-weight': { value: '' }
+                    'font-style': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 emphasis: {
-                    'font-style': { value: '' },
-                    'font-weight': { value: '' }
+                    'font-style': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 formula: {
-                    'font-style': { value: '' },
-                    'font-weight': { value: '' }
+                    'font-style': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 function: {
-                    'font-style': { value: '' },
-                    'font-weight': { value: '' }
+                    'font-style': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 keyword: {
-                    'font-style': { value: '' },
-                    'font-weight': { value: '' }
+                    'font-style': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 link: {
-                    'font-style': { value: '' },
-                    'font-weight': { value: '' }
+                    'font-style': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 literal: {
-                    'font-style': { value: '' },
-                    'font-weight': { value: '' }
+                    'font-style': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 meta: {
-                    'font-style': { value: '' },
-                    'font-weight': { value: '' }
+                    'font-style': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 'meta keyword': {
-                    'font-style': { value: '' },
-                    'font-weight': { value: '' }
+                    'font-style': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 'meta string': {
-                    'font-style': { value: '' },
-                    'font-weight': { value: '' }
+                    'font-style': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 'meta.prompt': {
-                    'font-style': { value: '' },
-                    'font-weight': { value: '' }
+                    'font-style': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 name: {
-                    'font-style': { value: '' },
-                    'font-weight': { value: '' }
+                    'font-style': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 number: {
-                    'font-style': { value: '' },
-                    'font-weight': { value: '' }
+                    'font-style': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 operator: {
-                    'font-style': { value: '' },
-                    'font-weight': { value: '' }
+                    'font-style': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 params: {
-                    'font-style': { value: '' },
-                    'font-weight': { value: '' }
+                    'font-style': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 property: {
-                    'font-style': { value: '' },
-                    'font-weight': { value: '' }
+                    'font-style': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 punctuation: {
-                    'font-style': { value: '' },
-                    'font-weight': { value: '' }
+                    'font-style': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 quote: {
-                    'font-style': { value: '' },
-                    'font-weight': { value: '' }
+                    'font-style': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 regexp: {
-                    'font-style': { value: '' },
-                    'font-weight': { value: '' }
+                    'font-style': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 section: {
-                    'font-style': { value: '' },
-                    'font-weight': { value: '' }
+                    'font-style': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 'selector-attr': {
-                    'font-style': { value: '' },
-                    'font-weight': { value: '' }
+                    'font-style': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 'selector-class': {
-                    'font-style': { value: '' },
-                    'font-weight': { value: '' }
+                    'font-style': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 'selector-id': {
-                    'font-style': { value: '' },
-                    'font-weight': { value: '' }
+                    'font-style': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 'selector-pseudo': {
-                    'font-style': { value: '' },
-                    'font-weight': { value: '' }
+                    'font-style': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 'selector-tag': {
-                    'font-style': { value: '' },
-                    'font-weight': { value: '' }
+                    'font-style': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 string: {
-                    'font-style': { value: '' },
-                    'font-weight': { value: '' }
+                    'font-style': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 strong: {
-                    'font-style': { value: '' },
-                    'font-weight': { value: '' }
+                    'font-style': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 subst: {
-                    'font-style': { value: '' },
-                    'font-weight': { value: '' }
+                    'font-style': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 symbol: {
-                    'font-style': { value: '' },
-                    'font-weight': { value: '' }
+                    'font-style': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 tag: {
-                    'font-style': { value: '' },
-                    'font-weight': { value: '' }
+                    'font-style': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 'template-tag': {
-                    'font-style': { value: '' },
-                    'font-weight': { value: '' }
+                    'font-style': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 'template-variable': {
-                    'font-style': { value: '' },
-                    'font-weight': { value: '' }
+                    'font-style': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 title: {
-                    'font-style': { value: '' },
-                    'font-weight': { value: '' }
+                    'font-style': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 'title.class': {
-                    'font-style': { value: 'normal' },
-                    'font-weight': { value: 500 }
+                    'font-style': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: 'normal' },
+                    'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: 500 }
                 },
                 'title.class.inherited': {
-                    'font-style': { value: '' },
-                    'font-weight': { value: '' }
+                    'font-style': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 'title.function': {
-                    'font-style': { value: '' },
-                    'font-weight': { value: '' }
+                    'font-style': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 'title.function.invoke': {
-                    'font-style': { value: '' },
-                    'font-weight': { value: '' }
+                    'font-style': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 type: {
-                    'font-style': { value: '' },
-                    'font-weight': { value: '' }
+                    'font-style': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 variable: {
-                    'font-style': { value: '' },
-                    'font-weight': { value: '' }
+                    'font-style': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 'variable.constant': {
-                    'font-style': { value: '' },
-                    'font-weight': { value: '' }
+                    'font-style': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 'variable.language': {
-                    'font-style': { value: '' },
-                    'font-weight': { value: '' }
+                    'font-style': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 }
             }
         },
         light: {
             filled: {
                 container: {
-                    background: { value: '{light.background.bg-secondary}' },
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{light.background.bg-secondary}' },
                     border: {
-                        color: { value: 'transparent' }
+                        color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: 'transparent' }
                     }
                 },
                 header: {
-                    background: { value: '{light.background.bg-secondary}' },
-                    'scroll-shadow': { value: '{shadow.light.overflow-normal-bottom}' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{light.background.bg-secondary}' },
+                    'scroll-shadow': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{shadow.light.overflow-normal-bottom}' }
                 },
                 actionbar: {
-                    'fade-gradient': { value: 'linear-gradient(90deg, transparent, {light.background.bg-secondary})' },
-                    background: { value: '{light.background.bg-secondary}' }
+                    'fade-gradient': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: 'linear-gradient(90deg, transparent, {light.background.bg-secondary})' },
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{light.background.bg-secondary}' }
                 },
                 collapse: {
                     expanded: {
-                        background: { value: 'transparent' }
+                        background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: 'transparent' }
                     },
                     collapsed: {
                         background: {
-                            value: 'linear-gradient(180deg, hsla(225, 15%, 95%, 0%) 0%, hsla(225, 15%, 95%, 100%) 100%)'
+                            deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: 'linear-gradient(180deg, hsla(225, 15%, 95%, 0%) 0%, hsla(225, 15%, 95%, 100%) 100%)'
                         }
                     },
                     'button-expand': {
-                        background: { value: '{light.background.bg-secondary}' }
+                        background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{light.background.bg-secondary}' }
                     }
                 }
             },
             outline: {
                 container: {
-                    background: { value: '{light.background.card}' },
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{light.background.card}' },
                     border: {
-                        color: { value: '{light.line.contrast-less}' }
+                        color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{light.line.contrast-less}' }
                     }
                 },
                 header: {
-                    background: { value: '{light.background.card}' },
-                    'scroll-shadow': { value: '{shadow.light.overflow-compact-bottom}' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{light.background.card}' },
+                    'scroll-shadow': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{shadow.light.overflow-compact-bottom}' }
                 },
                 actionbar: {
-                    'fade-gradient': { value: 'linear-gradient(90deg, transparent, {light.background.card})' },
-                    background: { value: '{light.background.card}' }
+                    'fade-gradient': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: 'linear-gradient(90deg, transparent, {light.background.card})' },
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{light.background.card}' }
                 },
                 collapse: {
                     expanded: {
-                        background: { value: 'transparent' }
+                        background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: 'transparent' }
                     },
                     collapsed: {
                         background: {
-                            value: 'linear-gradient(180deg, hsla(0, 0%, 100%, 0%) 0%, hsla(0, 0%, 100%, 100%) 100%)'
+                            deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: 'linear-gradient(180deg, hsla(0, 0%, 100%, 0%) 0%, hsla(0, 0%, 100%, 100%) 100%)'
                         }
                     },
                     'button-expand': {
-                        background: { value: '{light.background.card}' }
+                        background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{light.background.card}' }
                     }
                 }
             },
             hljs: {
                 addition: {
-                    background: { value: '{palette.green.95}' },
-                    color: { value: '{palette.green.25}' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{palette.green.95}' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{palette.green.25}' }
                 },
                 attr: {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 attribute: {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 built_in: {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 bullet: {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 'char.escape': {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 class: {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 code: {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 comment: {
-                    background: { value: '' },
-                    color: { value: '{palette.grey.60}' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{palette.grey.60}' }
                 },
                 deletion: {
-                    background: { value: '{palette.red.95}' },
-                    color: { value: '{palette.red.35}' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{palette.red.95}' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{palette.red.35}' }
                 },
                 doctag: {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 emphasis: {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 formula: {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 function: {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 keyword: {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 'line-numbers': {
-                    color: { value: '{light.foreground.contrast-secondary}' }
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{light.foreground.contrast-secondary}' }
                 },
                 link: {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 literal: {
-                    background: { value: '' },
-                    color: { value: '{palette.purple.30}' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{palette.purple.30}' }
                 },
                 meta: {
-                    background: { value: '' },
-                    color: { value: '{palette.blue.35}' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{palette.blue.35}' }
                 },
                 'meta keyword': {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 'meta string': {
-                    background: { value: '' },
-                    color: { value: '{palette.blue.35}' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{palette.blue.35}' }
                 },
                 'meta.prompt': {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 name: {
-                    background: { value: '' },
-                    color: { value: '{palette.blue.35}' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{palette.blue.35}' }
                 },
                 number: {
-                    background: { value: '' },
-                    color: { value: '{palette.purple.30}' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{palette.purple.30}' }
                 },
                 operator: {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 params: {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 property: {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 punctuation: {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 quote: {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 regexp: {
-                    background: { value: '' },
-                    color: { value: '{palette.green.25}' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{palette.green.25}' }
                 },
                 section: {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 'selector-attr': {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 'selector-class': {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 'selector-id': {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 'selector-pseudo': {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 'selector-tag': {
-                    background: { value: '' },
-                    color: { value: '{palette.blue.35}' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{palette.blue.35}' }
                 },
                 string: {
-                    background: { value: '' },
-                    color: { value: '{palette.green.25}' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{palette.green.25}' }
                 },
                 strong: {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 subst: {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 symbol: {
-                    background: { value: '' },
-                    color: { value: '{palette.blue.35}' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{palette.blue.35}' }
                 },
                 tag: {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 'template-tag': {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 'template-variable': {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 title: {
-                    background: { value: '' },
-                    color: { value: '{palette.blue.35}' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{palette.blue.35}' }
                 },
                 'title.class': {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 'title.class.inherited': {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 'title.function': {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 'title.function.invoke': {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 type: {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 variable: {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 'variable-constant': {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 'variable-language': {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 }
             }
         },
         dark: {
             filled: {
                 container: {
-                    background: { value: '{dark.background.bg-secondary}' },
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{dark.background.bg-secondary}' },
                     border: {
-                        color: { value: '{dark.line.contrast-less}' }
+                        color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{dark.line.contrast-less}' }
                     }
                 },
                 header: {
-                    background: { value: '{dark.background.bg-secondary}' },
-                    'scroll-shadow': { value: '{shadow.dark.overflow-normal-bottom}' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{dark.background.bg-secondary}' },
+                    'scroll-shadow': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{shadow.dark.overflow-normal-bottom}' }
                 },
                 actionbar: {
-                    'fade-gradient': { value: 'linear-gradient(90deg, transparent, {dark.background.bg-secondary})' },
-                    background: { value: '{dark.background.bg-secondary}' }
+                    'fade-gradient': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: 'linear-gradient(90deg, transparent, {dark.background.bg-secondary})' },
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{dark.background.bg-secondary}' }
                 },
                 collapse: {
                     expanded: {
-                        background: { value: 'transparent' }
+                        background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: 'transparent' }
                     },
                     collapsed: {
                         background: {
-                            value: 'linear-gradient(180deg, hsla(229, 15%, 15%, 0%) 0%, hsla(229, 15%, 15%, 1%) 100%)'
+                            deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: 'linear-gradient(180deg, hsla(229, 15%, 15%, 0%) 0%, hsla(229, 15%, 15%, 1%) 100%)'
                         }
                     },
                     'button-expand': {
-                        background: { value: '{dark.background.bg-secondary}' }
+                        background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{dark.background.bg-secondary}' }
                     }
                 }
             },
             outline: {
                 container: {
-                    background: { value: '{dark.background.card}' },
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{dark.background.card}' },
                     border: {
-                        color: { value: 'transparent' }
+                        color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: 'transparent' }
                     }
                 },
                 header: {
-                    background: { value: '{dark.background.card}' },
-                    'scroll-shadow': { value: '{shadow.dark.overflow-normal-bottom}' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{dark.background.card}' },
+                    'scroll-shadow': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{shadow.dark.overflow-normal-bottom}' }
                 },
                 actionbar: {
-                    'fade-gradient': { value: 'linear-gradient(90deg, transparent, {dark.background.card})' },
-                    background: { value: '{dark.background.card}' }
+                    'fade-gradient': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: 'linear-gradient(90deg, transparent, {dark.background.card})' },
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{dark.background.card}' }
                 },
                 collapse: {
                     expanded: {
-                        background: { value: 'transparent' }
+                        background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: 'transparent' }
                     },
                     collapsed: {
                         background: {
-                            value: 'linear-gradient(180deg, hsla(229, 15%, 12%, 0%) 0%, hsla(229, 15%, 12%, 1%) 100%)'
+                            deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: 'linear-gradient(180deg, hsla(229, 15%, 12%, 0%) 0%, hsla(229, 15%, 12%, 1%) 100%)'
                         }
                     },
                     'button-expand': {
-                        background: { value: '{dark.background.card}' }
+                        background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{dark.background.card}' }
                     }
                 }
             },
             hljs: {
                 addition: {
-                    background: { value: '{palette.green.95}' },
-                    color: { value: '{palette.green.25}' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{palette.green.95}' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{palette.green.25}' }
                 },
                 attr: {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 attribute: {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 built_in: {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 bullet: {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 'char.escape': {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 class: {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 code: {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 comment: {
-                    background: { value: '' },
-                    color: { value: '{palette.grey.60}' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{palette.grey.60}' }
                 },
                 deletion: {
-                    background: { value: '{palette.red.95}' },
-                    color: { value: '{palette.red.35}' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{palette.red.95}' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{palette.red.35}' }
                 },
                 doctag: {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 emphasis: {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 formula: {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 function: {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 keyword: {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 'line-numbers': {
-                    color: { value: '{dark.foreground.contrast-secondary}' }
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{dark.foreground.contrast-secondary}' }
                 },
                 link: {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 literal: {
-                    background: { value: '' },
-                    color: { value: '{palette.purple.60}' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{palette.purple.60}' }
                 },
                 meta: {
-                    background: { value: '' },
-                    color: { value: '{palette.blue.65}' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{palette.blue.65}' }
                 },
                 'meta keyword': {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 'meta string': {
-                    background: { value: '' },
-                    color: { value: '{palette.blue.65}' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{palette.blue.65}' }
                 },
                 'meta.prompt': {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 name: {
-                    background: { value: '' },
-                    color: { value: '{palette.blue.65}' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{palette.blue.65}' }
                 },
                 number: {
-                    background: { value: '' },
-                    color: { value: '{palette.purple.60}' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{palette.purple.60}' }
                 },
                 operator: {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 params: {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 property: {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 punctuation: {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 quote: {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 regexp: {
-                    background: { value: '' },
-                    color: { value: '{palette.green.40}' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{palette.green.40}' }
                 },
                 section: {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 'selector-attr': {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 'selector-class': {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 'selector-id': {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 'selector-pseudo': {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 'selector-tag': {
-                    background: { value: '' },
-                    color: { value: '{palette.blue.65}' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{palette.blue.65}' }
                 },
                 string: {
-                    background: { value: '' },
-                    color: { value: '{palette.green.40}' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{palette.green.40}' }
                 },
                 strong: {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 subst: {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 symbol: {
-                    background: { value: '' },
-                    color: { value: '{palette.blue.65}' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{palette.blue.65}' }
                 },
                 tag: {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 'template-tag': {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 'template-variable': {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 title: {
-                    background: { value: '' },
-                    color: { value: '{palette.blue.65}' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{palette.blue.65}' }
                 },
                 'title.class': {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 'title.class.inherited': {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 'title.function': {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 'title.function.invoke': {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 type: {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 variable: {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 'variable-constant': {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 },
                 'variable-language': {
-                    background: { value: '' },
-                    color: { value: '' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' },
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '' }
                 }
             }
         }

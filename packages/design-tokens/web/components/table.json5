@@ -1,31 +1,31 @@
 {
     table: {
         size: {
-            'border-width': { value: '{size.border-width}' },
+            'border-width': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{size.border-width}' },
             'row-padding': {
                 // to keep 40px total height
-                vertical: { value: '10px' },
-                horizontal: { value: '{size.s}' }
+                vertical: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '10px' },
+                horizontal: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{size.s}' }
             }
         },
         font: {
             header: {
-                "font-size": { value: '{typography.text-normal.font-size}' },
-                "line-height": { value: '{typography.text-normal.line-height}' },
-                "letter-spacing": { value: '{typography.text-normal.letter-spacing}' },
-                "font-weight": { value: '{typography.text-normal.font-weight}' },
-                "font-family": { value: '{typography.text-normal.font-family}' },
-                "text-transform": { value: '{typography.text-normal.text-transform}' },
-                "font-feature-settings": { value: '{typography.text-normal.font-feature-settings}' }
+                "font-size": { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.font-size}' },
+                "line-height": { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.line-height}' },
+                "letter-spacing": { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.letter-spacing}' },
+                "font-weight": { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.font-weight}' },
+                "font-family": { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.font-family}' },
+                "text-transform": { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.text-transform}' },
+                "font-feature-settings": { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.font-feature-settings}' }
             },
             body: {
-                "font-size": { value: '{typography.tabular-normal.font-size}' },
-                "line-height": { value: '{typography.tabular-normal.line-height}' },
-                "letter-spacing": { value: '{typography.tabular-normal.letter-spacing}' },
-                "font-weight": { value: '{typography.tabular-normal.font-weight}' },
-                "font-family": { value: '{typography.tabular-normal.font-family}' },
-                "text-transform": { value: '{typography.tabular-normal.text-transform}' },
-                "font-feature-settings": { value: '{typography.tabular-normal.font-feature-settings}' }
+                "font-size": { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.tabular-normal.font-size}' },
+                "line-height": { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.tabular-normal.line-height}' },
+                "letter-spacing": { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.tabular-normal.letter-spacing}' },
+                "font-weight": { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.tabular-normal.font-weight}' },
+                "font-family": { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.tabular-normal.font-family}' },
+                "text-transform": { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.tabular-normal.text-transform}' },
+                "font-feature-settings": { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.tabular-normal.font-feature-settings}' }
             }
         }
     }

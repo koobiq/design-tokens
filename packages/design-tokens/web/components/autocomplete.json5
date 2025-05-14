@@ -2,9 +2,9 @@
     autocomplete: {
         size: {
             panel: {
-                padding: { value: '{size.xxs} 0' },
-                'max-height': { value: '256px' },
-                'border-radius': { value: '{size.border-radius}' }
+                padding: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{size.xxs} 0' },
+                'max-height': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '256px' },
+                'border-radius': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{size.border-radius}' }
             }
         }
     }

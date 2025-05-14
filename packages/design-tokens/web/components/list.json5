@@ -3,157 +3,157 @@
         size: {
             container: {
                 padding: {
-                    left: { value: '{size.m}' },
-                    right: { value: '{size.m}' },
-                    vertical: { value: '{size.xs}' }
+                    left: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{size.m}' },
+                    right: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{size.m}' },
+                    vertical: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{size.xs}' }
                 },
                 'content-gap': {
-                    horizontal: { value: '{size.s}' },
-                    vertical: { value: '{size.3xs}' }
+                    horizontal: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{size.s}' },
+                    vertical: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{size.3xs}' }
                 },
                 'focus-outline': {
-                    width: { value: '{size.3xs}' }
+                    width: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{size.3xs}' }
                 }
             },
             text: {
                 padding: {
-                    vertical: { value: 0 }
+                    vertical: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: 0 }
                 }
             },
             header: {
                 padding: {
-                    top: { value: '{size.s}' },
-                    bottom: { value: '{size.xxs}' },
-                    horizontal: { value: '{size.m}' }
+                    top: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{size.s}' },
+                    bottom: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{size.xxs}' },
+                    horizontal: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{size.m}' }
                 }
             },
             subheading: {
                 padding: {
-                    top: { value: '{size.m}' },
-                    bottom: { value: '{size.xxs}' },
-                    horizontal: { value: '{size.m}' }
+                    top: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{size.m}' },
+                    bottom: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{size.xxs}' },
+                    horizontal: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{size.m}' }
                 }
             }
         },
         font: {
             text: {
-                'font-size': { value: '{typography.text-normal.font-size}' },
-                'line-height': { value: '{typography.text-normal.line-height}' },
-                'letter-spacing': { value: '{typography.text-normal.letter-spacing}' },
-                'font-weight': { value: '{typography.text-normal.font-weight}' },
-                'font-family': { value: '{typography.text-normal.font-family}' },
-                'text-transform': { value: '{typography.text-normal.text-transform}' },
-                'font-feature-settings': { value: '{typography.text-normal.font-feature-settings}' }
+                'font-size': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.font-size}' },
+                'line-height': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.line-height}' },
+                'letter-spacing': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.letter-spacing}' },
+                'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.font-weight}' },
+                'font-family': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.font-family}' },
+                'text-transform': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.text-transform}' },
+                'font-feature-settings': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.font-feature-settings}' }
             },
             caption: {
-                'font-size': { value: '{typography.text-compact.font-size}' },
-                'line-height': { value: '{typography.text-compact.line-height}' },
-                'letter-spacing': { value: '{typography.text-compact.letter-spacing}' },
-                'font-weight': { value: '{typography.text-compact.font-weight}' },
-                'font-family': { value: '{typography.text-compact.font-family}' },
-                'text-transform': { value: '{typography.text-compact.text-transform}' },
-                'font-feature-settings': { value: '{typography.text-compact.font-feature-settings}' }
+                'font-size': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.text-compact.font-size}' },
+                'line-height': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.text-compact.line-height}' },
+                'letter-spacing': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.text-compact.letter-spacing}' },
+                'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.text-compact.font-weight}' },
+                'font-family': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.text-compact.font-family}' },
+                'text-transform': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.text-compact.text-transform}' },
+                'font-feature-settings': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.text-compact.font-feature-settings}' }
             },
             header: {
-                'font-size': { value: '{typography.text-big-strong.font-size}' },
-                'line-height': { value: '{typography.text-big-strong.line-height}' },
-                'letter-spacing': { value: '{typography.text-big-strong.letter-spacing}' },
-                'font-weight': { value: '{typography.text-big-strong.font-weight}' },
-                'font-family': { value: '{typography.text-big-strong.font-family}' },
-                'text-transform': { value: '{typography.text-big-strong.text-transform}' },
-                'font-feature-settings': { value: '{typography.text-big-strong.font-feature-settings}' }
+                'font-size': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.text-big-strong.font-size}' },
+                'line-height': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.text-big-strong.line-height}' },
+                'letter-spacing': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.text-big-strong.letter-spacing}' },
+                'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.text-big-strong.font-weight}' },
+                'font-family': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.text-big-strong.font-family}' },
+                'text-transform': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.text-big-strong.text-transform}' },
+                'font-feature-settings': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.text-big-strong.font-feature-settings}' }
             },
             subheading: {
-                'font-size': { value: '{typography.caps-compact-strong.font-size}' },
-                'line-height': { value: '{typography.caps-compact-strong.line-height}' },
-                'letter-spacing': { value: '{typography.caps-compact-strong.letter-spacing}' },
-                'font-weight': { value: '{typography.caps-compact-strong.font-weight}' },
-                'font-family': { value: '{typography.caps-compact-strong.font-family}' },
-                'text-transform': { value: '{typography.caps-compact-strong.text-transform}' },
-                'font-feature-settings': { value: '{typography.caps-compact-strong.font-feature-settings}' }
+                'font-size': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.caps-compact-strong.font-size}' },
+                'line-height': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.caps-compact-strong.line-height}' },
+                'letter-spacing': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.caps-compact-strong.letter-spacing}' },
+                'font-weight': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.caps-compact-strong.font-weight}' },
+                'font-family': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.caps-compact-strong.font-family}' },
+                'text-transform': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.caps-compact-strong.text-transform}' },
+                'font-feature-settings': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.caps-compact-strong.font-feature-settings}' }
             }
         },
         light: {
             default: {
                 container: {
-                    background: { value: 'transparent' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: 'transparent' }
                 },
                 text: {
-                    color: { value: '{light.foreground.contrast}' }
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{light.foreground.contrast}' }
                 },
                 icon: {
-                    color: { value: '{light.icon.contrast}' }
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{light.icon.contrast}' }
                 },
                 'icon-button': {
-                    color: { value: '{light.icon.contrast-fade}' }
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{light.icon.contrast-fade}' }
                 },
                 caption: {
-                    color: { value: '{light.foreground.contrast-secondary}' }
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{light.foreground.contrast-secondary}' }
                 }
             },
             states: {
                 hover: {
                     container: {
-                        background: { value: '{light.states.background.transparent-hover}' }
+                        background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{light.states.background.transparent-hover}' }
                     },
                     text: {
-                        color: { value: '{light.foreground.contrast}' }
+                        color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{light.foreground.contrast}' }
                     },
                     icon: {
-                        color: { value: '{light.icon.contrast}' }
+                        color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{light.icon.contrast}' }
                     },
                     'icon-button': {
-                        color: { value: '{light.icon.contrast-fade}' }
+                        color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{light.icon.contrast-fade}' }
                     }
                 },
                 selected: {
                     container: {
-                        background: { value: '{light.background.theme-less}' }
+                        background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{light.background.theme-less}' }
                     },
                     text: {
-                        color: { value: '{light.foreground.contrast}' }
+                        color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{light.foreground.contrast}' }
                     },
                     icon: {
-                        color: { value: '{light.icon.contrast}' }
+                        color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{light.icon.contrast}' }
                     },
                     'icon-button': {
-                        color: { value: '{light.icon.contrast-fade}' }
+                        color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{light.icon.contrast-fade}' }
                     }
                 },
                 'selected-hover': {
                     container: {
-                        background: { value: '{light.states.background.theme-less-hover}' }
+                        background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{light.states.background.theme-less-hover}' }
                     },
                     text: {
-                        color: { value: '{light.foreground.contrast}' }
+                        color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{light.foreground.contrast}' }
                     },
                     icon: {
-                        color: { value: '{light.icon.contrast}' }
+                        color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{light.icon.contrast}' }
                     },
                     'icon-button': {
-                        color: { value: '{light.icon.contrast-fade}' }
+                        color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{light.icon.contrast-fade}' }
                     }
                 },
                 focused: {
                     'focus-outline': {
-                        color: { value: '{light.states.line.focus-theme}' }
+                        color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{light.states.line.focus-theme}' }
                     }
                 },
                 disabled: {
                     container: {
-                        background: { value: 'transparent' }
+                        background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: 'transparent' }
                     },
                     text: {
-                        color: { value: '{light.states.foreground.disabled}' }
+                        color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{light.states.foreground.disabled}' }
                     },
                     icon: {
-                        color: { value: '{light.states.icon.disabled}' }
+                        color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{light.states.icon.disabled}' }
                     },
                     'icon-button': {
-                        color: { value: '{light.states.icon.disabled}' }
+                        color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{light.states.icon.disabled}' }
                     },
                     caption: {
-                        color: { value: '{light.states.foreground.disabled}' }
+                        color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{light.states.foreground.disabled}' }
                     }
                 }
             }
@@ -161,84 +161,84 @@
         dark: {
             default: {
                 container: {
-                    background: { value: 'transparent' }
+                    background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: 'transparent' }
                 },
                 text: {
-                    color: { value: '{dark.foreground.contrast}' }
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{dark.foreground.contrast}' }
                 },
                 icon: {
-                    color: { value: '{dark.icon.contrast}' }
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{dark.icon.contrast}' }
                 },
                 'icon-button': {
-                    color: { value: '{dark.icon.contrast-fade}' }
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{dark.icon.contrast-fade}' }
                 },
                 caption: {
-                    color: { value: '{dark.foreground.contrast-secondary}' }
+                    color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{dark.foreground.contrast-secondary}' }
                 }
             },
             states: {
                 hover: {
                     container: {
-                        background: { value: '{dark.states.background.transparent-hover}' }
+                        background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{dark.states.background.transparent-hover}' }
                     },
                     text: {
-                        color: { value: '{dark.foreground.contrast}' }
+                        color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{dark.foreground.contrast}' }
                     },
                     icon: {
-                        color: { value: '{dark.icon.contrast}' }
+                        color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{dark.icon.contrast}' }
                     },
                     'icon-button': {
-                        color: { value: '{dark.icon.contrast-fade}' }
+                        color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{dark.icon.contrast-fade}' }
                     }
                 },
                 selected: {
                     container: {
-                        background: { value: '{dark.background.theme-less}' }
+                        background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{dark.background.theme-less}' }
                     },
                     text: {
-                        color: { value: '{dark.foreground.contrast}' }
+                        color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{dark.foreground.contrast}' }
                     },
                     icon: {
-                        color: { value: '{dark.icon.contrast}' }
+                        color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{dark.icon.contrast}' }
                     },
                     'icon-button': {
-                        color: { value: '{dark.icon.contrast-fade}' }
+                        color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{dark.icon.contrast-fade}' }
                     }
                 },
                 'selected-hover': {
                     container: {
-                        background: { value: '{dark.states.background.theme-less-hover}' }
+                        background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{dark.states.background.theme-less-hover}' }
                     },
                     text: {
-                        color: { value: '{dark.foreground.contrast}' }
+                        color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{dark.foreground.contrast}' }
                     },
                     icon: {
-                        color: { value: '{dark.icon.contrast}' }
+                        color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{dark.icon.contrast}' }
                     },
                     'icon-button': {
-                        color: { value: '{dark.icon.contrast-fade}' }
+                        color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{dark.icon.contrast-fade}' }
                     }
                 },
                 focused: {
                     'focus-outline': {
-                        color: { value: '{dark.states.line.focus-theme}' }
+                        color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{dark.states.line.focus-theme}' }
                     }
                 },
                 disabled: {
                     container: {
-                        background: { value: 'transparent' }
+                        background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: 'transparent' }
                     },
                     text: {
-                        color: { value: '{dark.states.foreground.disabled}' }
+                        color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{dark.states.foreground.disabled}' }
                     },
                     icon: {
-                        color: { value: '{dark.states.icon.disabled}' }
+                        color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{dark.states.icon.disabled}' }
                     },
                     'icon-button': {
-                        color: { value: '{dark.states.icon.disabled}' }
+                        color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{dark.states.icon.disabled}' }
                     },
                     caption: {
-                        color: { value: '{dark.states.foreground.disabled}' }
+                        color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{dark.states.foreground.disabled}' }
                     }
                 }
             }
