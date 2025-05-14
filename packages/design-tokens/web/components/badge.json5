@@ -4,99 +4,99 @@
             filled: {
                 'fade-off': {
                     theme: {
-                        background: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.background.theme}' },
-                        color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.white}' },
-                        caption: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.white}' },
-                        icon: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.icon.white}' }
+                        background: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.background.theme}' },
+                        color: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.white}' },
+                        caption: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.white}' },
+                        icon: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.icon.white}' }
                     },
                     success: {
-                        background: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.background.success}' },
-                        color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.white}' },
-                        caption: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.white}' },
-                        icon: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.icon.white}' }
+                        background: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.background.success}' },
+                        color: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.white}' },
+                        caption: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.white}' },
+                        icon: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.icon.white}' }
                     },
                     warning: {
-                        background: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.background.warning}' },
-                        color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.white}' },
-                        caption: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.white}' },
-                        icon: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.icon.white}' }
+                        background: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.background.warning}' },
+                        color: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.white}' },
+                        caption: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.white}' },
+                        icon: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.icon.white}' }
                     },
                     error: {
-                        background: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.background.error}' },
-                        color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.white}' },
-                        caption: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.white}' },
-                        icon: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.icon.white}' }
+                        background: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.background.error}' },
+                        color: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.white}' },
+                        caption: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.white}' },
+                        icon: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.icon.white}' }
                     }
                 },
                 'fade-on': {
                     theme: {
-                        background: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.background.theme-fade}' },
-                        color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.theme}' },
-                        caption: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.theme}' },
-                        icon: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.icon.theme}' }
+                        background: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.background.theme-fade}' },
+                        color: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.theme}' },
+                        caption: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.theme}' },
+                        icon: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.icon.theme}' }
                     },
                     contrast: {
-                        background: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.background.contrast-fade}' },
-                        color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.contrast}' },
-                        caption: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.contrast}' },
-                        icon: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.icon.contrast-fade}' }
+                        background: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.background.contrast-fade}' },
+                        color: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.contrast}' },
+                        caption: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.contrast}' },
+                        icon: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.icon.contrast-fade}' }
                     },
                     success: {
-                        background: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.background.success-fade}' },
-                        color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.success}' },
-                        caption: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.success}' },
-                        icon: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.icon.success}' }
+                        background: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.background.success-fade}' },
+                        color: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.success}' },
+                        caption: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.success}' },
+                        icon: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.icon.success}' }
                     },
                     warning: {
-                        background: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.background.warning-fade}' },
-                        color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.warning}' },
-                        caption: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.warning}' },
-                        icon: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.icon.warning}' }
+                        background: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.background.warning-fade}' },
+                        color: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.warning}' },
+                        caption: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.warning}' },
+                        icon: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.icon.warning}' }
                     },
                     error: {
-                        background: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.background.error-fade}' },
-                        color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.error}' },
-                        caption: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.error}' },
-                        icon: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.icon.error}' }
+                        background: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.background.error-fade}' },
+                        color: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.error}' },
+                        caption: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.error}' },
+                        icon: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.icon.error}' }
                     }
                 }
             },
             outline: {
                 'fade-on': {
                     theme: {
-                        background: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: 'transparent' },
-                        color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.theme}' },
-                        border: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.line.theme-fade}' },
-                        caption: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.theme}' },
-                        icon: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.icon.theme}' }
+                        background: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: 'transparent' },
+                        color: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.theme}' },
+                        border: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.line.theme-fade}' },
+                        caption: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.theme}' },
+                        icon: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.icon.theme}' }
                     },
                     contrast: {
-                        background: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: 'transparent' },
-                        color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.contrast}' },
-                        border: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.line.contrast-fade}' },
-                        caption: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.contrast}' },
-                        icon: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.icon.contrast-fade}' }
+                        background: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: 'transparent' },
+                        color: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.contrast}' },
+                        border: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.line.contrast-fade}' },
+                        caption: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.contrast}' },
+                        icon: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.icon.contrast-fade}' }
                     },
                     success: {
-                        background: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: 'transparent' },
-                        color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.success}' },
-                        border: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.line.success-fade}' },
-                        caption: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.success}' },
-                        icon: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.icon.success}' }
+                        background: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: 'transparent' },
+                        color: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.success}' },
+                        border: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.line.success-fade}' },
+                        caption: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.success}' },
+                        icon: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.icon.success}' }
                     },
                     warning: {
-                        background: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: 'transparent' },
-                        color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.warning}' },
-                        border: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.line.warning-fade}' },
-                        caption: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.warning}' },
-                        icon: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.icon.warning}' }
+                        background: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: 'transparent' },
+                        color: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.warning}' },
+                        border: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.line.warning-fade}' },
+                        caption: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.warning}' },
+                        icon: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.icon.warning}' }
                     },
                     error: {
-                        background: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: 'transparent' },
-                        color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.error}' },
-                        border: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.line.error-fade}' },
-                        caption: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.error}' },
-                        icon: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.icon.error}' }
+                        background: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: 'transparent' },
+                        color: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.error}' },
+                        border: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.line.error-fade}' },
+                        caption: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.foreground.error}' },
+                        icon: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.icon.error}' }
                     }
                 }
             }
@@ -105,99 +105,99 @@
             filled: {
                 'fade-off': {
                     theme: {
-                        background: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.background.theme}' },
-                        color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.white}' },
-                        caption: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.white}' },
-                        icon: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.icon.white}' }
+                        background: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.background.theme}' },
+                        color: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.white}' },
+                        caption: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.white}' },
+                        icon: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.icon.white}' }
                     },
                     success: {
-                        background: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.background.success}' },
-                        color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.white}' },
-                        caption: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.white}' },
-                        icon: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.icon.white}' }
+                        background: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.background.success}' },
+                        color: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.white}' },
+                        caption: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.white}' },
+                        icon: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.icon.white}' }
                     },
                     warning: {
-                        background: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.background.warning}' },
-                        color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.white}' },
-                        caption: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.white}' },
-                        icon: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.icon.white}' }
+                        background: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.background.warning}' },
+                        color: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.white}' },
+                        caption: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.white}' },
+                        icon: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.icon.white}' }
                     },
                     error: {
-                        background: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.background.error}' },
-                        color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.white}' },
-                        caption: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.white}' },
-                        icon: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.icon.white}' }
+                        background: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.background.error}' },
+                        color: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.white}' },
+                        caption: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.white}' },
+                        icon: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.icon.white}' }
                     }
                 },
                 'fade-on': {
                     theme: {
-                        background: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.background.theme-fade}' },
-                        color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.theme}' },
-                        caption: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.theme}' },
-                        icon: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.icon.theme}' }
+                        background: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.background.theme-fade}' },
+                        color: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.theme}' },
+                        caption: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.theme}' },
+                        icon: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.icon.theme}' }
                     },
                     contrast: {
-                        background: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.background.contrast-fade}' },
-                        color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.contrast}' },
-                        caption: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.contrast}' },
-                        icon: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.icon.contrast-fade}' }
+                        background: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.background.contrast-fade}' },
+                        color: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.contrast}' },
+                        caption: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.contrast}' },
+                        icon: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.icon.contrast-fade}' }
                     },
                     success: {
-                        background: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.background.success-fade}' },
-                        color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.success}' },
-                        caption: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.success}' },
-                        icon: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.icon.success}' }
+                        background: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.background.success-fade}' },
+                        color: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.success}' },
+                        caption: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.success}' },
+                        icon: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.icon.success}' }
                     },
                     warning: {
-                        background: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.background.warning-fade}' },
-                        color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.warning}' },
-                        caption: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.warning}' },
-                        icon: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.icon.warning}' }
+                        background: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.background.warning-fade}' },
+                        color: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.warning}' },
+                        caption: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.warning}' },
+                        icon: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.icon.warning}' }
                     },
                     error: {
-                        background: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.background.error-fade}' },
-                        color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.error}' },
-                        caption: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.error}' },
-                        icon: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.icon.error}' }
+                        background: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.background.error-fade}' },
+                        color: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.error}' },
+                        caption: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.error}' },
+                        icon: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.icon.error}' }
                     }
                 }
             },
             outline: {
                 'fade-on': {
                     theme: {
-                        background: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: 'transparent' },
-                        color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.theme}' },
-                        border: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.line.theme-fade}' },
-                        caption: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.theme}' },
-                        icon: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.icon.theme}' }
+                        background: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: 'transparent' },
+                        color: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.theme}' },
+                        border: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.line.theme-fade}' },
+                        caption: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.theme}' },
+                        icon: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.icon.theme}' }
                     },
                     contrast: {
-                        background: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: 'transparent' },
-                        color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.contrast}' },
-                        border: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.line.contrast-fade}' },
-                        caption: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.contrast}' },
-                        icon: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.icon.contrast-fade}' }
+                        background: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: 'transparent' },
+                        color: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.contrast}' },
+                        border: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.line.contrast-fade}' },
+                        caption: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.contrast}' },
+                        icon: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.icon.contrast-fade}' }
                     },
                     success: {
-                        background: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: 'transparent' },
-                        color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.success}' },
-                        border: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.line.success-fade}' },
-                        caption: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.success}' },
-                        icon: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.icon.success}' }
+                        background: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: 'transparent' },
+                        color: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.success}' },
+                        border: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.line.success-fade}' },
+                        caption: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.success}' },
+                        icon: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.icon.success}' }
                     },
                     warning: {
-                        background: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: 'transparent' },
-                        color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.warning}' },
-                        border: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.line.warning-fade}' },
-                        caption: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.warning}' },
-                        icon: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.icon.warning}' }
+                        background: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: 'transparent' },
+                        color: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.warning}' },
+                        border: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.line.warning-fade}' },
+                        caption: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.warning}' },
+                        icon: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.icon.warning}' }
                     },
                     error: {
-                        background: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: 'transparent' },
-                        color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.error}' },
-                        border: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.line.error-fade}' },
-                        caption: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.error}' },
-                        icon: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.icon.error}' }
+                        background: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: 'transparent' },
+                        color: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.error}' },
+                        border: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.line.error-fade}' },
+                        caption: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.foreground.error}' },
+                        icon: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.icon.error}' }
                     }
                 }
             }
@@ -205,87 +205,87 @@
         size: {
             normal: {
                 height: {
-                    comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.xxl}'
+                    deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.xxl}'
                 },
                 icon: {
                     left: {
-                        width: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.l}' },
-                        height: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.l}' },
-                        'margin-right': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.xxs}' }
+                        width: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.l}' },
+                        height: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.l}' },
+                        'margin-right': { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.xxs}' }
                     },
                     right: {
-                        width: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.l}' },
-                        height: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.l}' },
-                        'margin-left': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.xxs}' }
+                        width: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.l}' },
+                        height: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.l}' },
+                        'margin-left': { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.xxs}' }
                     }
                 },
-                'horizontal-padding': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.s}' },
-                'content-padding': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.xxs}' },
-                'border-width': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.border-width}' },
-                'border-radius': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.xxs}' }
+                'horizontal-padding': { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.s}' },
+                'content-padding': { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.xxs}' },
+                'border-width': { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.border-width}' },
+                'border-radius': { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.xxs}' }
             },
             compact: {
                 height: {
-                    comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.l}'
+                    deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.l}'
                 },
                 icon: {
                     left: {
-                        width: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.l}' },
-                        height: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.l}' },
-                        'margin-right': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.3xs}' }
+                        width: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.l}' },
+                        height: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.l}' },
+                        'margin-right': { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.3xs}' }
                     },
                     right: {
-                        width: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.l}' },
-                        height: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.l}' },
-                        'margin-left': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.3xs}' }
+                        width: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.l}' },
+                        height: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.l}' },
+                        'margin-left': { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.3xs}' }
                     }
                 },
-                'vertical-padding': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: 0 },
-                'horizontal-padding': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.xxs}' },
-                'content-padding': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.3xs}' },
-                'border-width': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.border-width}' },
-                'border-radius': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.xxs}' }
+                'vertical-padding': { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: 0 },
+                'horizontal-padding': { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.xxs}' },
+                'content-padding': { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.3xs}' },
+                'border-width': { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.border-width}' },
+                'border-radius': { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.xxs}' }
             }
         },
         font: {
             normal: {
                 default: {
-                    'font-size': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal-medium.font-size}' },
-                    'line-height': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal-medium.line-height}' },
-                    'letter-spacing': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal-medium.letter-spacing}' },
-                    'font-weight': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal-medium.font-weight}' },
-                    'font-family': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal-medium.font-family}' },
-                    'text-transform': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal-medium.text-transform}' },
-                    'font-feature-settings': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal-medium.font-feature-settings}' }
+                    'font-size': { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal-medium.font-size}' },
+                    'line-height': { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal-medium.line-height}' },
+                    'letter-spacing': { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal-medium.letter-spacing}' },
+                    'font-weight': { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal-medium.font-weight}' },
+                    'font-family': { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal-medium.font-family}' },
+                    'text-transform': { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal-medium.text-transform}' },
+                    'font-feature-settings': { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal-medium.font-feature-settings}' }
                 },
                 caption: {
-                    'font-size': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.font-size}' },
-                    'line-height': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.line-height}' },
-                    'letter-spacing': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.letter-spacing}' },
-                    'font-weight': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.font-weight}' },
-                    'font-family': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.font-family}' },
-                    'text-transform': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.text-transform}' },
-                    'font-feature-settings': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.font-feature-settings}' }
+                    'font-size': { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.font-size}' },
+                    'line-height': { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.line-height}' },
+                    'letter-spacing': { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.letter-spacing}' },
+                    'font-weight': { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.font-weight}' },
+                    'font-family': { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.font-family}' },
+                    'text-transform': { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.text-transform}' },
+                    'font-feature-settings': { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.font-feature-settings}' }
                 }
             },
             compact: {
                 default: {
-                    'font-size': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-compact-medium.font-size}' },
-                    'line-height': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-compact-medium.line-height}' },
-                    'letter-spacing': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-compact-medium.letter-spacing}' },
-                    'font-weight': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-compact-medium.font-weight}' },
-                    'font-family': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-compact-medium.font-family}' },
-                    'text-transform': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-compact-medium.text-transform}' },
-                    'font-feature-settings': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-compact-medium.font-feature-settings}' }
+                    'font-size': { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-compact-medium.font-size}' },
+                    'line-height': { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-compact-medium.line-height}' },
+                    'letter-spacing': { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-compact-medium.letter-spacing}' },
+                    'font-weight': { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-compact-medium.font-weight}' },
+                    'font-family': { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-compact-medium.font-family}' },
+                    'text-transform': { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-compact-medium.text-transform}' },
+                    'font-feature-settings': { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-compact-medium.font-feature-settings}' }
                 },
                 caption: {
-                    'font-size': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-compact.font-size}' },
-                    'line-height': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-compact.line-height}' },
-                    'letter-spacing': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-compact.letter-spacing}' },
-                    'font-weight': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-compact.font-weight}' },
-                    'font-family': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-compact.font-family}' },
-                    'text-transform': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-compact.text-transform}' },
-                    'font-feature-settings': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-compact.font-feature-settings}' }
+                    'font-size': { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-compact.font-size}' },
+                    'line-height': { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-compact.line-height}' },
+                    'letter-spacing': { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-compact.letter-spacing}' },
+                    'font-weight': { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-compact.font-weight}' },
+                    'font-family': { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-compact.font-family}' },
+                    'text-transform': { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-compact.text-transform}' },
+                    'font-feature-settings': { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{typography.text-compact.font-feature-settings}' }
                 }
             }
         }

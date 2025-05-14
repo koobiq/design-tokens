@@ -2,9 +2,9 @@
     autocomplete: {
         size: {
             panel: {
-                padding: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.xxs} 0' },
-                'max-height': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '256px' },
-                'border-radius': { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.border-radius}' }
+                padding: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.xxs} 0' },
+                'max-height': { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '256px' },
+                'border-radius': { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.border-radius}' }
             }
         }
     }

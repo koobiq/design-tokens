@@ -2,23 +2,23 @@
     divider: {
         size: {
             horizontal: {
-                width: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '1px' },
+                width: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '1px' },
                 margin: {
-                    vertical: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.xxs}' }
+                    vertical: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.xxs}' }
                 }
             },
             vertical: {
-                width: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '1px' },
+                width: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '1px' },
                 margin: {
-                    horizontal: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.xxs}' }
+                    horizontal: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{size.xxs}' }
                 }
             }
         },
         light: {
-            color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.line.contrast-less}' }
+            color: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{light.line.contrast-less}' }
         },
         dark: {
-            color: { comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.line.contrast-less}' }
+            color: { deprecated: true, comment: 'DEPRECATED: `component` token will be removed - use `global` token or raw value', value: '{dark.line.contrast-less}' }
         }
     }
 }
