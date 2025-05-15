@@ -1,3 +1,10 @@
+# 3.13.0 (2025-05-15)
+
+### Design Tokens
+
+ * feature  marked component tokens as deprecated ([#DS-3665](https://github.com/koobiq/design-tokens/issues/issue/DS-3665)) ([#78](https://github.com/koobiq/design-tokens/issues/78)) ([4d11fd9](https://github.com/koobiq/design-tokens/commit/4d11fd9b1685ce7ae9147d8297fdf0142b87b066))
+ * feature  **tokens:** added tokens for 💀 skeleton! ([#77](https://github.com/koobiq/design-tokens/issues/77)) ([dce3d75](https://github.com/koobiq/design-tokens/commit/dce3d757cdbd79ef69608d57b889f0b55843e2af))
+
 ## 3.12.1 (2025-03-19)
 
 ### Design Tokens
