@@ -1,3 +1,9 @@
+## 3.13.1 (2025-05-19)
+
+### Design Tokens
+
+ * bug fix  **skeleton:** resolved referenced values ([6afe700](https://github.com/koobiq/design-tokens/commit/6afe700e9b630976b0da04a6e59980c27c0e34b8))
+
 # 3.13.0 (2025-05-15)
 
 ### Design Tokens
