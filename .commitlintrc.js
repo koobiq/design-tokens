@@ -5,13 +5,19 @@
  */
 const config = {
     extends: ['@commitlint/config-conventional'],
-    rules: {
-        'type-enum': [
-            2,
-            'always',
-            ['feat', 'feature', 'fix', 'refactor', 'docs', 'build', 'test', 'ci', 'chore', 'fonts', 'shadows']
+    'scope-enum': [
+        2,
+        'always',
+        [
+            // Dependabot scopes
+            'deps',
+            'deps-dev',
+
+            // Others
+            'fonts',
+            'shadows'
         ]
-    }
+    ]
 };
 
 module.exports = config;
