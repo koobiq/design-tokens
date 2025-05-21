@@ -35,8 +35,8 @@
         ]
     },
     "devDependencies": {
-        "@commitlint/cli": "^19.3.0",
-        "@commitlint/config-conventional": "^19.2.2",
+        "@commitlint/cli": "^19.8.1",
+        "@commitlint/config-conventional": "^19.8.1",
         "@koobiq/cli": "17.0.0-rc.5",
         "@types/eslint": "^8.56.12",
         "@types/fs-extra": "^11.0.4",
