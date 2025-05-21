@@ -14,6 +14,6 @@ Key: value;
 $card-dark-success-background: #276211;
 ```
 
--   The key name defines the usage or how to apply the value to a specific context, such as using text on a light background
--   The key stores visual design attributes
--   The key replaces hard-coded values, such as hex values for color or pixel values for spacing
+- The key name defines the usage or how to apply the value to a specific context, such as using text on a light background
+- The key stores visual design attributes
+- The key replaces hard-coded values, such as hex values for color or pixel values for spacing
