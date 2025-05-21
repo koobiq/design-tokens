@@ -1,0 +1,31 @@
+version: 2
+updates:
+  - package-ecosystem: 'npm'
+    directory: '/'
+    schedule:
+      interval: 'monthly'
+      day: 'thursday'
+      time: '13:00'
+      timezone: 'Europe/Moscow'
+    ignore:
+      # Ignores any major updates
+      - dependency-name: '*'
+        update-types: ['version-update:semver-major']
+    groups:
+      eslint:
+        patterns:
+          - 'eslint*'
+          - '@types/eslint'
+      commitlint:
+        patterns:
+          - '@commitlint/*'
+      prettier:
+        patterns:
+          - 'prettier*'
+      fs-extra:
+        patterns:
+          - 'fs-extra'
+          - '@types/fs-extra'
+      koobiq:
+        patterns:
+          - '@koobiq/*'
