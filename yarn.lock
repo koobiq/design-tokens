@@ -573,12 +573,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^18.19.31":
-  version: 18.19.45
-  resolution: "@types/node@npm:18.19.45"
+"@types/node@npm:^18.19.110":
+  version: 18.19.110
+  resolution: "@types/node@npm:18.19.110"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 10c0/79c324176411dcfa92f76b0ffc0673aa4bd8da82d003b44633e927c9493cdc46c35f04c0873b096b23b12bab090a6bbdea21242b3bbb2ea5dc1d9bf72adaa04f
+  checksum: 10c0/d90ccd5d437a5c93c1cd73ad6fd463db9e7571dbaf1b6314dcf9e45a0928c791dd4f2611b184680785b440d87b5d50ee279a6f217787cd78d1ca3e8f8b96609e
   languageName: node
   linkType: hard
 
@@ -1373,7 +1373,7 @@ __metadata:
     "@koobiq/cli": "npm:17.9.0"
     "@types/eslint": "npm:^8.56.12"
     "@types/fs-extra": "npm:^11.0.4"
-    "@types/node": "npm:^18.19.31"
+    "@types/node": "npm:^18.19.110"
     eslint: "npm:^8.57.0"
     eslint-config-prettier: "npm:^9.1.0"
     eslint-plugin-prettier: "npm:^5.4.0"
