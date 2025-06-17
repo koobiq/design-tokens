@@ -61,7 +61,9 @@
             //  OTHER
             transparent: { value: 'transparent' },
             overlay: { value: '{light.contrast.palette.value."20-A32"}' },
-            'overlay-inverse': { value: '{light.contrast.palette.value."99-A88"}' }
+            'overlay-inverse': { value: '{light.contrast.palette.value."99-A88"}' },
+            'overlay-error': { value: '{light.error.palette.value."88-A88"}' },
+            'overlay-theme': { value: '{light.theme.palette.value."86-A88"}' },
         },
         foreground: {
             //  WHITE
@@ -285,7 +287,9 @@
             //  OTHER
             transparent: { value: 'transparent' },
             overlay: { value: '{light.contrast.palette.value."6-A64"}' },
-            'overlay-inverse': { value: '{light.contrast.palette.value."12-A80"}' }
+            'overlay-inverse': { value: '{light.contrast.palette.value."12-A80"}' },
+            'overlay-error': { value: '{light.error.palette.value."22-A88"}' },
+            'overlay-theme': { value: '{light.theme.palette.value."26-A88"}' },
         },
         foreground: {
             //  WHITE
