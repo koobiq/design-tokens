@@ -2,21 +2,21 @@
     'tag-input': {
         size: {
             'padding': {
-                left: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{size.xxs}' },
-                right: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{size.m}' },
-                vertical: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{size.xxs}' }
+                left: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{size.xxs}' },
+                right: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{size.m}' },
+                vertical: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{size.xxs}' }
             },
-            'content-gap': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{size.s}' }
+            'content-gap': { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{size.s}' }
         },
         font: {
             default: {
-                "font-size": { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.font-size}' },
-                "line-height": { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.line-height}' },
-                "letter-spacing": { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.letter-spacing}' },
-                "font-weight": { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.font-weight}' },
-                "font-family": { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.font-family}' },
-                "text-transform": { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.text-transform}' },
-                "font-feature-settings": { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.font-feature-settings}' }
+                "font-size": { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.font-size}' },
+                "line-height": { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.line-height}' },
+                "letter-spacing": { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.letter-spacing}' },
+                "font-weight": { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.font-weight}' },
+                "font-family": { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.font-family}' },
+                "text-transform": { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.text-transform}' },
+                "font-feature-settings": { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{typography.text-normal.font-feature-settings}' }
             }
         }
     }

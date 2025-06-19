@@ -2,23 +2,23 @@
     divider: {
         size: {
             horizontal: {
-                width: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '1px' },
+                width: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '1px' },
                 margin: {
-                    vertical: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{size.xxs}' }
+                    vertical: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{size.xxs}' }
                 }
             },
             vertical: {
-                width: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '1px' },
+                width: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '1px' },
                 margin: {
-                    horizontal: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{size.xxs}' }
+                    horizontal: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{size.xxs}' }
                 }
             }
         },
         light: {
-            color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{light.line.contrast-less}' }
+            color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{light.line.contrast-less}' }
         },
         dark: {
-            color: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{dark.line.contrast-less}' }
+            color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{dark.line.contrast-less}' }
         }
     }
 }

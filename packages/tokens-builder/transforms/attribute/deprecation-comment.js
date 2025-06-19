@@ -3,10 +3,10 @@ module.exports = (StyleDictionary) => {
         name: 'kbq-attribute/comment',
         type: 'attribute',
         transformer: (token) => {
-            if (token.deprecated && token.deprecated_comment) {
-                const notice = `DEPRECATED: ${token.deprecated_comment}`;
-                token.comment = token.comment ? `${notice} | ${token.comment}` : notice;
-            }
+            if (!token.deprecated) return;
+
+            const notice = `DEPRECATED: ${token.deprecated}`;
+            token.comment = token.comment ? `${notice} | ${token.comment}` : notice;
         }
     });
 };
