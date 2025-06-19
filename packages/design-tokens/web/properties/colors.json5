@@ -137,6 +137,9 @@
             key: { value: '{light.contrast.palette.value."6-A6"}' },
             ambient: { value: '{light.contrast.palette.value."6-A12"}' }
         },
+        opacity: {
+            'disabled': { value: 0.32 }
+        },
         states: {
             background: {
                 //  THEME
@@ -221,7 +224,7 @@
                 // ERROR
                 'focus-error': { value: '{light.error.palette.value.45}' }
             },
-            'disabled-opacity': { value: 0.32 }
+            'disabled-opacity': { value: '{light.opacity.disabled}', deprecated: true, deprecated_comment: 'use --kbq-opacity-disabled' }
         }
     },
     // DARK THEME
@@ -363,6 +366,9 @@
             key: { value: 'transparent' },
             ambient: { value: 'transparent' }
         },
+        opacity: {
+            'disabled': { value: 0.32 }
+        },
         states: {
             background: {
                 //  THEME
@@ -447,7 +453,7 @@
                 //  ERROR
                 'focus-error': { value: '{dark.error.palette.value.45}' }
             },
-            'disabled-opacity': { value: 0.32 }
+            'disabled-opacity': { value: '{dark.opacity.disabled}', deprecated: true, deprecated_comment: 'use --kbq-opacity-disabled' }
         }
     }
 }
