@@ -1,16 +1,16 @@
 {
     popup: {
         light: {
-            shadow: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{shadow.light.popup}' },
-            border: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: 'transparent' },
-            background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{light.background.card}' },
-            'footer-background': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{light.background.card}'}
+            shadow: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{shadow.light.popup}' },
+            border: { deprecated: '`component` token will be removed - use `global` token or raw value', value: 'transparent' },
+            background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{light.background.card}' },
+            'footer-background': { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{light.background.card}'}
         },
         dark: {
-            shadow: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{shadow.dark.popup}' },
-            border: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: 'transparent' },
-            background: { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{dark.background.card}' },
-            'footer-background': { deprecated: true, deprecated_comment: '`component` token will be removed - use `global` token or raw value', value: '{dark.background.card}'}
+            shadow: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{shadow.dark.popup}' },
+            border: { deprecated: '`component` token will be removed - use `global` token or raw value', value: 'transparent' },
+            background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{dark.background.card}' },
+            'footer-background': { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{dark.background.card}'}
         }
     }
 }
