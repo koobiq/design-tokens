@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Notification to BotChannel
-        uses: mattermost/action-mattermost-notify@master
+        uses: mattermost/action-mattermost-notify@2.0.0
         env:
           PR_URL: https://github.com/${{ github.repository }}/pull/${{ github.event.number }}
         with:
