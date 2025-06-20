@@ -18,6 +18,10 @@ jobs:
       - name: Build packages
         uses: ./.github/workflows/actions/build-packages
 
+      - name: Commitlint
+        if: ${{ github.event_name == 'pull_request' }}
+        run: echo "${{ github.event.pull_request.title }}" | yarn commitlint
+
       - name: Linters
         run: |
           yarn run prettier
