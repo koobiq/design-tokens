@@ -1,3 +1,10 @@
+# 3.14.0 (2025-06-21)
+
+### Design Tokens
+
+ * feature  add opacity.disabled tokens for toggle redesign ([#97](https://github.com/koobiq/design-tokens/issues/97)) ([e4c2ee3](https://github.com/koobiq/design-tokens/commit/e4c2ee3bd3ef735df858e5a613fb1c60b8be02ac))
+ * feature  add overlay tokens for new file upload design ([#95](https://github.com/koobiq/design-tokens/issues/95)) ([8bcf6db1](https://github.com/koobiq/design-tokens/commit/8bcf6db1022f5d6a224566cfab2084769c4d9ef8))
+
 ## 3.13.2 (2025-05-19)
 
 ### Design Tokens
