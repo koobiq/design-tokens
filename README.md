@@ -33,7 +33,6 @@ All releases must be made from `release branches` or `main`.
     ```
 
     This command will:
-
     - Prompt you to choose the version bump (**needs validation**).
     - Ask for a **release name** (**needs validation**).
     - Generate a **changelog** (**needs validation**).
