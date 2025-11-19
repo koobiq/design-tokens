@@ -20,7 +20,7 @@
         "-----Build-----": "------------------------------------------------------------------------------------------",
         "build": "rimraf dist && node tools/build.js",
         "-----CI-----": "---------------------------------------------------------------------------------------------",
-        "prettier": "prettier '**/*.{md,yml,json,js}' --check",
+        "prettier": "prettier --check . --ignore-unknown",
         "prettier:fix": "yarn run prettier --write",
         "eslint": "eslint . --ext='.js'",
         "eslint:fix": "yarn run eslint --fix"

@@ -1,3 +1,4 @@
-node_modules/
-/dist
-CHANGELOG.md
+**/CHANGELOG.md
+
+# ignore JSON5 files
+**/*.json5
