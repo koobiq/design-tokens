@@ -54,10 +54,42 @@ const colorPalettesConfig = [
     prefix: 'kbq'
 }));
 
+const semanticPalettesConfig = ['theme', 'success', 'warning', 'error', 'contrast', 'white', 'black', 'purple'].map(
+    (color) => ({
+        destination: `css/semantic-palette/${color}.css`,
+        format: 'kbq-css/palette',
+        filter: (token) =>
+            token.filePath.includes('colors.json5') &&
+            token.attributes.light &&
+            token.attributes.type === color &&
+            (token.attributes.palette || token.name.includes('default')),
+        prefix: 'kbq'
+    })
+);
+
 module.exports = {
     css: {
         transformGroup: 'kbq/css',
         files: [
+            ...semanticPalettesConfig,
+            {
+                destination: 'css/semantic-palette-light.css',
+                format: 'kbq-css/palette',
+                filter: (token) => token.attributes.light && token.filePath.includes('colors.json5'),
+                prefix: 'kbq',
+                options: {
+                    selector: '.kbq-light'
+                }
+            },
+            {
+                destination: 'css/semantic-palette-dark.css',
+                format: 'kbq-css/palette',
+                filter: (token) => token.attributes.dark && token.filePath.includes('colors.json5'),
+                prefix: 'kbq',
+                options: {
+                    selector: '.kbq-dark'
+                }
+            },
             {
                 destination: 'css/font.css',
                 format: 'css/variables',
