@@ -1,53 +1,40 @@
 const fs = require('fs');
 const path = require('node:path');
 
-const componentTokensBase = fs
+const componentTokens = fs
     .readdirSync(path.join('packages', 'design-tokens', 'web', 'components'))
     .filter((fileName) => fileName.endsWith('.json5'))
-    .map((fileName) => {
-        const componentName = fileName.replace('.json5', '');
+    .map((fileName) => fileName.replace('.json5', ''));
 
-        return {
-            destination: `css/components/${componentName}/${componentName}.css`,
-            format: 'kbq-css/variables',
-            filter: (token) => token.filePath.includes(fileName) && !token.attributes.light && !token.attributes.dark,
-            prefix: 'kbq'
-        };
-    });
+const componentTokensBase = componentTokens.map((fileName) => ({
+    destination: `css/components/${fileName}/${fileName}.css`,
+    format: 'kbq-css/variables',
+    filter: (token) => token.filePath.includes(fileName) && !token.attributes.light && !token.attributes.dark,
+    prefix: 'kbq',
+    options: {
+        outputReferences: true
+    }
+}));
 
-const componentTokensLight = fs
-    .readdirSync(path.join('packages', 'design-tokens', 'web', 'components'))
-    .filter((fileName) => fileName.endsWith('.json5'))
-    .map((fileName) => {
-        const componentName = fileName.replace('.json5', '');
+const componentTokensLight = componentTokens.map((fileName) => ({
+    destination: `css/components/${fileName}/${fileName}-light.css`,
+    format: 'kbq-css/variables',
+    filter: (token) => token.filePath.includes(fileName) && token.attributes.light,
+    prefix: 'kbq',
+    options: {
+        selector: '.kbq-light'
+    }
+}));
 
-        return {
-            destination: `css/components/${componentName}/${componentName}-light.css`,
-            format: 'kbq-css/variables',
-            filter: (token) => token.filePath.includes(fileName) && token.attributes.light,
-            prefix: 'kbq',
-            options: {
-                selector: '.kbq-light'
-            }
-        };
-    });
-
-const componentTokensDark = fs
-    .readdirSync(path.join('packages', 'design-tokens', 'web', 'components'))
-    .filter((fileName) => fileName.endsWith('.json5'))
-    .map((fileName) => {
-        const componentName = fileName.replace('.json5', '');
-
-        return {
-            destination: `css/components/${componentName}/${componentName}-dark.css`,
-            format: 'kbq-css/variables',
-            filter: (token) => token.filePath.includes(fileName) && token.attributes.dark,
-            prefix: 'kbq',
-            options: {
-                selector: '.kbq-dark'
-            }
-        };
-    });
+const componentTokensDark = componentTokens.map((fileName) => ({
+    destination: `css/components/${fileName}/${fileName}-dark.css`,
+    format: 'kbq-css/variables',
+    filter: (token) => token.filePath.includes(fileName) && token.attributes.dark,
+    prefix: 'kbq',
+    options: {
+        selector: '.kbq-dark'
+    }
+}));
 
 const colorPalettesConfig = [
     'black',
@@ -72,12 +59,26 @@ module.exports = {
         transformGroup: 'kbq/css',
         files: [
             {
-                destination: 'css/typography.css',
+                destination: 'css/font.css',
                 format: 'css/variables',
-                filter: (token) => token.attributes.category === 'typography',
+                filter: (token) => token.attributes.category === 'font',
                 prefix: 'kbq'
             },
-
+            {
+                destination: 'css/size.css',
+                format: 'css/variables',
+                filter: (token) => token.attributes.category === 'size',
+                prefix: 'kbq'
+            },
+            {
+                destination: 'css/md-typography.css',
+                format: 'css/variables',
+                filter: (token) => token.attributes.category === 'md-typography',
+                prefix: 'kbq',
+                options: {
+                    outputReferences: true
+                }
+            },
             ...colorPalettesConfig,
             {
                 destination: 'css/palette.css',
@@ -85,12 +86,21 @@ module.exports = {
                 filter: (token) => token.attributes.category === 'palette',
                 prefix: 'kbq'
             },
-            // {
-            //     destination: 'css/semantic-palette.css',
-            //     format: 'kbq-css/variables',
-            //     filter: 'palette',
-            //     prefix: 'kbq'
-            // },
+            {
+                destination: 'css/shadows.css',
+                format: 'css/variables',
+                filter: (token) => token.attributes.category === 'shadow',
+                prefix: 'kbq'
+            },
+            {
+                destination: 'css/typography.css',
+                format: 'css/variables',
+                filter: (token) => token.attributes.category === 'typography',
+                prefix: 'kbq',
+                options: {
+                    outputReferences: true
+                }
+            },
             ...componentTokensBase,
             ...componentTokensLight,
             ...componentTokensDark,
