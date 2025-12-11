@@ -1,6 +1,6 @@
 const transform = require('style-dictionary/lib/common/transforms');
 
-const unwrapObjectTransformer = (token) => {
+const unwrapObjectTransformer = (token, additionalAttrs = {}) => {
     return Object.keys(token.value).map((key) => {
         const subToken = token.value[key];
         const res = {
@@ -10,7 +10,7 @@ const unwrapObjectTransformer = (token) => {
             name: `kbq-${[...token.path, key].join('-')}`,
             original: { value: subToken }
         };
-        res.attributes = { ...transform['attribute/cti'].transformer(res), font: true };
+        res.attributes = { ...transform['attribute/cti'].transformer(res), ...additionalAttrs };
         return res;
     }, {});
 };
