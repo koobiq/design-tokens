@@ -10,7 +10,7 @@ module.exports = (StyleDictionary) => {
             // apply custom transformations for tokens
             dictionary.allProperties = dictionary.allTokens = dictionary.allTokens.flatMap((token) => {
                 if (typeof token.value === 'object' && token.type === 'font') {
-                    return unwrapObjectTransformer(token);
+                    return unwrapObjectTransformer(token, { font: true });
                 }
                 return token;
             });
