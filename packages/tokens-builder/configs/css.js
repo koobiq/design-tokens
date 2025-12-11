@@ -174,7 +174,7 @@ module.exports = {
             ...componentTokensLight,
             ...componentTokensDark,
             {
-                destination: 'css/light/components.css',
+                destination: 'deprecated/css/components-light.css',
                 format: 'kbq-css/variables',
                 filter: (token) =>
                     token.attributes.light && !token.attributes.palette && token.filePath.includes('components'),
@@ -184,7 +184,7 @@ module.exports = {
                 }
             },
             {
-                destination: 'css/dark/components.css',
+                destination: 'deprecated/css/components-dark.css',
                 format: 'kbq-css/variables',
                 filter: (token) =>
                     token.attributes.dark && !token.attributes.palette && token.filePath.includes('components'),
