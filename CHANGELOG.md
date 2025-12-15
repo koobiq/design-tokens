@@ -1,3 +1,9 @@
+# 3.15.0 (2025-12-15)
+
+### Design Tokens
+
+ * feature  split tokens into separate files ([#DS-3117](https://github.com/koobiq/design-tokens/issues/issue/DS-3117)) ([#113](https://github.com/koobiq/design-tokens/issues/113)) ([65b23e7](https://github.com/koobiq/design-tokens/commit/65b23e7a8102f6dc69c07b75bf2b4fa2733c1b21))
+
 # 3.14.0 (2025-06-21)
 
 ### Design Tokens
