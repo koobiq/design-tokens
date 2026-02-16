@@ -273,7 +273,7 @@
             'theme-less': { value: '{dark.theme.palette.value.15}' },
             //  CONTRAST
             contrast: { value: '{dark.contrast.palette.value.90}' },
-            'contrast-fade': { value: '{dark.contrast.palette.value.25}' },
+            'contrast-fade': { value: '{dark.contrast.palette.value.23}' },
             'contrast-less': { value: '{dark.contrast.palette.value.17}' },
             //  ERROR
             error: { value: '{dark.error.palette.value.41}' },
