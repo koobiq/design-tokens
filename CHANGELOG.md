@@ -1,3 +1,9 @@
+## 3.15.2 (2026-02-18)
+
+### Design Tokens
+
+ * bug fix  **code-block:** revert default styles ([8967423](https://github.com/koobiq/design-tokens/commit/89674236f975078e1acc442fa0f4070df0a3b8a9))
+
 ## 3.15.1 (2026-02-18)
 
 ### Design Tokens
