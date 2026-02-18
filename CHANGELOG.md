@@ -1,3 +1,9 @@
+## 3.15.1 (2026-02-18)
+
+### Design Tokens
+
+ * bug fix  contrast-fade in dark theme ([#DS-4701](https://github.com/koobiq/design-tokens/issues/issue/DS-4701)) ([#124](https://github.com/koobiq/design-tokens/issues/124)) ([2e574a4](https://github.com/koobiq/design-tokens/commit/2e574a4cf0923d9c20a7277aa1f61233fe2da964))
+
 # 3.15.0 (2025-12-15)
 
 ### Design Tokens
