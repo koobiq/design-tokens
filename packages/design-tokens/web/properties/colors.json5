@@ -60,6 +60,7 @@
             'warning-less': { value: '{light.warning.palette.value.90}' },
             //  OTHER
             transparent: { value: 'transparent' },
+            highlight: { value: '{light.background.warning-fade}' },
             overlay: { value: '{light.contrast.palette.value."20-A32"}' },
             'overlay-inverse': { value: '{light.contrast.palette.value."99-A88"}' },
             'overlay-error': { value: '{light.error.palette.value."88-A88"}' },
@@ -289,6 +290,7 @@
             'warning-less': { value: '{dark.warning.palette.value.9}' }, // подобрать оттенок
             //  OTHER
             transparent: { value: 'transparent' },
+            highlight: { value: '{dark.background.warning-fade}' },
             overlay: { value: '{light.contrast.palette.value."6-A64"}' },
             'overlay-inverse': { value: '{light.contrast.palette.value."12-A80"}' },
             'overlay-error': { value: '{light.error.palette.value."22-A88"}' },
