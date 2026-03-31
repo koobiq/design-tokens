@@ -1,0 +1,19 @@
+{
+    "name": "@koobiq/tokens-new-w3c",
+    "description": "Design tokens with new palette in W3C format",
+    "author": "",
+    "license": "MIT",
+    "keywords": [
+        "tokens",
+        "design",
+        "system"
+    ],
+    "publishConfig": {
+        "access": "public"
+    },
+    "exports": {
+        "./*": {
+            "default": "./*"
+        }
+    }
+}
