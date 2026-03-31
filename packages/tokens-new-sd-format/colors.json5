@@ -622,10 +622,10 @@
                 "value": "{plt.blackA.18}"
             },
             "overlay-error": {
-                "value": "{plt.darkErrorA.18}"
+                "value": "{semantic.darkErrorA.18}"
             },
             "overlay-theme": {
-                "value": "{plt.darkThemeA.18}"
+                "value": "{semantic.darkThemeA.18}"
             }
         },
         "foreground": {
