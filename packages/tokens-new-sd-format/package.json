@@ -1,0 +1,19 @@
+{
+    "name": "@koobiq/tokens-new-sd",
+    "description": "Design tokens with new palette in Style Dictionary format",
+    "author": "",
+    "license": "MIT",
+    "keywords": [
+        "tokens",
+        "design",
+        "system"
+    ],
+    "publishConfig": {
+        "access": "public"
+    },
+    "exports": {
+        "./*": {
+            "default": "./*"
+        }
+    }
+}
