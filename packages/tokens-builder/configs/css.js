@@ -2,7 +2,87 @@ const fs = require('fs');
 const path = require('node:path');
 
 const paletteColors = ['black', 'blue', 'cyan', 'green', 'grey', 'orange', 'purple', 'red', 'white', 'yellow'];
+const newPaletteColors = [
+    'blue',
+    'slate',
+    'red',
+    'orange',
+    'yellow',
+    'green',
+    'teal',
+    'purple',
+    'darkBlue',
+    'darkSlate',
+    'darkRed',
+    'darkOrange',
+    'darkYellow',
+    'darkGreen',
+    'darkTeal',
+    'darkPurple',
+    'grey',
+    'darkGrey',
+    'greyA',
+    'darkGreyA',
+    'whiteA',
+    'blackA',
+    'blueA',
+    'slateA',
+    'redA',
+    'orangeA',
+    'yellowA',
+    'greenA',
+    'tealA',
+    'purpleA',
+    'darkBlueA',
+    'darkSlateA',
+    'darkRedA',
+    'darkOrangeA',
+    'darkYellowA',
+    'darkGreenA',
+    'darkTealA',
+    'darkPurpleA',
+    'yellowFixed',
+    'orangeFixed',
+    'darkYellowFixed',
+    'darkOrangeFixed',
+    'yellowFixedA',
+    'orangeFixedA',
+    'darkYellowFixedA',
+    'darkOrangeFixedA',
+    'white',
+    'black'
+];
 const semanticPaletteColors = ['theme', 'success', 'warning', 'error', 'contrast', 'white', 'black', 'purple'];
+const newSemanticPaletteColors = [
+    'contrast',
+    'contrastA',
+    'theme',
+    'themeA',
+    'error',
+    'errorA',
+    'warning',
+    'warningA',
+    'warningFixed',
+    'warningFixedA',
+    'success',
+    'successA',
+    'visited',
+    'visitedA',
+    'darkContrast',
+    'darkContrastA',
+    'darkTheme',
+    'darkThemeA',
+    'darkError',
+    'darkErrorA',
+    'darkWarning',
+    'darkWarningA',
+    'darkWarningFixed',
+    'darkWarningFixedA',
+    'darkSuccess',
+    'darkSuccessA',
+    'darkVisited',
+    'darkVisitedA'
+];
 
 // resolve components path if script used externally
 const componentsPath = fs.existsSync(path.join('node_modules', '@koobiq/design-tokens', 'web', 'components'))
@@ -51,6 +131,13 @@ const paletteByColorsConfig = paletteColors.map((color) => ({
     prefix: 'kbq'
 }));
 
+const newPaletteByColorsConfig = newPaletteColors.map((color) => ({
+    destination: `css/new/palette/${color}.css`,
+    format: 'kbq-css/variables',
+    filter: (token) => token.attributes.category === 'plt' && token.attributes.type === color,
+    prefix: 'kbq'
+}));
+
 const semanticPaletteConfig = semanticPaletteColors.map((color) => ({
     destination: `css/semantic-palette/${color}.css`,
     format: 'kbq-css/palette',
@@ -62,11 +149,22 @@ const semanticPaletteConfig = semanticPaletteColors.map((color) => ({
     prefix: 'kbq'
 }));
 
+const newSemanticPaletteConfig = newSemanticPaletteColors.map((color) => ({
+    destination: `css/new/semantic-palette/${color}.css`,
+    format: 'kbq-css/palette',
+    filter: (token) => token.attributes.category === 'semantic' && token.attributes.type === color,
+    prefix: 'kbq',
+    options: {
+        outputReferences: true
+    }
+}));
+
 module.exports = {
     css: {
         transformGroup: 'kbq/css',
         files: [
             ...semanticPaletteConfig,
+            ...newSemanticPaletteConfig,
             {
                 destination: 'css/light/semantic-palette.css',
                 format: 'kbq-css/palette',
@@ -137,10 +235,17 @@ module.exports = {
                 }
             },
             ...paletteByColorsConfig,
+            ...newPaletteByColorsConfig,
             {
                 destination: 'css/palette.css',
                 format: 'kbq-css/variables',
                 filter: (token) => token.attributes.category === 'palette',
+                prefix: 'kbq'
+            },
+            {
+                destination: 'css/new/palette.css',
+                format: 'kbq-css/variables',
+                filter: (token) => token.attributes.category === 'plt',
                 prefix: 'kbq'
             },
             {

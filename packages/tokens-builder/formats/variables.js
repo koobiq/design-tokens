@@ -16,6 +16,7 @@ module.exports = (StyleDictionary) => {
             });
 
             dictionary.allTokens.forEach((token) => {
+                if (['plt', 'semantic'].includes(token.attributes.category)) return;
                 token.name = token.name.replace(/(light|dark)-/, '');
             });
 
@@ -41,6 +42,7 @@ module.exports = (StyleDictionary) => {
             });
 
             dictionary.allTokens.forEach((token) => {
+                if (['plt', 'semantic'].includes(token.attributes.category)) return;
                 token.name = token.name.replace(/(light|dark)-/, '');
                 token.name = token.name.replace(/"/g, '');
             });
