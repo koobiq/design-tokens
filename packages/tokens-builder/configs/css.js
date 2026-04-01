@@ -249,6 +249,15 @@ module.exports = {
                 prefix: 'kbq'
             },
             {
+                destination: 'css/new/semantic-palette.css',
+                format: 'kbq-css/variables',
+                filter: (token) => token.attributes.category === 'semantic',
+                prefix: 'kbq',
+                options: {
+                    outputReferences: true
+                }
+            },
+            {
                 destination: 'css/light/shadows.css',
                 format: 'kbq-css/variables',
                 filter: (token) => token.attributes.light && token.attributes.category === 'shadow',
