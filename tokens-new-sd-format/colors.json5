@@ -74,7 +74,7 @@
         },
         "background": {
             "bg": {
-                "value": "{palette.white}"
+                "value": "{plt.white}"
             },
             "bg-secondary": {
                 "value": "{semantic.contrast.1}"
@@ -86,7 +86,7 @@
                 "value": "{semantic.contrast.18}"
             },
             "card": {
-                "value": "{Background.Bg}"
+                "value": "{light.background.bg}"
             },
             "theme": {
                 "value": "{semantic.themeA.14}"
@@ -140,21 +140,21 @@
                 "value": "{semantic.contrastA.17}"
             },
             "overlay-inverse": {
-                "value": "{palette.whiteA.20}"
+                "value": "{plt.whiteA.20}"
             },
             "overlay-error": {
                 "value": "{semantic.errorA.17}"
             },
             "overlay-theme": {
-                "value": "{semantic.themetA.17}"
+                "value": "{semantic.themeA.17}"
             }
         },
         "foreground": {
             "white": {
-                "value": "{palette.white}"
+                "value": "{plt.white}"
             },
             "white-secondary": {
-                "value": "{palette.whiteA.16}"
+                "value": "{plt.whiteA.16}"
             },
             "theme": {
                 "value": "{semantic.themeA.16}"
@@ -166,7 +166,7 @@
                 "value": "{semantic.contrastA.20}"
             },
             "on-contrast": {
-                "value": "{palette.white}"
+                "value": "{plt.white}"
             },
             "contrast-secondary": {
                 "value": "{semantic.contrastA.16}"
@@ -207,7 +207,7 @@
         },
         "icon": {
             "white": {
-                "value": "{palette.white}"
+                "value": "{plt.white}"
             },
             "theme": {
                 "value": "{semantic.themeA.14}"
@@ -219,7 +219,7 @@
                 "value": "{semantic.contrastA.20}"
             },
             "on-contrast": {
-                "value": "{palette.white}"
+                "value": "{plt.white}"
             },
             "contrast-fade": {
                 "value": "{semantic.contrastA.10}"
@@ -616,24 +616,24 @@
                 "value": "#00000000"
             },
             "overlay": {
-                "value": "{palette.blackA.18}"
+                "value": "{plt.blackA.18}"
             },
             "overlay-inverse": {
-                "value": "{palette.blackA.18}"
+                "value": "{plt.blackA.18}"
             },
             "overlay-error": {
-                "value": "{palette.darkErrorA.18}"
+                "value": "{plt.darkErrorA.18}"
             },
             "overlay-theme": {
-                "value": "{palette.darkThemeA.18}"
+                "value": "{plt.darkThemeA.18}"
             }
         },
         "foreground": {
             "white": {
-                "value": "{palette.white}"
+                "value": "{plt.white}"
             },
             "white-secondary": {
-                "value": "{palette.whiteA.17}"
+                "value": "{plt.whiteA.17}"
             },
             "theme": {
                 "value": "{semantic.darkThemeA.14}"
@@ -645,7 +645,7 @@
                 "value": "{semantic.darkContrastA.19}"
             },
             "on-contrast": {
-                "value": "{palette.black}"
+                "value": "{plt.black}"
             },
             "contrast-secondary": {
                 "value": "{semantic.darkContrastA.14}"
@@ -686,7 +686,7 @@
         },
         "icon": {
             "white": {
-                "value": "{palette.white}"
+                "value": "{plt.white}"
             },
             "theme": {
                 "value": "{semantic.darkThemeA.11}"
@@ -698,7 +698,7 @@
                 "value": "{semantic.darkContrastA.18}"
             },
             "on-contrast": {
-                "value": "{palette.black}"
+                "value": "{plt.black}"
             },
             "contrast-fade": {
                 "value": "{semantic.darkContrastA.11}"
