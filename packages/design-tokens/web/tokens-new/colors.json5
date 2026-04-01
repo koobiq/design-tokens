@@ -184,13 +184,13 @@
                 "value": "{semantic.errorA.11}"
             },
             "error-less": {
-                "value": "{light.error.palette.value.70}"
+                "value": "{semantic.errorA.11}"
             },
             "success": {
                 "value": "{semantic.successA.16}"
             },
             "success-less": {
-                "value": "{light.success.palette.value.90}"
+                "value": "{semantic.successA.2}"
             },
             "success-secondary": {
                 "value": "{semantic.successA.13}"
@@ -460,7 +460,7 @@
             },
             "line": {
                 "focus": {
-                    "value": "{light.theme.palette.value.50}"
+                    "value": "{semantic.themeA.16}"
                 },
                 "focus-theme": {
                     "value": "{semantic.themeA.13}"
@@ -663,13 +663,13 @@
                 "value": "{semantic.darkErrorA.9}"
             },
             "error-less": {
-                "value": "{dark.error.palette.value.28}"
+                "value": "{semantic.darkErrorA.9}"
             },
             "success": {
                 "value": "{semantic.darkSuccessA.14}"
             },
             "success-less": {
-                "value": "{dark.success.palette.value.90}"
+                "value": "{semantic.darkSuccessA.19}"
             },
             "success-secondary": {
                 "value": "{semantic.darkSuccessA.11}"
@@ -939,7 +939,7 @@
             },
             "line": {
                 "focus": {
-                    "value": "{dark.theme.palette.value.50}"
+                    "value": "{semantic.darkThemeA.10}"
                 },
                 "focus-theme": {
                     "value": "{semantic.darkThemeA.11}"
