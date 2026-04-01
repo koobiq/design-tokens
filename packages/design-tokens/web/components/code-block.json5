@@ -349,211 +349,211 @@
             },
             hljs: {
                 addition: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{palette.green.95}' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{palette.green.25}' }
+                    background: { value: '{plt.green.2}' },
+                    color: { value: '{plt.green.17}' }
                 },
                 attr: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 attribute: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 built_in: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 bullet: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'char.escape': {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 class: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 code: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 comment: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{palette.grey.60}' }
+                    background: { value: '' },
+                    color: { value: '{plt.slate.13}' }
                 },
                 deletion: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{palette.red.95}' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{palette.red.35}' }
+                    background: { value: '{plt.red.2}' },
+                    color: { value: '{plt.red.18}' }
                 },
                 doctag: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 emphasis: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 formula: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 function: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 keyword: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'line-numbers': {
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{light.foreground.contrast-secondary}' }
+                    color: { value: '{light.foreground.contrast-secondary}' }
                 },
                 link: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 literal: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{palette.purple.30}' }
+                    background: { value: '' },
+                    color: { value: '{plt.purple.18}' }
                 },
                 meta: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{palette.blue.35}' }
+                    background: { value: '' },
+                    color: { value: '{plt.blue.18}' }
                 },
                 'meta keyword': {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'meta string': {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{palette.blue.35}' }
+                    background: { value: '' },
+                    color: { value: '{plt.blue.18}' }
                 },
                 'meta.prompt': {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 name: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{palette.blue.35}' }
+                    background: { value: '' },
+                    color: { value: '{plt.blue.18}' }
                 },
                 number: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{palette.purple.30}' }
+                    background: { value: '' },
+                    color: { value: '{plt.purple.18}' }
                 },
                 operator: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 params: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 property: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 punctuation: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 quote: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 regexp: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{palette.green.25}' }
+                    background: { value: '' },
+                    color: { value: '{plt.green.17}' }
                 },
                 section: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'selector-attr': {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'selector-class': {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'selector-id': {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'selector-pseudo': {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'selector-tag': {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{palette.blue.35}' }
+                    background: { value: '' },
+                    color: { value: '{plt.blue.18}' }
                 },
                 string: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{palette.green.25}' }
+                    background: { value: '' },
+                    color: { value: '{plt.green.17}' }
                 },
                 strong: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 subst: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 symbol: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{palette.blue.35}' }
+                    background: { value: '' },
+                    color: { value: '{plt.blue.18}' }
                 },
                 tag: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'template-tag': {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'template-variable': {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 title: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{palette.blue.35}' }
+                    background: { value: '' },
+                    color: { value: '{plt.blue.18}' }
                 },
                 'title.class': {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'title.class.inherited': {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'title.function': {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'title.function.invoke': {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 type: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 variable: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'variable-constant': {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'variable-language': {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 }
             }
         },
@@ -618,211 +618,211 @@
             },
             hljs: {
                 addition: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{palette.green.95}' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{palette.green.25}' }
+                    background: { value: '{plt.green.2}' },
+                    color: { value: '{plt.green.17}' }
                 },
                 attr: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 attribute: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 built_in: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 bullet: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'char.escape': {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 class: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 code: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 comment: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{palette.grey.60}' }
+                    background: { value: '' },
+                    color: { value: '{plt.slate.13}' }
                 },
                 deletion: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{palette.red.95}' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{palette.red.35}' }
+                    background: { value: '{plt.red.2}' },
+                    color: { value: '{plt.red.18}' }
                 },
                 doctag: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 emphasis: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 formula: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 function: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 keyword: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'line-numbers': {
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{dark.foreground.contrast-secondary}' }
+                    color: { value: '{dark.foreground.contrast-secondary}' }
                 },
                 link: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 literal: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{palette.purple.60}' }
+                    background: { value: '' },
+                    color: { value: '{plt.purple.13}' }
                 },
                 meta: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{palette.blue.65}' }
+                    background: { value: '' },
+                    color: { value: '{plt.blue.12}' }
                 },
                 'meta keyword': {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'meta string': {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{palette.blue.65}' }
+                    background: { value: '' },
+                    color: { value: '{plt.blue.12}' }
                 },
                 'meta.prompt': {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 name: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{palette.blue.65}' }
+                    background: { value: '' },
+                    color: { value: '{plt.blue.12}' }
                 },
                 number: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{palette.purple.60}' }
+                    background: { value: '' },
+                    color: { value: '{plt.purple.13}' }
                 },
                 operator: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 params: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 property: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 punctuation: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 quote: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 regexp: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{palette.green.40}' }
+                    background: { value: '' },
+                    color: { value: '{plt.green.14}' }
                 },
                 section: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'selector-attr': {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'selector-class': {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'selector-id': {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'selector-pseudo': {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'selector-tag': {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{palette.blue.65}' }
+                    background: { value: '' },
+                    color: { value: '{plt.blue.12}' }
                 },
                 string: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{palette.green.40}' }
+                    background: { value: '' },
+                    color: { value: '{plt.green.14}' }
                 },
                 strong: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 subst: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 symbol: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{palette.blue.65}' }
+                    background: { value: '' },
+                    color: { value: '{plt.blue.12}' }
                 },
                 tag: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'template-tag': {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'template-variable': {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 title: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{palette.blue.65}' }
+                    background: { value: '' },
+                    color: { value: '{plt.blue.12}' }
                 },
                 'title.class': {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'title.class.inherited': {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'title.function': {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'title.function.invoke': {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 type: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 variable: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'variable-constant': {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 },
                 'variable-language': {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' },
-                    color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '' }
+                    background: { value: '' },
+                    color: { value: '' }
                 }
             }
         }
