@@ -10,6 +10,7 @@ require('./transforms/attribute/font')(StyleDictionary);
 require('./transforms/attribute/theme')(StyleDictionary);
 require('./transforms/attribute/scss-value')(StyleDictionary);
 require('./transforms/attribute/deprecation-comment')(StyleDictionary);
+require('./transforms/name/custom-kebab')(StyleDictionary);
 
 // ==== Include custom filters ====
 require('./filters/palette')(StyleDictionary);

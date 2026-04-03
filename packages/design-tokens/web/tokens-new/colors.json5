@@ -1,0 +1,960 @@
+{
+    "light": {
+        "theme": {
+            "default": {
+                "value": "{palette.blue.50}",
+                "deprecated": true
+            },
+            "palette": {
+                "value": "{palette.blue}"
+            }
+        },
+        "success": {
+            "default": {
+                "value": "{palette.green.50}",
+                "deprecated": true
+            },
+            "palette": {
+                "value": "{palette.green}"
+            }
+        },
+        "warning": {
+            "default": {
+                "value": "{palette.yellow.35}",
+                "deprecated": true
+            },
+            "palette": {
+                "value": "{palette.yellow}"
+            }
+        },
+        "error": {
+            "default": {
+                "value": "{palette.red.50}",
+                "deprecated": true
+            },
+            "palette": {
+                "value": "{palette.red}"
+            }
+        },
+        "contrast": {
+            "default": {
+                "value": "{palette.grey.50}",
+                "deprecated": true
+            },
+            "palette": {
+                "value": "{palette.grey}"
+            }
+        },
+        "white": {
+            "default": {
+                "value": "{palette.white.default}",
+                "deprecated": true
+            },
+            "palette": {
+                "value": "{palette.white}"
+            }
+        },
+        "black": {
+            "default": {
+                "value": "{palette.black.default}",
+                "deprecated": true
+            },
+            "palette": {
+                "value": "{palette.black}"
+            }
+        },
+        "purple": {
+            "default": {
+                "value": "{palette.purple.50}",
+                "deprecated": true
+            },
+            "palette": {
+                "value": "{palette.purple}"
+            }
+        },
+        "background": {
+            "bg": {
+                "value": "{plt.white}"
+            },
+            "bg-secondary": {
+                "value": "{semantic.contrast.1}"
+            },
+            "bg-tertiary": {
+                "value": "{semantic.contrast.2}"
+            },
+            "night": {
+                "value": "{semantic.contrast.18}"
+            },
+            "card": {
+                "value": "{light.background.bg}"
+            },
+            "theme": {
+                "value": "{semantic.themeA.14}"
+            },
+            "theme-fade": {
+                "value": "{semantic.themeA.3}"
+            },
+            "theme-less": {
+                "value": "{semantic.themeA.2}"
+            },
+            "contrast": {
+                "value": "{semantic.contrastA.19}"
+            },
+            "contrast-fade": {
+                "value": "{semantic.contrastA.3}"
+            },
+            "contrast-less": {
+                "value": "{semantic.contrastA.2}"
+            },
+            "error": {
+                "value": "{semantic.errorA.14}"
+            },
+            "error-fade": {
+                "value": "{semantic.errorA.3}"
+            },
+            "error-less": {
+                "value": "{semantic.errorA.2}"
+            },
+            "success": {
+                "value": "{semantic.successA.14}"
+            },
+            "success-fade": {
+                "value": "{semantic.successA.3}"
+            },
+            "success-less": {
+                "value": "{semantic.successA.2}"
+            },
+            "warning": {
+                "value": "{semantic.warningFixedA.14}"
+            },
+            "warning-fade": {
+                "value": "{semantic.warningFixedA.3}"
+            },
+            "warning-less": {
+                "value": "{semantic.warningFixedA.2}"
+            },
+            "transparent": {
+                "value": "#00000000"
+            },
+            "overlay": {
+                "value": "{semantic.contrastA.17}"
+            },
+            "overlay-inverse": {
+                "value": "{plt.whiteA.20}"
+            },
+            "overlay-error": {
+                "value": "{semantic.errorA.17}"
+            },
+            "overlay-theme": {
+                "value": "{semantic.themeA.17}"
+            }
+        },
+        "foreground": {
+            "white": {
+                "value": "{plt.white}"
+            },
+            "white-secondary": {
+                "value": "{plt.whiteA.16}"
+            },
+            "theme": {
+                "value": "{semantic.themeA.16}"
+            },
+            "theme-secondary": {
+                "value": "{semantic.themeA.13}"
+            },
+            "contrast": {
+                "value": "{semantic.contrastA.20}"
+            },
+            "on-contrast": {
+                "value": "{plt.white}"
+            },
+            "contrast-secondary": {
+                "value": "{semantic.contrastA.16}"
+            },
+            "contrast-tertiary": {
+                "value": "{semantic.contrastA.13}"
+            },
+            "error": {
+                "value": "{semantic.errorA.16}"
+            },
+            "error-secondary": {
+                "value": "{semantic.errorA.13}"
+            },
+            "error-tertiary": {
+                "value": "{semantic.errorA.11}"
+            },
+            "error-less": {
+                "value": "{semantic.errorA.11}"
+            },
+            "success": {
+                "value": "{semantic.successA.16}"
+            },
+            "success-less": {
+                "value": "{semantic.successA.2}"
+            },
+            "success-secondary": {
+                "value": "{semantic.successA.13}"
+            },
+            "warning": {
+                "value": "{semantic.warningA.16}"
+            },
+            "warning-secondary": {
+                "value": "{semantic.warningA.13}"
+            },
+            "visited": {
+                "value": "{semantic.visitedA.16}"
+            }
+        },
+        "icon": {
+            "white": {
+                "value": "{plt.white}"
+            },
+            "theme": {
+                "value": "{semantic.themeA.14}"
+            },
+            "theme-fade": {
+                "value": "{semantic.themeA.10}"
+            },
+            "contrast": {
+                "value": "{semantic.contrastA.20}"
+            },
+            "on-contrast": {
+                "value": "{plt.white}"
+            },
+            "contrast-fade": {
+                "value": "{semantic.contrastA.10}"
+            },
+            "error": {
+                "value": "{semantic.errorA.14}"
+            },
+            "success": {
+                "value": "{semantic.successA.14}"
+            },
+            "warning": {
+                "value": "{semantic.warningFixedA.15}"
+            },
+            "visited": {
+                "value": "{semantic.visitedA.14}"
+            }
+        },
+        "line": {
+            "theme": {
+                "value": "{semantic.themeA.13}"
+            },
+            "theme-fade": {
+                "value": "{semantic.themeA.7}"
+            },
+            "theme-less": {
+                "value": "{semantic.themeA.4}"
+            },
+            "contrast": {
+                "value": "{semantic.contrastA.20}"
+            },
+            "contrast-fade": {
+                "value": "{semantic.contrastA.7}"
+            },
+            "contrast-less": {
+                "value": "{semantic.contrastA.4}"
+            },
+            "error": {
+                "value": "{semantic.errorA.13}"
+            },
+            "error-fade": {
+                "value": "{semantic.errorA.7}"
+            },
+            "success": {
+                "value": "{semantic.successA.13}"
+            },
+            "success-fade": {
+                "value": "{semantic.successA.7}"
+            },
+            "warning": {
+                "value": "{semantic.warningA.13}"
+            },
+            "warning-fade": {
+                "value": "{semantic.warningA.7}"
+            },
+            "visited": {
+                "value": "{semantic.visitedA.13}"
+            }
+        },
+        "shadow": {
+            "outline": {
+                "value": "{semantic.contrastA.1}"
+            },
+            "key": {
+                "value": "{semantic.contrastA.4}"
+            },
+            "ambient": {
+                "value": "{semantic.contrastA.4}"
+            }
+        },
+        "opacity": {
+            "disabled": {
+                "value": "0.5"
+            }
+        },
+        "states": {
+            "background": {
+                "theme-hover": {
+                    "value": "{semantic.themeA.15}"
+                },
+                "theme-active": {
+                    "value": "{semantic.themeA.16}"
+                },
+                "theme-fade-hover": {
+                    "value": "{semantic.themeA.4}"
+                },
+                "theme-fade-active": {
+                    "value": "{semantic.themeA.5}"
+                },
+                "theme-less-hover": {
+                    "value": "{semantic.themeA.3}"
+                },
+                "theme-less-active": {
+                    "value": "{semantic.themeA.4}"
+                },
+                "contrast-hover": {
+                    "value": "{semantic.contrastA.18}"
+                },
+                "contrast-active": {
+                    "value": "{semantic.contrastA.17}"
+                },
+                "contrast-fade-hover": {
+                    "value": "{semantic.contrastA.4}"
+                },
+                "contrast-fade-active": {
+                    "value": "{semantic.contrastA.5}"
+                },
+                "contrast-less-hover": {
+                    "value": "{semantic.contrastA.3}"
+                },
+                "contrast-less-active": {
+                    "value": "{semantic.contrastA.4}"
+                },
+                "error-hover": {
+                    "value": "{semantic.errorA.15}"
+                },
+                "error-active": {
+                    "value": "{semantic.errorA.16}"
+                },
+                "error-fade-hover": {
+                    "value": "{semantic.errorA.4}"
+                },
+                "error-fade-active": {
+                    "value": "{semantic.errorA.5}"
+                },
+                "error-less-hover": {
+                    "value": "{semantic.errorA.3}"
+                },
+                "error-less-active": {
+                    "value": "{semantic.errorA.4}"
+                },
+                "success-hover": {
+                    "value": "{semantic.successA.15}"
+                },
+                "success-active": {
+                    "value": "{semantic.successA.16}"
+                },
+                "success-fade-hover": {
+                    "value": "{semantic.successA.4}"
+                },
+                "success-fade-active": {
+                    "value": "{semantic.successA.5}"
+                },
+                "success-less-hover": {
+                    "value": "{semantic.successA.3}"
+                },
+                "success-less-active": {
+                    "value": "{semantic.successA.4}"
+                },
+                "warning-fade-hover": {
+                    "value": "{semantic.warningFixedA.8}"
+                },
+                "warning-fade-active": {
+                    "value": "{semantic.warningFixedA.10}"
+                },
+                "warning-less-hover": {
+                    "value": "{semantic.warningA.3}"
+                },
+                "warning-less-active": {
+                    "value": "{semantic.warningA.4}"
+                },
+                "disabled": {
+                    "value": "{semantic.contrastA.2}"
+                },
+                "transparent-hover": {
+                    "value": "{semantic.contrastA.2}"
+                },
+                "transparent-active": {
+                    "value": "{semantic.contrastA.3}"
+                },
+                "error-less": {
+                    "value": "{semantic.errorA.3}",
+                    "deprecated": "Используйте background-error-less"
+                }
+            },
+            "foreground": {
+                "theme-hover": {
+                    "value": "{semantic.themeA.17}"
+                },
+                "theme-active": {
+                    "value": "{semantic.themeA.18}"
+                },
+                "disabled": {
+                    "value": "{semantic.contrastA.11}"
+                },
+                "visited-hover": {
+                    "value": "{semantic.visitedA.17}"
+                },
+                "visited-active": {
+                    "value": "{semantic.visitedA.18}"
+                }
+            },
+            "icon": {
+                "theme-hover": {
+                    "value": "{semantic.themeA.15}"
+                },
+                "theme-active": {
+                    "value": "{semantic.themeA.15}"
+                },
+                "disabled": {
+                    "value": "{semantic.contrastA.7}"
+                },
+                "contrast-hover": {
+                    "value": "{semantic.contrastA.19}"
+                },
+                "contrast-active": {
+                    "value": "{semantic.contrastA.16}"
+                },
+                "contrast-fade-hover": {
+                    "value": "{semantic.contrastA.11}"
+                },
+                "contrast-fade-active": {
+                    "value": "{semantic.contrastA.16}"
+                },
+                "error-hover": {
+                    "value": "{semantic.errorA.15}"
+                },
+                "error-active": {
+                    "value": "{semantic.errorA.16}"
+                },
+                "success-hover": {
+                    "value": "{semantic.successA.15}"
+                },
+                "success-active": {
+                    "value": "{semantic.successA.16}"
+                },
+                "warning-hover": {
+                    "value": "{semantic.warningA.15}"
+                },
+                "warning-active": {
+                    "value": "{semantic.warningA.16}"
+                },
+                "visited-hover": {
+                    "value": "{semantic.visitedA.15}"
+                },
+                "visited-active": {
+                    "value": "{semantic.visitedA.16}"
+                }
+            },
+            "line": {
+                "focus": {
+                    "value": "{semantic.themeA.16}"
+                },
+                "focus-theme": {
+                    "value": "{semantic.themeA.13}"
+                },
+                "disabled": {
+                    "value": "{semantic.contrastA.4}"
+                },
+                "focus-error": {
+                    "value": "{semantic.errorA.13}"
+                }
+            },
+            "disabled-opacity": {
+                "value": "0.5",
+                "deprecated": "Use --kbq-opacity-disabled"
+            }
+        }
+    },
+    "dark": {
+        "theme": {
+            "default": {
+                "value": "{palette.blue.50}",
+                "deprecated": true
+            },
+            "palette": {
+                "value": "{palette.blue}"
+            }
+        },
+        "success": {
+            "default": {
+                "value": "{palette.green.50}",
+                "deprecated": true
+            },
+            "palette": {
+                "value": "{palette.green}"
+            }
+        },
+        "warning": {
+            "default": {
+                "value": "{palette.yellow.35}",
+                "deprecated": true
+            },
+            "palette": {
+                "value": "{palette.yellow}"
+            }
+        },
+        "error": {
+            "default": {
+                "value": "{palette.red.50}",
+                "deprecated": true
+            },
+            "palette": {
+                "value": "{palette.red}"
+            }
+        },
+        "contrast": {
+            "default": {
+                "value": "{palette.grey.50}",
+                "deprecated": true
+            },
+            "palette": {
+                "value": "{palette.grey}"
+            }
+        },
+        "white": {
+            "default": {
+                "value": "{palette.white.default}",
+                "deprecated": true
+            },
+            "palette": {
+                "value": "{palette.white}"
+            }
+        },
+        "black": {
+            "default": {
+                "value": "{palette.black.default}",
+                "deprecated": true
+            },
+            "palette": {
+                "value": "{palette.black}"
+            }
+        },
+        "purple": {
+            "default": {
+                "value": "{palette.purple.50}",
+                "deprecated": true
+            },
+            "palette": {
+                "value": "{palette.purple}"
+            }
+        },
+        "background": {
+            "bg": {
+                "value": "{semantic.darkContrast.1}"
+            },
+            "bg-secondary": {
+                "value": "{semantic.darkContrast.2}"
+            },
+            "bg-tertiary": {
+                "value": "{semantic.darkContrast.3}"
+            },
+            "night": {
+                "value": "{semantic.darkContrast.6}"
+            },
+            "card": {
+                "value": "{semantic.darkContrast.2}"
+            },
+            "theme": {
+                "value": "{semantic.darkThemeA.11}"
+            },
+            "theme-fade": {
+                "value": "{semantic.darkThemeA.5}"
+            },
+            "theme-less": {
+                "value": "{semantic.darkThemeA.3}"
+            },
+            "contrast": {
+                "value": "{semantic.darkContrastA.18}"
+            },
+            "contrast-fade": {
+                "value": "{semantic.darkContrastA.5}"
+            },
+            "contrast-less": {
+                "value": "{semantic.darkContrastA.3}"
+            },
+            "error": {
+                "value": "{semantic.darkErrorA.11}"
+            },
+            "error-fade": {
+                "value": "{semantic.darkErrorA.5}"
+            },
+            "error-less": {
+                "value": "{semantic.darkErrorA.3}"
+            },
+            "success": {
+                "value": "{semantic.darkSuccessA.11}"
+            },
+            "success-fade": {
+                "value": "{semantic.darkSuccessA.5}"
+            },
+            "success-less": {
+                "value": "{semantic.darkSuccessA.3}"
+            },
+            "warning": {
+                "value": "{semantic.darkWarningA.11}"
+            },
+            "warning-fade": {
+                "value": "{semantic.darkWarningFixedA.4}"
+            },
+            "warning-less": {
+                "value": "{semantic.darkWarningA.3}"
+            },
+            "transparent": {
+                "value": "#00000000"
+            },
+            "overlay": {
+                "value": "{plt.blackA.18}"
+            },
+            "overlay-inverse": {
+                "value": "{plt.blackA.18}"
+            },
+            "overlay-error": {
+                "value": "{semantic.darkErrorA.18}"
+            },
+            "overlay-theme": {
+                "value": "{semantic.darkThemeA.18}"
+            }
+        },
+        "foreground": {
+            "white": {
+                "value": "{plt.white}"
+            },
+            "white-secondary": {
+                "value": "{plt.whiteA.17}"
+            },
+            "theme": {
+                "value": "{semantic.darkThemeA.14}"
+            },
+            "theme-secondary": {
+                "value": "{semantic.darkThemeA.11}"
+            },
+            "contrast": {
+                "value": "{semantic.darkContrastA.19}"
+            },
+            "on-contrast": {
+                "value": "{plt.black}"
+            },
+            "contrast-secondary": {
+                "value": "{semantic.darkContrastA.14}"
+            },
+            "contrast-tertiary": {
+                "value": "{semantic.darkContrastA.11}"
+            },
+            "error": {
+                "value": "{semantic.darkErrorA.14}"
+            },
+            "error-secondary": {
+                "value": "{semantic.darkErrorA.11}"
+            },
+            "error-tertiary": {
+                "value": "{semantic.darkErrorA.9}"
+            },
+            "error-less": {
+                "value": "{semantic.darkErrorA.9}"
+            },
+            "success": {
+                "value": "{semantic.darkSuccessA.14}"
+            },
+            "success-less": {
+                "value": "{semantic.darkSuccessA.19}"
+            },
+            "success-secondary": {
+                "value": "{semantic.darkSuccessA.11}"
+            },
+            "warning": {
+                "value": "{semantic.darkWarningA.14}"
+            },
+            "warning-secondary": {
+                "value": "{semantic.darkWarningA.11}"
+            },
+            "visited": {
+                "value": "{semantic.darkVisitedA.14}"
+            }
+        },
+        "icon": {
+            "white": {
+                "value": "{plt.white}"
+            },
+            "theme": {
+                "value": "{semantic.darkThemeA.11}"
+            },
+            "theme-fade": {
+                "value": "{semantic.darkThemeA.11}"
+            },
+            "contrast": {
+                "value": "{semantic.darkContrastA.18}"
+            },
+            "on-contrast": {
+                "value": "{plt.black}"
+            },
+            "contrast-fade": {
+                "value": "{semantic.darkContrastA.11}"
+            },
+            "error": {
+                "value": "{semantic.darkErrorA.11}"
+            },
+            "success": {
+                "value": "{semantic.darkSuccessA.11}"
+            },
+            "warning": {
+                "value": "{semantic.darkWarningA.11}"
+            },
+            "visited": {
+                "value": "{semantic.darkVisitedA.11}"
+            }
+        },
+        "line": {
+            "theme": {
+                "value": "{semantic.darkThemeA.11}"
+            },
+            "theme-fade": {
+                "value": "{semantic.darkThemeA.8}"
+            },
+            "theme-less": {
+                "value": "{semantic.darkThemeA.5}"
+            },
+            "contrast": {
+                "value": "{semantic.darkContrastA.18}"
+            },
+            "contrast-fade": {
+                "value": "{semantic.darkContrastA.8}"
+            },
+            "contrast-less": {
+                "value": "{semantic.darkContrastA.5}"
+            },
+            "error": {
+                "value": "{semantic.darkErrorA.11}"
+            },
+            "error-fade": {
+                "value": "{semantic.darkErrorA.8}"
+            },
+            "success": {
+                "value": "{semantic.darkSuccessA.11}"
+            },
+            "success-fade": {
+                "value": "{semantic.darkSuccessA.8}"
+            },
+            "warning": {
+                "value": "{semantic.darkWarningA.11}"
+            },
+            "warning-fade": {
+                "value": "{semantic.darkWarningA.8}"
+            },
+            "visited": {
+                "value": "{semantic.darkVisitedA.11}"
+            }
+        },
+        "shadow": {
+            "outline": {
+                "value": "{semantic.darkContrastA.6}"
+            },
+            "key": {
+                "value": "#00000000"
+            },
+            "ambient": {
+                "value": "#00000000"
+            }
+        },
+        "opacity": {
+            "disabled": {
+                "value": "0.5"
+            }
+        },
+        "states": {
+            "background": {
+                "theme-hover": {
+                    "value": "{semantic.darkThemeA.12}"
+                },
+                "theme-active": {
+                    "value": "{semantic.darkThemeA.13}"
+                },
+                "theme-fade-hover": {
+                    "value": "{semantic.darkThemeA.6}"
+                },
+                "theme-fade-active": {
+                    "value": "{semantic.darkThemeA.7}"
+                },
+                "theme-less-hover": {
+                    "value": "{semantic.darkThemeA.4}"
+                },
+                "theme-less-active": {
+                    "value": "{semantic.darkThemeA.5}"
+                },
+                "contrast-hover": {
+                    "value": "{semantic.darkContrastA.19}"
+                },
+                "contrast-active": {
+                    "value": "{semantic.darkContrastA.20}"
+                },
+                "contrast-fade-hover": {
+                    "value": "{semantic.darkContrastA.6}"
+                },
+                "contrast-fade-active": {
+                    "value": "{semantic.darkContrastA.7}"
+                },
+                "contrast-less-hover": {
+                    "value": "{semantic.darkContrastA.4}"
+                },
+                "contrast-less-active": {
+                    "value": "{semantic.darkContrastA.5}"
+                },
+                "error-hover": {
+                    "value": "{semantic.darkErrorA.12}"
+                },
+                "error-active": {
+                    "value": "{semantic.darkErrorA.13}"
+                },
+                "error-fade-hover": {
+                    "value": "{semantic.darkErrorA.6}"
+                },
+                "error-fade-active": {
+                    "value": "{semantic.darkErrorA.7}"
+                },
+                "error-less-hover": {
+                    "value": "{semantic.darkErrorA.4}"
+                },
+                "error-less-active": {
+                    "value": "{semantic.darkErrorA.5}"
+                },
+                "warning-fade-hover": {
+                    "value": "{semantic.darkWarningA.6}"
+                },
+                "warning-fade-active": {
+                    "value": "{semantic.darkWarningA.7}"
+                },
+                "warning-less-hover": {
+                    "value": "{semantic.darkWarningA.4}"
+                },
+                "warning-less-active": {
+                    "value": "{semantic.darkWarningA.5}"
+                },
+                "success-hover": {
+                    "value": "{semantic.darkSuccessA.12}"
+                },
+                "success-active": {
+                    "value": "{semantic.darkSuccessA.13}"
+                },
+                "success-fade-hover": {
+                    "value": "{semantic.darkSuccessA.6}"
+                },
+                "success-fade-active": {
+                    "value": "{semantic.darkSuccessA.7}"
+                },
+                "success-less-hover": {
+                    "value": "{semantic.darkSuccessA.4}"
+                },
+                "success-less-active": {
+                    "value": "{semantic.darkSuccessA.5}"
+                },
+                "disabled": {
+                    "value": "{semantic.darkContrastA.3}"
+                },
+                "transparent-hover": {
+                    "value": "{semantic.darkContrastA.4}"
+                },
+                "transparent-active": {
+                    "value": "{semantic.darkContrastA.5}"
+                },
+                "error-less": {
+                    "value": "{semantic.darkErrorA.4}",
+                    "deprecated": "Используйте background-error-less"
+                }
+            },
+            "foreground": {
+                "theme-hover": {
+                    "value": "{semantic.darkThemeA.15}"
+                },
+                "theme-active": {
+                    "value": "{semantic.darkThemeA.16}"
+                },
+                "disabled": {
+                    "value": "{semantic.darkContrastA.9}"
+                },
+                "visited-hover": {
+                    "value": "{semantic.darkVisitedA.15}"
+                },
+                "visited-active": {
+                    "value": "{semantic.darkVisitedA.16}"
+                }
+            },
+            "icon": {
+                "theme-hover": {
+                    "value": "{semantic.darkThemeA.12}"
+                },
+                "theme-active": {
+                    "value": "{semantic.darkThemeA.12}"
+                },
+                "contrast-hover": {
+                    "value": "{semantic.darkContrastA.19}"
+                },
+                "contrast-active": {
+                    "value": "{semantic.darkContrastA.13}"
+                },
+                "contrast-fade-hover": {
+                    "value": "{semantic.darkContrastA.12}"
+                },
+                "contrast-fade-active": {
+                    "value": "{semantic.darkContrastA.13}"
+                },
+                "disabled": {
+                    "value": "{semantic.darkContrastA.9}"
+                },
+                "error-hover": {
+                    "value": "{semantic.darkErrorA.12}"
+                },
+                "error-active": {
+                    "value": "{semantic.darkErrorA.13}"
+                },
+                "success-hover": {
+                    "value": "{semantic.darkSuccessA.12}"
+                },
+                "success-active": {
+                    "value": "{semantic.darkSuccessA.13}"
+                },
+                "warning-hover": {
+                    "value": "{semantic.darkWarningA.12}"
+                },
+                "warning-active": {
+                    "value": "{semantic.darkWarningA.13}"
+                },
+                "visited-hover": {
+                    "value": "{semantic.darkVisitedA.12}"
+                },
+                "visited-active": {
+                    "value": "{semantic.darkVisitedA.13}"
+                }
+            },
+            "line": {
+                "focus": {
+                    "value": "{semantic.darkThemeA.10}"
+                },
+                "focus-theme": {
+                    "value": "{semantic.darkThemeA.11}"
+                },
+                "disabled": {
+                    "value": "{semantic.darkContrastA.5}"
+                },
+                "focus-error": {
+                    "value": "{semantic.darkErrorA.11}"
+                }
+            },
+            "disabled-opacity": {
+                "value": "0.5",
+                "deprecated": "Use --kbq-opacity-disabled"
+            }
+        }
+    }
+}

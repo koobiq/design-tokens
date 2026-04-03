@@ -7,7 +7,7 @@ module.exports = (StyleDictionary) => {
             'kbq-attribute/font',
             'kbq-attribute/light',
             'kbq-attribute/dark',
-            'name/cti/kebab',
+            'name/custom-kebab',
             'color/css',
             'kbq/prefix',
             'kbq-attribute/comment'
