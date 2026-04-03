@@ -146,7 +146,10 @@ const semanticPaletteConfig = semanticPaletteColors.map((color) => ({
         token.attributes.light &&
         token.attributes.type === color &&
         (token.attributes.palette || token.name.includes('default')),
-    prefix: 'kbq'
+    prefix: 'kbq',
+    options: {
+        outputReferences: true
+    }
 }));
 
 const newSemanticPaletteConfig = newSemanticPaletteColors.map((color) => ({
@@ -177,6 +180,7 @@ module.exports = {
                     selector: '.kbq-light'
                 }
             },
+            // deprecated
             {
                 destination: 'css/dark/semantic-palette.css',
                 format: 'kbq-css/palette',
@@ -198,7 +202,8 @@ module.exports = {
                     !semanticPaletteColors.includes(token.attributes.type),
                 prefix: 'kbq',
                 options: {
-                    selector: '.kbq-light'
+                    selector: '.kbq-light',
+                    outputReferences: true
                 }
             },
             {
@@ -210,7 +215,8 @@ module.exports = {
                     !semanticPaletteColors.includes(token.attributes.type),
                 prefix: 'kbq',
                 options: {
-                    selector: '.kbq-dark'
+                    selector: '.kbq-dark',
+                    outputReferences: true
                 }
             },
             {

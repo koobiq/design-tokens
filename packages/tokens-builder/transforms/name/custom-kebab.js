@@ -4,7 +4,12 @@ module.exports = (StyleDictionary) => {
         type: 'name',
         transformer: (token) => {
             const standardKebab = token.path
-                .map((part) => part.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase())
+                .map((part) =>
+                    part
+                        .replace(/([a-z])([A-Z])/g, '$1-$2')
+                        .replace(/"/g, '')
+                        .toLowerCase()
+                )
                 .join('-');
 
             // for alpha colors, remove the dash between 'a' and the index
