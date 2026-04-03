@@ -349,8 +349,8 @@
             },
             hljs: {
                 addition: {
-                    background: { value: '{plt.green.2}' },
-                    color: { value: '{plt.green.17}' }
+                    background: { value: '{plt.greenA.2}' },
+                    color: { value: '{plt.greenA.16}' }
                 },
                 attr: {
                     background: { value: '' },
@@ -362,7 +362,7 @@
                 },
                 built_in: {
                     background: { value: '' },
-                    color: { value: '' }
+                    color: { value: '{plt.blueA.16}' }
                 },
                 bullet: {
                     background: { value: '' },
@@ -382,11 +382,11 @@
                 },
                 comment: {
                     background: { value: '' },
-                    color: { value: '{plt.slate.13}' }
+                    color: { value: '{plt.slateA.16}' }
                 },
                 deletion: {
-                    background: { value: '{plt.red.2}' },
-                    color: { value: '{plt.red.18}' }
+                    background: { value: '{plt.redA.2}' },
+                    color: { value: '{plt.redA.16}' }
                 },
                 doctag: {
                     background: { value: '' },
@@ -417,11 +417,11 @@
                 },
                 literal: {
                     background: { value: '' },
-                    color: { value: '{plt.purple.18}' }
+                    color: { value: '{plt.purpleA.16}' }
                 },
                 meta: {
                     background: { value: '' },
-                    color: { value: '{plt.blue.18}' }
+                    color: { value: '{plt.blueA.16}' }
                 },
                 'meta keyword': {
                     background: { value: '' },
@@ -429,7 +429,7 @@
                 },
                 'meta string': {
                     background: { value: '' },
-                    color: { value: '{plt.blue.18}' }
+                    color: { value: '{plt.blueA.16}' }
                 },
                 'meta.prompt': {
                     background: { value: '' },
@@ -437,11 +437,11 @@
                 },
                 name: {
                     background: { value: '' },
-                    color: { value: '{plt.blue.18}' }
+                    color: { value: '{plt.blueA.16}' }
                 },
                 number: {
                     background: { value: '' },
-                    color: { value: '{plt.purple.18}' }
+                    color: { value: '{plt.purpleA.16}' }
                 },
                 operator: {
                     background: { value: '' },
@@ -465,7 +465,7 @@
                 },
                 regexp: {
                     background: { value: '' },
-                    color: { value: '{plt.green.17}' }
+                    color: { value: '{plt.greenA.16}' }
                 },
                 section: {
                     background: { value: '' },
@@ -489,11 +489,11 @@
                 },
                 'selector-tag': {
                     background: { value: '' },
-                    color: { value: '{plt.blue.18}' }
+                    color: { value: '{plt.blueA.16}' }
                 },
                 string: {
                     background: { value: '' },
-                    color: { value: '{plt.green.17}' }
+                    color: { value: '{plt.greenA.16}' }
                 },
                 strong: {
                     background: { value: '' },
@@ -505,7 +505,7 @@
                 },
                 symbol: {
                     background: { value: '' },
-                    color: { value: '{plt.blue.18}' }
+                    color: { value: '{plt.blueA.16}' }
                 },
                 tag: {
                     background: { value: '' },
@@ -521,7 +521,7 @@
                 },
                 title: {
                     background: { value: '' },
-                    color: { value: '{plt.blue.18}' }
+                    color: { value: '{plt.blueA.16}' }
                 },
                 'title.class': {
                     background: { value: '' },
@@ -618,8 +618,8 @@
             },
             hljs: {
                 addition: {
-                    background: { value: '{plt.green.2}' },
-                    color: { value: '{plt.green.17}' }
+                    background: { value: '{plt.darkGreenA.5}' },
+                    color: { value: '{plt.darkGreenA.14}' }
                 },
                 attr: {
                     background: { value: '' },
@@ -631,7 +631,7 @@
                 },
                 built_in: {
                     background: { value: '' },
-                    color: { value: '' }
+                    color: { value: '{plt.darkBlueA.14}' }
                 },
                 bullet: {
                     background: { value: '' },
@@ -651,11 +651,11 @@
                 },
                 comment: {
                     background: { value: '' },
-                    color: { value: '{plt.slate.13}' }
+                    color: { value: '{plt.darkSlateA.14}' }
                 },
                 deletion: {
-                    background: { value: '{plt.red.2}' },
-                    color: { value: '{plt.red.18}' }
+                    background: { value: '{plt.darkRedA.5}' },
+                    color: { value: '{plt.darkRedA.14}' }
                 },
                 doctag: {
                     background: { value: '' },
@@ -686,11 +686,11 @@
                 },
                 literal: {
                     background: { value: '' },
-                    color: { value: '{plt.purple.13}' }
+                    color: { value: '{plt.darkPurpleA.14}' }
                 },
                 meta: {
                     background: { value: '' },
-                    color: { value: '{plt.blue.12}' }
+                    color: { value: '{plt.darkBlueA.14}' }
                 },
                 'meta keyword': {
                     background: { value: '' },
@@ -698,7 +698,7 @@
                 },
                 'meta string': {
                     background: { value: '' },
-                    color: { value: '{plt.blue.12}' }
+                    color: { value: '{plt.darkBlueA.14}' }
                 },
                 'meta.prompt': {
                     background: { value: '' },
@@ -706,11 +706,11 @@
                 },
                 name: {
                     background: { value: '' },
-                    color: { value: '{plt.blue.12}' }
+                    color: { value: '{plt.darkBlueA.14}' }
                 },
                 number: {
                     background: { value: '' },
-                    color: { value: '{plt.purple.13}' }
+                    color: { value: '{plt.darkPurpleA.14}' }
                 },
                 operator: {
                     background: { value: '' },
@@ -734,7 +734,7 @@
                 },
                 regexp: {
                     background: { value: '' },
-                    color: { value: '{plt.green.14}' }
+                    color: { value: '{plt.darkGreenA.14}' }
                 },
                 section: {
                     background: { value: '' },
@@ -758,11 +758,11 @@
                 },
                 'selector-tag': {
                     background: { value: '' },
-                    color: { value: '{plt.blue.12}' }
+                    color: { value: '{plt.darkBlueA.14}' }
                 },
                 string: {
                     background: { value: '' },
-                    color: { value: '{plt.green.14}' }
+                    color: { value: '{plt.darkGreenA.14}' }
                 },
                 strong: {
                     background: { value: '' },
@@ -774,7 +774,7 @@
                 },
                 symbol: {
                     background: { value: '' },
-                    color: { value: '{plt.blue.12}' }
+                    color: { value: '{plt.darkBlueA.14}' }
                 },
                 tag: {
                     background: { value: '' },
@@ -790,7 +790,7 @@
                 },
                 title: {
                     background: { value: '' },
-                    color: { value: '{plt.blue.12}' }
+                    color: { value: '{plt.darkBlueA.14}' }
                 },
                 'title.class': {
                     background: { value: '' },
