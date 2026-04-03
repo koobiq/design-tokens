@@ -1,3 +1,9 @@
+# 3.16.0 (2026-04-03)
+
+### Design Tokens
+
+ * feature  added new palette ([#DS-4739](https://github.com/koobiq/design-tokens/issues/issue/DS-4739)) ([#128](https://github.com/koobiq/design-tokens/issues/128)) ([de3ef1a](https://github.com/koobiq/design-tokens/commit/de3ef1a157c8f259b5e403de56d041cef5e8e543))
+
 ## 3.15.2 (2026-02-18)
 
 ### Design Tokens
