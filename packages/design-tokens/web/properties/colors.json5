@@ -139,7 +139,8 @@
             ambient: { value: '{light.contrast.palette.value."6-A12"}' }
         },
         opacity: {
-            'disabled': { value: 0.32 }
+            'disabled': { value: 0.32 },
+            'overlay:': { value: 0.9 }
         },
         states: {
             background: {
@@ -369,7 +370,8 @@
             ambient: { value: 'transparent' }
         },
         opacity: {
-            'disabled': { value: 0.32 }
+            'disabled': { value: 0.32 },
+            'overlay:': { value: 0.9 }
         },
         states: {
             background: {
