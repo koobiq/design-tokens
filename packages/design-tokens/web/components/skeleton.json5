@@ -1,22 +1,22 @@
 {
     'skeleton': {
         light: {
-            background: { value:  '{semantic.contrastA.2}'},
+            background: { value:  '{light.contrast.palette.value."0-A8"}'},
             animation: {
                 wave: {
-                    start: { value:  'transparent'},
-                    center: { value:  '{semantic.contrastA.2}'},
-                    end: { value:  'transparent'}
+                    start: { value:  '{light.contrast.palette.value."0-A0"}'},
+                    center: { value:  '{light.contrast.palette.value."0-A8"}'},
+                    end: { value:  '{light.contrast.palette.value."0-A0"}'}
                 }
             }
         },
         dark: {
-            background: { value:  '{semantic.darkContrastA.3}'},
+            background: { value:  '{light.contrast.palette.value."100-A8"}'},
             animation: {
                 wave: {
-                    start: { value:  'transparent'},
-                    center: { value:  '{semantic.darkContrastA.3}'},
-                    end: { value:  'transparent'}
+                    start: { value:  '{light.contrast.palette.value."100-A0"}'},
+                    center: { value:  '{light.contrast.palette.value."100-A8"}'},
+                    end: { value:  '{light.contrast.palette.value."100-A0"}'}
                 }
             }
         }
