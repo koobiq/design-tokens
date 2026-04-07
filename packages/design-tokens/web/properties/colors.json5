@@ -147,6 +147,9 @@
             },
             "overlay-theme": {
                 "value": "{semantic.themeA.17}"
+            },
+            "highlight": {
+                "value": "{plt.yellowFixedA.5}"
             }
         },
         "foreground": {
@@ -392,6 +395,9 @@
                 "error-less": {
                     "value": "{semantic.errorA.3}",
                     "deprecated": "Используйте background-error-less"
+                },
+                "highlight-current": {
+                    "value": "{plt.orangeA.7}",
                 }
             },
             "foreground": {
@@ -626,6 +632,9 @@
             },
             "overlay-theme": {
                 "value": "{semantic.darkThemeA.18}"
+            },
+            "highlight": {
+                "value": "{plt.darkYellowFixedA.4}"
             }
         },
         "foreground": {
@@ -871,6 +880,9 @@
                 "error-less": {
                     "value": "{semantic.darkErrorA.4}",
                     "deprecated": "Используйте background-error-less"
+                },
+                "highlight-current": {
+                    "value": "{plt.darkOrangeA.11}",
                 }
             },
             "foreground": {
