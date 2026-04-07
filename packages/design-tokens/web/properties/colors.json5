@@ -291,7 +291,10 @@
         },
         "opacity": {
             "disabled": {
-                "value": "0.5"
+                "value": "0.5",
+            },
+            "overlay:": {
+                "value": "0.9"
             }
         },
         "states": {
@@ -771,6 +774,9 @@
         "opacity": {
             "disabled": {
                 "value": "0.5"
+            },
+            "overlay:": {
+                "value": "0.9"
             }
         },
         "states": {
