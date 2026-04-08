@@ -279,9 +279,6 @@
             },
             "night-fade": {
                 "value": "{plt.blackA.12}"
-            },
-            "warning-less": {
-                "value": "{semantic.warningFixedA.3}"
             }
         },
         "line": {
