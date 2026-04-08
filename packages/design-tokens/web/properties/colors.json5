@@ -12,7 +12,7 @@
         "success": {
             "default": {
                 "value": "{palette.green.50}",
-                "deprecated": true
+                "deprecated": "Использует --kbq-background-success"
             },
             "palette": {
                 "value": "{palette.green}"
@@ -21,7 +21,7 @@
         "warning": {
             "default": {
                 "value": "{palette.yellow.35}",
-                "deprecated": true
+                "deprecated": "Использует --kbq-background-warning"
             },
             "palette": {
                 "value": "{palette.yellow}"
@@ -30,7 +30,7 @@
         "error": {
             "default": {
                 "value": "{palette.red.50}",
-                "deprecated": true
+                "deprecated": "Использует --kbq-background-error"
             },
             "palette": {
                 "value": "{palette.red}"
@@ -39,7 +39,7 @@
         "contrast": {
             "default": {
                 "value": "{palette.grey.50}",
-                "deprecated": true
+                "deprecated": "Использует --kbq-background-contrast"
             },
             "palette": {
                 "value": "{palette.grey}"
@@ -86,7 +86,7 @@
                 "value": "{semantic.contrast.18}"
             },
             "card": {
-                "value": "{light.background.bg}"
+                "value": "{plt.white}"
             },
             "theme": {
                 "value": "{semantic.themeA.14}"
@@ -139,43 +139,34 @@
             "overlay": {
                 "value": "{semantic.contrastA.17}"
             },
-            "overlay-inverse": {
-                "value": "{plt.whiteA.20}"
+            "overlay-theme": {
+                "value": "{semantic.themeA.8}"
             },
             "overlay-error": {
-                "value": "{semantic.errorA.17}"
+                "value": "{semantic.errorA.8}"
             },
-            "overlay-theme": {
-                "value": "{semantic.themeA.17}"
+            "overlay-inverse": {
+                "value": "{plt.whiteA.18}"
             },
             "highlight": {
-                "value": "{plt.yellowFixedA.5}"
+                "value": "{plt.yellowFixedA.3}"
             }
         },
         "foreground": {
-            "white": {
-                "value": "{plt.white}"
-            },
-            "white-secondary": {
-                "value": "{plt.whiteA.16}"
-            },
-            "theme": {
-                "value": "{semantic.themeA.16}"
-            },
-            "theme-secondary": {
-                "value": "{semantic.themeA.13}"
-            },
             "contrast": {
                 "value": "{semantic.contrastA.20}"
-            },
-            "on-contrast": {
-                "value": "{plt.white}"
             },
             "contrast-secondary": {
                 "value": "{semantic.contrastA.16}"
             },
             "contrast-tertiary": {
                 "value": "{semantic.contrastA.13}"
+            },
+            "theme": {
+                "value": "{semantic.themeA.16}"
+            },
+            "theme-secondary": {
+                "value": "{semantic.themeA.13}"
             },
             "error": {
                 "value": "{semantic.errorA.16}"
@@ -187,16 +178,21 @@
                 "value": "{semantic.errorA.11}"
             },
             "error-less": {
-                "value": "{semantic.errorA.11}"
+                "value": "{semantic.errorA.11}",
+                "deprecated": "Используй foreground-error-tertiary"
             },
             "success": {
                 "value": "{semantic.successA.16}"
             },
-            "success-less": {
-                "value": "{semantic.successA.2}"
-            },
             "success-secondary": {
                 "value": "{semantic.successA.13}"
+            },
+            "success-tertiary": {
+                "value": "{semantic.successA.11}"
+            },
+            "success-less": {
+                "value": "{semantic.successA.11}",
+                "deprecated": "используй foreground-success-tertiary"
             },
             "warning": {
                 "value": "{semantic.warningA.16}"
@@ -206,11 +202,38 @@
             },
             "visited": {
                 "value": "{semantic.visitedA.16}"
+            },
+            "on-contrast": {
+                "value": "{plt.white}"
+            },
+            "on-contrast-secondary": {
+                "value": "{plt.whiteA.16}"
+            },
+            "white": {
+                "value": "{plt.white}"
+            },
+            "white-secondary": {
+                "value": "{plt.whiteA.16}"
+            },
+            "white-tertiary": {
+                "value": "{plt.whiteA.12}"
+            },
+            "night": {
+                "value": "{plt.blackA.16}"
+            },
+            "night-secondary": {
+                "value": "{plt.blackA.12}"
+            },
+            "night-tertiary": {
+                "value": "{plt.blackA.9}"
             }
         },
         "icon": {
-            "white": {
-                "value": "{plt.white}"
+            "contrast": {
+                "value": "{semantic.contrastA.20}"
+            },
+            "contrast-fade": {
+                "value": "{semantic.contrastA.14}"
             },
             "theme": {
                 "value": "{semantic.themeA.14}"
@@ -218,38 +241,47 @@
             "theme-fade": {
                 "value": "{semantic.themeA.10}"
             },
-            "contrast": {
-                "value": "{semantic.contrastA.20}"
-            },
-            "on-contrast": {
-                "value": "{plt.white}"
-            },
-            "contrast-fade": {
-                "value": "{semantic.contrastA.10}"
-            },
             "error": {
                 "value": "{semantic.errorA.14}"
             },
+            "error-fade": {
+                "value": "{semantic.errorA.10}"
+            },
             "success": {
+                "value": "{semantic.successA.14}"
+            },
+            "success-fade": {
                 "value": "{semantic.successA.14}"
             },
             "warning": {
                 "value": "{semantic.warningFixedA.15}"
             },
+            "warning-fade": {
+                "value": "{semantic.warningFixedA.6}"
+            },
             "visited": {
                 "value": "{semantic.visitedA.14}"
+            },
+            "on-contrast": {
+                "value": "{plt.white}"
+            },
+            "on-contrast-fade": {
+                "value": "{plt.whiteA.16}"
+            },
+            "white": {
+                "value": "{plt.white}"
+            },
+            "white-fade": {
+                "value": "{plt.whiteA.16}"
+            },
+            "night": {
+                "value": "{plt.blackA.16}"
+            },
+            "night-fade": {
+                "value": "{plt.blackA.12}"
             }
         },
         "line": {
-            "theme": {
-                "value": "{semantic.themeA.13}"
-            },
-            "theme-fade": {
-                "value": "{semantic.themeA.7}"
-            },
-            "theme-less": {
-                "value": "{semantic.themeA.4}"
-            },
             "contrast": {
                 "value": "{semantic.contrastA.20}"
             },
@@ -258,6 +290,15 @@
             },
             "contrast-less": {
                 "value": "{semantic.contrastA.4}"
+            },
+            "theme": {
+                "value": "{semantic.themeA.13}"
+            },
+            "theme-fade": {
+                "value": "{semantic.themeA.7}"
+            },
+            "theme-less": {
+                "value": "{semantic.themeA.4}"
             },
             "error": {
                 "value": "{semantic.errorA.13}"
@@ -279,46 +320,42 @@
             },
             "visited": {
                 "value": "{semantic.visitedA.13}"
-            }
-        },
-        "shadow": {
-            "outline": {
-                "value": "{semantic.contrastA.1}"
             },
-            "key": {
-                "value": "{semantic.contrastA.4}"
+            "visited-fade": {
+                "value": "{semantic.visitedA.7}"
             },
-            "ambient": {
-                "value": "{semantic.contrastA.4}"
-            }
-        },
-        "opacity": {
-            "disabled": {
-                "value": "0.5",
+            "on-contrast": {
+                "value": "{plt.white}"
             },
-            "overlay:": {
-                "value": "0.9"
+            "on-contrast-fade": {
+                "value": "{plt.whiteA.8}"
+            },
+            "on-contrast-less": {
+                "value": "{plt.whiteA.5}"
+            },
+            "white": {
+                "value": "{plt.white}"
+            },
+            "white-fade": {
+                "value": "{plt.whiteA.10}"
+            },
+            "white-less": {
+                "value": "{plt.whiteA.6}"
+            },
+            "night": {
+                "value": "{plt.blackA.20}"
+            },
+            "night-fade": {
+                "value": "{plt.blackA.6}"
+            },
+            "night-less": {
+                "value": "{plt.blackA.3}"
             }
         },
         "states": {
             "background": {
-                "theme-hover": {
-                    "value": "{semantic.themeA.15}"
-                },
-                "theme-active": {
-                    "value": "{semantic.themeA.16}"
-                },
-                "theme-fade-hover": {
-                    "value": "{semantic.themeA.4}"
-                },
-                "theme-fade-active": {
-                    "value": "{semantic.themeA.5}"
-                },
-                "theme-less-hover": {
-                    "value": "{semantic.themeA.3}"
-                },
-                "theme-less-active": {
-                    "value": "{semantic.themeA.4}"
+                "disabled": {
+                    "value": "{semantic.contrastA.2}"
                 },
                 "contrast-hover": {
                     "value": "{semantic.contrastA.18}"
@@ -338,6 +375,30 @@
                 "contrast-less-active": {
                     "value": "{semantic.contrastA.4}"
                 },
+                "transparent-hover": {
+                    "value": "{semantic.contrastA.2}"
+                },
+                "transparent-active": {
+                    "value": "{semantic.contrastA.3}"
+                },
+                "theme-hover": {
+                    "value": "{semantic.themeA.15}"
+                },
+                "theme-active": {
+                    "value": "{semantic.themeA.16}"
+                },
+                "theme-fade-hover": {
+                    "value": "{semantic.themeA.4}"
+                },
+                "theme-fade-active": {
+                    "value": "{semantic.themeA.5}"
+                },
+                "theme-less-hover": {
+                    "value": "{semantic.themeA.3}"
+                },
+                "theme-less-active": {
+                    "value": "{semantic.themeA.4}"
+                },
                 "error-hover": {
                     "value": "{semantic.errorA.15}"
                 },
@@ -350,11 +411,33 @@
                 "error-fade-active": {
                     "value": "{semantic.errorA.5}"
                 },
+                "error-less": {
+                    "value": "{semantic.errorA.3}",
+                    "deprecated": "Используйте background-error-tertiary"
+                },
                 "error-less-hover": {
                     "value": "{semantic.errorA.3}"
                 },
                 "error-less-active": {
                     "value": "{semantic.errorA.4}"
+                },
+                "warning-hover": {
+                    "value": "{semantic.warningFixedA.16}"
+                },
+                "warning-active": {
+                    "value": "{semantic.warningFixedA.17}"
+                },
+                "warning-fade-hover": {
+                    "value": "{semantic.warningFixedA.8}"
+                },
+                "warning-fade-active": {
+                    "value": "{semantic.warningFixedA.10}"
+                },
+                "warning-less-hover": {
+                    "value": "{semantic.warningA.3}"
+                },
+                "warning-less-active": {
+                    "value": "{semantic.warningA.4}"
                 },
                 "success-hover": {
                     "value": "{semantic.successA.15}"
@@ -374,44 +457,19 @@
                 "success-less-active": {
                     "value": "{semantic.successA.4}"
                 },
-                "warning-fade-hover": {
-                    "value": "{semantic.warningFixedA.8}"
-                },
-                "warning-fade-active": {
-                    "value": "{semantic.warningFixedA.10}"
-                },
-                "warning-less-hover": {
-                    "value": "{semantic.warningA.3}"
-                },
-                "warning-less-active": {
-                    "value": "{semantic.warningA.4}"
-                },
-                "disabled": {
-                    "value": "{semantic.contrastA.2}"
-                },
-                "transparent-hover": {
-                    "value": "{semantic.contrastA.2}"
-                },
-                "transparent-active": {
-                    "value": "{semantic.contrastA.3}"
-                },
-                "error-less": {
-                    "value": "{semantic.errorA.3}",
-                    "deprecated": "Используйте background-error-less"
-                },
                 "highlight-current": {
-                    "value": "{plt.orangeA.7}",
+                    "value": "{plt.orangeFixedA.7}"
                 }
             },
             "foreground": {
+                "disabled": {
+                    "value": "{semantic.contrastA.11}"
+                },
                 "theme-hover": {
                     "value": "{semantic.themeA.17}"
                 },
                 "theme-active": {
                     "value": "{semantic.themeA.18}"
-                },
-                "disabled": {
-                    "value": "{semantic.contrastA.11}"
                 },
                 "visited-hover": {
                     "value": "{semantic.visitedA.17}"
@@ -421,12 +479,6 @@
                 }
             },
             "icon": {
-                "theme-hover": {
-                    "value": "{semantic.themeA.15}"
-                },
-                "theme-active": {
-                    "value": "{semantic.themeA.15}"
-                },
                 "disabled": {
                     "value": "{semantic.contrastA.7}"
                 },
@@ -441,6 +493,12 @@
                 },
                 "contrast-fade-active": {
                     "value": "{semantic.contrastA.16}"
+                },
+                "theme-hover": {
+                    "value": "{semantic.themeA.15}"
+                },
+                "theme-active": {
+                    "value": "{semantic.themeA.15}"
                 },
                 "error-hover": {
                     "value": "{semantic.errorA.15}"
@@ -468,14 +526,14 @@
                 }
             },
             "line": {
+                "disabled": {
+                    "value": "{semantic.contrastA.4}"
+                },
                 "focus": {
-                    "value": "{semantic.themeA.16}"
+                    "value": "{semantic.themeA.13}"
                 },
                 "focus-theme": {
                     "value": "{semantic.themeA.13}"
-                },
-                "disabled": {
-                    "value": "{semantic.contrastA.4}"
                 },
                 "focus-error": {
                     "value": "{semantic.errorA.13}"
@@ -484,6 +542,25 @@
             "disabled-opacity": {
                 "value": "0.5",
                 "deprecated": "Use --kbq-opacity-disabled"
+            }
+        },
+        "shadow": {
+            "outline": {
+                "value": "{semantic.contrastA.1}"
+            },
+            "key": {
+                "value": "{semantic.contrastA.4}"
+            },
+            "ambient": {
+                "value": "{semantic.contrastA.4}"
+            }
+        },
+        "opacity": {
+            "disabled": {
+                "value": "0.5"
+            },
+            "overlay": {
+                "value": "0.9"
             }
         }
     },
@@ -627,43 +704,34 @@
             "overlay": {
                 "value": "{plt.blackA.18}"
             },
-            "overlay-inverse": {
-                "value": "{plt.blackA.18}"
+            "overlay-theme": {
+                "value": "{semantic.darkThemeA.18}"
             },
             "overlay-error": {
                 "value": "{semantic.darkErrorA.18}"
             },
-            "overlay-theme": {
-                "value": "{semantic.darkThemeA.18}"
+            "overlay-inverse": {
+                "value": "{plt.blackA.18}"
             },
             "highlight": {
-                "value": "{plt.darkYellowFixedA.4}"
+                "value": "{plt.darkYellowA.5}"
             }
         },
         "foreground": {
-            "white": {
-                "value": "{plt.white}"
-            },
-            "white-secondary": {
-                "value": "{plt.whiteA.17}"
-            },
-            "theme": {
-                "value": "{semantic.darkThemeA.14}"
-            },
-            "theme-secondary": {
-                "value": "{semantic.darkThemeA.11}"
-            },
             "contrast": {
                 "value": "{semantic.darkContrastA.19}"
-            },
-            "on-contrast": {
-                "value": "{plt.black}"
             },
             "contrast-secondary": {
                 "value": "{semantic.darkContrastA.14}"
             },
             "contrast-tertiary": {
                 "value": "{semantic.darkContrastA.11}"
+            },
+            "theme": {
+                "value": "{semantic.darkThemeA.14}"
+            },
+            "theme-secondary": {
+                "value": "{semantic.darkThemeA.11}"
             },
             "error": {
                 "value": "{semantic.darkErrorA.14}"
@@ -675,16 +743,21 @@
                 "value": "{semantic.darkErrorA.9}"
             },
             "error-less": {
-                "value": "{semantic.darkErrorA.9}"
+                "value": "{semantic.darkErrorA.9}",
+                "deprecated": "Используй foreground-error-tertiary"
             },
             "success": {
                 "value": "{semantic.darkSuccessA.14}"
             },
-            "success-less": {
-                "value": "{semantic.darkSuccessA.19}"
-            },
             "success-secondary": {
                 "value": "{semantic.darkSuccessA.11}"
+            },
+            "success-tertiary": {
+                "value": "{semantic.darkSuccessA.9}"
+            },
+            "success-less": {
+                "value": "{semantic.darkSuccessA.9}",
+                "deprecated": "используй foreground-success-tertiary"
             },
             "warning": {
                 "value": "{semantic.darkWarningA.14}"
@@ -694,11 +767,38 @@
             },
             "visited": {
                 "value": "{semantic.darkVisitedA.14}"
+            },
+            "on-contrast": {
+                "value": "{plt.black}"
+            },
+            "on-contrast-secondary": {
+                "value": "{plt.blackA.9}"
+            },
+            "white": {
+                "value": "{plt.white}"
+            },
+            "white-secondary": {
+                "value": "{plt.whiteA.13}"
+            },
+            "white-tertiary": {
+                "value": "{plt.whiteA.10}"
+            },
+            "night": {
+                "value": "{plt.blackA.16}"
+            },
+            "night-secondary": {
+                "value": "{plt.blackA.12}"
+            },
+            "night-tertiary": {
+                "value": "{plt.blackA.9}"
             }
         },
         "icon": {
-            "white": {
-                "value": "{plt.white}"
+            "contrast": {
+                "value": "{semantic.darkContrastA.18}"
+            },
+            "contrast-fade": {
+                "value": "{semantic.darkContrastA.11}"
             },
             "theme": {
                 "value": "{semantic.darkThemeA.11}"
@@ -706,38 +806,47 @@
             "theme-fade": {
                 "value": "{semantic.darkThemeA.11}"
             },
-            "contrast": {
-                "value": "{semantic.darkContrastA.18}"
-            },
-            "on-contrast": {
-                "value": "{plt.black}"
-            },
-            "contrast-fade": {
-                "value": "{semantic.darkContrastA.11}"
-            },
             "error": {
+                "value": "{semantic.darkErrorA.11}"
+            },
+            "error-fade": {
                 "value": "{semantic.darkErrorA.11}"
             },
             "success": {
                 "value": "{semantic.darkSuccessA.11}"
             },
+            "success-fade": {
+                "value": "{semantic.darkSuccessA.11}"
+            },
             "warning": {
+                "value": "{semantic.darkWarningA.11}"
+            },
+            "warning-fade": {
                 "value": "{semantic.darkWarningA.11}"
             },
             "visited": {
                 "value": "{semantic.darkVisitedA.11}"
+            },
+            "on-contrast": {
+                "value": "{plt.black}"
+            },
+            "on-contrast-fade": {
+                "value": "{plt.blackA.9}"
+            },
+            "white": {
+                "value": "{plt.white}"
+            },
+            "white-fade": {
+                "value": "{plt.whiteA.13}"
+            },
+            "night": {
+                "value": "{plt.blackA.16}"
+            },
+            "night-fade": {
+                "value": "{plt.blackA.12}"
             }
         },
         "line": {
-            "theme": {
-                "value": "{semantic.darkThemeA.11}"
-            },
-            "theme-fade": {
-                "value": "{semantic.darkThemeA.8}"
-            },
-            "theme-less": {
-                "value": "{semantic.darkThemeA.5}"
-            },
             "contrast": {
                 "value": "{semantic.darkContrastA.18}"
             },
@@ -746,6 +855,15 @@
             },
             "contrast-less": {
                 "value": "{semantic.darkContrastA.5}"
+            },
+            "theme": {
+                "value": "{semantic.darkThemeA.11}"
+            },
+            "theme-fade": {
+                "value": "{semantic.darkThemeA.8}"
+            },
+            "theme-less": {
+                "value": "{semantic.darkThemeA.5}"
             },
             "error": {
                 "value": "{semantic.darkErrorA.11}"
@@ -767,46 +885,42 @@
             },
             "visited": {
                 "value": "{semantic.darkVisitedA.11}"
-            }
-        },
-        "shadow": {
-            "outline": {
-                "value": "{semantic.darkContrastA.6}"
             },
-            "key": {
-                "value": "#00000000"
+            "visited-fade": {
+                "value": "{semantic.darkVisitedA.8}"
             },
-            "ambient": {
-                "value": "#00000000"
-            }
-        },
-        "opacity": {
-            "disabled": {
-                "value": "0.5"
+            "on-contrast": {
+                "value": "{plt.blackA.18}"
             },
-            "overlay:": {
-                "value": "0.9"
+            "on-contrast-fade": {
+                "value": "{plt.blackA.6}"
+            },
+            "on-contrast-less": {
+                "value": "{plt.blackA.3}"
+            },
+            "white": {
+                "value": "{plt.white}"
+            },
+            "white-fade": {
+                "value": "{plt.whiteA.10}"
+            },
+            "white-less": {
+                "value": "{plt.whiteA.5}"
+            },
+            "night": {
+                "value": "{plt.blackA.20}"
+            },
+            "night-fade": {
+                "value": "{plt.blackA.6}"
+            },
+            "night-less": {
+                "value": "{plt.blackA.3}"
             }
         },
         "states": {
             "background": {
-                "theme-hover": {
-                    "value": "{semantic.darkThemeA.12}"
-                },
-                "theme-active": {
-                    "value": "{semantic.darkThemeA.13}"
-                },
-                "theme-fade-hover": {
-                    "value": "{semantic.darkThemeA.6}"
-                },
-                "theme-fade-active": {
-                    "value": "{semantic.darkThemeA.7}"
-                },
-                "theme-less-hover": {
-                    "value": "{semantic.darkThemeA.4}"
-                },
-                "theme-less-active": {
-                    "value": "{semantic.darkThemeA.5}"
+                "disabled": {
+                    "value": "{semantic.darkContrastA.3}"
                 },
                 "contrast-hover": {
                     "value": "{semantic.darkContrastA.19}"
@@ -826,6 +940,30 @@
                 "contrast-less-active": {
                     "value": "{semantic.darkContrastA.5}"
                 },
+                "transparent-hover": {
+                    "value": "{semantic.darkContrastA.4}"
+                },
+                "transparent-active": {
+                    "value": "{semantic.darkContrastA.5}"
+                },
+                "theme-hover": {
+                    "value": "{semantic.darkThemeA.12}"
+                },
+                "theme-active": {
+                    "value": "{semantic.darkThemeA.13}"
+                },
+                "theme-fade-hover": {
+                    "value": "{semantic.darkThemeA.6}"
+                },
+                "theme-fade-active": {
+                    "value": "{semantic.darkThemeA.7}"
+                },
+                "theme-less-hover": {
+                    "value": "{semantic.darkThemeA.4}"
+                },
+                "theme-less-active": {
+                    "value": "{semantic.darkThemeA.5}"
+                },
                 "error-hover": {
                     "value": "{semantic.darkErrorA.12}"
                 },
@@ -838,11 +976,21 @@
                 "error-fade-active": {
                     "value": "{semantic.darkErrorA.7}"
                 },
+                "error-less": {
+                    "value": "{semantic.darkErrorA.4}",
+                    "deprecated": "Используйте background-error-tertiary"
+                },
                 "error-less-hover": {
                     "value": "{semantic.darkErrorA.4}"
                 },
                 "error-less-active": {
                     "value": "{semantic.darkErrorA.5}"
+                },
+                "warning-hover": {
+                    "value": "{semantic.darkWarningA.12}"
+                },
+                "warning-active": {
+                    "value": "{semantic.darkWarningA.13}"
                 },
                 "warning-fade-hover": {
                     "value": "{semantic.darkWarningA.6}"
@@ -874,32 +1022,19 @@
                 "success-less-active": {
                     "value": "{semantic.darkSuccessA.5}"
                 },
-                "disabled": {
-                    "value": "{semantic.darkContrastA.3}"
-                },
-                "transparent-hover": {
-                    "value": "{semantic.darkContrastA.4}"
-                },
-                "transparent-active": {
-                    "value": "{semantic.darkContrastA.5}"
-                },
-                "error-less": {
-                    "value": "{semantic.darkErrorA.4}",
-                    "deprecated": "Используйте background-error-less"
-                },
                 "highlight-current": {
-                    "value": "{plt.darkOrangeA.11}",
+                    "value": "{plt.darkOrangeA.11}"
                 }
             },
             "foreground": {
+                "disabled": {
+                    "value": "{semantic.darkContrastA.9}"
+                },
                 "theme-hover": {
                     "value": "{semantic.darkThemeA.15}"
                 },
                 "theme-active": {
                     "value": "{semantic.darkThemeA.16}"
-                },
-                "disabled": {
-                    "value": "{semantic.darkContrastA.9}"
                 },
                 "visited-hover": {
                     "value": "{semantic.darkVisitedA.15}"
@@ -909,11 +1044,8 @@
                 }
             },
             "icon": {
-                "theme-hover": {
-                    "value": "{semantic.darkThemeA.12}"
-                },
-                "theme-active": {
-                    "value": "{semantic.darkThemeA.12}"
+                "disabled": {
+                    "value": "{semantic.darkContrastA.9}"
                 },
                 "contrast-hover": {
                     "value": "{semantic.darkContrastA.19}"
@@ -927,8 +1059,11 @@
                 "contrast-fade-active": {
                     "value": "{semantic.darkContrastA.13}"
                 },
-                "disabled": {
-                    "value": "{semantic.darkContrastA.9}"
+                "theme-hover": {
+                    "value": "{semantic.darkThemeA.12}"
+                },
+                "theme-active": {
+                    "value": "{semantic.darkThemeA.12}"
                 },
                 "error-hover": {
                     "value": "{semantic.darkErrorA.12}"
@@ -956,14 +1091,14 @@
                 }
             },
             "line": {
+                "disabled": {
+                    "value": "{semantic.darkContrastA.5}"
+                },
                 "focus": {
-                    "value": "{semantic.darkThemeA.10}"
+                    "value": "{semantic.darkThemeA.11}"
                 },
                 "focus-theme": {
                     "value": "{semantic.darkThemeA.11}"
-                },
-                "disabled": {
-                    "value": "{semantic.darkContrastA.5}"
                 },
                 "focus-error": {
                     "value": "{semantic.darkErrorA.11}"
@@ -972,6 +1107,25 @@
             "disabled-opacity": {
                 "value": "0.5",
                 "deprecated": "Use --kbq-opacity-disabled"
+            }
+        },
+        "shadow": {
+            "outline": {
+                "value": "{semantic.darkContrastA.6}"
+            },
+            "key": {
+                "value": "#00000000"
+            },
+            "ambient": {
+                "value": "#00000000"
+            }
+        },
+        "opacity": {
+            "disabled": {
+                "value": "0.5"
+            },
+            "overlay": {
+                "value": "0.9"
             }
         }
     }
