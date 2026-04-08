@@ -12,7 +12,7 @@
         "success": {
             "default": {
                 "value": "{palette.green.50}",
-                "deprecated": "Использует --kbq-background-success"
+                "deprecated": "use --kbq-background-success"
             },
             "palette": {
                 "value": "{palette.green}"
@@ -21,7 +21,7 @@
         "warning": {
             "default": {
                 "value": "{palette.yellow.35}",
-                "deprecated": "Использует --kbq-background-warning"
+                "deprecated": "use --kbq-background-warning"
             },
             "palette": {
                 "value": "{palette.yellow}"
@@ -30,7 +30,7 @@
         "error": {
             "default": {
                 "value": "{palette.red.50}",
-                "deprecated": "Использует --kbq-background-error"
+                "deprecated": "use --kbq-background-error"
             },
             "palette": {
                 "value": "{palette.red}"
@@ -39,7 +39,7 @@
         "contrast": {
             "default": {
                 "value": "{palette.grey.50}",
-                "deprecated": "Использует --kbq-background-contrast"
+                "deprecated": "use --kbq-background-contrast"
             },
             "palette": {
                 "value": "{palette.grey}"
@@ -179,7 +179,7 @@
             },
             "error-less": {
                 "value": "{semantic.errorA.11}",
-                "deprecated": "Используй foreground-error-tertiary"
+                "deprecated": "use foreground-error-tertiary"
             },
             "success": {
                 "value": "{semantic.successA.16}"
@@ -192,7 +192,7 @@
             },
             "success-less": {
                 "value": "{semantic.successA.11}",
-                "deprecated": "используй foreground-success-tertiary"
+                "deprecated": "use --kbq-foreground-success-tertiary"
             },
             "warning": {
                 "value": "{semantic.warningA.16}"
@@ -413,7 +413,7 @@
                 },
                 "error-less": {
                     "value": "{semantic.errorA.3}",
-                    "deprecated": "Используйте background-error-tertiary"
+                    "deprecated": "use --kbq-background-error-tertiary"
                 },
                 "error-less-hover": {
                     "value": "{semantic.errorA.3}"
@@ -744,7 +744,7 @@
             },
             "error-less": {
                 "value": "{semantic.darkErrorA.9}",
-                "deprecated": "Используй foreground-error-tertiary"
+                "deprecated": "use foreground-error-tertiary"
             },
             "success": {
                 "value": "{semantic.darkSuccessA.14}"
@@ -757,7 +757,7 @@
             },
             "success-less": {
                 "value": "{semantic.darkSuccessA.9}",
-                "deprecated": "используй foreground-success-tertiary"
+                "deprecated": "use --kbq-foreground-success-tertiary"
             },
             "warning": {
                 "value": "{semantic.darkWarningA.14}"
@@ -978,7 +978,7 @@
                 },
                 "error-less": {
                     "value": "{semantic.darkErrorA.4}",
-                    "deprecated": "Используйте background-error-tertiary"
+                    "deprecated": "useте background-error-tertiary"
                 },
                 "error-less-hover": {
                     "value": "{semantic.darkErrorA.4}"
