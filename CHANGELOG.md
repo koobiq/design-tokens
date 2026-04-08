@@ -1,3 +1,14 @@
+# 3.17.0 (2026-04-08)
+
+### Design Tokens
+
+ * bug fix  **plt:** no lightness in black alpha palette ([#DS-4897](https://github.com/koobiq/design-tokens/issues/issue/DS-4897)) ([#135](https://github.com/koobiq/design-tokens/issues/135)) ([eeaa6bc](https://github.com/koobiq/design-tokens/commit/eeaa6bc29ed2c5edc7d5041170e90860f3ad0dfe))
+ * feature  added proper file structure according to new tokens ([#133](https://github.com/koobiq/design-tokens/issues/133)) ([f2415d2](https://github.com/koobiq/design-tokens/commit/f2415d2ab2f55e20a26473397711cefafd82f0ee))
+ * feature  **colors:** additional tokens ([#DS-4740](https://github.com/koobiq/design-tokens/issues/issue/DS-4740)) ([#136](https://github.com/koobiq/design-tokens/issues/136)) ([277d1c5](https://github.com/koobiq/design-tokens/commit/277d1c57dd8244b130dd7bad5804dcca814516dc))
+ * feature  **colors:** highlight-current ([#DS-4813](https://github.com/koobiq/design-tokens/issues/issue/DS-4813)) ([#132](https://github.com/koobiq/design-tokens/issues/132)) ([7084e33](https://github.com/koobiq/design-tokens/commit/7084e3313b2fe8762933238021945574923c09aa))
+ * feature  **overlay:** overlay opacity ([#DS-3474](https://github.com/koobiq/design-tokens/issues/issue/DS-3474)) ([#131](https://github.com/koobiq/design-tokens/issues/131)) ([7539fcc](https://github.com/koobiq/design-tokens/commit/7539fcc42eca21d11a10d588fe912551d25ef3cd))
+ * feature  **skeleton:** new palette colors ([#DS-4887](https://github.com/koobiq/design-tokens/issues/issue/DS-4887)) ([#130](https://github.com/koobiq/design-tokens/issues/130)) ([2a529dc](https://github.com/koobiq/design-tokens/commit/2a529dc422c5809cf82e0b87bcc65bc4feb09878))
+
 # 3.16.0 (2026-04-03)
 
 ### Design Tokens
