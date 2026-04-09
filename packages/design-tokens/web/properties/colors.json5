@@ -705,10 +705,10 @@
                 "value": "{plt.blackA.18}"
             },
             "overlay-theme": {
-                "value": "{semantic.darkThemeA.18}"
+                "value": "{semantic.darkThemeA.4}"
             },
             "overlay-error": {
-                "value": "{semantic.darkErrorA.18}"
+                "value": "{semantic.darkErrorA.4}"
             },
             "overlay-inverse": {
                 "value": "{plt.blackA.18}"
