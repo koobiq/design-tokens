@@ -8,6 +8,7 @@ module.exports = (StyleDictionary) => {
                     part
                         .replace(/([a-z])([A-Z])/g, '$1-$2')
                         .replace(/"/g, '')
+                        .replace(/[\s.]+/g, '-')
                         .toLowerCase()
                 )
                 .join('-');
