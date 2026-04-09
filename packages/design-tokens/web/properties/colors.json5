@@ -254,7 +254,7 @@
                 "value": "{semantic.successA.14}"
             },
             "warning": {
-                "value": "{semantic.warningFixedA.15}"
+                "value": "{semantic.warningFixedA.16}"
             },
             "warning-fade": {
                 "value": "{semantic.warningFixedA.6}"
@@ -428,10 +428,10 @@
                     "value": "{semantic.warningFixedA.17}"
                 },
                 "warning-fade-hover": {
-                    "value": "{semantic.warningFixedA.8}"
+                    "value": "{semantic.warningFixedA.7}"
                 },
                 "warning-fade-active": {
-                    "value": "{semantic.warningFixedA.10}"
+                    "value": "{semantic.warningFixedA.9}"
                 },
                 "warning-less-hover": {
                     "value": "{semantic.warningA.3}"
