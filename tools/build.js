@@ -4,10 +4,19 @@ build([
     {
         name: 'design-tokens',
         buildPath: [
-            `packages/design-tokens/web/properties/**/*.json5`,
+            `packages/design-tokens/web/properties/**/!(colors.v2|shadows.v2).json5`,
             `packages/design-tokens/web/components/**/*.json5`
         ],
         outputPath: 'dist/design-tokens/web/'
+    },
+    {
+        name: 'design-tokens-new',
+        buildPath: [
+            `packages/design-tokens/web/properties/**/!(colors.v1|shadows.v1).json5`,
+            `packages/design-tokens/web/components/**/*.json5`
+        ],
+        outputPath: 'dist/design-tokens/web/new/',
+        type: 'new'
     }
 ]);
 
