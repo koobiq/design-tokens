@@ -1,3 +1,12 @@
+## 3.17.1 (2026-04-10)
+
+### Design Tokens
+
+ * bug fix  interop changes ([#141](https://github.com/koobiq/design-tokens/issues/141)) ([19f1239](https://github.com/koobiq/design-tokens/commit/19f1239449876f45b7d41ad791e7c450686859a0))
+ * bug fix  overlay theme and error in dark theme ([#DS-4914](https://github.com/koobiq/design-tokens/issues/issue/DS-4914)) ([#138](https://github.com/koobiq/design-tokens/issues/138)) ([2522456](https://github.com/koobiq/design-tokens/commit/25224569608ee64938881eace90111ac92db910d))
+ * bug fix  replace redundant chars from output ([#139](https://github.com/koobiq/design-tokens/issues/139)) ([92ae527](https://github.com/koobiq/design-tokens/commit/92ae527e1b8f32ff10fa8fac0df4975dc77f8338))
+ * bug fix  warning colors ([#DS-4915](https://github.com/koobiq/design-tokens/issues/issue/DS-4915)) ([#140](https://github.com/koobiq/design-tokens/issues/140)) ([e1c33ac](https://github.com/koobiq/design-tokens/commit/e1c33ac6e0ed443773b8ad1046788f67f80fd125))
+
 # 3.17.0 (2026-04-08)
 
 ### Design Tokens
