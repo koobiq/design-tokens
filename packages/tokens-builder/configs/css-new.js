@@ -99,7 +99,7 @@ const newSemanticPaletteConfig = newSemanticPaletteColors.map((color) => ({
 
 module.exports = {
     css: {
-        transformGroup: 'kbq/css',
+        transformGroup: 'kbq/css-new',
         files: [
             ...newSemanticPaletteConfig,
             ...newPaletteByColorsConfig,

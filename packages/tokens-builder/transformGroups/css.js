@@ -13,4 +13,19 @@ module.exports = (StyleDictionary) => {
             'kbq-attribute/comment'
         ]
     });
+
+    StyleDictionary.registerTransformGroup({
+        name: 'kbq/css-new',
+        transforms: [
+            'attribute/cti',
+            'kbq-attribute/palette',
+            'kbq-attribute/font',
+            'kbq-attribute/light',
+            'kbq-attribute/dark',
+            'name/custom-kebab-strip-theme',
+            'color/css',
+            'kbq/prefix',
+            'kbq-attribute/comment'
+        ]
+    });
 };
