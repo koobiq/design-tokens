@@ -97,7 +97,10 @@ module.exports = {
             {
                 destination: 'css/light/semantic-colors.css',
                 format: 'kbq-css/palette',
-                filter: (token) => token.attributes.light && token.filePath.includes('colors.v1.json5'),
+                filter: (token) =>
+                    token.attributes.light &&
+                    token.filePath.includes('colors.v1.json5') &&
+                    !semanticPaletteColors.includes(token.attributes.type),
                 prefix: 'kbq',
                 options: {
                     selector: '.kbq-light'

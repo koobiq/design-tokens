@@ -492,65 +492,81 @@
         "theme": {
             "default": {
                 "value": "{palette.blue.50}",
+                "deprecated": true
             },
             "palette": {
                 "value": "{palette.blue}",
+                "deprecated": true
             }
         },
         "success": {
             "default": {
                 "value": "{palette.green.50}",
+                "deprecated": true
             },
             "palette": {
                 "value": "{palette.green}",
+                "deprecated": true
             }
         },
         "warning": {
             "default": {
                 "value": "{palette.yellow.35}",
+                "deprecated": true
             },
             "palette": {
                 "value": "{palette.yellow}",
+                "deprecated": true
             }
         },
         "error": {
             "default": {
                 "value": "{palette.red.50}",
+                "deprecated": true
             },
             "palette": {
                 "value": "{palette.red}",
+                "deprecated": true
             }
         },
         "contrast": {
             "default": {
                 "value": "{palette.grey.50}",
+                "deprecated": true
             },
             "palette": {
                 "value": "{palette.grey}",
+                "deprecated": true
             }
         },
         "white": {
             "default": {
                 "value": "{palette.white.default}",
+                "deprecated": true
             },
             "palette": {
                 "value": "{palette.white}",
+                "deprecated": true
             }
         },
         "black": {
             "default": {
                 "value": "{palette.black.default}",
+                "deprecated": true
             },
             "palette": {
                 "value": "{palette.black}",
+                "deprecated": true
             }
         },
         "purple": {
             "default": {
                 "value": "{palette.purple.50}",
+                "deprecated": true
             },
             "palette": {
                 "value": "{palette.purple}",
+                "deprecated": true
             }
         },
         "background": {
