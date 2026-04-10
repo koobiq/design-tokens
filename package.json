@@ -18,7 +18,7 @@
         "release:publish:ci-github": "koobiq-cli publish-ci-github",
         "release:publish:ci-gitlab": "koobiq-cli publish-ci-gitlab",
         "-----Lint-----": "------------------------------------------------------------------------------------------",
-        "eslint:dist": "eslint --exit-on-fatal-error --no-ignore --rule 'prettier/prettier: off' dist/design-tokens/web/**/*.js",
+        "eslint:dist": "eslint --no-ignore --rule 'prettier/prettier: off' dist/design-tokens/web/**/*.js",
         "stylelint:dist": "stylelint dist/design-tokens/web/**/*.{css,scss}",
         "lint:all:dist": "yarn run eslint:dist && yarn run stylelint:dist",
         "-----Build-----": "------------------------------------------------------------------------------------------",
