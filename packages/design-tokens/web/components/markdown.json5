@@ -8,7 +8,7 @@
                 color: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{dark.foreground.contrast}' }
             },
             size: {
-                'max-width': { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{markdown.size.max-width}'},
+                'max-width': { deprecated: '`component` token will be removed - use `global` token or raw value', value: 'calc(-1 * {markdown.size.max-width})' },
                 'margin-top': { deprecated: '`component` token will be removed - use `global` token or raw value', value: '0' },
                 'margin-bottom': { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{size.l}' },
             },

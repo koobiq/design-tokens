@@ -26,3 +26,6 @@ jobs:
         run: |
           yarn run prettier
           yarn run eslint
+
+      - name: Lint dist
+        run: yarn run lint:all:dist
