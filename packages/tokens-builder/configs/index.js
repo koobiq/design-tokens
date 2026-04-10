@@ -2,6 +2,7 @@ const { join } = require('path');
 const scssConfig = require('./scss');
 const jsConfig = require('./js');
 const cssConfig = require('./css');
+const cssNewConfig = require('./css-new');
 
 const filterObj = {
     options: {
@@ -43,8 +44,10 @@ function getConfigs(theme) {
     scssConfig.scss.buildPath = theme.outputPath;
     jsConfig.js.buildPath = theme.outputPath;
     cssConfig.css.buildPath = theme.outputPath;
+    // @TODO: remove when updated to v4 (#DS-3002)
+    cssNewConfig.css.buildPath = theme.outputPath;
 
-    return filterOptions([scssConfig, jsConfig, cssConfig]);
+    return filterOptions([scssConfig, jsConfig, theme?.type === 'new' ? cssNewConfig : cssConfig]);
 }
 
 module.exports = (theme) => {
