@@ -1,3 +1,9 @@
+## 3.17.2 (2026-04-10)
+
+### Design Tokens
+
+ * bug fix  custom transform group for css-new ([72df48e](https://github.com/koobiq/design-tokens/commit/72df48e840924d59ccb9585b213cf30028034fe1))
+
 ## 3.17.1 (2026-04-10)
 
 ### Design Tokens
