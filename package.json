@@ -17,6 +17,10 @@
         "-----Release-----": "----------------------------------------------------------------------------------------",
         "release:publish:ci-github": "koobiq-cli publish-ci-github",
         "release:publish:ci-gitlab": "koobiq-cli publish-ci-gitlab",
+        "-----Lint-----": "------------------------------------------------------------------------------------------",
+        "eslint:dist": "eslint --no-eslintrc --env es2020 --no-ignore dist/design-tokens/web/**/*.js",
+        "stylelint:dist": "stylelint dist/design-tokens/web/**/*.{css,scss}",
+        "lint:all:dist": "yarn run eslint:dist && yarn run stylelint:dist",
         "-----Build-----": "------------------------------------------------------------------------------------------",
         "build": "rimraf dist && node tools/build.js",
         "-----CI-----": "---------------------------------------------------------------------------------------------",
@@ -49,6 +53,8 @@
         "lint-staged": "^15.5.2",
         "prettier": "^3.8.1",
         "rimraf": "^5.0.5",
-        "style-dictionary": "^3.9.2"
+        "style-dictionary": "^3.9.2",
+        "stylelint": "^16.26.1",
+        "stylelint-config-recommended-scss": "^16.0.2"
     }
 }
