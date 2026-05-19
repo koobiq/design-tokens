@@ -3,13 +3,13 @@
 This document provides guidelines for LLMs and AI agents on how to work with design tokens provided by the Koobiq Design System.
 It focuses on styling, theming, and the correct usage of design tokens.
 
-## 1. Core Philosophy
+## 1. Core
 
 *   **CSS Variables are the API**: Styling should be done almost exclusively using CSS variables (custom properties) provided by the system.
 *   **Global over Component**: Component-specific tokens (e.g., `--kbq-button-height`) are **deprecated**. Always use global semantic tokens (e.g., `--kbq-size-xl`).
 *   **Semantic Naming**: Tokens are named based on their semantic function (e.g., `error`, `success`, `contrast`, `theme`) rather than raw values (e.g., `red`, `blue`).
 
-## 2. Variable Naming Convention
+## 2. Variable naming convention
 
 The general pattern for CSS variables is:
 
@@ -22,7 +22,7 @@ The general pattern for CSS variables is:
 *   **Semantic Name**: `theme` (brand), `contrast` (neutral), `error`, `success`, `warning`.
 *   **Variant** (Optional): `secondary`, `tertiary`, `fade`, `hover`.
 
-### Semantic Roles Definition
+### Semantic roles definition
 
 *   **Theme**: Represents the primary brand identity. Used for active states (toggles, checkboxes), links, selected options and key interactive elements.
 *   **Contrast**: The foundation of the UI. Neutral colors (grays, black, white) used for text, borders, backgrounds, and secondary actions. Used for primary actions (buttons).
@@ -33,191 +33,113 @@ The general pattern for CSS variables is:
 *   **White**: Bright in both themes. Used on colored backgrounds (e.g., --kbq-background-theme, --kbq-background-success).
 *   **Night**: Dark in both themes.
 
-## 3. Color System
+## 3. Color system
 
-Colors are context-aware and switch automatically based on the theme (Light/Dark). 
+Colors are context-aware and switch automatically based on the theme (Light/Dark).
+Only non-obvious usage context is shown; names follow the pattern from Section 2.
 
 ### Backgrounds (`--kbq-background-...`)
-Background color for element containers, cards, and surfaces.
 
-| Variable | Description |
+| Variable | Usage context |
 | :--- | :--- |
-| **Base** | |
-| `--kbq-background-bg` | Main page background (Default: White). |
-| `--kbq-background-bg-secondary` | Secondary background (e.g., sidebar, light gray areas). |
-| `--kbq-background-bg-tertiary` | Tertiary background. |
-| `--kbq-background-night` | Dark background for specific "night" mode elements. Dim background both in light and dark themes. |
-| `--kbq-background-card` | Background for cards and elevated surfaces (Pure white). Same as bg in light theme, subtle contrast in dark theme. |
-| `--kbq-background-transparent` | Transparent background. |
-| **Theme (Brand)** | |
-| `--kbq-background-theme` | Primary brand color background (Solid). Used in checkboxes, radio buttons, toggle switches. |
-| `--kbq-background-theme-fade` | Faded brand background (lighter). |
-| `--kbq-background-theme-less` | Very subtle brand background. Selected state background for list, tree items or table rows. |
-| **Contrast (Neutral)** | |
-| `--kbq-background-contrast` | Primary button background. Highest contrast in light and dark themes |
-| `--kbq-background-contrast-fade` | Faded neutral background. Default button background |
-| `--kbq-background-contrast-less` | Very subtle neutral background. In multi-select mode: checked rows, checked list or tree items. Alert container. |
-| **Error** | |
-| `--kbq-background-error` | Error state background (Solid). |
-| `--kbq-background-error-fade` | Faded error background. |
-| `--kbq-background-error-less` | Very subtle error background. Alert container.|
-| **Success** | |
-| `--kbq-background-success` | Success state background (Solid). |
-| `--kbq-background-success-fade` | Faded success background. |
-| `--kbq-background-success-less` | Very subtle success background. Alert container. |
-| **Warning** | |
-| `--kbq-background-warning` | Warning state background (Solid). |
-| `--kbq-background-warning-fade` | Faded warning background. |
-| `--kbq-background-warning-less` | Very subtle warning background. Alert container. |
-| **Overlays** | |
-| `--kbq-background-overlay` | Dafault backdrop for modals. |
+| `--kbq-background-bg` | Main page background. |
+| `--kbq-background-bg-secondary` | Sidebar, panel backgrounds. |
+| `--kbq-background-bg-tertiary` | |
+| `--kbq-background-night` | Dim surface in both themes. |
+| `--kbq-background-card` | Elevated surfaces; matches bg in light, differs in dark. |
+| `--kbq-background-transparent` | |
+| `--kbq-background-theme` | Checkboxes, radio buttons, toggle switches. |
+| `--kbq-background-theme-fade` | |
+| `--kbq-background-theme-less` | Selected list/tree items, table rows. |
+| `--kbq-background-contrast` | Primary button. Highest contrast in both themes. |
+| `--kbq-background-contrast-fade` | Default (ghost) button. |
+| `--kbq-background-contrast-less` | Multi-select checked rows; alert containers. |
+| `--kbq-background-error` | |
+| `--kbq-background-error-fade` | |
+| `--kbq-background-error-less` | Alert container. |
+| `--kbq-background-success` | |
+| `--kbq-background-success-fade` | |
+| `--kbq-background-success-less` | Alert container. |
+| `--kbq-background-warning` | |
+| `--kbq-background-warning-fade` | |
+| `--kbq-background-warning-less` | Alert container. |
+| `--kbq-background-overlay` | Modal backdrop. |
 | `--kbq-background-overlay-inverse` | Loading overlay. |
-| `--kbq-background-overlay-error` | Error-tinted backdrop. Invalid dropzone on dragover. |
-| `--kbq-background-overlay-theme` | Theme-tinted backdrop. Allowed state of dropzone on dragover. |
+| `--kbq-background-overlay-error` | Invalid dropzone on dragover. |
+| `--kbq-background-overlay-theme` | Allowed dropzone on dragover. |
 
 ### Foregrounds (`--kbq-foreground-...`)
-Used for text color.
 
-| Variable | Description |
+Text color.
+
+| Variable | Usage context |
 | :--- | :--- |
-| **White** | |
-| `--kbq-foreground-white` | White text (used on colored backgrounds, e.g., on background-theme, on background-error). |
-| `--kbq-foreground-white-secondary` | Secondary white text (lower opacity). |
-| **Theme (Brand)** | |
-| `--kbq-foreground-theme` | Links colored text. |
-| `--kbq-foreground-theme-secondary` | Secondary brand colored text. |
-| **Contrast (Neutral)** | |
-| `--kbq-foreground-contrast` | Primary text color (High contrast). |
-| `--kbq-foreground-on-contrast` | Text color on top of contrast background. |
-| `--kbq-foreground-contrast-secondary` | Secondary text, captions, hints. |
-| `--kbq-foreground-contrast-tertiary` | Tertiary text (disabled/subtle). |
-| **Error** | |
-| `--kbq-foreground-error` | Error text color. |
-| `--kbq-foreground-error-secondary` | Secondary error text. |
-| `--kbq-foreground-error-tertiary` | Tertiary error text. |
-| `--kbq-foreground-error-less` | Subtle error text. |
-| **Success** | |
-| `--kbq-foreground-success` | Success text color. |
-| `--kbq-foreground-success-secondary` | Secondary success text. |
-| `--kbq-foreground-success-less` | Subtle success text. |
-| **Warning** | |
-| `--kbq-foreground-warning` | Warning text color. |
-| `--kbq-foreground-warning-secondary` | Secondary warning text. |
-| **Visited** | |
-| `--kbq-foreground-visited` | Visited link color. |
+| `--kbq-foreground-white` | Text on colored backgrounds (theme, error, success…). |
+| `--kbq-foreground-white-secondary` | |
+| `--kbq-foreground-theme` | Links. |
+| `--kbq-foreground-theme-secondary` | |
+| `--kbq-foreground-contrast` | Primary text. |
+| `--kbq-foreground-on-contrast` | Text on `--kbq-background-contrast`. |
+| `--kbq-foreground-contrast-secondary` | Captions, hints. |
+| `--kbq-foreground-contrast-tertiary` | Disabled / subtle text. |
+| `--kbq-foreground-error` | |
+| `--kbq-foreground-error-secondary` | |
+| `--kbq-foreground-error-tertiary` | |
+| `--kbq-foreground-success` | |
+| `--kbq-foreground-success-secondary` | |
+| `--kbq-foreground-warning` | |
+| `--kbq-foreground-warning-secondary` | |
+| `--kbq-foreground-visited` | Visited links. |
 
 ### Icons (`--kbq-icon-...`)
-Icon fill.
 
-| Variable | Description |
+| Variable | Usage context |
 | :--- | :--- |
-| **White** | |
-| `--kbq-icon-white` | Icons on colored backgrounds (e.g., on background-theme, background-error). |
-| **Theme (Brand)** | |
-| `--kbq-icon-theme` | Brand colored icon, icons with links. |
-| `--kbq-icon-theme-fade` | Faded brand icon. |
-| **Contrast (Neutral)** | |
-| `--kbq-icon-contrast` | High contrast icons. |
-| `--kbq-icon-contrast-fade` | Faded neutral icon |
-| `--kbq-icon-on-contrast` | Icon color on background-contrast |
-| **States** | |
-| `--kbq-icon-error` | Error icon. |
-| `--kbq-icon-success` | Success icon. |
-| `--kbq-icon-warning` | Warning icon. |
-| `--kbq-icon-visited` | Visited state icon. |
+| `--kbq-icon-white` | Icons on colored backgrounds. |
+| `--kbq-icon-theme` | Brand icons, icons beside links. |
+| `--kbq-icon-theme-fade` | |
+| `--kbq-icon-contrast` | |
+| `--kbq-icon-contrast-fade` | |
+| `--kbq-icon-on-contrast` | Icons on `--kbq-background-contrast`. |
+| `--kbq-icon-error` | |
+| `--kbq-icon-success` | |
+| `--kbq-icon-warning` | |
+| `--kbq-icon-visited` | |
 
 ### Lines / Borders (`--kbq-line-...`)
-Used for borders and dividers.
 
-| Variable | Description |
+| Variable | Usage context |
 | :--- | :--- |
-| **Theme (Brand)** | |
-| `--kbq-line-theme` | Brand colored line. |
-| `--kbq-line-theme-fade` | Faded brand line, also links underline color |
-| `--kbq-line-theme-less` | Subtle brand line. |
-| **Contrast (Neutral)** | |
-| `--kbq-line-contrast` | High contrast borders. |
-| `--kbq-line-contrast-fade` | Faded border color, used for input box borders. |
-| `--kbq-line-contrast-less` | Very subtle border color, used for table, list, tree item, section separators. |
-| **Error** | |
-| `--kbq-line-error` | Error border. |
-| `--kbq-line-error-fade` | Faded error border. |
-| **Success** | |
-| `--kbq-line-success` | Success border. |
-| `--kbq-line-success-fade` | Faded success border. |
-| **Warning** | |
-| `--kbq-line-warning` | Warning border. |
-| `--kbq-line-warning-fade` | Faded warning border. |
-| **Visited** | |
-| `--kbq-line-visited` | Visited state line. Used in visited links. |
-| **Focus** | |
-| `--kbq-line-focus` | Focus ring color. |
-| `--kbq-line-focus-theme` | Focused theme line. |
-| `--kbq-line-focus-error` | Focused error line. |
-| **Disabled** | |
-| `--kbq-line-disabled` | Disabled border color. |
+| `--kbq-line-theme` | |
+| `--kbq-line-theme-fade` | Link underline. |
+| `--kbq-line-theme-less` | |
+| `--kbq-line-contrast` | |
+| `--kbq-line-contrast-fade` | Input box borders. |
+| `--kbq-line-contrast-less` | Table / list / tree separators. |
+| `--kbq-line-error` | |
+| `--kbq-line-error-fade` | |
+| `--kbq-line-success` | |
+| `--kbq-line-success-fade` | |
+| `--kbq-line-warning` | |
+| `--kbq-line-warning-fade` | |
+| `--kbq-line-visited` | Visited link underline. |
+| `--kbq-line-focus` | Focus ring. |
+| `--kbq-line-focus-theme` | |
+| `--kbq-line-focus-error` | |
+| `--kbq-line-disabled` | |
 
 ### Interaction States (`--kbq-states-...`)
-Used for hover, active, and disabled states.
 
-| Variable | Description |
-| :--- | :--- |
-| **Background States** | |
-| `--kbq-states-background-theme-hover` | Hover on theme background. |
-| `--kbq-states-background-theme-active` | Active on theme background. |
-| `--kbq-states-background-theme-fade-hover` | Hover on faded theme background. |
-| `--kbq-states-background-theme-fade-active` | Active on faded theme background. |
-| `--kbq-states-background-theme-less-hover` | Hover on subtle theme background. |
-| `--kbq-states-background-theme-less-active` | Active on subtle theme background. |
-| `--kbq-states-background-contrast-hover` | Hover on contrast background. |
-| `--kbq-states-background-contrast-active` | Active on contrast background. |
-| `--kbq-states-background-contrast-fade-hover` | Hover on faded contrast background. |
-| `--kbq-states-background-contrast-fade-active` | Active on faded contrast background. |
-| `--kbq-states-background-contrast-less-hover` | Hover on subtle contrast background. |
-| `--kbq-states-background-contrast-less-active` | Active on subtle contrast background. |
-| `--kbq-states-background-error-hover` | Hover on error background. |
-| `--kbq-states-background-error-active` | Active on error background. |
-| `--kbq-states-background-error-fade-hover` | Hover on faded error background. |
-| `--kbq-states-background-error-fade-active` | Active on faded error background. |
-| `--kbq-states-background-error-less-hover` | Hover on subtle error background. |
-| `--kbq-states-background-error-less-active` | Active on subtle error background. |
-| `--kbq-states-background-success-hover` | Hover on success background. |
-| `--kbq-states-background-success-active` | Active on success background. |
-| `--kbq-states-background-success-fade-hover` | Hover on faded success background. |
-| `--kbq-states-background-success-fade-active` | Active on faded success background. |
-| `--kbq-states-background-success-less-hover` | Hover on subtle success background. |
-| `--kbq-states-background-success-less-active` | Active on subtle success background. |
-| `--kbq-states-background-warning-fade-hover` | Hover on faded warning background. |
-| `--kbq-states-background-warning-fade-active` | Active on faded warning background. |
-| `--kbq-states-background-warning-less-hover` | Hover on subtle warning background. |
-| `--kbq-states-background-warning-less-active` | Active on subtle warning background. |
-| `--kbq-states-background-disabled` | Disabled state background. |
-| `--kbq-states-background-transparent-hover` | Hover on transparent. |
-| `--kbq-states-background-transparent-active` | Active on transparent. |
-| **Foreground States** | |
-| `--kbq-states-foreground-theme-hover` | Hover on theme text. |
-| `--kbq-states-foreground-theme-active` | Active on theme text. |
-| `--kbq-states-foreground-visited-hover` | Hover on visited link. |
-| `--kbq-states-foreground-visited-active` | Active on visited link. |
-| `--kbq-states-foreground-disabled` | Disabled text color. |
-| **Icon States** | |
-| `--kbq-states-icon-theme-hover` | Hover on theme icon. |
-| `--kbq-states-icon-theme-active` | Active on theme icon. |
-| `--kbq-states-icon-contrast-hover` | Hover on contrast icon. |
-| `--kbq-states-icon-contrast-active` | Active on contrast icon. |
-| `--kbq-states-icon-contrast-fade-hover` | Hover on faded contrast icon. |
-| `--kbq-states-icon-contrast-fade-active` | Active on faded contrast icon. |
-| `--kbq-states-icon-error-hover` | Hover on error icon. |
-| `--kbq-states-icon-error-active` | Active on error icon. |
-| `--kbq-states-icon-success-hover` | Hover on success icon. |
-| `--kbq-states-icon-success-active` | Active on success icon. |
-| `--kbq-states-icon-warning-hover` | Hover on warning icon. |
-| `--kbq-states-icon-warning-active` | Active on warning icon. |
-| `--kbq-states-icon-visited-hover` | Hover on visited icon. |
-| `--kbq-states-icon-visited-active` | Active on visited icon. |
-| `--kbq-states-icon-disabled` | Disabled icon color. |
-| **Opacity** | |
-| `--kbq-opacity-disabled` | Opacity for disabled elements. |
+States follow the pattern `--kbq-states-[element]-[semantic]-[intensity?]-[state]`:
+*   **element** ∈ `background`, `foreground`, `icon`
+*   **semantic** ∈ `theme`, `contrast`, `error`, `success`, `warning`, `visited`, `transparent`, `disabled`
+*   **intensity** ∈ `-fade`, `-less` (optional; mirrors base color variants)
+*   **state** ∈ `-hover`, `-active`
+
+Disabled variants use no state suffix: `--kbq-states-[element]-disabled`.
+Not all semantic × intensity combinations exist (e.g. `warning` has `-fade` and `-less` but no base hover/active).
+
+`--kbq-opacity-disabled` — opacity value for disabled elements.
 
 ## 4. Typography
 
@@ -293,11 +215,11 @@ Pattern: `--kbq-shadow-[type]`
 | `--kbq-shadow-overflow-normal-left` | Left normal overflow shadow. |
 
 
-## 7. Palette System 2.0
+## 7. Palette system 2.0
 
 This section describes new palette system.
 
-### Token Resolution Chain
+### Token resolution chain
 
 ```
 plt.json5  →  semantic.json5  →  colors.v2.json5  →  CSS variables
