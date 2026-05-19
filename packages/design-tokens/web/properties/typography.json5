@@ -7,7 +7,7 @@
             'font-weight': { value: '700' },
             'font-family': { value: '{font.family.accent}' },
             'text-transform': { value: 'initial' },
-            'font-feature-settings': { value: '"calt", "kern", "liga", "zero"' }
+            'font-feature-settings': { value: '"calt", "kern", "liga"' }
         },
         title: {
             'font-size': { value: '20px' },
@@ -16,7 +16,7 @@
             'font-weight': { value: '700' },
             'font-family': { value: '{font.family.accent}' },
             'text-transform': { value: 'initial' },
-            'font-feature-settings': { value: '"calt", "kern", "liga", "zero"' }
+            'font-feature-settings': { value: '"calt", "kern", "liga"' }
         },
         subheading: {
             'font-size': { value: '18px' },
@@ -25,7 +25,7 @@
             'font-weight': { value: '600' },
             'font-family': { value: '{font.family.accent}' },
             'text-transform': { value: 'initial' },
-            'font-feature-settings': { value: '"calt", "kern", "liga", "zero"' }
+            'font-feature-settings': { value: '"calt", "kern", "liga"' }
         },
         'display-big': {
             'font-size': { value: '57px' },
@@ -34,7 +34,7 @@
             'font-weight': { value: '400' },
             'font-family': { value: '{font.family.accent}' },
             'text-transform': { value: 'initial' },
-            'font-feature-settings': { value: '"calt", "kern", "liga", "zero"' }
+            'font-feature-settings': { value: '"calt", "kern", "liga"' }
         },
         'display-normal': {
             'font-size': { value: '45px' },
@@ -43,7 +43,7 @@
             'font-weight': { value: '400' },
             'font-family': { value: '{font.family.accent}' },
             'text-transform': { value: 'initial' },
-            'font-feature-settings': { value: '"calt", "kern", "liga", "zero"' }
+            'font-feature-settings': { value: '"calt", "kern", "liga"' }
         },
         'display-compact': {
             'font-size': { value: '36px' },
@@ -52,7 +52,7 @@
             'font-weight': { value: '400' },
             'font-family': { value: '{font.family.accent}' },
             'text-transform': { value: 'initial' },
-            'font-feature-settings': { value: '"calt", "kern", "liga", "zero"' }
+            'font-feature-settings': { value: '"calt", "kern", "liga"' }
         },
         'display-big-strong': {
             'font-size': { value: '57px' },
@@ -61,7 +61,7 @@
             'font-weight': { value: '700' },
             'font-family': { value: '{font.family.accent}' },
             'text-transform': { value: 'initial' },
-            'font-feature-settings': { value: '"calt", "kern", "liga", "zero"' }
+            'font-feature-settings': { value: '"calt", "kern", "liga"' }
         },
         'display-normal-strong': {
             'font-size': { value: '45px' },
@@ -70,7 +70,7 @@
             'font-weight': { value: '700' },
             'font-family': { value: '{font.family.accent}' },
             'text-transform': { value: 'initial' },
-            'font-feature-settings': { value: '"calt", "kern", "liga", "zero"' }
+            'font-feature-settings': { value: '"calt", "kern", "liga"' }
         },
         'display-compact-strong': {
             'font-size': { value: '36px' },
@@ -79,7 +79,7 @@
             'font-weight': { value: '700' },
             'font-family': { value: '{font.family.accent}' },
             'text-transform': { value: 'initial' },
-            'font-feature-settings': { value: '"calt", "kern", "liga", "zero"' }
+            'font-feature-settings': { value: '"calt", "kern", "liga"' }
         },
         'text-big': {
             'font-size': { value: '16px' },
