@@ -88,7 +88,7 @@
             'font-weight': { value: 'normal' },
             'font-family': { value: '{font.family.base}' },
             'text-transform': { value: 'initial' },
-            'font-feature-settings': { value: '"calt", "kern", "liga", "ss01", "ss04"' }
+            'font-feature-settings': { value: '"calt", "kern", "liga", "ss01", "ss04", "zero"' }
         },
         'text-big-medium': {
             'font-size': { value: '16px' },
@@ -97,7 +97,7 @@
             'font-weight': { value: '500' },
             'font-family': { value: '{font.family.base}' },
             'text-transform': { value: 'initial' },
-            'font-feature-settings': { value: '"calt", "kern", "liga", "ss01", "ss04"' }
+            'font-feature-settings': { value: '"calt", "kern", "liga", "ss01", "ss04", "zero"' }
         },
         'text-big-strong': {
             'font-size': { value: '16px' },
@@ -106,7 +106,7 @@
             'font-weight': { value: '600' },
             'font-family': { value: '{font.family.base}' },
             'text-transform': { value: 'initial' },
-            'font-feature-settings': { value: '"calt", "kern", "liga", "ss01", "ss04"' }
+            'font-feature-settings': { value: '"calt", "kern", "liga", "ss01", "ss04", "zero"' }
         },
         'text-normal': {
             'font-size': { value: '14px' },
@@ -115,7 +115,7 @@
             'font-weight': { value: 'normal' },
             'font-family': { value: '{font.family.base}' },
             'text-transform': { value: 'initial' },
-            'font-feature-settings': { value: '"calt", "kern", "liga", "ss01", "ss04"' }
+            'font-feature-settings': { value: '"calt", "kern", "liga", "ss01", "ss04", "zero"' }
         },
         'text-normal-medium': {
             'font-size': { value: '14px' },
@@ -124,7 +124,7 @@
             'font-weight': { value: '500' },
             'font-family': { value: '{font.family.base}' },
             'text-transform': { value: 'initial' },
-            'font-feature-settings': { value: '"calt", "kern", "liga", "ss01", "ss04"' }
+            'font-feature-settings': { value: '"calt", "kern", "liga", "ss01", "ss04", "zero"' }
         },
         'text-normal-strong': {
             'font-size': { value: '14px' },
@@ -133,7 +133,7 @@
             'font-weight': { value: '600' },
             'font-family': { value: '{font.family.base}' },
             'text-transform': { value: 'initial' },
-            'font-feature-settings': { value: '"calt", "kern", "liga", "ss01", "ss04"' }
+            'font-feature-settings': { value: '"calt", "kern", "liga", "ss01", "ss04", "zero"' }
         },
         'text-compact': {
             'font-size': { value: '12px' },
@@ -142,7 +142,7 @@
             'font-weight': { value: 'normal' },
             'font-family': { value: '{font.family.base}' },
             'text-transform': { value: 'initial' },
-            'font-feature-settings': { value: '"calt", "kern", "liga", "ss01", "ss04"' }
+            'font-feature-settings': { value: '"calt", "kern", "liga", "ss01", "ss04", "zero"' }
         },
         'text-compact-medium': {
             'font-size': { value: '12px' },
@@ -151,7 +151,7 @@
             'font-weight': { value: '500' },
             'font-family': { value: '{font.family.base}' },
             'text-transform': { value: 'initial' },
-            'font-feature-settings': { value: '"calt", "kern", "liga", "ss01", "ss04"' }
+            'font-feature-settings': { value: '"calt", "kern", "liga", "ss01", "ss04", "zero"' }
         },
         'text-compact-strong': {
             'font-size': { value: '12px' },
@@ -160,7 +160,7 @@
             'font-weight': { value: '600' },
             'font-family': { value: '{font.family.base}' },
             'text-transform': { value: 'initial' },
-            'font-feature-settings': { value: '"calt", "kern", "liga", "ss01", "ss04"' }
+            'font-feature-settings': { value: '"calt", "kern", "liga", "ss01", "ss04", "zero"' }
         },
         'caps-big': {
             'font-size': { value: '16px' },
@@ -169,7 +169,7 @@
             'font-weight': { value: '400' },
             'font-family': { value: '{font.family.base}' },
             'text-transform': { value: 'uppercase' },
-            'font-feature-settings': { value: '"calt", "case", "kern", "liga", "ss01", "ss04"' }
+            'font-feature-settings': { value: '"calt", "case", "kern", "liga", "ss01", "ss04", "zero"' }
         },
         'caps-big-strong': {
             'font-size': { value: '16px' },
@@ -178,7 +178,7 @@
             'font-weight': { value: '500' },
             'font-family': { value: '{font.family.base}' },
             'text-transform': { value: 'uppercase' },
-            'font-feature-settings': { value: '"calt", "case", "kern", "liga", "ss01", "ss04"' }
+            'font-feature-settings': { value: '"calt", "case", "kern", "liga", "ss01", "ss04", "zero"' }
         },
         'caps-normal': {
             'font-size': { value: '14px' },
@@ -187,7 +187,7 @@
             'font-weight': { value: 'normal' },
             'font-family': { value: '{font.family.base}' },
             'text-transform': { value: 'uppercase' },
-            'font-feature-settings': { value: '"calt", "case", "kern", "liga", "ss01", "ss04"' }
+            'font-feature-settings': { value: '"calt", "case", "kern", "liga", "ss01", "ss04", "zero"' }
         },
         'caps-normal-strong': {
             'font-size': { value: '14px' },
@@ -196,7 +196,7 @@
             'font-weight': { value: '500' },
             'font-family': { value: '{font.family.base}' },
             'text-transform': { value: 'uppercase' },
-            'font-feature-settings': { value: '"calt", "case", "kern", "liga", "ss01", "ss04"' }
+            'font-feature-settings': { value: '"calt", "case", "kern", "liga", "ss01", "ss04", "zero"' }
         },
         'caps-compact': {
             'font-size': { value: '12px' },
@@ -205,7 +205,7 @@
             'font-weight': { value: 'normal' },
             'font-family': { value: '{font.family.base}' },
             'text-transform': { value: 'uppercase' },
-            'font-feature-settings': { value: '"calt", "case", "kern", "liga", "ss01", "ss04"' }
+            'font-feature-settings': { value: '"calt", "case", "kern", "liga", "ss01", "ss04", "zero"' }
         },
         'caps-compact-strong': {
             'font-size': { value: '12px' },
@@ -214,7 +214,7 @@
             'font-weight': { value: '500' },
             'font-family': { value: '{font.family.base}' },
             'text-transform': { value: 'uppercase' },
-            'font-feature-settings': { value: '"calt", "case", "kern", "liga", "ss01", "ss04"' }
+            'font-feature-settings': { value: '"calt", "case", "kern", "liga", "ss01", "ss04", "zero"' }
         },
         'mono-big': {
             'font-size': { value: '16px' },
@@ -296,7 +296,7 @@
             'font-weight': { value: 'normal' },
             'font-family': { value: '{font.family.base}' },
             'text-transform': { value: 'initial' },
-            'font-feature-settings': { value: '"calt", "ss01", "ss04", "tnum"' }
+            'font-feature-settings': { value: '"calt", "ss01", "ss04", "tnum", "zero"' }
         },
         'tabular-big-strong': {
             'font-size': { value: '16px' },
@@ -305,7 +305,7 @@
             'font-weight': { value: '600' },
             'font-family': { value: '{font.family.base}' },
             'text-transform': { value: 'initial' },
-            'font-feature-settings': { value: '"calt", "ss01", "ss04", "tnum"' }
+            'font-feature-settings': { value: '"calt", "ss01", "ss04", "tnum", "zero"' }
         },
         'tabular-normal': {
             'font-size': { value: '14px' },
@@ -314,7 +314,7 @@
             'font-weight': { value: 'normal' },
             'font-family': { value: '{font.family.base}' },
             'text-transform': { value: 'initial' },
-            'font-feature-settings': { value: '"calt", "ss01", "ss04", "tnum"' }
+            'font-feature-settings': { value: '"calt", "ss01", "ss04", "tnum", "zero"' }
         },
         'tabular-normal-strong': {
             'font-size': { value: '14px' },
@@ -323,7 +323,7 @@
             'font-weight': { value: '600' },
             'font-family': { value: '{font.family.base}' },
             'text-transform': { value: 'initial' },
-            'font-feature-settings': { value: '"calt", "ss01", "ss04", "tnum"' }
+            'font-feature-settings': { value: '"calt", "ss01", "ss04", "tnum", "zero"' }
         },
         'tabular-compact': {
             'font-size': { value: '12px' },
@@ -332,7 +332,7 @@
             'font-weight': { value: 'normal' },
             'font-family': { value: '{font.family.base}' },
             'text-transform': { value: 'initial' },
-            'font-feature-settings': { value: '"calt", "ss01", "ss04", "tnum"' }
+            'font-feature-settings': { value: '"calt", "ss01", "ss04", "tnum", "zero"' }
         },
         'tabular-compact-strong': {
             'font-size': { value: '12px' },
@@ -341,7 +341,7 @@
             'font-weight': { value: '600' },
             'font-family': { value: '{font.family.base}' },
             'text-transform': { value: 'initial' },
-            'font-feature-settings': { value: '"calt", "ss01", "ss04", "tnum"' }
+            'font-feature-settings': { value: '"calt", "ss01", "ss04", "tnum", "zero"' }
         },
         'italic-big': {
             'font-style': { value: 'italic' },
@@ -351,7 +351,7 @@
             'font-weight': { value: 'normal' },
             'font-family': { value: '{font.family.base}' },
             'text-transform': { value: 'initial' },
-            'font-feature-settings': { value: '"calt", "kern", "liga", "ss01", "ss04"' }
+            'font-feature-settings': { value: '"calt", "kern", "liga", "ss01", "ss04", "zero"' }
         },
         'italic-big-strong': {
             'font-style': { value: 'italic' },
@@ -361,7 +361,7 @@
             'font-weight': { value: '600' },
             'font-family': { value: '{font.family.base}' },
             'text-transform': { value: 'initial' },
-            'font-feature-settings': { value: '"calt", "kern", "liga", "ss01", "ss04"' }
+            'font-feature-settings': { value: '"calt", "kern", "liga", "ss01", "ss04", "zero"' }
         },
         'italic-normal': {
             'font-style': { value: 'italic' },
@@ -371,7 +371,7 @@
             'font-weight': { value: 'normal' },
             'font-family': { value: '{font.family.base}' },
             'text-transform': { value: 'initial' },
-            'font-feature-settings': { value: '"calt", "kern", "liga", "ss01", "ss04"' }
+            'font-feature-settings': { value: '"calt", "kern", "liga", "ss01", "ss04", "zero"' }
         },
         'italic-normal-strong': {
             'font-style': { value: 'italic' },
@@ -381,7 +381,7 @@
             'font-weight': { value: '600' },
             'font-family': { value: '{font.family.base}' },
             'text-transform': { value: 'initial' },
-            'font-feature-settings': { value: '"calt", "kern", "liga", "ss01", "ss04"' }
+            'font-feature-settings': { value: '"calt", "kern", "liga", "ss01", "ss04", "zero"' }
         },
         'italic-compact': {
             'font-style': { value: 'italic' },
@@ -391,7 +391,7 @@
             'font-weight': { value: 'normal' },
             'font-family': { value: '{font.family.base}' },
             'text-transform': { value: 'initial' },
-            'font-feature-settings': { value: '"calt", "kern", "liga", "ss01", "ss04"' }
+            'font-feature-settings': { value: '"calt", "kern", "liga", "ss01", "ss04", "zero"' }
         },
         'italic-compact-strong': {
             'font-style': { value: 'italic' },
@@ -401,7 +401,7 @@
             'font-weight': { value: '600' },
             'font-family': { value: '{font.family.base}' },
             'text-transform': { value: 'initial' },
-            'font-feature-settings': { value: '"calt", "kern", "liga", "ss01", "ss04"' }
+            'font-feature-settings': { value: '"calt", "kern", "liga", "ss01", "ss04", "zero"' }
         },
         // стиль текста, который используется для названия продукта в навбаре
         'navbar-title': {
