@@ -66,4 +66,6 @@ prepareTokens('tokens-builder');
 updateVersion('tokens-builder', currentVersion);
 updateVersion('design-tokens', currentVersion);
 
+copyFileSync('./AGENTS.md', `dist/design-tokens/AGENTS.md`);
+
 updateTokensPackage();
