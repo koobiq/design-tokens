@@ -26,12 +26,12 @@ dist/                  # build output (gitignored)
 
 ## Key Commands
 
-| Command | Description |
-| :--- | :--- |
-| `yarn build` | Clean and rebuild all token files into `dist/` |
+| Command                 | Description                                     |
+| :---------------------- | :---------------------------------------------- |
+| `yarn build`            | Clean and rebuild all token files into `dist/`  |
 | `yarn generate:styling` | Regenerate `STYLING.md` from token source files |
-| `yarn prettier:fix` | Auto-format all files |
-| `yarn eslint:fix` | Auto-fix JS lint issues |
+| `yarn prettier:fix`     | Auto-format all files                           |
+| `yarn eslint:fix`       | Auto-fix JS lint issues                         |
 
 ## Build System
 
@@ -44,13 +44,15 @@ dist/                  # build output (gitignored)
 ## Setup
 
 ```css
-@import '@koobiq/design-tokens/web/new/css-tokens.css';        /* base / component tokens (:root) */
-@import '@koobiq/design-tokens/web/new/css-tokens-light.css';  /* light theme (.kbq-light) */
-@import '@koobiq/design-tokens/web/new/css-tokens-dark.css';   /* dark theme (.kbq-dark) */
+@import '@koobiq/design-tokens/web/new/css-tokens.css'; /* base / component tokens (:root) */
+@import '@koobiq/design-tokens/web/new/css-tokens-light.css'; /* light theme (.kbq-light) */
+@import '@koobiq/design-tokens/web/new/css-tokens-dark.css'; /* dark theme (.kbq-dark) */
 ```
 
 ```html
-<body class="kbq-light"> <!-- or kbq-dark -->
+<body class="kbq-light">
+    <!-- or kbq-dark -->
+</body>
 ```
 
 ## Styling Rules
