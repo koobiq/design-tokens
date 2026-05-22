@@ -1,0 +1,137 @@
+# Koobiq Design Tokens — Styling Reference
+
+> Auto-generated from token source files. Run `yarn generate:styling` to refresh.
+> See [AGENTS.md](./AGENTS.md) for project overview and setup.
+
+## Color System
+
+Colors are context-aware and switch automatically based on the theme (Light/Dark).
+Descriptions shown only where usage is non-obvious; names follow the pattern from AGENTS.md.
+
+### Backgrounds (`--kbq-background-...`)
+
+| Variable | Usage context |
+| :--- | :--- |
+<%- tokenRows('background', light.background) %>
+
+### Foregrounds (`--kbq-foreground-...`)
+
+Text color.
+
+| Variable | Usage context |
+| :--- | :--- |
+<%- tokenRows('foreground', light.foreground) %>
+
+### Icons (`--kbq-icon-...`)
+
+| Variable | Usage context |
+| :--- | :--- |
+<%- tokenRows('icon', light.icon) %>
+
+### Lines / Borders (`--kbq-line-...`)
+
+| Variable | Usage context |
+| :--- | :--- |
+<%- tokenRows('line', light.line) %>
+
+### Interaction States (`--kbq-states-...`)
+
+Pattern: `--kbq-states-[element]-[semantic]-[intensity?]-[state]`
+
+- **element** ∈ `background`, `foreground`, `icon`
+- **intensity** ∈ `-fade`, `-less` (optional)
+- **state** ∈ `-hover`, `-active`
+- Disabled: `--kbq-states-[element]-disabled` (no state suffix)
+
+| Variable | Usage context |
+| :--- | :--- |
+<%- stateRows(light.states) %>
+
+## Typography
+
+Use CSS classes or SCSS `@extend`. Pattern: `kbq-[style]`
+
+```scss
+.card-title { @extend .kbq-title; }
+```
+
+| Class | Font size | Line height | Weight |
+| :--- | :--- | :--- | :--- |
+<%- typographyRows(typography) %>
+
+Low-level variables (avoid): `--kbq-typography-[style]-[font-size|line-height|font-weight|letter-spacing|font-family]`
+
+## Sizes & Spacing
+
+Pattern: `--kbq-size-[name]`
+
+| Variable | Value | Usage |
+| :--- | :--- | :--- |
+<%- sizeRows(globals.size) %>
+
+## Shadows
+
+Pattern: `--kbq-shadow-[type]`
+
+| Variable | Usage |
+| :--- | :--- |
+<%- shadowRows(light.shadow, shadows.shadow.light) %>
+
+## Palette System (Contributors)
+
+For agents defining new tokens in `colors.v2.json5`. Consumer styling should use `--kbq-*` variables only.
+
+### Token Resolution Chain
+
+```
+plt.json5  →  semantic.json5  →  colors.v2.json5  →  CSS variables
+(raw OKLch)   (semantic roles)   (design tokens)      (--kbq-*)
+```
+
+File paths relative to `packages/design-tokens/web/properties/`:
+
+- `plt.json5` — perceptually-uniform OKLch color scales. **Preferred** for new token values.
+- `semantic.json5` — maps semantic role names (`themeA`, `contrastA`, …) to plt families.
+- `colors.v2.json5` — final token definitions producing `--kbq-*` CSS variables.
+- `palette.json5` — legacy HSL colors. **Do not use for new tokens.**
+
+### plt Color Families
+
+Scale: `1` (lightest) → `20` (darkest). Alpha variants (`*A`) control opacity on the same scale.
+
+| Family | Scale | Semantic role |
+| :--- | :--- | :--- |
+<%- pltFamilyRows(plt.plt, semanticMap) %>
+
+### Semantic Family Mappings
+
+| Semantic | plt family |
+| :--- | :--- |
+| `themeA` | `blueA` |
+| `contrastA` | `slateA` |
+| `errorA` | `redA` |
+| `successA` | `greenA` |
+| `warningA` | `yellowA` |
+| `warningFixedA` | `yellowFixedA` |
+| `visitedA` | `purpleA` |
+
+`dark*` counterparts exist for every family and are used by dark-theme token values.
+
+### Scale Guidance
+
+- `1–5`: Very light tints — subtle backgrounds, fades (`-less`, `-fade` variants).
+- `8–10`: Mid-range — overlays, faded states.
+- `13–14`: Saturated — solid fills, links.
+- `16–20`: Deep, high-contrast — primary text, high-contrast backgrounds.
+
+For alpha variants (`*A`), scale = opacity level (1 = near-transparent, 20 = near-opaque).
+
+### Reference Syntax
+
+```json5
+// Preferred — via semantic layer:
+"background-theme": { "value": "{semantic.themeA.14}", "description": "..." }
+
+// Direct plt reference (utility tokens):
+"background-night": { "value": "{plt.slate.18}" }
+```

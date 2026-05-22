@@ -74,37 +74,46 @@
         },
         "background": {
             "bg": {
-                "value": "{plt.white}"
+                "value": "{plt.white}",
+                "description": "Main page background."
             },
             "bg-secondary": {
-                "value": "{semantic.contrast.1}"
+                "value": "{semantic.contrast.1}",
+                "description": "Sidebar, panel backgrounds."
             },
             "bg-tertiary": {
                 "value": "{semantic.contrast.2}"
             },
             "night": {
-                "value": "{semantic.contrast.18}"
+                "value": "{semantic.contrast.18}",
+                "description": "Dim surface in both themes."
             },
             "card": {
-                "value": "{plt.white}"
+                "value": "{plt.white}",
+                "description": "Elevated surfaces; matches bg in light, differs in dark."
             },
             "theme": {
-                "value": "{semantic.themeA.14}"
+                "value": "{semantic.themeA.14}",
+                "description": "Checkboxes, radio buttons, toggle switches."
             },
             "theme-fade": {
                 "value": "{semantic.themeA.3}"
             },
             "theme-less": {
-                "value": "{semantic.themeA.2}"
+                "value": "{semantic.themeA.2}",
+                "description": "Selected list/tree items, table rows."
             },
             "contrast": {
-                "value": "{semantic.contrastA.19}"
+                "value": "{semantic.contrastA.19}",
+                "description": "Primary button. Highest contrast in both themes."
             },
             "contrast-fade": {
-                "value": "{semantic.contrastA.3}"
+                "value": "{semantic.contrastA.3}",
+                "description": "Default (ghost) button."
             },
             "contrast-less": {
-                "value": "{semantic.contrastA.2}"
+                "value": "{semantic.contrastA.2}",
+                "description": "Multi-select checked rows; alert containers."
             },
             "error": {
                 "value": "{semantic.errorA.14}"
@@ -113,7 +122,8 @@
                 "value": "{semantic.errorA.3}"
             },
             "error-less": {
-                "value": "{semantic.errorA.2}"
+                "value": "{semantic.errorA.2}",
+                "description": "Alert container."
             },
             "success": {
                 "value": "{semantic.successA.14}"
@@ -122,7 +132,8 @@
                 "value": "{semantic.successA.3}"
             },
             "success-less": {
-                "value": "{semantic.successA.2}"
+                "value": "{semantic.successA.2}",
+                "description": "Alert container."
             },
             "warning": {
                 "value": "{semantic.warningFixedA.14}"
@@ -131,22 +142,27 @@
                 "value": "{semantic.warningFixedA.3}"
             },
             "warning-less": {
-                "value": "{semantic.warningFixedA.2}"
+                "value": "{semantic.warningFixedA.2}",
+                "description": "Alert container."
             },
             "transparent": {
                 "value": "#00000000"
             },
             "overlay": {
-                "value": "{semantic.contrastA.17}"
+                "value": "{semantic.contrastA.17}",
+                "description": "Modal backdrop."
             },
             "overlay-theme": {
-                "value": "{semantic.themeA.8}"
+                "value": "{semantic.themeA.8}",
+                "description": "Allowed dropzone on dragover."
             },
             "overlay-error": {
-                "value": "{semantic.errorA.8}"
+                "value": "{semantic.errorA.8}",
+                "description": "Invalid dropzone on dragover."
             },
             "overlay-inverse": {
-                "value": "{plt.whiteA.18}"
+                "value": "{plt.whiteA.18}",
+                "description": "Loading overlay."
             },
             "highlight": {
                 "value": "{plt.yellowFixedA.3}"
@@ -154,16 +170,20 @@
         },
         "foreground": {
             "contrast": {
-                "value": "{semantic.contrastA.20}"
+                "value": "{semantic.contrastA.20}",
+                "description": "Primary text."
             },
             "contrast-secondary": {
-                "value": "{semantic.contrastA.16}"
+                "value": "{semantic.contrastA.16}",
+                "description": "Captions, hints."
             },
             "contrast-tertiary": {
-                "value": "{semantic.contrastA.13}"
+                "value": "{semantic.contrastA.13}",
+                "description": "Disabled / subtle text."
             },
             "theme": {
-                "value": "{semantic.themeA.16}"
+                "value": "{semantic.themeA.16}",
+                "description": "Links."
             },
             "theme-secondary": {
                 "value": "{semantic.themeA.13}"
@@ -204,13 +224,15 @@
                 "value": "{semantic.visitedA.16}"
             },
             "on-contrast": {
-                "value": "{plt.white}"
+                "value": "{plt.white}",
+                "description": "Text on --kbq-background-contrast."
             },
             "on-contrast-secondary": {
                 "value": "{plt.whiteA.16}"
             },
             "white": {
-                "value": "{plt.white}"
+                "value": "{plt.white}",
+                "description": "Text on colored backgrounds (theme, error, success…)."
             },
             "white-secondary": {
                 "value": "{plt.whiteA.16}"
@@ -236,7 +258,8 @@
                 "value": "{semantic.contrastA.14}"
             },
             "theme": {
-                "value": "{semantic.themeA.14}"
+                "value": "{semantic.themeA.14}",
+                "description": "Brand icons, icons beside links."
             },
             "theme-fade": {
                 "value": "{semantic.themeA.10}"
@@ -263,13 +286,15 @@
                 "value": "{semantic.visitedA.14}"
             },
             "on-contrast": {
-                "value": "{plt.white}"
+                "value": "{plt.white}",
+                "description": "Icons on --kbq-background-contrast."
             },
             "on-contrast-fade": {
                 "value": "{plt.whiteA.16}"
             },
             "white": {
-                "value": "{plt.white}"
+                "value": "{plt.white}",
+                "description": "Icons on colored backgrounds."
             },
             "white-fade": {
                 "value": "{plt.whiteA.16}"
@@ -286,16 +311,19 @@
                 "value": "{semantic.contrastA.20}"
             },
             "contrast-fade": {
-                "value": "{semantic.contrastA.7}"
+                "value": "{semantic.contrastA.7}",
+                "description": "Input box borders."
             },
             "contrast-less": {
-                "value": "{semantic.contrastA.4}"
+                "value": "{semantic.contrastA.4}",
+                "description": "Table / list / tree separators."
             },
             "theme": {
                 "value": "{semantic.themeA.13}"
             },
             "theme-fade": {
-                "value": "{semantic.themeA.7}"
+                "value": "{semantic.themeA.7}",
+                "description": "Link underline."
             },
             "theme-less": {
                 "value": "{semantic.themeA.4}"
@@ -319,7 +347,8 @@
                 "value": "{semantic.warningA.7}"
             },
             "visited": {
-                "value": "{semantic.visitedA.13}"
+                "value": "{semantic.visitedA.13}",
+                "description": "Visited link underline."
             },
             "visited-fade": {
                 "value": "{semantic.visitedA.7}"
@@ -530,7 +559,8 @@
                     "value": "{semantic.contrastA.4}"
                 },
                 "focus": {
-                    "value": "{semantic.themeA.13}"
+                    "value": "{semantic.themeA.13}",
+                    "description": "Focus ring."
                 },
                 "focus-theme": {
                     "value": "{semantic.themeA.13}"
@@ -546,21 +576,26 @@
         },
         "shadow": {
             "outline": {
-                "value": "{semantic.contrastA.1}"
+                "value": "{semantic.contrastA.1}",
+                "description": "Minimal elevation, 1px outer border."
             },
             "key": {
-                "value": "{semantic.contrastA.4}"
+                "value": "{semantic.contrastA.4}",
+                "description": "Internal component — do not use directly."
             },
             "ambient": {
-                "value": "{semantic.contrastA.4}"
+                "value": "{semantic.contrastA.4}",
+                "description": "Internal component — do not use directly."
             }
         },
         "opacity": {
             "disabled": {
-                "value": "0.5"
+                "value": "0.5",
+                "description": "Opacity for disabled elements."
             },
             "overlay": {
-                "value": "0.9"
+                "value": "0.9",
+                "description": "Opacity for overlay elements."
             }
         }
     },
@@ -1122,10 +1157,12 @@
         },
         "opacity": {
             "disabled": {
-                "value": "0.5"
+                "value": "0.5",
+                "description": "Opacity for disabled elements."
             },
             "overlay": {
-                "value": "0.9"
+                "value": "0.9",
+                "description": "Opacity for overlay elements."
             }
         }
     }

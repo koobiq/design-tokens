@@ -248,6 +248,8 @@ Use CSS classes or SCSS `@extend`. Pattern: `kbq-[style]`
 | `kbq-italic-compact-strong`  | 12px      | 16px                           | 600                            |
 | `kbq-navbar-title`           | 18px      | {typography.title.line-height} | {typography.title.font-weight} |
 
+Low-level variables (avoid): `--kbq-typography-[style]-[font-size|line-height|font-weight|letter-spacing|font-family]`
+
 ## Sizes & Spacing
 
 Pattern: `--kbq-size-[name]`

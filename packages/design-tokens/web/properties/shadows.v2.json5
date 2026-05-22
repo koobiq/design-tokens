@@ -1,17 +1,17 @@
 {
     shadow: {
         light: {
-            'overflow-compact-top':   { value: ' 0px -1px 0px 0px {light.shadow.outline}' },
+            'overflow-compact-top':   { value: ' 0px -1px 0px 0px {light.shadow.outline}', description: 'Subtle overflow shadow for low-elevation elements.' },
             'overflow-compact-right': { value: ' 1px  0px 0px 0px {light.shadow.outline}' },
             'overflow-compact-bottom':{ value: ' 0px  1px 0px 0px {light.shadow.outline}' },
             'overflow-compact-left':  { value: '-1px  0   0px 0px {light.shadow.outline}' },
-            'overflow-normal-top':    { value: ' 0   -9px 8px -12px {semantic.contrastA.13}' },
+            'overflow-normal-top':    { value: ' 0   -9px 8px -12px {semantic.contrastA.13}', description: 'Modal / sidepanel header overflow shadow.' },
             'overflow-normal-right':  { value: ' 9px   0  8px -12px {semantic.contrastA.13}' },
             'overflow-normal-left':   { value: '-9px   0  8px -12px {semantic.contrastA.13}' },
             'overflow-normal-bottom': { value: ' 0   9px  8px -12px {semantic.contrastA.13}' },
-            card: { value: '0 0px 0 1px {light.shadow.outline}, 0 1px 6px 0 {light.shadow.key}, 0 1px 6px 0 {light.shadow.ambient}' },
-            popup: { value: '0 0 0 1px {light.shadow.outline}, 0 2px 8px {light.shadow.key}, 0 3px 8px {light.shadow.ambient}' },
-            overlay: { value: '0 0 0 1px {light.shadow.outline}, 0 3px 16px {light.shadow.key}, 0 4px 32px {light.shadow.ambient}' },
+            card:    { value: '0 0px 0 1px {light.shadow.outline}, 0 1px 6px 0 {light.shadow.key}, 0 1px 6px 0 {light.shadow.ambient}', description: 'Elevated card.' },
+            popup:   { value: '0 0 0 1px {light.shadow.outline}, 0 2px 8px {light.shadow.key}, 0 3px 8px {light.shadow.ambient}', description: 'Dropdowns, popovers, tooltips.' },
+            overlay: { value: '0 0 0 1px {light.shadow.outline}, 0 3px 16px {light.shadow.key}, 0 4px 32px {light.shadow.ambient}', description: 'Modals, dialogs.' },
         },
         dark: {
             'overflow-compact-top':    { value: ' 0px -1px 0px 0px {dark.shadow.outline}' },
