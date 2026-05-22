@@ -8,6 +8,39 @@
 - **Docs**: https://koobiq.io/en/main/design-tokens/overview
 - **Theming docs**: https://koobiq.io/en/main/theming/overview
 
+## Repository Structure
+
+```
+packages/
+  design-tokens/       # published package (@koobiq/design-tokens)
+    web/
+      properties/      # source token files (colors.v2.json5, plt.json5, globals.json5, …)
+      components/      # component-level tokens (deprecated)
+  tokens-builder/      # style-dictionary config and transforms
+tools/                 # build and generation scripts
+dist/                  # build output (gitignored)
+```
+
+- Token source: `packages/design-tokens/web/properties/`
+- Build output: `dist/design-tokens/web/new/` (OKLch, preferred) and `dist/design-tokens/web/` (legacy HSL)
+
+## Key Commands
+
+| Command | Description |
+| :--- | :--- |
+| `yarn build` | Clean and rebuild all token files into `dist/` |
+| `yarn generate:styling` | Regenerate `STYLING.md` from token source files |
+| `yarn prettier:fix` | Auto-format all files |
+| `yarn eslint:fix` | Auto-fix JS lint issues |
+
+## Build System
+
+- **Package manager**: yarn 4
+- **Token processor**: [Style Dictionary](https://amzn.github.io/style-dictionary/) v3
+- Token source format: JSON5
+- Output formats: CSS custom properties, SCSS variables, JS/TS exports
+- Two output tracks: `new/` (OKLch, use this) and legacy HSL (backward compat)
+
 ## Setup
 
 ```css

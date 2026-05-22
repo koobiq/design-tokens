@@ -120,58 +120,153 @@ Text color.
 
 ### Interaction States (`--kbq-states-...`)
 
-States follow the pattern `--kbq-states-[element]-[semantic]-[intensity?]-[state]`:
+Pattern: `--kbq-states-[element]-[semantic]-[intensity?]-[state]`
 
 - **element** ∈ `background`, `foreground`, `icon`
-- **semantic** ∈ `theme`, `contrast`, `error`, `success`, `warning`, `visited`, `transparent`, `disabled`
-- **intensity** ∈ `-fade`, `-less` (optional; mirrors base color variants)
+- **intensity** ∈ `-fade`, `-less` (optional)
 - **state** ∈ `-hover`, `-active`
+- Disabled: `--kbq-states-[element]-disabled` (no state suffix)
 
-Disabled variants use no state suffix: `--kbq-states-[element]-disabled`.
-Not all semantic × intensity combinations exist (e.g. `warning` has `-fade` and `-less` but no base hover/active).
-
-`--kbq-states-line-focus` — Focus ring color.
-`--kbq-states-line-focus-theme` — Focused theme line.
-`--kbq-states-line-focus-error` — Focused error line.
-`--kbq-states-line-disabled` — Disabled border color.
-`--kbq-opacity-disabled` — Opacity value for disabled elements.
+| Variable | Usage context |
+| :--- | :--- |
+| `--kbq-states-background-disabled` |  |
+| `--kbq-states-background-contrast-hover` |  |
+| `--kbq-states-background-contrast-active` |  |
+| `--kbq-states-background-contrast-fade-hover` |  |
+| `--kbq-states-background-contrast-fade-active` |  |
+| `--kbq-states-background-contrast-less-hover` |  |
+| `--kbq-states-background-contrast-less-active` |  |
+| `--kbq-states-background-transparent-hover` |  |
+| `--kbq-states-background-transparent-active` |  |
+| `--kbq-states-background-theme-hover` |  |
+| `--kbq-states-background-theme-active` |  |
+| `--kbq-states-background-theme-fade-hover` |  |
+| `--kbq-states-background-theme-fade-active` |  |
+| `--kbq-states-background-theme-less-hover` |  |
+| `--kbq-states-background-theme-less-active` |  |
+| `--kbq-states-background-error-hover` |  |
+| `--kbq-states-background-error-active` |  |
+| `--kbq-states-background-error-fade-hover` |  |
+| `--kbq-states-background-error-fade-active` |  |
+| `--kbq-states-background-error-less-hover` |  |
+| `--kbq-states-background-error-less-active` |  |
+| `--kbq-states-background-warning-hover` |  |
+| `--kbq-states-background-warning-active` |  |
+| `--kbq-states-background-warning-fade-hover` |  |
+| `--kbq-states-background-warning-fade-active` |  |
+| `--kbq-states-background-warning-less-hover` |  |
+| `--kbq-states-background-warning-less-active` |  |
+| `--kbq-states-background-success-hover` |  |
+| `--kbq-states-background-success-active` |  |
+| `--kbq-states-background-success-fade-hover` |  |
+| `--kbq-states-background-success-fade-active` |  |
+| `--kbq-states-background-success-less-hover` |  |
+| `--kbq-states-background-success-less-active` |  |
+| `--kbq-states-background-highlight-current` |  |
+| `--kbq-states-foreground-disabled` |  |
+| `--kbq-states-foreground-theme-hover` |  |
+| `--kbq-states-foreground-theme-active` |  |
+| `--kbq-states-foreground-visited-hover` |  |
+| `--kbq-states-foreground-visited-active` |  |
+| `--kbq-states-icon-disabled` |  |
+| `--kbq-states-icon-contrast-hover` |  |
+| `--kbq-states-icon-contrast-active` |  |
+| `--kbq-states-icon-contrast-fade-hover` |  |
+| `--kbq-states-icon-contrast-fade-active` |  |
+| `--kbq-states-icon-theme-hover` |  |
+| `--kbq-states-icon-theme-active` |  |
+| `--kbq-states-icon-error-hover` |  |
+| `--kbq-states-icon-error-active` |  |
+| `--kbq-states-icon-success-hover` |  |
+| `--kbq-states-icon-success-active` |  |
+| `--kbq-states-icon-warning-hover` |  |
+| `--kbq-states-icon-warning-active` |  |
+| `--kbq-states-icon-visited-hover` |  |
+| `--kbq-states-icon-visited-active` |  |
+| **Line states** | |
+| `--kbq-states-line-disabled` |  |
+| `--kbq-states-line-focus` | Focus ring. |
+| `--kbq-states-line-focus-theme` |  |
+| `--kbq-states-line-focus-error` |  |
+| `--kbq-opacity-disabled` | Opacity for disabled elements. |
 
 ## Typography
 
-Use CSS classes or SCSS `@extend` — do not use individual variables.
-Pattern: `kbq-[style]` (e.g. `kbq-title`, `kbq-text-normal-strong`).
+Use CSS classes or SCSS `@extend`. Pattern: `kbq-[style]`
 
 ```scss
 .card-title { @extend .kbq-title; }
 ```
 
-| Group | Classes |
-| :--- | :--- |
-| Headings | `kbq-headline`, `kbq-title`, `kbq-subheading`, `kbq-navbar-title` |
-| Display | `kbq-display-big[-strong]`, `kbq-display-normal[-strong]`, `kbq-display-compact[-strong]` |
-| Text | `kbq-text-big[-medium|-strong]`, `kbq-text-normal[-medium|-strong]`, `kbq-text-compact[-medium|-strong]` |
-| Caps | `kbq-caps-big[-strong]`, `kbq-caps-normal[-strong]`, `kbq-caps-compact[-strong]` |
-| Mono | `kbq-mono-big[-strong]`, `kbq-mono-normal[-medium|-strong]`, `kbq-mono-compact[-strong]`, `kbq-mono-codeblock` |
-| Tabular | `kbq-tabular-big[-strong]`, `kbq-tabular-normal[-strong]`, `kbq-tabular-compact[-strong]` |
-| Italic | `kbq-italic-big[-strong]`, `kbq-italic-normal[-strong]`, `kbq-italic-compact[-strong]` |
-
-Low-level variables (avoid): `--kbq-typography-[style]-[font-size|line-height|font-weight|letter-spacing|font-family]`
+| Class | Font size | Line height | Weight |
+| :--- | :--- | :--- | :--- |
+| `kbq-headline` | 28px | 32px | 700 |
+| `kbq-title` | 20px | 28px | 700 |
+| `kbq-subheading` | 18px | 26px | 600 |
+| `kbq-display-big` | 57px | 64px | 400 |
+| `kbq-display-normal` | 45px | 52px | 400 |
+| `kbq-display-compact` | 36px | 44px | 400 |
+| `kbq-display-big-strong` | 57px | 64px | 700 |
+| `kbq-display-normal-strong` | 45px | 52px | 700 |
+| `kbq-display-compact-strong` | 36px | 44px | 700 |
+| `kbq-text-big` | 16px | 24px | normal |
+| `kbq-text-big-medium` | 16px | 24px | 500 |
+| `kbq-text-big-strong` | 16px | 24px | 600 |
+| `kbq-text-normal` | 14px | 20px | normal |
+| `kbq-text-normal-medium` | 14px | 20px | 500 |
+| `kbq-text-normal-strong` | 14px | 20px | 600 |
+| `kbq-text-compact` | 12px | 16px | normal |
+| `kbq-text-compact-medium` | 12px | 16px | 500 |
+| `kbq-text-compact-strong` | 12px | 16px | 600 |
+| `kbq-caps-big` | 16px | 24px | 400 |
+| `kbq-caps-big-strong` | 16px | 24px | 500 |
+| `kbq-caps-normal` | 14px | 20px | normal |
+| `kbq-caps-normal-strong` | 14px | 20px | 500 |
+| `kbq-caps-compact` | 12px | 16px | normal |
+| `kbq-caps-compact-strong` | 12px | 16px | 500 |
+| `kbq-mono-big` | 16px | 24px | normal |
+| `kbq-mono-big-strong` | 16px | 24px | 700 |
+| `kbq-mono-normal` | 14px | 20px | normal |
+| `kbq-mono-normal-medium` | 14px | 20px | 600 |
+| `kbq-mono-normal-strong` | 14px | 20px | 700 |
+| `kbq-mono-compact` | 12px | 16px | normal |
+| `kbq-mono-compact-strong` | 12px | 16px | 700 |
+| `kbq-mono-codeblock` | 14px | 20px | normal |
+| `kbq-tabular-big` | 16px | 24px | normal |
+| `kbq-tabular-big-strong` | 16px | 24px | 600 |
+| `kbq-tabular-normal` | 14px | 20px | normal |
+| `kbq-tabular-normal-strong` | 14px | 20px | 600 |
+| `kbq-tabular-compact` | 12px | 16px | normal |
+| `kbq-tabular-compact-strong` | 12px | 16px | 600 |
+| `kbq-italic-big` | 16px | 24px | normal |
+| `kbq-italic-big-strong` | 16px | 24px | 600 |
+| `kbq-italic-normal` | 14px | 20px | normal |
+| `kbq-italic-normal-strong` | 14px | 20px | 600 |
+| `kbq-italic-compact` | 12px | 16px | normal |
+| `kbq-italic-compact-strong` | 12px | 16px | 600 |
+| `kbq-navbar-title` | 18px | {typography.title.line-height} | {typography.title.font-weight} |
 
 ## Sizes & Spacing
 
 Pattern: `--kbq-size-[name]`
 
-| Size | Value | Usage |
+| Variable | Value | Usage |
 | :--- | :--- | :--- |
-| `3xs`, `xxs`, `xs` | 2px, 4px, 6px | Tiny spacing, fine adjustments. |
-| `s` | 8px | Small padding, standard border radius. |
-| `m` | 12px | Medium padding. |
-| `l` | 16px | Large padding. |
-| `xl`, `xxl` | 20px, 24px | Component height, layout spacing. |
-| `3xl`…`7xl` | 32px…64px | Large layout sections. |
-
-- `--kbq-size-border-width` — 1px. Input box borders.
-- `--kbq-size-border-radius` — 8px. Buttons, inputs. Use 12px for cards, alerts, popovers.
+| `--kbq-size-3xs` | 2px | Tiny spacing, fine adjustments. |
+| `--kbq-size-xxs` | 4px | Tiny spacing, fine adjustments. |
+| `--kbq-size-xs` | 6px | Tiny spacing, fine adjustments. |
+| `--kbq-size-s` | 8px | Small padding, standard border radius. |
+| `--kbq-size-m` | 12px | Medium padding. |
+| `--kbq-size-l` | 16px | Large padding. |
+| `--kbq-size-xl` | 20px | Component height, layout spacing. |
+| `--kbq-size-xxl` | 24px | Component height, layout spacing. |
+| `--kbq-size-3xl` | 32px | Large layout sections. |
+| `--kbq-size-4xl` | 40px | Large layout sections. |
+| `--kbq-size-5xl` | 48px | Large layout sections. |
+| `--kbq-size-6xl` | 56px | Large layout sections. |
+| `--kbq-size-7xl` | 64px | Large layout sections. |
+| `--kbq-size-border-width` | 1px | Input box borders. |
+| `--kbq-size-border-radius` | 8px | Buttons, inputs. Use 12px for cards, alerts, popovers. |
 
 ## Shadows
 
@@ -180,13 +275,19 @@ Pattern: `--kbq-shadow-[type]`
 | Variable | Usage |
 | :--- | :--- |
 | `--kbq-shadow-outline` | Minimal elevation, 1px outer border. |
+| `--kbq-shadow-key` | Internal component — do not use directly. |
+| `--kbq-shadow-ambient` | Internal component — do not use directly. |
+| `--kbq-shadow-overflow-compact-top` | Subtle overflow shadow for low-elevation elements. |
+| `--kbq-shadow-overflow-compact-right` |  |
+| `--kbq-shadow-overflow-compact-bottom` |  |
+| `--kbq-shadow-overflow-compact-left` |  |
+| `--kbq-shadow-overflow-normal-top` | Modal / sidepanel header overflow shadow. |
+| `--kbq-shadow-overflow-normal-right` |  |
+| `--kbq-shadow-overflow-normal-left` |  |
+| `--kbq-shadow-overflow-normal-bottom` |  |
 | `--kbq-shadow-card` | Elevated card. |
 | `--kbq-shadow-popup` | Dropdowns, popovers, tooltips. |
 | `--kbq-shadow-overlay` | Modals, dialogs. |
-| `--kbq-shadow-overflow-compact-[top|right|bottom|left]` | Subtle overflow shadow for low-elevation elements. |
-| `--kbq-shadow-overflow-normal-[top|right|bottom|left]` | Modal/sidepanel header overflow shadow. |
-
-> `--kbq-shadow-key` and `--kbq-shadow-ambient` are internal — do not use directly.
 
 ## Palette System (Contributors)
 
@@ -210,20 +311,56 @@ File paths relative to `packages/design-tokens/web/properties/`:
 
 Scale: `1` (lightest) → `20` (darkest). Alpha variants (`*A`) control opacity on the same scale.
 
-| Family | Semantic role | Notes |
+| Family | Scale | Semantic role |
 | :--- | :--- | :--- |
-| `blue` / `blueA` | Theme (brand) | |
-| `slate` / `slateA` | Contrast (neutral) | Grays / neutrals |
-| `red` / `redA` | Error | |
-| `green` / `greenA` | Success | |
-| `yellow` / `yellowA` | Warning | Theme-adaptive hue |
-| `yellowFixed` / `yellowFixedA` | Warning | Fixed hue across themes |
-| `purple` / `purpleA` | Visited | |
-| `teal` / `tealA` | — | Accent |
-| `orange` / `orangeA` | — | Accent |
-| `white` / `whiteA` | White (always bright) | |
-| `black` / `blackA` | Night (always dark) | |
-| `dark*` variants | Dark-theme-specific | Each family has a `dark*` counterpart |
+| `blue` | 1–20 | Theme (brand) |
+| `slate` | 1–20 | Contrast (neutral) |
+| `red` | 1–20 | Error |
+| `orange` | 1–20 | Accent |
+| `yellow` | 1–20 | Warning (adaptive) |
+| `green` | 1–20 | Success |
+| `teal` | 1–20 | Accent |
+| `purple` | 1–20 | Visited |
+| `darkBlue` | 1–20 | Dark-theme counterpart of `blue` |
+| `darkSlate` | 1–20 | Dark-theme counterpart of `slate` |
+| `darkRed` | 1–20 | Dark-theme counterpart of `red` |
+| `darkOrange` | 1–20 | Dark-theme counterpart of `orange` |
+| `darkYellow` | 1–20 | Dark-theme counterpart of `yellow` |
+| `darkGreen` | 1–20 | Dark-theme counterpart of `green` |
+| `darkTeal` | 1–20 | Dark-theme counterpart of `teal` |
+| `darkPurple` | 1–20 | Dark-theme counterpart of `purple` |
+| `grey` | 1–20 | Neutral accent |
+| `darkGrey` | 1–20 | Dark-theme counterpart of `grey` |
+| `greyA` | 1–20 | Neutral accent |
+| `darkGreyA` | 1–20 | Dark-theme counterpart of `greyA` |
+| `whiteA` | 1–20 | White (always bright) |
+| `blackA` | 1–20 | Night (always dark) |
+| `blueA` | 1–20 | Theme (brand) |
+| `slateA` | 1–20 | Contrast (neutral) |
+| `redA` | 1–20 | Error |
+| `orangeA` | 1–20 | Accent |
+| `yellowA` | 1–20 | Warning (adaptive) |
+| `greenA` | 1–20 | Success |
+| `tealA` | 1–20 | Accent |
+| `purpleA` | 1–20 | Visited |
+| `darkBlueA` | 1–20 | Dark-theme counterpart of `blueA` |
+| `darkSlateA` | 1–20 | Dark-theme counterpart of `slateA` |
+| `darkRedA` | 1–20 | Dark-theme counterpart of `redA` |
+| `darkOrangeA` | 1–20 | Dark-theme counterpart of `orangeA` |
+| `darkYellowA` | 1–20 | Dark-theme counterpart of `yellowA` |
+| `darkGreenA` | 1–20 | Dark-theme counterpart of `greenA` |
+| `darkTealA` | 1–20 | Dark-theme counterpart of `tealA` |
+| `darkPurpleA` | 1–20 | Dark-theme counterpart of `purpleA` |
+| `yellowFixed` | 1–20 | Warning (fixed hue) |
+| `orangeFixed` | 1–20 | — |
+| `darkYellowFixed` | 1–20 | Dark-theme counterpart of `yellowFixed` |
+| `darkOrangeFixed` | 1–20 | Dark-theme counterpart of `orangeFixed` |
+| `yellowFixedA` | 1–20 | Warning (fixed hue) |
+| `orangeFixedA` | 1–20 | — |
+| `darkYellowFixedA` | 1–20 | Dark-theme counterpart of `yellowFixedA` |
+| `darkOrangeFixedA` | 1–20 | Dark-theme counterpart of `orangeFixedA` |
+| `white` | value | White (always bright) |
+| `black` | value | Night (always dark) |
 
 ### Semantic Family Mappings
 
@@ -236,6 +373,8 @@ Scale: `1` (lightest) → `20` (darkest). Alpha variants (`*A`) control opacity 
 | `warningA` | `yellowA` |
 | `warningFixedA` | `yellowFixedA` |
 | `visitedA` | `purpleA` |
+
+`dark*` counterparts exist for every family and are used by dark-theme token values.
 
 ### Scale Guidance
 
