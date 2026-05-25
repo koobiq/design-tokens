@@ -1560,6 +1560,7 @@ __metadata:
     "@types/eslint": "npm:^8.56.12"
     "@types/fs-extra": "npm:^11.0.4"
     "@types/node": "npm:^24.10.4"
+    ejs: "npm:^5.0.2"
     eslint: "npm:^8.57.0"
     eslint-config-prettier: "npm:^9.1.2"
     eslint-plugin-prettier: "npm:^5.5.5"
@@ -1622,6 +1623,15 @@ __metadata:
   version: 0.2.0
   resolution: "eastasianwidth@npm:0.2.0"
   checksum: 10c0/26f364ebcdb6395f95124fda411f63137a4bfb5d3a06453f7f23dfe52502905bd84e0488172e0f9ec295fdc45f05c23d5d91baf16bd26f0fe9acd777a188dc39
+  languageName: node
+  linkType: hard
+
+"ejs@npm:^5.0.2":
+  version: 5.0.2
+  resolution: "ejs@npm:5.0.2"
+  bin:
+    ejs: bin/cli.js
+  checksum: 10c0/6377ba83487e9e818dd77ab92d67a5f6c0d093689fa500aa0654305f4c19af13a30a606cc6286b8dfef1cf8aae89a71130af16aca5b72dc500a4a44ac3aa13bf
   languageName: node
   linkType: hard
 
