@@ -1,13 +1,17 @@
 #!/usr/bin/env node
 'use strict';
 
-const fs = require('fs');
-const path = require('path');
-const ejs = require('ejs');
-const JSON5 = require('json5');
+import fs from 'fs';
+import path from 'path';
+import ejs from 'ejs';
+import JSON5 from 'json5';
 
-const ROOT = path.resolve(__dirname, '..');
+const TOKEN_PREFIX = 'kbq';
+
+const ROOT = process.cwd();
+
 const PROPS = path.join(ROOT, 'packages/design-tokens/web/properties');
+
 
 function readJSON5(file) {
     return JSON5.parse(fs.readFileSync(path.join(PROPS, file), 'utf8'));
@@ -53,7 +57,7 @@ function row(...cells) {
 function tokenRows(category, entries) {
     return Object.entries(entries)
         .filter(([, v]) => v?.value && !v.deprecated)
-        .map(([key, v]) => row(`\`--kbq-${category}-${key}\``, v.description || ''))
+        .map(([key, v]) => row(`\`--${TOKEN_PREFIX}-${category}-${key}\``, v.description || ''))
         .join('\n');
 }
 
@@ -62,17 +66,14 @@ function stateRows(states) {
     for (const element of ['background', 'foreground', 'icon']) {
         for (const [key, v] of Object.entries(states[element])) {
             if (!v?.value || v.deprecated) continue;
-            rows.push(row(`\`--kbq-states-${element}-${key}\``, v.description || ''));
+            rows.push(row(`\`--${TOKEN_PREFIX}-states-${element}-${key}\``, v.description || ''));
         }
     }
     rows.push(row('**Line states**', ''));
     for (const [key, v] of Object.entries(states.line)) {
         if (!v?.value || v.deprecated) continue;
-        rows.push(row(`\`--kbq-states-line-${key}\``, v.description || ''));
+        rows.push(row(`\`--${TOKEN_PREFIX}-states-line-${key}\``, v.description || ''));
     }
-    rows.push(
-        row('`--kbq-opacity-disabled`', states['disabled-opacity']?.description || 'Opacity for disabled elements.')
-    );
     return rows.join('\n');
 }
 
@@ -80,7 +81,7 @@ function typographyRows(typo) {
     return Object.entries(typo.typography)
         .map(([name, p]) =>
             row(
-                `\`kbq-${name}\``,
+                `\`${TOKEN_PREFIX}-${name}\``,
                 p['font-size']?.value ?? '',
                 p['line-height']?.value ?? '',
                 p['font-weight']?.value ?? ''
@@ -91,13 +92,13 @@ function typographyRows(typo) {
 
 function sizeRows(sizes) {
     return Object.entries(sizes)
-        .map(([name, t]) => row(`\`--kbq-size-${name}\``, t.value, t.description || ''))
+        .map(([name, t]) => row(`\`--${TOKEN_PREFIX}-size-${name}\``, t.value, t.description || ''))
         .join('\n');
 }
 
 function shadowRows(baseShadows, extendedShadows) {
     const entries = [...Object.entries(baseShadows), ...Object.entries(extendedShadows)];
-    return entries.map(([name, t]) => row(`\`--kbq-shadow-${name}\``, t.description || '')).join('\n');
+    return entries.map(([name, t]) => row(`\`--${TOKEN_PREFIX}-shadow-${name}\``, t.description || '')).join('\n');
 }
 
 function pltFamilyRows(families, semMap) {
@@ -115,7 +116,7 @@ function pltFamilyRows(families, semMap) {
         .join('\n');
 }
 
-const output = ejs.render(fs.readFileSync(path.join(__dirname, 'styling.md.ejs'), 'utf8'), {
+const output = ejs.render(fs.readFileSync(path.join(ROOT, 'tools', 'styling.md.ejs'), 'utf8'), {
     light: colors.light,
     globals,
     shadows,

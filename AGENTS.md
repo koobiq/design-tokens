@@ -41,20 +41,6 @@ dist/                  # build output (gitignored)
 - Output formats: CSS custom properties, SCSS variables, JS/TS exports
 - Two output tracks: `new/` (OKLch, use this) and legacy HSL (backward compat)
 
-## Setup
-
-```css
-@import '@koobiq/design-tokens/web/new/css-tokens.css'; /* base / component tokens (:root) */
-@import '@koobiq/design-tokens/web/new/css-tokens-light.css'; /* light theme (.kbq-light) */
-@import '@koobiq/design-tokens/web/new/css-tokens-dark.css'; /* dark theme (.kbq-dark) */
-```
-
-```html
-<body class="kbq-light">
-    <!-- or kbq-dark -->
-</body>
-```
-
 ## Styling Rules
 
 - **CSS variables are the API** — use `--kbq-*`; do not hardcode colors or sizes.
