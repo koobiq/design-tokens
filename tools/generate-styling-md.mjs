@@ -12,7 +12,6 @@ const ROOT = process.cwd();
 
 const PROPS = path.join(ROOT, 'packages/design-tokens/web/properties');
 
-
 function readJSON5(file) {
     return JSON5.parse(fs.readFileSync(path.join(PROPS, file), 'utf8'));
 }
