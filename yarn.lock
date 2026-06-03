@@ -408,9 +408,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@koobiq/cli@npm:^19.5.0":
-  version: 19.5.0
-  resolution: "@koobiq/cli@npm:19.5.0"
+"@koobiq/cli@npm:^19.8.0":
+  version: 19.8.0
+  resolution: "@koobiq/cli@npm:19.8.0"
   dependencies:
     "@octokit/rest": "npm:^18.9.1"
     chalk: "npm:^4.0.0"
@@ -424,7 +424,7 @@ __metadata:
     merge2: "npm:^1.4.1"
   bin:
     koobiq-cli: bin/cli
-  checksum: 10c0/b8336399098bb8445e2ea9bc506493d07eed91367a2d647b713fd99359718dfcc619fec4b0e6f0cafc00b074b9104bdac10a50611e344cd788a65de513438f29
+  checksum: 10c0/76a01cca6a26702edd59479ac159219d0f61f683fb7b6468a46a8d6e9ca0586ebd684b812afc6c7e860c64b0a9c95b2ab6ac99420744eb20be91a5ee09d931a0
   languageName: node
   linkType: hard
 
@@ -1556,7 +1556,7 @@ __metadata:
   dependencies:
     "@commitlint/cli": "npm:^19.8.1"
     "@commitlint/config-conventional": "npm:^19.8.1"
-    "@koobiq/cli": "npm:^19.5.0"
+    "@koobiq/cli": "npm:^19.8.0"
     "@types/eslint": "npm:^8.56.12"
     "@types/fs-extra": "npm:^11.0.4"
     "@types/node": "npm:^24.10.4"
