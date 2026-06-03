@@ -737,7 +737,7 @@
                 "value": "#00000000"
             },
             "overlay": {
-                "value": "{plt.blackA.18}"
+                "value": "{plt.blackA.15}"
             },
             "overlay-theme": {
                 "value": "{semantic.darkThemeA.4}"
@@ -746,7 +746,7 @@
                 "value": "{semantic.darkErrorA.4}"
             },
             "overlay-inverse": {
-                "value": "{plt.blackA.18}"
+                "value": "{plt.blackA.15}"
             },
             "highlight": {
                 "value": "{plt.darkYellowA.5}"
