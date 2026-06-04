@@ -1,10 +1,10 @@
 {
     shadow: {
         light: {
-            'overflow-compact-top':   { value: ' 0px -1px 0px 0px {light.shadow.outline}', description: 'Subtle overflow shadow for low-elevation elements.' },
-            'overflow-compact-right': { value: ' 1px  0px 0px 0px {light.shadow.outline}' },
-            'overflow-compact-bottom':{ value: ' 0px  1px 0px 0px {light.shadow.outline}' },
-            'overflow-compact-left':  { value: '-1px  0   0px 0px {light.shadow.outline}' },
+            'overflow-compact-top':   { value: ' 0px -1px 0px 0px {light.line.contrast-less}', description: 'Subtle overflow shadow for low-elevation elements.' },
+            'overflow-compact-right': { value: ' 1px  0px 0px 0px {light.line.contrast-less}' },
+            'overflow-compact-bottom':{ value: ' 0px  1px 0px 0px {light.line.contrast-less}' },
+            'overflow-compact-left':  { value: '-1px  0   0px 0px {light.line.contrast-less}' },
             'overflow-normal-top':    { value: ' 0   -9px 8px -12px {semantic.contrastA.13}', description: 'Modal / sidepanel header overflow shadow.' },
             'overflow-normal-right':  { value: ' 9px   0  8px -12px {semantic.contrastA.13}' },
             'overflow-normal-left':   { value: '-9px   0  8px -12px {semantic.contrastA.13}' },
