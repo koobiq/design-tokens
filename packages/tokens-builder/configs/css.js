@@ -9,40 +9,59 @@ const componentsPath = fs.existsSync(path.join('node_modules', '@koobiq/design-t
     ? path.join('node_modules', '@koobiq/design-tokens', 'web', 'components')
     : path.join('packages', 'design-tokens', 'web', 'components');
 
+const actualComponentTokens = ['skeleton', 'code-block', 'scrollbars'];
+
 const componentTokens = fs
     .readdirSync(componentsPath)
     .filter((fileName) => fileName.endsWith('.json5'))
     .map((fileName) => fileName.replace('.json5', ''));
 
-const componentTokensBase = componentTokens.map((fileName) => ({
+const deprecatedComponentTokensBase = componentTokens.map((fileName) => ({
     destination: `deprecated/css/components/${fileName}/${fileName}.css`,
     format: 'kbq-css/variables',
-    filter: (token) => token.filePath.includes(fileName) && !token.attributes.light && !token.attributes.dark,
+    filter: (token) =>
+        token.filePath.includes(fileName) && !token.attributes.light && !token.attributes.dark && token.deprecated,
     prefix: 'kbq',
     options: {
         outputReferences: true
     }
 }));
 
-const componentTokensLight = componentTokens.map((fileName) => ({
+const deprecatedComponentTokensLight = componentTokens.map((fileName) => ({
     destination: `deprecated/css/components/${fileName}/${fileName}-light.css`,
     format: 'kbq-css/variables',
-    filter: (token) => token.filePath.includes(fileName) && token.attributes.light,
+    filter: (token) => token.filePath.includes(fileName) && token.attributes.light && token.deprecated,
     prefix: 'kbq',
     options: {
-        selector: '.kbq-light'
+        selector: '.kbq-light',
+        outputReferences: true
     }
 }));
 
-const componentTokensDark = componentTokens.map((fileName) => ({
+const deprecatedComponentTokensDark = componentTokens.map((fileName) => ({
     destination: `deprecated/css/components/${fileName}/${fileName}-dark.css`,
     format: 'kbq-css/variables',
-    filter: (token) => token.filePath.includes(fileName) && token.attributes.dark,
+    filter: (token) => token.filePath.includes(fileName) && token.attributes.dark && token.deprecated,
     prefix: 'kbq',
     options: {
-        selector: '.kbq-dark'
+        selector: '.kbq-dark',
+        outputReferences: true
     }
 }));
+
+const [lightComponentTokens, darkComponentTokens] = ['light', 'dark'].map((theme) => {
+    return actualComponentTokens.map((fileName) => ({
+        destination: `css/components/${fileName}/${fileName}-${theme}.css`,
+        format: 'kbq-css/variables',
+        filter: (token) =>
+            token.filePath.includes(fileName) && token.attributes[theme] && !token.deprecated && token.value,
+        prefix: 'kbq',
+        options: {
+            selector: `.kbq-${theme}`,
+            outputReferences: true
+        }
+    }));
+});
 
 const paletteByColorsConfig = paletteColors.map((color) => ({
     destination: `css/palette/${color}.css`,
@@ -173,9 +192,11 @@ module.exports = {
                     outputReferences: true
                 }
             },
-            ...componentTokensBase,
-            ...componentTokensLight,
-            ...componentTokensDark,
+            ...deprecatedComponentTokensBase,
+            ...deprecatedComponentTokensLight,
+            ...deprecatedComponentTokensDark,
+            ...lightComponentTokens,
+            ...darkComponentTokens,
             {
                 destination: 'deprecated/css/components-light.css',
                 format: 'kbq-css/variables',
