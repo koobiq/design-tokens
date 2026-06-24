@@ -1,22 +1,37 @@
-name: Notification PR
+name: PR notification
 
 on:
-  pull_request:
+  # WARNING: `pull_request_target` runs with write permissions and access to secrets
+  # even for PRs from forks. Never checkout untrusted PR code or run it in this workflow,
+  # as that would allow a malicious contributor to exfiltrate secrets or modify the repo.
+  # Safe here only because no code is checked out — only GitHub context metadata is used.
+  pull_request_target:
     types:
       - opened
 
+permissions: {}
+
 jobs:
   notify:
-    name: Pull Request Notification
     runs-on: ubuntu-latest
+    name: Pull Request Notification
+    env:
+      TEXT: |
+        [${{ github.repository }}] | [${{ github.event.pull_request.title }} #${{ github.event.number }}](https://github.com/${{ github.repository }}/pull/${{ github.event.number }}) was created by ${{ github.actor }}
     steps:
-      - name: Notification to BotChannel
-        uses: mattermost/action-mattermost-notify@2.0.0
-        env:
-          PR_URL: https://github.com/${{ github.repository }}/pull/${{ github.event.number }}
+      - name: Notification to main channel
+        if: ${{ github.actor != 'dependabot[bot]' }}
+        uses: mattermost/action-mattermost-notify@ae31bb6f9e26a54336e79696f108a2c91cf55b4e # v2.1.0
+        with:
+          MATTERMOST_WEBHOOK_URL: ${{ secrets.MM_WEBHOOK_URL }}
+          MATTERMOST_CHANNEL: ${{ secrets.MM_CHANNEL_NAME }}
+          MATTERMOST_USERNAME: ${{ secrets.MM_BOT_NAME }}
+          TEXT: ${{ env.TEXT }}
+
+      - name: Notification to dev channel
+        uses: mattermost/action-mattermost-notify@ae31bb6f9e26a54336e79696f108a2c91cf55b4e # v2.1.0
         with:
           MATTERMOST_WEBHOOK_URL: ${{ secrets.MM_WEBHOOK_URL }}
           MATTERMOST_CHANNEL: ${{ secrets.MM_CHANNEL_BOT_PR }}
           MATTERMOST_USERNAME: ${{ secrets.MM_BOT_NAME }}
-          TEXT: |
-            [${{ github.repository }}] | [${{ github.event.pull_request.title }} #${{ github.event.number }}](${{ env.PR_URL }}) was created by ${{ github.actor }}
+          TEXT: ${{ env.TEXT }}
