@@ -24,10 +24,6 @@ updates:
       prettier:
         patterns:
           - 'prettier*'
-      fs-extra:
-        patterns:
-          - 'fs-extra'
-          - '@types/fs-extra'
       koobiq:
         patterns:
           - '@koobiq/*'
