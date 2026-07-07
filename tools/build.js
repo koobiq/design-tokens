@@ -20,10 +20,10 @@ build([
     }
 ]);
 
-const { copySync, copyFileSync, writeFileSync, readFileSync } = require('fs-extra');
+const { cpSync, copyFileSync, writeFileSync, readFileSync } = require('fs');
 
 const prepareTokens = (package) => {
-    copySync(`packages/${package}`, `dist/${package}`);
+    cpSync(`packages/${package}`, `dist/${package}`, { recursive: true });
 
     copyFileSync('./LICENSE', `dist/${package}/LICENSE`);
 };
