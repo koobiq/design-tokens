@@ -29,6 +29,9 @@ require('./formats/typography')(StyleDictionary);
 require('./formats/palette')(StyleDictionary);
 require('./formats/variables')(StyleDictionary);
 
+// ==== Include custom actions ====
+require('./actions/css-index')(StyleDictionary);
+
 // ==== Run build ====
 console.log('Build started...');
 console.log('==============================================');

@@ -68,6 +68,26 @@ const semanticPaletteConfig = semanticPaletteColors.map((color) => ({
 module.exports = {
     css: {
         transformGroup: 'kbq/css',
+        actions: ['kbq/css-index'],
+        // Curated aggregate token files consumers can pull in via a single entry point.
+        // Per-color palette splits, root css-tokens*.css and deprecated component tokens are
+        // intentionally excluded to avoid duplicate variable declarations.
+        index: {
+            dir: 'css',
+            files: [
+                'css/font.css',
+                'css/size.css',
+                'css/typography.css',
+                'css/md-typography.css',
+                'css/palette.css',
+                'css/light/semantic-palette.css',
+                'css/light/semantic-colors.css',
+                'css/light/shadows.css',
+                'css/dark/semantic-palette.css',
+                'css/dark/semantic-colors.css',
+                'css/dark/shadows.css'
+            ]
+        },
         files: [
             ...semanticPaletteConfig,
             {
