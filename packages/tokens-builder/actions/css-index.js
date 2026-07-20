@@ -41,10 +41,9 @@ module.exports = (StyleDictionary) => {
 
             fs.writeFileSync(path.join(indexDir, 'index.css'), `${HEADER}\n${imports}\n`);
 
-            // Concatenating the files verbatim would repeat the `:root` / `.kbq-light` /
-            // `.kbq-dark` selectors, so group every declaration under a single block per
-            // selector. Custom properties are deduped with the last declaration winning, which
-            // mirrors how the cascade resolves the `@import` order used by index.css.
+            // Merge all declarations into one block per selector, so `:root` / `.kbq-light` /
+            // `.kbq-dark` aren't repeated. On duplicate properties the last one wins, matching
+            // the `@import` order in index.css.
             const blockRegex = /([^{}]+)\{([^}]*)\}/g;
             const selectors = [];
             const declsBySelector = new Map();
