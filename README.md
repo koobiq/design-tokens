@@ -15,6 +15,61 @@ Here’s a clearer and more structured version for both developers and designers
 
 ---
 
+## 🎨 Using the tokens in your app
+
+The package ships ready-made CSS entry points so you don't have to wire up individual token files. Two output tracks are available:
+
+- `web/new/` — **OKLch** colors (recommended)
+- `web/css/` — legacy **HSL** colors (backward compatibility)
+
+Each track provides two entry points:
+
+- **`index.bundled.css`** — every token flattened into a single stylesheet. **Use this in production** — it's one request, avoids the `@import` waterfall, and is deduplicated.
+- **`index.css`** — a thin manifest that `@import`s the individual token files. Handy for development or when you want to cherry-pick/override specific files.
+
+### Import
+
+Production (single file, recommended):
+
+```css
+@import '@koobiq/design-tokens/web/new/index.bundled.css';
+```
+
+Or the manifest of individual imports:
+
+```css
+@import '@koobiq/design-tokens/web/new/index.css';
+```
+
+Legacy HSL track works the same way:
+
+```css
+@import '@koobiq/design-tokens/web/css/index.bundled.css';
+```
+
+> **Only need some tokens?** Check `index.css` to see what's available and import just the files you need (e.g. `palette.css`, `light/semantic-colors.css`) instead of the full bundle.
+
+### Apply a theme
+
+Tokens expose light and dark values under `.kbq-light` / `.kbq-dark`. Add the class to a root element:
+
+```html
+<body class="kbq-light">
+    <!-- or class="kbq-dark" -->
+</body>
+```
+
+Then reference the CSS variables in your styles — never hardcode values:
+
+```css
+.card {
+    color: var(--kbq-foreground-contrast);
+    background: var(--kbq-background-theme);
+}
+```
+
+> The OKLch entry point pulls the color-agnostic tokens (font, size, typography) from the sibling `web/css` track, so both directories ship together in the package.
+
 ## 🚀 Releasing Packages
 
 **🔹 Only maintainers should perform releases.**  

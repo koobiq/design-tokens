@@ -100,6 +100,26 @@ const newSemanticPaletteConfig = newSemanticPaletteColors.map((color) => ({
 module.exports = {
     css: {
         transformGroup: 'kbq/css-new',
+        actions: ['kbq/css-index'],
+        // OKLch entry point. Font/size/typography are color-agnostic and identical across tracks,
+        // so they are pulled from the sibling web/css track (../css) instead of being duplicated
+        // here. Per-color palette/semantic-palette splits are omitted since their variables are
+        // already covered by the aggregate palette.css / semantic-palette.css.
+        index: {
+            dir: '',
+            files: [
+                '../css/font.css',
+                '../css/size.css',
+                '../css/typography.css',
+                '../css/md-typography.css',
+                'palette.css',
+                'semantic-palette.css',
+                'light/semantic-colors.css',
+                'light/shadows.css',
+                'dark/semantic-colors.css',
+                'dark/shadows.css'
+            ]
+        },
         files: [
             ...newSemanticPaletteConfig,
             ...newPaletteByColorsConfig,
