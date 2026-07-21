@@ -44,12 +44,13 @@ module.exports = (StyleDictionary) => {
             // Merge all declarations into one block per selector, so `:root` / `.kbq-light` /
             // `.kbq-dark` aren't repeated. On duplicate properties the last one wins, matching
             // the `@import` order in index.css.
-            const blockRegex = /([^{}]+)\{([^}]*)\}/g;
             const selectors = [];
             const declsBySelector = new Map();
 
             for (const dest of files) {
                 const content = fs.readFileSync(path.join(buildPath, dest), 'utf8');
+                // A fresh regex per file keeps its `lastIndex` from carrying over between files.
+                const blockRegex = /([^{}]+)\{([^}]*)\}/g;
                 let match;
 
                 while ((match = blockRegex.exec(content)) !== null) {
