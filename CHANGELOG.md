@@ -1,3 +1,14 @@
+# 3.18.0 (2026-07-24)
+
+### Design Tokens
+
+ * bug fix  add "zero" font feature setting to all typography tokens ([#DS-4430](https://github.com/koobiq/design-tokens/issues/issue/DS-4430)) ([#145](https://github.com/koobiq/design-tokens/issues/145)) ([572df66](https://github.com/koobiq/design-tokens/commit/572df66a553d34458865213388340c8ddd5aa0b7))
+ * bug fix  dark‑theme bg‑overlay color (DS‑5140) ([#152](https://github.com/koobiq/design-tokens/issues/152)) ([32f72d4](https://github.com/koobiq/design-tokens/commit/32f72d4973cefe2406501ab7b84e2f4c89f9a048))
+ * bug fix  shadow compact color ([#DS-5032](https://github.com/koobiq/design-tokens/issues/issue/DS-5032)) ([#153](https://github.com/koobiq/design-tokens/issues/153)) ([d619dff](https://github.com/koobiq/design-tokens/commit/d619dffde324d1b7251990cb58bc689b7c41edce))
+ * bug fix  shadow compact color ([#DS-5032](https://github.com/koobiq/design-tokens/issues/issue/DS-5032)) ([#154](https://github.com/koobiq/design-tokens/issues/154)) ([5ebe6cd](https://github.com/koobiq/design-tokens/commit/5ebe6cd06aa3a63ac17d04241acaa7219c92e143))
+ * feature  add AGENTS.md ([#DS-4757](https://github.com/koobiq/design-tokens/issues/issue/DS-4757)) ([#146](https://github.com/koobiq/design-tokens/issues/146)) ([c9453b8](https://github.com/koobiq/design-tokens/commit/c9453b8e48b3138dfc9db45bdf79bd486f8f7b62))
+ * feature  add index.css entry point for separated token files ([#DS-5265](https://github.com/koobiq/design-tokens/issues/issue/DS-5265)) ([#162](https://github.com/koobiq/design-tokens/issues/162)) ([5ad074b](https://github.com/koobiq/design-tokens/commit/5ad074bdb9b65c78b6c7cfea3eaf7cd3463ffa0b))
+
 ## 3.17.2 (2026-04-10)
 
 ### Design Tokens
