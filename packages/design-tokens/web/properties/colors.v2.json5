@@ -512,10 +512,10 @@
                     "value": "{semantic.contrastA.7}"
                 },
                 "contrast-hover": {
-                    "value": "{semantic.contrastA.19}"
+                    "value": "{semantic.contrastA.16}"
                 },
                 "contrast-active": {
-                    "value": "{semantic.contrastA.16}"
+                    "value": "{semantic.contrastA.14}"
                 },
                 "contrast-fade-hover": {
                     "value": "{semantic.contrastA.11}"
@@ -1083,10 +1083,10 @@
                     "value": "{semantic.darkContrastA.9}"
                 },
                 "contrast-hover": {
-                    "value": "{semantic.darkContrastA.19}"
+                    "value": "{semantic.darkContrastA.16}"
                 },
                 "contrast-active": {
-                    "value": "{semantic.darkContrastA.13}"
+                    "value": "{semantic.darkContrastA.14}"
                 },
                 "contrast-fade-hover": {
                     "value": "{semantic.darkContrastA.12}"
