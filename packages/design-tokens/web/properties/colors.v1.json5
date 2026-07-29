@@ -432,10 +432,10 @@
                     "value": "{light.contrast.palette.value.\"60-A60\"}",
                 },
                 "contrast-hover": {
-                    "value": "{light.contrast.palette.value.10}",
+                    "value": "{light.contrast.palette.value.50}",
                 },
                 "contrast-active": {
-                    "value": "{light.contrast.palette.value.10}",
+                    "value": "{light.contrast.palette.value.60}",
                 },
                 "contrast-fade-hover": {
                     "value": "{light.contrast.palette.value.50}",
@@ -921,7 +921,7 @@
                     "value": "{dark.contrast.palette.value.90}",
                 },
                 "contrast-active": {
-                    "value": "{dark.contrast.palette.value.80}",
+                    "value": "{dark.contrast.palette.value.99}",
                 },
                 "contrast-fade-hover": {
                     "value": "{dark.contrast.palette.value.50}",
