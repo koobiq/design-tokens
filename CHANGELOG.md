@@ -1,3 +1,11 @@
+# 3.19.0 (2026-07-30)
+
+### Design Tokens
+
+ * bug fix  correct P3 gamut mapping rounding ([#DS-5383](https://github.com/koobiq/design-tokens/issues/issue/DS-5383)) ([#165](https://github.com/koobiq/design-tokens/issues/165)) ([1245408](https://github.com/koobiq/design-tokens/commit/12454088ab93bb2f3a0c22d54949ababa2d4b760))
+ * bug fix  increase icon hover contrast ([#DS-4986](https://github.com/koobiq/design-tokens/issues/issue/DS-4986)) ([#164](https://github.com/koobiq/design-tokens/issues/164)) ([adacb09](https://github.com/koobiq/design-tokens/commit/adacb09071c021b8554def49b11c27e00e7af99d))
+ * feature  **plt:** increase dark accent palette chroma for a more saturated dark theme ([#DS-5166](https://github.com/koobiq/design-tokens/issues/issue/DS-5166)) ([#163](https://github.com/koobiq/design-tokens/issues/163)) ([dc1fc17](https://github.com/koobiq/design-tokens/commit/dc1fc17f837baed1dc8138c29b40e9fa9e4c6d13))
+
 # 3.18.0 (2026-07-24)
 
 ### Design Tokens
