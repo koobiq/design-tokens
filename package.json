@@ -56,5 +56,8 @@
         "style-dictionary": "^3.9.2",
         "stylelint": "^16.26.1",
         "stylelint-config-recommended-scss": "^16.0.2"
+    },
+    "resolutions": {
+        "tmp": "^0.2.6"
     }
 }
