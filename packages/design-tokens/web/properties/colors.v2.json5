@@ -747,7 +747,7 @@
                 "value": "#00000000"
             },
             "overlay": {
-                "value": "{plt.blackA.15}"
+                "value": "{plt.blackA.10}"
             },
             "overlay-theme": {
                 "value": "{semantic.darkThemeA.4}",
@@ -758,7 +758,7 @@
                 "deprecated": "use --kbq-background-overlay-base-error with --kbq-opacity-overlay"
             },
             "overlay-inverse": {
-                "value": "{plt.blackA.15}"
+                "value": "{plt.blackA.10}"
             },
             "overlay-base-theme": {
                 "value": "{semantic.darkTheme.5}",
