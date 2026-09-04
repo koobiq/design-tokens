@@ -154,10 +154,12 @@
             },
             "overlay-theme": {
                 "value": "{semantic.themeA.8}",
+                "deprecated": "use --kbq-background-overlay-base-theme with --kbq-opacity-overlay",
                 "description": "Allowed dropzone on dragover."
             },
             "overlay-error": {
                 "value": "{semantic.errorA.8}",
+                "deprecated": "use --kbq-background-overlay-base-error with --kbq-opacity-overlay",
                 "description": "Invalid dropzone on dragover."
             },
             "overlay-inverse": {
@@ -748,10 +750,12 @@
                 "value": "{plt.blackA.15}"
             },
             "overlay-theme": {
-                "value": "{semantic.darkThemeA.4}"
+                "value": "{semantic.darkThemeA.4}",
+                "deprecated": "use --kbq-background-overlay-base-theme with --kbq-opacity-overlay"
             },
             "overlay-error": {
-                "value": "{semantic.darkErrorA.4}"
+                "value": "{semantic.darkErrorA.4}",
+                "deprecated": "use --kbq-background-overlay-base-error with --kbq-opacity-overlay"
             },
             "overlay-inverse": {
                 "value": "{plt.blackA.15}"
