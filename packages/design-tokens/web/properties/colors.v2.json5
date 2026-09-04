@@ -164,6 +164,14 @@
                 "value": "{plt.whiteA.18}",
                 "description": "Loading overlay."
             },
+            "overlay-base-theme": {
+                "value": "{semantic.theme.5}",
+                "description": "Opaque base for creating colored translucent overlays."
+            },
+            "overlay-base-error": {
+                "value": "{semantic.error.5}",
+                "description": "Opaque base for creating colored translucent overlays."
+            },
             "highlight": {
                 "value": "{plt.yellowFixedA.3}"
             }
@@ -748,6 +756,14 @@
             "overlay-inverse": {
                 "value": "{plt.blackA.15}"
             },
+            "overlay-base-theme": {
+                "value": "{semantic.darkTheme.5}",
+                "description": "Opaque base for creating colored translucent overlays."
+            },
+            "overlay-base-error": {
+                "value": "{semantic.darkError.5}",
+                "description": "Opaque base for creating colored translucent overlays."
+            },
             "highlight": {
                 "value": "{plt.darkYellowA.5}"
             }
@@ -1162,7 +1178,7 @@
             },
             "overlay": {
                 "value": "0.9",
-                "description": "Opacity for overlay elements."
+                "description": "Opacity for overlay base fills."
             }
         }
     }
