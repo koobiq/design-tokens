@@ -154,15 +154,25 @@
             },
             "overlay-theme": {
                 "value": "{semantic.themeA.8}",
+                "deprecated": "use --kbq-background-overlay-base-theme with --kbq-opacity-overlay",
                 "description": "Allowed dropzone on dragover."
             },
             "overlay-error": {
                 "value": "{semantic.errorA.8}",
+                "deprecated": "use --kbq-background-overlay-base-error with --kbq-opacity-overlay",
                 "description": "Invalid dropzone on dragover."
             },
             "overlay-inverse": {
                 "value": "{plt.whiteA.18}",
                 "description": "Loading overlay."
+            },
+            "overlay-base-theme": {
+                "value": "{semantic.theme.5}",
+                "description": "Opaque base for creating colored translucent overlays."
+            },
+            "overlay-base-error": {
+                "value": "{semantic.error.5}",
+                "description": "Opaque base for creating colored translucent overlays."
             },
             "highlight": {
                 "value": "{plt.yellowFixedA.3}"
@@ -737,16 +747,26 @@
                 "value": "#00000000"
             },
             "overlay": {
-                "value": "{plt.blackA.15}"
+                "value": "{plt.blackA.10}"
             },
             "overlay-theme": {
-                "value": "{semantic.darkThemeA.4}"
+                "value": "{semantic.darkThemeA.4}",
+                "deprecated": "use --kbq-background-overlay-base-theme with --kbq-opacity-overlay"
             },
             "overlay-error": {
-                "value": "{semantic.darkErrorA.4}"
+                "value": "{semantic.darkErrorA.4}",
+                "deprecated": "use --kbq-background-overlay-base-error with --kbq-opacity-overlay"
             },
             "overlay-inverse": {
-                "value": "{plt.blackA.15}"
+                "value": "{plt.blackA.10}"
+            },
+            "overlay-base-theme": {
+                "value": "{semantic.darkTheme.5}",
+                "description": "Opaque base for creating colored translucent overlays."
+            },
+            "overlay-base-error": {
+                "value": "{semantic.darkError.5}",
+                "description": "Opaque base for creating colored translucent overlays."
             },
             "highlight": {
                 "value": "{plt.darkYellowA.5}"
@@ -1162,7 +1182,7 @@
             },
             "overlay": {
                 "value": "0.9",
-                "description": "Opacity for overlay elements."
+                "description": "Opacity for overlay base fills."
             }
         }
     }
