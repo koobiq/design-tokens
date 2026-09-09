@@ -505,16 +505,16 @@
                     "value": "{semantic.contrastA.11}"
                 },
                 "theme-hover": {
-                    "value": "{semantic.themeA.17}"
-                },
-                "theme-active": {
                     "value": "{semantic.themeA.18}"
                 },
+                "theme-active": {
+                    "value": "{semantic.themeA.19}"
+                },
                 "visited-hover": {
-                    "value": "{semantic.visitedA.17}"
+                    "value": "{semantic.visitedA.18}"
                 },
                 "visited-active": {
-                    "value": "{semantic.visitedA.18}"
+                    "value": "{semantic.visitedA.19}"
                 }
             },
             "icon": {
@@ -528,40 +528,40 @@
                     "value": "{semantic.contrastA.14}"
                 },
                 "contrast-fade-hover": {
-                    "value": "{semantic.contrastA.11}"
-                },
-                "contrast-fade-active": {
                     "value": "{semantic.contrastA.16}"
                 },
+                "contrast-fade-active": {
+                    "value": "{semantic.contrastA.17}"
+                },
                 "theme-hover": {
-                    "value": "{semantic.themeA.15}"
+                    "value": "{semantic.themeA.16}"
                 },
                 "theme-active": {
-                    "value": "{semantic.themeA.15}"
+                    "value": "{semantic.themeA.17}"
                 },
                 "error-hover": {
-                    "value": "{semantic.errorA.15}"
-                },
-                "error-active": {
                     "value": "{semantic.errorA.16}"
                 },
-                "success-hover": {
-                    "value": "{semantic.successA.15}"
+                "error-active": {
+                    "value": "{semantic.errorA.17}"
                 },
-                "success-active": {
+                "success-hover": {
                     "value": "{semantic.successA.16}"
                 },
-                "warning-hover": {
-                    "value": "{semantic.warningA.15}"
+                "success-active": {
+                    "value": "{semantic.successA.17}"
                 },
-                "warning-active": {
+                "warning-hover": {
                     "value": "{semantic.warningA.16}"
                 },
+                "warning-active": {
+                    "value": "{semantic.warningA.17}"
+                },
                 "visited-hover": {
-                    "value": "{semantic.visitedA.15}"
+                    "value": "{semantic.visitedA.16}"
                 },
                 "visited-active": {
-                    "value": "{semantic.visitedA.16}"
+                    "value": "{semantic.visitedA.17}"
                 }
             },
             "line": {
@@ -1086,16 +1086,16 @@
                     "value": "{semantic.darkContrastA.9}"
                 },
                 "theme-hover": {
-                    "value": "{semantic.darkThemeA.15}"
-                },
-                "theme-active": {
                     "value": "{semantic.darkThemeA.16}"
                 },
+                "theme-active": {
+                    "value": "{semantic.darkThemeA.17}"
+                },
                 "visited-hover": {
-                    "value": "{semantic.darkVisitedA.15}"
+                    "value": "{semantic.darkVisitedA.16}"
                 },
                 "visited-active": {
-                    "value": "{semantic.darkVisitedA.16}"
+                    "value": "{semantic.darkVisitedA.17}"
                 }
             },
             "icon": {
@@ -1109,40 +1109,40 @@
                     "value": "{semantic.darkContrastA.14}"
                 },
                 "contrast-fade-hover": {
-                    "value": "{semantic.darkContrastA.12}"
-                },
-                "contrast-fade-active": {
                     "value": "{semantic.darkContrastA.13}"
                 },
+                "contrast-fade-active": {
+                    "value": "{semantic.darkContrastA.14}"
+                },
                 "theme-hover": {
-                    "value": "{semantic.darkThemeA.12}"
+                    "value": "{semantic.darkThemeA.13}"
                 },
                 "theme-active": {
-                    "value": "{semantic.darkThemeA.12}"
+                    "value": "{semantic.darkThemeA.14}"
                 },
                 "error-hover": {
-                    "value": "{semantic.darkErrorA.12}"
-                },
-                "error-active": {
                     "value": "{semantic.darkErrorA.13}"
                 },
-                "success-hover": {
-                    "value": "{semantic.darkSuccessA.12}"
+                "error-active": {
+                    "value": "{semantic.darkErrorA.14}"
                 },
-                "success-active": {
+                "success-hover": {
                     "value": "{semantic.darkSuccessA.13}"
                 },
-                "warning-hover": {
-                    "value": "{semantic.darkWarningA.12}"
+                "success-active": {
+                    "value": "{semantic.darkSuccessA.14}"
                 },
-                "warning-active": {
+                "warning-hover": {
                     "value": "{semantic.darkWarningA.13}"
                 },
+                "warning-active": {
+                    "value": "{semantic.darkWarningA.14}"
+                },
                 "visited-hover": {
-                    "value": "{semantic.darkVisitedA.12}"
+                    "value": "{semantic.darkVisitedA.13}"
                 },
                 "visited-active": {
-                    "value": "{semantic.darkVisitedA.13}"
+                    "value": "{semantic.darkVisitedA.14}"
                 }
             },
             "line": {
