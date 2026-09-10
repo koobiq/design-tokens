@@ -1,3 +1,11 @@
+# 3.20.0 (2026-09-10)
+
+### Design Tokens
+
+ * bug fix  **deps:** resolve all open Dependabot security alerts ([#168](https://github.com/koobiq/design-tokens/issues/168)) ([f48b10b](https://github.com/koobiq/design-tokens/commit/f48b10b6d070e67f6a92cbab3cd9966cca9424ce))
+ * bug fix  improve hover contrast for links and icons ([#DS-4985](https://github.com/koobiq/design-tokens/issues/issue/DS-4985)) ([#171](https://github.com/koobiq/design-tokens/issues/171)) ([8aa2349](https://github.com/koobiq/design-tokens/commit/8aa234935571d0f547af8a9757da7e1250bc96bd))
+ * feature  add base overlay tokens ([#DS-5357](https://github.com/koobiq/design-tokens/issues/issue/DS-5357)) ([#169](https://github.com/koobiq/design-tokens/issues/169)) ([fcdea5d](https://github.com/koobiq/design-tokens/commit/fcdea5d9f65da7f052df9871c4c134d0b7861755))
+
 # 3.19.0 (2026-07-30)
 
 ### Design Tokens
