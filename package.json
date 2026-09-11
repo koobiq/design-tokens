@@ -24,6 +24,7 @@
         "-----Build-----": "------------------------------------------------------------------------------------------",
         "build": "rimraf dist && node tools/build.mjs && node tools/check-references.mjs",
         "generate:styling": "node tools/generate-styling-md.mjs && yarn run prettier:fix",
+        "playground": "node tools/playground/serve.mjs",
         "-----CI-----": "---------------------------------------------------------------------------------------------",
         "prettier": "prettier --check . --ignore-unknown",
         "prettier:fix": "yarn run prettier --write",

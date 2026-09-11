@@ -118,10 +118,13 @@ export default {
                 'md-typography.css',
                 'palette.css',
                 'semantic-palette.css',
+                'components.css',
                 'light/semantic-colors.css',
                 'light/shadows.css',
+                'light/components.css',
                 'dark/semantic-colors.css',
-                'dark/shadows.css'
+                'dark/shadows.css',
+                'dark/components.css'
             ]
         },
         files: [
@@ -197,6 +200,36 @@ export default {
                 destination: 'dark/semantic-colors.css',
                 format: 'kbq-css/variables',
                 filter: (token) => token.attributes.dark && token.filePath.includes('colors.json5'),
+                options: {
+                    selector: '.kbq-dark',
+                    outputReferences: true
+                }
+            },
+            // The three component token sets that survived v4 (code-block syntax colours,
+            // scrollbar, skeleton). They express things global tokens can't, so unlike the
+            // deprecated component tokens they belong in the main entry point.
+            {
+                destination: 'components.css',
+                format: 'kbq-css/variables',
+                filter: (token) =>
+                    token.filePath.includes('/components/') && !token.attributes.light && !token.attributes.dark,
+                options: {
+                    outputReferences: true
+                }
+            },
+            {
+                destination: 'light/components.css',
+                format: 'kbq-css/variables',
+                filter: (token) => token.filePath.includes('/components/') && token.attributes.light,
+                options: {
+                    selector: '.kbq-light',
+                    outputReferences: true
+                }
+            },
+            {
+                destination: 'dark/components.css',
+                format: 'kbq-css/variables',
+                filter: (token) => token.filePath.includes('/components/') && token.attributes.dark,
                 options: {
                     selector: '.kbq-dark',
                     outputReferences: true
