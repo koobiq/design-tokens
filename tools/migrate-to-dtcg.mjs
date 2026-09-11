@@ -141,6 +141,13 @@ const write = (file, data) => {
 
 const read = (file) => JSON5.parse(fs.readFileSync(file, 'utf8'));
 
+// This has already run. Re-running would half-convert (the v1-era filenames it reads are gone),
+// so refuse up front rather than leaving the sources in a mixed state.
+if (!fs.existsSync(path.join(PROPS, 'colors.v2.json5'))) {
+    console.error('✖ Sources are already in DTCG form — this migration has run. Nothing to do.');
+    process.exit(1);
+}
+
 console.log('Converting token sources to DTCG...');
 
 // ---- plain colour / dimension / fontFamily sources -------------------------------------
