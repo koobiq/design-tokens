@@ -14,26 +14,19 @@ const toKebab = (path) => {
 };
 
 module.exports = (StyleDictionary) => {
+    // Strips 'light'/'dark' when used as the category segment (e.g. shadow.light.card →
+    // shadow-card), so theme-scoped tokens don't carry the theme in their variable name —
+    // the theme lives in the `.kbq-light` / `.kbq-dark` selector instead.
     StyleDictionary.registerTransform({
         name: 'name/custom-kebab',
         type: 'name',
-        transformer: (token) => toKebab(token.path)
-    });
-
-    // Same as custom-kebab but strips 'light'/'dark' when used as the type
-    // segment (e.g. shadow.light.card → shadow-card).
-    // Used for the new palette output so theme-scoped shadows don't carry
-    // the theme prefix in their variable name.
-    StyleDictionary.registerTransform({
-        name: 'name/custom-kebab-strip-theme',
-        type: 'name',
-        transformer: (token) => {
+        transformer: (token, options) => {
             const path =
                 token.attributes.category === 'light' || token.attributes.category === 'dark'
                     ? token.path.filter((part) => part !== 'light' && part !== 'dark')
                     : token.path;
 
-            return toKebab(path);
+            return toKebab(options?.prefix ? [options.prefix, ...path] : path);
         }
     });
 };

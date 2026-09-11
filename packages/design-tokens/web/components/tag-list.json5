@@ -1,7 +1,0 @@
-{
-    'tag-list': {
-        size: {
-            'content-gap': { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{size.xxs}' }
-        }
-    }
-}

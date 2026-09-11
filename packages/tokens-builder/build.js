@@ -4,8 +4,6 @@ const getPlatformConfig = require('./configs');
 // ==== Include custom transforms ====
 require('./transforms/attribute/md-typography')(StyleDictionary);
 require('./transforms/attribute/typography')(StyleDictionary);
-require('./transforms/attribute/palette')(StyleDictionary);
-require('./transforms/attribute/prefix')(StyleDictionary);
 require('./transforms/attribute/font')(StyleDictionary);
 require('./transforms/attribute/theme')(StyleDictionary);
 require('./transforms/attribute/scss-value')(StyleDictionary);
@@ -13,9 +11,6 @@ require('./transforms/attribute/deprecation-comment')(StyleDictionary);
 require('./transforms/name/custom-kebab')(StyleDictionary);
 
 // ==== Include custom filters ====
-require('./filters/palette')(StyleDictionary);
-require('./filters/css-variables')(StyleDictionary);
-require('./filters/color')(StyleDictionary);
 require('./filters/typography')(StyleDictionary);
 require('./filters/md-typography')(StyleDictionary);
 
@@ -26,7 +21,6 @@ require('./transformGroups/ts')(StyleDictionary);
 
 // ==== Include custom formats ====
 require('./formats/typography')(StyleDictionary);
-require('./formats/palette')(StyleDictionary);
 require('./formats/variables')(StyleDictionary);
 
 // ==== Include custom actions ====
