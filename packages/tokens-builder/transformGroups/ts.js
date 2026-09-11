@@ -5,6 +5,6 @@ export default (StyleDictionary) => {
         // `attributes.category` and never fired here; in v4+ they match on `$type`, where
         // `color/hex` would flatten OKLch to hex and `size/px` would throw on keyword
         // dimensions like `letter-spacing: normal`. Values already carry their units.
-        transforms: ['attribute/cti', 'name/pascal', 'kbq-attribute/comment']
+        transforms: ['attribute/cti', 'name/pascal', 'shadow/css/shorthand', 'kbq-attribute/comment']
     });
 };

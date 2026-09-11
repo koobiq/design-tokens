@@ -1,3 +1,7 @@
+// Composite sub-properties are camelCase per the DTCG spec (fontSize, lineHeight …), but the
+// Sass map is a public API that has always been kebab-case — and matches the CSS variables.
+const toKebab = (key) => key.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
+
 function processJsonNode(obj, depth, usesDtcg) {
     let output = '';
     const valueKey = usesDtcg ? '$value' : 'value';
@@ -11,7 +15,7 @@ function processJsonNode(obj, depth, usesDtcg) {
                 const newProp = obj[newKey];
                 const indent = '  '.repeat(depth + 1);
 
-                return `${indent}'${newKey}': ${processJsonNode(newProp, depth + 1, usesDtcg)}`;
+                return `${indent}'${toKebab(newKey)}': ${processJsonNode(newProp, depth + 1, usesDtcg)}`;
             })
             .join(',\n');
 

@@ -4,7 +4,7 @@ export default (StyleDictionary) => {
     StyleDictionary.registerFormat({
         name: 'kbq-css/variables',
         format: async function ({ dictionary, options = {}, file }) {
-            const { outputReferences, selector = ':root' } = options;
+            const { outputReferences, selector = ':root', usesDtcg } = options;
 
             // Theme-scoped tokens live under a `.kbq-light` / `.kbq-dark` selector, so the theme
             // segment is redundant in the variable name (shadow-light-card → shadow-card).
@@ -17,7 +17,7 @@ export default (StyleDictionary) => {
             return (
                 (await fileHeader({ file })) +
                 `${selector} {\n` +
-                formattedVariables({ format: 'css', dictionary, outputReferences }) +
+                formattedVariables({ format: 'css', dictionary, outputReferences, usesDtcg }) +
                 `\n}\n`
             );
         }

@@ -171,7 +171,7 @@ export default {
             {
                 destination: 'light/semantic-colors.css',
                 format: 'kbq-css/variables',
-                filter: (token) => token.attributes.light && token.filePath.includes('colors.v2.json5'),
+                filter: (token) => token.attributes.light && token.filePath.includes('colors.json5'),
                 options: {
                     selector: '.kbq-light',
                     outputReferences: true
@@ -189,7 +189,7 @@ export default {
             {
                 destination: 'dark/semantic-colors.css',
                 format: 'kbq-css/variables',
-                filter: (token) => token.attributes.dark && token.filePath.includes('colors.v2.json5'),
+                filter: (token) => token.attributes.dark && token.filePath.includes('colors.json5'),
                 options: {
                     selector: '.kbq-dark',
                     outputReferences: true

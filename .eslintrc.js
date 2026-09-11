@@ -21,7 +21,9 @@ const config = {
     ],
     rules: {
         'no-useless-escape': 0,
-        'no-prototype-builtins': 0
+        'no-prototype-builtins': 0,
+        // allow `const { drop, ...rest } = obj` to name what it is discarding
+        'no-unused-vars': ['error', { ignoreRestSiblings: true, argsIgnorePattern: '^_', varsIgnorePattern: '^_' }]
     },
     overrides: [
         {

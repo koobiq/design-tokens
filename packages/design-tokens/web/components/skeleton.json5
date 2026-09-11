@@ -1,24 +1,41 @@
 {
-    'skeleton': {
+    skeleton: {
+        $type: 'color',
         light: {
-            background: { value:  '{light.background.contrast-less}'},
+            background: {
+                $value: '{light.background.contrast-less}',
+            },
             animation: {
                 wave: {
-                    start: { value:  'oklch(0 0 0 / 0)'},
-                    center: { value:  '{plt.blackA.2}'},
-                    end: { value:  'oklch(0 0 0 / 0)'}
-                }
-            }
+                    start: {
+                        $value: 'oklch(0 0 0 / 0)',
+                    },
+                    center: {
+                        $value: '{plt.blackA.2}',
+                    },
+                    end: {
+                        $value: 'oklch(0 0 0 / 0)',
+                    },
+                },
+            },
         },
         dark: {
-            background: { value:  '{dark.background.contrast-less}'},
+            background: {
+                $value: '{dark.background.contrast-less}',
+            },
             animation: {
                 wave: {
-                    start: { value:  'oklch(1 0 0 / 0)'},
-                    center: { value:  '{plt.whiteA.1}'},
-                    end: { value:  'oklch(1 0 0 / 0)'}
-                }
-            }
-        }
-    }
+                    start: {
+                        $value: 'oklch(1 0 0 / 0)',
+                    },
+                    center: {
+                        $value: '{plt.whiteA.1}',
+                    },
+                    end: {
+                        $value: 'oklch(1 0 0 / 0)',
+                    },
+                },
+            },
+        },
+    },
 }

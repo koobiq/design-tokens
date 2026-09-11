@@ -12,34 +12,34 @@ Descriptions shown only where usage is non-obvious; names follow the pattern fro
 
 ### Backgrounds (`--kbq-background-...`)
 
-| Variable                           | Usage context                                            |
-| :--------------------------------- | :------------------------------------------------------- |
-| `--kbq-background-bg`              | Main page background.                                    |
-| `--kbq-background-bg-secondary`    | Sidebar, panel backgrounds.                              |
-| `--kbq-background-bg-tertiary`     |                                                          |
-| `--kbq-background-night`           | Dim surface in both themes.                              |
-| `--kbq-background-card`            | Elevated surfaces; matches bg in light, differs in dark. |
-| `--kbq-background-theme`           | Checkboxes, radio buttons, toggle switches.              |
-| `--kbq-background-theme-fade`      |                                                          |
-| `--kbq-background-theme-less`      | Selected list/tree items, table rows.                    |
-| `--kbq-background-contrast`        | Primary button. Highest contrast in both themes.         |
-| `--kbq-background-contrast-fade`   | Default (ghost) button.                                  |
-| `--kbq-background-contrast-less`   | Multi-select checked rows; alert containers.             |
-| `--kbq-background-error`           |                                                          |
-| `--kbq-background-error-fade`      |                                                          |
-| `--kbq-background-error-less`      | Alert container.                                         |
-| `--kbq-background-success`         |                                                          |
-| `--kbq-background-success-fade`    |                                                          |
-| `--kbq-background-success-less`    | Alert container.                                         |
-| `--kbq-background-warning`         |                                                          |
-| `--kbq-background-warning-fade`    |                                                          |
-| `--kbq-background-warning-less`    | Alert container.                                         |
-| `--kbq-background-transparent`     |                                                          |
-| `--kbq-background-overlay`         | Modal backdrop.                                          |
-| `--kbq-background-overlay-theme`   | Allowed dropzone on dragover.                            |
-| `--kbq-background-overlay-error`   | Invalid dropzone on dragover.                            |
-| `--kbq-background-overlay-inverse` | Loading overlay.                                         |
-| `--kbq-background-highlight`       |                                                          |
+| Variable                              | Usage context                                            |
+| :------------------------------------ | :------------------------------------------------------- |
+| `--kbq-background-bg`                 | Main page background.                                    |
+| `--kbq-background-bg-secondary`       | Sidebar, panel backgrounds.                              |
+| `--kbq-background-bg-tertiary`        |                                                          |
+| `--kbq-background-night`              | Dim surface in both themes.                              |
+| `--kbq-background-card`               | Elevated surfaces; matches bg in light, differs in dark. |
+| `--kbq-background-theme`              | Checkboxes, radio buttons, toggle switches.              |
+| `--kbq-background-theme-fade`         |                                                          |
+| `--kbq-background-theme-less`         | Selected list/tree items, table rows.                    |
+| `--kbq-background-contrast`           | Primary button. Highest contrast in both themes.         |
+| `--kbq-background-contrast-fade`      | Default (ghost) button.                                  |
+| `--kbq-background-contrast-less`      | Multi-select checked rows; alert containers.             |
+| `--kbq-background-error`              |                                                          |
+| `--kbq-background-error-fade`         |                                                          |
+| `--kbq-background-error-less`         | Alert container.                                         |
+| `--kbq-background-success`            |                                                          |
+| `--kbq-background-success-fade`       |                                                          |
+| `--kbq-background-success-less`       | Alert container.                                         |
+| `--kbq-background-warning`            |                                                          |
+| `--kbq-background-warning-fade`       |                                                          |
+| `--kbq-background-warning-less`       | Alert container.                                         |
+| `--kbq-background-transparent`        |                                                          |
+| `--kbq-background-overlay`            | Modal backdrop.                                          |
+| `--kbq-background-overlay-inverse`    | Loading overlay.                                         |
+| `--kbq-background-overlay-base-theme` | Opaque base for creating colored translucent overlays.   |
+| `--kbq-background-overlay-base-error` | Opaque base for creating colored translucent overlays.   |
+| `--kbq-background-highlight`          |                                                          |
 
 ### Foregrounds (`--kbq-foreground-...`)
 
@@ -201,53 +201,53 @@ Use CSS classes or SCSS `@extend`. Pattern: `kbq-[style]`
 }
 ```
 
-| Class                        | Font size | Line height                    | Weight                         |
-| :--------------------------- | :-------- | :----------------------------- | :----------------------------- |
-| `kbq-headline`               | 28px      | 32px                           | 700                            |
-| `kbq-title`                  | 20px      | 28px                           | 700                            |
-| `kbq-subheading`             | 18px      | 26px                           | 600                            |
-| `kbq-display-big`            | 57px      | 64px                           | 400                            |
-| `kbq-display-normal`         | 45px      | 52px                           | 400                            |
-| `kbq-display-compact`        | 36px      | 44px                           | 400                            |
-| `kbq-display-big-strong`     | 57px      | 64px                           | 700                            |
-| `kbq-display-normal-strong`  | 45px      | 52px                           | 700                            |
-| `kbq-display-compact-strong` | 36px      | 44px                           | 700                            |
-| `kbq-text-big`               | 16px      | 24px                           | normal                         |
-| `kbq-text-big-medium`        | 16px      | 24px                           | 500                            |
-| `kbq-text-big-strong`        | 16px      | 24px                           | 600                            |
-| `kbq-text-normal`            | 14px      | 20px                           | normal                         |
-| `kbq-text-normal-medium`     | 14px      | 20px                           | 500                            |
-| `kbq-text-normal-strong`     | 14px      | 20px                           | 600                            |
-| `kbq-text-compact`           | 12px      | 16px                           | normal                         |
-| `kbq-text-compact-medium`    | 12px      | 16px                           | 500                            |
-| `kbq-text-compact-strong`    | 12px      | 16px                           | 600                            |
-| `kbq-caps-big`               | 16px      | 24px                           | 400                            |
-| `kbq-caps-big-strong`        | 16px      | 24px                           | 500                            |
-| `kbq-caps-normal`            | 14px      | 20px                           | normal                         |
-| `kbq-caps-normal-strong`     | 14px      | 20px                           | 500                            |
-| `kbq-caps-compact`           | 12px      | 16px                           | normal                         |
-| `kbq-caps-compact-strong`    | 12px      | 16px                           | 500                            |
-| `kbq-mono-big`               | 16px      | 24px                           | normal                         |
-| `kbq-mono-big-strong`        | 16px      | 24px                           | 700                            |
-| `kbq-mono-normal`            | 14px      | 20px                           | normal                         |
-| `kbq-mono-normal-medium`     | 14px      | 20px                           | 600                            |
-| `kbq-mono-normal-strong`     | 14px      | 20px                           | 700                            |
-| `kbq-mono-compact`           | 12px      | 16px                           | normal                         |
-| `kbq-mono-compact-strong`    | 12px      | 16px                           | 700                            |
-| `kbq-mono-codeblock`         | 14px      | 20px                           | normal                         |
-| `kbq-tabular-big`            | 16px      | 24px                           | normal                         |
-| `kbq-tabular-big-strong`     | 16px      | 24px                           | 600                            |
-| `kbq-tabular-normal`         | 14px      | 20px                           | normal                         |
-| `kbq-tabular-normal-strong`  | 14px      | 20px                           | 600                            |
-| `kbq-tabular-compact`        | 12px      | 16px                           | normal                         |
-| `kbq-tabular-compact-strong` | 12px      | 16px                           | 600                            |
-| `kbq-italic-big`             | 16px      | 24px                           | normal                         |
-| `kbq-italic-big-strong`      | 16px      | 24px                           | 600                            |
-| `kbq-italic-normal`          | 14px      | 20px                           | normal                         |
-| `kbq-italic-normal-strong`   | 14px      | 20px                           | 600                            |
-| `kbq-italic-compact`         | 12px      | 16px                           | normal                         |
-| `kbq-italic-compact-strong`  | 12px      | 16px                           | 600                            |
-| `kbq-navbar-title`           | 18px      | {typography.title.line-height} | {typography.title.font-weight} |
+| Class                        | Font size | Line height                   | Weight                        |
+| :--------------------------- | :-------- | :---------------------------- | :---------------------------- |
+| `kbq-headline`               | 28px      | 32px                          | 700                           |
+| `kbq-title`                  | 20px      | 28px                          | 700                           |
+| `kbq-subheading`             | 18px      | 26px                          | 600                           |
+| `kbq-display-big`            | 57px      | 64px                          | 400                           |
+| `kbq-display-normal`         | 45px      | 52px                          | 400                           |
+| `kbq-display-compact`        | 36px      | 44px                          | 400                           |
+| `kbq-display-big-strong`     | 57px      | 64px                          | 700                           |
+| `kbq-display-normal-strong`  | 45px      | 52px                          | 700                           |
+| `kbq-display-compact-strong` | 36px      | 44px                          | 700                           |
+| `kbq-text-big`               | 16px      | 24px                          | normal                        |
+| `kbq-text-big-medium`        | 16px      | 24px                          | 500                           |
+| `kbq-text-big-strong`        | 16px      | 24px                          | 600                           |
+| `kbq-text-normal`            | 14px      | 20px                          | normal                        |
+| `kbq-text-normal-medium`     | 14px      | 20px                          | 500                           |
+| `kbq-text-normal-strong`     | 14px      | 20px                          | 600                           |
+| `kbq-text-compact`           | 12px      | 16px                          | normal                        |
+| `kbq-text-compact-medium`    | 12px      | 16px                          | 500                           |
+| `kbq-text-compact-strong`    | 12px      | 16px                          | 600                           |
+| `kbq-caps-big`               | 16px      | 24px                          | 400                           |
+| `kbq-caps-big-strong`        | 16px      | 24px                          | 500                           |
+| `kbq-caps-normal`            | 14px      | 20px                          | normal                        |
+| `kbq-caps-normal-strong`     | 14px      | 20px                          | 500                           |
+| `kbq-caps-compact`           | 12px      | 16px                          | normal                        |
+| `kbq-caps-compact-strong`    | 12px      | 16px                          | 500                           |
+| `kbq-mono-big`               | 16px      | 24px                          | normal                        |
+| `kbq-mono-big-strong`        | 16px      | 24px                          | 700                           |
+| `kbq-mono-normal`            | 14px      | 20px                          | normal                        |
+| `kbq-mono-normal-medium`     | 14px      | 20px                          | 600                           |
+| `kbq-mono-normal-strong`     | 14px      | 20px                          | 700                           |
+| `kbq-mono-compact`           | 12px      | 16px                          | normal                        |
+| `kbq-mono-compact-strong`    | 12px      | 16px                          | 700                           |
+| `kbq-mono-codeblock`         | 14px      | 20px                          | normal                        |
+| `kbq-tabular-big`            | 16px      | 24px                          | normal                        |
+| `kbq-tabular-big-strong`     | 16px      | 24px                          | 600                           |
+| `kbq-tabular-normal`         | 14px      | 20px                          | normal                        |
+| `kbq-tabular-normal-strong`  | 14px      | 20px                          | 600                           |
+| `kbq-tabular-compact`        | 12px      | 16px                          | normal                        |
+| `kbq-tabular-compact-strong` | 12px      | 16px                          | 600                           |
+| `kbq-italic-big`             | 16px      | 24px                          | normal                        |
+| `kbq-italic-big-strong`      | 16px      | 24px                          | 600                           |
+| `kbq-italic-normal`          | 14px      | 20px                          | normal                        |
+| `kbq-italic-normal-strong`   | 14px      | 20px                          | 600                           |
+| `kbq-italic-compact`         | 12px      | 16px                          | normal                        |
+| `kbq-italic-compact-strong`  | 12px      | 16px                          | 600                           |
+| `kbq-navbar-title`           | 18px      | {typography.title.lineHeight} | {typography.title.fontWeight} |
 
 ## Sizes & Spacing
 
@@ -323,56 +323,56 @@ File paths relative to `packages/design-tokens/web/properties/`:
 
 Scale: `1` (lightest) → `20` (darkest). Alpha variants (`*A`) control opacity on the same scale.
 
-| Family             | Scale | Semantic role                            |
-| :----------------- | :---- | :--------------------------------------- |
-| `blue`             | 1–20  | Theme (brand)                            |
-| `slate`            | 1–20  | Contrast (neutral)                       |
-| `red`              | 1–20  | Error                                    |
-| `orange`           | 1–20  | Accent                                   |
-| `yellow`           | 1–20  | Warning (adaptive)                       |
-| `green`            | 1–20  | Success                                  |
-| `teal`             | 1–20  | Accent                                   |
-| `purple`           | 1–20  | Visited                                  |
-| `darkBlue`         | 1–20  | Dark-theme counterpart of `blue`         |
-| `darkSlate`        | 1–20  | Dark-theme counterpart of `slate`        |
-| `darkRed`          | 1–20  | Dark-theme counterpart of `red`          |
-| `darkOrange`       | 1–20  | Dark-theme counterpart of `orange`       |
-| `darkYellow`       | 1–20  | Dark-theme counterpart of `yellow`       |
-| `darkGreen`        | 1–20  | Dark-theme counterpart of `green`        |
-| `darkTeal`         | 1–20  | Dark-theme counterpart of `teal`         |
-| `darkPurple`       | 1–20  | Dark-theme counterpart of `purple`       |
-| `grey`             | 1–20  | Neutral accent                           |
-| `darkGrey`         | 1–20  | Dark-theme counterpart of `grey`         |
-| `greyA`            | 1–20  | Neutral accent                           |
-| `darkGreyA`        | 1–20  | Dark-theme counterpart of `greyA`        |
-| `whiteA`           | 1–20  | White (always bright)                    |
-| `blackA`           | 1–20  | Night (always dark)                      |
-| `blueA`            | 1–20  | Theme (brand)                            |
-| `slateA`           | 1–20  | Contrast (neutral)                       |
-| `redA`             | 1–20  | Error                                    |
-| `orangeA`          | 1–20  | Accent                                   |
-| `yellowA`          | 1–20  | Warning (adaptive)                       |
-| `greenA`           | 1–20  | Success                                  |
-| `tealA`            | 1–20  | Accent                                   |
-| `purpleA`          | 1–20  | Visited                                  |
-| `darkBlueA`        | 1–20  | Dark-theme counterpart of `blueA`        |
-| `darkSlateA`       | 1–20  | Dark-theme counterpart of `slateA`       |
-| `darkRedA`         | 1–20  | Dark-theme counterpart of `redA`         |
-| `darkOrangeA`      | 1–20  | Dark-theme counterpart of `orangeA`      |
-| `darkYellowA`      | 1–20  | Dark-theme counterpart of `yellowA`      |
-| `darkGreenA`       | 1–20  | Dark-theme counterpart of `greenA`       |
-| `darkTealA`        | 1–20  | Dark-theme counterpart of `tealA`        |
-| `darkPurpleA`      | 1–20  | Dark-theme counterpart of `purpleA`      |
-| `yellowFixed`      | 1–20  | Warning (fixed hue)                      |
-| `orangeFixed`      | 1–20  | —                                        |
-| `darkYellowFixed`  | 1–20  | Dark-theme counterpart of `yellowFixed`  |
-| `darkOrangeFixed`  | 1–20  | Dark-theme counterpart of `orangeFixed`  |
-| `yellowFixedA`     | 1–20  | Warning (fixed hue)                      |
-| `orangeFixedA`     | 1–20  | —                                        |
-| `darkYellowFixedA` | 1–20  | Dark-theme counterpart of `yellowFixedA` |
-| `darkOrangeFixedA` | 1–20  | Dark-theme counterpart of `orangeFixedA` |
-| `white`            | value | White (always bright)                    |
-| `black`            | value | Night (always dark)                      |
+| Family             | Scale  | Semantic role                            |
+| :----------------- | :----- | :--------------------------------------- |
+| `blue`             | 1–20   | Theme (brand)                            |
+| `slate`            | 1–20   | Contrast (neutral)                       |
+| `red`              | 1–20   | Error                                    |
+| `orange`           | 1–20   | Accent                                   |
+| `yellow`           | 1–20   | Warning (adaptive)                       |
+| `green`            | 1–20   | Success                                  |
+| `teal`             | 1–20   | Accent                                   |
+| `purple`           | 1–20   | Visited                                  |
+| `darkBlue`         | 1–20   | Dark-theme counterpart of `blue`         |
+| `darkSlate`        | 1–20   | Dark-theme counterpart of `slate`        |
+| `darkRed`          | 1–20   | Dark-theme counterpart of `red`          |
+| `darkOrange`       | 1–20   | Dark-theme counterpart of `orange`       |
+| `darkYellow`       | 1–20   | Dark-theme counterpart of `yellow`       |
+| `darkGreen`        | 1–20   | Dark-theme counterpart of `green`        |
+| `darkTeal`         | 1–20   | Dark-theme counterpart of `teal`         |
+| `darkPurple`       | 1–20   | Dark-theme counterpart of `purple`       |
+| `grey`             | 1–20   | Neutral accent                           |
+| `darkGrey`         | 1–20   | Dark-theme counterpart of `grey`         |
+| `greyA`            | 1–20   | Neutral accent                           |
+| `darkGreyA`        | 1–20   | Dark-theme counterpart of `greyA`        |
+| `whiteA`           | 1–20   | White (always bright)                    |
+| `blackA`           | 1–20   | Night (always dark)                      |
+| `blueA`            | 1–20   | Theme (brand)                            |
+| `slateA`           | 1–20   | Contrast (neutral)                       |
+| `redA`             | 1–20   | Error                                    |
+| `orangeA`          | 1–20   | Accent                                   |
+| `yellowA`          | 1–20   | Warning (adaptive)                       |
+| `greenA`           | 1–20   | Success                                  |
+| `tealA`            | 1–20   | Accent                                   |
+| `purpleA`          | 1–20   | Visited                                  |
+| `darkBlueA`        | 1–20   | Dark-theme counterpart of `blueA`        |
+| `darkSlateA`       | 1–20   | Dark-theme counterpart of `slateA`       |
+| `darkRedA`         | 1–20   | Dark-theme counterpart of `redA`         |
+| `darkOrangeA`      | 1–20   | Dark-theme counterpart of `orangeA`      |
+| `darkYellowA`      | 1–20   | Dark-theme counterpart of `yellowA`      |
+| `darkGreenA`       | 1–20   | Dark-theme counterpart of `greenA`       |
+| `darkTealA`        | 1–20   | Dark-theme counterpart of `tealA`        |
+| `darkPurpleA`      | 1–20   | Dark-theme counterpart of `purpleA`      |
+| `yellowFixed`      | 1–20   | Warning (fixed hue)                      |
+| `orangeFixed`      | 1–20   | —                                        |
+| `darkYellowFixed`  | 1–20   | Dark-theme counterpart of `yellowFixed`  |
+| `darkOrangeFixed`  | 1–20   | Dark-theme counterpart of `orangeFixed`  |
+| `yellowFixedA`     | 1–20   | Warning (fixed hue)                      |
+| `orangeFixedA`     | 1–20   | —                                        |
+| `darkYellowFixedA` | 1–20   | Dark-theme counterpart of `yellowFixedA` |
+| `darkOrangeFixedA` | 1–20   | Dark-theme counterpart of `orangeFixedA` |
+| `white`            | single | White (always bright)                    |
+| `black`            | single | Night (always dark)                      |
 
 ### Semantic Family Mappings
 
@@ -410,9 +410,9 @@ For alpha variants (`*A`), scale = opacity level (1 = near-transparent, 20 = nea
 ## Setup
 
 ```css
-@import '@koobiq/design-tokens/web/new/css-tokens.css'; /* base / component tokens (:root) */
-@import '@koobiq/design-tokens/web/new/css-tokens-light.css'; /* light theme (.kbq-light) */
-@import '@koobiq/design-tokens/web/new/css-tokens-dark.css'; /* dark theme (.kbq-dark) */
+@import '@koobiq/design-tokens/web/css-tokens.css'; /* base / component tokens (:root) */
+@import '@koobiq/design-tokens/web/css-tokens-light.css'; /* light theme (.kbq-light) */
+@import '@koobiq/design-tokens/web/css-tokens-dark.css'; /* dark theme (.kbq-dark) */
 ```
 
 ```html

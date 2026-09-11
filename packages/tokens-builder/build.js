@@ -10,6 +10,9 @@ import registerScssValue from './transforms/attribute/scss-value.js';
 import registerDeprecationComment from './transforms/attribute/deprecation-comment.js';
 import registerCustomKebab from './transforms/name/custom-kebab.js';
 
+// ==== Include custom preprocessors ====
+import registerExpandTypography from './preprocessors/expand-typography.js';
+
 // ==== Include custom filters ====
 import registerTypographyFilter from './filters/typography.js';
 import registerMdTypographyFilter from './filters/md-typography.js';
@@ -33,6 +36,8 @@ registerThemeAttributes(StyleDictionary);
 registerScssValue(StyleDictionary);
 registerDeprecationComment(StyleDictionary);
 registerCustomKebab(StyleDictionary);
+
+registerExpandTypography(StyleDictionary);
 
 registerTypographyFilter(StyleDictionary);
 registerMdTypographyFilter(StyleDictionary);

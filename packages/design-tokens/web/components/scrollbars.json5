@@ -1,80 +1,135 @@
 {
     scrollbar: {
         size: {
+            $type: 'dimension',
             track: {
-                dimension: { value: '{size.l}' },
+                dimension: {
+                    $value: '{size.l}',
+                },
                 padding: {
-                    vertical: { value: '{size.3xs}' },
-                    horizontal: { value: '{size.3xs}' }
-                }
+                    vertical: {
+                        $value: '{size.3xs}',
+                    },
+                    horizontal: {
+                        $value: '{size.3xs}',
+                    },
+                },
             },
             thumb: {
-                width: { value: '{size.s}' },
-                'min-size': { value: '{size.xl}' },
+                width: {
+                    $value: '{size.s}',
+                },
+                'min-size': {
+                    $value: '{size.xl}',
+                },
                 border: {
-                    radius: { value: '{size.s}' }
-                }
-            }
+                    radius: {
+                        $value: '{size.s}',
+                    },
+                },
+            },
         },
         light: {
+            $type: 'color',
             thumb: {
                 default: {
-                    background: { value: '{semantic.contrastA.6}' }
+                    background: {
+                        $value: '{semantic.contrastA.6}',
+                    },
                 },
                 hover: {
-                    background: { value: '{semantic.contrastA.8}' }
+                    background: {
+                        $value: '{semantic.contrastA.8}',
+                    },
                 },
                 active: {
-                    background: { value: '{semantic.contrastA.13}' }
+                    background: {
+                        $value: '{semantic.contrastA.13}',
+                    },
                 },
                 disabled: {
-                    background: { value: '{light.states.icon.disabled}' }
-                }
+                    background: {
+                        $value: '{light.states.icon.disabled}',
+                    },
+                },
             },
             track: {
                 default: {
-                    border: { value: 'transparent' },
-                    background: { value: 'transparent' }
+                    border: {
+                        $value: 'transparent',
+                    },
+                    background: {
+                        $value: 'transparent',
+                    },
                 },
                 hover: {
-                    border: { value: 'transparent' },
-                    background: { value: 'transparent' }
+                    border: {
+                        $value: 'transparent',
+                    },
+                    background: {
+                        $value: 'transparent',
+                    },
                 },
                 active: {
-                    border: { value: 'transparent' },
-                    background: { value: 'transparent' }
-                }
-            }
+                    border: {
+                        $value: 'transparent',
+                    },
+                    background: {
+                        $value: 'transparent',
+                    },
+                },
+            },
         },
         dark: {
+            $type: 'color',
             thumb: {
                 default: {
-                    background: { value: '{semantic.darkContrastA.7}' }
+                    background: {
+                        $value: '{semantic.darkContrastA.7}',
+                    },
                 },
                 hover: {
-                    background: { value: '{semantic.darkContrastA.8}' }
+                    background: {
+                        $value: '{semantic.darkContrastA.8}',
+                    },
                 },
                 active: {
-                    background: { value: '{semantic.darkContrastA.10}' }
+                    background: {
+                        $value: '{semantic.darkContrastA.10}',
+                    },
                 },
                 disabled: {
-                    background: { value: '{dark.states.icon.disabled}' }
-                }
+                    background: {
+                        $value: '{dark.states.icon.disabled}',
+                    },
+                },
             },
             track: {
                 default: {
-                    border: { value: 'transparent' },
-                    background: { value: 'transparent' }
+                    border: {
+                        $value: 'transparent',
+                    },
+                    background: {
+                        $value: 'transparent',
+                    },
                 },
                 hover: {
-                    border: { value: 'transparent' },
-                    background: { value: 'transparent' }
+                    border: {
+                        $value: 'transparent',
+                    },
+                    background: {
+                        $value: 'transparent',
+                    },
                 },
                 active: {
-                    border: { value: 'transparent' },
-                    background: { value: 'transparent' }
-                }
-            }
-        }
-    }
+                    border: {
+                        $value: 'transparent',
+                    },
+                    background: {
+                        $value: 'transparent',
+                    },
+                },
+            },
+        },
+    },
 }
