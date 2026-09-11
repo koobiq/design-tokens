@@ -57,10 +57,15 @@ export default (theme) => {
         // why this isn't Style Dictionary's built-in `expand` option.
         // Shadows stay composite — `shadow/css/shorthand` renders them as one box-shadow.
         preprocessors: ['kbq/expand-typography'],
-        // Token files are split across many outputs on purpose (palette.css, semantic-palette.css,
-        // light/semantic-colors.css …) and they reference each other across those files. That is
-        // exactly what `index.css` stitches back together, but Style Dictionary still warns about
-        // every reference whose target was filtered out of the file being written.
-        log: { warnings: 'disabled' }
+        // Fail the build on transform errors instead of printing them. Without this a transform
+        // that throws on a value (say a dimension transform meeting `letter-spacing: normal`)
+        // is caught by Style Dictionary, quietly falls back to the untransformed value and only
+        // logs — so the output would be silently wrong.
+        //
+        // This switch is read from two places: transform errors use the top-level `log`, while
+        // the per-file "filtered out token references" warning uses `platform.log`. The css
+        // platform overrides it to `disabled` (see configs/css.js) because those cross-file
+        // references are deliberate.
+        log: { warnings: 'error' }
     };
 };

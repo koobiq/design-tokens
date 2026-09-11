@@ -100,6 +100,13 @@ export default {
         transformGroup: 'kbq/css',
         actions: ['kbq/css-index'],
         prefix: 'kbq',
+        // Token files are split across many outputs on purpose (palette.css,
+        // semantic-palette.css, light/semantic-colors.css …) and reference each other across
+        // those files — which is exactly what index.css stitches back together. Style
+        // Dictionary warns for every reference whose target was filtered out of the file being
+        // written, so that one warning is muted here. Transform errors still fail the build:
+        // they are gated by the top-level `log` (see configs/index.js).
+        log: { warnings: 'disabled' },
         // Per-color palette/semantic-palette splits are omitted from the index since their
         // variables are already covered by the aggregate palette.css / semantic-palette.css.
         index: {
