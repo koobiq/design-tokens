@@ -1,41 +1,59 @@
-const StyleDictionary = require('style-dictionary');
-const getPlatformConfig = require('./configs');
+import StyleDictionary from 'style-dictionary';
+import getPlatformConfig from './configs/index.js';
 
 // ==== Include custom transforms ====
-require('./transforms/attribute/md-typography')(StyleDictionary);
-require('./transforms/attribute/typography')(StyleDictionary);
-require('./transforms/attribute/font')(StyleDictionary);
-require('./transforms/attribute/theme')(StyleDictionary);
-require('./transforms/attribute/scss-value')(StyleDictionary);
-require('./transforms/attribute/deprecation-comment')(StyleDictionary);
-require('./transforms/name/custom-kebab')(StyleDictionary);
+import registerMdTypographyAttribute from './transforms/attribute/md-typography.js';
+import registerTypographyAttribute from './transforms/attribute/typography.js';
+import registerFontAttribute from './transforms/attribute/font.js';
+import registerThemeAttributes from './transforms/attribute/theme.js';
+import registerScssValue from './transforms/attribute/scss-value.js';
+import registerDeprecationComment from './transforms/attribute/deprecation-comment.js';
+import registerCustomKebab from './transforms/name/custom-kebab.js';
 
 // ==== Include custom filters ====
-require('./filters/typography')(StyleDictionary);
-require('./filters/md-typography')(StyleDictionary);
+import registerTypographyFilter from './filters/typography.js';
+import registerMdTypographyFilter from './filters/md-typography.js';
 
 // ==== Include custom transform groups ====
-require('./transformGroups/scss')(StyleDictionary);
-require('./transformGroups/css')(StyleDictionary);
-require('./transformGroups/ts')(StyleDictionary);
+import registerScssGroup from './transformGroups/scss.js';
+import registerCssGroup from './transformGroups/css.js';
+import registerTsGroup from './transformGroups/ts.js';
 
 // ==== Include custom formats ====
-require('./formats/typography')(StyleDictionary);
-require('./formats/variables')(StyleDictionary);
+import registerTypographyFormat from './formats/typography.js';
+import registerVariablesFormat from './formats/variables.js';
 
 // ==== Include custom actions ====
-require('./actions/css-index')(StyleDictionary);
+import registerCssIndex from './actions/css-index.js';
 
-// ==== Run build ====
-console.log('Build started...');
-console.log('==============================================');
+registerMdTypographyAttribute(StyleDictionary);
+registerTypographyAttribute(StyleDictionary);
+registerFontAttribute(StyleDictionary);
+registerThemeAttributes(StyleDictionary);
+registerScssValue(StyleDictionary);
+registerDeprecationComment(StyleDictionary);
+registerCustomKebab(StyleDictionary);
 
-module.exports = (themeConfig) => {
-    StyleDictionary.registerFileHeader({
-        name: 'customHeader',
-        fileHeader: () => [`Do not edit directly`]
-    });
-    console.log('themeConfig: ', themeConfig);
+registerTypographyFilter(StyleDictionary);
+registerMdTypographyFilter(StyleDictionary);
+
+registerScssGroup(StyleDictionary);
+registerCssGroup(StyleDictionary);
+registerTsGroup(StyleDictionary);
+
+registerTypographyFormat(StyleDictionary);
+registerVariablesFormat(StyleDictionary);
+
+registerCssIndex(StyleDictionary);
+
+StyleDictionary.registerFileHeader({
+    name: 'customHeader',
+    fileHeader: () => [`Do not edit directly`]
+});
+
+export default async (themeConfig) => {
+    console.log('Build started...');
+    console.log('==============================================');
 
     if (!themeConfig || themeConfig.length === 0) {
         console.error('Build Failed. Please set ThemeConfig, for example: ', {
@@ -47,18 +65,16 @@ module.exports = (themeConfig) => {
             ],
             outputPath: 'design-tokens/'
         });
-        process.exit(0);
+        process.exit(1);
     }
 
-    themeConfig.map((platform) => {
-        // APPLY THE CONFIGURATION
-        // Very important: the registration of custom transforms
-        // needs to be done _before_ applying the configuration
-        const StyleDictionaryExtended = StyleDictionary.extend(getPlatformConfig(platform));
+    for (const platform of themeConfig) {
+        console.log('themeConfig: ', platform);
 
-        // FINALLY, BUILD ALL THE PLATFORMS
-        StyleDictionaryExtended.buildAllPlatforms();
-    });
+        const sd = new StyleDictionary(getPlatformConfig(platform));
+
+        await sd.buildAllPlatforms();
+    }
 
     console.log('\n==============================================');
     console.log('\nBuild completed!');

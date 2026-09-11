@@ -1,7 +1,7 @@
-const { join } = require('path');
-const scssConfig = require('./scss');
-const jsConfig = require('./js');
-const cssConfig = require('./css');
+import { join } from 'node:path';
+import scssConfig from './scss.js';
+import jsConfig from './js.js';
+import cssConfig from './css.js';
 
 const filterObj = {
     options: {
@@ -47,9 +47,14 @@ function getConfigs(theme) {
     return filterOptions([scssConfig, jsConfig, cssConfig]);
 }
 
-module.exports = (theme) => {
+export default (theme) => {
     return {
         source: [...getSources(theme)],
-        platforms: getConfigs(theme)
+        platforms: getConfigs(theme),
+        // Token files are split across many outputs on purpose (palette.css, semantic-palette.css,
+        // light/semantic-colors.css …) and they reference each other across those files. That is
+        // exactly what `index.css` stitches back together, but Style Dictionary still warns about
+        // every reference whose target was filtered out of the file being written.
+        log: { warnings: 'disabled' }
     };
 };

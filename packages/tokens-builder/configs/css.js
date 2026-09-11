@@ -95,7 +95,7 @@ const semanticPaletteConfig = semanticPaletteColors.map((color) => ({
     }
 }));
 
-module.exports = {
+export default {
     css: {
         transformGroup: 'kbq/css',
         actions: ['kbq/css-index'],

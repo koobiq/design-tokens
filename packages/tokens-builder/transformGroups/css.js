@@ -1,6 +1,9 @@
-module.exports = (StyleDictionary) => {
+export default (StyleDictionary) => {
     StyleDictionary.registerTransformGroup({
         name: 'kbq/css',
+        // No `color/css` here on purpose: its v4+ filter is `$type === 'color'`, so once the
+        // sources carry DTCG types it would round-trip every OKLch value through
+        // hex/rgba and flatten the wide-gamut palette. Values are already valid CSS.
         transforms: [
             'attribute/cti',
             'kbq-attribute/font',

@@ -1,20 +1,23 @@
-const { formatHelpers } = require('style-dictionary');
+import { fileHeader, formattedVariables } from 'style-dictionary/utils';
 
-module.exports = (StyleDictionary) => {
+export default (StyleDictionary) => {
     StyleDictionary.registerFormat({
         name: 'kbq-css/variables',
-        formatter: function ({ dictionary, options = {}, file }) {
+        format: async function ({ dictionary, options = {}, file }) {
             const { outputReferences, selector = ':root' } = options;
 
+            // Theme-scoped tokens live under a `.kbq-light` / `.kbq-dark` selector, so the theme
+            // segment is redundant in the variable name (shadow-light-card → shadow-card).
+            // The palette layers are global and keep their names untouched.
             dictionary.allTokens.forEach((token) => {
                 if (['plt', 'semantic'].includes(token.attributes.category)) return;
                 token.name = token.name.replace(/(light|dark)-/, '');
             });
 
             return (
-                formatHelpers.fileHeader({ file }) +
+                (await fileHeader({ file })) +
                 `${selector} {\n` +
-                formatHelpers.formattedVariables({ format: 'css', dictionary, outputReferences }) +
+                formattedVariables({ format: 'css', dictionary, outputReferences }) +
                 `\n}\n`
             );
         }

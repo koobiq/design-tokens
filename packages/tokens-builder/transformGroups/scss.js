@@ -1,11 +1,11 @@
-module.exports = (StyleDictionary) => {
+export default (StyleDictionary) => {
     StyleDictionary.registerTransformGroup({
         name: 'kbq/scss',
         transforms: [
             'attribute/cti',
             'kbq-attribute/typography',
             'kbq-attribute/md-typography',
-            'name/cti/kebab',
+            'name/kebab',
             'kbq-scss/value',
             'kbq-attribute/comment'
         ]

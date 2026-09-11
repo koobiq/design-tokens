@@ -1,10 +1,10 @@
-module.exports = (StyleDictionary) => {
+export default (StyleDictionary) => {
     StyleDictionary.registerTransform({
         name: 'kbq-attribute/font',
         type: 'attribute',
-        matcher: ({ attributes }) => {
+        filter: ({ attributes }) => {
             return (attributes.category === 'markdown' && attributes.item === 'font') || attributes.type === 'font';
         },
-        transformer: () => ({ font: true })
+        transform: () => ({ font: true })
     });
 };

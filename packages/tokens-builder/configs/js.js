@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     js: {
         transformGroup: 'kbq/ts',
         files: [
