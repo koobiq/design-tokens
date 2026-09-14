@@ -251,12 +251,17 @@ export default {
                     outputReferences: true
                 }
             },
+            // outputReferences matters here as much as it does in the index files: without it a
+            // role token is written as a resolved literal, the plt → semantic → role chain is
+            // gone from the output, and repointing the semantic layer (the supported way to
+            // re-theme) silently stops working for anyone consuming this entry point.
             {
                 destination: 'css-tokens-light.css',
                 format: 'kbq-css/variables',
                 filter: (token) => !isComponent(token) && token.attributes.light,
                 options: {
-                    selector: '.kbq-light'
+                    selector: '.kbq-light',
+                    outputReferences: true
                 }
             },
             {
@@ -264,7 +269,8 @@ export default {
                 format: 'kbq-css/variables',
                 filter: (token) => !isComponent(token) && token.attributes.dark,
                 options: {
-                    selector: '.kbq-dark'
+                    selector: '.kbq-dark',
+                    outputReferences: true
                 }
             }
         ]

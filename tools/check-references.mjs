@@ -130,6 +130,35 @@ for (const [selector, declarations] of bySelector) {
     }
 }
 
+// 6. The css-tokens*.css entry point keeps its references too. It is a separate set of files
+//    from the index, and `outputReferences` has to be switched on per file — forget it there and
+//    role tokens become resolved literals, so repointing the semantic layer silently stops
+//    working for everyone consuming that entry point (which is most of them).
+for (const [file, selector] of [
+    ['css-tokens-light.css', '.kbq-light'],
+    ['css-tokens-dark.css', '.kbq-dark']
+]) {
+    const path_ = path.join(DIST, file);
+
+    if (!fs.existsSync(path_)) {
+        fail('css-tokens entry point', `${file} is missing`);
+        continue;
+    }
+
+    const contents = fs.readFileSync(path_, 'utf8').replace(/\/\*[\s\S]*?\*\//g, '');
+    const declaration = contents.match(/--kbq-background-theme\s*:\s*([^;]*);/);
+
+    if (!declaration) {
+        fail('css-tokens entry point', `${file} does not declare --kbq-background-theme`);
+    } else if (!declaration[1].trim().startsWith('var(--kbq-semantic-')) {
+        fail(
+            'css-tokens entry point',
+            `${selector} { --kbq-background-theme } in ${file} is "${declaration[1].trim()}" — ` +
+                'the reference was flattened, so outputReferences is off for that file'
+        );
+    }
+}
+
 if (failures.length > 0) {
     console.error(`\n✖ ${failures.length} problem(s):\n`);
     for (const { check, detail } of failures) console.error(`  [${check}] ${detail}`);
@@ -141,3 +170,4 @@ console.log('✔ role → semantic → plt → oklch chain intact (light and dar
 console.log('✔ engineering palette is OKLch throughout');
 console.log('✔ multi-layer shadows keep one reference per layer');
 console.log('✔ no references to the removed v3 palette');
+console.log('✔ css-tokens*.css keeps the semantic references too');
