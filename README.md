@@ -70,9 +70,16 @@ Three survived, because they express something global tokens cannot:
 Their colours were remapped from the old HSL palette onto the semantic OKLch layer. The match is
 perceptual, not exact (ΔE ≤ 0.07), so syntax highlighting and scrollbars shift very slightly.
 
-These three are now part of the main entry point (`components.css`, `light/components.css`,
-`dark/components.css`), so `index.css` / `index.bundled.css` is enough — in v3 they were only in
-`css-tokens*.css`.
+They ship as their own opt-in triple, mirroring the `css-tokens*.css` naming, and are **not**
+part of `index.css` / `index.bundled.css` — only consumers of those three components need them:
+
+```css
+@import '@koobiq/design-tokens/web/component-tokens.css'; /* sizes (:root) */
+@import '@koobiq/design-tokens/web/component-tokens-light.css'; /* .kbq-light */
+@import '@koobiq/design-tokens/web/component-tokens-dark.css'; /* .kbq-dark */
+```
+
+For the same reason `css-tokens*.css` now contains global tokens only.
 
 ### 4. Sources are DTCG now
 

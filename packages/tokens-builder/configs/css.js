@@ -80,6 +80,9 @@ const semanticPaletteColors = [
     'darkVisitedA'
 ];
 
+/** Tokens authored under web/components — code-block syntax colours, scrollbar, skeleton. */
+const isComponent = (token) => token.filePath.includes('/components/');
+
 const paletteByColorsConfig = paletteColors.map((color) => ({
     destination: `palette/${color}.css`,
     format: 'kbq-css/variables',
@@ -109,6 +112,9 @@ export default {
         log: { warnings: 'disabled' },
         // Per-color palette/semantic-palette splits are omitted from the index since their
         // variables are already covered by the aggregate palette.css / semantic-palette.css.
+        //
+        // Component tokens are omitted on purpose too: only consumers using code-block,
+        // scrollbar or skeleton need them, so they ship as opt-in component-tokens*.css.
         index: {
             dir: '',
             files: [
@@ -118,13 +124,10 @@ export default {
                 'md-typography.css',
                 'palette.css',
                 'semantic-palette.css',
-                'components.css',
                 'light/semantic-colors.css',
                 'light/shadows.css',
-                'light/components.css',
                 'dark/semantic-colors.css',
-                'dark/shadows.css',
-                'dark/components.css'
+                'dark/shadows.css'
             ]
         },
         files: [
@@ -206,30 +209,30 @@ export default {
                 }
             },
             // The three component token sets that survived v4 (code-block syntax colours,
-            // scrollbar, skeleton). They express things global tokens can't, so unlike the
-            // deprecated component tokens they belong in the main entry point.
+            // scrollbar, skeleton). Only consumers of those components need them, so they are
+            // opt-in: kept out of index.css and out of the css-tokens*.css aggregates, and
+            // shipped as their own triple mirroring the css-tokens*.css naming.
             {
-                destination: 'components.css',
+                destination: 'component-tokens.css',
                 format: 'kbq-css/variables',
-                filter: (token) =>
-                    token.filePath.includes('/components/') && !token.attributes.light && !token.attributes.dark,
+                filter: (token) => isComponent(token) && !token.attributes.light && !token.attributes.dark,
                 options: {
                     outputReferences: true
                 }
             },
             {
-                destination: 'light/components.css',
+                destination: 'component-tokens-light.css',
                 format: 'kbq-css/variables',
-                filter: (token) => token.filePath.includes('/components/') && token.attributes.light,
+                filter: (token) => isComponent(token) && token.attributes.light,
                 options: {
                     selector: '.kbq-light',
                     outputReferences: true
                 }
             },
             {
-                destination: 'dark/components.css',
+                destination: 'component-tokens-dark.css',
                 format: 'kbq-css/variables',
-                filter: (token) => token.filePath.includes('/components/') && token.attributes.dark,
+                filter: (token) => isComponent(token) && token.attributes.dark,
                 options: {
                     selector: '.kbq-dark',
                     outputReferences: true
@@ -239,6 +242,7 @@ export default {
                 destination: 'css-tokens.css',
                 format: 'css/variables',
                 filter: (token) =>
+                    !isComponent(token) &&
                     !token.attributes.font &&
                     !token.attributes.light &&
                     !token.attributes.dark &&
@@ -250,7 +254,7 @@ export default {
             {
                 destination: 'css-tokens-light.css',
                 format: 'kbq-css/variables',
-                filter: (token) => token.attributes.light,
+                filter: (token) => !isComponent(token) && token.attributes.light,
                 options: {
                     selector: '.kbq-light'
                 }
@@ -258,7 +262,7 @@ export default {
             {
                 destination: 'css-tokens-dark.css',
                 format: 'kbq-css/variables',
-                filter: (token) => token.attributes.dark,
+                filter: (token) => !isComponent(token) && token.attributes.dark,
                 options: {
                     selector: '.kbq-dark'
                 }
