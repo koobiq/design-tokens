@@ -9,6 +9,10 @@ For the full list of tokens see [`STYLING.md`](./STYLING.md). For what changed i
 > **Try it live.** `yarn build && yarn playground` opens a page where you can swap the brand,
 > contrast and status families, change the radius, inspect the reference chain behind any
 > element, and copy out a ready-made patch for `semantic.json5`.
+>
+> The same playground exists on the docs site under **Design tokens → Playground**, where the
+> knobs drive the real Koobiq components. Use that one to judge a palette; use this one when you
+> are working on the tokens themselves and don't want to rebuild the component library.
 
 ---
 
