@@ -13,27 +13,20 @@ const toKebab = (path) => {
     return standardKebab.replace(/-a-(\d+)$/, '-a$1');
 };
 
-module.exports = (StyleDictionary) => {
+export default (StyleDictionary) => {
+    // Strips 'light'/'dark' when used as the category segment (e.g. shadow.light.card →
+    // shadow-card), so theme-scoped tokens don't carry the theme in their variable name —
+    // the theme lives in the `.kbq-light` / `.kbq-dark` selector instead.
     StyleDictionary.registerTransform({
         name: 'name/custom-kebab',
         type: 'name',
-        transformer: (token) => toKebab(token.path)
-    });
-
-    // Same as custom-kebab but strips 'light'/'dark' when used as the type
-    // segment (e.g. shadow.light.card → shadow-card).
-    // Used for the new palette output so theme-scoped shadows don't carry
-    // the theme prefix in their variable name.
-    StyleDictionary.registerTransform({
-        name: 'name/custom-kebab-strip-theme',
-        type: 'name',
-        transformer: (token) => {
+        transform: (token, platform) => {
             const path =
                 token.attributes.category === 'light' || token.attributes.category === 'dark'
                     ? token.path.filter((part) => part !== 'light' && part !== 'dark')
                     : token.path;
 
-            return toKebab(path);
+            return toKebab(platform?.prefix ? [platform.prefix, ...path] : path);
         }
     });
 };

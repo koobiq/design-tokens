@@ -1,8 +1,7 @@
-const { join } = require('path');
-const scssConfig = require('./scss');
-const jsConfig = require('./js');
-const cssConfig = require('./css');
-const cssNewConfig = require('./css-new');
+import { join } from 'node:path';
+import scssConfig from './scss.js';
+import jsConfig from './js.js';
+import cssConfig from './css.js';
 
 const filterObj = {
     options: {
@@ -44,15 +43,29 @@ function getConfigs(theme) {
     scssConfig.scss.buildPath = theme.outputPath;
     jsConfig.js.buildPath = theme.outputPath;
     cssConfig.css.buildPath = theme.outputPath;
-    // @TODO: remove when updated to v4 (#DS-3002)
-    cssNewConfig.css.buildPath = theme.outputPath;
 
-    return filterOptions([scssConfig, jsConfig, theme?.type === 'new' ? cssNewConfig : cssConfig]);
+    return filterOptions([scssConfig, jsConfig, cssConfig]);
 }
 
-module.exports = (theme) => {
+export default (theme) => {
     return {
         source: [...getSources(theme)],
-        platforms: getConfigs(theme)
+        platforms: getConfigs(theme),
+        // Typography presets are authored as DTCG `typography` composites, but every output
+        // here is flat (--kbq-typography-headline-font-size, $typography-headline-font-size),
+        // so they get expanded back into one token per sub-property. See the preprocessor for
+        // why this isn't Style Dictionary's built-in `expand` option.
+        // Shadows stay composite — `shadow/css/shorthand` renders them as one box-shadow.
+        preprocessors: ['kbq/expand-typography'],
+        // Fail the build on transform errors instead of printing them. Without this a transform
+        // that throws on a value (say a dimension transform meeting `letter-spacing: normal`)
+        // is caught by Style Dictionary, quietly falls back to the untransformed value and only
+        // logs — so the output would be silently wrong.
+        //
+        // This switch is read from two places: transform errors use the top-level `log`, while
+        // the per-file "filtered out token references" warning uses `platform.log`. The css
+        // platform overrides it to `disabled` (see configs/css.js) because those cross-file
+        // references are deliberate.
+        log: { warnings: 'error' }
     };
 };
