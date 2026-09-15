@@ -16,6 +16,7 @@ packages/
     web/
       properties/      # source token files (plt.json5, semantic.json5, colors.json5, …)
       components/      # the three component tokens that survived v4
+    codemod/           # v3 → v4 migration script, shipped as `koobiq-tokens-codemod`
   tokens-builder/      # style-dictionary config, hooks and preprocessors
 tools/                 # build, checks, docs generation, playground
 dist/                  # build output (gitignored)

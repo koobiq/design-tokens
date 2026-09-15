@@ -30,7 +30,7 @@ const config = {
             // @koobiq/tokens-builder is an ESM package (Style Dictionary 5 is ESM-only),
             // and tools/*.mjs are ESM entry points. The repo root itself stays CommonJS
             // so the dot-file configs keep working.
-            files: ['packages/tokens-builder/**/*.js', 'tools/**/*.mjs'],
+            files: ['packages/tokens-builder/**/*.js', 'packages/design-tokens/codemod/*.mjs', 'tools/**/*.mjs'],
             parserOptions: {
                 ecmaVersion: 2022,
                 sourceType: 'module'

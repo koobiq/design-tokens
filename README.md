@@ -18,6 +18,13 @@
 v4 collapses the two parallel token tracks into one, drops the legacy HSL palette, and moves the
 sources to the [W3C DTCG format](https://www.w3.org/community/design-tokens/).
 
+> **Migrating?** Start with [`MIGRATION.md`](./MIGRATION.md) — a codemod ships in the package
+> and does the mechanical half for you:
+>
+> ```bash
+> npx koobiq-tokens-codemod src
+> ```
+
 ### 1. Import paths
 
 The `web/new/` track is gone. Individual token files now live under `web/css/`, and the
