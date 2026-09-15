@@ -39,66 +39,7 @@
                         $value: '{semantic.success.17}',
                     },
                 },
-                attr: {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                attribute: {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                built_in: {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                bullet: {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                'char.escape': {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                class: {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                code: {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
                 comment: {
-                    background: {
-                        $value: '',
-                    },
                     color: {
                         $value: '{semantic.contrast.13}',
                     },
@@ -111,337 +52,59 @@
                         $value: '{semantic.error.17}',
                     },
                 },
-                doctag: {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                emphasis: {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                formula: {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                function: {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                keyword: {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
                 'line-numbers': {
                     color: {
                         $value: '{light.foreground.contrast-secondary}',
                     },
                 },
-                link: {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
                 literal: {
-                    background: {
-                        $value: '',
-                    },
                     color: {
                         $value: '{semantic.visited.18}',
                     },
                 },
                 meta: {
-                    background: {
-                        $value: '',
-                    },
                     color: {
                         $value: '{semantic.theme.18}',
-                    },
-                },
-                'meta keyword': {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
                     },
                 },
                 'meta string': {
-                    background: {
-                        $value: '',
-                    },
                     color: {
                         $value: '{semantic.theme.18}',
                     },
                 },
-                'meta.prompt': {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
                 name: {
-                    background: {
-                        $value: '',
-                    },
                     color: {
                         $value: '{semantic.theme.18}',
                     },
                 },
                 number: {
-                    background: {
-                        $value: '',
-                    },
                     color: {
                         $value: '{semantic.visited.18}',
                     },
                 },
-                operator: {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                params: {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                property: {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                punctuation: {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                quote: {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
                 regexp: {
-                    background: {
-                        $value: '',
-                    },
                     color: {
                         $value: '{semantic.success.17}',
                     },
                 },
-                section: {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                'selector-attr': {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                'selector-class': {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                'selector-id': {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                'selector-pseudo': {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
                 'selector-tag': {
-                    background: {
-                        $value: '',
-                    },
                     color: {
                         $value: '{semantic.theme.18}',
                     },
                 },
                 string: {
-                    background: {
-                        $value: '',
-                    },
                     color: {
                         $value: '{semantic.success.17}',
                     },
                 },
-                strong: {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                subst: {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
                 symbol: {
-                    background: {
-                        $value: '',
-                    },
                     color: {
                         $value: '{semantic.theme.18}',
-                    },
-                },
-                tag: {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                'template-tag': {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                'template-variable': {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
                     },
                 },
                 title: {
-                    background: {
-                        $value: '',
-                    },
                     color: {
                         $value: '{semantic.theme.18}',
-                    },
-                },
-                'title.class': {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                'title.class.inherited': {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                'title.function': {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                'title.function.invoke': {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                type: {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                variable: {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                'variable-constant': {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                'variable-language': {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
                     },
                 },
             },
@@ -485,66 +148,7 @@
                         $value: '{semantic.darkSuccess.9}',
                     },
                 },
-                attr: {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                attribute: {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                built_in: {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                bullet: {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                'char.escape': {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                class: {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                code: {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
                 comment: {
-                    background: {
-                        $value: '',
-                    },
                     color: {
                         $value: '{semantic.darkContrast.13}',
                     },
@@ -557,337 +161,59 @@
                         $value: '{semantic.darkError.9}',
                     },
                 },
-                doctag: {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                emphasis: {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                formula: {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                function: {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                keyword: {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
                 'line-numbers': {
                     color: {
                         $value: '{dark.foreground.contrast-secondary}',
                     },
                 },
-                link: {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
                 literal: {
-                    background: {
-                        $value: '',
-                    },
                     color: {
                         $value: '{semantic.darkVisited.12}',
                     },
                 },
                 meta: {
-                    background: {
-                        $value: '',
-                    },
                     color: {
                         $value: '{semantic.darkTheme.14}',
-                    },
-                },
-                'meta keyword': {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
                     },
                 },
                 'meta string': {
-                    background: {
-                        $value: '',
-                    },
                     color: {
                         $value: '{semantic.darkTheme.14}',
                     },
                 },
-                'meta.prompt': {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
                 name: {
-                    background: {
-                        $value: '',
-                    },
                     color: {
                         $value: '{semantic.darkTheme.14}',
                     },
                 },
                 number: {
-                    background: {
-                        $value: '',
-                    },
                     color: {
                         $value: '{semantic.darkVisited.12}',
                     },
                 },
-                operator: {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                params: {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                property: {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                punctuation: {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                quote: {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
                 regexp: {
-                    background: {
-                        $value: '',
-                    },
                     color: {
                         $value: '{semantic.darkSuccess.14}',
                     },
                 },
-                section: {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                'selector-attr': {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                'selector-class': {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                'selector-id': {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                'selector-pseudo': {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
                 'selector-tag': {
-                    background: {
-                        $value: '',
-                    },
                     color: {
                         $value: '{semantic.darkTheme.14}',
                     },
                 },
                 string: {
-                    background: {
-                        $value: '',
-                    },
                     color: {
                         $value: '{semantic.darkSuccess.14}',
                     },
                 },
-                strong: {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                subst: {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
                 symbol: {
-                    background: {
-                        $value: '',
-                    },
                     color: {
                         $value: '{semantic.darkTheme.14}',
-                    },
-                },
-                tag: {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                'template-tag': {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                'template-variable': {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
                     },
                 },
                 title: {
-                    background: {
-                        $value: '',
-                    },
                     color: {
                         $value: '{semantic.darkTheme.14}',
-                    },
-                },
-                'title.class': {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                'title.class.inherited': {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                'title.function': {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                'title.function.invoke': {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                type: {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                variable: {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                'variable-constant': {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
-                    },
-                },
-                'variable-language': {
-                    background: {
-                        $value: '',
-                    },
-                    color: {
-                        $value: '',
                     },
                 },
             },

@@ -90,8 +90,8 @@ three components need them. Import them one component at a time:
 ```
 
 Each of those is self-contained — it carries its own `:root`, `.kbq-light` and `.kbq-dark`
-blocks, so one import is the whole component. This is worth doing: `code-block` is 214 of the
-248 component variables, so taking only `scrollbars.css` is 1.7 kB instead of 13.7 kB.
+blocks, so one import is the whole component. `code-block` is 40 of the 74 component variables,
+so a consumer who only wants a styled scrollbar takes 1.7 kB rather than the full 5.7 kB.
 
 If you do want all of them, the aggregate triple is still there, mirroring the `css-tokens*.css`
 naming:
@@ -104,7 +104,31 @@ naming:
 
 For the same reason `css-tokens*.css` now contains global tokens only.
 
-### 4. Sources are DTCG now
+### 4. Deprecated tokens are gone
+
+Everything that carried a deprecation notice in v3 has been removed. Each had a documented
+replacement:
+
+| removed                              | use instead                                                     |
+| :----------------------------------- | :-------------------------------------------------------------- |
+| `--kbq-background-overlay-theme`     | `--kbq-background-overlay-base-theme` + `--kbq-opacity-overlay` |
+| `--kbq-background-overlay-error`     | `--kbq-background-overlay-base-error` + `--kbq-opacity-overlay` |
+| `--kbq-foreground-error-less`        | `--kbq-foreground-error-tertiary`                               |
+| `--kbq-foreground-success-less`      | `--kbq-foreground-success-tertiary`                             |
+| `--kbq-states-background-error-less` | `--kbq-background-error-tertiary`                               |
+| `--kbq-states-disabled-opacity`      | `--kbq-opacity-disabled`                                        |
+
+The `-hover` / `-active` variants of `--kbq-states-background-error-less-*` were never
+deprecated and are untouched.
+
+Separately, 85 `--kbq-code-block-*-hljs-*` variables that were declared with an empty value are
+no longer emitted. `--kbq-x: ;` is valid CSS, but it is not the same as leaving the property
+undeclared: `var(--kbq-x, teal)` uses the fallback only while `--kbq-x` is undeclared, so
+shipping them empty silently swallowed the fallback and resolved to nothing. Those highlight.js
+classes now simply have no token, and `var(…, fallback)` against them works as expected. This
+takes `code-block.css` from 11.5 kB to 3.5 kB.
+
+### 5. Sources are DTCG now
 
 `web/properties/*.json5` and `web/components/*.json5` use `$value` / `$type` / `$description` /
 `$deprecated` instead of `value` / `description` / `deprecated`. If you read these files directly,
@@ -117,7 +141,7 @@ changes the JSON shape. See [`TOKENS-WORKFLOW.md`](./TOKENS-WORKFLOW.md).
 
 Token `$description`s now render as comments in the generated CSS.
 
-### 5. `@koobiq/tokens-builder`
+### 6. `@koobiq/tokens-builder`
 
 ESM-only, requires Style Dictionary 5 (a peer dependency now) and Node ≥ 22. Custom hooks moved
 to the v4/v5 API (`matcher` → `filter`, `transformer` → `transform`, `formatter` → `format`).

@@ -81,16 +81,6 @@
                 $value: '{semantic.contrastA.17}',
                 $description: 'Modal backdrop.',
             },
-            'overlay-theme': {
-                $value: '{semantic.themeA.8}',
-                $description: 'Allowed dropzone on dragover.',
-                $deprecated: 'use --kbq-background-overlay-base-theme with --kbq-opacity-overlay',
-            },
-            'overlay-error': {
-                $value: '{semantic.errorA.8}',
-                $description: 'Invalid dropzone on dragover.',
-                $deprecated: 'use --kbq-background-overlay-base-error with --kbq-opacity-overlay',
-            },
             'overlay-inverse': {
                 $value: '{plt.whiteA.18}',
                 $description: 'Loading overlay.',
@@ -137,10 +127,6 @@
             'error-tertiary': {
                 $value: '{semantic.errorA.11}',
             },
-            'error-less': {
-                $value: '{semantic.errorA.11}',
-                $deprecated: 'use foreground-error-tertiary',
-            },
             success: {
                 $value: '{semantic.successA.16}',
             },
@@ -149,10 +135,6 @@
             },
             'success-tertiary': {
                 $value: '{semantic.successA.11}',
-            },
-            'success-less': {
-                $value: '{semantic.successA.11}',
-                $deprecated: 'use --kbq-foreground-success-tertiary',
             },
             warning: {
                 $value: '{semantic.warningA.16}',
@@ -383,10 +365,6 @@
                 'error-fade-active': {
                     $value: '{semantic.errorA.5}',
                 },
-                'error-less': {
-                    $value: '{semantic.errorA.3}',
-                    $deprecated: 'use --kbq-background-error-tertiary',
-                },
                 'error-less-hover': {
                     $value: '{semantic.errorA.3}',
                 },
@@ -512,11 +490,6 @@
                     $value: '{semantic.errorA.13}',
                 },
             },
-            'disabled-opacity': {
-                $value: 0.5,
-                $deprecated: 'Use --kbq-opacity-disabled',
-                $type: 'number',
-            },
         },
         shadow: {
             $type: 'color',
@@ -614,14 +587,6 @@
             overlay: {
                 $value: '{plt.blackA.10}',
             },
-            'overlay-theme': {
-                $value: '{semantic.darkThemeA.4}',
-                $deprecated: 'use --kbq-background-overlay-base-theme with --kbq-opacity-overlay',
-            },
-            'overlay-error': {
-                $value: '{semantic.darkErrorA.4}',
-                $deprecated: 'use --kbq-background-overlay-base-error with --kbq-opacity-overlay',
-            },
             'overlay-inverse': {
                 $value: '{plt.blackA.10}',
             },
@@ -663,10 +628,6 @@
             'error-tertiary': {
                 $value: '{semantic.darkErrorA.9}',
             },
-            'error-less': {
-                $value: '{semantic.darkErrorA.9}',
-                $deprecated: 'use foreground-error-tertiary',
-            },
             success: {
                 $value: '{semantic.darkSuccessA.14}',
             },
@@ -675,10 +636,6 @@
             },
             'success-tertiary': {
                 $value: '{semantic.darkSuccessA.9}',
-            },
-            'success-less': {
-                $value: '{semantic.darkSuccessA.9}',
-                $deprecated: 'use --kbq-foreground-success-tertiary',
             },
             warning: {
                 $value: '{semantic.darkWarningA.14}',
@@ -900,10 +857,6 @@
                 'error-fade-active': {
                     $value: '{semantic.darkErrorA.7}',
                 },
-                'error-less': {
-                    $value: '{semantic.darkErrorA.4}',
-                    $deprecated: 'useте background-error-tertiary',
-                },
                 'error-less-hover': {
                     $value: '{semantic.darkErrorA.4}',
                 },
@@ -1027,11 +980,6 @@
                 'focus-error': {
                     $value: '{semantic.darkErrorA.11}',
                 },
-            },
-            'disabled-opacity': {
-                $value: 0.5,
-                $deprecated: 'Use --kbq-opacity-disabled',
-                $type: 'number',
             },
         },
         shadow: {

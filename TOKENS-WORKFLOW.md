@@ -259,13 +259,19 @@ composites map onto Figma text styles.
 
 Worth knowing if you point a strict validator at these files:
 
-- **Scalar values are strings.** `$value: "oklch(96.9% 0.0050 260.0)"` and `$value: "8px"`,
-  not the object forms (`{colorSpace, components}` / `{value, unit}`) of the 2025.10 draft.
-  This is what Style Dictionary fully supports today and what current Figma plugins read.
+- **Scalar values are strings.** `$value: "oklch(96.9% 0.0050 260.0)"` and `$value: "8px"`, not
+  the object forms (`{colorSpace, components}` / `{value, unit}`) that 2025.10 introduced. This
+  is what Style Dictionary fully supports today and what current Figma plugins read.
 - **Two extra typography sub-properties.** `textTransform` and `fontFeatureSettings` aren't part
   of the DTCG `typography` type. They back real CSS variables that are in use, so they stay.
   (Style Dictionary's own shorthand transform takes a similar liberty with `fontStyle` and
   `fontVariant`.)
-- **Empty placeholder values.** The `hljs` tokens in `code-block.json5` with `$value: ''` are
-  deliberate: they declare the variable so consumers can restyle that highlight.js class per
-  theme without it being undefined.
+
+### No empty tokens
+
+A token with nothing to say is left out, never declared with an empty value.
+
+`--kbq-x: ;` is valid CSS, but a declared-empty property is not the same as an absent one:
+`var(--kbq-x, teal)` falls back to teal only while `--kbq-x` is undeclared. Declare it empty and
+the fallback is skipped and the whole declaration resolves to nothing — so an empty token is
+worse than no token, because it silently overrides what the consumer asked for.
