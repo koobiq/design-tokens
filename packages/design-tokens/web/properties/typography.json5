@@ -547,92 +547,97 @@
             },
         },
     },
+    // Per-locale overrides of single sub-properties. They are not wired into the presets above —
+    // they ship as their own variables (--kbq-zh-cn-*, --kbq-fa-ir-*) for an app to apply under
+    // a locale selector of its own.
     'zh-CN': {
+        $type: 'fontWeight',
         'text-normal-strong': {
             'font-weight': {
-                value: 'normal',
+                $value: 'normal',
             },
         },
         'mono-normal-strong': {
             'font-weight': {
-                value: 'normal',
+                $value: 'normal',
             },
         },
         'text-compact-strong': {
             'font-weight': {
-                value: 'normal',
+                $value: 'normal',
             },
         },
         'mono-compact-strong': {
             'font-weight': {
-                value: 'normal',
+                $value: 'normal',
             },
         },
     },
     'fa-IR': {
+        $type: 'fontFamily',
         'display-big': {
             'font-family': {
-                value: '{font.fa-IR.accent}',
+                $value: '{font.fa-IR.accent}',
             },
         },
         'display-normal': {
             'font-family': {
-                value: '{font.fa-IR.accent}',
+                $value: '{font.fa-IR.accent}',
             },
         },
         'display-compact': {
             'font-family': {
-                value: '{font.fa-IR.accent}',
+                $value: '{font.fa-IR.accent}',
             },
         },
         title: {
             'font-family': {
-                value: '{font.fa-IR.accent}',
+                $value: '{font.fa-IR.accent}',
             },
         },
         subheading: {
             'font-family': {
-                value: '{font.fa-IR.base}',
+                $value: '{font.fa-IR.base}',
             },
         },
         'text-normal': {
             'font-family': {
-                value: '{font.fa-IR.base}',
+                $value: '{font.fa-IR.base}',
             },
         },
         'tabular-normal': {
             'font-family': {
-                value: '{font.fa-IR.base}',
+                $value: '{font.fa-IR.base}',
             },
         },
         'text-normal-strong': {
             'font-family': {
-                value: '{font.fa-IR.base}',
+                $value: '{font.fa-IR.base}',
             },
         },
         'caps-normal': {
             'font-family': {
-                value: '{font.fa-IR.base}',
+                $value: '{font.fa-IR.base}',
             },
         },
         'text-compact': {
             'font-family': {
-                value: '{font.fa-IR.base}',
+                $value: '{font.fa-IR.base}',
             },
         },
         'tabular-compact': {
             'font-family': {
-                value: '{font.fa-IR.base}',
+                $value: '{font.fa-IR.base}',
             },
         },
         'text-compact-strong': {
             'font-family': {
-                value: '{font.fa-IR.base}',
+                $value: '{font.fa-IR.base}',
             },
         },
         'caps-compact': {
             'font-family': {
-                value: '{font.fa-IR.base}',
+                $value: '{font.fa-IR.base}',
             },
         },
     },
