@@ -73,12 +73,26 @@ export default async (themeConfig) => {
         process.exit(1);
     }
 
-    for (const platform of themeConfig) {
-        console.log('themeConfig: ', platform);
+    for (const theme of themeConfig) {
+        console.log('themeConfig: ', theme);
 
-        const sd = new StyleDictionary(getPlatformConfig(platform));
+        const config = getPlatformConfig(theme);
+        const sd = new StyleDictionary(config);
 
-        await sd.buildAllPlatforms();
+        // One platform at a time, rather than sd.buildAllPlatforms().
+        //
+        // That helper runs every platform through a single Promise.all, while the "filtered out
+        // token references" warning is counted in a module-level store that is not scoped to a
+        // platform. The css platform switches that warning off on purpose — its files reference
+        // each other across file boundaries — but with the platforms interleaved, a warning css
+        // raised could be flushed, and thrown on, while scss or js was being written, where the
+        // top-level `warnings: 'error'` still applies. Which platform got the blame came down to
+        // how the file writes happened to interleave.
+        //
+        // Building sequentially keeps each warning with the platform that caused it.
+        for (const name of Object.keys(config.platforms)) {
+            await sd.buildPlatform(name);
+        }
     }
 
     console.log('\n==============================================');
