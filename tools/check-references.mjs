@@ -18,7 +18,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const DIST = path.join(process.cwd(), 'dist/design-tokens/web');
-const BUNDLE = path.join(DIST, 'index.bundled.css');
+// Sliced files live under css/; the css-tokens*.css aggregates sit at the root of web/.
+const BUNDLE = path.join(DIST, 'css/index.bundled.css');
 
 const failures = [];
 const fail = (check, detail) => failures.push({ check, detail });

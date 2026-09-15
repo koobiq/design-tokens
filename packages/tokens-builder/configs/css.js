@@ -80,19 +80,45 @@ const semanticPaletteColors = [
     'darkVisitedA'
 ];
 
+/**
+ * The component token sets that survived v4, named after their source file in web/components/.
+ *
+ * Each gets its own stylesheet under css/components/, because they are opt-in and wildly uneven
+ * in size: code-block is 214 of the 248 component variables, so a consumer who renders no code
+ * blocks should not have to carry them to get a styled scrollbar.
+ */
+const components = ['code-block', 'scrollbars', 'skeleton'];
+
 /** Tokens authored under web/components — code-block syntax colours, scrollbar, skeleton. */
 const isComponent = (token) => token.filePath.includes('/components/');
 
+/**
+ * Everything sliced by category lives under css/, mirroring how the package was laid out before
+ * v4. The aggregates that stitch those slices back together (css-tokens*.css,
+ * component-tokens*.css) stay at the root of web/, so "a slice" and "the whole thing" are told
+ * apart by location.
+ */
+const sliced = (destination) => `css/${destination}`;
+
 const paletteByColorsConfig = paletteColors.map((color) => ({
-    destination: `palette/${color}.css`,
+    destination: sliced(`palette/${color}.css`),
     format: 'kbq-css/variables',
     filter: (token) => token.attributes.category === 'plt' && token.attributes.type === color
 }));
 
 const semanticPaletteConfig = semanticPaletteColors.map((color) => ({
-    destination: `semantic-palette/${color}.css`,
+    destination: sliced(`semantic-palette/${color}.css`),
     format: 'kbq-css/variables',
     filter: (token) => token.attributes.category === 'semantic' && token.attributes.type === color,
+    options: {
+        outputReferences: true
+    }
+}));
+
+const componentsConfig = components.map((name) => ({
+    destination: sliced(`components/${name}.css`),
+    format: 'kbq-css/component',
+    filter: (token) => token.filePath.endsWith(`/components/${name}.json5`),
     options: {
         outputReferences: true
     }
@@ -114,37 +140,39 @@ export default {
         // variables are already covered by the aggregate palette.css / semantic-palette.css.
         //
         // Component tokens are omitted on purpose too: only consumers using code-block,
-        // scrollbar or skeleton need them, so they ship as opt-in component-tokens*.css.
+        // scrollbar or skeleton need them, so they ship opt-in — one file per component under
+        // css/components/, plus component-tokens*.css at the root for all of them at once.
         index: {
-            dir: '',
+            dir: 'css',
             files: [
-                'font.css',
-                'size.css',
-                'typography.css',
-                'md-typography.css',
-                'palette.css',
-                'semantic-palette.css',
-                'light/semantic-colors.css',
-                'light/shadows.css',
-                'dark/semantic-colors.css',
-                'dark/shadows.css'
+                sliced('font.css'),
+                sliced('size.css'),
+                sliced('typography.css'),
+                sliced('md-typography.css'),
+                sliced('palette.css'),
+                sliced('semantic-palette.css'),
+                sliced('light/semantic-colors.css'),
+                sliced('light/shadows.css'),
+                sliced('dark/semantic-colors.css'),
+                sliced('dark/shadows.css')
             ]
         },
         files: [
             ...semanticPaletteConfig,
             ...paletteByColorsConfig,
+            ...componentsConfig,
             {
-                destination: 'font.css',
+                destination: sliced('font.css'),
                 format: 'css/variables',
                 filter: (token) => token.attributes.category === 'font'
             },
             {
-                destination: 'size.css',
+                destination: sliced('size.css'),
                 format: 'css/variables',
                 filter: (token) => token.attributes.category === 'size'
             },
             {
-                destination: 'typography.css',
+                destination: sliced('typography.css'),
                 format: 'css/variables',
                 filter: (token) => token.attributes.category === 'typography',
                 options: {
@@ -152,7 +180,7 @@ export default {
                 }
             },
             {
-                destination: 'md-typography.css',
+                destination: sliced('md-typography.css'),
                 format: 'css/variables',
                 filter: (token) => token.attributes.category === 'md-typography',
                 options: {
@@ -160,12 +188,12 @@ export default {
                 }
             },
             {
-                destination: 'palette.css',
+                destination: sliced('palette.css'),
                 format: 'kbq-css/variables',
                 filter: (token) => token.attributes.category === 'plt'
             },
             {
-                destination: 'semantic-palette.css',
+                destination: sliced('semantic-palette.css'),
                 format: 'kbq-css/variables',
                 filter: (token) => token.attributes.category === 'semantic',
                 options: {
@@ -173,7 +201,7 @@ export default {
                 }
             },
             {
-                destination: 'light/shadows.css',
+                destination: sliced('light/shadows.css'),
                 format: 'kbq-css/variables',
                 filter: (token) => token.attributes.light && token.attributes.category === 'shadow',
                 options: {
@@ -182,7 +210,7 @@ export default {
                 }
             },
             {
-                destination: 'light/semantic-colors.css',
+                destination: sliced('light/semantic-colors.css'),
                 format: 'kbq-css/variables',
                 filter: (token) => token.attributes.light && token.filePath.includes('colors.json5'),
                 options: {
@@ -191,7 +219,7 @@ export default {
                 }
             },
             {
-                destination: 'dark/shadows.css',
+                destination: sliced('dark/shadows.css'),
                 format: 'kbq-css/variables',
                 filter: (token) => token.attributes.dark && token.attributes.category === 'shadow',
                 options: {
@@ -200,7 +228,7 @@ export default {
                 }
             },
             {
-                destination: 'dark/semantic-colors.css',
+                destination: sliced('dark/semantic-colors.css'),
                 format: 'kbq-css/variables',
                 filter: (token) => token.attributes.dark && token.filePath.includes('colors.json5'),
                 options: {

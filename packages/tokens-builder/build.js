@@ -25,6 +25,7 @@ import registerTsGroup from './transformGroups/ts.js';
 // ==== Include custom formats ====
 import registerTypographyFormat from './formats/typography.js';
 import registerVariablesFormat from './formats/variables.js';
+import registerComponentFormat from './formats/component.js';
 
 // ==== Include custom actions ====
 import registerCssIndex from './actions/css-index.js';
@@ -48,6 +49,7 @@ registerTsGroup(StyleDictionary);
 
 registerTypographyFormat(StyleDictionary);
 registerVariablesFormat(StyleDictionary);
+registerComponentFormat(StyleDictionary);
 
 registerCssIndex(StyleDictionary);
 

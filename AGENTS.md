@@ -24,6 +24,20 @@ dist/                  # build output (gitignored)
 - Token source: `packages/design-tokens/web/properties/` — [W3C DTCG](https://www.w3.org/community/design-tokens/) format
 - Build output: `dist/design-tokens/web/`
 
+```
+dist/design-tokens/web/
+  css/                 # every token file sliced by category
+    index.css          #   manifest of @imports; index.bundled.css is the flattened one
+    palette/ semantic-palette/ light/ dark/
+    components/        #   one self-contained file per component (all selectors inside)
+  css-tokens*.css      # aggregates — the slices stitched back together
+  component-tokens*.css
+  _variables.scss  js/ # unchanged from v3
+```
+
+Slices live under `css/`, aggregates at the root of `web/`. When adding an output file, put it
+on the side of that line it belongs to, and add it to `index.files` only if it is a slice.
+
 ## Key Commands
 
 | Command                 | Description                                     |

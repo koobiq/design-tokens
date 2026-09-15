@@ -153,7 +153,9 @@ e.g. a high-contrast theme:
    `plt.*` ramps you want.
 2. Copy the `dark` block in `colors.json5` to `hc` and repoint its references.
 3. Add a file entry in `packages/tokens-builder/configs/css.js` with
-   `options: { selector: '.kbq-hc' }`, and add it to the `index.files` list.
+   `destination: sliced('hc/semantic-colors.css')` and `options: { selector: '.kbq-hc' }`, then
+   add it to the `index.files` list. `sliced()` puts it under `web/css/` with the other
+   per-category files; the aggregates at the root of `web/` are the only outputs that skip it.
 
 ### Deprecate a token
 

@@ -25,7 +25,7 @@ const TYPES = {
     '.json5': 'text/plain; charset=utf-8'
 };
 
-if (!fs.existsSync(path.join(TOKENS, 'index.bundled.css'))) {
+if (!fs.existsSync(path.join(TOKENS, 'css/index.bundled.css'))) {
     console.error('✖ Tokens are not built yet. Run `yarn build` first.');
     process.exit(1);
 }

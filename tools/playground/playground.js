@@ -10,7 +10,8 @@
  * stale when the palette changes.
  */
 
-const TOKENS = '/tokens';
+// Sliced token files live under css/ in the built package; serve.mjs mounts web/ at /tokens.
+const TOKENS = '/tokens/css';
 const STEPS = 20;
 
 const els = {

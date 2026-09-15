@@ -20,17 +20,27 @@ sources to the [W3C DTCG format](https://www.w3.org/community/design-tokens/).
 
 ### 1. Import paths
 
-Everything now lives directly under `web/`.
+The `web/new/` track is gone. Individual token files now live under `web/css/`, and the
+aggregates that stitch them back together sit at the root of `web/` — so you can tell a slice
+from the whole thing by where it lives.
 
-| v3                                                | v4                                            |
-| :------------------------------------------------ | :-------------------------------------------- |
-| `@koobiq/design-tokens/web/new/index.bundled.css` | `@koobiq/design-tokens/web/index.bundled.css` |
-| `@koobiq/design-tokens/web/new/index.css`         | `@koobiq/design-tokens/web/index.css`         |
-| `@koobiq/design-tokens/web/new/css-tokens.css`    | `@koobiq/design-tokens/web/css-tokens.css`    |
-| `@koobiq/design-tokens/web/css/**` (legacy HSL)   | **removed** — migrate to OKLch                |
-| `@koobiq/design-tokens/web/_palette.scss`         | **removed** — see below                       |
-| `@koobiq/design-tokens/web/css-tokens-font.css`   | **removed** — use `web/font.css`              |
-| `@koobiq/design-tokens/web/deprecated/**`         | **removed**                                   |
+| v3                                                  | v4                                                  |
+| :-------------------------------------------------- | :-------------------------------------------------- |
+| `@koobiq/design-tokens/web/new/index.bundled.css`   | `@koobiq/design-tokens/web/css/index.bundled.css`   |
+| `@koobiq/design-tokens/web/new/index.css`           | `@koobiq/design-tokens/web/css/index.css`           |
+| `@koobiq/design-tokens/web/new/palette.css`         | `@koobiq/design-tokens/web/css/palette.css`         |
+| `@koobiq/design-tokens/web/new/light/**`, `dark/**` | `@koobiq/design-tokens/web/css/light/**`, `dark/**` |
+| `@koobiq/design-tokens/web/new/css-tokens.css`      | `@koobiq/design-tokens/web/css-tokens.css`          |
+| `@koobiq/design-tokens/web/css/**` (legacy HSL)     | **removed** — migrate to OKLch                      |
+| `@koobiq/design-tokens/web/_palette.scss`           | **removed** — see below                             |
+| `@koobiq/design-tokens/web/css-tokens-font.css`     | **removed** — use `web/css/font.css`                |
+| `@koobiq/design-tokens/web/deprecated/**`           | **removed**                                         |
+
+Note that `web/css/**` existed in v3 as the legacy HSL track and now holds the OKLch one, so the
+path is the same but the contents are not: the variables inside are `--kbq-plt-*` /
+`--kbq-semantic-*`, never `--kbq-palette-*`.
+
+SCSS (`web/_variables.scss` and friends) and JS (`web/js/`) are unchanged.
 
 ### 2. The old palette is gone
 
@@ -70,8 +80,21 @@ Three survived, because they express something global tokens cannot:
 Their colours were remapped from the old HSL palette onto the semantic OKLch layer. The match is
 perceptual, not exact (ΔE ≤ 0.07), so syntax highlighting and scrollbars shift very slightly.
 
-They ship as their own opt-in triple, mirroring the `css-tokens*.css` naming, and are **not**
-part of `index.css` / `index.bundled.css` — only consumers of those three components need them:
+They are opt-in and **not** part of `index.css` / `index.bundled.css` — only consumers of those
+three components need them. Import them one component at a time:
+
+```css
+@import '@koobiq/design-tokens/web/css/components/code-block.css';
+@import '@koobiq/design-tokens/web/css/components/scrollbars.css';
+@import '@koobiq/design-tokens/web/css/components/skeleton.css';
+```
+
+Each of those is self-contained — it carries its own `:root`, `.kbq-light` and `.kbq-dark`
+blocks, so one import is the whole component. This is worth doing: `code-block` is 214 of the
+248 component variables, so taking only `scrollbars.css` is 1.7 kB instead of 13.7 kB.
+
+If you do want all of them, the aggregate triple is still there, mirroring the `css-tokens*.css`
+naming:
 
 ```css
 @import '@koobiq/design-tokens/web/component-tokens.css'; /* sizes (:root) */
@@ -120,17 +143,17 @@ Two entry points are available:
 Production (single file, recommended):
 
 ```css
-@import '@koobiq/design-tokens/web/index.bundled.css';
+@import '@koobiq/design-tokens/web/css/index.bundled.css';
 ```
 
 Or the manifest of individual imports:
 
 ```css
-@import '@koobiq/design-tokens/web/index.css';
+@import '@koobiq/design-tokens/web/css/index.css';
 ```
 
 > **Only need some tokens?** Check `index.css` to see what's available and import just the files
-> you need (e.g. `palette.css`, `light/semantic-colors.css`) instead of the full bundle.
+> you need (e.g. `web/css/palette.css`, `web/css/light/semantic-colors.css`) instead of the full bundle.
 
 ### Apply a theme
 
