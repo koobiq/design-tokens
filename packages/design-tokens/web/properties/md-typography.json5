@@ -1,6 +1,3 @@
-// Typography for rendered markdown. Most entries are a whole-composite alias of a preset from
-// typography.json5 — `md-body` *is* `text-big`, and saying so once keeps it that way when the
-// preset changes. Only the three headings that genuinely differ spell their sub-properties out.
 {
     'md-typography': {
         $type: 'typography',
