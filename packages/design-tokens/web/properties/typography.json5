@@ -547,9 +547,16 @@
             },
         },
     },
-    // Per-locale overrides of single sub-properties. They are not wired into the presets above —
-    // they ship as their own variables (--kbq-zh-cn-*, --kbq-fa-ir-*) for an app to apply under
-    // a locale selector of its own.
+    // Per-locale overrides of single sub-properties, kept deliberately.
+    //
+    // zh-CN drops `strong` back to a normal weight at the two smallest sizes only: a bold 12px
+    // hanzi carries enough strokes to close up into a blob, while the larger sizes read fine.
+    // fa-IR swaps in Noto Naskh Arabic, since the Latin families carry no Arabic script at all.
+    //
+    // Nothing applies these automatically. They ship as their own variables (--kbq-zh-cn-*,
+    // --kbq-fa-ir-*) for an app to use under a locale selector of its own — so they will look
+    // unused from inside this repo. Unused is not unwanted: the DTCG migration already dropped
+    // them once by mistake, and they had to be restored from the published v3.
     'zh-CN': {
         $type: 'fontWeight',
         'text-normal-strong': {
