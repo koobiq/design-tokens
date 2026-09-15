@@ -199,6 +199,25 @@ into one token per sub-property, so you still get
 To reuse part of another preset, reference the sub-property directly:
 `'{typography.text-normal.fontFamily}'`. That reference is preserved as a `var()` in the output.
 
+### Reuse a whole preset
+
+A composite is a single token, so it can be aliased as a whole. This is how most of
+`md-typography.json5` is written:
+
+```json5
+{
+    'md-typography': {
+        $type: 'typography',
+        'md-body': { $value: '{typography.text-big}' }
+    }
+}
+```
+
+That expands to one reference per sub-property, so the CSS is identical to listing all seven by
+hand — but the file now says _`md-body` is `text-big`_, and it stays true when the preset changes.
+Reach for the long form only when a preset genuinely differs; `md-h4` is `subheading` at weight
+700, and there is no way to say "the same but bolder" in DTCG, so it spells every sub-property out.
+
 ### Add a shadow
 
 Shadows are DTCG `shadow` composites — one layer object, or an array for multi-layer:

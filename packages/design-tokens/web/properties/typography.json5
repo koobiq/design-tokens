@@ -459,7 +459,7 @@
         'italic-big': {
             $type: 'typography',
             $value: {
-                'font-style': 'italic',
+                fontStyle: 'italic',
                 fontSize: '16px',
                 lineHeight: '24px',
                 letterSpacing: '-0.011em',
@@ -472,7 +472,7 @@
         'italic-big-strong': {
             $type: 'typography',
             $value: {
-                'font-style': 'italic',
+                fontStyle: 'italic',
                 fontSize: '16px',
                 lineHeight: '24px',
                 letterSpacing: '-0.011em',
@@ -485,7 +485,7 @@
         'italic-normal': {
             $type: 'typography',
             $value: {
-                'font-style': 'italic',
+                fontStyle: 'italic',
                 fontSize: '14px',
                 lineHeight: '20px',
                 letterSpacing: '-0.006em',
@@ -498,7 +498,7 @@
         'italic-normal-strong': {
             $type: 'typography',
             $value: {
-                'font-style': 'italic',
+                fontStyle: 'italic',
                 fontSize: '14px',
                 lineHeight: '20px',
                 letterSpacing: '-0.006em',
@@ -511,7 +511,7 @@
         'italic-compact': {
             $type: 'typography',
             $value: {
-                'font-style': 'italic',
+                fontStyle: 'italic',
                 fontSize: '12px',
                 lineHeight: '16px',
                 letterSpacing: 'normal',
@@ -524,7 +524,7 @@
         'italic-compact-strong': {
             $type: 'typography',
             $value: {
-                'font-style': 'italic',
+                fontStyle: 'italic',
                 fontSize: '12px',
                 lineHeight: '16px',
                 letterSpacing: 'normal',

@@ -1,19 +1,14 @@
+// Typography for rendered markdown. Most entries are a whole-composite alias of a preset from
+// typography.json5 — `md-body` *is* `text-big`, and saying so once keeps it that way when the
+// preset changes. Only the three headings that genuinely differ spell their sub-properties out.
 {
     'md-typography': {
+        $type: 'typography',
         'md-h1': {
-            $type: 'typography',
-            $value: {
-                fontSize: '{typography.display-compact.fontSize}',
-                lineHeight: '{typography.display-compact.lineHeight}',
-                letterSpacing: '{typography.display-compact.letterSpacing}',
-                fontWeight: '{typography.display-compact.fontWeight}',
-                fontFamily: '{typography.display-compact.fontFamily}',
-                textTransform: '{typography.display-compact.textTransform}',
-                fontFeatureSettings: '{typography.display-compact.fontFeatureSettings}',
-            },
+            $value: '{typography.display-compact}',
         },
+        // Not display-compact: two steps smaller and bold, so it has to be written out.
         'md-h2': {
-            $type: 'typography',
             $value: {
                 fontSize: '24px',
                 lineHeight: '32px',
@@ -25,19 +20,10 @@
             },
         },
         'md-h3': {
-            $type: 'typography',
-            $value: {
-                fontSize: '{typography.title.fontSize}',
-                lineHeight: '{typography.title.lineHeight}',
-                letterSpacing: '{typography.title.letterSpacing}',
-                fontWeight: '{typography.title.fontWeight}',
-                fontFamily: '{typography.title.fontFamily}',
-                textTransform: '{typography.title.textTransform}',
-                fontFeatureSettings: '{typography.title.fontFeatureSettings}',
-            },
+            $value: '{typography.title}',
         },
+        // subheading, but bold (700 against its 600).
         'md-h4': {
-            $type: 'typography',
             $value: {
                 fontSize: '{typography.subheading.fontSize}',
                 lineHeight: '{typography.subheading.lineHeight}',
@@ -48,8 +34,8 @@
                 fontFeatureSettings: '{typography.subheading.fontFeatureSettings}',
             },
         },
+        // text-big-strong, but bold (700 against its 600).
         'md-h5': {
-            $type: 'typography',
             $value: {
                 fontSize: '{typography.text-big-strong.fontSize}',
                 lineHeight: '{typography.text-big-strong.lineHeight}',
@@ -61,100 +47,28 @@
             },
         },
         'md-h6': {
-            $type: 'typography',
-            $value: {
-                fontSize: '{typography.caps-normal-strong.fontSize}',
-                lineHeight: '{typography.caps-normal-strong.lineHeight}',
-                letterSpacing: '{typography.caps-normal-strong.letterSpacing}',
-                fontWeight: '{typography.caps-normal-strong.fontWeight}',
-                fontFamily: '{typography.caps-normal-strong.fontFamily}',
-                textTransform: '{typography.caps-normal-strong.textTransform}',
-                fontFeatureSettings: '{typography.caps-normal-strong.fontFeatureSettings}',
-            },
+            $value: '{typography.caps-normal-strong}',
         },
         'md-body': {
-            $type: 'typography',
-            $value: {
-                fontSize: '{typography.text-big.fontSize}',
-                lineHeight: '{typography.text-big.lineHeight}',
-                letterSpacing: '{typography.text-big.letterSpacing}',
-                fontWeight: '{typography.text-big.fontWeight}',
-                fontFamily: '{typography.text-big.fontFamily}',
-                textTransform: '{typography.text-big.textTransform}',
-                fontFeatureSettings: '{typography.text-big.fontFeatureSettings}',
-            },
+            $value: '{typography.text-big}',
         },
         'md-body-mono': {
-            $type: 'typography',
-            $value: {
-                fontSize: '{typography.mono-big.fontSize}',
-                lineHeight: '{typography.mono-big.lineHeight}',
-                letterSpacing: '{typography.mono-big.letterSpacing}',
-                fontWeight: '{typography.mono-big.fontWeight}',
-                fontFamily: '{typography.mono-big.fontFamily}',
-                textTransform: '{typography.mono-big.textTransform}',
-                fontFeatureSettings: '{typography.mono-big.fontFeatureSettings}',
-            },
+            $value: '{typography.mono-big}',
         },
         'md-inline-code': {
-            $type: 'typography',
-            $value: {
-                fontSize: '{typography.mono-normal.fontSize}',
-                lineHeight: '{typography.mono-normal.lineHeight}',
-                letterSpacing: '{typography.mono-normal.letterSpacing}',
-                fontWeight: '{typography.mono-normal.fontWeight}',
-                fontFamily: '{typography.mono-normal.fontFamily}',
-                textTransform: '{typography.mono-normal.textTransform}',
-                fontFeatureSettings: '{typography.mono-normal.fontFeatureSettings}',
-            },
+            $value: '{typography.mono-normal}',
         },
         'md-inline-code-as-link': {
-            $type: 'typography',
-            $value: {
-                fontSize: '{typography.mono-normal-medium.fontSize}',
-                lineHeight: '{typography.mono-normal-medium.lineHeight}',
-                letterSpacing: '{typography.mono-normal-medium.letterSpacing}',
-                fontWeight: '{typography.mono-normal-medium.fontWeight}',
-                fontFamily: '{typography.mono-normal-medium.fontFamily}',
-                textTransform: '{typography.mono-normal-medium.textTransform}',
-                fontFeatureSettings: '{typography.mono-normal-medium.fontFeatureSettings}',
-            },
+            $value: '{typography.mono-normal-medium}',
         },
         'md-caption': {
-            $type: 'typography',
-            $value: {
-                fontSize: '{typography.text-normal.fontSize}',
-                lineHeight: '{typography.text-normal.lineHeight}',
-                letterSpacing: '{typography.text-normal.letterSpacing}',
-                fontWeight: '{typography.text-normal.fontWeight}',
-                fontFamily: '{typography.text-normal.fontFamily}',
-                textTransform: '{typography.text-normal.textTransform}',
-                fontFeatureSettings: '{typography.text-normal.fontFeatureSettings}',
-            },
+            $value: '{typography.text-normal}',
         },
         'md-table-cell': {
-            $type: 'typography',
-            $value: {
-                fontSize: '{typography.tabular-big.fontSize}',
-                lineHeight: '{typography.tabular-big.lineHeight}',
-                letterSpacing: '{typography.tabular-big.letterSpacing}',
-                fontWeight: '{typography.tabular-big.fontWeight}',
-                fontFamily: '{typography.tabular-big.fontFamily}',
-                textTransform: '{typography.tabular-big.textTransform}',
-                fontFeatureSettings: '{typography.tabular-big.fontFeatureSettings}',
-            },
+            $value: '{typography.tabular-big}',
         },
         'md-table-header': {
-            $type: 'typography',
-            $value: {
-                fontSize: '{typography.tabular-normal.fontSize}',
-                lineHeight: '{typography.tabular-normal.lineHeight}',
-                letterSpacing: '{typography.tabular-normal.letterSpacing}',
-                fontWeight: '{typography.tabular-normal.fontWeight}',
-                fontFamily: '{typography.tabular-normal.fontFamily}',
-                textTransform: '{typography.tabular-normal.textTransform}',
-                fontFeatureSettings: '{typography.tabular-normal.fontFeatureSettings}',
-            },
+            $value: '{typography.tabular-normal}',
         },
     },
 }
