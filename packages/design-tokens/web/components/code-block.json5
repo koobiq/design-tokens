@@ -33,78 +33,100 @@
                 $type: 'color',
                 addition: {
                     background: {
-                        $value: '{semantic.success.1}',
+                        $value: '{plt.greenA.2}',
+                        $description: 'Background for an added or changed line.',
                     },
                     color: {
-                        $value: '{semantic.success.17}',
+                        $value: '{plt.greenA.16}',
+                        $description: 'Text color for an added or changed line.',
+                    },
+                },
+                'built-in': {
+                    color: {
+                        $value: '{plt.blueA.16}',
+                        $description: 'Built-in or library object, such as a constant, class, or function.',
                     },
                 },
                 comment: {
                     color: {
-                        $value: '{semantic.contrast.13}',
+                        $value: '{plt.slateA.16}',
+                        $description: 'Comments.',
                     },
                 },
                 deletion: {
                     background: {
-                        $value: '{semantic.error.2}',
+                        $value: '{plt.redA.2}',
+                        $description: 'Background for a deleted line.',
                     },
                     color: {
-                        $value: '{semantic.error.17}',
+                        $value: '{plt.redA.16}',
+                        $description: 'Text color for a deleted line.',
                     },
                 },
                 'line-numbers': {
                     color: {
                         $value: '{light.foreground.contrast-secondary}',
+                        $description: 'Line numbers in the code block.',
                     },
                 },
                 literal: {
                     color: {
-                        $value: '{semantic.visited.18}',
+                        $value: '{plt.purpleA.16}',
+                        $description: 'Special identifier for a built-in value, such as true, false, or null.',
                     },
                 },
                 meta: {
                     color: {
-                        $value: '{semantic.theme.18}',
+                        $value: '{plt.blueA.16}',
+                        $description: 'Flags, modifiers, annotations, processing instructions, or preprocessor directives.',
                     },
                 },
                 'meta string': {
                     color: {
-                        $value: '{semantic.theme.18}',
+                        $value: '{plt.blueA.16}',
+                        $description: 'String inside a meta block.',
                     },
                 },
                 name: {
                     color: {
-                        $value: '{semantic.theme.18}',
+                        $value: '{plt.blueA.16}',
+                        $description: 'Name of an XML tag or the first word in an s-expression.',
                     },
                 },
                 number: {
                     color: {
-                        $value: '{semantic.visited.18}',
+                        $value: '{plt.purpleA.16}',
+                        $description: 'Number, including units and modifiers.',
                     },
                 },
                 regexp: {
                     color: {
-                        $value: '{semantic.success.17}',
+                        $value: '{plt.greenA.16}',
+                        $description: 'Literal regular expression.',
                     },
                 },
                 'selector-tag': {
                     color: {
-                        $value: '{semantic.theme.18}',
+                        $value: '{plt.blueA.16}',
+                        $description: 'Tag selector.',
                     },
                 },
                 string: {
                     color: {
-                        $value: '{semantic.success.17}',
+                        $value: '{plt.greenA.16}',
+                        $description: 'Literal string or character.',
                     },
                 },
                 symbol: {
                     color: {
-                        $value: '{semantic.theme.18}',
+                        $value: '{plt.blueA.16}',
+                        $description: 'Symbolic constant, interned string, or goto label.',
                     },
                 },
                 title: {
                     color: {
-                        $value: '{semantic.theme.18}',
+                        $value: '{plt.blueA.16}',
+                        $description: 'Name of a class or a function.',
                     },
                 },
             },
@@ -142,78 +164,100 @@
                 $type: 'color',
                 addition: {
                     background: {
-                        $value: '{semantic.darkSuccess.20}',
+                        $value: '{plt.darkGreenA.5}',
+                        $description: 'Background for an added or changed line.',
                     },
                     color: {
-                        $value: '{semantic.darkSuccess.9}',
+                        $value: '{plt.darkGreenA.14}',
+                        $description: 'Text color for an added or changed line.',
+                    },
+                },
+                'built-in': {
+                    color: {
+                        $value: '{plt.darkBlueA.14}',
+                        $description: 'Built-in or library object, such as a constant, class, or function.',
                     },
                 },
                 comment: {
                     color: {
-                        $value: '{semantic.darkContrast.13}',
+                        $value: '{plt.darkSlateA.14}',
+                        $description: 'Comments.',
                     },
                 },
                 deletion: {
                     background: {
-                        $value: '{semantic.darkError.20}',
+                        $value: '{plt.darkRedA.5}',
+                        $description: 'Background for a deleted line.',
                     },
                     color: {
-                        $value: '{semantic.darkError.9}',
+                        $value: '{plt.darkRedA.14}',
+                        $description: 'Text color for a deleted line.',
                     },
                 },
                 'line-numbers': {
                     color: {
                         $value: '{dark.foreground.contrast-secondary}',
+                        $description: 'Line numbers in the code block.',
                     },
                 },
                 literal: {
                     color: {
-                        $value: '{semantic.darkVisited.12}',
+                        $value: '{plt.darkPurpleA.14}',
+                        $description: 'Special identifier for a built-in value, such as true, false, or null.',
                     },
                 },
                 meta: {
                     color: {
-                        $value: '{semantic.darkTheme.14}',
+                        $value: '{plt.darkBlueA.14}',
+                        $description: 'Flags, modifiers, annotations, processing instructions, or preprocessor directives.',
                     },
                 },
                 'meta string': {
                     color: {
-                        $value: '{semantic.darkTheme.14}',
+                        $value: '{plt.darkBlueA.14}',
+                        $description: 'String inside a meta block.',
                     },
                 },
                 name: {
                     color: {
-                        $value: '{semantic.darkTheme.14}',
+                        $value: '{plt.darkBlueA.14}',
+                        $description: 'Name of an XML tag or the first word in an s-expression.',
                     },
                 },
                 number: {
                     color: {
-                        $value: '{semantic.darkVisited.12}',
+                        $value: '{plt.darkPurpleA.14}',
+                        $description: 'Number, including units and modifiers.',
                     },
                 },
                 regexp: {
                     color: {
-                        $value: '{semantic.darkSuccess.14}',
+                        $value: '{plt.darkGreenA.14}',
+                        $description: 'Literal regular expression.',
                     },
                 },
                 'selector-tag': {
                     color: {
-                        $value: '{semantic.darkTheme.14}',
+                        $value: '{plt.darkBlueA.14}',
+                        $description: 'Tag selector.',
                     },
                 },
                 string: {
                     color: {
-                        $value: '{semantic.darkSuccess.14}',
+                        $value: '{plt.darkGreenA.14}',
+                        $description: 'Literal string or character.',
                     },
                 },
                 symbol: {
                     color: {
-                        $value: '{semantic.darkTheme.14}',
+                        $value: '{plt.darkBlueA.14}',
+                        $description: 'Symbolic constant, interned string, or goto label.',
                     },
                 },
                 title: {
                     color: {
-                        $value: '{semantic.darkTheme.14}',
+                        $value: '{plt.darkBlueA.14}',
+                        $description: 'Name of a class or a function.',
                     },
                 },
             },
