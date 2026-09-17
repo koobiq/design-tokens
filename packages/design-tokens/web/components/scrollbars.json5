@@ -5,26 +5,32 @@
             track: {
                 dimension: {
                     $value: '{size.l}',
+                    $description: 'Width of a vertical scrollbar track, and height of a horizontal one.',
                 },
                 padding: {
                     vertical: {
                         $value: '{size.3xs}',
+                        $description: 'Gap between the thumb and the two ends of a vertical track.',
                     },
                     horizontal: {
                         $value: '{size.3xs}',
+                        $description: 'Gap between the thumb and the sides of the track.',
                     },
                 },
             },
             thumb: {
                 width: {
                     $value: '{size.s}',
+                    $description: 'Thickness of the draggable thumb.',
                 },
                 'min-size': {
                     $value: '{size.xl}',
+                    $description: 'Shortest the thumb is allowed to get on very long content, so it stays easy to grab.',
                 },
                 border: {
                     radius: {
                         $value: '{size.s}',
+                        $description: 'Corner radius of the thumb.',
                     },
                 },
             },
@@ -35,21 +41,25 @@
                 default: {
                     background: {
                         $value: '{semantic.contrastA.6}',
+                        $description: 'Thumb fill at rest.',
                     },
                 },
                 hover: {
                     background: {
                         $value: '{semantic.contrastA.8}',
+                        $description: 'Thumb fill while the pointer is over the scrollbar.',
                     },
                 },
                 active: {
                     background: {
                         $value: '{semantic.contrastA.13}',
+                        $description: 'Thumb fill while the thumb is being dragged.',
                     },
                 },
                 disabled: {
                     background: {
                         $value: '{light.states.icon.disabled}',
+                        $description: 'Thumb fill when the scrollable area is disabled.',
                     },
                 },
             },
@@ -57,25 +67,31 @@
                 default: {
                     border: {
                         $value: 'transparent',
+                        $description: 'Track border at rest. Transparent by default, so the track reads as part of the surface.',
                     },
                     background: {
                         $value: 'transparent',
+                        $description: 'Track fill at rest. Transparent by default, so content shows through.',
                     },
                 },
                 hover: {
                     border: {
                         $value: 'transparent',
+                        $description: 'Track border while the pointer is over the scrollbar.',
                     },
                     background: {
                         $value: 'transparent',
+                        $description: 'Track fill while the pointer is over the scrollbar.',
                     },
                 },
                 active: {
                     border: {
                         $value: 'transparent',
+                        $description: 'Track border while the thumb is being dragged.',
                     },
                     background: {
                         $value: 'transparent',
+                        $description: 'Track fill while the thumb is being dragged.',
                     },
                 },
             },
@@ -86,21 +102,25 @@
                 default: {
                     background: {
                         $value: '{semantic.darkContrastA.7}',
+                        $description: 'Thumb fill at rest.',
                     },
                 },
                 hover: {
                     background: {
                         $value: '{semantic.darkContrastA.8}',
+                        $description: 'Thumb fill while the pointer is over the scrollbar.',
                     },
                 },
                 active: {
                     background: {
                         $value: '{semantic.darkContrastA.10}',
+                        $description: 'Thumb fill while the thumb is being dragged.',
                     },
                 },
                 disabled: {
                     background: {
                         $value: '{dark.states.icon.disabled}',
+                        $description: 'Thumb fill when the scrollable area is disabled.',
                     },
                 },
             },
@@ -108,25 +128,31 @@
                 default: {
                     border: {
                         $value: 'transparent',
+                        $description: 'Track border at rest. Transparent by default, so the track reads as part of the surface.',
                     },
                     background: {
                         $value: 'transparent',
+                        $description: 'Track fill at rest. Transparent by default, so content shows through.',
                     },
                 },
                 hover: {
                     border: {
                         $value: 'transparent',
+                        $description: 'Track border while the pointer is over the scrollbar.',
                     },
                     background: {
                         $value: 'transparent',
+                        $description: 'Track fill while the pointer is over the scrollbar.',
                     },
                 },
                 active: {
                     border: {
                         $value: 'transparent',
+                        $description: 'Track border while the thumb is being dragged.',
                     },
                     background: {
                         $value: 'transparent',
+                        $description: 'Track fill while the thumb is being dragged.',
                     },
                 },
             },

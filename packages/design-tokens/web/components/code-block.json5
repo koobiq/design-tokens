@@ -5,12 +5,14 @@
                 actionbar: {
                     'fade-gradient': {
                         $value: 'linear-gradient(90deg, transparent, {light.background.bg-secondary})',
+                        $description: 'Horizontal fade that keeps long lines from running into the floating action bar. Filled variant.',
                     },
                 },
                 collapse: {
                     collapsed: {
                         background: {
                             $value: 'linear-gradient(180deg, transparent 0%, {light.background.bg-secondary} 100%)',
+                            $description: 'Vertical fade over the last visible lines of a collapsed block, hinting that more code follows. Filled variant.',
                         },
                     },
                 },
@@ -19,12 +21,14 @@
                 actionbar: {
                     'fade-gradient': {
                         $value: 'linear-gradient(90deg, transparent, {light.background.card})',
+                        $description: 'Horizontal fade that keeps long lines from running into the floating action bar. Outline variant.',
                     },
                 },
                 collapse: {
                     collapsed: {
                         background: {
                             $value: 'linear-gradient(180deg, transparent 0%, {light.background.card} 100%)',
+                            $description: 'Vertical fade over the last visible lines of a collapsed block, hinting that more code follows. Outline variant.',
                         },
                     },
                 },
@@ -136,12 +140,14 @@
                 actionbar: {
                     'fade-gradient': {
                         $value: 'linear-gradient(90deg, transparent, {dark.background.bg-secondary})',
+                        $description: 'Horizontal fade that keeps long lines from running into the floating action bar. Filled variant.',
                     },
                 },
                 collapse: {
                     collapsed: {
                         background: {
                             $value: 'linear-gradient(180deg, transparent 0%, {dark.background.bg-secondary} 100%)',
+                            $description: 'Vertical fade over the last visible lines of a collapsed block, hinting that more code follows. Filled variant.',
                         },
                     },
                 },
@@ -150,12 +156,14 @@
                 actionbar: {
                     'fade-gradient': {
                         $value: 'linear-gradient(90deg, transparent, {dark.background.card})',
+                        $description: 'Horizontal fade that keeps long lines from running into the floating action bar. Outline variant.',
                     },
                 },
                 collapse: {
                     collapsed: {
                         background: {
                             $value: 'linear-gradient(180deg, transparent 0%, {dark.background.card} 100%)',
+                            $description: 'Vertical fade over the last visible lines of a collapsed block, hinting that more code follows. Outline variant.',
                         },
                     },
                 },
