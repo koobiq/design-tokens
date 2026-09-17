@@ -130,9 +130,12 @@ this**; only the JSON shape did.
 
 ### 3. Look at code blocks and scrollbars
 
-The `code-block` syntax colours and the scrollbar colours were remapped from the old HSL palette
-onto the semantic OKLch layer. The match is perceptual rather than exact (ΔE ≤ 0.07), so they
-shift very slightly. This is the only place in v4 where pixels change without you asking.
+Scrollbar and skeleton colours moved from the old HSL palette onto the semantic OKLch layer,
+perceptually matched rather than exact (ΔE ≤ 0.07), so they shift very slightly. The `code-block`
+syntax colours point straight at the engineering palette (`--kbq-plt-*`) to match how
+`koobiq/angular-components` renders them — so they are hue-locked, and recolouring the brand
+through the semantic layer no longer touches them. This is the only place in v4 where pixels
+change without you asking.
 
 85 `--kbq-code-block-*-hljs-*` variables that used to be emitted with an empty value are no longer
 emitted at all. This is a fix, not a loss: `--kbq-x: ;` is valid CSS but is _not_ the same as an

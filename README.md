@@ -84,8 +84,12 @@ Three survived, because they express something global tokens cannot:
 - `--kbq-scrollbar-*`
 - `--kbq-skeleton-*`
 
-Their colours were remapped from the old HSL palette onto the semantic OKLch layer. The match is
-perceptual, not exact (ΔE ≤ 0.07), so syntax highlighting and scrollbars shift very slightly.
+Their colours moved off the old HSL palette. Scrollbar and skeleton colours point at the semantic
+layer, perceptually matched rather than exact (ΔE ≤ 0.07), so they shift very slightly.
+
+The `code-block` syntax colours point straight at the engineering palette (`--kbq-plt-*`) instead,
+matching how `koobiq/angular-components` renders them. That is deliberate: syntax highlighting is
+hue-locked, so recolouring the brand through the semantic layer leaves code blocks alone.
 
 They are opt-in and **not** part of `index.css` / `index.bundled.css` — only consumers of those
 three components need them. Import them one component at a time:
