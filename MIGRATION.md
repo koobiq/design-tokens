@@ -55,10 +55,36 @@ at once.
 - **Anything that parsed the JSON sources.** They are DTCG now and two files were renamed; no
   CSS or SCSS name changed because of it — see [§5](./README.md#5-sources-are-dtcg-now).
 
-Building your own tokens on `@koobiq/tokens-builder` needs more —
-see [§6](./README.md#6-koobiqtokens-builder).
+Building your own tokens on `@koobiq/tokens-builder` needs more — see [§5](#5-if-you-build-tokens-yourself-update-the-pipeline).
 
-## 5. Confirm
+## 5. If you build tokens yourself, update the pipeline
+
+Only if you run Style Dictionary over `web/properties/*.json5`. Skip it if you consume the
+generated CSS, SCSS or JS — which is nearly everyone.
+
+The symptom is a hard failure, not a warning:
+
+```
+Reference doesn't exist: md-typography.md-h2.$value.fontFamily
+tries to reference typography.display-compact.fontFamily
+```
+
+Style Dictionary 3 predates DTCG. It reads `$value` as an ordinary group key, so it indexes the
+token as `typography.title.$value.lineHeight` while the reference says `typography.title.lineHeight`,
+and nothing resolves. It throws before writing anything, so a pipeline that used to produce files
+now produces none — and whatever it generated last stays in place, stale, until someone notices.
+
+What it takes:
+
+- **Style Dictionary ≥ 5** and **`@koobiq/tokens-builder` ≥ 4**. The builder is ESM-only and
+  declares the Style Dictionary peer, so installing it pins the pair together.
+- Custom hooks move to the v4/v5 API, and some are gone — see
+  [§6](./README.md#6-koobiqtokens-builder) for the renames and the removed list.
+- If you write your own platform config rather than taking the builder's, add its typography
+  preprocessor: `preprocessors: ['kbq/expand-typography']`. Composite typography and shadow tokens
+  do not resolve without it, and that is what the error above is really telling you.
+
+## 6. Confirm
 
 ```bash
 npx koobiq-tokens-codemod src
