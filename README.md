@@ -80,7 +80,7 @@ were removed. They had all been marked deprecated and each maps onto a global to
 
 Three survived, because they express something global tokens cannot:
 
-- `--kbq-code-block-*-hljs-*` — syntax highlighting colours
+- `--kbq-code-block-hljs-*` — syntax highlighting colours (highlight.js classes only)
 - `--kbq-scrollbar-*`
 - `--kbq-skeleton-*`
 
@@ -90,6 +90,12 @@ layer, perceptually matched rather than exact (ΔE ≤ 0.07), so they shift very
 The `code-block` syntax colours point straight at the engineering palette (`--kbq-plt-*`) instead,
 matching how `koobiq/angular-components` renders them. That is deliberate: syntax highlighting is
 hue-locked, so recolouring the brand through the semantic layer leaves code blocks alone.
+
+`code-block` is now only the highlight.js classes. The four chrome gradients that used to sit
+alongside them — `--kbq-code-block-{filled,outline}-actionbar-fade-gradient` and
+`--kbq-code-block-{filled,outline}-collapse-collapsed-background` — are removed:
+`koobiq/angular-components` defines its own and never read these, and the two had already drifted
+apart.
 
 They are opt-in and **not** part of `index.css` / `index.bundled.css` — only consumers of those
 three components need them. Import them one component at a time:
@@ -101,8 +107,8 @@ three components need them. Import them one component at a time:
 ```
 
 Each of those is self-contained — it carries its own `:root`, `.kbq-light` and `.kbq-dark`
-blocks, so one import is the whole component. `code-block` is 40 of the 74 component variables,
-so a consumer who only wants a styled scrollbar takes 1.7 kB rather than the full 5.7 kB.
+blocks, so one import is the whole component. `code-block` is 34 of the 68 component variables,
+so a consumer who only wants a styled scrollbar takes 1.7 kB rather than the full 6.3 kB.
 
 If you do want all of them, the aggregate triple is still there, mirroring the `css-tokens*.css`
 naming:
@@ -132,12 +138,11 @@ replacement:
 The `-hover` / `-active` variants of `--kbq-states-background-error-less-*` were never
 deprecated and are untouched.
 
-Separately, 85 `--kbq-code-block-*-hljs-*` variables that were declared with an empty value are
+Separately, 85 `--kbq-code-block-hljs-*` variables that were declared with an empty value are
 no longer emitted. `--kbq-x: ;` is valid CSS, but it is not the same as leaving the property
 undeclared: `var(--kbq-x, teal)` uses the fallback only while `--kbq-x` is undeclared, so
 shipping them empty silently swallowed the fallback and resolved to nothing. Those highlight.js
-classes now simply have no token, and `var(…, fallback)` against them works as expected. This
-takes `code-block.css` from 11.5 kB to 3.5 kB.
+classes now simply have no token, and `var(…, fallback)` against them works as expected.
 
 ### 5. Sources are DTCG now
 

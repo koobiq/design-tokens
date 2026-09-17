@@ -137,7 +137,7 @@ syntax colours point straight at the engineering palette (`--kbq-plt-*`) to matc
 through the semantic layer no longer touches them. This is the only place in v4 where pixels
 change without you asking.
 
-85 `--kbq-code-block-*-hljs-*` variables that used to be emitted with an empty value are no longer
+85 `--kbq-code-block-hljs-*` variables that used to be emitted with an empty value are no longer
 emitted at all. This is a fix, not a loss: `--kbq-x: ;` is valid CSS but is _not_ the same as an
 absent property — it suppresses `var(--kbq-x, fallback)` and resolves to nothing, which made those
 highlight.js classes harder to restyle than if the token had never existed. If you were working
