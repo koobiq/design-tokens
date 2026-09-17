@@ -41,7 +41,7 @@
                 default: {
                     background: {
                         $value: '{semantic.contrastA.6}',
-                        $description: 'Thumb fill at rest.',
+                        $description: 'Thumb fill in the default state — not hovered, not being dragged.',
                     },
                 },
                 hover: {
@@ -67,11 +67,11 @@
                 default: {
                     border: {
                         $value: 'transparent',
-                        $description: 'Track border at rest. Transparent by default, so the track reads as part of the surface.',
+                        $description: 'Track border in the default state. Transparent, so the track reads as part of the surface.',
                     },
                     background: {
                         $value: 'transparent',
-                        $description: 'Track fill at rest. Transparent by default, so content shows through.',
+                        $description: 'Track fill in the default state. Transparent, so content shows through.',
                     },
                 },
                 hover: {
@@ -102,7 +102,7 @@
                 default: {
                     background: {
                         $value: '{semantic.darkContrastA.7}',
-                        $description: 'Thumb fill at rest.',
+                        $description: 'Thumb fill in the default state — not hovered, not being dragged.',
                     },
                 },
                 hover: {
@@ -128,11 +128,11 @@
                 default: {
                     border: {
                         $value: 'transparent',
-                        $description: 'Track border at rest. Transparent by default, so the track reads as part of the surface.',
+                        $description: 'Track border in the default state. Transparent, so the track reads as part of the surface.',
                     },
                     background: {
                         $value: 'transparent',
-                        $description: 'Track fill at rest. Transparent by default, so content shows through.',
+                        $description: 'Track fill in the default state. Transparent, so content shows through.',
                     },
                 },
                 hover: {
