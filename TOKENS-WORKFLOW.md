@@ -217,6 +217,9 @@ A composite is a single token, so it can be aliased as a whole. This is how most
 
 That expands to one reference per sub-property, so the CSS is identical to listing all seven by
 hand — but the file now says _`md-body` is `text-big`_, and it stays true when the preset changes.
+Our preprocessor does that expansion before Style Dictionary resolves anything, copying only the
+target's sub-property _names_, which is what keeps each one a `var(--kbq-typography-text-big-…)`
+instead of the literal value Style Dictionary's own `expand` would bake in.
 Reach for the long form only when a preset genuinely differs; `md-h4` is `subheading` at weight
 700, and there is no way to say "the same but bolder" in DTCG, so it spells every sub-property out.
 
