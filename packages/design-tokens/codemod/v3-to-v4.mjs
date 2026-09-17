@@ -77,6 +77,15 @@ const REPOINTED = [
     `${PKG}/web/_variables`
 ].map((path) => [path, REPOINTED_HINT]);
 
+/**
+ * The v3 semantic layer: `--kbq-theme-default`, `--kbq-contrast-palette-40` and friends.
+ *
+ * Every one carried a bare `deprecated: true` with no replacement named, so there is nothing to
+ * map them onto — and the right v4 token depends on what the value is colouring. Reported with a
+ * hint that says so rather than the generic component-token one, which would be misleading.
+ */
+const V1_SEMANTIC = /^--kbq-(theme|contrast|error|success|warning|purple|white|black)-(default|palette-)/;
+
 /** Paths with nothing to move to. */
 const DELETED_PATHS = [
     [`${PKG}/web/_palette`, 'the v3 palette is gone; use --kbq-plt-* or --kbq-semantic-*'],
@@ -167,7 +176,7 @@ function movedPath(path) {
 /** A --kbq-* name, not followed by more name characters. */
 const tokenPattern = (name) => new RegExp(`${name}(?![\\w-])`, 'g');
 
-function inspect(content, known) {
+function inspect(content, known, defined) {
     const fixes = new Map();
     const manual = new Map();
 
@@ -214,16 +223,22 @@ function inspect(content, known) {
         }
     }
 
-    // 4. Any --kbq-* the installed v4 does not define. Catches the old palette, the 47 removed
-    //    component token sets, and anything else this codemod has no specific rule for.
+    // 4. Any --kbq-* that nothing defines: not the installed v4, and not the project itself.
+    //    Catches the old palette, the 47 removed component token sets, and anything else this
+    //    codemod has no specific rule for.
     if (known) {
         for (const [, name] of content.matchAll(/(--kbq-[\w-]+)/g)) {
-            if (known.has(name) || manual.has(name)) continue;
+            if (known.has(name) || defined.has(name) || manual.has(name)) continue;
             if (name in RENAMED_TOKENS || name in SPLIT_TOKENS) continue;
+            // A name ending in `-` is the static half of a template literal, e.g.
+            // `--kbq-semantic-${family}-${step}`. There is no such variable to look up.
+            if (name.endsWith('-')) continue;
 
             const hint = name.startsWith('--kbq-palette-')
                 ? 'the v3 palette is gone — use --kbq-plt-* or --kbq-semantic-*; note the scale changed from 0–100 to 1–20'
-                : 'not defined by v4 — if this is a component token, use the global token it was aliasing';
+                : V1_SEMANTIC.test(name)
+                  ? 'this was the v3 semantic layer, deprecated with no stated replacement — pick the v4 role for what it colours, e.g. --kbq-background-theme for a fill or --kbq-states-line-focus-theme for a focus ring'
+                  : 'not defined by v4 — if this is a component token, use the global token it was aliasing';
 
             manual.set(name, { what: name, hint });
         }
@@ -243,9 +258,12 @@ if (!known) {
     console.log(`Checking against ${known.size} tokens from ${knownDir}\n`);
 }
 
-let changedFiles = 0;
-let fixCount = 0;
-let manualCount = 0;
+// First pass: every --kbq-* the project declares itself. A component library defines plenty of
+// its own custom properties, and those are not tokens this package ever shipped — without this
+// they would all be reported as "removed in v4", which in koobiq/angular-components was 96% of
+// the output.
+const sources = new Map();
+const defined = new Set();
 
 for (const target of targets) {
     for (const file of files(target)) {
@@ -253,29 +271,43 @@ for (const target of targets) {
 
         if (!content.includes('--kbq-') && !content.includes(PKG)) continue;
 
-        const { next, fixes, manual } = inspect(content, known);
+        sources.set(file, content);
 
-        if (fixes.length === 0 && manual.length === 0) continue;
+        // A declaration in a stylesheet…
+        for (const [, name] of content.matchAll(/^\s*(--kbq-[\w-]+)\s*:/gm)) defined.add(name);
+        // …or set from code. Deliberately narrow: a bare quoted name elsewhere may well be a
+        // list of token names to migrate, which is exactly what should still be reported.
+        for (const [, name] of content.matchAll(/setProperty\(\s*['"`](--kbq-[\w-]+)/g)) defined.add(name);
+    }
+}
 
-        console.log(relative(process.cwd(), file));
+let changedFiles = 0;
+let fixCount = 0;
+let manualCount = 0;
 
-        for (const { from, to } of fixes) {
-            console.log(`  ${write ? '✔' : '·'} ${from}  →  ${to}`);
-        }
+for (const [file, content] of sources) {
+    const { next, fixes, manual } = inspect(content, known, defined);
 
-        for (const { what, hint } of manual) {
-            console.log(`  ! ${what}\n      ${hint}`);
-        }
+    if (fixes.length === 0 && manual.length === 0) continue;
 
-        console.log('');
+    console.log(relative(process.cwd(), file));
 
-        fixCount += fixes.length;
-        manualCount += manual.length;
+    for (const { from, to } of fixes) {
+        console.log(`  ${write ? '✔' : '·'} ${from}  →  ${to}`);
+    }
 
-        if (fixes.length > 0) {
-            changedFiles++;
-            if (write) writeFileSync(file, next);
-        }
+    for (const { what, hint } of manual) {
+        console.log(`  ! ${what}\n      ${hint}`);
+    }
+
+    console.log('');
+
+    fixCount += fixes.length;
+    manualCount += manual.length;
+
+    if (fixes.length > 0) {
+        changedFiles++;
+        if (write) writeFileSync(file, next);
     }
 }
 
