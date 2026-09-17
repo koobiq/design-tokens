@@ -13,16 +13,70 @@
                         $description: 'Text color for an added or changed line.',
                     },
                 },
+                attr: {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
+                attribute: {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
                 'built-in': {
                     color: {
                         $value: '{plt.blueA.16}',
                         $description: 'Built-in or library object, such as a constant, class, or function.',
+                    },
+                    background: {
+                        $value: null,
+                    },
+                },
+                bullet: {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
+                'char.escape': {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
+                class: {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
+                code: {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
                     },
                 },
                 comment: {
                     color: {
                         $value: '{plt.slateA.16}',
                         $description: 'Comments.',
+                    },
+                    background: {
+                        $value: null,
                     },
                 },
                 deletion: {
@@ -35,10 +89,58 @@
                         $description: 'Text color for a deleted line.',
                     },
                 },
+                doctag: {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
+                emphasis: {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
+                formula: {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
+                function: {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
+                keyword: {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
                 'line-numbers': {
                     color: {
                         $value: '{light.foreground.contrast-secondary}',
                         $description: 'Line numbers in the code block.',
+                    },
+                },
+                link: {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
                     },
                 },
                 literal: {
@@ -46,11 +148,33 @@
                         $value: '{plt.purpleA.16}',
                         $description: 'Special identifier for a built-in value, such as true, false, or null.',
                     },
+                    background: {
+                        $value: null,
+                    },
                 },
                 meta: {
                     color: {
                         $value: '{plt.blueA.16}',
                         $description: 'Flags, modifiers, annotations, processing instructions, or preprocessor directives.',
+                    },
+                    background: {
+                        $value: null,
+                    },
+                },
+                'meta keyword': {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
+                'meta.prompt': {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
                     },
                 },
                 'meta string': {
@@ -58,11 +182,17 @@
                         $value: '{plt.blueA.16}',
                         $description: 'String inside a meta block.',
                     },
+                    background: {
+                        $value: null,
+                    },
                 },
                 name: {
                     color: {
                         $value: '{plt.blueA.16}',
                         $description: 'Name of an XML tag or the first word in an s-expression.',
+                    },
+                    background: {
+                        $value: null,
                     },
                 },
                 number: {
@@ -70,11 +200,97 @@
                         $value: '{plt.purpleA.16}',
                         $description: 'Number, including units and modifiers.',
                     },
+                    background: {
+                        $value: null,
+                    },
+                },
+                operator: {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
+                params: {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
+                property: {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
+                punctuation: {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
+                quote: {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
                 },
                 regexp: {
                     color: {
                         $value: '{plt.greenA.16}',
                         $description: 'Literal regular expression.',
+                    },
+                    background: {
+                        $value: null,
+                    },
+                },
+                section: {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
+                'selector-attr': {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
+                'selector-class': {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
+                'selector-id': {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
+                'selector-pseudo': {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
                     },
                 },
                 'selector-tag': {
@@ -82,11 +298,33 @@
                         $value: '{plt.blueA.16}',
                         $description: 'Tag selector.',
                     },
+                    background: {
+                        $value: null,
+                    },
                 },
                 string: {
                     color: {
                         $value: '{plt.greenA.16}',
                         $description: 'Literal string or character.',
+                    },
+                    background: {
+                        $value: null,
+                    },
+                },
+                strong: {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
+                subst: {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
                     },
                 },
                 symbol: {
@@ -94,11 +332,105 @@
                         $value: '{plt.blueA.16}',
                         $description: 'Symbolic constant, interned string, or goto label.',
                     },
+                    background: {
+                        $value: null,
+                    },
+                },
+                tag: {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
+                'template-tag': {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
+                'template-variable': {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
                 },
                 title: {
                     color: {
                         $value: '{plt.blueA.16}',
                         $description: 'Name of a class or a function.',
+                    },
+                    background: {
+                        $value: null,
+                    },
+                },
+                'title.class': {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
+                'title.class.inherited': {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
+                'title.function': {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
+                'title.function.invoke': {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
+                type: {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
+                variable: {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
+                'variable.constant': {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
+                'variable.language': {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
                     },
                 },
             },
@@ -116,16 +448,70 @@
                         $description: 'Text color for an added or changed line.',
                     },
                 },
+                attr: {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
+                attribute: {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
                 'built-in': {
                     color: {
                         $value: '{plt.darkBlueA.14}',
                         $description: 'Built-in or library object, such as a constant, class, or function.',
+                    },
+                    background: {
+                        $value: null,
+                    },
+                },
+                bullet: {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
+                'char.escape': {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
+                class: {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
+                code: {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
                     },
                 },
                 comment: {
                     color: {
                         $value: '{plt.darkSlateA.14}',
                         $description: 'Comments.',
+                    },
+                    background: {
+                        $value: null,
                     },
                 },
                 deletion: {
@@ -138,10 +524,58 @@
                         $description: 'Text color for a deleted line.',
                     },
                 },
+                doctag: {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
+                emphasis: {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
+                formula: {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
+                function: {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
+                keyword: {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
                 'line-numbers': {
                     color: {
                         $value: '{dark.foreground.contrast-secondary}',
                         $description: 'Line numbers in the code block.',
+                    },
+                },
+                link: {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
                     },
                 },
                 literal: {
@@ -149,11 +583,33 @@
                         $value: '{plt.darkPurpleA.14}',
                         $description: 'Special identifier for a built-in value, such as true, false, or null.',
                     },
+                    background: {
+                        $value: null,
+                    },
                 },
                 meta: {
                     color: {
                         $value: '{plt.darkBlueA.14}',
                         $description: 'Flags, modifiers, annotations, processing instructions, or preprocessor directives.',
+                    },
+                    background: {
+                        $value: null,
+                    },
+                },
+                'meta keyword': {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
+                'meta.prompt': {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
                     },
                 },
                 'meta string': {
@@ -161,11 +617,17 @@
                         $value: '{plt.darkBlueA.14}',
                         $description: 'String inside a meta block.',
                     },
+                    background: {
+                        $value: null,
+                    },
                 },
                 name: {
                     color: {
                         $value: '{plt.darkBlueA.14}',
                         $description: 'Name of an XML tag or the first word in an s-expression.',
+                    },
+                    background: {
+                        $value: null,
                     },
                 },
                 number: {
@@ -173,11 +635,97 @@
                         $value: '{plt.darkPurpleA.14}',
                         $description: 'Number, including units and modifiers.',
                     },
+                    background: {
+                        $value: null,
+                    },
+                },
+                operator: {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
+                params: {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
+                property: {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
+                punctuation: {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
+                quote: {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
                 },
                 regexp: {
                     color: {
                         $value: '{plt.darkGreenA.14}',
                         $description: 'Literal regular expression.',
+                    },
+                    background: {
+                        $value: null,
+                    },
+                },
+                section: {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
+                'selector-attr': {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
+                'selector-class': {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
+                'selector-id': {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
+                'selector-pseudo': {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
                     },
                 },
                 'selector-tag': {
@@ -185,11 +733,33 @@
                         $value: '{plt.darkBlueA.14}',
                         $description: 'Tag selector.',
                     },
+                    background: {
+                        $value: null,
+                    },
                 },
                 string: {
                     color: {
                         $value: '{plt.darkGreenA.14}',
                         $description: 'Literal string or character.',
+                    },
+                    background: {
+                        $value: null,
+                    },
+                },
+                strong: {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
+                subst: {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
                     },
                 },
                 symbol: {
@@ -197,11 +767,105 @@
                         $value: '{plt.darkBlueA.14}',
                         $description: 'Symbolic constant, interned string, or goto label.',
                     },
+                    background: {
+                        $value: null,
+                    },
+                },
+                tag: {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
+                'template-tag': {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
+                'template-variable': {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
                 },
                 title: {
                     color: {
                         $value: '{plt.darkBlueA.14}',
                         $description: 'Name of a class or a function.',
+                    },
+                    background: {
+                        $value: null,
+                    },
+                },
+                'title.class': {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
+                'title.class.inherited': {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
+                'title.function': {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
+                'title.function.invoke': {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
+                type: {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
+                variable: {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
+                'variable.constant': {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
+                    },
+                },
+                'variable.language': {
+                    background: {
+                        $value: null,
+                    },
+                    color: {
+                        $value: null,
                     },
                 },
             },

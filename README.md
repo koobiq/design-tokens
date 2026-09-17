@@ -138,11 +138,15 @@ replacement:
 The `-hover` / `-active` variants of `--kbq-states-background-error-less-*` were never
 deprecated and are untouched.
 
-Separately, 85 `--kbq-code-block-hljs-*` variables that were declared with an empty value are
-no longer emitted. `--kbq-x: ;` is valid CSS, but it is not the same as leaving the property
+Separately, 86 `--kbq-code-block-hljs-*` variables that were declared with an empty value are
+no longer emitted as CSS. `--kbq-x: ;` is valid, but it is not the same as leaving the property
 undeclared: `var(--kbq-x, teal)` uses the fallback only while `--kbq-x` is undeclared, so
-shipping them empty silently swallowed the fallback and resolved to nothing. Those highlight.js
-classes now simply have no token, and `var(…, fallback)` against them works as expected.
+shipping them empty silently swallowed the fallback and resolved to nothing.
+
+The tokens themselves are still there. They carry `$value: null`, which is what
+`koobiq/angular-components` already says about the same classes in `code-block-tokens.scss` — the
+class is part of the vocabulary but deliberately unstyled. Null tokens reach `_variables.scss` as
+`null`, exactly as Sass means it, and are skipped in CSS and JS, which have no way to say it.
 
 ### 5. Sources are DTCG now
 

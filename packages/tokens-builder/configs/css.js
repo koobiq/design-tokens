@@ -1,3 +1,5 @@
+import { hasValue } from '../filters/has-value.js';
+
 const paletteColors = [
     'blue',
     'slate',
@@ -84,13 +86,25 @@ const semanticPaletteColors = [
  * The component token sets that survived v4, named after their source file in web/components/.
  *
  * Each gets its own stylesheet under css/components/, because they are opt-in and wildly uneven
- * in size: code-block is 214 of the 248 component variables, so a consumer who renders no code
- * blocks should not have to carry them to get a styled scrollbar.
+ * in size: code-block is 34 of the 68 emitted component variables, so a consumer who renders no
+ * code blocks should not have to carry them to get a styled scrollbar.
  */
-const components = ['code-block', 'scrollbars', 'skeleton'];
+const components = [
+    { file: 'code-block', root: 'code-block' },
+    { file: 'scrollbars', root: 'scrollbar' },
+    { file: 'skeleton', root: 'skeleton' }
+];
 
-/** Tokens authored under web/components — code-block syntax colours, scrollbar, skeleton. */
-const isComponent = (token) => token.filePath.includes('/components/');
+const componentRoots = components.map(({ root }) => root);
+
+/**
+ * Tokens authored under web/components — code-block syntax colours, scrollbar, skeleton.
+ *
+ * Matched on the token's own path rather than its `filePath`: Style Dictionary leaves `filePath`
+ * undefined on a token whose value is null, and those are exactly the deliberately-unstyled
+ * component tokens, so a filePath test both throws and mis-sorts them into the global aggregates.
+ */
+const isComponent = (token) => componentRoots.includes(token.attributes.category);
 
 /**
  * Everything sliced by category lives under css/, mirroring how the package was laid out before
@@ -115,10 +129,10 @@ const semanticPaletteConfig = semanticPaletteColors.map((color) => ({
     }
 }));
 
-const componentsConfig = components.map((name) => ({
-    destination: sliced(`components/${name}.css`),
+const componentsConfig = components.map(({ file, root }) => ({
+    destination: sliced(`components/${file}.css`),
     format: 'kbq-css/component',
-    filter: (token) => token.filePath.endsWith(`/components/${name}.json5`),
+    filter: (token) => hasValue(token) && token.attributes.category === root,
     options: {
         outputReferences: true
     }
@@ -212,7 +226,9 @@ export default {
             {
                 destination: sliced('light/semantic-colors.css'),
                 format: 'kbq-css/variables',
-                filter: (token) => token.attributes.light && token.filePath.includes('colors.json5'),
+                // `filePath?.` because Style Dictionary leaves it undefined on null-valued tokens;
+                // a token with no known file is simply not one of colors.json5's.
+                filter: (token) => token.attributes.light && token.filePath?.includes('colors.json5'),
                 options: {
                     selector: '.kbq-light',
                     outputReferences: true
@@ -230,7 +246,7 @@ export default {
             {
                 destination: sliced('dark/semantic-colors.css'),
                 format: 'kbq-css/variables',
-                filter: (token) => token.attributes.dark && token.filePath.includes('colors.json5'),
+                filter: (token) => token.attributes.dark && token.filePath?.includes('colors.json5'),
                 options: {
                     selector: '.kbq-dark',
                     outputReferences: true
@@ -243,7 +259,8 @@ export default {
             {
                 destination: 'component-tokens.css',
                 format: 'kbq-css/variables',
-                filter: (token) => isComponent(token) && !token.attributes.light && !token.attributes.dark,
+                filter: (token) =>
+                    hasValue(token) && isComponent(token) && !token.attributes.light && !token.attributes.dark,
                 options: {
                     outputReferences: true
                 }
@@ -251,7 +268,7 @@ export default {
             {
                 destination: 'component-tokens-light.css',
                 format: 'kbq-css/variables',
-                filter: (token) => isComponent(token) && token.attributes.light,
+                filter: (token) => hasValue(token) && isComponent(token) && token.attributes.light,
                 options: {
                     selector: '.kbq-light',
                     outputReferences: true
@@ -260,7 +277,7 @@ export default {
             {
                 destination: 'component-tokens-dark.css',
                 format: 'kbq-css/variables',
-                filter: (token) => isComponent(token) && token.attributes.dark,
+                filter: (token) => hasValue(token) && isComponent(token) && token.attributes.dark,
                 options: {
                     selector: '.kbq-dark',
                     outputReferences: true
@@ -270,6 +287,7 @@ export default {
                 destination: 'css-tokens.css',
                 format: 'css/variables',
                 filter: (token) =>
+                    hasValue(token) &&
                     !isComponent(token) &&
                     !token.attributes.font &&
                     !token.attributes.light &&
@@ -286,7 +304,7 @@ export default {
             {
                 destination: 'css-tokens-light.css',
                 format: 'kbq-css/variables',
-                filter: (token) => !isComponent(token) && token.attributes.light,
+                filter: (token) => hasValue(token) && !isComponent(token) && token.attributes.light,
                 options: {
                     selector: '.kbq-light',
                     outputReferences: true
@@ -295,7 +313,7 @@ export default {
             {
                 destination: 'css-tokens-dark.css',
                 format: 'kbq-css/variables',
-                filter: (token) => !isComponent(token) && token.attributes.dark,
+                filter: (token) => hasValue(token) && !isComponent(token) && token.attributes.dark,
                 options: {
                     selector: '.kbq-dark',
                     outputReferences: true
