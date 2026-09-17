@@ -43,8 +43,22 @@ const PKG = '@koobiq/design-tokens';
 /** SCSS partials keep living at the root of web/; everything else sliced moved under web/css/. */
 const SCSS_ENTRIES = ['variables', 'typography', 'md-typography'];
 
-/** Tokens removed in v4 that have a drop-in replacement. */
+/**
+ * Tokens removed in v4 that have a drop-in replacement.
+ *
+ * Every one of these is taken from the replacement the v3 source itself named in its
+ * `deprecated` notice — nothing here is a guess. The v3 semantic layer (`--kbq-success-default`
+ * and friends) is in the same boat: four of the eight said what to use instead, so those four
+ * are rewritten and the rest are only reported.
+ */
 const RENAMED_TOKENS = {
+    '--kbq-success-default': '--kbq-background-success',
+    '--kbq-warning-default': '--kbq-background-warning',
+    '--kbq-error-default': '--kbq-background-error',
+    '--kbq-contrast-default': '--kbq-background-contrast',
+    // v3 said nothing about this one; --kbq-plt-white is the team's call, and reaching into
+    // the engineering palette is the documented exception for a fixed-brightness colour.
+    '--kbq-white-default': '--kbq-plt-white',
     '--kbq-foreground-error-less': '--kbq-foreground-error-tertiary',
     '--kbq-foreground-success-less': '--kbq-foreground-success-tertiary',
     '--kbq-states-background-error-less': '--kbq-background-error-tertiary',
@@ -237,7 +251,7 @@ function inspect(content, known, defined) {
             const hint = name.startsWith('--kbq-palette-')
                 ? 'the v3 palette is gone — use --kbq-plt-* or --kbq-semantic-*; note the scale changed from 0–100 to 1–20'
                 : V1_SEMANTIC.test(name)
-                  ? 'this was the v3 semantic layer, deprecated with no stated replacement — pick the v4 role for what it colours, e.g. --kbq-background-theme for a fill or --kbq-states-line-focus-theme for a focus ring'
+                  ? 'the v3 semantic layer, deprecated without naming a replacement — pick the v4 role for whatever it colours, e.g. --kbq-background-theme for a fill or --kbq-states-line-focus-theme for a focus ring'
                   : 'not defined by v4 — if this is a component token, use the global token it was aliasing';
 
             manual.set(name, { what: name, hint });
@@ -297,7 +311,7 @@ for (const [file, content] of sources) {
     }
 
     for (const { what, hint } of manual) {
-        console.log(`  ! ${what}\n      ${hint}`);
+        console.log(`  ⚠ ${what}\n      ${hint}`);
     }
 
     console.log('');
