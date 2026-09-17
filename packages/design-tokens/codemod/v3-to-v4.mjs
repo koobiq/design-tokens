@@ -59,6 +59,7 @@ const RENAMED_TOKENS = {
     // v3 said nothing about this one; --kbq-plt-white is the team's call, and reaching into
     // the engineering palette is the documented exception for a fixed-brightness colour.
     '--kbq-white-default': '--kbq-plt-white',
+    '--kbq-black-default': '--kbq-plt-black',
     '--kbq-foreground-error-less': '--kbq-foreground-error-tertiary',
     '--kbq-foreground-success-less': '--kbq-foreground-success-tertiary',
     '--kbq-states-background-error-less': '--kbq-background-error-tertiary',
