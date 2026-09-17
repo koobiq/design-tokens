@@ -6,13 +6,10 @@ add a color, re-theme the brand, add a new theme, deprecate something.
 For the full list of tokens see [`STYLING.md`](./STYLING.md). For what changed in v4 see the
 [breaking changes](./README.md#️-breaking-changes-in-v4).
 
-> **Try it live.** `yarn build && yarn playground` opens a page where you can swap the brand,
-> contrast and status families, change the radius, inspect the reference chain behind any
-> element, and copy out a ready-made patch for `semantic.json5`.
->
-> The same playground exists on the docs site under **Design tokens → Playground**, where the
-> knobs drive the real Koobiq components. Use that one to judge a palette; use this one when you
-> are working on the tokens themselves and don't want to rebuild the component library.
+> **Try it live.** The docs site has a playground under **Design tokens → Playground**: swap the
+> brand, contrast and status families, change the radius, inspect the reference chain behind any
+> element, and copy out a ready-made patch for `semantic.json5` — with the knobs driving the real
+> Koobiq components.
 
 ---
 
@@ -141,8 +138,8 @@ Only `semantic.json5` changes:
 }
 ```
 
-Everything downstream follows automatically. Use the playground to pick the family, then copy
-the generated patch.
+Everything downstream follows automatically. Use the docs-site playground to pick the family,
+then copy the generated patch.
 
 ### Add a theme
 

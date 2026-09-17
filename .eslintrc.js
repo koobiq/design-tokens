@@ -35,18 +35,6 @@ const config = {
                 ecmaVersion: 2022,
                 sourceType: 'module'
             }
-        },
-        {
-            // The playground is a browser ES module, not a Node script.
-            files: ['tools/playground/*.js'],
-            env: {
-                browser: true,
-                node: false
-            },
-            parserOptions: {
-                ecmaVersion: 2022,
-                sourceType: 'module'
-            }
         }
     ]
 };

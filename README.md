@@ -223,7 +223,7 @@ Then reference the CSS variables in your styles — never hardcode values:
 
 - [`STYLING.md`](./STYLING.md) — the full token reference: colors, typography, sizes, shadows.
 - [`TOKENS-WORKFLOW.md`](./TOKENS-WORKFLOW.md) — how the three token layers fit together, recipes
-  for adding tokens and re-theming, and a live playground for trying palettes out.
+  for adding tokens and re-theming.
 
 ## 🚀 Releasing Packages
 

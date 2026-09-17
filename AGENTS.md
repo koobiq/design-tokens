@@ -18,7 +18,7 @@ packages/
       components/      # the three component tokens that survived v4
     codemod/           # v3 → v4 migration script, shipped as `koobiq-tokens-codemod`
   tokens-builder/      # style-dictionary config, hooks and preprocessors
-tools/                 # build, checks, docs generation, playground
+tools/                 # build, checks, docs generation
 dist/                  # build output (gitignored)
 ```
 
@@ -44,7 +44,6 @@ on the side of that line it belongs to, and add it to `index.files` only if it i
 | Command                 | Description                                     |
 | :---------------------- | :---------------------------------------------- |
 | `yarn build`            | Clean and rebuild all token files into `dist/`  |
-| `yarn playground`       | Serve the live theme playground (needs a build) |
 | `yarn generate:styling` | Regenerate `STYLING.md` from token source files |
 | `yarn prettier:fix`     | Auto-format all files                           |
 | `yarn eslint:fix`       | Auto-fix JS lint issues                         |
