@@ -40,19 +40,19 @@
             thumb: {
                 default: {
                     background: {
-                        $value: '{semantic.contrastA.6}',
+                        $value: '{semantic.contrastA.3}',
                         $description: 'Thumb fill in the default state — not hovered, not being dragged.',
                     },
                 },
                 hover: {
                     background: {
-                        $value: '{semantic.contrastA.8}',
+                        $value: '{semantic.contrastA.4}',
                         $description: 'Thumb fill while the pointer is over the scrollbar.',
                     },
                 },
                 active: {
                     background: {
-                        $value: '{semantic.contrastA.13}',
+                        $value: '{semantic.contrastA.5}',
                         $description: 'Thumb fill while the thumb is being dragged.',
                     },
                 },
@@ -101,19 +101,19 @@
             thumb: {
                 default: {
                     background: {
-                        $value: '{semantic.darkContrastA.7}',
+                        $value: '{semantic.darkContrastA.9}',
                         $description: 'Thumb fill in the default state — not hovered, not being dragged.',
                     },
                 },
                 hover: {
                     background: {
-                        $value: '{semantic.darkContrastA.8}',
+                        $value: '{semantic.darkContrastA.10}',
                         $description: 'Thumb fill while the pointer is over the scrollbar.',
                     },
                 },
                 active: {
                     background: {
-                        $value: '{semantic.darkContrastA.10}',
+                        $value: '{semantic.darkContrastA.11}',
                         $description: 'Thumb fill while the thumb is being dragged.',
                     },
                 },
