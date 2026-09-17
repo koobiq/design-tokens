@@ -13,7 +13,7 @@
 
 ---
 
-## ⚠️ Breaking changes in v4
+## Breaking changes in v4
 
 v4 collapses the two parallel token tracks into one, drops the legacy HSL palette, and moves the
 sources to the [W3C DTCG format](https://www.w3.org/community/design-tokens/).

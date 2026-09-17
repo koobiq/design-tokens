@@ -4,7 +4,7 @@ How the token layers fit together, and the recipes for the things you'll actuall
 add a color, re-theme the brand, add a new theme, deprecate something.
 
 For the full list of tokens see [`STYLING.md`](./STYLING.md). For what changed in v4 see the
-[breaking changes](./README.md#️-breaking-changes-in-v4).
+[breaking changes](./README.md#breaking-changes-in-v4).
 
 > **Try it live.** The docs site has a playground under **Design tokens → Playground**: swap the
 > brand, contrast and status families, change the radius, inspect the reference chain behind any
@@ -54,12 +54,10 @@ It looks like pointless duplication: `semantic.contrast.1` contains nothing but
 names a hue. Without the middle layer, every role referencing blue would have to be found and
 edited by hand.
 
-**The reference survives into the output.** Style Dictionary can only emit `var(--x)` when a
-token's value is a reference _to another token_. The old v3 palette pointed at a whole group
-(`"value": "{palette.grey}"`) and then indexed into the resolved object
-(`{light.contrast.palette.value."6-A12"}`) — neither is a token, so those tokens flattened to
-literal colors, and in Figma a designer saw a hardcoded hex instead of an alias. Style
-Dictionary 5 rejects this outright. The 1:1 duplication is what keeps every hop a real token.
+**The reference survives into the output.** Style Dictionary emits `var(--x)` only when a value
+points at _another token_ — never at a group, and never into a resolved object. Anything else
+flattens to a literal, and in Figma a designer sees a pasted hex instead of an alias. The 1:1
+duplication is what keeps every hop a real token.
 
 `tools/check-references.mjs` runs on every build and fails if the chain flattens.
 
