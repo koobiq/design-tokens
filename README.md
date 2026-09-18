@@ -156,8 +156,13 @@ update your parser. Files were renamed: `colors.v2.json5` → `colors.json5`,
 `shadows.v2.json5` → `shadows.json5`.
 
 Typography presets and shadows are now composite tokens — one `typography` / `shadow` token
-instead of a group of loose ones. **This does not change any CSS variable or SCSS name**; it only
-changes the JSON shape. See [`TOKENS-WORKFLOW.md`](./TOKENS-WORKFLOW.md).
+instead of a group of loose ones, with an object `$value` keyed by the spec's camelCase names
+(`fontSize`, `lineHeight`, `offsetX`). **This does not change any CSS variable or SCSS name**; it
+only changes the JSON shape. It does change references written against a sub-property —
+`{typography.title.font-size}` is now `{typography.title.fontSize}` — which matters only if you
+keep token sources of your own; see
+[the migration guide](./MIGRATION.md#5-if-you-build-tokens-yourself-update-the-pipeline) and
+[`TOKENS-WORKFLOW.md`](./TOKENS-WORKFLOW.md).
 
 Token `$description`s now render as comments in the generated CSS.
 

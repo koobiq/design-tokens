@@ -78,7 +78,9 @@ at once.
 - **Code blocks and scrollbars.** The only place v4 changes pixels without being asked —
   see [§3](./README.md#3-component-tokens-are-gone).
 - **Anything that parsed the JSON sources.** They are DTCG now and two files were renamed; no
-  CSS or SCSS name changed because of it — see [§5](./README.md#5-sources-are-dtcg-now).
+  CSS or SCSS name changed because of it — see [§5](./README.md#5-sources-are-dtcg-now). A parser
+  that walked into a typography preset or a shadow now finds one composite token with an object
+  `$value`, keyed by the spec's camelCase names, where v3 had a group of loose tokens.
 
 Building your own tokens on `@koobiq/tokens-builder` needs more — see [§5](#5-if-you-build-tokens-yourself-update-the-pipeline).
 
@@ -99,6 +101,9 @@ token as `typography.title.$value.lineHeight` while the reference says `typograp
 and nothing resolves. It throws before writing anything, so a pipeline that used to produce files
 now produces none — and whatever it generated last stays in place, stale, until someone notices.
 
+That error has a second cause that the upgrade alone does not fix, so check for it before assuming
+the version was the whole story — see the last point below.
+
 What it takes:
 
 - **Style Dictionary ≥ 5** and **`@koobiq/tokens-builder` ≥ 4**. The builder is ESM-only and
@@ -108,6 +113,29 @@ What it takes:
 - If you write your own platform config rather than taking the builder's, add its typography
   preprocessor: `preprocessors: ['kbq/expand-typography']`. Composite typography and shadow tokens
   do not resolve without it, and that is what the error above is really telling you.
+- **Retarget your own references at the camelCase sub-properties.** A preset used to be a group of
+  loose tokens, so `typography.title.font-size` was a token in its own right. It is now one
+  composite whose `$value` is keyed by the DTCG spec's names, which are camelCase across every
+  composite type:
+
+    | was                                        | is                                       |
+    | :----------------------------------------- | :--------------------------------------- |
+    | `{typography.title.font-size}`             | `{typography.title.fontSize}`            |
+    | `{typography.title.line-height}`           | `{typography.title.lineHeight}`          |
+    | `{typography.title.font-weight}`           | `{typography.title.fontWeight}`          |
+    | `{typography.title.font-family}`           | `{typography.title.fontFamily}`          |
+    | `{typography.title.letter-spacing}`        | `{typography.title.letterSpacing}`       |
+    | `{typography.title.text-transform}`        | `{typography.title.textTransform}`       |
+    | `{typography.title.font-feature-settings}` | `{typography.title.fontFeatureSettings}` |
+
+    The last two are ours rather than the spec's, but they follow the same convention. Shadows work
+    the same way: `offsetX`, `offsetY`, `blur`, `spread`, `color`. Writing the old kebab leaf is not
+    a deprecation — it is simply an unknown key, and it fails with the same "Reference doesn't
+    exist" as above.
+
+    **Variable names are not affected.** The build kebab-cases them on the way out, so
+    `--kbq-typography-title-font-size` and `$typography-title-font-size` are exactly what they were
+    in v3. This is a source-only change; nothing downstream of the build needs touching.
 
 ## 6. Confirm
 
