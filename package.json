@@ -22,12 +22,12 @@
         "stylelint:dist": "stylelint dist/design-tokens/web/**/*.{css,scss}",
         "lint:all:dist": "yarn run eslint:dist && yarn run stylelint:dist",
         "-----Build-----": "------------------------------------------------------------------------------------------",
-        "build": "rimraf dist && node tools/build.js",
+        "build": "rimraf dist && node tools/build.mjs && node tools/check-references.mjs",
         "generate:styling": "node tools/generate-styling-md.mjs && yarn run prettier:fix",
         "-----CI-----": "---------------------------------------------------------------------------------------------",
         "prettier": "prettier --check . --ignore-unknown",
         "prettier:fix": "yarn run prettier --write",
-        "eslint": "eslint . --ext='.js'",
+        "eslint": "eslint . --ext='.js,.mjs'",
         "eslint:fix": "yarn run eslint --fix"
     },
     "publishConfig": {
@@ -50,10 +50,11 @@
         "eslint-config-prettier": "^9.1.2",
         "eslint-plugin-prettier": "^5.5.6",
         "husky": "^9.1.7",
+        "json5": "^2.2.3",
         "lint-staged": "^15.5.2",
         "prettier": "^3.9.6",
         "rimraf": "^5.0.5",
-        "style-dictionary": "^3.9.2",
+        "style-dictionary": "^5.5.3",
         "stylelint": "^16.26.1",
         "stylelint-config-recommended-scss": "^16.0.2"
     },

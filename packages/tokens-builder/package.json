@@ -3,11 +3,18 @@
     "description": "Design tokens",
     "author": "",
     "license": "MIT",
+    "type": "module",
     "keywords": [
         "tokens",
         "design",
         "system"
     ],
+    "engines": {
+        "node": ">=22.0.0"
+    },
+    "peerDependencies": {
+        "style-dictionary": "^5.0.0"
+    },
     "publishConfig": {
         "access": "public"
     },

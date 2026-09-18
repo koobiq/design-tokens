@@ -1,8 +1,8 @@
-module.exports = (StyleDictionary) => {
+export default (StyleDictionary) => {
     StyleDictionary.registerTransform({
         name: 'kbq-attribute/md-typography',
         type: 'attribute',
-        matcher: (prop) => prop.attributes.category === 'md-typography',
-        transformer: () => ({ 'md-typography': true })
+        filter: (token) => token.attributes.category === 'md-typography',
+        transform: () => ({ 'md-typography': true })
     });
 };

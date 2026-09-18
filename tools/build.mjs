@@ -1,38 +1,28 @@
-const build = require('../packages/tokens-builder/build');
+import build from '../packages/tokens-builder/build.js';
+import { cpSync, copyFileSync, writeFileSync, readFileSync } from 'node:fs';
 
-build([
+await build([
     {
         name: 'design-tokens',
         buildPath: [
-            `packages/design-tokens/web/properties/**/!(colors.v2|shadows.v2).json5`,
+            `packages/design-tokens/web/properties/**/*.json5`,
             `packages/design-tokens/web/components/**/*.json5`
         ],
         outputPath: 'dist/design-tokens/web/'
-    },
-    {
-        name: 'design-tokens-new',
-        buildPath: [
-            `packages/design-tokens/web/properties/**/!(colors.v1|shadows.v1).json5`,
-            `packages/design-tokens/web/components/**/*.json5`
-        ],
-        outputPath: 'dist/design-tokens/web/new/',
-        type: 'new'
     }
 ]);
 
-const { cpSync, copyFileSync, writeFileSync, readFileSync } = require('fs');
+const prepareTokens = (pkg) => {
+    cpSync(`packages/${pkg}`, `dist/${pkg}`, { recursive: true });
 
-const prepareTokens = (package) => {
-    cpSync(`packages/${package}`, `dist/${package}`, { recursive: true });
-
-    copyFileSync('./LICENSE', `dist/${package}/LICENSE`);
+    copyFileSync('./LICENSE', `dist/${pkg}/LICENSE`);
 };
 
-const updateVersion = (package, version) => {
-    const packageContent = JSON.parse(readFileSync(`dist/${package}/package.json`, 'utf8'));
+const updateVersion = (pkg, version) => {
+    const packageContent = JSON.parse(readFileSync(`dist/${pkg}/package.json`, 'utf8'));
     packageContent.version = version;
 
-    writeFileSync(`dist/${package}/package.json`, JSON.stringify(packageContent, undefined, 2));
+    writeFileSync(`dist/${pkg}/package.json`, JSON.stringify(packageContent, undefined, 2));
 };
 
 const updateTokensPackage = () => {

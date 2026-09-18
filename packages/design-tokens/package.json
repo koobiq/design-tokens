@@ -11,6 +11,9 @@
     "publishConfig": {
         "access": "public"
     },
+    "bin": {
+        "koobiq-tokens-codemod": "./codemod/v3-to-v4.mjs"
+    },
     "exports": {
         "./*": {
             "default": "./*"

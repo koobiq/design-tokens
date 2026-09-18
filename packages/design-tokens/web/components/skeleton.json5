@@ -1,24 +1,49 @@
 {
-    'skeleton': {
+    skeleton: {
+        $type: 'color',
         light: {
-            background: { value:  '{light.background.contrast-less}'},
+            background: {
+                $value: '{light.background.contrast-less}',
+                $description: 'Fill of the placeholder block that stands in for content while it loads.',
+            },
             animation: {
                 wave: {
-                    start: { value:  'oklch(0 0 0 / 0)'},
-                    center: { value:  '{plt.blackA.2}'},
-                    end: { value:  'oklch(0 0 0 / 0)'}
-                }
-            }
+                    start: {
+                        $value: 'oklch(0 0 0 / 0)',
+                        $description: 'Leading edge of the highlight that sweeps across the placeholder. Transparent, so the wave fades in.',
+                    },
+                    center: {
+                        $value: '{plt.blackA.2}',
+                        $description: 'Brightest point of the sweeping highlight, at the middle of the wave.',
+                    },
+                    end: {
+                        $value: 'oklch(0 0 0 / 0)',
+                        $description: 'Trailing edge of the sweeping highlight. Transparent, so the wave fades out.',
+                    },
+                },
+            },
         },
         dark: {
-            background: { value:  '{dark.background.contrast-less}'},
+            background: {
+                $value: '{dark.background.contrast-less}',
+                $description: 'Fill of the placeholder block that stands in for content while it loads.',
+            },
             animation: {
                 wave: {
-                    start: { value:  'oklch(1 0 0 / 0)'},
-                    center: { value:  '{plt.whiteA.1}'},
-                    end: { value:  'oklch(1 0 0 / 0)'}
-                }
-            }
-        }
-    }
+                    start: {
+                        $value: 'oklch(1 0 0 / 0)',
+                        $description: 'Leading edge of the highlight that sweeps across the placeholder. Transparent, so the wave fades in.',
+                    },
+                    center: {
+                        $value: '{plt.whiteA.1}',
+                        $description: 'Brightest point of the sweeping highlight, at the middle of the wave.',
+                    },
+                    end: {
+                        $value: 'oklch(1 0 0 / 0)',
+                        $description: 'Trailing edge of the sweeping highlight. Transparent, so the wave fades out.',
+                    },
+                },
+            },
+        },
+    },
 }

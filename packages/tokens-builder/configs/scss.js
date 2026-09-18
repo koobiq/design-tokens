@@ -1,16 +1,11 @@
-module.exports = {
+export default {
     scss: {
         transformGroup: 'kbq/scss',
         files: [
             {
                 destination: '_variables.scss',
                 format: 'scss/variables',
-                filter: 'color'
-            },
-            {
-                destination: '_palette.scss',
-                format: 'kbq-scss/palette',
-                filter: 'palette'
+                filter: (token) => !token.attributes.typography && !token.attributes['md-typography']
             },
             {
                 destination: '_typography.scss',

@@ -144,3 +144,6 @@ dist
 
 # misc
 .DS_Store
+
+# agent scratch worktrees
+.claude/worktrees/
