@@ -1,80 +1,161 @@
 {
     scrollbar: {
         size: {
+            $type: 'dimension',
             track: {
-                dimension: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{size.l}'},
+                dimension: {
+                    $value: '{size.l}',
+                    $description: 'Width of a vertical scrollbar track, and height of a horizontal one.',
+                },
                 padding: {
-                    vertical: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{size.3xs}'},
-                    horizontal: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{size.3xs}'}
-                }
+                    vertical: {
+                        $value: '{size.3xs}',
+                        $description: 'Gap between the thumb and the two ends of a vertical track.',
+                    },
+                    horizontal: {
+                        $value: '{size.3xs}',
+                        $description: 'Gap between the thumb and the sides of the track.',
+                    },
+                },
             },
             thumb: {
-                width: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{size.s}' },
-                'min-size': { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{size.xl}'},
+                width: {
+                    $value: '{size.s}',
+                    $description: 'Thickness of the draggable thumb.',
+                },
+                'min-size': {
+                    $value: '{size.xl}',
+                    $description: 'Shortest the thumb is allowed to get on very long content, so it stays easy to grab.',
+                },
                 border: {
-                    radius: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{size.s}' },
-                }
-            }
+                    radius: {
+                        $value: '{size.s}',
+                        $description: 'Corner radius of the thumb.',
+                    },
+                },
+            },
         },
         light: {
+            $type: 'color',
             thumb: {
                 default: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{light.contrast.palette.value."50-A32"}' }
+                    background: {
+                        $value: '{semantic.contrastA.3}',
+                        $description: 'Thumb fill in the default state — not hovered, not being dragged.',
+                    },
                 },
                 hover: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{light.contrast.palette.value."50-A48"}' }
+                    background: {
+                        $value: '{semantic.contrastA.4}',
+                        $description: 'Thumb fill while the pointer is over the scrollbar.',
+                    },
                 },
                 active: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{light.contrast.palette.value."20-A55"}' }
+                    background: {
+                        $value: '{semantic.contrastA.5}',
+                        $description: 'Thumb fill while the thumb is being dragged.',
+                    },
                 },
                 disabled: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{light.states.icon.disabled}' }
-                }
+                    background: {
+                        $value: '{light.states.icon.disabled}',
+                        $description: 'Thumb fill when the scrollable area is disabled.',
+                    },
+                },
             },
             track: {
                 default: {
-                    border: { deprecated: '`component` token will be removed - use `global` token or raw value', value: 'transparent' },
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: 'transparent' }
+                    border: {
+                        $value: 'transparent',
+                        $description: 'Track border in the default state. Transparent, so the track reads as part of the surface.',
+                    },
+                    background: {
+                        $value: 'transparent',
+                        $description: 'Track fill in the default state. Transparent, so content shows through.',
+                    },
                 },
                 hover: {
-                    border: { deprecated: '`component` token will be removed - use `global` token or raw value', value: 'transparent' },
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: 'transparent' }
+                    border: {
+                        $value: 'transparent',
+                        $description: 'Track border while the pointer is over the scrollbar.',
+                    },
+                    background: {
+                        $value: 'transparent',
+                        $description: 'Track fill while the pointer is over the scrollbar.',
+                    },
                 },
                 active: {
-                    border: { deprecated: '`component` token will be removed - use `global` token or raw value', value: 'transparent' },
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: 'transparent' }
-                }
-            }
+                    border: {
+                        $value: 'transparent',
+                        $description: 'Track border while the thumb is being dragged.',
+                    },
+                    background: {
+                        $value: 'transparent',
+                        $description: 'Track fill while the thumb is being dragged.',
+                    },
+                },
+            },
         },
         dark: {
+            $type: 'color',
             thumb: {
                 default: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{dark.contrast.palette.value."50-A48"}' }
+                    background: {
+                        $value: '{semantic.darkContrastA.9}',
+                        $description: 'Thumb fill in the default state — not hovered, not being dragged.',
+                    },
                 },
                 hover: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{dark.contrast.palette.value."50-A60"}' }
+                    background: {
+                        $value: '{semantic.darkContrastA.10}',
+                        $description: 'Thumb fill while the pointer is over the scrollbar.',
+                    },
                 },
                 active: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{dark.contrast.palette.value."50-A80"}' }
+                    background: {
+                        $value: '{semantic.darkContrastA.11}',
+                        $description: 'Thumb fill while the thumb is being dragged.',
+                    },
                 },
                 disabled: {
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: '{dark.states.icon.disabled}' }
-                }
+                    background: {
+                        $value: '{dark.states.icon.disabled}',
+                        $description: 'Thumb fill when the scrollable area is disabled.',
+                    },
+                },
             },
             track: {
                 default: {
-                    border: { deprecated: '`component` token will be removed - use `global` token or raw value', value: 'transparent' },
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: 'transparent' }
+                    border: {
+                        $value: 'transparent',
+                        $description: 'Track border in the default state. Transparent, so the track reads as part of the surface.',
+                    },
+                    background: {
+                        $value: 'transparent',
+                        $description: 'Track fill in the default state. Transparent, so content shows through.',
+                    },
                 },
                 hover: {
-                    border: { deprecated: '`component` token will be removed - use `global` token or raw value', value: 'transparent' },
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: 'transparent' }
+                    border: {
+                        $value: 'transparent',
+                        $description: 'Track border while the pointer is over the scrollbar.',
+                    },
+                    background: {
+                        $value: 'transparent',
+                        $description: 'Track fill while the pointer is over the scrollbar.',
+                    },
                 },
                 active: {
-                    border: { deprecated: '`component` token will be removed - use `global` token or raw value', value: 'transparent' },
-                    background: { deprecated: '`component` token will be removed - use `global` token or raw value', value: 'transparent' }
-                }
-            }
-        }
-    }
+                    border: {
+                        $value: 'transparent',
+                        $description: 'Track border while the thumb is being dragged.',
+                    },
+                    background: {
+                        $value: 'transparent',
+                        $description: 'Track fill while the thumb is being dragged.',
+                    },
+                },
+            },
+        },
+    },
 }

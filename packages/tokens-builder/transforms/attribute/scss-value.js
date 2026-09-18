@@ -1,12 +1,11 @@
-module.exports = (StyleDictionary) => {
+export default (StyleDictionary) => {
     StyleDictionary.registerTransform({
         name: 'kbq-scss/value',
         type: 'value',
-        transformer: (token) => {
-            if (token.value === '') {
-                return null;
-            }
-            return token.value;
+        transform: (token, _platform, options) => {
+            const value = options?.usesDtcg ? token.$value : token.value;
+
+            return value === '' ? null : value;
         }
     });
 };

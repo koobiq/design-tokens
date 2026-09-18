@@ -1,0 +1,277 @@
+{
+    shadow: {
+        light: {
+            'overflow-compact-top': {
+                $type: 'shadow',
+                $value: {
+                    color: '{light.line.contrast-less}',
+                    offsetX: '0px',
+                    offsetY: '-1px',
+                    blur: '0px',
+                    spread: '0px',
+                },
+                $description: 'Subtle overflow shadow for low-elevation elements.',
+            },
+            'overflow-compact-right': {
+                $type: 'shadow',
+                $value: {
+                    color: '{light.line.contrast-less}',
+                    offsetX: '1px',
+                    offsetY: '0px',
+                    blur: '0px',
+                    spread: '0px',
+                },
+            },
+            'overflow-compact-bottom': {
+                $type: 'shadow',
+                $value: {
+                    color: '{light.line.contrast-less}',
+                    offsetX: '0px',
+                    offsetY: '1px',
+                    blur: '0px',
+                    spread: '0px',
+                },
+            },
+            'overflow-compact-left': {
+                $type: 'shadow',
+                $value: {
+                    color: '{light.line.contrast-less}',
+                    offsetX: '-1px',
+                    offsetY: '0',
+                    blur: '0px',
+                    spread: '0px',
+                },
+            },
+            'overflow-normal-top': {
+                $type: 'shadow',
+                $value: {
+                    color: '{semantic.contrastA.13}',
+                    offsetX: '0',
+                    offsetY: '-9px',
+                    blur: '8px',
+                    spread: '-12px',
+                },
+                $description: 'Modal / sidepanel header overflow shadow.',
+            },
+            'overflow-normal-right': {
+                $type: 'shadow',
+                $value: {
+                    color: '{semantic.contrastA.13}',
+                    offsetX: '9px',
+                    offsetY: '0',
+                    blur: '8px',
+                    spread: '-12px',
+                },
+            },
+            'overflow-normal-left': {
+                $type: 'shadow',
+                $value: {
+                    color: '{semantic.contrastA.13}',
+                    offsetX: '-9px',
+                    offsetY: '0',
+                    blur: '8px',
+                    spread: '-12px',
+                },
+            },
+            'overflow-normal-bottom': {
+                $type: 'shadow',
+                $value: {
+                    color: '{semantic.contrastA.13}',
+                    offsetX: '0',
+                    offsetY: '9px',
+                    blur: '8px',
+                    spread: '-12px',
+                },
+            },
+            card: {
+                $type: 'shadow',
+                $value: [
+                    {
+                        color: '{light.shadow.outline}',
+                        offsetX: '0',
+                        offsetY: '0px',
+                        blur: '0',
+                        spread: '1px',
+                    },
+                    {
+                        color: '{light.shadow.key}',
+                        offsetX: '0',
+                        offsetY: '1px',
+                        blur: '6px',
+                        spread: '0',
+                    },
+                    {
+                        color: '{light.shadow.ambient}',
+                        offsetX: '0',
+                        offsetY: '1px',
+                        blur: '6px',
+                        spread: '0',
+                    },
+                ],
+                $description: 'Elevated card.',
+            },
+            popup: {
+                $type: 'shadow',
+                $value: [
+                    {
+                        color: '{light.shadow.outline}',
+                        offsetX: '0',
+                        offsetY: '0',
+                        blur: '0',
+                        spread: '1px',
+                    },
+                    {
+                        color: '{light.shadow.key}',
+                        offsetX: '0',
+                        offsetY: '2px',
+                        blur: '8px',
+                    },
+                    {
+                        color: '{light.shadow.ambient}',
+                        offsetX: '0',
+                        offsetY: '3px',
+                        blur: '8px',
+                    },
+                ],
+                $description: 'Dropdowns, popovers, tooltips.',
+            },
+            overlay: {
+                $type: 'shadow',
+                $value: [
+                    {
+                        color: '{light.shadow.outline}',
+                        offsetX: '0',
+                        offsetY: '0',
+                        blur: '0',
+                        spread: '1px',
+                    },
+                    {
+                        color: '{light.shadow.key}',
+                        offsetX: '0',
+                        offsetY: '3px',
+                        blur: '16px',
+                    },
+                    {
+                        color: '{light.shadow.ambient}',
+                        offsetX: '0',
+                        offsetY: '4px',
+                        blur: '32px',
+                    },
+                ],
+                $description: 'Modals, dialogs.',
+            },
+        },
+        dark: {
+            'overflow-compact-top': {
+                $type: 'shadow',
+                $value: {
+                    color: '{dark.shadow.outline}',
+                    offsetX: '0px',
+                    offsetY: '-1px',
+                    blur: '0px',
+                    spread: '0px',
+                },
+            },
+            'overflow-compact-right': {
+                $type: 'shadow',
+                $value: {
+                    color: '{dark.shadow.outline}',
+                    offsetX: '1px',
+                    offsetY: '0px',
+                    blur: '0px',
+                    spread: '0px',
+                },
+            },
+            'overflow-compact-bottom': {
+                $type: 'shadow',
+                $value: {
+                    color: '{dark.shadow.outline}',
+                    offsetX: '0px',
+                    offsetY: '1px',
+                    blur: '0px',
+                    spread: '0px',
+                },
+            },
+            'overflow-compact-left': {
+                $type: 'shadow',
+                $value: {
+                    color: '{dark.shadow.outline}',
+                    offsetX: '-1px',
+                    offsetY: '0px',
+                    blur: '0px',
+                    spread: '0px',
+                },
+            },
+            'overflow-normal-top': {
+                $type: 'shadow',
+                $value: {
+                    color: '{dark.shadow.outline}',
+                    offsetX: '0px',
+                    offsetY: '-1px',
+                    blur: '0px',
+                    spread: '0px',
+                },
+            },
+            'overflow-normal-right': {
+                $type: 'shadow',
+                $value: {
+                    color: '{dark.shadow.outline}',
+                    offsetX: '1px',
+                    offsetY: '0px',
+                    blur: '0px',
+                    spread: '0px',
+                },
+            },
+            'overflow-normal-bottom': {
+                $type: 'shadow',
+                $value: {
+                    color: '{dark.shadow.outline}',
+                    offsetX: '0px',
+                    offsetY: '1px',
+                    blur: '0px',
+                    spread: '0px',
+                },
+            },
+            'overflow-normal-left': {
+                $type: 'shadow',
+                $value: {
+                    color: '{dark.shadow.outline}',
+                    offsetX: '-1px',
+                    offsetY: '0px',
+                    blur: '0px',
+                    spread: '0px',
+                },
+            },
+            card: {
+                $type: 'shadow',
+                $value: {
+                    color: '{dark.shadow.outline}',
+                    offsetX: '0',
+                    offsetY: '0',
+                    blur: '0',
+                    spread: '1px',
+                },
+            },
+            popup: {
+                $type: 'shadow',
+                $value: {
+                    color: '{dark.shadow.outline}',
+                    offsetX: '0',
+                    offsetY: '0',
+                    blur: '0',
+                    spread: '1px',
+                },
+            },
+            overlay: {
+                $type: 'shadow',
+                $value: {
+                    color: '{dark.shadow.outline}',
+                    offsetX: '0',
+                    offsetY: '0',
+                    blur: '0',
+                    spread: '1px',
+                },
+            },
+        },
+    },
+}

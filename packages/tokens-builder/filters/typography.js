@@ -1,6 +1,6 @@
-module.exports = (StyleDictionary) => {
+export default (StyleDictionary) => {
     StyleDictionary.registerFilter({
         name: 'typography',
-        matcher: (prop) => prop.attributes.typography
+        filter: (token) => token.attributes.typography
     });
 };

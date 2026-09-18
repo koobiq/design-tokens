@@ -1,5 +1,5 @@
-const fs = require('fs');
-const path = require('node:path');
+import fs from 'node:fs';
+import path from 'node:path';
 
 const HEADER = '/**\n * Do not edit directly\n */\n';
 
@@ -22,7 +22,7 @@ const HEADER = '/**\n * Do not edit directly\n */\n';
  *       files: [ … ]
  *   }
  */
-module.exports = (StyleDictionary) => {
+export default (StyleDictionary) => {
     StyleDictionary.registerAction({
         name: 'kbq/css-index',
         do: (_dictionary, config) => {
