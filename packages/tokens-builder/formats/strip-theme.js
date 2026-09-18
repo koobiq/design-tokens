@@ -12,6 +12,10 @@ const renamed = new WeakSet();
  * `css/components/code-block.css` and `component-tokens-light.css` — while formats run once per
  * file. The rename therefore has to be idempotent, or a second pass would eat another `light-`
  * further along the name.
+ *
+ * The theme has to be a whole name segment. Matching `light-` anywhere in the string also finds it
+ * inside a word: `states.background.highlight-current` became
+ * `--kbq-states-background-highcurrent`, which is what v3 shipped.
  */
 export const stripThemeFromNames = (tokens) => {
     for (const token of tokens) {
@@ -19,6 +23,6 @@ export const stripThemeFromNames = (tokens) => {
         if (renamed.has(token)) continue;
 
         renamed.add(token);
-        token.name = token.name.replace(/(light|dark)-/, '');
+        token.name = token.name.replace(/(^|-)(?:light|dark)-/, '$1');
     }
 };

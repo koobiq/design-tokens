@@ -148,7 +148,20 @@ The tokens themselves are still there. They carry `$value: null`, which is what
 class is part of the vocabulary but deliberately unstyled. Null tokens reach `_variables.scss` as
 `null`, exactly as Sass means it, and are skipped in CSS and JS, which have no way to say it.
 
-### 5. Sources are DTCG now
+### 5. One variable name was misspelled and is now fixed
+
+| v3                                    | v4                                          |
+| :------------------------------------ | :------------------------------------------ |
+| `--kbq-states-background-highcurrent` | `--kbq-states-background-highlight-current` |
+
+Theme-scoped tokens drop the theme from their variable name, and v3 did that by cutting `light-`
+out of the name string — which also found it in the middle of `highlight-current`. The source
+token has always been `highlight-current`, and `_variables.scss` has always spelled it in full as
+`$light-states-background-highlight-current`; only the CSS custom property was affected.
+
+The codemod rewrites this one.
+
+### 6. Sources are DTCG now
 
 `web/properties/*.json5` and `web/components/*.json5` use `$value` / `$type` / `$description` /
 `$deprecated` instead of `value` / `description` / `deprecated`. If you read these files directly,
@@ -166,7 +179,7 @@ keep token sources of your own; see
 
 Token `$description`s now render as comments in the generated CSS.
 
-### 6. `@koobiq/tokens-builder`
+### 7. `@koobiq/tokens-builder`
 
 ESM-only, requires Style Dictionary 5 (a peer dependency now) and Node ≥ 22. Custom hooks moved
 to the v4/v5 API (`matcher` → `filter`, `transformer` → `transform`, `formatter` → `format`).

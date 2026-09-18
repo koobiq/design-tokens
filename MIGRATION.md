@@ -22,7 +22,7 @@ extensions and skips `node_modules`, `dist` and friends. In a monorepo where it 
 package, pass `--tokens node_modules/@koobiq/design-tokens/web`.
 
 **It rewrites** the moved import paths (`web/new/**` → `web/css/**`, aggregates to the root of
-`web/`) and the ten tokens that have a one-for-one replacement.
+`web/`) and the eleven tokens that have a one-for-one replacement.
 
 **It reports, with a ⚠, what it will not guess at:**
 
@@ -78,7 +78,7 @@ at once.
 - **Code blocks and scrollbars.** The only place v4 changes pixels without being asked —
   see [§3](./README.md#3-component-tokens-are-gone).
 - **Anything that parsed the JSON sources.** They are DTCG now and two files were renamed; no
-  CSS or SCSS name changed because of it — see [§5](./README.md#5-sources-are-dtcg-now). A parser
+  CSS or SCSS name changed because of it — see [§6](./README.md#6-sources-are-dtcg-now). A parser
   that walked into a typography preset or a shadow now finds one composite token with an object
   `$value`, keyed by the spec's camelCase names, where v3 had a group of loose tokens.
 
@@ -109,7 +109,7 @@ What it takes:
 - **Style Dictionary ≥ 5** and **`@koobiq/tokens-builder` ≥ 4**. The builder is ESM-only and
   declares the Style Dictionary peer, so installing it pins the pair together.
 - Custom hooks move to the v4/v5 API, and some are gone — see
-  [§6](./README.md#6-koobiqtokens-builder) for the renames and the removed list.
+  [§7](./README.md#7-koobiqtokens-builder) for the renames and the removed list.
 - If you write your own platform config rather than taking the builder's, add its typography
   preprocessor: `preprocessors: ['kbq/expand-typography']`. Composite typography and shadow tokens
   do not resolve without it, and that is what the error above is really telling you.

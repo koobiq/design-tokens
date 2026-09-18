@@ -63,7 +63,11 @@ const RENAMED_TOKENS = {
     '--kbq-foreground-error-less': '--kbq-foreground-error-tertiary',
     '--kbq-foreground-success-less': '--kbq-foreground-success-tertiary',
     '--kbq-states-background-error-less': '--kbq-background-error-tertiary',
-    '--kbq-states-disabled-opacity': '--kbq-opacity-disabled'
+    '--kbq-states-disabled-opacity': '--kbq-opacity-disabled',
+    // Not a redesign: v3 built this name by cutting `light-` out of the string, which also found
+    // it inside `highlight-current`. The source token was always `highlight-current`, and the SCSS
+    // variable always spelled it in full.
+    '--kbq-states-background-highcurrent': '--kbq-states-background-highlight-current'
 };
 
 /** Removed tokens whose replacement needs a second declaration, so a human has to place it. */
