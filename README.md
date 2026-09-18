@@ -138,7 +138,7 @@ replacement:
 The `-hover` / `-active` variants of `--kbq-states-background-error-less-*` were never
 deprecated and are untouched.
 
-Separately, 86 `--kbq-code-block-hljs-*` variables that were declared with an empty value are
+Separately, the 183 `--kbq-code-block-*hljs-*` variables that v3 declared with an empty value are
 no longer emitted as CSS. `--kbq-x: ;` is valid, but it is not the same as leaving the property
 undeclared: `var(--kbq-x, teal)` uses the fallback only while `--kbq-x` is undeclared, so
 shipping them empty silently swallowed the fallback and resolved to nothing.
