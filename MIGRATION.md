@@ -26,13 +26,38 @@ package, pass `--tokens node_modules/@koobiq/design-tokens/web`.
 
 **It reports, with a ⚠, what it will not guess at:**
 
-| reported                                                   | what to do                                                                                                      |
-| :--------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------- |
-| `--kbq-palette-*`                                          | pick a step from `--kbq-semantic-*` by eye — the scale changed, see [§2](./README.md#2-the-old-palette-is-gone) |
-| `--kbq-background-overlay-theme` / `-error`                | became a pair: the `-base-` colour plus `--kbq-opacity-overlay`                                                 |
-| `--kbq-theme-default`, `--kbq-purple-default`              | v3 named no replacement; pick the v4 role for whatever the value colours                                        |
-| component tokens (`--kbq-button-*`, `--kbq-alert-*`, …)    | use the global token each one aliased, see [§3](./README.md#3-component-tokens-are-gone)                        |
-| `web/css/**`, `web/css-tokens*.css`, `web/_variables.scss` | the path is right, but on the legacy track the values behind it are now OKLch — re-check                        |
+| reported                                                   | what to do                                                                                                       |
+| :--------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------- |
+| `--kbq-palette-*`                                          | pick a step from `--kbq-semantic-*` by eye — the scale changed, see [§2](./README.md#2-the-old-palette-is-gone)  |
+| `--kbq-background-overlay-theme` / `-error`                | became a pair: the `-base-` colour plus `--kbq-opacity-overlay` — [details below](#the-overlay-tokens-in-detail) |
+| `--kbq-theme-default`, `--kbq-purple-default`              | v3 named no replacement; pick the v4 role for whatever the value colours                                         |
+| component tokens (`--kbq-button-*`, `--kbq-alert-*`, …)    | use the global token each one aliased, see [§3](./README.md#3-component-tokens-are-gone)                         |
+| `web/css/**`, `web/css-tokens*.css`, `web/_variables.scss` | the path is right, but on the legacy track the values behind it are now OKLch — re-check                         |
+
+### The overlay tokens in detail
+
+`--kbq-background-overlay-theme` and `--kbq-background-overlay-error` were a single translucent
+colour — `{semantic.themeA.8}` and `{semantic.errorA.8}`. v4 splits that into an opaque base and
+a separate opacity, so you compose the two yourself:
+
+```diff
+- background-color: var(--kbq-background-overlay-theme);
++ background-color: var(--kbq-background-overlay-base-theme);
++ opacity: var(--kbq-opacity-overlay);
+```
+
+Two things to watch, which is why the codemod reports these rather than rewriting them.
+
+**`opacity` fades the element's children too.** If the overlay has content — a label, an icon,
+a dashed border — that content fades with it. Put the colour on a `::before` or a dedicated
+layer instead, or keep it in one value with `color-mix(in oklch, var(--kbq-background-overlay-base-theme) 90%, transparent)`.
+
+**`opacity` may already be taken.** In `koobiq/angular-components` the dropzone overlay animates
+its own appearance with `opacity: 0 → 1`, so a second `opacity` declaration would fight the
+transition. That element needs the `color-mix()` form or a pseudo-element.
+
+The result is not pixel-identical to v3 either: `themeA.8` and `theme.5` at 90% are different
+colours. Look at the overlay after the swap.
 
 ## 3. Import the component tokens you use
 
