@@ -41,6 +41,9 @@ dist/                  # build output (gitignored)
 - Output formats: CSS custom properties, SCSS variables, JS/TS exports
 - Two output tracks: `new/` (OKLch, use this) and legacy HSL (backward compat)
 
+For Figma-to-token color comparisons, use
+[`FIGMA-COLOR-COMPARISON.md`](./FIGMA-COLOR-COMPARISON.md).
+
 ## Styling Rules
 
 - **CSS variables are the API** — use `--kbq-*`; do not hardcode colors or sizes.

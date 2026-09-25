@@ -70,6 +70,11 @@ Then reference the CSS variables in your styles — never hardcode values:
 
 > The OKLch entry point pulls the color-agnostic tokens (font, size, typography) from the sibling `web/css` track, so both directories ship together in the package.
 
+## 📖 Further reading
+
+- [`STYLING.md`](./STYLING.md) — the full token reference: colors, typography, sizes, shadows.
+- [`FIGMA-COLOR-COMPARISON.md`](./FIGMA-COLOR-COMPARISON.md) — comparing Figma colors with tokens.
+
 ## 🚀 Releasing Packages
 
 **🔹 Only maintainers should perform releases.**  
