@@ -242,6 +242,7 @@ Then reference the CSS variables in your styles — never hardcode values:
 - [`STYLING.md`](./STYLING.md) — the full token reference: colors, typography, sizes, shadows.
 - [`TOKENS-WORKFLOW.md`](./TOKENS-WORKFLOW.md) — how the three token layers fit together, recipes
   for adding tokens and re-theming.
+- [`FIGMA-COLOR-COMPARISON.md`](./FIGMA-COLOR-COMPARISON.md) — comparing Figma colors with tokens.
 
 ## 🚀 Releasing Packages
 

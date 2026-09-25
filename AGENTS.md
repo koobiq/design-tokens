@@ -72,6 +72,9 @@ plt.*              literals   --kbq-plt-slate-1: oklch(96.9% 0.0050 260.0)
 Write new role tokens against `{semantic.*}`, not `{plt.*}`. See
 [`TOKENS-WORKFLOW.md`](./TOKENS-WORKFLOW.md).
 
+For Figma-to-token color comparisons, use
+[`FIGMA-COLOR-COMPARISON.md`](./FIGMA-COLOR-COMPARISON.md).
+
 ## Styling Rules
 
 - **CSS variables are the API** — use `--kbq-*`; do not hardcode colors or sizes.

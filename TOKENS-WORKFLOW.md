@@ -253,6 +253,9 @@ token reference, `{semantic.contrast.1}` becomes a Figma **alias** rather than a
 so the "change the brand" move works the same way in Figma as it does here. Typography
 composites map onto Figma text styles.
 
+При сравнении цветов Figma и токенов используйте
+[`FIGMA-COLOR-COMPARISON.md`](./FIGMA-COLOR-COMPARISON.md).
+
 ### Known deviations from the spec
 
 Worth knowing if you point a strict validator at these files:
