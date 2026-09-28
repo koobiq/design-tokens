@@ -804,10 +804,10 @@
                     $value: '{semantic.darkContrastA.3}',
                 },
                 'contrast-hover': {
-                    $value: '{semantic.darkContrastA.19}',
+                    $value: '{semantic.darkContrastA.20}',
                 },
                 'contrast-active': {
-                    $value: '{semantic.darkContrastA.20}',
+                    $value: '{semantic.darkContrastA.15}',
                 },
                 'contrast-fade-hover': {
                     $value: '{semantic.darkContrastA.6}',
