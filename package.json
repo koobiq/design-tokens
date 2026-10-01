@@ -52,7 +52,7 @@
         "husky": "^9.1.7",
         "json5": "^2.2.3",
         "lint-staged": "^15.5.2",
-        "prettier": "^3.9.6",
+        "prettier": "^3.9.9",
         "rimraf": "^5.0.5",
         "style-dictionary": "^5.5.3",
         "stylelint": "^16.26.1",
