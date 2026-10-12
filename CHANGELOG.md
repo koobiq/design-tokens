@@ -1,3 +1,10 @@
+## 3.20.1 (2026-10-12)
+
+### Design Tokens
+
+ * bug fix  improve dark contrast hover and active states ([#DS-4269](https://github.com/koobiq/design-tokens/issues/issue/DS-4269)) ([#173](https://github.com/koobiq/design-tokens/issues/173)) ([149da98](https://github.com/koobiq/design-tokens/commit/149da9851fc88bd4597c2c83aa9ac0668850444f))
+ * bug fix  **shadows:** lighten light theme shadows ([#DS-4990](https://github.com/koobiq/design-tokens/issues/issue/DS-4990)) ([#174](https://github.com/koobiq/design-tokens/issues/174)) ([7c0b007](https://github.com/koobiq/design-tokens/commit/7c0b007d681250537ac70de2eda80d6c36aadaf1))
+
 # 3.20.0 (2026-09-10)
 
 ### Design Tokens
