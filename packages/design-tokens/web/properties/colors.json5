@@ -498,11 +498,11 @@
                 $description: 'Minimal elevation, 1px outer border.',
             },
             key: {
-                $value: '{semantic.contrastA.4}',
+                $value: '{semantic.contrastA.3}',
                 $description: 'Internal component — do not use directly.',
             },
             ambient: {
-                $value: '{semantic.contrastA.4}',
+                $value: '{semantic.contrastA.2}',
                 $description: 'Internal component — do not use directly.',
             },
         },
