@@ -498,11 +498,11 @@
                 $description: 'Minimal elevation, 1px outer border.',
             },
             key: {
-                $value: '{semantic.contrastA.4}',
+                $value: '{semantic.contrastA.3}',
                 $description: 'Internal component — do not use directly.',
             },
             ambient: {
-                $value: '{semantic.contrastA.4}',
+                $value: '{semantic.contrastA.2}',
                 $description: 'Internal component — do not use directly.',
             },
         },
@@ -803,11 +803,11 @@
                 disabled: {
                     $value: '{semantic.darkContrastA.3}',
                 },
-                'contrast-hover': {
-                    $value: '{semantic.darkContrastA.19}',
+                "contrast-hover": {
+                    "value": "{semantic.darkContrastA.20}"
                 },
-                'contrast-active': {
-                    $value: '{semantic.darkContrastA.20}',
+                "contrast-active": {
+                    "value": "{semantic.darkContrastA.15}"
                 },
                 'contrast-fade-hover': {
                     $value: '{semantic.darkContrastA.6}',
