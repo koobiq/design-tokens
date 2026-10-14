@@ -1,3 +1,9 @@
+## 4.0.1 (2026-10-14)
+
+### Design Tokens
+
+ * bug fix  make background contrast opaque ([#DS-5081](https://github.com/koobiq/design-tokens/issues/issue/DS-5081)) ([#177](https://github.com/koobiq/design-tokens/issues/177)) ([62b2092](https://github.com/koobiq/design-tokens/commit/62b2092c88ab0a46f2b39cdf1d2edce2202c18f0))
+
 # 4.0.0 (2026-10-12)
 
 ### Design Tokens
