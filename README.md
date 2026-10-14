@@ -39,7 +39,7 @@ from the whole thing by where it lives.
 | `@koobiq/design-tokens/web/new/light/**`, `dark/**` | `@koobiq/design-tokens/web/css/light/**`, `dark/**` |
 | `@koobiq/design-tokens/web/new/css-tokens.css`      | `@koobiq/design-tokens/web/css-tokens.css`          |
 | `@koobiq/design-tokens/web/css/**` (legacy HSL)     | **removed** — migrate to OKLch                      |
-| `@koobiq/design-tokens/web/_palette.scss`           | **removed** — see below                             |
+| `@koobiq/design-tokens/web/_palette.scss`           | rebuilt for the OKLch palette — see below           |
 | `@koobiq/design-tokens/web/css-tokens-font.css`     | **removed** — use `web/css/font.css`                |
 | `@koobiq/design-tokens/web/deprecated/**`           | **removed**                                         |
 
@@ -70,7 +70,12 @@ which is what the rest of the system references.
 > [`STYLING.md`](./STYLING.md). Dark themes use the `dark*` families (`plt.darkSlate`,
 > `semantic.darkContrast`).
 
-Because SCSS `$palette` only ever held v3 tokens, `_palette.scss` is no longer built.
+`_palette.scss` is rebuilt for the OKLch palette: one Sass variable per `plt.*` family, either a
+map of its steps (`$plt-blue: (1: oklch(…), …, 20: oklch(…))`) or, for a single-value family, a
+plain variable (`$plt-white: oklch(…)`) — same shape as v3 had, just with v4's names and the 1–20
+scale instead of 0–100. Code that iterates a family (`@each $step, $color in $plt-blue`) keeps
+working; code that read a specific v3 variable (`$grey-palette` and the rest) still has to move to
+the v4 names in the table above.
 
 ### 3. Component tokens are gone
 
