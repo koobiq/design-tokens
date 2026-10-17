@@ -197,7 +197,7 @@
                 $value: '{semantic.successA.14}',
             },
             'success-fade': {
-                $value: '{semantic.successA.14}',
+                $value: '{semantic.successA.10}',
             },
             warning: {
                 $value: '{semantic.warningFixedA.16}',
