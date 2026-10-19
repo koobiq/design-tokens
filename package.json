@@ -4,7 +4,7 @@
     "description": "Design tokens",
     "author": "",
     "license": "MIT",
-    "packageManager": "yarn@4.1.1",
+    "packageManager": "yarn@4.18.1",
     "keywords": [
         "design-system",
         "design-tokens",
