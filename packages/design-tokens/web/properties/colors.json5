@@ -683,25 +683,25 @@
                 $value: '{semantic.darkThemeA.11}',
             },
             'theme-fade': {
-                $value: '{semantic.darkThemeA.11}',
+                $value: '{semantic.darkThemeA.9}',
             },
             error: {
                 $value: '{semantic.darkErrorA.11}',
             },
             'error-fade': {
-                $value: '{semantic.darkErrorA.11}',
+                $value: '{semantic.darkErrorA.9}',
             },
             success: {
                 $value: '{semantic.darkSuccessA.11}',
             },
             'success-fade': {
-                $value: '{semantic.darkSuccessA.11}',
+                $value: '{semantic.darkSuccessA.9}',
             },
             warning: {
                 $value: '{semantic.darkWarningA.11}',
             },
             'warning-fade': {
-                $value: '{semantic.darkWarningA.11}',
+                $value: '{semantic.darkWarningA.9}',
             },
             visited: {
                 $value: '{semantic.darkVisitedA.11}',
@@ -911,18 +911,18 @@
                     $value: '{semantic.darkThemeA.16}',
                 },
                 'theme-active': {
-                    $value: '{semantic.darkThemeA.17}',
+                    $value: '{semantic.darkThemeA.18}',
                 },
                 'visited-hover': {
                     $value: '{semantic.darkVisitedA.16}',
                 },
                 'visited-active': {
-                    $value: '{semantic.darkVisitedA.17}',
+                    $value: '{semantic.darkVisitedA.18}',
                 },
             },
             icon: {
                 disabled: {
-                    $value: '{semantic.darkContrastA.9}',
+                    $value: '{semantic.darkContrastA.7}',
                 },
                 'contrast-hover': {
                     $value: '{semantic.darkContrastA.16}',
@@ -934,37 +934,37 @@
                     $value: '{semantic.darkContrastA.13}',
                 },
                 'contrast-fade-active': {
-                    $value: '{semantic.darkContrastA.14}',
+                    $value: '{semantic.darkContrastA.15}',
                 },
                 'theme-hover': {
                     $value: '{semantic.darkThemeA.13}',
                 },
                 'theme-active': {
-                    $value: '{semantic.darkThemeA.14}',
+                    $value: '{semantic.darkThemeA.15}',
                 },
                 'error-hover': {
                     $value: '{semantic.darkErrorA.13}',
                 },
                 'error-active': {
-                    $value: '{semantic.darkErrorA.14}',
+                    $value: '{semantic.darkErrorA.15}',
                 },
                 'success-hover': {
                     $value: '{semantic.darkSuccessA.13}',
                 },
                 'success-active': {
-                    $value: '{semantic.darkSuccessA.14}',
+                    $value: '{semantic.darkSuccessA.15}',
                 },
                 'warning-hover': {
                     $value: '{semantic.darkWarningA.13}',
                 },
                 'warning-active': {
-                    $value: '{semantic.darkWarningA.14}',
+                    $value: '{semantic.darkWarningA.15}',
                 },
                 'visited-hover': {
                     $value: '{semantic.darkVisitedA.13}',
                 },
                 'visited-active': {
-                    $value: '{semantic.darkVisitedA.14}',
+                    $value: '{semantic.darkVisitedA.15}',
                 },
             },
             line: {
