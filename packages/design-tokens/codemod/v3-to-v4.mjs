@@ -97,6 +97,19 @@ const REPOINTED = [
 ].map((path) => [path, REPOINTED_HINT]);
 
 /**
+ * `_palette.scss` is back in v4 (see README), but unlike REPOINTED its Sass API is not just
+ * "same name, new colour" — the old 0–100 theme/hue maps are gone outright, replaced by
+ * `$plt-<family>` maps on a 1–20 scale. That is worth flagging on its own, not only when the file
+ * also shows another legacy sign, so it is checked unconditionally rather than gated behind
+ * `looksLegacy` the way REPOINTED is — and kept out of DELETED_PATHS, since the path itself is
+ * valid again and `looksLegacy` reads straight off that list.
+ */
+const PALETTE_HINT =
+    'path is valid in v4, but the Sass API changed completely: the old 0–100 theme/hue maps ($light-theme-palette, $light-black-palette, …) are gone — use the new $plt-<family> maps instead (1–20 scale, e.g. $plt-blue)';
+
+const PALETTE_PATHS = [`${PKG}/web/_palette`, `${PKG}/web/palette`];
+
+/**
  * The v3 semantic layer: `--kbq-theme-default`, `--kbq-contrast-palette-40` and friends.
  *
  * Every one carried a bare `deprecated: true` with no replacement named, so there is nothing to
@@ -107,8 +120,8 @@ const V1_SEMANTIC = /^--kbq-(theme|contrast|error|success|warning|purple|white|b
 
 /** Paths with nothing to move to. */
 const DELETED_PATHS = [
-    [`${PKG}/web/_palette`, 'the v3 palette is gone; use --kbq-plt-* or --kbq-semantic-*'],
-    [`${PKG}/web/palette`, 'the v3 palette is gone; use --kbq-plt-* or --kbq-semantic-*'],
+    // `web/_palette` and `web/palette` (no `/new/`) are not here: v4 rebuilt that file for the
+    // OKLch palette, so the path itself is valid again — see PALETTE_PATHS instead.
     [`${PKG}/web/new/_palette`, 'the v3 palette is gone; use --kbq-plt-* or --kbq-semantic-*'],
     [`${PKG}/web/new/palette.scss`, 'the v3 palette is gone; use --kbq-plt-* or --kbq-semantic-*'],
     [`${PKG}/web/css-tokens-font.css`, `use ${PKG}/web/css/font.css`],
@@ -228,6 +241,10 @@ function inspect(content, known, defined) {
 
     for (const [path, hint] of DELETED_PATHS) {
         if (content.includes(path)) manual.set(path, { what: path, hint });
+    }
+
+    for (const path of PALETTE_PATHS) {
+        if (content.includes(path)) manual.set(path, { what: path, hint: PALETTE_HINT });
     }
 
     // The repointed paths are spelled the same in v3 and v4, so warning on every one of them

@@ -26,6 +26,7 @@ import registerTsGroup from './transformGroups/ts.js';
 import registerTypographyFormat from './formats/typography.js';
 import registerVariablesFormat from './formats/variables.js';
 import registerComponentFormat from './formats/component.js';
+import registerPaletteFormat from './formats/palette.js';
 
 // ==== Include custom actions ====
 import registerCssIndex from './actions/css-index.js';
@@ -50,6 +51,7 @@ registerTsGroup(StyleDictionary);
 registerTypographyFormat(StyleDictionary);
 registerVariablesFormat(StyleDictionary);
 registerComponentFormat(StyleDictionary);
+registerPaletteFormat(StyleDictionary);
 
 registerCssIndex(StyleDictionary);
 

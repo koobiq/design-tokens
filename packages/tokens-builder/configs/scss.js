@@ -18,6 +18,11 @@ export default {
                 format: 'kbq-scss/typography',
                 mapName: 'md-typography',
                 filter: 'md-typography'
+            },
+            {
+                destination: '_palette.scss',
+                format: 'kbq-scss/palette',
+                filter: (token) => token.path[0] === 'plt'
             }
         ]
     }
