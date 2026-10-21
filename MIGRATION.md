@@ -26,14 +26,20 @@ package, pass `--tokens node_modules/@koobiq/design-tokens/web`.
 — `var(--kbq-background-overlay-theme)` / `var(--kbq-background-overlay-error)` become the
 `color-mix()` shown [below](#the-overlay-tokens-in-detail).
 
+The old `--kbq-palette-*` is not a rewrite: the 0–100 HSL ramp has no arithmetic mapping onto the
+1–20 OKLch ramp, so the codemod **suggests** the nearest v4 colour and prints the ΔE (CIEDE2000).
+`--fix-palette` applies the suggestions that are close enough (ΔE ≤ 3 by default; the threshold is
+`PALETTE_DELTA_E_MAX` in the codemod). Alpha steps have no mechanical replacement and are always
+reported.
+
 **It reports, with a ⚠, what it will not guess at:**
 
-| reported                                                   | what to do                                                                                                      |
-| :--------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------- |
-| `--kbq-palette-*`                                          | pick a step from `--kbq-semantic-*` by eye — the scale changed, see [§2](./README.md#2-the-old-palette-is-gone) |
-| `--kbq-theme-default`, `--kbq-purple-default`              | v3 named no replacement; pick the v4 role for whatever the value colours                                        |
-| component tokens (`--kbq-button-*`, `--kbq-alert-*`, …)    | use the global token each one aliased, see [§3](./README.md#3-component-tokens-are-gone)                        |
-| `web/css/**`, `web/css-tokens*.css`, `web/_variables.scss` | the path is right, but on the legacy track the values behind it are now OKLch — re-check                        |
+| reported                                                   | what to do                                                                                                                      |
+| :--------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------ |
+| `--kbq-palette-*` (alpha steps, or above the ΔE threshold) | nearest `--kbq-plt-*` is suggested for opaque steps; alpha steps need a human — see [§2](./README.md#2-the-old-palette-is-gone) |
+| `--kbq-theme-default`, `--kbq-purple-default`              | v3 named no replacement; pick the v4 role for whatever the value colours                                                        |
+| component tokens (`--kbq-button-*`, `--kbq-alert-*`, …)    | use the global token each one aliased, see [§3](./README.md#3-component-tokens-are-gone)                                        |
+| `web/css/**`, `web/css-tokens*.css`, `web/_variables.scss` | the path is right, but on the legacy track the values behind it are now OKLch — re-check                                        |
 
 ### The overlay tokens in detail
 

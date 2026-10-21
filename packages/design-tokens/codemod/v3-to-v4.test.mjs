@@ -11,7 +11,12 @@ const known = new Set([
     '--kbq-background-overlay-base-error',
     '--kbq-opacity-overlay',
     '--kbq-background-theme',
-    '--kbq-background-error'
+    '--kbq-background-error',
+    // v4 engineering-palette targets the palette pass rewrites to.
+    '--kbq-plt-blue-16',
+    '--kbq-plt-black',
+    '--kbq-plt-white',
+    '--kbq-plt-slate-15'
 ]);
 const defined = new Set();
 
@@ -115,6 +120,65 @@ test('does not report the replacement target inside var()', () => {
 
 test('is idempotent on an already-rewritten expression', () => {
     const input = `background: ${THEME_MIX};`;
+    const { next, manual } = inspect(input, known, defined);
+
+    assert.equal(next, input);
+    assert.deepEqual(manual, []);
+});
+
+// ---------------------------------------------------------------------------------------------
+// Palette: opaque steps get a nearest-colour suggestion (reported by default, applied behind
+// --fix-palette when close enough); alpha steps stay report-only.
+
+test('suggests the nearest v4 colour for an opaque palette step, without rewriting', () => {
+    const input = 'color: var(--kbq-palette-blue-50);';
+    const { next, manual } = inspect(input, known, defined);
+
+    assert.equal(next, input);
+    assert.equal(manual.length, 1);
+    assert.equal(manual[0].what, '--kbq-palette-blue-50');
+    assert.match(manual[0].hint, /--kbq-plt-blue-16/);
+    assert.match(manual[0].hint, /ΔE 2\.65/);
+});
+
+test('maps the palette ramp ends to black/white', () => {
+    const black = inspect('color: var(--kbq-palette-blue-0);', known, defined);
+    const white = inspect('color: var(--kbq-palette-blue-100);', known, defined);
+
+    assert.match(black.manual[0].hint, /--kbq-plt-black/);
+    assert.match(white.manual[0].hint, /--kbq-plt-white/);
+});
+
+test('applies the suggestion with --fix-palette when below the threshold', () => {
+    const input = 'color: var(--kbq-palette-blue-50);';
+    const { next, manual } = inspect(input, known, defined, { fixPalette: true });
+
+    assert.equal(next, 'color: var(--kbq-plt-blue-16);');
+    assert.deepEqual(manual, []);
+});
+
+test('keeps the suggestion report-only when above the threshold', () => {
+    // blue-50 (ΔE 2.65) is below the default threshold; lower it to 2 and it must stay manual.
+    const input = 'color: var(--kbq-palette-blue-50);';
+    const { next, manual } = inspect(input, known, defined, { fixPalette: true, paletteDeltaE: 2 });
+
+    assert.equal(next, input);
+    assert.equal(manual.length, 1);
+    assert.match(manual[0].hint, /above the 2 auto-fix threshold/);
+});
+
+test('reports alpha palette steps without a suggestion', () => {
+    const input = 'color: var(--kbq-palette-blue-a8);';
+    const { next, manual } = inspect(input, known, defined, { fixPalette: true });
+
+    assert.equal(next, input);
+    assert.equal(manual.length, 1);
+    assert.equal(manual[0].what, '--kbq-palette-blue-a8');
+    assert.match(manual[0].hint, /alpha steps have no mechanical replacement/);
+});
+
+test('does not touch the replacement palette target', () => {
+    const input = 'color: var(--kbq-plt-blue-16);';
     const { next, manual } = inspect(input, known, defined);
 
     assert.equal(next, input);

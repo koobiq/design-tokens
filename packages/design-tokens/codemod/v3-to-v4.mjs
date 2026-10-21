@@ -3,8 +3,9 @@
  * Codemod: @koobiq/design-tokens v3 → v4.
  *
  * Rewrites what can be rewritten mechanically (import paths, tokens with a 1:1 replacement, the
- * overlay tokens that compose back to `color-mix()`) and reports what cannot. Nothing is written
- * without --write.
+ * overlay tokens that compose back to `color-mix()`), suggests the nearest v4 colour for the old
+ * palette (applied only with `--fix-palette`, and only when close enough), and reports the rest.
+ * Nothing is written without --write.
  *
  *   npx koobiq-tokens-codemod src            # dry run, prints a report
  *   npx koobiq-tokens-codemod src --write    # apply the fixable changes
@@ -101,6 +102,33 @@ const overlayVar = /var\(--kbq-background-overlay-(theme|error)\)/g;
  */
 const overlayAmbiguous =
     /\/\*[\s\S]*?\*\/|\/\/[^\n]*|var\((--kbq-background-overlay-(?:theme|error))\s*,|(?<!var\()(--kbq-background-overlay-(?:theme|error))(?![\w-])/g;
+
+/**
+ * Old palette → new engineering palette. Every opaque `--kbq-palette-<family>-<step>` (an HSL ramp
+ * over 0–100) maps to the nearest opaque `--kbq-plt-<family>-<step>` (an OKLch ramp over 1–20),
+ * precomputed by `tools/build-palette-map.mjs` and loaded from `palette-map.json`. `deltaE` is the
+ * CIEDE2000 distance between the two.
+ *
+ * The mapping is a "closest colour", not a "same colour", so it is only applied behind
+ * `--fix-palette`, and only when `deltaE <= PALETTE_DELTA_E_MAX`. Everything above the threshold —
+ * and every alpha step, which has no systematic replacement — stays report-only.
+ *
+ * PALETTE_DELTA_E_MAX is the one knob to tune: 1 is a just-noticeable difference, 2–3 is clearly
+ * visible, and higher values trade colour fidelity for more automatic fixes.
+ */
+const PALETTE_DELTA_E_MAX = 3;
+const PALETTE_MAP = loadPaletteMap();
+const paletteToken = /--kbq-palette-[\w-]+/g;
+
+function loadPaletteMap() {
+    try {
+        return JSON.parse(readFileSync(join(HERE, 'palette-map.json'), 'utf8'));
+    } catch {
+        console.warn('! Could not read palette-map.json — palette suggestions are skipped.');
+
+        return {};
+    }
+}
 
 /**
  * Paths that exist in both versions but no longer mean the same thing: in v3 they were the legacy
@@ -222,7 +250,7 @@ function movedPath(path) {
 /** A --kbq-* name, not followed by more name characters. */
 const tokenPattern = (name) => new RegExp(`${name}(?![\\w-])`, 'g');
 
-function inspect(content, known, defined) {
+function inspect(content, known, defined, { fixPalette = false, paletteDeltaE = PALETTE_DELTA_E_MAX } = {}) {
     const fixes = new Map();
     const manual = new Map();
 
@@ -243,6 +271,34 @@ function inspect(content, known, defined) {
         const token = `--kbq-background-overlay-${variant}`;
 
         fixes.set(full, { from: full, to: colorMix(COLOR_MIX_TOKENS[token]), kind: 'overlay' });
+    }
+
+    // 2c. Old palette → nearest v4 colour. Opaque steps have a precomputed suggestion; alpha steps
+    //     (and anything the map does not cover) have none and stay report-only.
+    for (const [name] of content.matchAll(paletteToken)) {
+        // The static half of a template literal (`--kbq-palette-${family}-${step}`) has no token.
+        if (name.endsWith('-')) continue;
+
+        const suggestion = PALETTE_MAP[name];
+
+        if (!suggestion) {
+            manual.set(name, {
+                what: name,
+                hint: 'the v3 palette is gone — use --kbq-plt-* or --kbq-semantic-*; alpha steps have no mechanical replacement'
+            });
+            continue;
+        }
+
+        if (fixPalette && suggestion.deltaE <= paletteDeltaE) {
+            fixes.set(name, { from: name, to: suggestion.to, kind: 'token' });
+        } else {
+            const above = fixPalette ? ` — above the ${paletteDeltaE} auto-fix threshold` : '';
+
+            manual.set(name, {
+                what: name,
+                hint: `the v3 palette is gone — nearest v4 colour is ${suggestion.to} (ΔE ${suggestion.deltaE}${above})`
+            });
+        }
     }
 
     // Longest path first, so rewriting `.../web/new/light/shadows.css` cannot be pre-empted by a
@@ -292,21 +348,20 @@ function inspect(content, known, defined) {
     }
 
     // 4. Any --kbq-* that nothing defines: not the installed v4, and not the project itself.
-    //    Catches the old palette, the 47 removed component token sets, and anything else this
-    //    codemod has no specific rule for.
+    //    Catches the 47 removed component token sets and anything else this codemod has no
+    //    specific rule for.
     if (known) {
         for (const [, name] of content.matchAll(/(--kbq-[\w-]+)/g)) {
             if (known.has(name) || defined.has(name) || manual.has(name)) continue;
             if (name in RENAMED_TOKENS || name in COLOR_MIX_TOKENS) continue;
+            if (name.startsWith('--kbq-palette-')) continue; // handled by the palette pass
             // A name ending in `-` is the static half of a template literal, e.g.
             // `--kbq-semantic-${family}-${step}`. There is no such variable to look up.
             if (name.endsWith('-')) continue;
 
-            const hint = name.startsWith('--kbq-palette-')
-                ? 'the v3 palette is gone — use --kbq-plt-* or --kbq-semantic-*; note the scale changed from 0–100 to 1–20'
-                : V1_SEMANTIC.test(name)
-                  ? 'the v3 semantic layer, deprecated without naming a replacement — pick the v4 role for whatever it colours, e.g. --kbq-background-theme for a fill or --kbq-states-line-focus-theme for a focus ring'
-                  : 'not defined by v4 — if this is a component token, use the global token it was aliasing';
+            const hint = V1_SEMANTIC.test(name)
+                ? 'the v3 semantic layer, deprecated without naming a replacement — pick the v4 role for whatever it colours, e.g. --kbq-background-theme for a fill or --kbq-states-line-focus-theme for a focus ring'
+                : 'not defined by v4 — if this is a component token, use the global token it was aliasing';
 
             manual.set(name, { what: name, hint });
         }
@@ -322,13 +377,14 @@ function inspect(content, known, defined) {
 function main() {
     const args = process.argv.slice(2);
     const write = args.includes('--write');
+    const fixPalette = args.includes('--fix-palette');
     const tokensFlag = args.indexOf('--tokens');
     const tokensDir = tokensFlag === -1 ? undefined : args[tokensFlag + 1];
     // `tokensFlag + 1` is only a value to skip when the flag is actually present.
     const targets = args.filter((a, i) => !a.startsWith('--') && !(tokensFlag !== -1 && i === tokensFlag + 1));
 
     if (targets.length === 0) {
-        console.error('Usage: koobiq-tokens-codemod <file-or-dir>… [--write] [--tokens <dir>]');
+        console.error('Usage: koobiq-tokens-codemod <file-or-dir>… [--write] [--fix-palette] [--tokens <dir>]');
         process.exit(1);
     }
 
@@ -369,7 +425,7 @@ function main() {
     let manualCount = 0;
 
     for (const [file, content] of sources) {
-        const { next, fixes, manual } = inspect(content, known, defined);
+        const { next, fixes, manual } = inspect(content, known, defined, { fixPalette });
 
         if (fixes.length === 0 && manual.length === 0) continue;
 

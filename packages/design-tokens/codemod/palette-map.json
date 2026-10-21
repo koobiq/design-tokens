@@ -1,0 +1,3242 @@
+{
+    "--kbq-palette-black-default": {
+        "to": "--kbq-plt-black",
+        "deltaE": 0
+    },
+    "--kbq-palette-blue-0": {
+        "to": "--kbq-plt-black",
+        "deltaE": 0
+    },
+    "--kbq-palette-blue-1": {
+        "to": "--kbq-plt-black",
+        "deltaE": 1.35
+    },
+    "--kbq-palette-blue-10": {
+        "to": "--kbq-plt-blue-20",
+        "deltaE": 8.27
+    },
+    "--kbq-palette-blue-100": {
+        "to": "--kbq-plt-white",
+        "deltaE": 0.03
+    },
+    "--kbq-palette-blue-11": {
+        "to": "--kbq-plt-blue-20",
+        "deltaE": 7.95
+    },
+    "--kbq-palette-blue-12": {
+        "to": "--kbq-plt-blue-20",
+        "deltaE": 7.71
+    },
+    "--kbq-palette-blue-13": {
+        "to": "--kbq-plt-blue-20",
+        "deltaE": 7.56
+    },
+    "--kbq-palette-blue-14": {
+        "to": "--kbq-plt-blue-20",
+        "deltaE": 7.52
+    },
+    "--kbq-palette-blue-15": {
+        "to": "--kbq-plt-blue-20",
+        "deltaE": 7.56
+    },
+    "--kbq-palette-blue-16": {
+        "to": "--kbq-plt-blue-20",
+        "deltaE": 7.68
+    },
+    "--kbq-palette-blue-17": {
+        "to": "--kbq-plt-blue-19",
+        "deltaE": 7.62
+    },
+    "--kbq-palette-blue-18": {
+        "to": "--kbq-plt-blue-19",
+        "deltaE": 6.84
+    },
+    "--kbq-palette-blue-19": {
+        "to": "--kbq-plt-blue-19",
+        "deltaE": 6.09
+    },
+    "--kbq-palette-blue-2": {
+        "to": "--kbq-plt-black",
+        "deltaE": 2.62
+    },
+    "--kbq-palette-blue-20": {
+        "to": "--kbq-plt-blue-19",
+        "deltaE": 5.38
+    },
+    "--kbq-palette-blue-21": {
+        "to": "--kbq-plt-blue-19",
+        "deltaE": 4.75
+    },
+    "--kbq-palette-blue-22": {
+        "to": "--kbq-plt-blue-19",
+        "deltaE": 4.19
+    },
+    "--kbq-palette-blue-23": {
+        "to": "--kbq-plt-blue-19",
+        "deltaE": 3.76
+    },
+    "--kbq-palette-blue-24": {
+        "to": "--kbq-plt-blue-19",
+        "deltaE": 3.5
+    },
+    "--kbq-palette-blue-25": {
+        "to": "--kbq-plt-blue-19",
+        "deltaE": 3.43
+    },
+    "--kbq-palette-blue-26": {
+        "to": "--kbq-plt-blue-19",
+        "deltaE": 3.56
+    },
+    "--kbq-palette-blue-27": {
+        "to": "--kbq-plt-blue-19",
+        "deltaE": 3.88
+    },
+    "--kbq-palette-blue-28": {
+        "to": "--kbq-plt-blue-18",
+        "deltaE": 3.91
+    },
+    "--kbq-palette-blue-29": {
+        "to": "--kbq-plt-blue-18",
+        "deltaE": 3.2
+    },
+    "--kbq-palette-blue-3": {
+        "to": "--kbq-plt-black",
+        "deltaE": 4.07
+    },
+    "--kbq-palette-blue-30": {
+        "to": "--kbq-plt-blue-18",
+        "deltaE": 2.59
+    },
+    "--kbq-palette-blue-31": {
+        "to": "--kbq-plt-blue-18",
+        "deltaE": 2.15
+    },
+    "--kbq-palette-blue-32": {
+        "to": "--kbq-plt-blue-18",
+        "deltaE": 2.01
+    },
+    "--kbq-palette-blue-33": {
+        "to": "--kbq-plt-blue-18",
+        "deltaE": 2.22
+    },
+    "--kbq-palette-blue-34": {
+        "to": "--kbq-plt-blue-18",
+        "deltaE": 2.71
+    },
+    "--kbq-palette-blue-35": {
+        "to": "--kbq-plt-blue-18",
+        "deltaE": 3.35
+    },
+    "--kbq-palette-blue-36": {
+        "to": "--kbq-plt-blue-18",
+        "deltaE": 4.08
+    },
+    "--kbq-palette-blue-37": {
+        "to": "--kbq-plt-blue-18",
+        "deltaE": 4.86
+    },
+    "--kbq-palette-blue-38": {
+        "to": "--kbq-plt-blue-17",
+        "deltaE": 4.27
+    },
+    "--kbq-palette-blue-39": {
+        "to": "--kbq-plt-blue-17",
+        "deltaE": 3.46
+    },
+    "--kbq-palette-blue-4": {
+        "to": "--kbq-plt-black",
+        "deltaE": 5.89
+    },
+    "--kbq-palette-blue-40": {
+        "to": "--kbq-plt-blue-17",
+        "deltaE": 2.69
+    },
+    "--kbq-palette-blue-41": {
+        "to": "--kbq-plt-blue-17",
+        "deltaE": 2.01
+    },
+    "--kbq-palette-blue-42": {
+        "to": "--kbq-plt-blue-17",
+        "deltaE": 1.55
+    },
+    "--kbq-palette-blue-43": {
+        "to": "--kbq-plt-blue-17",
+        "deltaE": 1.54
+    },
+    "--kbq-palette-blue-44": {
+        "to": "--kbq-plt-blue-17",
+        "deltaE": 1.99
+    },
+    "--kbq-palette-blue-45": {
+        "to": "--kbq-plt-blue-16",
+        "deltaE": 2.62
+    },
+    "--kbq-palette-blue-46": {
+        "to": "--kbq-plt-blue-16",
+        "deltaE": 1.86
+    },
+    "--kbq-palette-blue-47": {
+        "to": "--kbq-plt-blue-16",
+        "deltaE": 1.31
+    },
+    "--kbq-palette-blue-48": {
+        "to": "--kbq-plt-blue-16",
+        "deltaE": 1.31
+    },
+    "--kbq-palette-blue-49": {
+        "to": "--kbq-plt-blue-16",
+        "deltaE": 1.86
+    },
+    "--kbq-palette-blue-5": {
+        "to": "--kbq-plt-black",
+        "deltaE": 8.05
+    },
+    "--kbq-palette-blue-50": {
+        "to": "--kbq-plt-blue-16",
+        "deltaE": 2.65
+    },
+    "--kbq-palette-blue-51": {
+        "to": "--kbq-plt-blue-15",
+        "deltaE": 2.43
+    },
+    "--kbq-palette-blue-52": {
+        "to": "--kbq-plt-blue-15",
+        "deltaE": 1.45
+    },
+    "--kbq-palette-blue-53": {
+        "to": "--kbq-plt-blue-15",
+        "deltaE": 0.71
+    },
+    "--kbq-palette-blue-54": {
+        "to": "--kbq-plt-blue-15",
+        "deltaE": 1.07
+    },
+    "--kbq-palette-blue-55": {
+        "to": "--kbq-plt-blue-15",
+        "deltaE": 2
+    },
+    "--kbq-palette-blue-56": {
+        "to": "--kbq-plt-blue-14",
+        "deltaE": 1.88
+    },
+    "--kbq-palette-blue-57": {
+        "to": "--kbq-plt-blue-14",
+        "deltaE": 0.87
+    },
+    "--kbq-palette-blue-58": {
+        "to": "--kbq-plt-blue-14",
+        "deltaE": 0.32
+    },
+    "--kbq-palette-blue-59": {
+        "to": "--kbq-plt-blue-14",
+        "deltaE": 1.21
+    },
+    "--kbq-palette-blue-6": {
+        "to": "--kbq-plt-black",
+        "deltaE": 10.11
+    },
+    "--kbq-palette-blue-60": {
+        "to": "--kbq-plt-blue-13",
+        "deltaE": 1.86
+    },
+    "--kbq-palette-blue-61": {
+        "to": "--kbq-plt-blue-13",
+        "deltaE": 0.91
+    },
+    "--kbq-palette-blue-62": {
+        "to": "--kbq-plt-blue-13",
+        "deltaE": 0.31
+    },
+    "--kbq-palette-blue-63": {
+        "to": "--kbq-plt-blue-13",
+        "deltaE": 1.09
+    },
+    "--kbq-palette-blue-64": {
+        "to": "--kbq-plt-blue-12",
+        "deltaE": 1.91
+    },
+    "--kbq-palette-blue-65": {
+        "to": "--kbq-plt-blue-12",
+        "deltaE": 0.98
+    },
+    "--kbq-palette-blue-66": {
+        "to": "--kbq-plt-blue-12",
+        "deltaE": 0.12
+    },
+    "--kbq-palette-blue-67": {
+        "to": "--kbq-plt-blue-12",
+        "deltaE": 0.86
+    },
+    "--kbq-palette-blue-68": {
+        "to": "--kbq-plt-blue-11",
+        "deltaE": 1.59
+    },
+    "--kbq-palette-blue-69": {
+        "to": "--kbq-plt-blue-11",
+        "deltaE": 0.79
+    },
+    "--kbq-palette-blue-7": {
+        "to": "--kbq-plt-blue-20",
+        "deltaE": 9.94
+    },
+    "--kbq-palette-blue-70": {
+        "to": "--kbq-plt-blue-11",
+        "deltaE": 0.6
+    },
+    "--kbq-palette-blue-71": {
+        "to": "--kbq-plt-blue-11",
+        "deltaE": 1.31
+    },
+    "--kbq-palette-blue-72": {
+        "to": "--kbq-plt-blue-10",
+        "deltaE": 1.33
+    },
+    "--kbq-palette-blue-73": {
+        "to": "--kbq-plt-blue-10",
+        "deltaE": 0.97
+    },
+    "--kbq-palette-blue-74": {
+        "to": "--kbq-plt-blue-10",
+        "deltaE": 1.32
+    },
+    "--kbq-palette-blue-75": {
+        "to": "--kbq-plt-blue-9",
+        "deltaE": 1.62
+    },
+    "--kbq-palette-blue-76": {
+        "to": "--kbq-plt-blue-9",
+        "deltaE": 1.33
+    },
+    "--kbq-palette-blue-77": {
+        "to": "--kbq-plt-blue-9",
+        "deltaE": 1.62
+    },
+    "--kbq-palette-blue-78": {
+        "to": "--kbq-plt-blue-8",
+        "deltaE": 1.86
+    },
+    "--kbq-palette-blue-79": {
+        "to": "--kbq-plt-blue-8",
+        "deltaE": 1.66
+    },
+    "--kbq-palette-blue-8": {
+        "to": "--kbq-plt-blue-20",
+        "deltaE": 9.22
+    },
+    "--kbq-palette-blue-80": {
+        "to": "--kbq-plt-blue-8",
+        "deltaE": 1.96
+    },
+    "--kbq-palette-blue-81": {
+        "to": "--kbq-plt-blue-7",
+        "deltaE": 2.05
+    },
+    "--kbq-palette-blue-82": {
+        "to": "--kbq-plt-blue-7",
+        "deltaE": 1.95
+    },
+    "--kbq-palette-blue-83": {
+        "to": "--kbq-plt-blue-7",
+        "deltaE": 2.3
+    },
+    "--kbq-palette-blue-84": {
+        "to": "--kbq-plt-blue-6",
+        "deltaE": 2.32
+    },
+    "--kbq-palette-blue-85": {
+        "to": "--kbq-plt-blue-6",
+        "deltaE": 2.31
+    },
+    "--kbq-palette-blue-86": {
+        "to": "--kbq-plt-blue-6",
+        "deltaE": 2.69
+    },
+    "--kbq-palette-blue-87": {
+        "to": "--kbq-plt-blue-5",
+        "deltaE": 2.18
+    },
+    "--kbq-palette-blue-88": {
+        "to": "--kbq-plt-blue-5",
+        "deltaE": 2.02
+    },
+    "--kbq-palette-blue-89": {
+        "to": "--kbq-plt-blue-5",
+        "deltaE": 2.38
+    },
+    "--kbq-palette-blue-9": {
+        "to": "--kbq-plt-blue-20",
+        "deltaE": 8.68
+    },
+    "--kbq-palette-blue-90": {
+        "to": "--kbq-plt-blue-4",
+        "deltaE": 2.29
+    },
+    "--kbq-palette-blue-91": {
+        "to": "--kbq-plt-blue-3",
+        "deltaE": 2.38
+    },
+    "--kbq-palette-blue-92": {
+        "to": "--kbq-plt-blue-3",
+        "deltaE": 1.65
+    },
+    "--kbq-palette-blue-93": {
+        "to": "--kbq-plt-blue-3",
+        "deltaE": 1.7
+    },
+    "--kbq-palette-blue-94": {
+        "to": "--kbq-plt-blue-2",
+        "deltaE": 1.1
+    },
+    "--kbq-palette-blue-95": {
+        "to": "--kbq-plt-blue-2",
+        "deltaE": 0.76
+    },
+    "--kbq-palette-blue-96": {
+        "to": "--kbq-plt-blue-2",
+        "deltaE": 1.99
+    },
+    "--kbq-palette-blue-97": {
+        "to": "--kbq-plt-blue-1",
+        "deltaE": 1.29
+    },
+    "--kbq-palette-blue-98": {
+        "to": "--kbq-plt-blue-1",
+        "deltaE": 0.84
+    },
+    "--kbq-palette-blue-99": {
+        "to": "--kbq-plt-white",
+        "deltaE": 1.8
+    },
+    "--kbq-palette-cyan-0": {
+        "to": "--kbq-plt-black",
+        "deltaE": 0
+    },
+    "--kbq-palette-cyan-1": {
+        "to": "--kbq-plt-black",
+        "deltaE": 1.22
+    },
+    "--kbq-palette-cyan-10": {
+        "to": "--kbq-plt-teal-20",
+        "deltaE": 6.75
+    },
+    "--kbq-palette-cyan-100": {
+        "to": "--kbq-plt-white",
+        "deltaE": 0.03
+    },
+    "--kbq-palette-cyan-11": {
+        "to": "--kbq-plt-teal-20",
+        "deltaE": 5.84
+    },
+    "--kbq-palette-cyan-12": {
+        "to": "--kbq-plt-teal-20",
+        "deltaE": 5.12
+    },
+    "--kbq-palette-cyan-13": {
+        "to": "--kbq-plt-teal-20",
+        "deltaE": 4.69
+    },
+    "--kbq-palette-cyan-14": {
+        "to": "--kbq-plt-teal-20",
+        "deltaE": 4.6
+    },
+    "--kbq-palette-cyan-15": {
+        "to": "--kbq-plt-teal-20",
+        "deltaE": 4.88
+    },
+    "--kbq-palette-cyan-16": {
+        "to": "--kbq-plt-teal-20",
+        "deltaE": 5.47
+    },
+    "--kbq-palette-cyan-17": {
+        "to": "--kbq-plt-teal-19",
+        "deltaE": 5.39
+    },
+    "--kbq-palette-cyan-18": {
+        "to": "--kbq-plt-teal-19",
+        "deltaE": 5.38
+    },
+    "--kbq-palette-cyan-19": {
+        "to": "--kbq-plt-teal-19",
+        "deltaE": 5.67
+    },
+    "--kbq-palette-cyan-2": {
+        "to": "--kbq-plt-black",
+        "deltaE": 2.4
+    },
+    "--kbq-palette-cyan-20": {
+        "to": "--kbq-plt-teal-18",
+        "deltaE": 5.23
+    },
+    "--kbq-palette-cyan-21": {
+        "to": "--kbq-plt-teal-18",
+        "deltaE": 5.02
+    },
+    "--kbq-palette-cyan-22": {
+        "to": "--kbq-plt-teal-18",
+        "deltaE": 5.15
+    },
+    "--kbq-palette-cyan-23": {
+        "to": "--kbq-plt-teal-18",
+        "deltaE": 5.6
+    },
+    "--kbq-palette-cyan-24": {
+        "to": "--kbq-plt-teal-18",
+        "deltaE": 6.3
+    },
+    "--kbq-palette-cyan-25": {
+        "to": "--kbq-plt-teal-17",
+        "deltaE": 5.87
+    },
+    "--kbq-palette-cyan-26": {
+        "to": "--kbq-plt-teal-17",
+        "deltaE": 5.14
+    },
+    "--kbq-palette-cyan-27": {
+        "to": "--kbq-plt-teal-17",
+        "deltaE": 4.7
+    },
+    "--kbq-palette-cyan-28": {
+        "to": "--kbq-plt-teal-17",
+        "deltaE": 4.64
+    },
+    "--kbq-palette-cyan-29": {
+        "to": "--kbq-plt-teal-16",
+        "deltaE": 4.46
+    },
+    "--kbq-palette-cyan-3": {
+        "to": "--kbq-plt-black",
+        "deltaE": 3.57
+    },
+    "--kbq-palette-cyan-30": {
+        "to": "--kbq-plt-teal-16",
+        "deltaE": 3.92
+    },
+    "--kbq-palette-cyan-31": {
+        "to": "--kbq-plt-teal-16",
+        "deltaE": 3.86
+    },
+    "--kbq-palette-cyan-32": {
+        "to": "--kbq-plt-teal-15",
+        "deltaE": 3.99
+    },
+    "--kbq-palette-cyan-33": {
+        "to": "--kbq-plt-teal-15",
+        "deltaE": 3.25
+    },
+    "--kbq-palette-cyan-34": {
+        "to": "--kbq-plt-teal-15",
+        "deltaE": 3.08
+    },
+    "--kbq-palette-cyan-35": {
+        "to": "--kbq-plt-teal-15",
+        "deltaE": 3.55
+    },
+    "--kbq-palette-cyan-36": {
+        "to": "--kbq-plt-teal-14",
+        "deltaE": 3.09
+    },
+    "--kbq-palette-cyan-37": {
+        "to": "--kbq-plt-teal-14",
+        "deltaE": 2.98
+    },
+    "--kbq-palette-cyan-38": {
+        "to": "--kbq-plt-teal-13",
+        "deltaE": 3.42
+    },
+    "--kbq-palette-cyan-39": {
+        "to": "--kbq-plt-teal-13",
+        "deltaE": 2.9
+    },
+    "--kbq-palette-cyan-4": {
+        "to": "--kbq-plt-black",
+        "deltaE": 4.98
+    },
+    "--kbq-palette-cyan-40": {
+        "to": "--kbq-plt-teal-13",
+        "deltaE": 2.9
+    },
+    "--kbq-palette-cyan-41": {
+        "to": "--kbq-plt-teal-12",
+        "deltaE": 3.15
+    },
+    "--kbq-palette-cyan-42": {
+        "to": "--kbq-plt-teal-12",
+        "deltaE": 2.74
+    },
+    "--kbq-palette-cyan-43": {
+        "to": "--kbq-plt-teal-12",
+        "deltaE": 2.82
+    },
+    "--kbq-palette-cyan-44": {
+        "to": "--kbq-plt-teal-11",
+        "deltaE": 2.94
+    },
+    "--kbq-palette-cyan-45": {
+        "to": "--kbq-plt-teal-11",
+        "deltaE": 2.6
+    },
+    "--kbq-palette-cyan-46": {
+        "to": "--kbq-plt-teal-11",
+        "deltaE": 2.73
+    },
+    "--kbq-palette-cyan-47": {
+        "to": "--kbq-plt-teal-10",
+        "deltaE": 2.6
+    },
+    "--kbq-palette-cyan-48": {
+        "to": "--kbq-plt-teal-10",
+        "deltaE": 2.46
+    },
+    "--kbq-palette-cyan-49": {
+        "to": "--kbq-plt-teal-9",
+        "deltaE": 2.75
+    },
+    "--kbq-palette-cyan-5": {
+        "to": "--kbq-plt-black",
+        "deltaE": 6.66
+    },
+    "--kbq-palette-cyan-50": {
+        "to": "--kbq-plt-teal-9",
+        "deltaE": 2.36
+    },
+    "--kbq-palette-cyan-51": {
+        "to": "--kbq-plt-teal-9",
+        "deltaE": 2.46
+    },
+    "--kbq-palette-cyan-52": {
+        "to": "--kbq-plt-teal-8",
+        "deltaE": 2.46
+    },
+    "--kbq-palette-cyan-53": {
+        "to": "--kbq-plt-teal-8",
+        "deltaE": 2.21
+    },
+    "--kbq-palette-cyan-54": {
+        "to": "--kbq-plt-teal-8",
+        "deltaE": 2
+    },
+    "--kbq-palette-cyan-55": {
+        "to": "--kbq-plt-teal-8",
+        "deltaE": 1.85
+    },
+    "--kbq-palette-cyan-56": {
+        "to": "--kbq-plt-teal-8",
+        "deltaE": 1.78
+    },
+    "--kbq-palette-cyan-57": {
+        "to": "--kbq-plt-teal-8",
+        "deltaE": 1.8
+    },
+    "--kbq-palette-cyan-58": {
+        "to": "--kbq-plt-teal-8",
+        "deltaE": 1.9
+    },
+    "--kbq-palette-cyan-59": {
+        "to": "--kbq-plt-teal-8",
+        "deltaE": 2.09
+    },
+    "--kbq-palette-cyan-6": {
+        "to": "--kbq-plt-black",
+        "deltaE": 8.57
+    },
+    "--kbq-palette-cyan-60": {
+        "to": "--kbq-plt-teal-7",
+        "deltaE": 2.02
+    },
+    "--kbq-palette-cyan-61": {
+        "to": "--kbq-plt-teal-7",
+        "deltaE": 1.74
+    },
+    "--kbq-palette-cyan-62": {
+        "to": "--kbq-plt-teal-7",
+        "deltaE": 1.53
+    },
+    "--kbq-palette-cyan-63": {
+        "to": "--kbq-plt-teal-7",
+        "deltaE": 1.43
+    },
+    "--kbq-palette-cyan-64": {
+        "to": "--kbq-plt-teal-7",
+        "deltaE": 1.46
+    },
+    "--kbq-palette-cyan-65": {
+        "to": "--kbq-plt-teal-7",
+        "deltaE": 1.62
+    },
+    "--kbq-palette-cyan-66": {
+        "to": "--kbq-plt-teal-7",
+        "deltaE": 1.89
+    },
+    "--kbq-palette-cyan-67": {
+        "to": "--kbq-plt-teal-6",
+        "deltaE": 1.78
+    },
+    "--kbq-palette-cyan-68": {
+        "to": "--kbq-plt-teal-6",
+        "deltaE": 1.47
+    },
+    "--kbq-palette-cyan-69": {
+        "to": "--kbq-plt-teal-6",
+        "deltaE": 1.26
+    },
+    "--kbq-palette-cyan-7": {
+        "to": "--kbq-plt-teal-20",
+        "deltaE": 10.41
+    },
+    "--kbq-palette-cyan-70": {
+        "to": "--kbq-plt-teal-6",
+        "deltaE": 1.23
+    },
+    "--kbq-palette-cyan-71": {
+        "to": "--kbq-plt-teal-6",
+        "deltaE": 1.39
+    },
+    "--kbq-palette-cyan-72": {
+        "to": "--kbq-plt-teal-6",
+        "deltaE": 1.71
+    },
+    "--kbq-palette-cyan-73": {
+        "to": "--kbq-plt-teal-5",
+        "deltaE": 1.74
+    },
+    "--kbq-palette-cyan-74": {
+        "to": "--kbq-plt-teal-5",
+        "deltaE": 1.33
+    },
+    "--kbq-palette-cyan-75": {
+        "to": "--kbq-plt-teal-5",
+        "deltaE": 1.06
+    },
+    "--kbq-palette-cyan-76": {
+        "to": "--kbq-plt-teal-5",
+        "deltaE": 1.05
+    },
+    "--kbq-palette-cyan-77": {
+        "to": "--kbq-plt-teal-5",
+        "deltaE": 1.34
+    },
+    "--kbq-palette-cyan-78": {
+        "to": "--kbq-plt-teal-5",
+        "deltaE": 1.79
+    },
+    "--kbq-palette-cyan-79": {
+        "to": "--kbq-plt-teal-4",
+        "deltaE": 1.33
+    },
+    "--kbq-palette-cyan-8": {
+        "to": "--kbq-plt-teal-20",
+        "deltaE": 8.97
+    },
+    "--kbq-palette-cyan-80": {
+        "to": "--kbq-plt-teal-4",
+        "deltaE": 0.86
+    },
+    "--kbq-palette-cyan-81": {
+        "to": "--kbq-plt-teal-4",
+        "deltaE": 0.73
+    },
+    "--kbq-palette-cyan-82": {
+        "to": "--kbq-plt-teal-4",
+        "deltaE": 1.11
+    },
+    "--kbq-palette-cyan-83": {
+        "to": "--kbq-plt-teal-4",
+        "deltaE": 1.71
+    },
+    "--kbq-palette-cyan-84": {
+        "to": "--kbq-plt-teal-3",
+        "deltaE": 1.58
+    },
+    "--kbq-palette-cyan-85": {
+        "to": "--kbq-plt-teal-3",
+        "deltaE": 0.91
+    },
+    "--kbq-palette-cyan-86": {
+        "to": "--kbq-plt-teal-3",
+        "deltaE": 0.53
+    },
+    "--kbq-palette-cyan-87": {
+        "to": "--kbq-plt-teal-3",
+        "deltaE": 0.97
+    },
+    "--kbq-palette-cyan-88": {
+        "to": "--kbq-plt-teal-3",
+        "deltaE": 1.72
+    },
+    "--kbq-palette-cyan-89": {
+        "to": "--kbq-plt-teal-2",
+        "deltaE": 2.07
+    },
+    "--kbq-palette-cyan-9": {
+        "to": "--kbq-plt-teal-20",
+        "deltaE": 7.81
+    },
+    "--kbq-palette-cyan-90": {
+        "to": "--kbq-plt-teal-2",
+        "deltaE": 1.27
+    },
+    "--kbq-palette-cyan-91": {
+        "to": "--kbq-plt-teal-2",
+        "deltaE": 0.69
+    },
+    "--kbq-palette-cyan-92": {
+        "to": "--kbq-plt-teal-2",
+        "deltaE": 1.05
+    },
+    "--kbq-palette-cyan-93": {
+        "to": "--kbq-plt-teal-2",
+        "deltaE": 1.92
+    },
+    "--kbq-palette-cyan-94": {
+        "to": "--kbq-plt-teal-1",
+        "deltaE": 2.81
+    },
+    "--kbq-palette-cyan-95": {
+        "to": "--kbq-plt-teal-1",
+        "deltaE": 1.8
+    },
+    "--kbq-palette-cyan-96": {
+        "to": "--kbq-plt-teal-1",
+        "deltaE": 0.94
+    },
+    "--kbq-palette-cyan-97": {
+        "to": "--kbq-plt-teal-1",
+        "deltaE": 1.09
+    },
+    "--kbq-palette-cyan-98": {
+        "to": "--kbq-plt-teal-1",
+        "deltaE": 2.15
+    },
+    "--kbq-palette-cyan-99": {
+        "to": "--kbq-plt-white",
+        "deltaE": 1.43
+    },
+    "--kbq-palette-green-0": {
+        "to": "--kbq-plt-black",
+        "deltaE": 0
+    },
+    "--kbq-palette-green-1": {
+        "to": "--kbq-plt-black",
+        "deltaE": 1.91
+    },
+    "--kbq-palette-green-10": {
+        "to": "--kbq-plt-green-20",
+        "deltaE": 4.87
+    },
+    "--kbq-palette-green-100": {
+        "to": "--kbq-plt-white",
+        "deltaE": 0.03
+    },
+    "--kbq-palette-green-11": {
+        "to": "--kbq-plt-green-20",
+        "deltaE": 4.83
+    },
+    "--kbq-palette-green-12": {
+        "to": "--kbq-plt-green-20",
+        "deltaE": 5.21
+    },
+    "--kbq-palette-green-13": {
+        "to": "--kbq-plt-green-20",
+        "deltaE": 5.89
+    },
+    "--kbq-palette-green-14": {
+        "to": "--kbq-plt-green-19",
+        "deltaE": 5.37
+    },
+    "--kbq-palette-green-15": {
+        "to": "--kbq-plt-green-19",
+        "deltaE": 4.31
+    },
+    "--kbq-palette-green-16": {
+        "to": "--kbq-plt-green-19",
+        "deltaE": 3.52
+    },
+    "--kbq-palette-green-17": {
+        "to": "--kbq-plt-green-19",
+        "deltaE": 3.18
+    },
+    "--kbq-palette-green-18": {
+        "to": "--kbq-plt-green-19",
+        "deltaE": 3.43
+    },
+    "--kbq-palette-green-19": {
+        "to": "--kbq-plt-green-18",
+        "deltaE": 3.46
+    },
+    "--kbq-palette-green-2": {
+        "to": "--kbq-plt-black",
+        "deltaE": 3.68
+    },
+    "--kbq-palette-green-20": {
+        "to": "--kbq-plt-green-18",
+        "deltaE": 2.83
+    },
+    "--kbq-palette-green-21": {
+        "to": "--kbq-plt-green-18",
+        "deltaE": 2.83
+    },
+    "--kbq-palette-green-22": {
+        "to": "--kbq-plt-green-18",
+        "deltaE": 3.44
+    },
+    "--kbq-palette-green-23": {
+        "to": "--kbq-plt-green-18",
+        "deltaE": 4.43
+    },
+    "--kbq-palette-green-24": {
+        "to": "--kbq-plt-green-17",
+        "deltaE": 4.74
+    },
+    "--kbq-palette-green-25": {
+        "to": "--kbq-plt-green-17",
+        "deltaE": 3.56
+    },
+    "--kbq-palette-green-26": {
+        "to": "--kbq-plt-green-17",
+        "deltaE": 2.62
+    },
+    "--kbq-palette-green-27": {
+        "to": "--kbq-plt-green-17",
+        "deltaE": 2.28
+    },
+    "--kbq-palette-green-28": {
+        "to": "--kbq-plt-green-17",
+        "deltaE": 2.78
+    },
+    "--kbq-palette-green-29": {
+        "to": "--kbq-plt-green-16",
+        "deltaE": 2.73
+    },
+    "--kbq-palette-green-3": {
+        "to": "--kbq-plt-black",
+        "deltaE": 5.43
+    },
+    "--kbq-palette-green-30": {
+        "to": "--kbq-plt-green-16",
+        "deltaE": 2.22
+    },
+    "--kbq-palette-green-31": {
+        "to": "--kbq-plt-green-16",
+        "deltaE": 2.64
+    },
+    "--kbq-palette-green-32": {
+        "to": "--kbq-plt-green-15",
+        "deltaE": 2.93
+    },
+    "--kbq-palette-green-33": {
+        "to": "--kbq-plt-green-15",
+        "deltaE": 2.67
+    },
+    "--kbq-palette-green-34": {
+        "to": "--kbq-plt-green-15",
+        "deltaE": 3.2
+    },
+    "--kbq-palette-green-35": {
+        "to": "--kbq-plt-green-14",
+        "deltaE": 3.19
+    },
+    "--kbq-palette-green-36": {
+        "to": "--kbq-plt-green-14",
+        "deltaE": 2.85
+    },
+    "--kbq-palette-green-37": {
+        "to": "--kbq-plt-green-13",
+        "deltaE": 2.42
+    },
+    "--kbq-palette-green-38": {
+        "to": "--kbq-plt-green-13",
+        "deltaE": 1.44
+    },
+    "--kbq-palette-green-39": {
+        "to": "--kbq-plt-green-13",
+        "deltaE": 1.38
+    },
+    "--kbq-palette-green-4": {
+        "to": "--kbq-plt-black",
+        "deltaE": 7.54
+    },
+    "--kbq-palette-green-40": {
+        "to": "--kbq-plt-green-13",
+        "deltaE": 2.26
+    },
+    "--kbq-palette-green-41": {
+        "to": "--kbq-plt-green-12",
+        "deltaE": 2.45
+    },
+    "--kbq-palette-green-42": {
+        "to": "--kbq-plt-green-12",
+        "deltaE": 2.87
+    },
+    "--kbq-palette-green-43": {
+        "to": "--kbq-plt-green-12",
+        "deltaE": 3.65
+    },
+    "--kbq-palette-green-44": {
+        "to": "--kbq-plt-green-12",
+        "deltaE": 4.6
+    },
+    "--kbq-palette-green-45": {
+        "to": "--kbq-plt-green-11",
+        "deltaE": 5.37
+    },
+    "--kbq-palette-green-46": {
+        "to": "--kbq-plt-green-11",
+        "deltaE": 5.98
+    },
+    "--kbq-palette-green-47": {
+        "to": "--kbq-plt-green-11",
+        "deltaE": 6.7
+    },
+    "--kbq-palette-green-48": {
+        "to": "--kbq-plt-green-11",
+        "deltaE": 7.49
+    },
+    "--kbq-palette-green-49": {
+        "to": "--kbq-plt-green-11",
+        "deltaE": 8.34
+    },
+    "--kbq-palette-green-5": {
+        "to": "--kbq-plt-black",
+        "deltaE": 9.95
+    },
+    "--kbq-palette-green-50": {
+        "to": "--kbq-plt-green-10",
+        "deltaE": 9.08
+    },
+    "--kbq-palette-green-51": {
+        "to": "--kbq-plt-green-10",
+        "deltaE": 9.01
+    },
+    "--kbq-palette-green-52": {
+        "to": "--kbq-plt-green-10",
+        "deltaE": 8.94
+    },
+    "--kbq-palette-green-53": {
+        "to": "--kbq-plt-green-10",
+        "deltaE": 8.87
+    },
+    "--kbq-palette-green-54": {
+        "to": "--kbq-plt-green-10",
+        "deltaE": 8.81
+    },
+    "--kbq-palette-green-55": {
+        "to": "--kbq-plt-green-10",
+        "deltaE": 8.75
+    },
+    "--kbq-palette-green-56": {
+        "to": "--kbq-plt-green-10",
+        "deltaE": 8.7
+    },
+    "--kbq-palette-green-57": {
+        "to": "--kbq-plt-green-10",
+        "deltaE": 8.67
+    },
+    "--kbq-palette-green-58": {
+        "to": "--kbq-plt-green-9",
+        "deltaE": 8.59
+    },
+    "--kbq-palette-green-59": {
+        "to": "--kbq-plt-green-9",
+        "deltaE": 8.41
+    },
+    "--kbq-palette-green-6": {
+        "to": "--kbq-plt-green-20",
+        "deltaE": 9.16
+    },
+    "--kbq-palette-green-60": {
+        "to": "--kbq-plt-green-9",
+        "deltaE": 8.24
+    },
+    "--kbq-palette-green-61": {
+        "to": "--kbq-plt-green-9",
+        "deltaE": 8.09
+    },
+    "--kbq-palette-green-62": {
+        "to": "--kbq-plt-green-9",
+        "deltaE": 7.95
+    },
+    "--kbq-palette-green-63": {
+        "to": "--kbq-plt-green-9",
+        "deltaE": 7.84
+    },
+    "--kbq-palette-green-64": {
+        "to": "--kbq-plt-green-9",
+        "deltaE": 7.74
+    },
+    "--kbq-palette-green-65": {
+        "to": "--kbq-plt-green-9",
+        "deltaE": 7.68
+    },
+    "--kbq-palette-green-66": {
+        "to": "--kbq-plt-green-8",
+        "deltaE": 7.48
+    },
+    "--kbq-palette-green-67": {
+        "to": "--kbq-plt-green-8",
+        "deltaE": 7.25
+    },
+    "--kbq-palette-green-68": {
+        "to": "--kbq-plt-green-8",
+        "deltaE": 7.04
+    },
+    "--kbq-palette-green-69": {
+        "to": "--kbq-plt-green-8",
+        "deltaE": 6.87
+    },
+    "--kbq-palette-green-7": {
+        "to": "--kbq-plt-green-20",
+        "deltaE": 7.5
+    },
+    "--kbq-palette-green-70": {
+        "to": "--kbq-plt-green-8",
+        "deltaE": 6.74
+    },
+    "--kbq-palette-green-71": {
+        "to": "--kbq-plt-green-8",
+        "deltaE": 6.65
+    },
+    "--kbq-palette-green-72": {
+        "to": "--kbq-plt-green-7",
+        "deltaE": 6.51
+    },
+    "--kbq-palette-green-73": {
+        "to": "--kbq-plt-green-7",
+        "deltaE": 6.24
+    },
+    "--kbq-palette-green-74": {
+        "to": "--kbq-plt-green-7",
+        "deltaE": 6.01
+    },
+    "--kbq-palette-green-75": {
+        "to": "--kbq-plt-green-7",
+        "deltaE": 5.83
+    },
+    "--kbq-palette-green-76": {
+        "to": "--kbq-plt-green-7",
+        "deltaE": 5.72
+    },
+    "--kbq-palette-green-77": {
+        "to": "--kbq-plt-green-6",
+        "deltaE": 5.61
+    },
+    "--kbq-palette-green-78": {
+        "to": "--kbq-plt-green-6",
+        "deltaE": 5.27
+    },
+    "--kbq-palette-green-79": {
+        "to": "--kbq-plt-green-6",
+        "deltaE": 4.99
+    },
+    "--kbq-palette-green-8": {
+        "to": "--kbq-plt-green-20",
+        "deltaE": 6.31
+    },
+    "--kbq-palette-green-80": {
+        "to": "--kbq-plt-green-6",
+        "deltaE": 4.81
+    },
+    "--kbq-palette-green-81": {
+        "to": "--kbq-plt-green-6",
+        "deltaE": 4.74
+    },
+    "--kbq-palette-green-82": {
+        "to": "--kbq-plt-green-5",
+        "deltaE": 4.52
+    },
+    "--kbq-palette-green-83": {
+        "to": "--kbq-plt-green-5",
+        "deltaE": 4.14
+    },
+    "--kbq-palette-green-84": {
+        "to": "--kbq-plt-green-5",
+        "deltaE": 3.88
+    },
+    "--kbq-palette-green-85": {
+        "to": "--kbq-plt-green-5",
+        "deltaE": 3.81
+    },
+    "--kbq-palette-green-86": {
+        "to": "--kbq-plt-green-4",
+        "deltaE": 3.93
+    },
+    "--kbq-palette-green-87": {
+        "to": "--kbq-plt-green-4",
+        "deltaE": 3.49
+    },
+    "--kbq-palette-green-88": {
+        "to": "--kbq-plt-green-4",
+        "deltaE": 3.29
+    },
+    "--kbq-palette-green-89": {
+        "to": "--kbq-plt-green-4",
+        "deltaE": 3.42
+    },
+    "--kbq-palette-green-9": {
+        "to": "--kbq-plt-green-20",
+        "deltaE": 5.39
+    },
+    "--kbq-palette-green-90": {
+        "to": "--kbq-plt-green-3",
+        "deltaE": 3.2
+    },
+    "--kbq-palette-green-91": {
+        "to": "--kbq-plt-green-3",
+        "deltaE": 2.75
+    },
+    "--kbq-palette-green-92": {
+        "to": "--kbq-plt-green-3",
+        "deltaE": 2.81
+    },
+    "--kbq-palette-green-93": {
+        "to": "--kbq-plt-green-2",
+        "deltaE": 3.21
+    },
+    "--kbq-palette-green-94": {
+        "to": "--kbq-plt-green-2",
+        "deltaE": 2.35
+    },
+    "--kbq-palette-green-95": {
+        "to": "--kbq-plt-green-2",
+        "deltaE": 2.23
+    },
+    "--kbq-palette-green-96": {
+        "to": "--kbq-plt-green-2",
+        "deltaE": 3.11
+    },
+    "--kbq-palette-green-97": {
+        "to": "--kbq-plt-green-1",
+        "deltaE": 2.11
+    },
+    "--kbq-palette-green-98": {
+        "to": "--kbq-plt-green-1",
+        "deltaE": 1.44
+    },
+    "--kbq-palette-green-99": {
+        "to": "--kbq-plt-white",
+        "deltaE": 2.29
+    },
+    "--kbq-palette-grey-0": {
+        "to": "--kbq-plt-black",
+        "deltaE": 0
+    },
+    "--kbq-palette-grey-1": {
+        "to": "--kbq-plt-black",
+        "deltaE": 0.45
+    },
+    "--kbq-palette-grey-10": {
+        "to": "--kbq-plt-black",
+        "deltaE": 6.43
+    },
+    "--kbq-palette-grey-100": {
+        "to": "--kbq-plt-white",
+        "deltaE": 0.03
+    },
+    "--kbq-palette-grey-11": {
+        "to": "--kbq-plt-black",
+        "deltaE": 7.2
+    },
+    "--kbq-palette-grey-12": {
+        "to": "--kbq-plt-slate-20",
+        "deltaE": 7.14
+    },
+    "--kbq-palette-grey-13": {
+        "to": "--kbq-plt-slate-20",
+        "deltaE": 6.42
+    },
+    "--kbq-palette-grey-14": {
+        "to": "--kbq-plt-slate-20",
+        "deltaE": 5.72
+    },
+    "--kbq-palette-grey-15": {
+        "to": "--kbq-plt-slate-20",
+        "deltaE": 5.06
+    },
+    "--kbq-palette-grey-16": {
+        "to": "--kbq-plt-slate-20",
+        "deltaE": 4.45
+    },
+    "--kbq-palette-grey-17": {
+        "to": "--kbq-plt-slate-20",
+        "deltaE": 3.9
+    },
+    "--kbq-palette-grey-18": {
+        "to": "--kbq-plt-slate-20",
+        "deltaE": 3.45
+    },
+    "--kbq-palette-grey-19": {
+        "to": "--kbq-plt-slate-20",
+        "deltaE": 3.13
+    },
+    "--kbq-palette-grey-2": {
+        "to": "--kbq-plt-black",
+        "deltaE": 0.9
+    },
+    "--kbq-palette-grey-20": {
+        "to": "--kbq-plt-slate-20",
+        "deltaE": 3
+    },
+    "--kbq-palette-grey-21": {
+        "to": "--kbq-plt-slate-20",
+        "deltaE": 3.08
+    },
+    "--kbq-palette-grey-22": {
+        "to": "--kbq-plt-slate-20",
+        "deltaE": 3.34
+    },
+    "--kbq-palette-grey-23": {
+        "to": "--kbq-plt-slate-20",
+        "deltaE": 3.76
+    },
+    "--kbq-palette-grey-24": {
+        "to": "--kbq-plt-slate-19",
+        "deltaE": 3.62
+    },
+    "--kbq-palette-grey-25": {
+        "to": "--kbq-plt-slate-19",
+        "deltaE": 3.36
+    },
+    "--kbq-palette-grey-26": {
+        "to": "--kbq-plt-slate-19",
+        "deltaE": 3.27
+    },
+    "--kbq-palette-grey-27": {
+        "to": "--kbq-plt-slate-19",
+        "deltaE": 3.37
+    },
+    "--kbq-palette-grey-28": {
+        "to": "--kbq-plt-slate-19",
+        "deltaE": 3.65
+    },
+    "--kbq-palette-grey-29": {
+        "to": "--kbq-plt-slate-19",
+        "deltaE": 4.07
+    },
+    "--kbq-palette-grey-3": {
+        "to": "--kbq-plt-black",
+        "deltaE": 1.34
+    },
+    "--kbq-palette-grey-30": {
+        "to": "--kbq-plt-slate-18",
+        "deltaE": 4.04
+    },
+    "--kbq-palette-grey-31": {
+        "to": "--kbq-plt-slate-18",
+        "deltaE": 3.91
+    },
+    "--kbq-palette-grey-32": {
+        "to": "--kbq-plt-slate-18",
+        "deltaE": 3.94
+    },
+    "--kbq-palette-grey-33": {
+        "to": "--kbq-plt-slate-18",
+        "deltaE": 4.14
+    },
+    "--kbq-palette-grey-34": {
+        "to": "--kbq-plt-slate-18",
+        "deltaE": 4.47
+    },
+    "--kbq-palette-grey-35": {
+        "to": "--kbq-plt-slate-18",
+        "deltaE": 4.93
+    },
+    "--kbq-palette-grey-36": {
+        "to": "--kbq-plt-slate-18",
+        "deltaE": 5.48
+    },
+    "--kbq-palette-grey-37": {
+        "to": "--kbq-plt-slate-18",
+        "deltaE": 6.09
+    },
+    "--kbq-palette-grey-38": {
+        "to": "--kbq-plt-slate-17",
+        "deltaE": 6.15
+    },
+    "--kbq-palette-grey-39": {
+        "to": "--kbq-plt-slate-17",
+        "deltaE": 5.77
+    },
+    "--kbq-palette-grey-4": {
+        "to": "--kbq-plt-black",
+        "deltaE": 1.81
+    },
+    "--kbq-palette-grey-40": {
+        "to": "--kbq-plt-slate-17",
+        "deltaE": 5.49
+    },
+    "--kbq-palette-grey-41": {
+        "to": "--kbq-plt-slate-17",
+        "deltaE": 5.34
+    },
+    "--kbq-palette-grey-42": {
+        "to": "--kbq-plt-slate-17",
+        "deltaE": 5.32
+    },
+    "--kbq-palette-grey-43": {
+        "to": "--kbq-plt-slate-17",
+        "deltaE": 5.44
+    },
+    "--kbq-palette-grey-44": {
+        "to": "--kbq-plt-slate-17",
+        "deltaE": 5.69
+    },
+    "--kbq-palette-grey-45": {
+        "to": "--kbq-plt-slate-17",
+        "deltaE": 6.07
+    },
+    "--kbq-palette-grey-46": {
+        "to": "--kbq-plt-slate-16",
+        "deltaE": 5.96
+    },
+    "--kbq-palette-grey-47": {
+        "to": "--kbq-plt-slate-16",
+        "deltaE": 5.95
+    },
+    "--kbq-palette-grey-48": {
+        "to": "--kbq-plt-slate-16",
+        "deltaE": 6.08
+    },
+    "--kbq-palette-grey-49": {
+        "to": "--kbq-plt-slate-16",
+        "deltaE": 6.34
+    },
+    "--kbq-palette-grey-5": {
+        "to": "--kbq-plt-black",
+        "deltaE": 2.39
+    },
+    "--kbq-palette-grey-50": {
+        "to": "--kbq-plt-slate-15",
+        "deltaE": 6.59
+    },
+    "--kbq-palette-grey-51": {
+        "to": "--kbq-plt-slate-15",
+        "deltaE": 6.17
+    },
+    "--kbq-palette-grey-52": {
+        "to": "--kbq-plt-slate-15",
+        "deltaE": 5.94
+    },
+    "--kbq-palette-grey-53": {
+        "to": "--kbq-plt-slate-15",
+        "deltaE": 5.91
+    },
+    "--kbq-palette-grey-54": {
+        "to": "--kbq-plt-slate-14",
+        "deltaE": 6.04
+    },
+    "--kbq-palette-grey-55": {
+        "to": "--kbq-plt-slate-14",
+        "deltaE": 5.67
+    },
+    "--kbq-palette-grey-56": {
+        "to": "--kbq-plt-slate-14",
+        "deltaE": 5.48
+    },
+    "--kbq-palette-grey-57": {
+        "to": "--kbq-plt-slate-14",
+        "deltaE": 5.48
+    },
+    "--kbq-palette-grey-58": {
+        "to": "--kbq-plt-slate-13",
+        "deltaE": 5.47
+    },
+    "--kbq-palette-grey-59": {
+        "to": "--kbq-plt-slate-13",
+        "deltaE": 5.15
+    },
+    "--kbq-palette-grey-6": {
+        "to": "--kbq-plt-black",
+        "deltaE": 3.06
+    },
+    "--kbq-palette-grey-60": {
+        "to": "--kbq-plt-slate-13",
+        "deltaE": 4.99
+    },
+    "--kbq-palette-grey-61": {
+        "to": "--kbq-plt-slate-13",
+        "deltaE": 5.02
+    },
+    "--kbq-palette-grey-62": {
+        "to": "--kbq-plt-slate-12",
+        "deltaE": 4.87
+    },
+    "--kbq-palette-grey-63": {
+        "to": "--kbq-plt-slate-12",
+        "deltaE": 4.6
+    },
+    "--kbq-palette-grey-64": {
+        "to": "--kbq-plt-slate-12",
+        "deltaE": 4.51
+    },
+    "--kbq-palette-grey-65": {
+        "to": "--kbq-plt-slate-12",
+        "deltaE": 4.6
+    },
+    "--kbq-palette-grey-66": {
+        "to": "--kbq-plt-slate-11",
+        "deltaE": 4.25
+    },
+    "--kbq-palette-grey-67": {
+        "to": "--kbq-plt-slate-11",
+        "deltaE": 4.06
+    },
+    "--kbq-palette-grey-68": {
+        "to": "--kbq-plt-slate-11",
+        "deltaE": 4.05
+    },
+    "--kbq-palette-grey-69": {
+        "to": "--kbq-plt-slate-10",
+        "deltaE": 3.92
+    },
+    "--kbq-palette-grey-7": {
+        "to": "--kbq-plt-black",
+        "deltaE": 3.83
+    },
+    "--kbq-palette-grey-70": {
+        "to": "--kbq-plt-slate-10",
+        "deltaE": 3.67
+    },
+    "--kbq-palette-grey-71": {
+        "to": "--kbq-plt-slate-10",
+        "deltaE": 3.6
+    },
+    "--kbq-palette-grey-72": {
+        "to": "--kbq-plt-slate-9",
+        "deltaE": 3.63
+    },
+    "--kbq-palette-grey-73": {
+        "to": "--kbq-plt-slate-9",
+        "deltaE": 3.3
+    },
+    "--kbq-palette-grey-74": {
+        "to": "--kbq-plt-slate-9",
+        "deltaE": 3.15
+    },
+    "--kbq-palette-grey-75": {
+        "to": "--kbq-plt-slate-9",
+        "deltaE": 3.19
+    },
+    "--kbq-palette-grey-76": {
+        "to": "--kbq-plt-slate-8",
+        "deltaE": 2.94
+    },
+    "--kbq-palette-grey-77": {
+        "to": "--kbq-plt-slate-8",
+        "deltaE": 2.74
+    },
+    "--kbq-palette-grey-78": {
+        "to": "--kbq-plt-slate-8",
+        "deltaE": 2.74
+    },
+    "--kbq-palette-grey-79": {
+        "to": "--kbq-plt-slate-7",
+        "deltaE": 2.59
+    },
+    "--kbq-palette-grey-8": {
+        "to": "--kbq-plt-black",
+        "deltaE": 4.69
+    },
+    "--kbq-palette-grey-80": {
+        "to": "--kbq-plt-slate-7",
+        "deltaE": 2.35
+    },
+    "--kbq-palette-grey-81": {
+        "to": "--kbq-plt-slate-7",
+        "deltaE": 2.34
+    },
+    "--kbq-palette-grey-82": {
+        "to": "--kbq-plt-slate-6",
+        "deltaE": 2.24
+    },
+    "--kbq-palette-grey-83": {
+        "to": "--kbq-plt-slate-6",
+        "deltaE": 1.98
+    },
+    "--kbq-palette-grey-84": {
+        "to": "--kbq-plt-slate-6",
+        "deltaE": 1.97
+    },
+    "--kbq-palette-grey-85": {
+        "to": "--kbq-plt-slate-5",
+        "deltaE": 1.92
+    },
+    "--kbq-palette-grey-86": {
+        "to": "--kbq-plt-slate-5",
+        "deltaE": 1.64
+    },
+    "--kbq-palette-grey-87": {
+        "to": "--kbq-plt-slate-5",
+        "deltaE": 1.64
+    },
+    "--kbq-palette-grey-88": {
+        "to": "--kbq-plt-slate-4",
+        "deltaE": 1.49
+    },
+    "--kbq-palette-grey-89": {
+        "to": "--kbq-plt-slate-4",
+        "deltaE": 1.34
+    },
+    "--kbq-palette-grey-9": {
+        "to": "--kbq-plt-black",
+        "deltaE": 5.59
+    },
+    "--kbq-palette-grey-90": {
+        "to": "--kbq-plt-slate-3",
+        "deltaE": 1.36
+    },
+    "--kbq-palette-grey-91": {
+        "to": "--kbq-plt-slate-3",
+        "deltaE": 1.11
+    },
+    "--kbq-palette-grey-92": {
+        "to": "--kbq-plt-slate-3",
+        "deltaE": 1.24
+    },
+    "--kbq-palette-grey-93": {
+        "to": "--kbq-plt-slate-2",
+        "deltaE": 0.93
+    },
+    "--kbq-palette-grey-94": {
+        "to": "--kbq-plt-slate-2",
+        "deltaE": 0.96
+    },
+    "--kbq-palette-grey-95": {
+        "to": "--kbq-plt-slate-1",
+        "deltaE": 0.98
+    },
+    "--kbq-palette-grey-96": {
+        "to": "--kbq-plt-slate-1",
+        "deltaE": 0.75
+    },
+    "--kbq-palette-grey-97": {
+        "to": "--kbq-plt-slate-1",
+        "deltaE": 1.01
+    },
+    "--kbq-palette-grey-98": {
+        "to": "--kbq-plt-white",
+        "deltaE": 1.3
+    },
+    "--kbq-palette-grey-99": {
+        "to": "--kbq-plt-white",
+        "deltaE": 0.66
+    },
+    "--kbq-palette-orange-0": {
+        "to": "--kbq-plt-black",
+        "deltaE": 0
+    },
+    "--kbq-palette-orange-1": {
+        "to": "--kbq-plt-black",
+        "deltaE": 1.29
+    },
+    "--kbq-palette-orange-10": {
+        "to": "--kbq-plt-orange-20",
+        "deltaE": 5.13
+    },
+    "--kbq-palette-orange-100": {
+        "to": "--kbq-plt-white",
+        "deltaE": 0.03
+    },
+    "--kbq-palette-orange-11": {
+        "to": "--kbq-plt-orange-20",
+        "deltaE": 4.48
+    },
+    "--kbq-palette-orange-12": {
+        "to": "--kbq-plt-orange-20",
+        "deltaE": 4.29
+    },
+    "--kbq-palette-orange-13": {
+        "to": "--kbq-plt-orange-20",
+        "deltaE": 4.52
+    },
+    "--kbq-palette-orange-14": {
+        "to": "--kbq-plt-orange-20",
+        "deltaE": 5.08
+    },
+    "--kbq-palette-orange-15": {
+        "to": "--kbq-plt-orange-20",
+        "deltaE": 5.85
+    },
+    "--kbq-palette-orange-16": {
+        "to": "--kbq-plt-orange-19",
+        "deltaE": 4.95
+    },
+    "--kbq-palette-orange-17": {
+        "to": "--kbq-plt-orange-19",
+        "deltaE": 3.7
+    },
+    "--kbq-palette-orange-18": {
+        "to": "--kbq-plt-orange-19",
+        "deltaE": 2.52
+    },
+    "--kbq-palette-orange-19": {
+        "to": "--kbq-plt-orange-19",
+        "deltaE": 1.45
+    },
+    "--kbq-palette-orange-2": {
+        "to": "--kbq-plt-black",
+        "deltaE": 2.52
+    },
+    "--kbq-palette-orange-20": {
+        "to": "--kbq-plt-orange-19",
+        "deltaE": 0.93
+    },
+    "--kbq-palette-orange-21": {
+        "to": "--kbq-plt-orange-19",
+        "deltaE": 1.58
+    },
+    "--kbq-palette-orange-22": {
+        "to": "--kbq-plt-orange-18",
+        "deltaE": 2.5
+    },
+    "--kbq-palette-orange-23": {
+        "to": "--kbq-plt-orange-18",
+        "deltaE": 1.34
+    },
+    "--kbq-palette-orange-24": {
+        "to": "--kbq-plt-orange-18",
+        "deltaE": 0.38
+    },
+    "--kbq-palette-orange-25": {
+        "to": "--kbq-plt-orange-18",
+        "deltaE": 1.1
+    },
+    "--kbq-palette-orange-26": {
+        "to": "--kbq-plt-orange-18",
+        "deltaE": 2.24
+    },
+    "--kbq-palette-orange-27": {
+        "to": "--kbq-plt-orange-18",
+        "deltaE": 3.39
+    },
+    "--kbq-palette-orange-28": {
+        "to": "--kbq-plt-orange-18",
+        "deltaE": 4.56
+    },
+    "--kbq-palette-orange-29": {
+        "to": "--kbq-plt-orange-17",
+        "deltaE": 4.52
+    },
+    "--kbq-palette-orange-3": {
+        "to": "--kbq-plt-black",
+        "deltaE": 3.87
+    },
+    "--kbq-palette-orange-30": {
+        "to": "--kbq-plt-orange-17",
+        "deltaE": 3.78
+    },
+    "--kbq-palette-orange-31": {
+        "to": "--kbq-plt-orange-17",
+        "deltaE": 3.29
+    },
+    "--kbq-palette-orange-32": {
+        "to": "--kbq-plt-orange-17",
+        "deltaE": 3.2
+    },
+    "--kbq-palette-orange-33": {
+        "to": "--kbq-plt-orange-17",
+        "deltaE": 3.54
+    },
+    "--kbq-palette-orange-34": {
+        "to": "--kbq-plt-orange-17",
+        "deltaE": 4.22
+    },
+    "--kbq-palette-orange-35": {
+        "to": "--kbq-plt-orange-16",
+        "deltaE": 4.74
+    },
+    "--kbq-palette-orange-36": {
+        "to": "--kbq-plt-orange-16",
+        "deltaE": 4.81
+    },
+    "--kbq-palette-orange-37": {
+        "to": "--kbq-plt-orange-16",
+        "deltaE": 5.2
+    },
+    "--kbq-palette-orange-38": {
+        "to": "--kbq-plt-orange-16",
+        "deltaE": 5.84
+    },
+    "--kbq-palette-orange-39": {
+        "to": "--kbq-plt-orange-15",
+        "deltaE": 6.58
+    },
+    "--kbq-palette-orange-4": {
+        "to": "--kbq-plt-black",
+        "deltaE": 5.55
+    },
+    "--kbq-palette-orange-40": {
+        "to": "--kbq-plt-orange-15",
+        "deltaE": 6.79
+    },
+    "--kbq-palette-orange-41": {
+        "to": "--kbq-plt-orange-14",
+        "deltaE": 7.06
+    },
+    "--kbq-palette-orange-42": {
+        "to": "--kbq-plt-orange-14",
+        "deltaE": 6.95
+    },
+    "--kbq-palette-orange-43": {
+        "to": "--kbq-plt-orange-14",
+        "deltaE": 7.05
+    },
+    "--kbq-palette-orange-44": {
+        "to": "--kbq-plt-orange-14",
+        "deltaE": 7.34
+    },
+    "--kbq-palette-orange-45": {
+        "to": "--kbq-plt-orange-13",
+        "deltaE": 7.73
+    },
+    "--kbq-palette-orange-46": {
+        "to": "--kbq-plt-orange-13",
+        "deltaE": 7.79
+    },
+    "--kbq-palette-orange-47": {
+        "to": "--kbq-plt-orange-13",
+        "deltaE": 8
+    },
+    "--kbq-palette-orange-48": {
+        "to": "--kbq-plt-orange-12",
+        "deltaE": 8.02
+    },
+    "--kbq-palette-orange-49": {
+        "to": "--kbq-plt-orange-12",
+        "deltaE": 8.03
+    },
+    "--kbq-palette-orange-5": {
+        "to": "--kbq-plt-black",
+        "deltaE": 7.54
+    },
+    "--kbq-palette-orange-50": {
+        "to": "--kbq-plt-orange-12",
+        "deltaE": 8.18
+    },
+    "--kbq-palette-orange-51": {
+        "to": "--kbq-plt-orange-12",
+        "deltaE": 7.74
+    },
+    "--kbq-palette-orange-52": {
+        "to": "--kbq-plt-orange-12",
+        "deltaE": 7.33
+    },
+    "--kbq-palette-orange-53": {
+        "to": "--kbq-plt-orange-12",
+        "deltaE": 6.99
+    },
+    "--kbq-palette-orange-54": {
+        "to": "--kbq-plt-orange-12",
+        "deltaE": 6.73
+    },
+    "--kbq-palette-orange-55": {
+        "to": "--kbq-plt-orange-12",
+        "deltaE": 6.55
+    },
+    "--kbq-palette-orange-56": {
+        "to": "--kbq-plt-orange-11",
+        "deltaE": 6.45
+    },
+    "--kbq-palette-orange-57": {
+        "to": "--kbq-plt-orange-11",
+        "deltaE": 6.15
+    },
+    "--kbq-palette-orange-58": {
+        "to": "--kbq-plt-orange-11",
+        "deltaE": 5.92
+    },
+    "--kbq-palette-orange-59": {
+        "to": "--kbq-plt-orange-10",
+        "deltaE": 5.7
+    },
+    "--kbq-palette-orange-6": {
+        "to": "--kbq-plt-black",
+        "deltaE": 9.75
+    },
+    "--kbq-palette-orange-60": {
+        "to": "--kbq-plt-orange-10",
+        "deltaE": 5.23
+    },
+    "--kbq-palette-orange-61": {
+        "to": "--kbq-plt-orange-10",
+        "deltaE": 4.82
+    },
+    "--kbq-palette-orange-62": {
+        "to": "--kbq-plt-orange-10",
+        "deltaE": 4.49
+    },
+    "--kbq-palette-orange-63": {
+        "to": "--kbq-plt-orange-10",
+        "deltaE": 4.28
+    },
+    "--kbq-palette-orange-64": {
+        "to": "--kbq-plt-orange-10",
+        "deltaE": 4.2
+    },
+    "--kbq-palette-orange-65": {
+        "to": "--kbq-plt-orange-9",
+        "deltaE": 4.19
+    },
+    "--kbq-palette-orange-66": {
+        "to": "--kbq-plt-orange-9",
+        "deltaE": 3.74
+    },
+    "--kbq-palette-orange-67": {
+        "to": "--kbq-plt-orange-9",
+        "deltaE": 3.41
+    },
+    "--kbq-palette-orange-68": {
+        "to": "--kbq-plt-orange-9",
+        "deltaE": 3.24
+    },
+    "--kbq-palette-orange-69": {
+        "to": "--kbq-plt-orange-9",
+        "deltaE": 3.26
+    },
+    "--kbq-palette-orange-7": {
+        "to": "--kbq-plt-orange-20",
+        "deltaE": 9.03
+    },
+    "--kbq-palette-orange-70": {
+        "to": "--kbq-plt-orange-8",
+        "deltaE": 3.34
+    },
+    "--kbq-palette-orange-71": {
+        "to": "--kbq-plt-orange-8",
+        "deltaE": 2.9
+    },
+    "--kbq-palette-orange-72": {
+        "to": "--kbq-plt-orange-8",
+        "deltaE": 2.64
+    },
+    "--kbq-palette-orange-73": {
+        "to": "--kbq-plt-orange-8",
+        "deltaE": 2.63
+    },
+    "--kbq-palette-orange-74": {
+        "to": "--kbq-plt-orange-8",
+        "deltaE": 2.88
+    },
+    "--kbq-palette-orange-75": {
+        "to": "--kbq-plt-orange-7",
+        "deltaE": 2.5
+    },
+    "--kbq-palette-orange-76": {
+        "to": "--kbq-plt-orange-7",
+        "deltaE": 2.22
+    },
+    "--kbq-palette-orange-77": {
+        "to": "--kbq-plt-orange-7",
+        "deltaE": 2.26
+    },
+    "--kbq-palette-orange-78": {
+        "to": "--kbq-plt-orange-7",
+        "deltaE": 2.62
+    },
+    "--kbq-palette-orange-79": {
+        "to": "--kbq-plt-orange-6",
+        "deltaE": 2.12
+    },
+    "--kbq-palette-orange-8": {
+        "to": "--kbq-plt-orange-20",
+        "deltaE": 7.49
+    },
+    "--kbq-palette-orange-80": {
+        "to": "--kbq-plt-orange-6",
+        "deltaE": 1.87
+    },
+    "--kbq-palette-orange-81": {
+        "to": "--kbq-plt-orange-6",
+        "deltaE": 2.05
+    },
+    "--kbq-palette-orange-82": {
+        "to": "--kbq-plt-orange-5",
+        "deltaE": 2.35
+    },
+    "--kbq-palette-orange-83": {
+        "to": "--kbq-plt-orange-5",
+        "deltaE": 1.83
+    },
+    "--kbq-palette-orange-84": {
+        "to": "--kbq-plt-orange-5",
+        "deltaE": 1.73
+    },
+    "--kbq-palette-orange-85": {
+        "to": "--kbq-plt-orange-5",
+        "deltaE": 2.12
+    },
+    "--kbq-palette-orange-86": {
+        "to": "--kbq-plt-orange-4",
+        "deltaE": 1.93
+    },
+    "--kbq-palette-orange-87": {
+        "to": "--kbq-plt-orange-4",
+        "deltaE": 1.57
+    },
+    "--kbq-palette-orange-88": {
+        "to": "--kbq-plt-orange-4",
+        "deltaE": 1.83
+    },
+    "--kbq-palette-orange-89": {
+        "to": "--kbq-plt-orange-3",
+        "deltaE": 2.21
+    },
+    "--kbq-palette-orange-9": {
+        "to": "--kbq-plt-orange-20",
+        "deltaE": 6.16
+    },
+    "--kbq-palette-orange-90": {
+        "to": "--kbq-plt-orange-3",
+        "deltaE": 1.52
+    },
+    "--kbq-palette-orange-91": {
+        "to": "--kbq-plt-orange-3",
+        "deltaE": 1.5
+    },
+    "--kbq-palette-orange-92": {
+        "to": "--kbq-plt-orange-3",
+        "deltaE": 2.23
+    },
+    "--kbq-palette-orange-93": {
+        "to": "--kbq-plt-orange-2",
+        "deltaE": 1.65
+    },
+    "--kbq-palette-orange-94": {
+        "to": "--kbq-plt-orange-2",
+        "deltaE": 1.17
+    },
+    "--kbq-palette-orange-95": {
+        "to": "--kbq-plt-orange-2",
+        "deltaE": 1.82
+    },
+    "--kbq-palette-orange-96": {
+        "to": "--kbq-plt-orange-1",
+        "deltaE": 2.23
+    },
+    "--kbq-palette-orange-97": {
+        "to": "--kbq-plt-orange-1",
+        "deltaE": 1.13
+    },
+    "--kbq-palette-orange-98": {
+        "to": "--kbq-plt-orange-1",
+        "deltaE": 1.27
+    },
+    "--kbq-palette-orange-99": {
+        "to": "--kbq-plt-white",
+        "deltaE": 1.58
+    },
+    "--kbq-palette-purple-0": {
+        "to": "--kbq-plt-black",
+        "deltaE": 0
+    },
+    "--kbq-palette-purple-1": {
+        "to": "--kbq-plt-black",
+        "deltaE": 1.96
+    },
+    "--kbq-palette-purple-10": {
+        "to": "--kbq-plt-purple-20",
+        "deltaE": 9.75
+    },
+    "--kbq-palette-purple-100": {
+        "to": "--kbq-plt-white",
+        "deltaE": 0.03
+    },
+    "--kbq-palette-purple-11": {
+        "to": "--kbq-plt-purple-20",
+        "deltaE": 9.96
+    },
+    "--kbq-palette-purple-12": {
+        "to": "--kbq-plt-purple-20",
+        "deltaE": 10.17
+    },
+    "--kbq-palette-purple-13": {
+        "to": "--kbq-plt-purple-20",
+        "deltaE": 10.34
+    },
+    "--kbq-palette-purple-14": {
+        "to": "--kbq-plt-purple-20",
+        "deltaE": 10.54
+    },
+    "--kbq-palette-purple-15": {
+        "to": "--kbq-plt-purple-19",
+        "deltaE": 10.45
+    },
+    "--kbq-palette-purple-16": {
+        "to": "--kbq-plt-purple-19",
+        "deltaE": 9.81
+    },
+    "--kbq-palette-purple-17": {
+        "to": "--kbq-plt-purple-19",
+        "deltaE": 9.21
+    },
+    "--kbq-palette-purple-18": {
+        "to": "--kbq-plt-purple-19",
+        "deltaE": 8.68
+    },
+    "--kbq-palette-purple-19": {
+        "to": "--kbq-plt-purple-19",
+        "deltaE": 8.2
+    },
+    "--kbq-palette-purple-2": {
+        "to": "--kbq-plt-black",
+        "deltaE": 3.75
+    },
+    "--kbq-palette-purple-20": {
+        "to": "--kbq-plt-purple-19",
+        "deltaE": 7.79
+    },
+    "--kbq-palette-purple-21": {
+        "to": "--kbq-plt-purple-19",
+        "deltaE": 7.45
+    },
+    "--kbq-palette-purple-22": {
+        "to": "--kbq-plt-purple-19",
+        "deltaE": 7.18
+    },
+    "--kbq-palette-purple-23": {
+        "to": "--kbq-plt-purple-19",
+        "deltaE": 7
+    },
+    "--kbq-palette-purple-24": {
+        "to": "--kbq-plt-purple-19",
+        "deltaE": 6.9
+    },
+    "--kbq-palette-purple-25": {
+        "to": "--kbq-plt-purple-19",
+        "deltaE": 6.89
+    },
+    "--kbq-palette-purple-26": {
+        "to": "--kbq-plt-purple-19",
+        "deltaE": 6.96
+    },
+    "--kbq-palette-purple-27": {
+        "to": "--kbq-plt-purple-18",
+        "deltaE": 6.94
+    },
+    "--kbq-palette-purple-28": {
+        "to": "--kbq-plt-purple-18",
+        "deltaE": 6.39
+    },
+    "--kbq-palette-purple-29": {
+        "to": "--kbq-plt-purple-18",
+        "deltaE": 5.89
+    },
+    "--kbq-palette-purple-3": {
+        "to": "--kbq-plt-black",
+        "deltaE": 5.49
+    },
+    "--kbq-palette-purple-30": {
+        "to": "--kbq-plt-purple-18",
+        "deltaE": 5.45
+    },
+    "--kbq-palette-purple-31": {
+        "to": "--kbq-plt-purple-18",
+        "deltaE": 5.1
+    },
+    "--kbq-palette-purple-32": {
+        "to": "--kbq-plt-purple-18",
+        "deltaE": 4.84
+    },
+    "--kbq-palette-purple-33": {
+        "to": "--kbq-plt-purple-18",
+        "deltaE": 4.7
+    },
+    "--kbq-palette-purple-34": {
+        "to": "--kbq-plt-purple-18",
+        "deltaE": 4.68
+    },
+    "--kbq-palette-purple-35": {
+        "to": "--kbq-plt-purple-18",
+        "deltaE": 4.78
+    },
+    "--kbq-palette-purple-36": {
+        "to": "--kbq-plt-purple-18",
+        "deltaE": 4.99
+    },
+    "--kbq-palette-purple-37": {
+        "to": "--kbq-plt-purple-18",
+        "deltaE": 5.31
+    },
+    "--kbq-palette-purple-38": {
+        "to": "--kbq-plt-purple-18",
+        "deltaE": 5.71
+    },
+    "--kbq-palette-purple-39": {
+        "to": "--kbq-plt-purple-18",
+        "deltaE": 6.18
+    },
+    "--kbq-palette-purple-4": {
+        "to": "--kbq-plt-black",
+        "deltaE": 7.42
+    },
+    "--kbq-palette-purple-40": {
+        "to": "--kbq-plt-purple-18",
+        "deltaE": 6.7
+    },
+    "--kbq-palette-purple-41": {
+        "to": "--kbq-plt-purple-17",
+        "deltaE": 6.55
+    },
+    "--kbq-palette-purple-42": {
+        "to": "--kbq-plt-purple-17",
+        "deltaE": 6.11
+    },
+    "--kbq-palette-purple-43": {
+        "to": "--kbq-plt-purple-17",
+        "deltaE": 5.73
+    },
+    "--kbq-palette-purple-44": {
+        "to": "--kbq-plt-purple-17",
+        "deltaE": 5.44
+    },
+    "--kbq-palette-purple-45": {
+        "to": "--kbq-plt-purple-17",
+        "deltaE": 5.24
+    },
+    "--kbq-palette-purple-46": {
+        "to": "--kbq-plt-purple-17",
+        "deltaE": 5.15
+    },
+    "--kbq-palette-purple-47": {
+        "to": "--kbq-plt-purple-17",
+        "deltaE": 5.18
+    },
+    "--kbq-palette-purple-48": {
+        "to": "--kbq-plt-purple-17",
+        "deltaE": 5.33
+    },
+    "--kbq-palette-purple-49": {
+        "to": "--kbq-plt-purple-16",
+        "deltaE": 5.35
+    },
+    "--kbq-palette-purple-5": {
+        "to": "--kbq-plt-black",
+        "deltaE": 9.57
+    },
+    "--kbq-palette-purple-50": {
+        "to": "--kbq-plt-purple-16",
+        "deltaE": 5.01
+    },
+    "--kbq-palette-purple-51": {
+        "to": "--kbq-plt-purple-16",
+        "deltaE": 4.4
+    },
+    "--kbq-palette-purple-52": {
+        "to": "--kbq-plt-purple-16",
+        "deltaE": 3.81
+    },
+    "--kbq-palette-purple-53": {
+        "to": "--kbq-plt-purple-16",
+        "deltaE": 3.27
+    },
+    "--kbq-palette-purple-54": {
+        "to": "--kbq-plt-purple-16",
+        "deltaE": 2.86
+    },
+    "--kbq-palette-purple-55": {
+        "to": "--kbq-plt-purple-16",
+        "deltaE": 2.69
+    },
+    "--kbq-palette-purple-56": {
+        "to": "--kbq-plt-purple-16",
+        "deltaE": 2.83
+    },
+    "--kbq-palette-purple-57": {
+        "to": "--kbq-plt-purple-15",
+        "deltaE": 2.11
+    },
+    "--kbq-palette-purple-58": {
+        "to": "--kbq-plt-purple-15",
+        "deltaE": 1.1
+    },
+    "--kbq-palette-purple-59": {
+        "to": "--kbq-plt-purple-15",
+        "deltaE": 0.38
+    },
+    "--kbq-palette-purple-6": {
+        "to": "--kbq-plt-purple-20",
+        "deltaE": 11.43
+    },
+    "--kbq-palette-purple-60": {
+        "to": "--kbq-plt-purple-15",
+        "deltaE": 1.2
+    },
+    "--kbq-palette-purple-61": {
+        "to": "--kbq-plt-purple-14",
+        "deltaE": 2.25
+    },
+    "--kbq-palette-purple-62": {
+        "to": "--kbq-plt-purple-14",
+        "deltaE": 1.14
+    },
+    "--kbq-palette-purple-63": {
+        "to": "--kbq-plt-purple-14",
+        "deltaE": 0.28
+    },
+    "--kbq-palette-purple-64": {
+        "to": "--kbq-plt-purple-14",
+        "deltaE": 1.19
+    },
+    "--kbq-palette-purple-65": {
+        "to": "--kbq-plt-purple-13",
+        "deltaE": 1.76
+    },
+    "--kbq-palette-purple-66": {
+        "to": "--kbq-plt-purple-13",
+        "deltaE": 0.82
+    },
+    "--kbq-palette-purple-67": {
+        "to": "--kbq-plt-purple-13",
+        "deltaE": 0.93
+    },
+    "--kbq-palette-purple-68": {
+        "to": "--kbq-plt-purple-13",
+        "deltaE": 1.91
+    },
+    "--kbq-palette-purple-69": {
+        "to": "--kbq-plt-purple-12",
+        "deltaE": 1.35
+    },
+    "--kbq-palette-purple-7": {
+        "to": "--kbq-plt-purple-20",
+        "deltaE": 10.47
+    },
+    "--kbq-palette-purple-70": {
+        "to": "--kbq-plt-purple-12",
+        "deltaE": 1.16
+    },
+    "--kbq-palette-purple-71": {
+        "to": "--kbq-plt-purple-12",
+        "deltaE": 1.87
+    },
+    "--kbq-palette-purple-72": {
+        "to": "--kbq-plt-purple-11",
+        "deltaE": 1.61
+    },
+    "--kbq-palette-purple-73": {
+        "to": "--kbq-plt-purple-11",
+        "deltaE": 1.49
+    },
+    "--kbq-palette-purple-74": {
+        "to": "--kbq-plt-purple-11",
+        "deltaE": 2.13
+    },
+    "--kbq-palette-purple-75": {
+        "to": "--kbq-plt-purple-10",
+        "deltaE": 1.82
+    },
+    "--kbq-palette-purple-76": {
+        "to": "--kbq-plt-purple-10",
+        "deltaE": 1.87
+    },
+    "--kbq-palette-purple-77": {
+        "to": "--kbq-plt-purple-9",
+        "deltaE": 2.34
+    },
+    "--kbq-palette-purple-78": {
+        "to": "--kbq-plt-purple-9",
+        "deltaE": 1.97
+    },
+    "--kbq-palette-purple-79": {
+        "to": "--kbq-plt-purple-9",
+        "deltaE": 2.25
+    },
+    "--kbq-palette-purple-8": {
+        "to": "--kbq-plt-purple-20",
+        "deltaE": 9.87
+    },
+    "--kbq-palette-purple-80": {
+        "to": "--kbq-plt-purple-8",
+        "deltaE": 2.32
+    },
+    "--kbq-palette-purple-81": {
+        "to": "--kbq-plt-purple-8",
+        "deltaE": 2.21
+    },
+    "--kbq-palette-purple-82": {
+        "to": "--kbq-plt-purple-7",
+        "deltaE": 2.66
+    },
+    "--kbq-palette-purple-83": {
+        "to": "--kbq-plt-purple-7",
+        "deltaE": 2.26
+    },
+    "--kbq-palette-purple-84": {
+        "to": "--kbq-plt-purple-7",
+        "deltaE": 2.49
+    },
+    "--kbq-palette-purple-85": {
+        "to": "--kbq-plt-purple-6",
+        "deltaE": 2.37
+    },
+    "--kbq-palette-purple-86": {
+        "to": "--kbq-plt-purple-6",
+        "deltaE": 2.29
+    },
+    "--kbq-palette-purple-87": {
+        "to": "--kbq-plt-purple-5",
+        "deltaE": 2.57
+    },
+    "--kbq-palette-purple-88": {
+        "to": "--kbq-plt-purple-5",
+        "deltaE": 1.94
+    },
+    "--kbq-palette-purple-89": {
+        "to": "--kbq-plt-purple-5",
+        "deltaE": 2.1
+    },
+    "--kbq-palette-purple-9": {
+        "to": "--kbq-plt-purple-20",
+        "deltaE": 9.66
+    },
+    "--kbq-palette-purple-90": {
+        "to": "--kbq-plt-purple-4",
+        "deltaE": 1.93
+    },
+    "--kbq-palette-purple-91": {
+        "to": "--kbq-plt-purple-4",
+        "deltaE": 1.83
+    },
+    "--kbq-palette-purple-92": {
+        "to": "--kbq-plt-purple-3",
+        "deltaE": 2.11
+    },
+    "--kbq-palette-purple-93": {
+        "to": "--kbq-plt-purple-3",
+        "deltaE": 1.41
+    },
+    "--kbq-palette-purple-94": {
+        "to": "--kbq-plt-purple-3",
+        "deltaE": 2.19
+    },
+    "--kbq-palette-purple-95": {
+        "to": "--kbq-plt-purple-2",
+        "deltaE": 1.43
+    },
+    "--kbq-palette-purple-96": {
+        "to": "--kbq-plt-purple-2",
+        "deltaE": 1.47
+    },
+    "--kbq-palette-purple-97": {
+        "to": "--kbq-plt-purple-1",
+        "deltaE": 2.56
+    },
+    "--kbq-palette-purple-98": {
+        "to": "--kbq-plt-purple-1",
+        "deltaE": 0.93
+    },
+    "--kbq-palette-purple-99": {
+        "to": "--kbq-plt-purple-1",
+        "deltaE": 2.23
+    },
+    "--kbq-palette-red-0": {
+        "to": "--kbq-plt-black",
+        "deltaE": 0
+    },
+    "--kbq-palette-red-1": {
+        "to": "--kbq-plt-black",
+        "deltaE": 1.66
+    },
+    "--kbq-palette-red-10": {
+        "to": "--kbq-plt-red-20",
+        "deltaE": 9.79
+    },
+    "--kbq-palette-red-100": {
+        "to": "--kbq-plt-white",
+        "deltaE": 0.03
+    },
+    "--kbq-palette-red-11": {
+        "to": "--kbq-plt-red-20",
+        "deltaE": 9.43
+    },
+    "--kbq-palette-red-12": {
+        "to": "--kbq-plt-red-20",
+        "deltaE": 9.22
+    },
+    "--kbq-palette-red-13": {
+        "to": "--kbq-plt-red-20",
+        "deltaE": 9.19
+    },
+    "--kbq-palette-red-14": {
+        "to": "--kbq-plt-red-20",
+        "deltaE": 9.3
+    },
+    "--kbq-palette-red-15": {
+        "to": "--kbq-plt-red-20",
+        "deltaE": 9.55
+    },
+    "--kbq-palette-red-16": {
+        "to": "--kbq-plt-red-19",
+        "deltaE": 8.58
+    },
+    "--kbq-palette-red-17": {
+        "to": "--kbq-plt-red-19",
+        "deltaE": 7.58
+    },
+    "--kbq-palette-red-18": {
+        "to": "--kbq-plt-red-19",
+        "deltaE": 6.66
+    },
+    "--kbq-palette-red-19": {
+        "to": "--kbq-plt-red-19",
+        "deltaE": 5.85
+    },
+    "--kbq-palette-red-2": {
+        "to": "--kbq-plt-black",
+        "deltaE": 3.21
+    },
+    "--kbq-palette-red-20": {
+        "to": "--kbq-plt-red-19",
+        "deltaE": 5.17
+    },
+    "--kbq-palette-red-21": {
+        "to": "--kbq-plt-red-19",
+        "deltaE": 4.67
+    },
+    "--kbq-palette-red-22": {
+        "to": "--kbq-plt-red-19",
+        "deltaE": 4.39
+    },
+    "--kbq-palette-red-23": {
+        "to": "--kbq-plt-red-19",
+        "deltaE": 4.37
+    },
+    "--kbq-palette-red-24": {
+        "to": "--kbq-plt-red-18",
+        "deltaE": 4.47
+    },
+    "--kbq-palette-red-25": {
+        "to": "--kbq-plt-red-18",
+        "deltaE": 3.49
+    },
+    "--kbq-palette-red-26": {
+        "to": "--kbq-plt-red-18",
+        "deltaE": 2.58
+    },
+    "--kbq-palette-red-27": {
+        "to": "--kbq-plt-red-18",
+        "deltaE": 1.8
+    },
+    "--kbq-palette-red-28": {
+        "to": "--kbq-plt-red-18",
+        "deltaE": 1.4
+    },
+    "--kbq-palette-red-29": {
+        "to": "--kbq-plt-red-18",
+        "deltaE": 1.67
+    },
+    "--kbq-palette-red-3": {
+        "to": "--kbq-plt-black",
+        "deltaE": 4.9
+    },
+    "--kbq-palette-red-30": {
+        "to": "--kbq-plt-red-18",
+        "deltaE": 2.38
+    },
+    "--kbq-palette-red-31": {
+        "to": "--kbq-plt-red-18",
+        "deltaE": 3.25
+    },
+    "--kbq-palette-red-32": {
+        "to": "--kbq-plt-red-18",
+        "deltaE": 4.19
+    },
+    "--kbq-palette-red-33": {
+        "to": "--kbq-plt-red-17",
+        "deltaE": 4.53
+    },
+    "--kbq-palette-red-34": {
+        "to": "--kbq-plt-red-17",
+        "deltaE": 3.59
+    },
+    "--kbq-palette-red-35": {
+        "to": "--kbq-plt-red-17",
+        "deltaE": 2.7
+    },
+    "--kbq-palette-red-36": {
+        "to": "--kbq-plt-red-17",
+        "deltaE": 1.94
+    },
+    "--kbq-palette-red-37": {
+        "to": "--kbq-plt-red-17",
+        "deltaE": 1.52
+    },
+    "--kbq-palette-red-38": {
+        "to": "--kbq-plt-red-17",
+        "deltaE": 1.71
+    },
+    "--kbq-palette-red-39": {
+        "to": "--kbq-plt-red-17",
+        "deltaE": 2.39
+    },
+    "--kbq-palette-red-4": {
+        "to": "--kbq-plt-black",
+        "deltaE": 6.92
+    },
+    "--kbq-palette-red-40": {
+        "to": "--kbq-plt-red-16",
+        "deltaE": 1.6
+    },
+    "--kbq-palette-red-41": {
+        "to": "--kbq-plt-red-16",
+        "deltaE": 0.69
+    },
+    "--kbq-palette-red-42": {
+        "to": "--kbq-plt-red-16",
+        "deltaE": 0.79
+    },
+    "--kbq-palette-red-43": {
+        "to": "--kbq-plt-red-16",
+        "deltaE": 1.76
+    },
+    "--kbq-palette-red-44": {
+        "to": "--kbq-plt-red-15",
+        "deltaE": 2.69
+    },
+    "--kbq-palette-red-45": {
+        "to": "--kbq-plt-red-15",
+        "deltaE": 2.19
+    },
+    "--kbq-palette-red-46": {
+        "to": "--kbq-plt-red-15",
+        "deltaE": 2.18
+    },
+    "--kbq-palette-red-47": {
+        "to": "--kbq-plt-red-15",
+        "deltaE": 2.66
+    },
+    "--kbq-palette-red-48": {
+        "to": "--kbq-plt-red-15",
+        "deltaE": 3.43
+    },
+    "--kbq-palette-red-49": {
+        "to": "--kbq-plt-red-15",
+        "deltaE": 4.33
+    },
+    "--kbq-palette-red-5": {
+        "to": "--kbq-plt-black",
+        "deltaE": 9.19
+    },
+    "--kbq-palette-red-50": {
+        "to": "--kbq-plt-red-15",
+        "deltaE": 5.28
+    },
+    "--kbq-palette-red-51": {
+        "to": "--kbq-plt-red-15",
+        "deltaE": 5.39
+    },
+    "--kbq-palette-red-52": {
+        "to": "--kbq-plt-red-14",
+        "deltaE": 5.17
+    },
+    "--kbq-palette-red-53": {
+        "to": "--kbq-plt-red-14",
+        "deltaE": 4.89
+    },
+    "--kbq-palette-red-54": {
+        "to": "--kbq-plt-red-14",
+        "deltaE": 4.59
+    },
+    "--kbq-palette-red-55": {
+        "to": "--kbq-plt-red-14",
+        "deltaE": 4.31
+    },
+    "--kbq-palette-red-56": {
+        "to": "--kbq-plt-red-14",
+        "deltaE": 4.08
+    },
+    "--kbq-palette-red-57": {
+        "to": "--kbq-plt-red-14",
+        "deltaE": 3.93
+    },
+    "--kbq-palette-red-58": {
+        "to": "--kbq-plt-red-14",
+        "deltaE": 3.9
+    },
+    "--kbq-palette-red-59": {
+        "to": "--kbq-plt-red-13",
+        "deltaE": 3.98
+    },
+    "--kbq-palette-red-6": {
+        "to": "--kbq-plt-red-20",
+        "deltaE": 11.5
+    },
+    "--kbq-palette-red-60": {
+        "to": "--kbq-plt-red-13",
+        "deltaE": 3.37
+    },
+    "--kbq-palette-red-61": {
+        "to": "--kbq-plt-red-13",
+        "deltaE": 2.84
+    },
+    "--kbq-palette-red-62": {
+        "to": "--kbq-plt-red-13",
+        "deltaE": 2.49
+    },
+    "--kbq-palette-red-63": {
+        "to": "--kbq-plt-red-13",
+        "deltaE": 2.42
+    },
+    "--kbq-palette-red-64": {
+        "to": "--kbq-plt-red-13",
+        "deltaE": 2.67
+    },
+    "--kbq-palette-red-65": {
+        "to": "--kbq-plt-red-12",
+        "deltaE": 2.19
+    },
+    "--kbq-palette-red-66": {
+        "to": "--kbq-plt-red-12",
+        "deltaE": 1.56
+    },
+    "--kbq-palette-red-67": {
+        "to": "--kbq-plt-red-12",
+        "deltaE": 1.37
+    },
+    "--kbq-palette-red-68": {
+        "to": "--kbq-plt-red-12",
+        "deltaE": 1.79
+    },
+    "--kbq-palette-red-69": {
+        "to": "--kbq-plt-red-11",
+        "deltaE": 1.47
+    },
+    "--kbq-palette-red-7": {
+        "to": "--kbq-plt-red-20",
+        "deltaE": 10.61
+    },
+    "--kbq-palette-red-70": {
+        "to": "--kbq-plt-red-11",
+        "deltaE": 0.68
+    },
+    "--kbq-palette-red-71": {
+        "to": "--kbq-plt-red-11",
+        "deltaE": 0.88
+    },
+    "--kbq-palette-red-72": {
+        "to": "--kbq-plt-red-10",
+        "deltaE": 1.72
+    },
+    "--kbq-palette-red-73": {
+        "to": "--kbq-plt-red-10",
+        "deltaE": 0.75
+    },
+    "--kbq-palette-red-74": {
+        "to": "--kbq-plt-red-10",
+        "deltaE": 0.58
+    },
+    "--kbq-palette-red-75": {
+        "to": "--kbq-plt-red-10",
+        "deltaE": 1.54
+    },
+    "--kbq-palette-red-76": {
+        "to": "--kbq-plt-red-9",
+        "deltaE": 1.07
+    },
+    "--kbq-palette-red-77": {
+        "to": "--kbq-plt-red-9",
+        "deltaE": 0.31
+    },
+    "--kbq-palette-red-78": {
+        "to": "--kbq-plt-red-9",
+        "deltaE": 1.19
+    },
+    "--kbq-palette-red-79": {
+        "to": "--kbq-plt-red-8",
+        "deltaE": 1.27
+    },
+    "--kbq-palette-red-8": {
+        "to": "--kbq-plt-red-20",
+        "deltaE": 10.23
+    },
+    "--kbq-palette-red-80": {
+        "to": "--kbq-plt-red-8",
+        "deltaE": 0.3
+    },
+    "--kbq-palette-red-81": {
+        "to": "--kbq-plt-red-8",
+        "deltaE": 1.05
+    },
+    "--kbq-palette-red-82": {
+        "to": "--kbq-plt-red-7",
+        "deltaE": 1.37
+    },
+    "--kbq-palette-red-83": {
+        "to": "--kbq-plt-red-7",
+        "deltaE": 0.36
+    },
+    "--kbq-palette-red-84": {
+        "to": "--kbq-plt-red-7",
+        "deltaE": 1.07
+    },
+    "--kbq-palette-red-85": {
+        "to": "--kbq-plt-red-6",
+        "deltaE": 1.46
+    },
+    "--kbq-palette-red-86": {
+        "to": "--kbq-plt-red-6",
+        "deltaE": 0.38
+    },
+    "--kbq-palette-red-87": {
+        "to": "--kbq-plt-red-6",
+        "deltaE": 1.12
+    },
+    "--kbq-palette-red-88": {
+        "to": "--kbq-plt-red-5",
+        "deltaE": 1.2
+    },
+    "--kbq-palette-red-89": {
+        "to": "--kbq-plt-red-5",
+        "deltaE": 0.29
+    },
+    "--kbq-palette-red-9": {
+        "to": "--kbq-plt-red-20",
+        "deltaE": 10.05
+    },
+    "--kbq-palette-red-90": {
+        "to": "--kbq-plt-red-4",
+        "deltaE": 1.5
+    },
+    "--kbq-palette-red-91": {
+        "to": "--kbq-plt-red-4",
+        "deltaE": 0.19
+    },
+    "--kbq-palette-red-92": {
+        "to": "--kbq-plt-red-3",
+        "deltaE": 1.31
+    },
+    "--kbq-palette-red-93": {
+        "to": "--kbq-plt-red-3",
+        "deltaE": 0.25
+    },
+    "--kbq-palette-red-94": {
+        "to": "--kbq-plt-red-2",
+        "deltaE": 1.46
+    },
+    "--kbq-palette-red-95": {
+        "to": "--kbq-plt-red-2",
+        "deltaE": 0.29
+    },
+    "--kbq-palette-red-96": {
+        "to": "--kbq-plt-red-2",
+        "deltaE": 1.98
+    },
+    "--kbq-palette-red-97": {
+        "to": "--kbq-plt-red-1",
+        "deltaE": 1.58
+    },
+    "--kbq-palette-red-98": {
+        "to": "--kbq-plt-red-1",
+        "deltaE": 0.72
+    },
+    "--kbq-palette-red-99": {
+        "to": "--kbq-plt-white",
+        "deltaE": 2.17
+    },
+    "--kbq-palette-white-default": {
+        "to": "--kbq-plt-white",
+        "deltaE": 0
+    },
+    "--kbq-palette-yellow-0": {
+        "to": "--kbq-plt-black",
+        "deltaE": 0
+    },
+    "--kbq-palette-yellow-1": {
+        "to": "--kbq-plt-black",
+        "deltaE": 1.46
+    },
+    "--kbq-palette-yellow-10": {
+        "to": "--kbq-plt-yellow-20",
+        "deltaE": 7.87
+    },
+    "--kbq-palette-yellow-100": {
+        "to": "--kbq-plt-white",
+        "deltaE": 0.03
+    },
+    "--kbq-palette-yellow-11": {
+        "to": "--kbq-plt-yellow-20",
+        "deltaE": 7.84
+    },
+    "--kbq-palette-yellow-12": {
+        "to": "--kbq-plt-yellow-20",
+        "deltaE": 8.1
+    },
+    "--kbq-palette-yellow-13": {
+        "to": "--kbq-plt-yellow-20",
+        "deltaE": 8.61
+    },
+    "--kbq-palette-yellow-14": {
+        "to": "--kbq-plt-yellow-19",
+        "deltaE": 8.56
+    },
+    "--kbq-palette-yellow-15": {
+        "to": "--kbq-plt-yellow-19",
+        "deltaE": 7.97
+    },
+    "--kbq-palette-yellow-16": {
+        "to": "--kbq-plt-yellow-19",
+        "deltaE": 7.62
+    },
+    "--kbq-palette-yellow-17": {
+        "to": "--kbq-plt-yellow-18",
+        "deltaE": 7.06
+    },
+    "--kbq-palette-yellow-18": {
+        "to": "--kbq-plt-yellow-18",
+        "deltaE": 6.18
+    },
+    "--kbq-palette-yellow-19": {
+        "to": "--kbq-plt-yellow-18",
+        "deltaE": 5.51
+    },
+    "--kbq-palette-yellow-2": {
+        "to": "--kbq-plt-black",
+        "deltaE": 2.84
+    },
+    "--kbq-palette-yellow-20": {
+        "to": "--kbq-plt-yellow-18",
+        "deltaE": 5.11
+    },
+    "--kbq-palette-yellow-21": {
+        "to": "--kbq-plt-yellow-18",
+        "deltaE": 5.05
+    },
+    "--kbq-palette-yellow-22": {
+        "to": "--kbq-plt-yellow-18",
+        "deltaE": 5.34
+    },
+    "--kbq-palette-yellow-23": {
+        "to": "--kbq-plt-yellow-17",
+        "deltaE": 5.47
+    },
+    "--kbq-palette-yellow-24": {
+        "to": "--kbq-plt-yellow-17",
+        "deltaE": 4.1
+    },
+    "--kbq-palette-yellow-25": {
+        "to": "--kbq-plt-yellow-17",
+        "deltaE": 2.72
+    },
+    "--kbq-palette-yellow-26": {
+        "to": "--kbq-plt-yellow-17",
+        "deltaE": 1.33
+    },
+    "--kbq-palette-yellow-27": {
+        "to": "--kbq-plt-yellow-17",
+        "deltaE": 0.1
+    },
+    "--kbq-palette-yellow-28": {
+        "to": "--kbq-plt-yellow-17",
+        "deltaE": 1.51
+    },
+    "--kbq-palette-yellow-29": {
+        "to": "--kbq-plt-yellow-17",
+        "deltaE": 2.96
+    },
+    "--kbq-palette-yellow-3": {
+        "to": "--kbq-plt-black",
+        "deltaE": 4.25
+    },
+    "--kbq-palette-yellow-30": {
+        "to": "--kbq-plt-yellow-16",
+        "deltaE": 3.88
+    },
+    "--kbq-palette-yellow-31": {
+        "to": "--kbq-plt-yellow-16",
+        "deltaE": 4.24
+    },
+    "--kbq-palette-yellow-32": {
+        "to": "--kbq-plt-yellow-15",
+        "deltaE": 3.77
+    },
+    "--kbq-palette-yellow-33": {
+        "to": "--kbq-plt-yellow-15",
+        "deltaE": 3.5
+    },
+    "--kbq-palette-yellow-34": {
+        "to": "--kbq-plt-yellow-15",
+        "deltaE": 3.85
+    },
+    "--kbq-palette-yellow-35": {
+        "to": "--kbq-plt-yellow-14",
+        "deltaE": 3.18
+    },
+    "--kbq-palette-yellow-36": {
+        "to": "--kbq-plt-yellow-14",
+        "deltaE": 2.98
+    },
+    "--kbq-palette-yellow-37": {
+        "to": "--kbq-plt-yellow-14",
+        "deltaE": 3.4
+    },
+    "--kbq-palette-yellow-38": {
+        "to": "--kbq-plt-yellow-13",
+        "deltaE": 2.84
+    },
+    "--kbq-palette-yellow-39": {
+        "to": "--kbq-plt-yellow-13",
+        "deltaE": 2.77
+    },
+    "--kbq-palette-yellow-4": {
+        "to": "--kbq-plt-black",
+        "deltaE": 5.85
+    },
+    "--kbq-palette-yellow-40": {
+        "to": "--kbq-plt-yellow-13",
+        "deltaE": 3.25
+    },
+    "--kbq-palette-yellow-41": {
+        "to": "--kbq-plt-yellow-12",
+        "deltaE": 2.8
+    },
+    "--kbq-palette-yellow-42": {
+        "to": "--kbq-plt-yellow-12",
+        "deltaE": 2.86
+    },
+    "--kbq-palette-yellow-43": {
+        "to": "--kbq-plt-yellow-11",
+        "deltaE": 3.08
+    },
+    "--kbq-palette-yellow-44": {
+        "to": "--kbq-plt-yellow-11",
+        "deltaE": 2.83
+    },
+    "--kbq-palette-yellow-45": {
+        "to": "--kbq-plt-yellow-11",
+        "deltaE": 3.04
+    },
+    "--kbq-palette-yellow-46": {
+        "to": "--kbq-plt-yellow-11",
+        "deltaE": 3.61
+    },
+    "--kbq-palette-yellow-47": {
+        "to": "--kbq-plt-yellow-10",
+        "deltaE": 3.88
+    },
+    "--kbq-palette-yellow-48": {
+        "to": "--kbq-plt-yellow-10",
+        "deltaE": 4.27
+    },
+    "--kbq-palette-yellow-49": {
+        "to": "--kbq-plt-yellow-10",
+        "deltaE": 4.86
+    },
+    "--kbq-palette-yellow-5": {
+        "to": "--kbq-plt-black",
+        "deltaE": 7.72
+    },
+    "--kbq-palette-yellow-50": {
+        "to": "--kbq-plt-yellow-10",
+        "deltaE": 5.57
+    },
+    "--kbq-palette-yellow-51": {
+        "to": "--kbq-plt-yellow-10",
+        "deltaE": 5.48
+    },
+    "--kbq-palette-yellow-52": {
+        "to": "--kbq-plt-yellow-10",
+        "deltaE": 5.44
+    },
+    "--kbq-palette-yellow-53": {
+        "to": "--kbq-plt-yellow-10",
+        "deltaE": 5.45
+    },
+    "--kbq-palette-yellow-54": {
+        "to": "--kbq-plt-yellow-10",
+        "deltaE": 5.51
+    },
+    "--kbq-palette-yellow-55": {
+        "to": "--kbq-plt-yellow-10",
+        "deltaE": 5.61
+    },
+    "--kbq-palette-yellow-56": {
+        "to": "--kbq-plt-yellow-10",
+        "deltaE": 5.75
+    },
+    "--kbq-palette-yellow-57": {
+        "to": "--kbq-plt-yellow-9",
+        "deltaE": 5.81
+    },
+    "--kbq-palette-yellow-58": {
+        "to": "--kbq-plt-yellow-9",
+        "deltaE": 5.78
+    },
+    "--kbq-palette-yellow-59": {
+        "to": "--kbq-plt-yellow-9",
+        "deltaE": 5.76
+    },
+    "--kbq-palette-yellow-6": {
+        "to": "--kbq-plt-black",
+        "deltaE": 9.8
+    },
+    "--kbq-palette-yellow-60": {
+        "to": "--kbq-plt-yellow-9",
+        "deltaE": 5.78
+    },
+    "--kbq-palette-yellow-61": {
+        "to": "--kbq-plt-yellow-9",
+        "deltaE": 5.82
+    },
+    "--kbq-palette-yellow-62": {
+        "to": "--kbq-plt-yellow-9",
+        "deltaE": 5.9
+    },
+    "--kbq-palette-yellow-63": {
+        "to": "--kbq-plt-yellow-9",
+        "deltaE": 6.01
+    },
+    "--kbq-palette-yellow-64": {
+        "to": "--kbq-plt-yellow-9",
+        "deltaE": 6.16
+    },
+    "--kbq-palette-yellow-65": {
+        "to": "--kbq-plt-yellow-8",
+        "deltaE": 6.22
+    },
+    "--kbq-palette-yellow-66": {
+        "to": "--kbq-plt-yellow-8",
+        "deltaE": 6.13
+    },
+    "--kbq-palette-yellow-67": {
+        "to": "--kbq-plt-yellow-8",
+        "deltaE": 6.08
+    },
+    "--kbq-palette-yellow-68": {
+        "to": "--kbq-plt-yellow-8",
+        "deltaE": 6.08
+    },
+    "--kbq-palette-yellow-69": {
+        "to": "--kbq-plt-yellow-8",
+        "deltaE": 6.13
+    },
+    "--kbq-palette-yellow-7": {
+        "to": "--kbq-plt-yellow-20",
+        "deltaE": 10.04
+    },
+    "--kbq-palette-yellow-70": {
+        "to": "--kbq-plt-yellow-8",
+        "deltaE": 6.23
+    },
+    "--kbq-palette-yellow-71": {
+        "to": "--kbq-plt-yellow-7",
+        "deltaE": 6.29
+    },
+    "--kbq-palette-yellow-72": {
+        "to": "--kbq-plt-yellow-7",
+        "deltaE": 6.15
+    },
+    "--kbq-palette-yellow-73": {
+        "to": "--kbq-plt-yellow-7",
+        "deltaE": 6.07
+    },
+    "--kbq-palette-yellow-74": {
+        "to": "--kbq-plt-yellow-7",
+        "deltaE": 6.05
+    },
+    "--kbq-palette-yellow-75": {
+        "to": "--kbq-plt-yellow-7",
+        "deltaE": 6.1
+    },
+    "--kbq-palette-yellow-76": {
+        "to": "--kbq-plt-yellow-6",
+        "deltaE": 6.14
+    },
+    "--kbq-palette-yellow-77": {
+        "to": "--kbq-plt-yellow-6",
+        "deltaE": 5.94
+    },
+    "--kbq-palette-yellow-78": {
+        "to": "--kbq-plt-yellow-6",
+        "deltaE": 5.8
+    },
+    "--kbq-palette-yellow-79": {
+        "to": "--kbq-plt-yellow-6",
+        "deltaE": 5.75
+    },
+    "--kbq-palette-yellow-8": {
+        "to": "--kbq-plt-yellow-20",
+        "deltaE": 8.97
+    },
+    "--kbq-palette-yellow-80": {
+        "to": "--kbq-plt-yellow-6",
+        "deltaE": 5.8
+    },
+    "--kbq-palette-yellow-81": {
+        "to": "--kbq-plt-yellow-5",
+        "deltaE": 5.72
+    },
+    "--kbq-palette-yellow-82": {
+        "to": "--kbq-plt-yellow-5",
+        "deltaE": 5.49
+    },
+    "--kbq-palette-yellow-83": {
+        "to": "--kbq-plt-yellow-5",
+        "deltaE": 5.37
+    },
+    "--kbq-palette-yellow-84": {
+        "to": "--kbq-plt-yellow-5",
+        "deltaE": 5.39
+    },
+    "--kbq-palette-yellow-85": {
+        "to": "--kbq-plt-yellow-5",
+        "deltaE": 5.54
+    },
+    "--kbq-palette-yellow-86": {
+        "to": "--kbq-plt-yellow-4",
+        "deltaE": 5.36
+    },
+    "--kbq-palette-yellow-87": {
+        "to": "--kbq-plt-yellow-4",
+        "deltaE": 5.25
+    },
+    "--kbq-palette-yellow-88": {
+        "to": "--kbq-plt-yellow-4",
+        "deltaE": 5.31
+    },
+    "--kbq-palette-yellow-89": {
+        "to": "--kbq-plt-yellow-3",
+        "deltaE": 5.25
+    },
+    "--kbq-palette-yellow-9": {
+        "to": "--kbq-plt-yellow-20",
+        "deltaE": 8.24
+    },
+    "--kbq-palette-yellow-90": {
+        "to": "--kbq-plt-yellow-3",
+        "deltaE": 4.93
+    },
+    "--kbq-palette-yellow-91": {
+        "to": "--kbq-plt-yellow-3",
+        "deltaE": 4.81
+    },
+    "--kbq-palette-yellow-92": {
+        "to": "--kbq-plt-yellow-2",
+        "deltaE": 4.8
+    },
+    "--kbq-palette-yellow-93": {
+        "to": "--kbq-plt-yellow-2",
+        "deltaE": 4.14
+    },
+    "--kbq-palette-yellow-94": {
+        "to": "--kbq-plt-yellow-2",
+        "deltaE": 3.72
+    },
+    "--kbq-palette-yellow-95": {
+        "to": "--kbq-plt-yellow-2",
+        "deltaE": 3.67
+    },
+    "--kbq-palette-yellow-96": {
+        "to": "--kbq-plt-yellow-1",
+        "deltaE": 3.31
+    },
+    "--kbq-palette-yellow-97": {
+        "to": "--kbq-plt-yellow-1",
+        "deltaE": 2.34
+    },
+    "--kbq-palette-yellow-98": {
+        "to": "--kbq-plt-yellow-1",
+        "deltaE": 2.02
+    },
+    "--kbq-palette-yellow-99": {
+        "to": "--kbq-plt-white",
+        "deltaE": 1.7
+    }
+}
