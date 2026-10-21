@@ -26,10 +26,17 @@ package, pass `--tokens node_modules/@koobiq/design-tokens/web`.
 — `var(--kbq-background-overlay-theme)` / `var(--kbq-background-overlay-error)` become the
 `color-mix()` shown [below](#the-overlay-tokens-in-detail).
 
-The old `--kbq-palette-*` is not a rewrite: the 0–100 HSL ramp has no arithmetic mapping onto the
-1–20 OKLch ramp, so the codemod **suggests** the nearest v4 colour and prints the ΔE (CIEDE2000).
-`--fix-palette` applies the suggestions that are close enough (ΔE ≤ 3 by default; override with
-`--palette-delta-e <n>`). Alpha steps have no mechanical replacement and are always reported.
+The old `--kbq-palette-*` is not a plain rewrite: the 0–100 HSL ramp has no arithmetic mapping onto
+the 1–20 OKLch ramp, so by default the codemod **suggests** the nearest v4 colour and prints the ΔE
+(CIEDE2000). Two opt-in rewrites cover the opaque steps:
+
+- `--fix-palette` replaces each use with the nearest `--kbq-plt-*`, but only when close enough
+  (ΔE ≤ 3 by default; override with `--palette-delta-e <n>`).
+- `--palette-to-color` replaces each use with the literal v3 colour — the old palette was
+  theme-independent, so there is nothing to keep as a variable, and the exact `hsla(…)` value is
+  stable even if the v4 palette is tuned again later.
+
+Alpha steps, `var(…, fallback)` and declarations are never rewritten and are always reported.
 
 **It reports, with a ⚠, what it will not guess at:**
 

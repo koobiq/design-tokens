@@ -180,8 +180,8 @@ const OLD_FAMILIES = {
 
 // black/white had a single opaque `default` step, not a ramp.
 const FIXED = {
-    '--kbq-palette-black-default': '--kbq-plt-black',
-    '--kbq-palette-white-default': '--kbq-plt-white'
+    '--kbq-palette-black-default': { to: '--kbq-plt-black', color: 'hsla(0, 0%, 0%, 100%)' },
+    '--kbq-palette-white-default': { to: '--kbq-plt-white', color: 'hsla(0, 0%, 100%, 100%)' }
 };
 
 // Opaque one-offs: orange/red also shipped a single step with a different saturation than their
@@ -190,6 +190,9 @@ const SPECIAL_STEPS = [
     { family: 'orange', hue: 26, sat: 69, step: 51, to: 'orange' },
     { family: 'red', hue: 7, sat: 69, step: 51, to: 'red' }
 ];
+
+/** The literal v3 colour a `--kbq-palette-*` variable held — a fixed HSL value. */
+const hslString = (hue, sat, lightness) => `hsla(${hue}, ${sat}%, ${lightness}%, 100%)`;
 
 /** Parse the opaque 1–20 ramp of a `plt` family into `[{ step, lab }]`. */
 function rampOf(plt, family) {
@@ -235,7 +238,8 @@ function build(plt) {
 
             map[`--kbq-palette-${family}-${step}`] = {
                 to: best.to,
-                deltaE: Math.round(best.deltaE * 100) / 100
+                deltaE: Math.round(best.deltaE * 100) / 100,
+                color: hslString(hue, sat, step)
             };
         }
     }
@@ -258,12 +262,13 @@ function build(plt) {
 
         map[`--kbq-palette-${family}-${step}-s${sat}`] = {
             to: best.to,
-            deltaE: Math.round(best.deltaE * 100) / 100
+            deltaE: Math.round(best.deltaE * 100) / 100,
+            color: hslString(hue, sat, step)
         };
     }
 
-    for (const [from, to] of Object.entries(FIXED)) {
-        map[from] = { to, deltaE: 0 };
+    for (const [from, { to, color }] of Object.entries(FIXED)) {
+        map[from] = { to, deltaE: 0, color };
     }
 
     return map;

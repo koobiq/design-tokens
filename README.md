@@ -71,9 +71,10 @@ which is what the rest of the system references.
 > `semantic.darkContrast`).
 >
 > The codemod suggests the nearest `--kbq-plt-*` for each opaque `--kbq-palette-*` and prints the
-> ΔE (CIEDE2000); `--fix-palette` applies the close ones (ΔE ≤ 3 by default, `--palette-delta-e <n>`
-> overrides). Alpha steps and poor matches stay reported. See
-> [the migration guide](./MIGRATION.md#2-run-the-codemod).
+> ΔE (CIEDE2000). Two opt-in rewrites cover the opaque steps: `--fix-palette` applies the close
+> `--kbq-plt-*` matches (ΔE ≤ 3 by default, `--palette-delta-e <n>` overrides), and
+> `--palette-to-color` replaces each use with the literal v3 `hsla(…)` colour. Alpha steps and poor
+> matches stay reported. See [the migration guide](./MIGRATION.md#2-run-the-codemod).
 
 `_palette.scss` is rebuilt for the OKLch palette: one Sass variable per `plt.*` family, either a
 map of its steps (`$plt-blue: (1: oklch(…), …, 20: oklch(…))`) or, for a single-value family, a

@@ -286,3 +286,57 @@ test('maps the -s69 opaque steps', () => {
     assert.equal(manual.length, 1);
     assert.match(manual[0].hint, /--kbq-plt-red-15/);
 });
+
+// ---------------------------------------------------------------------------------------------
+// --palette-to-color: replace old palette uses with the literal v3 colour.
+
+test('--palette-to-color rewrites a var() use to the literal colour', () => {
+    const input = 'color: var(--kbq-palette-blue-50);';
+    const { next, manual } = inspect(input, known, defined, { paletteToColor: true });
+
+    assert.equal(next, 'color: hsla(216, 100%, 50%, 100%);');
+    assert.deepEqual(manual, []);
+});
+
+test('--palette-to-color rewrites a bare use to the literal colour', () => {
+    const input = '--x: --kbq-palette-blue-50;';
+    const { next, manual } = inspect(input, known, defined, { paletteToColor: true });
+
+    assert.equal(next, '--x: hsla(216, 100%, 50%, 100%);');
+    assert.deepEqual(manual, []);
+});
+
+test('--palette-to-color does not rewrite a declaration', () => {
+    const input = ':root { --kbq-palette-blue-50: #fff; } .x { color: var(--kbq-palette-blue-50); }';
+    const { next, manual } = inspect(input, known, defined, { paletteToColor: true });
+
+    assert.ok(next.includes('--kbq-palette-blue-50: #fff'));
+    assert.ok(next.includes('color: hsla(216, 100%, 50%, 100%);'));
+    assert.equal(manual.length, 1);
+    assert.match(manual[0].hint, /declared here/);
+});
+
+test('--palette-to-color does not touch a var() with a fallback', () => {
+    const input = 'color: var(--kbq-palette-blue-50, red);';
+    const { next, manual } = inspect(input, known, defined, { paletteToColor: true });
+
+    assert.equal(next, input);
+    assert.equal(manual.length, 1);
+    assert.match(manual[0].hint, /nearest v4 colour/);
+});
+
+test('--palette-to-color leaves alpha steps report-only', () => {
+    const input = 'color: var(--kbq-palette-blue-a8);';
+    const { next, manual } = inspect(input, known, defined, { paletteToColor: true });
+
+    assert.equal(next, input);
+    assert.equal(manual.length, 1);
+    assert.match(manual[0].hint, /no nearest v4 colour is mapped/);
+});
+
+test('--palette-to-color maps black/white defaults to their literal colour', () => {
+    const input = 'color: var(--kbq-palette-black-default); background: var(--kbq-palette-white-default);';
+    const { next } = inspect(input, known, defined, { paletteToColor: true });
+
+    assert.equal(next, 'color: hsla(0, 0%, 0%, 100%); background: hsla(0, 0%, 100%, 100%);');
+});

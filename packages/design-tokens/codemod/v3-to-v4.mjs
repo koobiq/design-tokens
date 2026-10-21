@@ -3,13 +3,15 @@
  * Codemod: @koobiq/design-tokens v3 → v4.
  *
  * Rewrites what can be rewritten mechanically (import paths, tokens with a 1:1 replacement, the
- * overlay tokens that compose back to `color-mix()`), suggests the nearest v4 colour for the old
- * palette (applied only with `--fix-palette`, and only when close enough), and reports the rest.
- * Nothing is written without --write.
+ * overlay tokens that compose back to `color-mix()`), and reports the rest. For the removed
+ * `--kbq-palette-*` it offers two opt-in rewrites: `--fix-palette` replaces each use with the
+ * nearest `--kbq-plt-*`, `--palette-to-color` replaces it with the literal v3 colour. Nothing is
+ * written without --write.
  *
  *   npx koobiq-tokens-codemod src                           # dry run, prints a report
  *   npx koobiq-tokens-codemod src --write                   # apply the fixable changes
- *   npx koobiq-tokens-codemod src --fix-palette --write     # also apply close palette maps
+ *   npx koobiq-tokens-codemod src --fix-palette --write     # nearest --kbq-plt-* for old palette
+ *   npx koobiq-tokens-codemod src --palette-to-color --write # literal v3 colour for old palette
  *   npx koobiq-tokens-codemod src --fix-palette --palette-delta-e 5 --write
  *
  * The list of tokens v4 actually ships is read from the installed package rather than hardcoded,
@@ -350,7 +352,21 @@ function isDeclaration(source, index, name) {
     return /^\s*:/.test(source.slice(index + name.length));
 }
 
-function inspect(content, known, defined, { fixPalette = false, paletteDeltaE = PALETTE_DELTA_E_MAX } = {}) {
+/** Whether `name` at `index` is inside a `var(…, fallback)` — i.e. preceded by `var(` and followed by `,`. */
+function isVarFallback(source, index, name) {
+    if (!/^\s*,/.test(source.slice(index + name.length))) return false;
+
+    const before = source.slice(Math.max(0, index - 20), index);
+
+    return /var\(\s*$/.test(before);
+}
+
+function inspect(
+    content,
+    known,
+    defined,
+    { fixPalette = false, paletteToColor = false, paletteDeltaE = PALETTE_DELTA_E_MAX } = {}
+) {
     const fixes = new Map();
     const manual = new Map();
 
@@ -408,7 +424,19 @@ function inspect(content, known, defined, { fixPalette = false, paletteDeltaE = 
             continue;
         }
 
-        if (fixPalette && suggestion.deltaE <= paletteDeltaE) {
+        // A var() with an explicit fallback has no single var() left after a colour substitution,
+        // so it is always reported rather than rewritten.
+        if (isVarFallback(code, match.index, name)) {
+            manual.set(`var(${name}, …)`, {
+                what: `var(${name}, …)`,
+                hint: `removed in v4 — nearest v4 colour is ${suggestion.to} (ΔE ${suggestion.deltaE}); fold the explicit fallback in by hand`
+            });
+            continue;
+        }
+
+        if (paletteToColor) {
+            fixes.set(name, { from: name, to: suggestion.color, kind: 'palette-color' });
+        } else if (fixPalette && suggestion.deltaE <= paletteDeltaE) {
             fixes.set(name, { from: name, to: suggestion.to, kind: 'palette' });
         } else {
             const above = fixPalette ? ` — above the ${paletteDeltaE} auto-fix threshold` : '';
@@ -437,7 +465,23 @@ function inspect(content, known, defined, { fixPalette = false, paletteDeltaE = 
 
                     return suggestion.deltaE <= paletteDeltaE ? suggestion.to : name;
                 });
-            else text = text.replaceAll(from, to);
+            else if (kind === 'palette-color') {
+                // A var() usage becomes the literal colour (the var() wrapper goes away).
+                text = text.replace(/var\((--kbq-palette-[\w-]+)\)/g, (full, name) => {
+                    const entry = PALETTE_MAP?.[name];
+
+                    return entry ? entry.color : full;
+                });
+
+                // A bare usage becomes the literal colour; declarations are left for the report.
+                text = text.replace(/(?<!var\()--kbq-palette-[\w-]+(?![\w-])/g, (name, offset, str) => {
+                    const entry = PALETTE_MAP?.[name];
+
+                    if (!entry || isDeclaration(str, offset, name)) return name;
+
+                    return entry.color;
+                });
+            } else text = text.replaceAll(from, to);
         }
 
         return text;
@@ -508,6 +552,7 @@ function inspect(content, known, defined, { fixPalette = false, paletteDeltaE = 
 function parseArgs(args) {
     const write = args.includes('--write');
     const fixPalette = args.includes('--fix-palette');
+    const paletteToColor = args.includes('--palette-to-color');
 
     const flagValue = (flag) => {
         // `--flag=value` form.
@@ -536,11 +581,11 @@ function parseArgs(args) {
 
     const targets = args.filter((a, i) => !a.startsWith('--') && !valueIndexes.includes(i));
 
-    return { write, fixPalette, tokensDir, paletteDeltaArg, targets };
+    return { write, fixPalette, paletteToColor, tokensDir, paletteDeltaArg, targets };
 }
 
 function main() {
-    const { write, fixPalette, tokensDir, paletteDeltaArg, targets } = parseArgs(process.argv.slice(2));
+    const { write, fixPalette, paletteToColor, tokensDir, paletteDeltaArg, targets } = parseArgs(process.argv.slice(2));
 
     // `--palette-delta-e` overrides the constant so a designer can experiment without editing code.
     let paletteDeltaE = PALETTE_DELTA_E_MAX;
@@ -557,16 +602,21 @@ function main() {
 
     if (targets.length === 0) {
         console.error(
-            'Usage: koobiq-tokens-codemod <file-or-dir>… [--write] [--fix-palette] [--palette-delta-e <n>] [--tokens <dir>]'
+            'Usage: koobiq-tokens-codemod <file-or-dir>… [--write] [--fix-palette | --palette-to-color] [--palette-delta-e <n>] [--tokens <dir>]'
         );
+        process.exit(1);
+    }
+
+    if (fixPalette && paletteToColor) {
+        console.error('! --fix-palette and --palette-to-color are alternatives — pass one of them.');
         process.exit(1);
     }
 
     if (PALETTE_MAP === null) {
         console.warn('! Could not read palette-map.json — palette suggestions are disabled.');
 
-        if (fixPalette) {
-            console.error('! --fix-palette needs palette-map.json, which could not be loaded.');
+        if (fixPalette || paletteToColor) {
+            console.error('! --fix-palette / --palette-to-color need palette-map.json, which could not be loaded.');
             process.exit(1);
         }
     }
@@ -611,7 +661,7 @@ function main() {
     let manualCount = 0;
 
     for (const [file, content] of sources) {
-        const { next, fixes, manual } = inspect(content, known, defined, { fixPalette, paletteDeltaE });
+        const { next, fixes, manual } = inspect(content, known, defined, { fixPalette, paletteToColor, paletteDeltaE });
 
         if (fixes.length === 0 && manual.length === 0) continue;
 
