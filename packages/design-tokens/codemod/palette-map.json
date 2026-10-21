@@ -1815,6 +1815,10 @@
         "to": "--kbq-plt-orange-12",
         "deltaE": 7.74
     },
+    "--kbq-palette-orange-51-s69": {
+        "to": "--kbq-plt-orange-13",
+        "deltaE": 4.87
+    },
     "--kbq-palette-orange-52": {
         "to": "--kbq-plt-orange-12",
         "deltaE": 7.33
@@ -2622,6 +2626,10 @@
     "--kbq-palette-red-51": {
         "to": "--kbq-plt-red-15",
         "deltaE": 5.39
+    },
+    "--kbq-palette-red-51-s69": {
+        "to": "--kbq-plt-red-15",
+        "deltaE": 2.98
     },
     "--kbq-palette-red-52": {
         "to": "--kbq-plt-red-14",

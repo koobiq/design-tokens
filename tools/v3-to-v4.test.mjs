@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { inspect, parseArgs } from './v3-to-v4.mjs';
+import { inspect, parseArgs } from '../packages/design-tokens/codemod/v3-to-v4.mjs';
 
 // The tokens v4 actually ships. Only the overlay replacement targets matter for these tests, but a
 // handful of neighbours keeps the "known token" scan (pass 4) realistic.
@@ -174,7 +174,7 @@ test('reports alpha palette steps without a suggestion', () => {
     assert.equal(next, input);
     assert.equal(manual.length, 1);
     assert.equal(manual[0].what, '--kbq-palette-blue-a8');
-    assert.match(manual[0].hint, /alpha steps have no mechanical replacement/);
+    assert.match(manual[0].hint, /no nearest v4 colour is mapped/);
 });
 
 test('does not touch the replacement palette target', () => {
@@ -211,4 +211,78 @@ test('parseArgs tolerates a missing flag value', () => {
 
     assert.equal(parsed.paletteDeltaArg, undefined);
     assert.deepEqual(parsed.targets, ['src']);
+});
+
+test('parseArgs does not take a following flag as a value', () => {
+    const parsed = parseArgs(['--palette-delta-e', '--write', 'src']);
+
+    assert.equal(parsed.paletteDeltaArg, undefined);
+    assert.equal(parsed.write, true);
+    assert.deepEqual(parsed.targets, ['src']);
+});
+
+test('parseArgs supports --flag=value', () => {
+    const parsed = parseArgs(['--palette-delta-e=5', 'src']);
+
+    assert.equal(parsed.paletteDeltaArg, '5');
+    assert.deepEqual(parsed.targets, ['src']);
+});
+
+// ---------------------------------------------------------------------------------------------
+// Comment / string / url awareness, whitespace, and declaration safety.
+
+test('does not rewrite or report a var() that only lives in a comment', () => {
+    const input = '/* before: var(--kbq-background-overlay-theme) */ .x { color: red; }';
+    const { next, manual } = inspect(input, known, defined);
+
+    assert.equal(next, input);
+    assert.deepEqual(manual, []);
+});
+
+test('does not treat a // inside url() as a comment', () => {
+    const input = '.a { background: url(https://x/y.png), var(--kbq-background-overlay-theme, red); }';
+    const { manual } = inspect(input, known, defined);
+
+    assert.equal(manual.length, 1);
+    assert.equal(manual[0].what, 'var(--kbq-background-overlay-theme, …)');
+});
+
+test('does not treat /* inside a string as a comment', () => {
+    const input = "const g = 'icons/*.svg';\n.x { color: var(--kbq-background-overlay-theme); }";
+    const { next } = inspect(input, known, defined);
+
+    assert.ok(next.includes("'icons/*.svg'"));
+    assert.ok(next.includes('color-mix(in srgb, var(--kbq-background-overlay-base-theme)'));
+});
+
+test('rewrites a var() with whitespace before the closing paren', () => {
+    assert.match(inspect('.a { color: var(--kbq-background-overlay-theme ); }', known, defined).next, /color-mix/);
+    assert.match(inspect('.a { color: var(--kbq-background-overlay-error\n); }', known, defined).next, /color-mix/);
+});
+
+test('does not rewrite or report a palette token that only lives in a comment', () => {
+    const input = '/* was --kbq-palette-blue-50 */ .x { color: red; }';
+    const { next, manual } = inspect(input, known, defined, { fixPalette: true });
+
+    assert.equal(next, input);
+    assert.deepEqual(manual, []);
+});
+
+test('does not rewrite a palette declaration with --fix-palette', () => {
+    const input = ':root { --kbq-palette-blue-50: #fff; } .x { color: var(--kbq-palette-blue-50); }';
+    const { next, manual } = inspect(input, known, defined, { fixPalette: true });
+
+    assert.ok(next.includes('--kbq-palette-blue-50: #fff'));
+    assert.ok(next.includes('var(--kbq-plt-blue-16)'));
+    assert.equal(manual.length, 1);
+    assert.match(manual[0].hint, /declared here/);
+});
+
+test('maps the -s69 opaque steps', () => {
+    const input = 'color: var(--kbq-palette-red-51-s69);';
+    const { next, manual } = inspect(input, known, defined);
+
+    assert.equal(next, input);
+    assert.equal(manual.length, 1);
+    assert.match(manual[0].hint, /--kbq-plt-red-15/);
 });

@@ -1,6 +1,8 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { hslToRgb, srgbToLab, oklchToLab, deltaE2000 } from './build-palette-map.mjs';
+import { readFileSync } from 'node:fs';
+import JSON5 from 'json5';
+import { hslToRgb, srgbToLab, oklchToLab, deltaE2000, build } from './build-palette-map.mjs';
 
 const close = (actual, expected, tol = 1e-3) =>
     assert.ok(Math.abs(actual - expected) <= tol, `expected ${expected} ± ${tol}, got ${actual}`);
@@ -60,4 +62,14 @@ test('deltaE2000 matches the Sharma 2005 reference pairs', () => {
     close(deltaE2000({ L: 50, a: 2.6772, b: -79.7751 }, { L: 50, a: 0, b: -82.7485 }), 2.0425);
     close(deltaE2000({ L: 50, a: -1.3802, b: -84.2814 }, { L: 50, a: 0, b: -82.7485 }), 1.0);
     close(deltaE2000({ L: 50, a: 0, b: 0 }, { L: 50, a: -1, b: 2 }), 2.3669);
+});
+
+test('the committed palette-map.json matches the generator output', () => {
+    const pltPath = new URL('../packages/design-tokens/web/properties/plt.json5', import.meta.url);
+    const mapPath = new URL('../packages/design-tokens/codemod/palette-map.json', import.meta.url);
+
+    const plt = JSON5.parse(readFileSync(pltPath, 'utf8')).plt;
+    const committed = JSON.parse(readFileSync(mapPath, 'utf8'));
+
+    assert.deepEqual(build(plt), committed);
 });

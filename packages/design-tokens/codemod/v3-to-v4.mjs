@@ -18,9 +18,9 @@
  *
  * Zero dependencies: this has to run inside a consumer's project without installing anything.
  */
-import { readFileSync, writeFileSync, readdirSync, statSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, readdirSync, statSync, existsSync, realpathSync } from 'node:fs';
 import { join, extname, relative, dirname } from 'node:path';
-import { fileURLToPath, pathToFileURL } from 'node:url';
+import { fileURLToPath } from 'node:url';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 
@@ -90,20 +90,18 @@ const OVERLAY_OPACITY = '--kbq-opacity-overlay';
 const colorMix = (base) => `color-mix(in srgb, var(${base}) calc(var(${OVERLAY_OPACITY}) * 100%), transparent)`;
 
 /**
- * The only shape the overlay rewrite handles: `var(--kbq-background-overlay-…)` with no fallback.
- * The closing `)` is part of the match, so near-miss names (`…-theme-extra`, `…-base-theme`) never
- * match and running the codemod twice cannot double-wrap the result.
+ * The only shape the overlay rewrite handles: `var(--kbq-background-overlay-…)` with no fallback
+ * (whitespace around the token is tolerated). The closing `)` is part of the match, so near-miss
+ * names (`…-theme-extra`, `…-base-theme`) never match and running the codemod twice cannot
+ * double-wrap the result.
  */
-const overlayVar = /var\(--kbq-background-overlay-(theme|error)\)/g;
+const overlayVar = /var\(\s*(--kbq-background-overlay-(theme|error))\s*\)/g;
 
-/**
- * The shapes a human has to decide about: a `var()` that carries an explicit fallback, or a bare
- * token outside `var()`. Comments are matched first and skipped, so a mention that only lives in
- * prose is not reported; quoted strings are deliberately still scanned, because a CSS-in-JS
- * template literal is code the codemod is meant to migrate.
- */
-const overlayAmbiguous =
-    /\/\*[\s\S]*?\*\/|\/\/[^\n]*|var\((--kbq-background-overlay-(?:theme|error))\s*,|(?<!var\()(--kbq-background-overlay-(?:theme|error))(?![\w-])/g;
+/** A `var()` that carries an explicit fallback — the consumer's decision, so report-only. */
+const overlayFallback = /var\(\s*(--kbq-background-overlay-(?:theme|error))\s*,/g;
+
+/** A bare overlay token outside `var()`. */
+const overlayBare = /(?<!var\()--kbq-background-overlay-(?:theme|error)(?![\w-])/g;
 
 /**
  * Old palette → new engineering palette. Every opaque `--kbq-palette-<family>-<step>` (an HSL ramp
@@ -120,16 +118,14 @@ const overlayAmbiguous =
  * fidelity for more automatic fixes.
  */
 const PALETTE_DELTA_E_MAX = 3;
-const PALETTE_MAP = loadPaletteMap();
+const PALETTE_MAP = loadPaletteMap(); // object, or null when palette-map.json is missing
 const paletteToken = /--kbq-palette-[\w-]+/g;
 
 function loadPaletteMap() {
     try {
         return JSON.parse(readFileSync(join(HERE, 'palette-map.json'), 'utf8'));
     } catch {
-        console.warn('! Could not read palette-map.json — palette suggestions are skipped.');
-
-        return {};
+        return null;
     }
 }
 
@@ -253,12 +249,121 @@ function movedPath(path) {
 /** A --kbq-* name, not followed by more name characters. */
 const tokenPattern = (name) => new RegExp(`${name}(?![\\w-])`, 'g');
 
+/** Index just past the closing quote of a `'…'` / `"…"` literal starting at `i`. */
+function endOfString(source, i, quote) {
+    i += 1;
+
+    while (i < source.length) {
+        if (source[i] === '\\') {
+            i += 2;
+            continue;
+        }
+
+        if (source[i] === quote) return i + 1;
+
+        i += 1;
+    }
+
+    return source.length;
+}
+
+/** Index just past the closing `)` of a `url(…)` starting at `i` (skips a quoted URL). */
+function endOfUrl(source, i) {
+    let j = i + 4; // past `url(`
+
+    if (source[j] === '"' || source[j] === "'") {
+        j = endOfString(source, j, source[j]);
+    }
+
+    while (j < source.length && source[j] !== ')') j += 1;
+
+    return j < source.length ? j + 1 : j;
+}
+
+/**
+ * Split the source into code and comment segments. The scan is string- and url-aware, so a `/*`
+ * inside a string literal and a `//` inside `url(https://…)` do not start a comment. Single- and
+ * double-quoted strings are skipped only for comment detection — their contents stay code, because
+ * a CSS-in-JS template literal is exactly the code the codemod must migrate.
+ */
+function splitIntoSegments(source) {
+    const segments = [];
+    const len = source.length;
+    let i = 0;
+    let start = 0;
+
+    while (i < len) {
+        const ch = source[i];
+
+        if (ch === '"' || ch === "'") {
+            i = endOfString(source, i, ch);
+            continue;
+        }
+
+        if ((ch === 'u' || ch === 'U') && source.slice(i, i + 4).toLowerCase() === 'url(') {
+            i = endOfUrl(source, i);
+            continue;
+        }
+
+        if (ch === '/' && source[i + 1] === '*') {
+            if (i > start) segments.push({ code: true, text: source.slice(start, i) });
+
+            const end = source.indexOf('*/', i + 2);
+            const stop = end === -1 ? len : end + 2;
+
+            segments.push({ code: false, text: source.slice(i, stop) });
+            start = stop;
+            i = stop;
+            continue;
+        }
+
+        if (ch === '/' && source[i + 1] === '/') {
+            if (i > start) segments.push({ code: true, text: source.slice(start, i) });
+
+            let j = i;
+
+            while (j < len && source[j] !== '\n' && source[j] !== '\r') j += 1;
+
+            segments.push({ code: false, text: source.slice(i, j) });
+            start = j;
+            i = j;
+            continue;
+        }
+
+        i += 1;
+    }
+
+    if (start < len) segments.push({ code: true, text: source.slice(start) });
+
+    return segments;
+}
+
+/** The source with every comment character replaced by a space (newlines kept, length kept). */
+function maskComments(source) {
+    return splitIntoSegments(source)
+        .map((segment) => (segment.code ? segment.text : segment.text.replace(/[^\r\n]/g, ' ')))
+        .join('');
+}
+
+/** Whether `name` at `index` is a declaration (`--kbq-…\\s*:`), not a usage. */
+function isDeclaration(source, index, name) {
+    return /^\s*:/.test(source.slice(index + name.length));
+}
+
 function inspect(content, known, defined, { fixPalette = false, paletteDeltaE = PALETTE_DELTA_E_MAX } = {}) {
     const fixes = new Map();
     const manual = new Map();
 
+    // Every detection pass runs over `code` (comments blanked out), and rewrites run over the
+    // code segments, so comments survive verbatim and a token that only lives in prose is neither
+    // rewritten nor reported. Strings and url() are code, not comments.
+    const segments = splitIntoSegments(content);
+    const code = segments
+        .map((segment) => (segment.code ? segment.text : segment.text.replace(/[^\r\n]/g, ' ')))
+        .join('');
+
     // 1. Import paths that moved.
-    for (const [path] of content.matchAll(new RegExp(`${PKG}/web/new/[\\w./-]*`, 'g'))) {
+    for (const [path] of code.matchAll(new RegExp(`${PKG}/web/new/[\\w./-]*`, 'g'))) {
         const to = movedPath(path);
 
         if (to && to !== path) fixes.set(path, { from: path, to, kind: 'path' });
@@ -266,34 +371,45 @@ function inspect(content, known, defined, { fixPalette = false, paletteDeltaE = 
 
     // 2. Tokens with a drop-in replacement.
     for (const [from, to] of Object.entries(RENAMED_TOKENS)) {
-        if (tokenPattern(from).test(content)) fixes.set(from, { from, to, kind: 'token' });
+        if (tokenPattern(from).test(code)) fixes.set(from, { from, to, kind: 'token' });
     }
 
     // 2b. Overlay tokens that compose back to color-mix().
-    for (const [full, variant] of content.matchAll(overlayVar)) {
-        const token = `--kbq-background-overlay-${variant}`;
-
-        fixes.set(full, { from: full, to: colorMix(COLOR_MIX_TOKENS[token]), kind: 'overlay' });
+    for (const [, token] of code.matchAll(overlayVar)) {
+        fixes.set(token, { from: token, to: colorMix(COLOR_MIX_TOKENS[token]), kind: 'overlay' });
     }
 
     // 2c. Old palette → nearest v4 colour. Opaque steps have a precomputed suggestion; alpha steps
     //     (and anything the map does not cover) have none and stay report-only.
-    for (const [name] of content.matchAll(paletteToken)) {
+    for (const match of code.matchAll(paletteToken)) {
+        const name = match[0];
+
         // The static half of a template literal (`--kbq-palette-${family}-${step}`) has no token.
         if (name.endsWith('-')) continue;
 
-        const suggestion = PALETTE_MAP[name];
+        const suggestion = PALETTE_MAP?.[name];
 
         if (!suggestion) {
             manual.set(name, {
                 what: name,
-                hint: 'the v3 palette is gone — use --kbq-plt-* or --kbq-semantic-*; alpha steps have no mechanical replacement'
+                hint: 'the v3 palette is gone — use --kbq-plt-* or --kbq-semantic-*; no nearest v4 colour is mapped for this name'
+            });
+            continue;
+        }
+
+        // A declaration (`--kbq-palette-blue-50: …`) is the consumer's own property or shim —
+        // rewriting it would collide with the real `--kbq-plt-*` token, so it is reported and
+        // only the uses are rewritten.
+        if (isDeclaration(code, match.index, name)) {
+            manual.set(name, {
+                what: name,
+                hint: `removed in v4 — declared here; move its uses to ${suggestion.to} (ΔE ${suggestion.deltaE}) and drop the shim`
             });
             continue;
         }
 
         if (fixPalette && suggestion.deltaE <= paletteDeltaE) {
-            fixes.set(name, { from: name, to: suggestion.to, kind: 'token' });
+            fixes.set(name, { from: name, to: suggestion.to, kind: 'palette' });
         } else {
             const above = fixPalette ? ` — above the ${paletteDeltaE} auto-fix threshold` : '';
 
@@ -308,45 +424,56 @@ function inspect(content, known, defined, { fixPalette = false, paletteDeltaE = 
     // shorter match that happens to be a prefix of it.
     const ordered = [...fixes.values()].sort((a, b) => b.from.length - a.from.length);
 
-    let next = content;
+    const apply = (text) => {
+        for (const { from, to, kind } of ordered) {
+            if (kind === 'token') text = text.replace(tokenPattern(from), to);
+            else if (kind === 'overlay')
+                text = text.replace(overlayVar, (full, token) => colorMix(COLOR_MIX_TOKENS[token]));
+            else if (kind === 'palette')
+                text = text.replace(paletteToken, (name, offset, str) => {
+                    const suggestion = PALETTE_MAP?.[name];
 
-    for (const { from, to, kind } of ordered) {
-        next = kind === 'token' ? next.replace(tokenPattern(from), to) : next.replaceAll(from, to);
-    }
+                    if (!suggestion || isDeclaration(str, offset, name)) return name;
 
-    // 3. Things a human has to decide.
-    for (const match of content.matchAll(overlayAmbiguous)) {
-        if (!match[1] && !match[2]) continue; // a comment — leave prose alone
+                    return suggestion.deltaE <= paletteDeltaE ? suggestion.to : name;
+                });
+            else text = text.replaceAll(from, to);
+        }
 
-        const token = match[1] ?? match[2];
-        const fallback = Boolean(match[1]);
-        const what = fallback ? `var(${token}, …)` : token;
+        return text;
+    };
 
-        manual.set(what, {
-            what,
-            hint: fallback
-                ? `removed in v4 — rewrite to ${colorMix(COLOR_MIX_TOKENS[token])} and fold the explicit fallback into the mix yourself`
-                : `removed in v4 — rewrite to ${colorMix(COLOR_MIX_TOKENS[token])}`
+    const next = segments.map((segment) => (segment.code ? apply(segment.text) : segment.text)).join('');
+
+    // 3. Things a human has to decide: overlay tokens the rewrite above does not handle.
+    for (const [, token] of code.matchAll(overlayFallback)) {
+        manual.set(`var(${token}, …)`, {
+            what: `var(${token}, …)`,
+            hint: `removed in v4 — rewrite to ${colorMix(COLOR_MIX_TOKENS[token])} and fold the explicit fallback into the mix yourself`
         });
     }
 
+    for (const [name] of code.matchAll(overlayBare)) {
+        manual.set(name, { what: name, hint: `removed in v4 — rewrite to ${colorMix(COLOR_MIX_TOKENS[name])}` });
+    }
+
     for (const [path, hint] of DELETED_PATHS) {
-        if (content.includes(path)) manual.set(path, { what: path, hint });
+        if (code.includes(path)) manual.set(path, { what: path, hint });
     }
 
     for (const path of PALETTE_PATHS) {
-        if (content.includes(path)) manual.set(path, { what: path, hint: PALETTE_HINT });
+        if (code.includes(path)) manual.set(path, { what: path, hint: PALETTE_HINT });
     }
 
     // The repointed paths are spelled the same in v3 and v4, so warning on every one of them
     // would also shout at a project that is already migrated and correct. Only raise them where
     // the file still shows signs of the legacy track — a v3 palette variable, or an import of
     // something v4 deleted. Those are the files whose colours actually changed underneath.
-    const looksLegacy = content.includes('--kbq-palette-') || DELETED_PATHS.some(([p]) => content.includes(p));
+    const looksLegacy = code.includes('--kbq-palette-') || DELETED_PATHS.some(([p]) => code.includes(p));
 
     if (looksLegacy) {
         for (const [path, hint] of REPOINTED) {
-            if (content.includes(path)) manual.set(path, { what: path, hint });
+            if (code.includes(path)) manual.set(path, { what: path, hint });
         }
     }
 
@@ -354,7 +481,7 @@ function inspect(content, known, defined, { fixPalette = false, paletteDeltaE = 
     //    Catches the 47 removed component token sets and anything else this codemod has no
     //    specific rule for.
     if (known) {
-        for (const [, name] of content.matchAll(/(--kbq-[\w-]+)/g)) {
+        for (const [, name] of code.matchAll(/(--kbq-[\w-]+)/g)) {
             if (known.has(name) || defined.has(name) || manual.has(name)) continue;
             if (name in RENAMED_TOKENS || name in COLOR_MIX_TOKENS) continue;
             if (name.startsWith('--kbq-palette-')) continue; // handled by the palette pass
@@ -383,9 +510,19 @@ function parseArgs(args) {
     const fixPalette = args.includes('--fix-palette');
 
     const flagValue = (flag) => {
+        // `--flag=value` form.
+        const eq = args.find((arg) => arg.startsWith(`${flag}=`));
+
+        if (eq !== undefined) return eq.slice(flag.length + 1);
+
+        // `--flag value` form; a following `--*` is another flag, not the value.
         const i = args.indexOf(flag);
 
-        return i === -1 || i + 1 >= args.length ? undefined : args[i + 1];
+        if (i === -1 || i + 1 >= args.length) return undefined;
+
+        const next = args[i + 1];
+
+        return next.startsWith('--') ? undefined : next;
     };
 
     const tokensDir = flagValue('--tokens');
@@ -411,7 +548,7 @@ function main() {
     if (paletteDeltaArg !== undefined) {
         const parsed = Number(paletteDeltaArg);
 
-        if (Number.isFinite(parsed) && parsed >= 0) {
+        if (paletteDeltaArg !== '' && Number.isFinite(parsed) && parsed >= 0) {
             paletteDeltaE = parsed;
         } else {
             console.warn(`! Ignoring invalid --palette-delta-e "${paletteDeltaArg}" — using ${PALETTE_DELTA_E_MAX}.`);
@@ -423,6 +560,15 @@ function main() {
             'Usage: koobiq-tokens-codemod <file-or-dir>… [--write] [--fix-palette] [--palette-delta-e <n>] [--tokens <dir>]'
         );
         process.exit(1);
+    }
+
+    if (PALETTE_MAP === null) {
+        console.warn('! Could not read palette-map.json — palette suggestions are disabled.');
+
+        if (fixPalette) {
+            console.error('! --fix-palette needs palette-map.json, which could not be loaded.');
+            process.exit(1);
+        }
     }
 
     const { names: known, dir: knownDir } = knownTokens(tokensDir);
@@ -449,11 +595,14 @@ function main() {
 
             sources.set(file, content);
 
+            // Only code counts; a declaration inside a comment is not a declaration.
+            const code = maskComments(content);
+
             // A declaration in a stylesheet…
-            for (const [, name] of content.matchAll(/^\s*(--kbq-[\w-]+)\s*:/gm)) defined.add(name);
+            for (const [, name] of code.matchAll(/^\s*(--kbq-[\w-]+)\s*:/gm)) defined.add(name);
             // …or set from code. Deliberately narrow: a bare quoted name elsewhere may well be a
             // list of token names to migrate, which is exactly what should still be reported.
-            for (const [, name] of content.matchAll(/setProperty\(\s*['"`](--kbq-[\w-]+)/g)) defined.add(name);
+            for (const [, name] of code.matchAll(/setProperty\(\s*['"`](--kbq-[\w-]+)/g)) defined.add(name);
         }
     }
 
@@ -503,6 +652,18 @@ function main() {
 
 export { inspect, parseArgs };
 
-if (process.argv[1] !== undefined && import.meta.url === pathToFileURL(process.argv[1]).href) {
+// Compare realpaths, not raw argv[1]: when run through `node_modules/.bin/koobiq-tokens-codemod`
+// the entry is a symlink, while import.meta.url is the real path.
+function isMainEntry() {
+    if (process.argv[1] === undefined) return false;
+
+    try {
+        return realpathSync(fileURLToPath(import.meta.url)) === realpathSync(process.argv[1]);
+    } catch {
+        return false;
+    }
+}
+
+if (isMainEntry()) {
     main();
 }

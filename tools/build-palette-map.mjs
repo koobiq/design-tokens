@@ -13,9 +13,9 @@
  *
  * Zero-runtime-dependency: only this build-time tool imports `json5`; the codemod itself does not.
  */
-import { readFileSync, writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync, realpathSync } from 'node:fs';
 import { dirname, join } from 'node:path';
-import { fileURLToPath, pathToFileURL } from 'node:url';
+import { fileURLToPath } from 'node:url';
 import JSON5 from 'json5';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
@@ -184,6 +184,13 @@ const FIXED = {
     '--kbq-palette-white-default': '--kbq-plt-white'
 };
 
+// Opaque one-offs: orange/red also shipped a single step with a different saturation than their
+// main ramp (`--kbq-palette-{orange,red}-51-s69` = hsla(<hue>, 69%, 51%)).
+const SPECIAL_STEPS = [
+    { family: 'orange', hue: 26, sat: 69, step: 51, to: 'orange' },
+    { family: 'red', hue: 7, sat: 69, step: 51, to: 'red' }
+];
+
 /** Parse the opaque 1–20 ramp of a `plt` family into `[{ step, lab }]`. */
 function rampOf(plt, family) {
     const group = plt[family];
@@ -233,6 +240,28 @@ function build(plt) {
         }
     }
 
+    // Opaque one-offs with a custom saturation (`-s<sat>`).
+    for (const { family, hue, sat, step, to } of SPECIAL_STEPS) {
+        const ramp = rampOf(plt, to).map(({ step: s, lab }) => ({ to: `--kbq-plt-${to}-${s}`, lab }));
+
+        ramp.push({ to: '--kbq-plt-black', lab: blackLab }, { to: '--kbq-plt-white', lab: whiteLab });
+
+        const lab = srgbToLab(...Object.values(hslToRgb(hue, sat, step)));
+
+        let best = null;
+
+        for (const candidate of ramp) {
+            const deltaE = deltaE2000(lab, candidate.lab);
+
+            if (best === null || deltaE < best.deltaE) best = { to: candidate.to, deltaE };
+        }
+
+        map[`--kbq-palette-${family}-${step}-s${sat}`] = {
+            to: best.to,
+            deltaE: Math.round(best.deltaE * 100) / 100
+        };
+    }
+
     for (const [from, to] of Object.entries(FIXED)) {
         map[from] = { to, deltaE: 0 };
     }
@@ -279,6 +308,18 @@ function main() {
     }
 }
 
-if (process.argv[1] !== undefined && import.meta.url === pathToFileURL(process.argv[1]).href) {
+function isMainEntry() {
+    if (process.argv[1] === undefined) return false;
+
+    try {
+        return realpathSync(fileURLToPath(import.meta.url)) === realpathSync(process.argv[1]);
+    } catch {
+        return false;
+    }
+}
+
+export { build };
+
+if (isMainEntry()) {
     main();
 }
