@@ -13,9 +13,19 @@ const config = {
             'deps',
             'deps-dev',
 
-            // Others
-            'fonts',
-            'shadows'
+            // Token areas
+            'colors',
+            'typography',
+            'shadows',
+            'font',
+            'palette',
+            'plt',
+            'scss',
+
+            // Repository
+            'docs',
+            'build',
+            'ci'
         ]
     ]
 };

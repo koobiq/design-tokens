@@ -87,21 +87,20 @@ Pattern: `--kbq-opacity-[name]`
 
 ## Palette System (Contributors)
 
-For agents defining new tokens in `colors.v2.json5`. Consumer styling should use `--kbq-*` variables only.
+For agents defining new tokens in `colors.json5`. Consumer styling should use `--kbq-*` variables only.
 
 ### Token Resolution Chain
 
 ```
-plt.json5  →  semantic.json5  →  colors.v2.json5  →  CSS variables
-(raw OKLch)   (semantic roles)   (design tokens)      (--kbq-*)
+plt.json5  →  semantic.json5  →  colors.json5  →  CSS variables
+(raw OKLch)   (semantic roles)   (design tokens)   (--kbq-*)
 ```
 
 File paths relative to `packages/design-tokens/web/properties/`:
 
-- `plt.json5` — perceptually-uniform OKLch color scales. **Preferred** for new token values.
-- `semantic.json5` — maps semantic role names (`themeA`, `contrastA`, …) to plt families.
-- `colors.v2.json5` — final token definitions producing `--kbq-*` CSS variables.
-- `palette.json5` — legacy HSL colors. **Do not use for new tokens.**
+- `plt.json5` — the engineering palette. The **only** place with literal OKLch values.
+- `semantic.json5` — 1:1 aliases of the engineering palette, named by meaning (`themeA`, `contrastA`, …).
+- `colors.json5` — role tokens (`light.*` / `dark.*`) that produce the `--kbq-*` CSS variables.
 
 ### plt Color Families
 
@@ -137,17 +136,17 @@ For alpha variants (`*A`), scale = opacity level (1 = near-transparent, 20 = nea
 ### Reference Syntax
 
 ```json5
-// Preferred — via semantic layer:
-"background-theme": { "value": "{semantic.themeA.14}", "description": "..." }
+// Preferred — via the semantic layer:
+'background-theme': { $value: '{semantic.themeA.14}', $description: 'Checkboxes, radio buttons, toggle switches.' }
 
-// Direct plt reference (utility tokens):
-"background-night": { "value": "{plt.slate.18}" }
+// Direct plt reference — reserved for hue-locked tokens:
+'background-card': { $value: '{plt.white}' }
 ```
 
 ## Setup
 
 ```css
-@import '@koobiq/design-tokens/web/css-tokens.css'; /* base / component tokens (:root) */
+@import '@koobiq/design-tokens/web/css-tokens.css'; /* global tokens (:root) */
 @import '@koobiq/design-tokens/web/css-tokens-light.css'; /* light theme (.kbq-light) */
 @import '@koobiq/design-tokens/web/css-tokens-dark.css'; /* dark theme (.kbq-dark) */
 ```

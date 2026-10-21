@@ -247,65 +247,28 @@ Then reference the CSS variables in your styles — never hardcode values:
 - [`STYLING.md`](./STYLING.md) — the full token reference: colors, typography, sizes, shadows.
 - [`TOKENS-WORKFLOW.md`](./TOKENS-WORKFLOW.md) — how the three token layers fit together, recipes
   for adding tokens and re-theming.
-
-## 📖 Further reading
-
-- [`STYLING.md`](./STYLING.md) — the full token reference: colors, typography, sizes, shadows.
 - [`FIGMA-COLOR-COMPARISON.md`](./FIGMA-COLOR-COMPARISON.md) — comparing Figma colors with tokens.
 
 ## 🚀 Releasing Packages
 
-**🔹 Only maintainers should perform releases.**  
-All releases must be made from `release branches` or `main`.
+**🔹 Only maintainers should perform releases.**
 
-### 🔄 Simple Release
+Releases are made from `main` and published to npm by CI. The `@koobiq/cli` stage command does the
+version bump, changelog and tag; the CI workflow does the publishing.
 
-1. **Switch to `main`:**
-    ```sh
-    git checkout main
-    ```
-2. **Run the release command:**
+1. Make sure your working tree is clean and `main` is up to date with the remote.
+2. Run the release command:
 
     ```sh
     yarn run stage:commit
     ```
 
     This command will:
-    - Prompt you to choose the version bump (**needs validation**).
-    - Ask for a **release name** (**needs validation**).
-    - Generate a **changelog** (**needs validation**).
-    - Create a commit with the changelog.
-    - Tag the release in Git.
-    - Push the release commit and tag (including the updated `package.json`).
+    - Prompt you to choose the version bump (major, minor, patch, or a pre-release).
+    - Update the version in `package.json`.
+    - Regenerate `CHANGELOG.md` — review it before confirming.
+    - Create a commit (`chore: bump version to <version> w/ changelog`) and a git tag.
+    - Push the commit and the tag to the remote.
 
-3. **Wait for the pipeline to finish.**
-
----
-
-### 🔥Major Version Release
-
-1. **Create a new release branch from `main`**
-    ```sh
-    git checkout -b 1.0.x main
-    ```
-2. **Follow steps 2 and 3 from the Simple Release section.**
-
----
-
-### ✨Minor Version Release
-
-1. **Create a new branch from the existing release branch**
-    - Example: If the current branch is `3.0.x`, create a new branch:
-        ```sh
-        git checkout -b 3.1.x 3.0.x
-        ```
-2. **Follow steps 2 and 3 from the Simple Release section.**
-
----
-
-### 🛠️ Patch Version Release
-
-1. **Use the existing release branch.** No need to create a new one.
-2. **Follow steps 2 and 3 from the Simple Release section, but select a patch version bump.**
-
----
+3. CI picks up the new tag (`*.*.*`), builds the packages and publishes `@koobiq/design-tokens`
+   and `@koobiq/tokens-builder` to npm.

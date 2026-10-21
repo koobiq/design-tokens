@@ -12,32 +12,37 @@ various output formats like SCSS, CSS, and TypeScript.
 
 ## Typography composite tokens
 
-Tokens builder supports usage of [composite tokens](https://design-tokens.github.io/community-group/format/#composite-design-token) for CSS platform.
-For now, typography token sets are supported.
+Tokens builder supports [composite tokens](https://www.w3.org/community/reports/design-tokens/CG-FINAL-format-20251028/#composite-design-token) for the CSS platform.
+Currently, the `typography` composite type is supported.
 
-### Example of usage
+Typography presets are authored as DTCG `typography` composites — one token whose `$value` is an object of sub-properties:
 
 ```json
 {
-    "<component-name>": {
-        "font": {
-            "type": "font",
-            "<token-with-composite-token-reference>": "{typography.<typography-set>}"
+    "typography": {
+        "text-normal": {
+            "$type": "typography",
+            "$value": {
+                "fontSize": "16px",
+                "lineHeight": "24px",
+                "fontWeight": 400,
+                "fontFamily": "{font.family.mono}",
+                "letterSpacing": "normal"
+            }
         }
     }
 }
 ```
 
-where `<typography-set>` is a set from `@koobiq/design-tokens/web/properties/typography.json5`
-
-"type": "font" property is **required.**
-
-output:
+Sub-properties are camelCase, as the [`typography` type](https://www.w3.org/community/reports/design-tokens/CG-FINAL-format-20251028/#typography) requires.
+The `kbq/expand-typography` preprocessor expands each composite back into one token per sub-property before Style Dictionary resolves references:
 
 ```
-  --kbq-<component-name>-font-<token-with-composite-token-reference>-font-size: <value>;
-  --kbq-<component-name>-font-<token-with-composite-token-reference>-font-weight: <value>;
-  --kbq-<component-name>-font-<token-with-composite-token-reference>-line-height: <value>;
-  --kbq-<component-name>-font-<token-with-composite-token-reference>-font-family: <value>;
+  --kbq-typography-text-normal-font-size: 16px;
+  --kbq-typography-text-normal-line-height: 24px;
+  --kbq-typography-text-normal-font-weight: 400;
+  --kbq-typography-text-normal-font-family: var(--kbq-font-family-mono);
   // ...etc
 ```
+
+A composite can also be aliased whole — `"$value": "{typography.text-normal}"` — which the preprocessor expands into one reference per sub-property.
