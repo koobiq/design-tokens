@@ -2,8 +2,9 @@
 /**
  * Codemod: @koobiq/design-tokens v3 → v4.
  *
- * Rewrites what can be rewritten mechanically (import paths, tokens with a 1:1 replacement) and
- * reports what cannot. Nothing is written without --write.
+ * Rewrites what can be rewritten mechanically (import paths, tokens with a 1:1 replacement, the
+ * overlay tokens that compose back to `color-mix()`) and reports what cannot. Nothing is written
+ * without --write.
  *
  *   npx koobiq-tokens-codemod src            # dry run, prints a report
  *   npx koobiq-tokens-codemod src --write    # apply the fixable changes
@@ -16,7 +17,7 @@
  */
 import { readFileSync, writeFileSync, readdirSync, statSync, existsSync } from 'node:fs';
 import { join, extname, relative, dirname } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 
@@ -70,11 +71,36 @@ const RENAMED_TOKENS = {
     '--kbq-states-background-highcurrent': '--kbq-states-background-highlight-current'
 };
 
-/** Removed tokens whose replacement needs a second declaration, so a human has to place it. */
-const SPLIT_TOKENS = {
-    '--kbq-background-overlay-theme': 'use --kbq-background-overlay-base-theme together with --kbq-opacity-overlay',
-    '--kbq-background-overlay-error': 'use --kbq-background-overlay-base-error together with --kbq-opacity-overlay'
+/**
+ * Overlay tokens removed in v4 that one `var()` rewrites to a `color-mix()` composition. The v4
+ * base is an opaque colour and `--kbq-opacity-overlay` is a unitless 0–1 fraction, so the mix
+ * needs the `calc()` to turn it into the percentage `color-mix()` accepts. `in srgb` is the
+ * colour space @koobiq/components already uses for this composition.
+ */
+const COLOR_MIX_TOKENS = {
+    '--kbq-background-overlay-theme': '--kbq-background-overlay-base-theme',
+    '--kbq-background-overlay-error': '--kbq-background-overlay-base-error'
 };
+
+const OVERLAY_OPACITY = '--kbq-opacity-overlay';
+
+const colorMix = (base) => `color-mix(in srgb, var(${base}) calc(var(${OVERLAY_OPACITY}) * 100%), transparent)`;
+
+/**
+ * The only shape the overlay rewrite handles: `var(--kbq-background-overlay-…)` with no fallback.
+ * The closing `)` is part of the match, so near-miss names (`…-theme-extra`, `…-base-theme`) never
+ * match and running the codemod twice cannot double-wrap the result.
+ */
+const overlayVar = /var\(--kbq-background-overlay-(theme|error)\)/g;
+
+/**
+ * The shapes a human has to decide about: a `var()` that carries an explicit fallback, or a bare
+ * token outside `var()`. Comments are matched first and skipped, so a mention that only lives in
+ * prose is not reported; quoted strings are deliberately still scanned, because a CSS-in-JS
+ * template literal is code the codemod is meant to migrate.
+ */
+const overlayAmbiguous =
+    /\/\*[\s\S]*?\*\/|\/\/[^\n]*|var\((--kbq-background-overlay-(?:theme|error))\s*,|(?<!var\()(--kbq-background-overlay-(?:theme|error))(?![\w-])/g;
 
 /**
  * Paths that exist in both versions but no longer mean the same thing: in v3 they were the legacy
@@ -130,20 +156,8 @@ const DELETED_PATHS = [
 
 // ---------------------------------------------------------------------------------------------
 
-const args = process.argv.slice(2);
-const write = args.includes('--write');
-const tokensFlag = args.indexOf('--tokens');
-const tokensDir = tokensFlag === -1 ? undefined : args[tokensFlag + 1];
-// `tokensFlag + 1` is only a value to skip when the flag is actually present.
-const targets = args.filter((a, i) => !a.startsWith('--') && !(tokensFlag !== -1 && i === tokensFlag + 1));
-
-if (targets.length === 0) {
-    console.error('Usage: koobiq-tokens-codemod <file-or-dir>… [--write] [--tokens <dir>]');
-    process.exit(1);
-}
-
 /** Every --kbq-* variable this version of the package defines. */
-function knownTokens() {
+function knownTokens(tokensDir) {
     const candidates = tokensDir
         ? [tokensDir]
         : [
@@ -224,6 +238,13 @@ function inspect(content, known, defined) {
         if (tokenPattern(from).test(content)) fixes.set(from, { from, to, kind: 'token' });
     }
 
+    // 2b. Overlay tokens that compose back to color-mix().
+    for (const [full, variant] of content.matchAll(overlayVar)) {
+        const token = `--kbq-background-overlay-${variant}`;
+
+        fixes.set(full, { from: full, to: colorMix(COLOR_MIX_TOKENS[token]), kind: 'overlay' });
+    }
+
     // Longest path first, so rewriting `.../web/new/light/shadows.css` cannot be pre-empted by a
     // shorter match that happens to be a prefix of it.
     const ordered = [...fixes.values()].sort((a, b) => b.from.length - a.from.length);
@@ -235,8 +256,19 @@ function inspect(content, known, defined) {
     }
 
     // 3. Things a human has to decide.
-    for (const [token, hint] of Object.entries(SPLIT_TOKENS)) {
-        if (tokenPattern(token).test(content)) manual.set(token, { what: token, hint });
+    for (const match of content.matchAll(overlayAmbiguous)) {
+        if (!match[1] && !match[2]) continue; // a comment — leave prose alone
+
+        const token = match[1] ?? match[2];
+        const fallback = Boolean(match[1]);
+        const what = fallback ? `var(${token}, …)` : token;
+
+        manual.set(what, {
+            what,
+            hint: fallback
+                ? `removed in v4 — rewrite to ${colorMix(COLOR_MIX_TOKENS[token])} and fold the explicit fallback into the mix yourself`
+                : `removed in v4 — rewrite to ${colorMix(COLOR_MIX_TOKENS[token])}`
+        });
     }
 
     for (const [path, hint] of DELETED_PATHS) {
@@ -265,7 +297,7 @@ function inspect(content, known, defined) {
     if (known) {
         for (const [, name] of content.matchAll(/(--kbq-[\w-]+)/g)) {
             if (known.has(name) || defined.has(name) || manual.has(name)) continue;
-            if (name in RENAMED_TOKENS || name in SPLIT_TOKENS) continue;
+            if (name in RENAMED_TOKENS || name in COLOR_MIX_TOKENS) continue;
             // A name ending in `-` is the static half of a template literal, e.g.
             // `--kbq-semantic-${family}-${step}`. There is no such variable to look up.
             if (name.endsWith('-')) continue;
@@ -284,78 +316,100 @@ function inspect(content, known, defined) {
 }
 
 // ---------------------------------------------------------------------------------------------
+// CLI. Runs only when this file is executed directly, so importing it (the tests) has no side
+// effects.
 
-const { names: known, dir: knownDir } = knownTokens();
+function main() {
+    const args = process.argv.slice(2);
+    const write = args.includes('--write');
+    const tokensFlag = args.indexOf('--tokens');
+    const tokensDir = tokensFlag === -1 ? undefined : args[tokensFlag + 1];
+    // `tokensFlag + 1` is only a value to skip when the flag is actually present.
+    const targets = args.filter((a, i) => !a.startsWith('--') && !(tokensFlag !== -1 && i === tokensFlag + 1));
 
-if (!known) {
-    console.warn('! Could not find the installed token CSS, so removed variables will not be reported.');
-    console.warn('  Pass --tokens <path-to-@koobiq/design-tokens/web>.\n');
-} else {
-    console.log(`Checking against ${known.size} tokens from ${knownDir}\n`);
-}
-
-// First pass: every --kbq-* the project declares itself. A component library defines plenty of
-// its own custom properties, and those are not tokens this package ever shipped — without this
-// they would all be reported as "removed in v4", which in koobiq/angular-components was 96% of
-// the output.
-const sources = new Map();
-const defined = new Set();
-
-for (const target of targets) {
-    for (const file of files(target)) {
-        const content = readFileSync(file, 'utf8');
-
-        if (!content.includes('--kbq-') && !content.includes(PKG)) continue;
-
-        sources.set(file, content);
-
-        // A declaration in a stylesheet…
-        for (const [, name] of content.matchAll(/^\s*(--kbq-[\w-]+)\s*:/gm)) defined.add(name);
-        // …or set from code. Deliberately narrow: a bare quoted name elsewhere may well be a
-        // list of token names to migrate, which is exactly what should still be reported.
-        for (const [, name] of content.matchAll(/setProperty\(\s*['"`](--kbq-[\w-]+)/g)) defined.add(name);
-    }
-}
-
-let changedFiles = 0;
-let fixCount = 0;
-let manualCount = 0;
-
-for (const [file, content] of sources) {
-    const { next, fixes, manual } = inspect(content, known, defined);
-
-    if (fixes.length === 0 && manual.length === 0) continue;
-
-    console.log(relative(process.cwd(), file));
-
-    for (const { from, to } of fixes) {
-        console.log(`  ${write ? '✔' : '·'} ${from}  →  ${to}`);
+    if (targets.length === 0) {
+        console.error('Usage: koobiq-tokens-codemod <file-or-dir>… [--write] [--tokens <dir>]');
+        process.exit(1);
     }
 
-    for (const { what, hint } of manual) {
-        console.log(`  ⚠ ${what}\n      ${hint}`);
+    const { names: known, dir: knownDir } = knownTokens(tokensDir);
+
+    if (!known) {
+        console.warn('! Could not find the installed token CSS, so removed variables will not be reported.');
+        console.warn('  Pass --tokens <path-to-@koobiq/design-tokens/web>.\n');
+    } else {
+        console.log(`Checking against ${known.size} tokens from ${knownDir}\n`);
     }
 
-    console.log('');
+    // First pass: every --kbq-* the project declares itself. A component library defines plenty of
+    // its own custom properties, and those are not tokens this package ever shipped — without this
+    // they would all be reported as "removed in v4", which in koobiq/angular-components was 96% of
+    // the output.
+    const sources = new Map();
+    const defined = new Set();
 
-    fixCount += fixes.length;
-    manualCount += manual.length;
+    for (const target of targets) {
+        for (const file of files(target)) {
+            const content = readFileSync(file, 'utf8');
 
-    if (fixes.length > 0) {
-        changedFiles++;
-        if (write) writeFileSync(file, next);
+            if (!content.includes('--kbq-') && !content.includes(PKG)) continue;
+
+            sources.set(file, content);
+
+            // A declaration in a stylesheet…
+            for (const [, name] of content.matchAll(/^\s*(--kbq-[\w-]+)\s*:/gm)) defined.add(name);
+            // …or set from code. Deliberately narrow: a bare quoted name elsewhere may well be a
+            // list of token names to migrate, which is exactly what should still be reported.
+            for (const [, name] of content.matchAll(/setProperty\(\s*['"`](--kbq-[\w-]+)/g)) defined.add(name);
+        }
     }
+
+    let changedFiles = 0;
+    let fixCount = 0;
+    let manualCount = 0;
+
+    for (const [file, content] of sources) {
+        const { next, fixes, manual } = inspect(content, known, defined);
+
+        if (fixes.length === 0 && manual.length === 0) continue;
+
+        console.log(relative(process.cwd(), file));
+
+        for (const { from, to } of fixes) {
+            console.log(`  ${write ? '✔' : '·'} ${from}  →  ${to}`);
+        }
+
+        for (const { what, hint } of manual) {
+            console.log(`  ⚠ ${what}\n      ${hint}`);
+        }
+
+        console.log('');
+
+        fixCount += fixes.length;
+        manualCount += manual.length;
+
+        if (fixes.length > 0) {
+            changedFiles++;
+            if (write) writeFileSync(file, next);
+        }
+    }
+
+    console.log('─'.repeat(72));
+    console.log(
+        write
+            ? `Applied ${fixCount} change(s) across ${changedFiles} file(s).`
+            : `${fixCount} change(s) in ${changedFiles} file(s) can be applied — rerun with --write.`
+    );
+
+    if (manualCount > 0) {
+        console.log(`${manualCount} item(s) need a decision; see README "Breaking changes in v4".`);
+    }
+
+    process.exit(0);
 }
 
-console.log('─'.repeat(72));
-console.log(
-    write
-        ? `Applied ${fixCount} change(s) across ${changedFiles} file(s).`
-        : `${fixCount} change(s) in ${changedFiles} file(s) can be applied — rerun with --write.`
-);
+export { inspect };
 
-if (manualCount > 0) {
-    console.log(`${manualCount} item(s) need a decision; see README "Breaking changes in v4".`);
+if (process.argv[1] !== undefined && import.meta.url === pathToFileURL(process.argv[1]).href) {
+    main();
 }
-
-process.exit(0);

@@ -140,6 +140,10 @@ replacement:
 | `--kbq-states-background-error-less` | `--kbq-background-error-tertiary`                               |
 | `--kbq-states-disabled-opacity`      | `--kbq-opacity-disabled`                                        |
 
+The codemod rewrites the overlay pair to a single composed value:
+`color-mix(in srgb, var(--kbq-background-overlay-base-theme) calc(var(--kbq-opacity-overlay) * 100%), transparent)`
+(the `-error` variant uses `-base-error`). See [the migration guide](./MIGRATION.md#the-overlay-tokens-in-detail).
+
 The `-hover` / `-active` variants of `--kbq-states-background-error-less-*` were never
 deprecated and are untouched.
 
