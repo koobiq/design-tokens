@@ -7,8 +7,10 @@
  * palette (applied only with `--fix-palette`, and only when close enough), and reports the rest.
  * Nothing is written without --write.
  *
- *   npx koobiq-tokens-codemod src            # dry run, prints a report
- *   npx koobiq-tokens-codemod src --write    # apply the fixable changes
+ *   npx koobiq-tokens-codemod src                           # dry run, prints a report
+ *   npx koobiq-tokens-codemod src --write                   # apply the fixable changes
+ *   npx koobiq-tokens-codemod src --fix-palette --write     # also apply close palette maps
+ *   npx koobiq-tokens-codemod src --fix-palette --palette-delta-e 5 --write
  *
  * The list of tokens v4 actually ships is read from the installed package rather than hardcoded,
  * so "this variable no longer exists" stays true for whichever v4 you are on. Point --tokens at a
@@ -113,8 +115,9 @@ const overlayAmbiguous =
  * `--fix-palette`, and only when `deltaE <= PALETTE_DELTA_E_MAX`. Everything above the threshold —
  * and every alpha step, which has no systematic replacement — stays report-only.
  *
- * PALETTE_DELTA_E_MAX is the one knob to tune: 1 is a just-noticeable difference, 2–3 is clearly
- * visible, and higher values trade colour fidelity for more automatic fixes.
+ * PALETTE_DELTA_E_MAX is the default threshold; `--palette-delta-e <n>` overrides it at run time.
+ * 1 is a just-noticeable difference, 2–3 is clearly visible, and higher values trade colour
+ * fidelity for more automatic fixes.
  */
 const PALETTE_DELTA_E_MAX = 3;
 const PALETTE_MAP = loadPaletteMap();
@@ -374,17 +377,51 @@ function inspect(content, known, defined, { fixPalette = false, paletteDeltaE = 
 // CLI. Runs only when this file is executed directly, so importing it (the tests) has no side
 // effects.
 
-function main() {
-    const args = process.argv.slice(2);
+/** Parse the command line. Flags that take a value pass it as the next argument. */
+function parseArgs(args) {
     const write = args.includes('--write');
     const fixPalette = args.includes('--fix-palette');
-    const tokensFlag = args.indexOf('--tokens');
-    const tokensDir = tokensFlag === -1 ? undefined : args[tokensFlag + 1];
-    // `tokensFlag + 1` is only a value to skip when the flag is actually present.
-    const targets = args.filter((a, i) => !a.startsWith('--') && !(tokensFlag !== -1 && i === tokensFlag + 1));
+
+    const flagValue = (flag) => {
+        const i = args.indexOf(flag);
+
+        return i === -1 || i + 1 >= args.length ? undefined : args[i + 1];
+    };
+
+    const tokensDir = flagValue('--tokens');
+    const paletteDeltaArg = flagValue('--palette-delta-e');
+
+    // The value that follows a value-taking flag is not a target.
+    const valueIndexes = ['--tokens', '--palette-delta-e']
+        .map((flag) => args.indexOf(flag))
+        .filter((i) => i !== -1 && i + 1 < args.length)
+        .map((i) => i + 1);
+
+    const targets = args.filter((a, i) => !a.startsWith('--') && !valueIndexes.includes(i));
+
+    return { write, fixPalette, tokensDir, paletteDeltaArg, targets };
+}
+
+function main() {
+    const { write, fixPalette, tokensDir, paletteDeltaArg, targets } = parseArgs(process.argv.slice(2));
+
+    // `--palette-delta-e` overrides the constant so a designer can experiment without editing code.
+    let paletteDeltaE = PALETTE_DELTA_E_MAX;
+
+    if (paletteDeltaArg !== undefined) {
+        const parsed = Number(paletteDeltaArg);
+
+        if (Number.isFinite(parsed) && parsed >= 0) {
+            paletteDeltaE = parsed;
+        } else {
+            console.warn(`! Ignoring invalid --palette-delta-e "${paletteDeltaArg}" — using ${PALETTE_DELTA_E_MAX}.`);
+        }
+    }
 
     if (targets.length === 0) {
-        console.error('Usage: koobiq-tokens-codemod <file-or-dir>… [--write] [--fix-palette] [--tokens <dir>]');
+        console.error(
+            'Usage: koobiq-tokens-codemod <file-or-dir>… [--write] [--fix-palette] [--palette-delta-e <n>] [--tokens <dir>]'
+        );
         process.exit(1);
     }
 
@@ -425,7 +462,7 @@ function main() {
     let manualCount = 0;
 
     for (const [file, content] of sources) {
-        const { next, fixes, manual } = inspect(content, known, defined, { fixPalette });
+        const { next, fixes, manual } = inspect(content, known, defined, { fixPalette, paletteDeltaE });
 
         if (fixes.length === 0 && manual.length === 0) continue;
 
@@ -464,7 +501,7 @@ function main() {
     process.exit(0);
 }
 
-export { inspect };
+export { inspect, parseArgs };
 
 if (process.argv[1] !== undefined && import.meta.url === pathToFileURL(process.argv[1]).href) {
     main();

@@ -28,9 +28,8 @@ package, pass `--tokens node_modules/@koobiq/design-tokens/web`.
 
 The old `--kbq-palette-*` is not a rewrite: the 0–100 HSL ramp has no arithmetic mapping onto the
 1–20 OKLch ramp, so the codemod **suggests** the nearest v4 colour and prints the ΔE (CIEDE2000).
-`--fix-palette` applies the suggestions that are close enough (ΔE ≤ 3 by default; the threshold is
-`PALETTE_DELTA_E_MAX` in the codemod). Alpha steps have no mechanical replacement and are always
-reported.
+`--fix-palette` applies the suggestions that are close enough (ΔE ≤ 3 by default; override with
+`--palette-delta-e <n>`). Alpha steps have no mechanical replacement and are always reported.
 
 **It reports, with a ⚠, what it will not guess at:**
 

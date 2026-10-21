@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { inspect } from './v3-to-v4.mjs';
+import { inspect, parseArgs } from './v3-to-v4.mjs';
 
 // The tokens v4 actually ships. Only the overlay replacement targets matter for these tests, but a
 // handful of neighbours keeps the "known token" scan (pass 4) realistic.
@@ -183,4 +183,32 @@ test('does not touch the replacement palette target', () => {
 
     assert.equal(next, input);
     assert.deepEqual(manual, []);
+});
+
+// ---------------------------------------------------------------------------------------------
+// CLI argument parsing.
+
+test('parseArgs reads the boolean flags and targets', () => {
+    const parsed = parseArgs(['--write', '--fix-palette', 'src']);
+
+    assert.equal(parsed.write, true);
+    assert.equal(parsed.fixPalette, true);
+    assert.equal(parsed.tokensDir, undefined);
+    assert.equal(parsed.paletteDeltaArg, undefined);
+    assert.deepEqual(parsed.targets, ['src']);
+});
+
+test('parseArgs reads flag values and excludes them from targets', () => {
+    const parsed = parseArgs(['--palette-delta-e', '5', '--tokens', '/tokens', 'src']);
+
+    assert.equal(parsed.paletteDeltaArg, '5');
+    assert.equal(parsed.tokensDir, '/tokens');
+    assert.deepEqual(parsed.targets, ['src']);
+});
+
+test('parseArgs tolerates a missing flag value', () => {
+    const parsed = parseArgs(['src', '--palette-delta-e']);
+
+    assert.equal(parsed.paletteDeltaArg, undefined);
+    assert.deepEqual(parsed.targets, ['src']);
 });
