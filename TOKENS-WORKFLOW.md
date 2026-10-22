@@ -156,9 +156,9 @@ e.g. a high-contrast theme:
 
 ```json5
 {
-    'overlay-theme': {
-        $value: '{semantic.themeA.8}',
-        $deprecated: 'use --kbq-background-overlay-base-theme with --kbq-opacity-overlay'
+    'warning-less': {
+        $value: '{semantic.warningFixedA.2}',
+        $deprecated: 'use --kbq-background-warning-fade'
     }
 }
 ```
