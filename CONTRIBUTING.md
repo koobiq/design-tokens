@@ -60,7 +60,7 @@ The scope is optional and names the part of the repository the change affects:
 - `colors`, `typography`, `shadows`, `font`, `palette`, `plt` — token areas
 - `scss` — generated Sass output
 - `docs`, `build`, `ci` — repository tooling
-- `deps`, `deps-dev` — dependency updates (Dependabot)
+- `deps`, `deps-dev` — dependency updates (Dependabot) and dependency management
 
 ### Message
 

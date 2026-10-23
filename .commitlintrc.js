@@ -10,7 +10,7 @@ const config = {
             2,
             'always',
             [
-                // Dependabot scopes
+                // Dependencies
                 'deps',
                 'deps-dev',
 

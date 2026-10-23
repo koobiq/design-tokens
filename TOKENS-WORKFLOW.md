@@ -3,8 +3,8 @@
 How the token layers fit together, and the recipes for the things you'll actually do:
 add a color, re-theme the brand, add a new theme, deprecate something.
 
-For the full list of tokens see [`STYLING.md`](./STYLING.md). For what changed in v4 see the
-[breaking changes](./README.md#breaking-changes-in-v4).
+For the full list of tokens see [`STYLING.md`](https://github.com/koobiq/design-tokens/blob/main/STYLING.md). For what changed in v4 see the
+[breaking changes](https://github.com/koobiq/design-tokens/blob/main/README.md#breaking-changes-in-v4).
 
 > **Try it live.** The docs site has a playground under **Design tokens → Playground**: swap the
 > brand, contrast and status families, change the radius, inspect the reference chain behind any
