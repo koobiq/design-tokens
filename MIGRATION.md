@@ -1,7 +1,7 @@
 # Migrating from v3 to v4
 
 The steps, in order. For what changed and why, see
-[breaking changes](./README.md#breaking-changes-in-v4) — this page does not repeat it.
+[breaking changes](https://github.com/koobiq/design-tokens/blob/main/README.md#breaking-changes-in-v4) — this page does not repeat it.
 
 ## 1. Install v4
 
@@ -40,12 +40,12 @@ Alpha steps, `var(…, fallback)` and declarations are never rewritten and are a
 
 **It reports, with a ⚠, what it will not guess at:**
 
-| reported                                                   | what to do                                                                                                                      |
-| :--------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------ |
-| `--kbq-palette-*` (alpha steps, or above the ΔE threshold) | nearest `--kbq-plt-*` is suggested for opaque steps; alpha steps need a human — see [§2](./README.md#2-the-old-palette-is-gone) |
-| `--kbq-theme-default`, `--kbq-purple-default`              | v3 named no replacement; pick the v4 role for whatever the value colours                                                        |
-| component tokens (`--kbq-button-*`, `--kbq-alert-*`, …)    | use the global token each one aliased, see [§3](./README.md#3-component-tokens-are-gone)                                        |
-| `web/css/**`, `web/css-tokens*.css`, `web/_variables.scss` | the path is right, but on the legacy track the values behind it are now OKLch — re-check                                        |
+| reported                                                   | what to do                                                                                                                                                                      |
+| :--------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `--kbq-palette-*` (alpha steps, or above the ΔE threshold) | nearest `--kbq-plt-*` is suggested for opaque steps; alpha steps need a human — see [§2](https://github.com/koobiq/design-tokens/blob/main/README.md#2-the-old-palette-is-gone) |
+| `--kbq-theme-default`, `--kbq-purple-default`              | v3 named no replacement; pick the v4 role for whatever the value colours                                                                                                        |
+| component tokens (`--kbq-button-*`, `--kbq-alert-*`, …)    | use the global token each one aliased, see [§3](https://github.com/koobiq/design-tokens/blob/main/README.md#3-component-tokens-are-gone)                                        |
+| `web/css/**`, `web/css-tokens*.css`, `web/_variables.scss` | the path is right, but on the legacy track the values behind it are now OKLch — re-check                                                                                        |
 
 ### The overlay tokens in detail
 
@@ -91,9 +91,9 @@ at once.
 ## 4. Check the two places that need eyes
 
 - **Code blocks and scrollbars.** The only place v4 changes pixels without being asked —
-  see [§3](./README.md#3-component-tokens-are-gone).
+  see [§3](https://github.com/koobiq/design-tokens/blob/main/README.md#3-component-tokens-are-gone).
 - **Anything that parsed the JSON sources.** They are DTCG now and two files were renamed; no
-  CSS or SCSS name changed because of it — see [§6](./README.md#6-sources-are-dtcg-now). A parser
+  CSS or SCSS name changed because of it — see [§6](https://github.com/koobiq/design-tokens/blob/main/README.md#6-sources-are-dtcg-now). A parser
   that walked into a typography preset or a shadow now finds one composite token with an object
   `$value`, keyed by the spec's camelCase names, where v3 had a group of loose tokens.
 
@@ -124,7 +124,7 @@ What it takes:
 - **Style Dictionary ≥ 5** and **`@koobiq/tokens-builder` ≥ 4**. The builder is ESM-only and
   declares the Style Dictionary peer, so installing it pins the pair together.
 - Custom hooks move to the v4/v5 API, and some are gone — see
-  [§7](./README.md#7-koobiqtokens-builder) for the renames and the removed list.
+  [§7](https://github.com/koobiq/design-tokens/blob/main/README.md#7-koobiqtokens-builder) for the renames and the removed list.
 - If you write your own platform config rather than taking the builder's, add its typography
   preprocessor: `preprocessors: ['kbq/expand-typography']`. Composite typography and shadow tokens
   do not resolve without it, and that is what the error above is really telling you.

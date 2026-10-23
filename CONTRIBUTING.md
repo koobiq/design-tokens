@@ -14,14 +14,11 @@ helpful.
 
 Before you submit your pull request (PR) consider the following guidelines:
 
-- Fork Design-tokens into your namespace by using the fork button on github.
-- Make your changes in a new git branch: `git checkout -b my-fix-branch master`
-- Create your bugfix/feature including appropriate tests.
-- Test your changes with our supported browsers.
-- Run unit tests and ensure that all tests pass.
+- Fork Design Tokens into your namespace by using the fork button on GitHub.
+- Make your changes in a new git branch: `git checkout -b my-fix-branch main`
+- Build the tokens and check the generated output: `yarn build`
 - Push your branch to GitHub.
-- Create a new pull request from your branch against the angular-components:master
-  branch.
+- Create a new pull request from your branch against the `main` branch.
 
 ## Commit message guidelines
 
@@ -30,13 +27,9 @@ Before you submit your pull request (PR) consider the following guidelines:
   │       │             │
   │       │             └─⫸ Summary in present tense. Not capitalized. No period at the end.
   │       │
-  │       └─⫸ Commit Scope: animations|common|compiler-cli|core|
-  │                          elements|forms|http|language-service|localize|platform-browser|
-  │                          platform-browser-dynamic|platform-server|router|service-worker|
-  │                          upgrade|zone.js|packaging|changelog|dev-infra|docs-infra|migrations|
+  │       └─⫸ Commit Scope: deps|deps-dev|colors|typography|shadows|font|palette|plt|scss|docs|build|ci
   │
-  │
-  └─⫸ Commit Type: build|ci|docs|feat|fix|perf|refactor|test
+  └─⫸ Commit Type: build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test
 ```
 
 Each commit message consists of a `type`, `scope` and `subject` (message).  
@@ -53,23 +46,28 @@ Must be one of the following:
 - **style**: Changes that do not affect the meaning of the code (white-space,
   formatting, missing semi-colons, etc)
 - **refactor**: A code change that neither fixes a bug nor adds a feature
+- **perf**: A code change that improves performance
 - **test**: Adding missing tests or correcting existing tests
-- **ci**: Changes that affect the CI
-- **build**: Changes that affect the build system like npm scripts or
-  angular-cli related changes
+- **build**: Changes that affect the build system or external dependencies
+- **ci**: Changes to the CI configuration
 - **chore**: Other changes that don't modify src or test files
+- **revert**: Reverts a previous commit
 
 ### Scope
 
-The scope could be anything specifying the place of the commit change, in most
-cases this would be the component name. For example select, button, etc.
+The scope is optional and names the part of the repository the change affects:
+
+- `colors`, `typography`, `shadows`, `font`, `palette`, `plt` — token areas
+- `scss` — generated Sass output
+- `docs`, `build`, `ci` — repository tooling
+- `deps`, `deps-dev` — dependency updates (Dependabot) and dependency management
 
 ### Message
 
 **Subject**  
 The commit message should describe the problem it solves or the feature it
-introduces. Not the changes you have done. Further more the commit message has to
-start with an uppercase letter and ends with a stop.
+introduces. Not the changes you have done. Furthermore the commit message has to
+start with a lowercase letter and must not end with a period.
 
 **Body**  
 The body should include the motivation for the change and contrast this with
@@ -85,19 +83,19 @@ newlines. The rest of the commit message is then used for this.
 ### Examples
 
 ```
-feat(button): added new type of button
+feat(colors): add new brand color
 ```
 
 ```
-fix(button): fixes an issue of theming.
+fix(shadows): fixes an issue with the card shadow
 
 Closes #33
 ```
 
 ```
-refactor(button): removed deprecated method.
+refactor(palette): remove the deprecated palette
 
-BREAKING CHANGE: The method has been removed.
+BREAKING CHANGE: The palette has been removed.
 Describe reasons.
 ```
 
@@ -121,8 +119,4 @@ flag it for the codeowners/admins to review.
 ### Review
 
 Now the review process kicks in. Depending on the scope of the PR one or more
-[codeowners](https://github.com/koobiq/design-tokens/blob/master/.github/CODEOWNERS)
-must review this PR before the process can be continued (in most cases at least
-2 codeowners will review and approve).
-
-### Merge-ready
+maintainers must review and approve this PR before the process can be continued.

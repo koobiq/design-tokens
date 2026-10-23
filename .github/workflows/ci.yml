@@ -22,8 +22,12 @@ jobs:
         if: ${{ github.event_name == 'pull_request' }}
         run: echo "${{ github.event.pull_request.title }}" | yarn commitlint
 
-      - name: Tests
-        run: yarn test
+      - name: Tests & Docs
+        run: |
+          yarn test
+          node tools/generate-styling-md.mjs
+          yarn exec prettier --write STYLING.md
+          git diff --exit-code -- STYLING.md
 
       - name: Linters
         run: |

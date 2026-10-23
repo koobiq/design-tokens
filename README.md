@@ -18,7 +18,7 @@
 v4 collapses the two parallel token tracks into one, drops the legacy HSL palette, and moves the
 sources to the [W3C DTCG format](https://www.w3.org/community/design-tokens/).
 
-> **Migrating?** Start with [`MIGRATION.md`](./MIGRATION.md) — a codemod ships in the package
+> **Migrating?** Start with [`MIGRATION.md`](https://github.com/koobiq/design-tokens/blob/main/MIGRATION.md) — a codemod ships in the package
 > and does the mechanical half for you:
 >
 > ```bash
@@ -67,14 +67,14 @@ which is what the rest of the system references.
 > **The scale changed too.** v3 ran `0–100` (HSL lightness, so `grey.60` meant 60% lightness).
 > v4 runs `1–20` perceptual steps, plus a parallel `*A` alpha ramp. There is no arithmetic that
 > converts between them — pick the step that looks right, or read the mapping in
-> [`STYLING.md`](./STYLING.md). Dark themes use the `dark*` families (`plt.darkSlate`,
+> [`STYLING.md`](https://github.com/koobiq/design-tokens/blob/main/STYLING.md). Dark themes use the `dark*` families (`plt.darkSlate`,
 > `semantic.darkContrast`).
 >
 > The codemod suggests the nearest `--kbq-plt-*` for each opaque `--kbq-palette-*` and prints the
 > ΔE (CIEDE2000). Two opt-in rewrites cover the opaque steps: `--fix-palette` applies the close
 > `--kbq-plt-*` matches (ΔE ≤ 3 by default, `--palette-delta-e <n>` overrides), and
 > `--palette-to-color` replaces each use with the literal v3 `hsla(…)` colour. Alpha steps and poor
-> matches stay reported. See [the migration guide](./MIGRATION.md#2-run-the-codemod).
+> matches stay reported. See [the migration guide](https://github.com/koobiq/design-tokens/blob/main/MIGRATION.md#2-run-the-codemod).
 
 `_palette.scss` is rebuilt for the OKLch palette: one Sass variable per `plt.*` family, either a
 map of its steps (`$plt-blue: (1: oklch(…), …, 20: oklch(…))`) or, for a single-value family, a
@@ -148,7 +148,7 @@ replacement:
 
 The codemod rewrites the overlay pair to a single composed value:
 `color-mix(in srgb, var(--kbq-background-overlay-base-theme) calc(var(--kbq-opacity-overlay) * 100%), transparent)`
-(the `-error` variant uses `-base-error`). See [the migration guide](./MIGRATION.md#the-overlay-tokens-in-detail).
+(the `-error` variant uses `-base-error`). See [the migration guide](https://github.com/koobiq/design-tokens/blob/main/MIGRATION.md#the-overlay-tokens-in-detail).
 
 The `-hover` / `-active` variants of `--kbq-states-background-error-less-*` were never
 deprecated and are untouched.
@@ -189,8 +189,8 @@ instead of a group of loose ones, with an object `$value` keyed by the spec's ca
 only changes the JSON shape. It does change references written against a sub-property —
 `{typography.title.font-size}` is now `{typography.title.fontSize}` — which matters only if you
 keep token sources of your own; see
-[the migration guide](./MIGRATION.md#5-if-you-build-tokens-yourself-update-the-pipeline) and
-[`TOKENS-WORKFLOW.md`](./TOKENS-WORKFLOW.md).
+[the migration guide](https://github.com/koobiq/design-tokens/blob/main/MIGRATION.md#5-if-you-build-tokens-yourself-update-the-pipeline) and
+[`TOKENS-WORKFLOW.md`](https://github.com/koobiq/design-tokens/blob/main/TOKENS-WORKFLOW.md).
 
 Token `$description`s now render as comments in the generated CSS.
 
@@ -254,68 +254,41 @@ Then reference the CSS variables in your styles — never hardcode values:
 
 ## 📖 Further reading
 
-- [`STYLING.md`](./STYLING.md) — the full token reference: colors, typography, sizes, shadows.
-- [`TOKENS-WORKFLOW.md`](./TOKENS-WORKFLOW.md) — how the three token layers fit together, recipes
+- [`STYLING.md`](https://github.com/koobiq/design-tokens/blob/main/STYLING.md) — the full token reference: colors, typography, sizes, shadows.
+- [`TOKENS-WORKFLOW.md`](https://github.com/koobiq/design-tokens/blob/main/TOKENS-WORKFLOW.md) — how the three token layers fit together, recipes
   for adding tokens and re-theming.
-
-## 📖 Further reading
-
-- [`STYLING.md`](./STYLING.md) — the full token reference: colors, typography, sizes, shadows.
-- [`FIGMA-COLOR-COMPARISON.md`](./FIGMA-COLOR-COMPARISON.md) — comparing Figma colors with tokens.
+- [`FIGMA-COLOR-COMPARISON.md`](https://github.com/koobiq/design-tokens/blob/main/FIGMA-COLOR-COMPARISON.md) — comparing Figma colors with tokens.
 
 ## 🚀 Releasing Packages
 
-**🔹 Only maintainers should perform releases.**  
-All releases must be made from `release branches` or `main`.
+**🔹 Only maintainers should perform releases.**
 
-### 🔄 Simple Release
+Releases are made from `main` and published to npm by CI. The `@koobiq/cli` stage command does the
+version bump, changelog and tag; the CI workflow does the publishing.
 
-1. **Switch to `main`:**
-    ```sh
-    git checkout main
-    ```
-2. **Run the release command:**
+1. Make sure your working tree is clean and `main` is up to date with the remote.
+2. Run the release command:
 
     ```sh
     yarn run stage:commit
     ```
 
     This command will:
-    - Prompt you to choose the version bump (**needs validation**).
-    - Ask for a **release name** (**needs validation**).
-    - Generate a **changelog** (**needs validation**).
-    - Create a commit with the changelog.
-    - Tag the release in Git.
-    - Push the release commit and tag (including the updated `package.json`).
+    - Prompt you to choose the version bump (major, minor, patch, or a pre-release).
+    - Update the version in `package.json`.
+    - Regenerate `CHANGELOG.md` — review it before confirming.
+    - Create a commit (`chore: bump version to <version> w/ changelog`) and a git tag.
+    - Push the commit and the tag to the remote.
 
-3. **Wait for the pipeline to finish.**
+3. CI picks up the new tag (`*.*.*`), builds the packages and publishes `@koobiq/design-tokens`
+   and `@koobiq/tokens-builder` to npm.
 
----
+### 🔄 Maintenance releases
 
-### 🔥Major Version Release
+Patch releases for still-supported lines are made the same way, from the maintenance branch
+instead of `main`:
 
-1. **Create a new release branch from `main`**
-    ```sh
-    git checkout -b 1.0.x main
-    ```
-2. **Follow steps 2 and 3 from the Simple Release section.**
-
----
-
-### ✨Minor Version Release
-
-1. **Create a new branch from the existing release branch**
-    - Example: If the current branch is `3.0.x`, create a new branch:
-        ```sh
-        git checkout -b 3.1.x 3.0.x
-        ```
-2. **Follow steps 2 and 3 from the Simple Release section.**
-
----
-
-### 🛠️ Patch Version Release
-
-1. **Use the existing release branch.** No need to create a new one.
-2. **Follow steps 2 and 3 from the Simple Release section, but select a patch version bump.**
-
----
+1. Check out the maintenance branch (e.g. `3.20.x`) and make sure it is up to date with the remote.
+2. Run `yarn run stage:commit` on that branch — the command commits, tags and pushes the branch
+   and the tag.
+3. CI publishes the tag as usual.
