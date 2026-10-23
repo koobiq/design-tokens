@@ -5,29 +5,31 @@
  */
 const config = {
     extends: ['@commitlint/config-conventional'],
-    'scope-enum': [
-        2,
-        'always',
-        [
-            // Dependabot scopes
-            'deps',
-            'deps-dev',
+    rules: {
+        'scope-enum': [
+            2,
+            'always',
+            [
+                // Dependabot scopes
+                'deps',
+                'deps-dev',
 
-            // Token areas
-            'colors',
-            'typography',
-            'shadows',
-            'font',
-            'palette',
-            'plt',
-            'scss',
+                // Token areas
+                'colors',
+                'typography',
+                'shadows',
+                'font',
+                'palette',
+                'plt',
+                'scss',
 
-            // Repository
-            'docs',
-            'build',
-            'ci'
+                // Repository
+                'docs',
+                'build',
+                'ci'
+            ]
         ]
-    ]
+    }
 };
 
 module.exports = config;

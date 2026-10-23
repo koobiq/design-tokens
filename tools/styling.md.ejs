@@ -3,7 +3,7 @@
 # Koobiq Design Tokens — Styling Reference
 
 > Auto-generated from token source files. Run `yarn generate:styling` to refresh.
-> See [AGENTS.md](./AGENTS.md) for project overview and setup.
+> See [AGENTS.md](https://github.com/koobiq/design-tokens/blob/main/AGENTS.md) for project overview and setup.
 
 ## Color System
 
@@ -137,10 +137,10 @@ For alpha variants (`*A`), scale = opacity level (1 = near-transparent, 20 = nea
 
 ```json5
 // Preferred — via the semantic layer:
-'background-theme': { $value: '{semantic.themeA.14}', $description: 'Checkboxes, radio buttons, toggle switches.' }
+'background-theme': { $value: '<%= light.background.theme.$value %>', $description: '<%= light.background.theme.$description %>' }
 
 // Direct plt reference — reserved for hue-locked tokens:
-'background-card': { $value: '{plt.white}' }
+'background-card': { $value: '<%= light.background.card.$value %>' }
 ```
 
 ## Setup

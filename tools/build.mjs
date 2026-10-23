@@ -53,9 +53,9 @@ const currentVersion = JSON.parse(readFileSync('package.json', 'utf8')).version;
 prepareTokens('design-tokens');
 prepareTokens('tokens-builder');
 
-// The published package ships the root README (the v4 documentation) instead of the stub in
-// packages/design-tokens/README.md, plus the docs the README links to so its relative links keep
-// resolving from the npm package.
+// The published package ships the root README (the v4 documentation) plus the docs the README
+// links to, so the package carries the whole documentation set. The README links to those docs
+// by absolute GitHub URLs, so they resolve both on GitHub and on the npm package page.
 for (const doc of ['README.md', 'MIGRATION.md', 'STYLING.md', 'TOKENS-WORKFLOW.md', 'FIGMA-COLOR-COMPARISON.md']) {
     copyFileSync(doc, `dist/design-tokens/${doc}`);
 }

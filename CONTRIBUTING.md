@@ -87,13 +87,13 @@ feat(colors): add new brand color
 ```
 
 ```
-fix(shadows): fixes an issue with the card shadow.
+fix(shadows): fixes an issue with the card shadow
 
 Closes #33
 ```
 
 ```
-refactor(palette): remove the deprecated palette.
+refactor(palette): remove the deprecated palette
 
 BREAKING CHANGE: The palette has been removed.
 Describe reasons.

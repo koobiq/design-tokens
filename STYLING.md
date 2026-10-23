@@ -3,7 +3,7 @@
 # Koobiq Design Tokens — Styling Reference
 
 > Auto-generated from token source files. Run `yarn generate:styling` to refresh.
-> See [AGENTS.md](./AGENTS.md) for project overview and setup.
+> See [AGENTS.md](https://github.com/koobiq/design-tokens/blob/main/AGENTS.md) for project overview and setup.
 
 ## Color System
 

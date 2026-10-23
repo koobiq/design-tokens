@@ -18,7 +18,7 @@
 v4 collapses the two parallel token tracks into one, drops the legacy HSL palette, and moves the
 sources to the [W3C DTCG format](https://www.w3.org/community/design-tokens/).
 
-> **Migrating?** Start with [`MIGRATION.md`](./MIGRATION.md) — a codemod ships in the package
+> **Migrating?** Start with [`MIGRATION.md`](https://github.com/koobiq/design-tokens/blob/main/MIGRATION.md) — a codemod ships in the package
 > and does the mechanical half for you:
 >
 > ```bash
@@ -67,7 +67,7 @@ which is what the rest of the system references.
 > **The scale changed too.** v3 ran `0–100` (HSL lightness, so `grey.60` meant 60% lightness).
 > v4 runs `1–20` perceptual steps, plus a parallel `*A` alpha ramp. There is no arithmetic that
 > converts between them — pick the step that looks right, or read the mapping in
-> [`STYLING.md`](./STYLING.md). Dark themes use the `dark*` families (`plt.darkSlate`,
+> [`STYLING.md`](https://github.com/koobiq/design-tokens/blob/main/STYLING.md). Dark themes use the `dark*` families (`plt.darkSlate`,
 > `semantic.darkContrast`).
 
 `_palette.scss` is rebuilt for the OKLch palette: one Sass variable per `plt.*` family, either a
@@ -179,8 +179,8 @@ instead of a group of loose ones, with an object `$value` keyed by the spec's ca
 only changes the JSON shape. It does change references written against a sub-property —
 `{typography.title.font-size}` is now `{typography.title.fontSize}` — which matters only if you
 keep token sources of your own; see
-[the migration guide](./MIGRATION.md#5-if-you-build-tokens-yourself-update-the-pipeline) and
-[`TOKENS-WORKFLOW.md`](./TOKENS-WORKFLOW.md).
+[the migration guide](https://github.com/koobiq/design-tokens/blob/main/MIGRATION.md#5-if-you-build-tokens-yourself-update-the-pipeline) and
+[`TOKENS-WORKFLOW.md`](https://github.com/koobiq/design-tokens/blob/main/TOKENS-WORKFLOW.md).
 
 Token `$description`s now render as comments in the generated CSS.
 
@@ -244,10 +244,10 @@ Then reference the CSS variables in your styles — never hardcode values:
 
 ## 📖 Further reading
 
-- [`STYLING.md`](./STYLING.md) — the full token reference: colors, typography, sizes, shadows.
-- [`TOKENS-WORKFLOW.md`](./TOKENS-WORKFLOW.md) — how the three token layers fit together, recipes
+- [`STYLING.md`](https://github.com/koobiq/design-tokens/blob/main/STYLING.md) — the full token reference: colors, typography, sizes, shadows.
+- [`TOKENS-WORKFLOW.md`](https://github.com/koobiq/design-tokens/blob/main/TOKENS-WORKFLOW.md) — how the three token layers fit together, recipes
   for adding tokens and re-theming.
-- [`FIGMA-COLOR-COMPARISON.md`](./FIGMA-COLOR-COMPARISON.md) — comparing Figma colors with tokens.
+- [`FIGMA-COLOR-COMPARISON.md`](https://github.com/koobiq/design-tokens/blob/main/FIGMA-COLOR-COMPARISON.md) — comparing Figma colors with tokens.
 
 ## 🚀 Releasing Packages
 
@@ -272,3 +272,13 @@ version bump, changelog and tag; the CI workflow does the publishing.
 
 3. CI picks up the new tag (`*.*.*`), builds the packages and publishes `@koobiq/design-tokens`
    and `@koobiq/tokens-builder` to npm.
+
+### 🔄 Maintenance releases
+
+Patch releases for still-supported lines are made the same way, from the maintenance branch
+instead of `main`:
+
+1. Check out the maintenance branch (e.g. `3.20.x`) and make sure it is up to date with the remote.
+2. Run `yarn run stage:commit` on that branch — the command commits, tags and pushes the branch
+   and the tag.
+3. CI publishes the tag as usual.
