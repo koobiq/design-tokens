@@ -69,6 +69,12 @@ which is what the rest of the system references.
 > converts between them — pick the step that looks right, or read the mapping in
 > [`STYLING.md`](https://github.com/koobiq/design-tokens/blob/main/STYLING.md). Dark themes use the `dark*` families (`plt.darkSlate`,
 > `semantic.darkContrast`).
+>
+> The codemod suggests the nearest `--kbq-plt-*` for each opaque `--kbq-palette-*` and prints the
+> ΔE (CIEDE2000). Two opt-in rewrites cover the opaque steps: `--fix-palette` applies the close
+> `--kbq-plt-*` matches (ΔE ≤ 3 by default, `--palette-delta-e <n>` overrides), and
+> `--palette-to-color` replaces each use with the literal v3 `hsla(…)` colour. Alpha steps and poor
+> matches stay reported. See [the migration guide](./MIGRATION.md#2-run-the-codemod).
 
 `_palette.scss` is rebuilt for the OKLch palette: one Sass variable per `plt.*` family, either a
 map of its steps (`$plt-blue: (1: oklch(…), …, 20: oklch(…))`) or, for a single-value family, a
@@ -139,6 +145,10 @@ replacement:
 | `--kbq-foreground-success-less`      | `--kbq-foreground-success-tertiary`                             |
 | `--kbq-states-background-error-less` | `--kbq-background-error-tertiary`                               |
 | `--kbq-states-disabled-opacity`      | `--kbq-opacity-disabled`                                        |
+
+The codemod rewrites the overlay pair to a single composed value:
+`color-mix(in srgb, var(--kbq-background-overlay-base-theme) calc(var(--kbq-opacity-overlay) * 100%), transparent)`
+(the `-error` variant uses `-base-error`). See [the migration guide](./MIGRATION.md#the-overlay-tokens-in-detail).
 
 The `-hover` / `-active` variants of `--kbq-states-background-error-less-*` were never
 deprecated and are untouched.

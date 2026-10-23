@@ -22,39 +22,54 @@ extensions and skips `node_modules`, `dist` and friends. In a monorepo where it 
 package, pass `--tokens node_modules/@koobiq/design-tokens/web`.
 
 **It rewrites** the moved import paths (`web/new/**` → `web/css/**`, aggregates to the root of
-`web/`) and the eleven tokens that have a one-for-one replacement.
+`web/`), the eleven tokens that have a one-for-one replacement, and the two removed overlay tokens
+— `var(--kbq-background-overlay-theme)` / `var(--kbq-background-overlay-error)` become the
+`color-mix()` shown [below](#the-overlay-tokens-in-detail).
+
+The old `--kbq-palette-*` is not a plain rewrite: the 0–100 HSL ramp has no arithmetic mapping onto
+the 1–20 OKLch ramp, so by default the codemod **suggests** the nearest v4 colour and prints the ΔE
+(CIEDE2000). Two opt-in rewrites cover the opaque steps:
+
+- `--fix-palette` replaces each use with the nearest `--kbq-plt-*`, but only when close enough
+  (ΔE ≤ 3 by default; override with `--palette-delta-e <n>`).
+- `--palette-to-color` replaces each use with the literal v3 colour — the old palette was
+  theme-independent, so there is nothing to keep as a variable, and the exact `hsla(…)` value is
+  stable even if the v4 palette is tuned again later.
+
+Alpha steps, `var(…, fallback)` and declarations are never rewritten and are always reported.
 
 **It reports, with a ⚠, what it will not guess at:**
 
-| reported                                                   | what to do                                                                                                       |
-| :--------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------- |
-| `--kbq-palette-*`                                          | pick a step from `--kbq-semantic-*` by eye — the scale changed, see [§2](./README.md#2-the-old-palette-is-gone)  |
-| `--kbq-background-overlay-theme` / `-error`                | became a pair: the `-base-` colour plus `--kbq-opacity-overlay` — [details below](#the-overlay-tokens-in-detail) |
-| `--kbq-theme-default`, `--kbq-purple-default`              | v3 named no replacement; pick the v4 role for whatever the value colours                                         |
-| component tokens (`--kbq-button-*`, `--kbq-alert-*`, …)    | use the global token each one aliased, see [§3](./README.md#3-component-tokens-are-gone)                         |
-| `web/css/**`, `web/css-tokens*.css`, `web/_variables.scss` | the path is right, but on the legacy track the values behind it are now OKLch — re-check                         |
+| reported                                                   | what to do                                                                                                                      |
+| :--------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------ |
+| `--kbq-palette-*` (alpha steps, or above the ΔE threshold) | nearest `--kbq-plt-*` is suggested for opaque steps; alpha steps need a human — see [§2](./README.md#2-the-old-palette-is-gone) |
+| `--kbq-theme-default`, `--kbq-purple-default`              | v3 named no replacement; pick the v4 role for whatever the value colours                                                        |
+| component tokens (`--kbq-button-*`, `--kbq-alert-*`, …)    | use the global token each one aliased, see [§3](./README.md#3-component-tokens-are-gone)                                        |
+| `web/css/**`, `web/css-tokens*.css`, `web/_variables.scss` | the path is right, but on the legacy track the values behind it are now OKLch — re-check                                        |
 
 ### The overlay tokens in detail
 
 `--kbq-background-overlay-theme` and `--kbq-background-overlay-error` were a single translucent
 colour — `{semantic.themeA.8}` and `{semantic.errorA.8}`. v4 splits that into an opaque base and
-a separate opacity, so you compose the two yourself:
+a separate opacity, and the codemod composes them back together for you:
 
 ```diff
 - background-color: var(--kbq-background-overlay-theme);
-+ background-color: var(--kbq-background-overlay-base-theme);
-+ opacity: var(--kbq-opacity-overlay);
++ background-color: color-mix(in srgb, var(--kbq-background-overlay-base-theme) calc(var(--kbq-opacity-overlay) * 100%), transparent);
 ```
 
-Two things to watch, which is why the codemod reports these rather than rewriting them.
+`--kbq-opacity-overlay` is a unitless 0–1 fraction (0.9 in both themes), while `color-mix()` takes
+a percentage — hence the `calc(var(--kbq-opacity-overlay) * 100%)`. `in srgb` matches the colour
+space `@koobiq/components` already uses for this composition.
 
-**`opacity` fades the element's children too.** If the overlay has content — a label, an icon,
-a dashed border — that content fades with it. Put the colour on a `::before` or a dedicated
-layer instead, or keep it in one value with `color-mix(in oklch, var(--kbq-background-overlay-base-theme) 90%, transparent)`.
+The rewrite only applies to a plain `var(--kbq-background-overlay-…)`. A `var()` that carries an
+explicit fallback, or a bare token outside `var()`, is reported instead — after the rewrite there
+is no single `var()` to fold the fallback into, so those need a human.
 
-**`opacity` may already be taken.** In `koobiq/angular-components` the dropzone overlay animates
-its own appearance with `opacity: 0 → 1`, so a second `opacity` declaration would fight the
-transition. That element needs the `color-mix()` form or a pseudo-element.
+Composing with `color-mix()` keeps the translucency in the colour value itself, which sidesteps
+the two traps of the `opacity:`-property form: `opacity` fades the element's children too (a
+label, an icon, a dashed border), and it may already be taken by an animation — the dropzone in
+`koobiq/angular-components` animates `opacity: 0 → 1`.
 
 The result is not pixel-identical to v3 either: `themeA.8` and `theme.5` at 90% are different
 colours. Look at the overlay after the swap.
