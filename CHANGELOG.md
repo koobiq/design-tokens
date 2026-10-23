@@ -1,3 +1,13 @@
+# 4.1.0 (2026-10-23)
+
+### Design Tokens
+
+ * bug fix  align light-icon-success-fade alias ([#DS-5759](https://github.com/koobiq/design-tokens/issues/issue/DS-5759)) ([#181](https://github.com/koobiq/design-tokens/issues/181)) ([af439b0](https://github.com/koobiq/design-tokens/commit/af439b0c76da9e1c98ce6287a8e92d720e9a6576))
+ * bug fix  distinguish dark theme icon shades ([#DS-5760](https://github.com/koobiq/design-tokens/issues/issue/DS-5760)) ([#182](https://github.com/koobiq/design-tokens/issues/182)) ([8dd9abd](https://github.com/koobiq/design-tokens/commit/8dd9abd459ca36c7a10b3146909c7102810b3c47))
+ * bug fix  refresh dark palette values ([#DS-5707](https://github.com/koobiq/design-tokens/issues/issue/DS-5707)) ([#185](https://github.com/koobiq/design-tokens/issues/185)) ([84ce6a6](https://github.com/koobiq/design-tokens/commit/84ce6a6ab5685bfedd2f5f5e4d104455d98abd7c))
+ * bug fix  **scss:** rebuild _palette.scss for the v4 OKLch palette ([#179](https://github.com/koobiq/design-tokens/issues/179)) ([3c2a1c6](https://github.com/koobiq/design-tokens/commit/3c2a1c6c2a638b815080f45e146f9a4ebfe9d363))
+ * feature  **codemod:** rewrite overlay tokens and map the old palette to v4 ([#186](https://github.com/koobiq/design-tokens/issues/186)) ([a8b9ffc](https://github.com/koobiq/design-tokens/commit/a8b9ffc27e0a30bd1d1d1665b7d2a8cd83cb42fe))
+
 ## 4.0.1 (2026-10-14)
 
 ### Design Tokens
