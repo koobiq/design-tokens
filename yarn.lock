@@ -1923,7 +1923,7 @@ __metadata:
     lint-staged: "npm:^15.5.2"
     prettier: "npm:^3.9.9"
     rimraf: "npm:^5.0.5"
-    style-dictionary: "npm:^5.6.1"
+    style-dictionary: "npm:^5.7.1"
     stylelint: "npm:^16.26.1"
     stylelint-config-recommended-scss: "npm:^16.0.2"
   languageName: unknown
@@ -4989,9 +4989,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"style-dictionary@npm:^5.6.1":
-  version: 5.6.1
-  resolution: "style-dictionary@npm:5.6.1"
+"style-dictionary@npm:^5.7.1":
+  version: 5.7.1
+  resolution: "style-dictionary@npm:5.7.1"
   dependencies:
     "@bundled-es-modules/deepmerge": "npm:^4.3.2"
     "@bundled-es-modules/glob": "npm:^13.0.6-hotfix.0"
@@ -5008,7 +5008,7 @@ __metadata:
     tinycolor2: "npm:^1.6.0"
   bin:
     style-dictionary: bin/style-dictionary.js
-  checksum: 10c0/5786cb9c4525db035b10eeb694f2b089d58882f75ded86ccbe4d834bc0b3562fdcf85ad8e5b329fec44f0f41bf072972e991f58274f3b369c551565526aa21da
+  checksum: 10c0/7f29175e557ecbaa5b5de8e6f2ccfe98e11fcaafc7a3f96c66dfc34728ddf0dcf274a36975f52dccfa4fcbb9b6862658512f3f730d6679a95d280d2ad921501f
   languageName: node
   linkType: hard
 
