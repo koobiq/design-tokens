@@ -22,7 +22,7 @@
                 $description: 'Elevated surfaces; matches bg in light, differs in dark.',
             },
             theme: {
-                $value: '{semantic.themeA.14}',
+                $value: '{semantic.theme.14}',
                 $description: 'Checkboxes, radio buttons, toggle switches.',
             },
             'theme-fade': {
@@ -45,7 +45,7 @@
                 $description: 'Multi-select checked rows; alert containers.',
             },
             error: {
-                $value: '{semantic.errorA.14}',
+                $value: '{semantic.error.14}',
             },
             'error-fade': {
                 $value: '{semantic.errorA.3}',
@@ -55,7 +55,7 @@
                 $description: 'Alert container.',
             },
             success: {
-                $value: '{semantic.successA.14}',
+                $value: '{semantic.success.14}',
             },
             'success-fade': {
                 $value: '{semantic.successA.3}',
@@ -65,7 +65,7 @@
                 $description: 'Alert container.',
             },
             warning: {
-                $value: '{semantic.warningFixedA.14}',
+                $value: '{semantic.warningFixed.14}',
             },
             'warning-fade': {
                 $value: '{semantic.warningFixedA.3}',
@@ -336,10 +336,10 @@
                     $value: '{semantic.contrastA.3}',
                 },
                 'theme-hover': {
-                    $value: '{semantic.themeA.15}',
+                    $value: '{semantic.theme.15}',
                 },
                 'theme-active': {
-                    $value: '{semantic.themeA.16}',
+                    $value: '{semantic.theme.16}',
                 },
                 'theme-fade-hover': {
                     $value: '{semantic.themeA.4}',
@@ -354,10 +354,10 @@
                     $value: '{semantic.themeA.4}',
                 },
                 'error-hover': {
-                    $value: '{semantic.errorA.15}',
+                    $value: '{semantic.error.15}',
                 },
                 'error-active': {
-                    $value: '{semantic.errorA.16}',
+                    $value: '{semantic.error.16}',
                 },
                 'error-fade-hover': {
                     $value: '{semantic.errorA.4}',
@@ -372,10 +372,10 @@
                     $value: '{semantic.errorA.4}',
                 },
                 'warning-hover': {
-                    $value: '{semantic.warningFixedA.16}',
+                    $value: '{semantic.warningFixed.16}',
                 },
                 'warning-active': {
-                    $value: '{semantic.warningFixedA.17}',
+                    $value: '{semantic.warningFixed.17}',
                 },
                 'warning-fade-hover': {
                     $value: '{semantic.warningFixedA.7}',
@@ -390,10 +390,10 @@
                     $value: '{semantic.warningA.4}',
                 },
                 'success-hover': {
-                    $value: '{semantic.successA.15}',
+                    $value: '{semantic.success.15}',
                 },
                 'success-active': {
-                    $value: '{semantic.successA.16}',
+                    $value: '{semantic.success.16}',
                 },
                 'success-fade-hover': {
                     $value: '{semantic.successA.4}',
@@ -537,7 +537,7 @@
                 $value: '{semantic.darkContrast.2}',
             },
             theme: {
-                $value: '{semantic.darkThemeA.11}',
+                $value: '{semantic.darkTheme.11}',
             },
             'theme-fade': {
                 $value: '{semantic.darkThemeA.5}',
@@ -555,7 +555,7 @@
                 $value: '{semantic.darkContrastA.3}',
             },
             error: {
-                $value: '{semantic.darkErrorA.11}',
+                $value: '{semantic.darkError.11}',
             },
             'error-fade': {
                 $value: '{semantic.darkErrorA.5}',
@@ -564,7 +564,7 @@
                 $value: '{semantic.darkErrorA.3}',
             },
             success: {
-                $value: '{semantic.darkSuccessA.11}',
+                $value: '{semantic.darkSuccess.11}',
             },
             'success-fade': {
                 $value: '{semantic.darkSuccessA.5}',
@@ -573,7 +573,7 @@
                 $value: '{semantic.darkSuccessA.3}',
             },
             warning: {
-                $value: '{semantic.darkWarningA.11}',
+                $value: '{semantic.darkWarning.11}',
             },
             'warning-fade': {
                 $value: '{semantic.darkWarningFixedA.4}',
@@ -828,10 +828,10 @@
                     $value: '{semantic.darkContrastA.5}',
                 },
                 'theme-hover': {
-                    $value: '{semantic.darkThemeA.12}',
+                    $value: '{semantic.darkTheme.12}',
                 },
                 'theme-active': {
-                    $value: '{semantic.darkThemeA.13}',
+                    $value: '{semantic.darkTheme.13}',
                 },
                 'theme-fade-hover': {
                     $value: '{semantic.darkThemeA.6}',
@@ -846,10 +846,10 @@
                     $value: '{semantic.darkThemeA.5}',
                 },
                 'error-hover': {
-                    $value: '{semantic.darkErrorA.12}',
+                    $value: '{semantic.darkError.12}',
                 },
                 'error-active': {
-                    $value: '{semantic.darkErrorA.13}',
+                    $value: '{semantic.darkError.13}',
                 },
                 'error-fade-hover': {
                     $value: '{semantic.darkErrorA.6}',
@@ -864,10 +864,10 @@
                     $value: '{semantic.darkErrorA.5}',
                 },
                 'warning-hover': {
-                    $value: '{semantic.darkWarningA.12}',
+                    $value: '{semantic.darkWarning.12}',
                 },
                 'warning-active': {
-                    $value: '{semantic.darkWarningA.13}',
+                    $value: '{semantic.darkWarning.13}',
                 },
                 'warning-fade-hover': {
                     $value: '{semantic.darkWarningA.6}',
@@ -882,10 +882,10 @@
                     $value: '{semantic.darkWarningA.5}',
                 },
                 'success-hover': {
-                    $value: '{semantic.darkSuccessA.12}',
+                    $value: '{semantic.darkSuccess.12}',
                 },
                 'success-active': {
-                    $value: '{semantic.darkSuccessA.13}',
+                    $value: '{semantic.darkSuccess.13}',
                 },
                 'success-fade-hover': {
                     $value: '{semantic.darkSuccessA.6}',
