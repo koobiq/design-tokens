@@ -400,7 +400,7 @@ For alpha variants (`*A`), scale = opacity level (1 = near-transparent, 20 = nea
 
 ```json5
 // Preferred — via the semantic layer:
-'background-theme': { $value: '{semantic.themeA.14}', $description: 'Checkboxes, radio buttons, toggle switches.' }
+'background-theme': { $value: '{semantic.theme.14}', $description: 'Checkboxes, radio buttons, toggle switches.' }
 
 // Direct plt reference — reserved for hue-locked tokens:
 'background-card': { $value: '{plt.white}' }
