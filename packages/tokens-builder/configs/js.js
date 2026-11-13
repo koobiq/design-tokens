@@ -1,4 +1,7 @@
 import { hasValue } from '../filters/has-value.js';
+import { isShadowParameter } from '../filters/shadow-parameter.js';
+
+const shipped = (token) => hasValue(token) && !isShadowParameter(token);
 
 export default {
     js: {
@@ -9,17 +12,17 @@ export default {
             {
                 destination: 'js/index.mjs',
                 format: 'javascript/es6',
-                filter: hasValue
+                filter: shipped
             },
             {
                 destination: 'js/index.js',
                 format: 'javascript/module-flat',
-                filter: hasValue
+                filter: shipped
             },
             {
                 destination: 'js/index.d.ts',
                 format: 'typescript/es6-declarations',
-                filter: hasValue
+                filter: shipped
             }
         ]
     }

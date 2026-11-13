@@ -286,8 +286,8 @@ Pattern: `--kbq-shadow-[type]`
 | `--kbq-shadow-overflow-compact-left`   |                                                    |
 | `--kbq-shadow-overflow-normal-top`     | Modal / sidepanel header overflow shadow.          |
 | `--kbq-shadow-overflow-normal-right`   |                                                    |
-| `--kbq-shadow-overflow-normal-left`    |                                                    |
 | `--kbq-shadow-overflow-normal-bottom`  |                                                    |
+| `--kbq-shadow-overflow-normal-left`    |                                                    |
 | `--kbq-shadow-card`                    | Elevated card.                                     |
 | `--kbq-shadow-popup`                   | Dropdowns, popovers, tooltips.                     |
 | `--kbq-shadow-overlay`                 | Modals, dialogs.                                   |

@@ -55,8 +55,9 @@ export default (theme) => {
         // here is flat (--kbq-typography-headline-font-size, $typography-headline-font-size),
         // so they get expanded back into one token per sub-property. See the preprocessor for
         // why this isn't Style Dictionary's built-in `expand` option.
-        // Shadows stay composite — `shadow/css/shorthand` renders them as one box-shadow.
-        preprocessors: ['kbq/expand-typography'],
+        // Shadows stay composite — `shadow/css/shorthand` renders them as one box-shadow. Layers with
+        // a transparent color are dropped first (kbq/drop-transparent-shadow-layers).
+        preprocessors: ['kbq/expand-typography', 'kbq/drop-transparent-shadow-layers'],
         // Fail the build on transform errors instead of printing them. Without this a transform
         // that throws on a value (say a dimension transform meeting `letter-spacing: normal`)
         // is caught by Style Dictionary, quietly falls back to the untransformed value and only
