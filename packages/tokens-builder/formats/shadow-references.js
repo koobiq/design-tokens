@@ -21,6 +21,8 @@ const MAX_HOPS = 20;
  * `var()`s land on the wrong fields. The output still parses and every variable resolves, which is
  * why nothing downstream notices. So the `box-shadow` is assembled from the token's original value
  * instead, and those tokens are excluded from Style Dictionary's reference pass.
+ *
+ * Fully transparent layers are already gone by now (preprocessors/drop-transparent-shadow-layers.js).
  */
 export const isCompositeShadow = (token) =>
     token.$type === 'shadow' && token.original.$value !== null && typeof token.original.$value === 'object';

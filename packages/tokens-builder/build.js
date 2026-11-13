@@ -12,6 +12,7 @@ import registerCustomKebab from './transforms/name/custom-kebab.js';
 
 // ==== Include custom preprocessors ====
 import registerExpandTypography from './preprocessors/expand-typography.js';
+import registerDropTransparentShadowLayers from './preprocessors/drop-transparent-shadow-layers.js';
 
 // ==== Include custom filters ====
 import registerTypographyFilter from './filters/typography.js';
@@ -40,6 +41,7 @@ registerDeprecationComment(StyleDictionary);
 registerCustomKebab(StyleDictionary);
 
 registerExpandTypography(StyleDictionary);
+registerDropTransparentShadowLayers(StyleDictionary);
 
 registerTypographyFilter(StyleDictionary);
 registerMdTypographyFilter(StyleDictionary);

@@ -19,6 +19,8 @@ import path from 'node:path';
 
 import JSON5 from 'json5';
 
+import { isTransparentLayer } from '../packages/tokens-builder/preprocessors/drop-transparent-shadow-layers.js';
+
 const DIST = path.join(process.cwd(), 'dist/design-tokens/web');
 // Sliced files live under css/; the css-tokens*.css aggregates sit at the root of web/.
 const BUNDLE = path.join(DIST, 'css/index.bundled.css');
@@ -128,8 +130,9 @@ for (const selector of ['.kbq-light', '.kbq-dark']) {
 //     already substituted (formats/shadow-references.js) — the offsets, blur, spread and colors are
 //     sources only and must not leak out as variables of their own. What ships:
 //       --kbq-shadow-outline|key|ambient            color roles (colors.json5)
-//       --kbq-shadow-<flat>                         3 layers, each `x y blur spread color`
-//       --kbq-shadow-<overflow>-<side>              3 layers, each `x y blur spread color`
+//       --kbq-shadow-<flat>                         1–3 layers, each `x y blur spread color`
+//       --kbq-shadow-<overflow>-<side>              1–3 layers, each `x y blur spread color`
+//     The sources always have three layers; a fully transparent one is left out of the output.
 //     Style Dictionary's own reference pass would put a var() wherever a resolved literal first
 //     occurs, and a shadow is mostly repeated literals (0px, 1px, 6px), hence the custom assembly.
 const SHADOW_LAYERS = ['outline', 'key', 'ambient'];
@@ -153,8 +156,8 @@ for (const [selector, declarations] of bySelector) {
 
         const layers = value.split(/,\s*(?![^(]*\))/).map((layer) => layer.trim());
 
-        if (layers.length !== SHADOW_LAYERS.length) {
-            fail('shadow layers', `${selector} { ${name} } has ${layers.length} layers, expected 3`);
+        if (layers.length < 1 || layers.length > SHADOW_LAYERS.length) {
+            fail('shadow layers', `${selector} { ${name} } has ${layers.length} layers, expected 1 to 3`);
             continue;
         }
 
@@ -176,6 +179,32 @@ for (const [selector, declarations] of bySelector) {
 const shadowSource = JSON5.parse(
     fs.readFileSync(path.join(process.cwd(), 'packages/design-tokens/web/properties/shadows.json5'), 'utf8')
 );
+const flatten = (node, prefix, into) => {
+    for (const [key, child] of Object.entries(node)) {
+        if (key.startsWith('$') || child === null || typeof child !== 'object') continue;
+
+        const next = [...prefix, key];
+
+        if ('$value' in child) into.set(next.join('.'), child.$value);
+        else flatten(child, next, into);
+    }
+
+    return into;
+};
+const sourceValues = new Map();
+
+for (const file of fs.readdirSync(path.join(process.cwd(), 'packages/design-tokens/web/properties'))) {
+    if (file.endsWith('.json5')) {
+        flatten(
+            JSON5.parse(
+                fs.readFileSync(path.join(process.cwd(), 'packages/design-tokens/web/properties', file), 'utf8')
+            ),
+            [],
+            sourceValues
+        );
+    }
+}
+
 const shadowToken = (tokenPath) => tokenPath.split('.').reduce((node, key) => node?.[key], shadowSource);
 const shadowPx = (value) => {
     let current = value;
@@ -232,10 +261,25 @@ for (const shadow of ['overflow-compact', 'overflow-normal']) {
                     }
                 }
 
-                const css =
-                    (bySelector.get(selector)?.get(`--kbq-shadow-${shadow}-${side}`) ?? '')
-                        .split(/,\s*(?![^(]*\))/)
-                        [index]?.trim() ?? '';
+                // A fully transparent layer is not in the CSS; the others keep their order.
+                const sourceLayers = shadowToken(`shadow.${theme}.${shadow}-${side}`)?.$value ?? [];
+                const shipped = sourceLayers.filter(
+                    (item) => !isTransparentLayer(item, (ref) => sourceValues.get(ref))
+                );
+                const cssLayers = (bySelector.get(selector)?.get(`--kbq-shadow-${shadow}-${side}`) ?? '')
+                    .split(/,\s*(?![^(]*\))/)
+                    .map((item) => item.trim());
+
+                if (cssLayers.length !== shipped.length) {
+                    fail(
+                        'shadow sides',
+                        `${selector} { --kbq-shadow-${shadow}-${side} } has ${cssLayers.length} layers, expected ${shipped.length} (the transparent ones are left out)`
+                    );
+                }
+
+                if (isTransparentLayer(value ?? {}, (ref) => sourceValues.get(ref))) continue;
+
+                const css = cssLayers[shipped.indexOf(value)] ?? '';
                 const geometry = [expected.offsetX, expected.offsetY, expected.blur, expected.spread]
                     .map(shadowPx)
                     .join(' ');
@@ -247,6 +291,42 @@ for (const shadow of ['overflow-compact', 'overflow-normal']) {
                     );
                 }
             }
+        }
+    }
+}
+
+// 4d. Every shadow is a composite with `$type: 'shadow'`. The build tells a composite from a shadow
+//     parameter by that type (isShadowParameter): a shadow that loses it is taken for a parameter and
+//     disappears from the CSS, Sass and JS output without an error. So the source is checked, and so
+//     is that every shadow made it into the CSS of both themes.
+const SHADOW_NAMES = [
+    'card',
+    'popup',
+    'overlay',
+    ...['overflow-compact', 'overflow-normal'].flatMap((shadow) =>
+        ['top', 'right', 'bottom', 'left'].map((side) => `${shadow}-${side}`)
+    )
+];
+
+for (const [theme, selector] of [
+    ['light', '.kbq-light'],
+    ['dark', '.kbq-dark']
+]) {
+    const group = shadowSource.shadow?.[theme] ?? {};
+
+    for (const [name, token] of Object.entries(group)) {
+        if (!name.startsWith('$') && token.$type !== 'shadow') {
+            fail('shadow type', `shadow.${theme}.${name} has no $type: 'shadow', so the build would drop it`);
+        }
+    }
+
+    for (const name of SHADOW_NAMES) {
+        if (group[name]?.$type !== 'shadow') {
+            fail('shadow type', `shadow.${theme}.${name} is missing or is not a $type: 'shadow' token`);
+        }
+
+        if (!bySelector.get(selector)?.has(`--kbq-shadow-${name}`)) {
+            fail('shadow type', `${selector} { --kbq-shadow-${name} } is missing from the built CSS`);
         }
     }
 }
@@ -300,6 +380,7 @@ console.log('✔ role → semantic → plt → oklch chain intact (light and dar
 console.log('✔ engineering palette is OKLch throughout');
 console.log('✔ multi-layer shadows keep one reference per layer');
 console.log('✔ shadow offset-neg tokens mirror their offsets');
+console.log('✔ every shadow is a $type: shadow composite and ships in both themes');
 console.log('✔ shadow parameters ship no variables of their own');
 console.log('✔ layers of the sided shadows take the right layer values');
 console.log('✔ no references to the removed v3 palette');

@@ -702,7 +702,7 @@
                 base: {
                     outline: {
                         color: {
-                            $value: '{semantic.contrastA.4}',
+                            $value: '{light.line.contrast-less}',
                         },
                     },
                     key: {
