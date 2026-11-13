@@ -17,6 +17,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
+import JSON5 from 'json5';
+
 const DIST = path.join(process.cwd(), 'dist/design-tokens/web');
 // Sliced files live under css/; the css-tokens*.css aggregates sit at the root of web/.
 const BUNDLE = path.join(DIST, 'css/index.bundled.css');
@@ -122,6 +124,133 @@ for (const selector of ['.kbq-light', '.kbq-dark']) {
     }
 }
 
+// 4b. Shape of the shadows in the built CSS. A composite shadow is written with its parameters
+//     already substituted (formats/shadow-references.js) — the offsets, blur, spread and colors are
+//     sources only and must not leak out as variables of their own. What ships:
+//       --kbq-shadow-outline|key|ambient            color roles (colors.json5)
+//       --kbq-shadow-<flat>                         3 layers, each `x y blur spread color`
+//       --kbq-shadow-<overflow>-<side>              3 layers, each `x y blur spread color`
+//     Style Dictionary's own reference pass would put a var() wherever a resolved literal first
+//     occurs, and a shadow is mostly repeated literals (0px, 1px, 6px), hence the custom assembly.
+const SHADOW_LAYERS = ['outline', 'key', 'ambient'];
+const SHADOW_ROLE = /^--kbq-shadow-(outline|key|ambient)$/;
+const SHADOW_FINAL = /^--kbq-shadow-(card|popup|overlay|overflow-(?:compact|normal))(?:-(top|right|bottom|left))?$/;
+const SHADOW_LAYER_VALUE = /^-?[\d.]+px -?[\d.]+px [\d.]+px -?[\d.]+px (?:var\(--[\w-]+\)|#[0-9a-fA-F]{6,8})$/;
+
+for (const [selector, declarations] of bySelector) {
+    for (const [name, value] of declarations) {
+        if (!name.startsWith('--kbq-shadow-') || SHADOW_ROLE.test(name)) continue;
+
+        const final = name.match(SHADOW_FINAL);
+
+        if (!final) {
+            fail(
+                'shadow parameters',
+                `${selector} { ${name} } is a CSS variable of a shadow parameter; parameters are sources only`
+            );
+            continue;
+        }
+
+        const layers = value.split(/,\s*(?![^(]*\))/).map((layer) => layer.trim());
+
+        if (layers.length !== SHADOW_LAYERS.length) {
+            fail('shadow layers', `${selector} { ${name} } has ${layers.length} layers, expected 3`);
+            continue;
+        }
+
+        layers.forEach((layer, index) => {
+            if (!SHADOW_LAYER_VALUE.test(layer)) {
+                fail(
+                    'shadow layers',
+                    `${selector} { ${name} } layer ${index + 1} is "${layer}", expected "x y blur spread color"`
+                );
+            }
+        });
+    }
+}
+
+// 4c. The shadow parameters mirror Figma, where variables cannot negate, so every offset-neg is a value
+//     of its own rather than a calc() of the offset, and nothing in the build ties the pair together.
+//     The layers of a sided shadow pick x and y from the layer variable their side needs (as in
+//     Figma). All of that lives in the sources, so it is checked there, and then against the CSS.
+const shadowSource = JSON5.parse(
+    fs.readFileSync(path.join(process.cwd(), 'packages/design-tokens/web/properties/shadows.json5'), 'utf8')
+);
+const shadowToken = (tokenPath) => tokenPath.split('.').reduce((node, key) => node?.[key], shadowSource);
+const shadowPx = (value) => {
+    let current = value;
+
+    for (let hops = 0; hops < 10; hops++) {
+        const next = String(current).match(/^\{(.+)\}$/);
+
+        if (!next) return current;
+        current = shadowToken(next[1])?.$value;
+    }
+
+    return undefined;
+};
+const SIDE_SOURCE = {
+    top: { x: 'cross', y: 'offset-neg' },
+    right: { x: 'offset', y: 'cross' },
+    bottom: { x: 'cross', y: 'offset' },
+    left: { x: 'offset-neg', y: 'cross' }
+};
+const mirrored = (positive, negative, label) => {
+    if (parseFloat(shadowPx(positive)) + parseFloat(shadowPx(negative)) !== 0) {
+        fail('offset-neg', `${label}: ${shadowPx(negative)} does not mirror ${shadowPx(positive)}`);
+    }
+};
+
+for (const shadow of ['overflow-compact', 'overflow-normal']) {
+    for (const layer of SHADOW_LAYERS) {
+        mirrored(
+            `{shadow.${shadow}.base.${layer}.offset}`,
+            `{shadow.${shadow}.base.${layer}.offset-neg}`,
+            `shadow.${shadow}.base.${layer}.offset-neg`
+        );
+    }
+
+    for (const [side, axes] of Object.entries(SIDE_SOURCE)) {
+        for (const [index, layer] of SHADOW_LAYERS.entries()) {
+            for (const [theme, selector] of [
+                ['light', '.kbq-light'],
+                ['dark', '.kbq-dark']
+            ]) {
+                const key = `shadow.${theme}.${shadow}-${side}[${index}]`;
+                const value = shadowToken(`shadow.${theme}.${shadow}-${side}`)?.$value?.[index];
+                const expected = {
+                    color: `{${theme}.shadow.${shadow}.base.${layer}.color}`,
+                    offsetX: `{shadow.${shadow}.base.${layer}.${axes.x}}`,
+                    offsetY: `{shadow.${shadow}.base.${layer}.${axes.y}}`,
+                    blur: `{shadow.${shadow}.base.${layer}.blur}`,
+                    spread: `{shadow.${shadow}.base.${layer}.spread}`
+                };
+
+                for (const [field, ref] of Object.entries(expected)) {
+                    if (value?.[field] !== ref) {
+                        fail('shadow sides', `${key}.${field} is ${value?.[field]}, expected ${ref}`);
+                    }
+                }
+
+                const css =
+                    (bySelector.get(selector)?.get(`--kbq-shadow-${shadow}-${side}`) ?? '')
+                        .split(/,\s*(?![^(]*\))/)
+                        [index]?.trim() ?? '';
+                const geometry = [expected.offsetX, expected.offsetY, expected.blur, expected.spread]
+                    .map(shadowPx)
+                    .join(' ');
+
+                if (!css.startsWith(`${geometry} `)) {
+                    fail(
+                        'shadow sides',
+                        `${selector} { --kbq-shadow-${shadow}-${side} } layer ${index + 1} is "${css}", expected it to start with "${geometry}"`
+                    );
+                }
+            }
+        }
+    }
+}
+
 // 5. Nothing references the palette that v4 removed.
 for (const [selector, declarations] of bySelector) {
     for (const [name, value] of declarations) {
@@ -170,5 +299,8 @@ console.log('✔ var() references all resolve');
 console.log('✔ role → semantic → plt → oklch chain intact (light and dark)');
 console.log('✔ engineering palette is OKLch throughout');
 console.log('✔ multi-layer shadows keep one reference per layer');
+console.log('✔ shadow offset-neg tokens mirror their offsets');
+console.log('✔ shadow parameters ship no variables of their own');
+console.log('✔ layers of the sided shadows take the right layer values');
 console.log('✔ no references to the removed v3 palette');
 console.log('✔ css-tokens*.css keeps the semantic references too');

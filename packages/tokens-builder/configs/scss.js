@@ -1,3 +1,5 @@
+import { isShadowParameter } from '../filters/shadow-parameter.js';
+
 export default {
     scss: {
         transformGroup: 'kbq/scss',
@@ -5,7 +7,8 @@ export default {
             {
                 destination: '_variables.scss',
                 format: 'scss/variables',
-                filter: (token) => !token.attributes.typography && !token.attributes['md-typography']
+                filter: (token) =>
+                    !token.attributes.typography && !token.attributes['md-typography'] && !isShadowParameter(token)
             },
             {
                 destination: '_typography.scss',

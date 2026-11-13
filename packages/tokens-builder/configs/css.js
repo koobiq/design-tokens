@@ -1,4 +1,5 @@
 import { hasValue } from '../filters/has-value.js';
+import { isShadowParameter } from '../filters/shadow-parameter.js';
 
 const paletteColors = [
     'blue',
@@ -217,7 +218,9 @@ export default {
             {
                 destination: sliced('light/shadows.css'),
                 format: 'kbq-css/variables',
-                filter: (token) => token.attributes.light && token.attributes.category === 'shadow',
+                // Only the composite shadows; their parameters are sources (isShadowParameter).
+                filter: (token) =>
+                    token.attributes.light && token.filePath?.includes('shadows.json5') && !isShadowParameter(token),
                 options: {
                     selector: '.kbq-light',
                     outputReferences: true
@@ -237,7 +240,8 @@ export default {
             {
                 destination: sliced('dark/shadows.css'),
                 format: 'kbq-css/variables',
-                filter: (token) => token.attributes.dark && token.attributes.category === 'shadow',
+                filter: (token) =>
+                    token.attributes.dark && token.filePath?.includes('shadows.json5') && !isShadowParameter(token),
                 options: {
                     selector: '.kbq-dark',
                     outputReferences: true
@@ -289,6 +293,7 @@ export default {
                 filter: (token) =>
                     hasValue(token) &&
                     !isComponent(token) &&
+                    !isShadowParameter(token) &&
                     !token.attributes.font &&
                     !token.attributes.light &&
                     !token.attributes.dark &&
@@ -304,7 +309,8 @@ export default {
             {
                 destination: 'css-tokens-light.css',
                 format: 'kbq-css/variables',
-                filter: (token) => hasValue(token) && !isComponent(token) && token.attributes.light,
+                filter: (token) =>
+                    hasValue(token) && !isComponent(token) && !isShadowParameter(token) && token.attributes.light,
                 options: {
                     selector: '.kbq-light',
                     outputReferences: true
@@ -313,7 +319,8 @@ export default {
             {
                 destination: 'css-tokens-dark.css',
                 format: 'kbq-css/variables',
-                filter: (token) => hasValue(token) && !isComponent(token) && token.attributes.dark,
+                filter: (token) =>
+                    hasValue(token) && !isComponent(token) && !isShadowParameter(token) && token.attributes.dark,
                 options: {
                     selector: '.kbq-dark',
                     outputReferences: true
