@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import registerPrivateTokens, { markPrivate } from '../packages/tokens-builder/preprocessors/private.js';
 
 // The marker, as the sources write it: on a token or on a group.
-const marker = (value) => ({ $extensions: { 'io.koobiq.tokens': { private: value } } });
+const marker = (value) => ({ $extensions: { 'io.koobiq': { private: value } } });
 
 // Runs the registered preprocessor over a tree, the way Style Dictionary does.
 const preprocess = (tree) => {
@@ -43,7 +43,7 @@ test('a token is private by its own marker, and the marked token carries a plain
     });
 
     assert.equal(marked.a.private, true);
-    assert.deepEqual(marked.a.$extensions, { 'io.koobiq.tokens': { private: true } });
+    assert.deepEqual(marked.a.$extensions, { 'io.koobiq': { private: true } });
     assert.equal(marked.b.private, undefined);
     assert.deepEqual([...privates], ['a']);
 });

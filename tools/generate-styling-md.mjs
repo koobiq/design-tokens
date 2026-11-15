@@ -101,11 +101,11 @@ function sizeRows(sizes) {
         .join('\n');
 }
 
-// The tokens of a shadow group that ship, by their CSS name: the colour roles and the composites, which
-// sit under overflow.<kind>. The base parameters of the directional shadows are in `base` groups and ship nothing.
+// The tokens of a shadow theme that ship, by their CSS name: the color roles (from colors.json5) and the
+// composites, which sit under overflow.<kind>. The base parameters of the directional shadows are in `base` groups and ship nothing.
 function shadowTokens(node, path = []) {
     return Object.entries(node).flatMap(([name, t]) => {
-        if (name.startsWith('$') || name === 'base' || t === null || typeof t !== 'object' || t.private) return [];
+        if (name.startsWith('$') || t === null || typeof t !== 'object' || t.private) return [];
         if (t.$value !== undefined) return [[[...path, name].join('-'), t]];
 
         return shadowTokens(t, [...path, name]);

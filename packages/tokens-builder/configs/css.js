@@ -1,5 +1,4 @@
 import { hasValue } from '../filters/has-value.js';
-import { isShadowParameter, isShadowRole } from '../filters/shadow-parameter.js';
 
 const paletteColors = [
     'blue',
@@ -99,7 +98,7 @@ const components = [
 const componentRoots = components.map(({ root }) => root);
 
 /**
- * Tokens authored under web/components — code-block syntax colours, scrollbar, skeleton.
+ * Tokens authored under web/components — code-block syntax colors, scrollbar, skeleton.
  *
  * Matched on the token's own path rather than its `filePath`: Style Dictionary leaves `filePath`
  * undefined on a token whose value is null, and those are exactly the deliberately-unstyled
@@ -218,7 +217,7 @@ export default {
             {
                 destination: sliced('light/shadows.css'),
                 format: 'kbq-css/variables',
-                // Only the composite shadows; their parameters are sources (isShadowParameter).
+                // Only the composite shadows; their parameters are private and ship nothing.
                 filter: (token) =>
                     token.attributes.light && token.filePath?.includes('shadows.json5') && token.$type === 'shadow',
                 options: {
@@ -230,10 +229,8 @@ export default {
                 destination: sliced('light/semantic-colors.css'),
                 format: 'kbq-css/variables',
                 // `filePath?.` because Style Dictionary leaves it undefined on null-valued tokens;
-                // a token with no known file is simply not one of colors.json5's. The shadow roles
-                // live in shadows.json5 but ship with the colour roles, as they always have.
-                filter: (token) =>
-                    token.attributes.light && (token.filePath?.includes('colors.json5') || isShadowRole(token)),
+                // a token with no known file is simply not one of colors.json5's.
+                filter: (token) => token.attributes.light && token.filePath?.includes('colors.json5'),
                 options: {
                     selector: '.kbq-light',
                     outputReferences: true
@@ -252,14 +249,13 @@ export default {
             {
                 destination: sliced('dark/semantic-colors.css'),
                 format: 'kbq-css/variables',
-                filter: (token) =>
-                    token.attributes.dark && (token.filePath?.includes('colors.json5') || isShadowRole(token)),
+                filter: (token) => token.attributes.dark && token.filePath?.includes('colors.json5'),
                 options: {
                     selector: '.kbq-dark',
                     outputReferences: true
                 }
             },
-            // The three component token sets that survived v4 (code-block syntax colours,
+            // The three component token sets that survived v4 (code-block syntax colors,
             // scrollbar, skeleton). Only consumers of those components need them, so they are
             // opt-in: kept out of index.css and out of the css-tokens*.css aggregates, and
             // shipped as their own triple mirroring the css-tokens*.css naming.
@@ -296,7 +292,6 @@ export default {
                 filter: (token) =>
                     hasValue(token) &&
                     !isComponent(token) &&
-                    !isShadowParameter(token) &&
                     !token.attributes.font &&
                     !token.attributes.light &&
                     !token.attributes.dark &&
@@ -312,8 +307,7 @@ export default {
             {
                 destination: 'css-tokens-light.css',
                 format: 'kbq-css/variables',
-                filter: (token) =>
-                    hasValue(token) && !isComponent(token) && !isShadowParameter(token) && token.attributes.light,
+                filter: (token) => hasValue(token) && !isComponent(token) && token.attributes.light,
                 options: {
                     selector: '.kbq-light',
                     outputReferences: true
@@ -322,8 +316,7 @@ export default {
             {
                 destination: 'css-tokens-dark.css',
                 format: 'kbq-css/variables',
-                filter: (token) =>
-                    hasValue(token) && !isComponent(token) && !isShadowParameter(token) && token.attributes.dark,
+                filter: (token) => hasValue(token) && !isComponent(token) && token.attributes.dark,
                 options: {
                     selector: '.kbq-dark',
                     outputReferences: true

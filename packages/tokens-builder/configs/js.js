@@ -1,7 +1,6 @@
 import { hasValue } from '../filters/has-value.js';
-import { isShadowParameter } from '../filters/shadow-parameter.js';
 
-const shipped = (token) => hasValue(token) && !isShadowParameter(token);
+const shipped = (token) => hasValue(token);
 
 export default {
     js: {

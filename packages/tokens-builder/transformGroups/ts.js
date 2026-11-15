@@ -8,12 +8,6 @@ export default (StyleDictionary) => {
         //   - `color/hex` leaves OKLch alone (tinycolor2 cannot parse it) but rewrites
         //     `transparent` / `#00000000`.
         // Values already carry their units and are valid CSS as authored.
-        transforms: [
-            'attribute/cti',
-            'name/pascal',
-            'kbq/name/theme-first-pascal',
-            'kbq-shadow/shorthand',
-            'kbq-attribute/comment'
-        ]
+        transforms: ['attribute/cti', 'name/pascal', 'shadow/css/shorthand', 'kbq-attribute/comment']
     });
 };

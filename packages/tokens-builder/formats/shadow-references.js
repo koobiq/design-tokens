@@ -1,5 +1,4 @@
 import { isPrivate } from '../filters/private.js';
-import { isShadowParameter } from '../filters/shadow-parameter.js';
 import { stripThemeFromNames } from './strip-theme.js';
 
 const REFERENCE = /^\{([^{}]+)\}$/;
@@ -9,7 +8,7 @@ const MAX_HOPS = 20;
  * Composite shadows are built from parameter tokens field by field: offsets, blur, spread and
  * color each point at their own token (shadows.json5, mirroring the Figma Shadow variables).
  *
- * The parameters are sources only and have no output of their own (isShadowParameter), so a
+ * The parameters are private: they are sources only and have no output of their own, so a
  * reference to one is followed down to what it stands for:
  *
  * - a literal (`9px`, `#00000000`), written straight into the `box-shadow`;
@@ -40,9 +39,9 @@ const fieldToCss = (value, byPath) => {
 
         if (!target) throw new Error(`Shadow references an unknown token: {${match[1]}}`);
 
-        // A shipped token is referenced by its variable. A parameter or a private token has none, so it
-        // is followed down to what it stands for.
-        if (!isShadowParameter(target) && !isPrivate(target)) return `var(--${target.name})`;
+        // A shipped token is referenced by its variable. A private token has none, so it is followed
+        // down to what it stands for.
+        if (!isPrivate(target)) return `var(--${target.name})`;
 
         current = target.original.$value;
     }
@@ -50,29 +49,10 @@ const fieldToCss = (value, byPath) => {
     throw new Error(`Shadow reference does not resolve, too many hops from ${value}`);
 };
 
-const ZERO_LENGTH = /^[+-]?0*\.?0+(?:px|em|rem)?$/;
-
-// A zero length is written unitless: `0`, not `0px`.
-export const normalizeLength = (css) => (ZERO_LENGTH.test(css) ? '0' : css);
-
-/**
- * The `x y blur spread` of a layer, without the zeros box-shadow does not need. Blur and spread
- * default to 0, so trailing zeros are left out; x and y are positional and always written.
- */
-export const shadowGeometry = (fields) => {
-    const parts = fields.filter((field) => field !== undefined);
-
-    while (parts.length > 2 && parts[parts.length - 1] === '0') parts.pop();
-
-    return parts;
-};
-
 const layerToCss = (layer, byPath) => {
-    const geometry = shadowGeometry(
-        [layer.offsetX, layer.offsetY, layer.blur, layer.spread].map((value) =>
-            value === undefined ? undefined : normalizeLength(fieldToCss(value, byPath))
-        )
-    );
+    const geometry = [layer.offsetX, layer.offsetY, layer.blur, layer.spread]
+        .filter((value) => value !== undefined)
+        .map((value) => fieldToCss(value, byPath));
     const color = layer.color === undefined ? [] : [fieldToCss(layer.color, byPath)];
 
     return [...geometry, ...color].join(' ');

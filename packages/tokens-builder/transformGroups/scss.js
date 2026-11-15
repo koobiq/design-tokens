@@ -6,8 +6,7 @@ export default (StyleDictionary) => {
             'kbq-attribute/typography',
             'kbq-attribute/md-typography',
             'name/kebab',
-            'kbq/name/theme-first-kebab',
-            'kbq-shadow/shorthand',
+            'shadow/css/shorthand',
             'kbq-scss/value',
             'kbq-attribute/comment'
         ]

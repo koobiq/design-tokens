@@ -1,5 +1,5 @@
 /** The vendor namespace of the marker, in `$extensions` (DTCG §5.2.3). */
-const NS = 'io.koobiq.tokens';
+const NS = 'io.koobiq';
 const REFERENCE = /^\{([^{}]+)\}$/;
 const MAX_HOPS = 20;
 
@@ -34,7 +34,7 @@ const ownPrivacy = (node, path) => {
  * Marks every private token of a raw token tree, and returns the marked tree with the paths of the
  * private tokens.
  *
- * A token is private when it, or the group it sits in, sets `$extensions['io.koobiq.tokens'].private`
+ * A token is private when it, or the group it sits in, sets `$extensions['io.koobiq'].private`
  * to true or to a string explaining why; a token can opt out with `false`. Style Dictionary delegates
  * only `$type` down the tree, so the flag is inherited here, a group's explanation along with it.
  *

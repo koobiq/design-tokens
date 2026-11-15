@@ -38,11 +38,12 @@ And that survives all the way into the CSS, one `var()` per hop:
 }
 ```
 
-| Layer                | File             | What it is                                                                   |
-| :------------------- | :--------------- | :--------------------------------------------------------------------------- |
-| `plt.*`              | `plt.json5`      | The engineering palette. The **only** place with literal OKLch values.       |
-| `semantic.*`         | `semantic.json5` | A 1:1 alias of the engineering palette, named by meaning rather than by hue. |
-| `light.*` / `dark.*` | `colors.json5`   | Roles — what a color is _for_. This is what product code uses.               |
+| Layer                              | File             | What it is                                                                                                                |
+| :--------------------------------- | :--------------- | :------------------------------------------------------------------------------------------------------------------------ |
+| `plt.*`                            | `plt.json5`      | The engineering palette. The **only** place with literal OKLch values.                                                    |
+| `semantic.*`                       | `semantic.json5` | A 1:1 alias of the engineering palette, named by meaning rather than by hue.                                              |
+| `light.*` / `dark.*`               | `colors.json5`   | Roles — what a color is _for_. This is what product code uses. The shadow roles are `light.shadow.*` and `dark.shadow.*`. |
+| `shadow.light.*` / `shadow.dark.*` | `shadows.json5`  | Shadow composites. The base parameters of the directional shadows are internal.                                           |
 
 ### Why the middle layer isn't redundant
 
@@ -99,7 +100,7 @@ shadow: {
     $type: 'color',
     key: {
         $value: '{semantic.contrastA.3}',
-        $extensions: { 'io.koobiq.tokens': { private: true } },
+        $extensions: { 'io.koobiq': { private: true } },
     },
 },
 ```
@@ -113,7 +114,7 @@ the token, a string marks it and explains why, and `false` opts out of a group's
 ```json5
 key: {
     $value: '{semantic.contrastA.3}',
-    $extensions: { 'io.koobiq.tokens': { private: 'shadow layer, compose it into a shadow instead' } },
+    $extensions: { 'io.koobiq': { private: 'shadow layer, compose it into a shadow instead' } },
 },
 ```
 
@@ -238,7 +239,7 @@ referencing it; nothing else gets a variable for it:
 {
     'internal-example': {
         $value: '{semantic.warningA.2}',
-        $extensions: { 'io.koobiq.tokens': { private: true } }
+        $extensions: { 'io.koobiq': { private: true } }
     }
 }
 ```
@@ -301,9 +302,9 @@ Reach for the long form only when a preset genuinely differs; `md-h4` is `subhea
 ### Add a shadow
 
 Shadows are DTCG `shadow` composites — one layer object, or an array for multi-layer. They live in
-`shadows.json5`, one group per theme: `shadow.light` and `shadow.dark`. Each group also holds the colour
-roles `outline`, `key` and `ambient` and the base parameters of the directional shadows, so a new
-composite goes into both themes:
+`shadows.json5`, one group per theme: `shadow.light` and `shadow.dark`. The color roles `outline`, `key`
+and `ambient` are in `colors.json5`, under `light.shadow` and `dark.shadow`. The base parameters of the
+directional shadows are internal, so a new composite goes into both themes:
 
 ```json5
 {
@@ -313,14 +314,14 @@ composite goes into both themes:
                 $type: 'shadow',
                 $value: [
                     {
-                        color: '{shadow.light.outline}',
+                        color: '{light.shadow.outline}',
                         offsetX: '0',
                         offsetY: '0',
                         blur: '0',
                         spread: '1px'
                     },
                     {
-                        color: '{shadow.light.key}',
+                        color: '{light.shadow.key}',
                         offsetX: '0',
                         offsetY: '2px',
                         blur: '8px',
@@ -334,14 +335,14 @@ composite goes into both themes:
                 $type: 'shadow',
                 $value: [
                     {
-                        color: '{shadow.dark.outline}',
+                        color: '{dark.shadow.outline}',
                         offsetX: '0',
                         offsetY: '0',
                         blur: '0',
                         spread: '1px'
                     },
                     {
-                        color: '{shadow.dark.key}',
+                        color: '{dark.shadow.key}',
                         offsetX: '0',
                         offsetY: '2px',
                         blur: '8px',

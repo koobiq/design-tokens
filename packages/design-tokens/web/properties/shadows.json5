@@ -1,33 +1,95 @@
 // Everything about the shadows of one theme is a single group: shadow.light (light theme) and
 // shadow.dark (dark theme). Each group holds:
-//   - the colour roles outline, key and ambient, shipped as --kbq-shadow-outline|key|ambient;
+//   - the color roles outline, key and ambient, which live in colors.json5 (light.shadow, dark.shadow) and ship as --kbq-shadow-outline|key|ambient;
 //   - overflow.compact and overflow.normal, the directional shadows. Each has its base parameters
-//     (offset, offset-neg, cross, blur, spread and colour of every layer, per theme) and its four
+//     (offset, offset-neg, cross, blur, spread and color of every layer, per theme) and its four
 //     sides as composites: overflow.<kind>.top|right|bottom|left;
 //   - the flat composite shadows card, popup and overlay ($type: 'shadow'), which are what ships.
-// The parameters are sources only: they ship no variable of their own.
 {
     shadow: {
         light: {
-            outline: {
-                $type: 'color',
-                $value: '{semantic.contrastA.1}',
-                $description: 'Minimal elevation, 1px outer border.',
+            card: {
+                $type: 'shadow',
+                $value: [
+                    {
+                        offsetX: '0',
+                        offsetY: '0px',
+                        blur: '0',
+                        spread: '1px',
+                        color: '{light.shadow.outline}',
+                    },
+                    {
+                        offsetX: '0',
+                        offsetY: '1px',
+                        blur: '6px',
+                        spread: '0',
+                        color: '{light.shadow.key}',
+                    },
+                    {
+                        offsetX: '0',
+                        offsetY: '1px',
+                        blur: '6px',
+                        spread: '0',
+                        color: '{light.shadow.ambient}',
+                    },
+                ],
+                $description: 'Elevated card.',
             },
-            key: {
-                $type: 'color',
-                $value: '{semantic.contrastA.3}',
-                $description: 'Internal component — do not use directly.',
+            popup: {
+                $type: 'shadow',
+                $value: [
+                    {
+                        offsetX: '0',
+                        offsetY: '0',
+                        blur: '0',
+                        spread: '1px',
+                        color: '{light.shadow.outline}',
+                    },
+                    {
+                        offsetX: '0',
+                        offsetY: '2px',
+                        blur: '8px',
+                        color: '{light.shadow.key}',
+                    },
+                    {
+                        offsetX: '0',
+                        offsetY: '3px',
+                        blur: '8px',
+                        color: '{light.shadow.ambient}',
+                    },
+                ],
+                $description: 'Dropdowns, popovers, tooltips.',
             },
-            ambient: {
-                $type: 'color',
-                $value: '{semantic.contrastA.2}',
-                $description: 'Internal component — do not use directly.',
+            overlay: {
+                $type: 'shadow',
+                $value: [
+                    {
+                        offsetX: '0',
+                        offsetY: '0',
+                        blur: '0',
+                        spread: '1px',
+                        color: '{light.shadow.outline}',
+                    },
+                    {
+                        offsetX: '0',
+                        offsetY: '3px',
+                        blur: '16px',
+                        color: '{light.shadow.key}',
+                    },
+                    {
+                        offsetX: '0',
+                        offsetY: '4px',
+                        blur: '32px',
+                        color: '{light.shadow.ambient}',
+                    },
+                ],
+                $description: 'Modals, dialogs.',
             },
             overflow: {
                 compact: {
                     $type: 'dimension',
                     base: {
+                        $extensions: { 'io.koobiq': { private: 'Internal parameters of the directional shadows, built into the composites.' } },
                         outline: {
                             offset: {
                                 $value: '1px',
@@ -201,6 +263,7 @@
                 normal: {
                     $type: 'dimension',
                     base: {
+                        $extensions: { 'io.koobiq': { private: 'Internal parameters of the directional shadows, built into the composites.' } },
                         outline: {
                             offset: {
                                 $value: '1px',
@@ -230,7 +293,7 @@
                                 $value: '-9px',
                             },
                             cross: {
-                                $value: '0px',
+                                $value: '0',
                             },
                             blur: {
                                 $value: '8px',
@@ -372,105 +435,92 @@
                     },
                 },
             },
+        },
+        dark: {
+            
             card: {
                 $type: 'shadow',
                 $value: [
                     {
-                        offsetX: '0px',
-                        offsetY: '0px',
-                        blur: '0px',
+                        offsetX: '0',
+                        offsetY: '0',
+                        blur: '0',
                         spread: '1px',
-                        color: '{shadow.light.outline}',
+                        color: '{dark.shadow.outline}',
                     },
                     {
                         offsetX: '0px',
                         offsetY: '1px',
                         blur: '6px',
                         spread: '0px',
-                        color: '{shadow.light.key}',
+                        color: '{dark.shadow.key}',
                     },
                     {
                         offsetX: '0px',
                         offsetY: '1px',
                         blur: '6px',
                         spread: '0px',
-                        color: '{shadow.light.ambient}',
+                        color: '{dark.shadow.ambient}',
                     },
                 ],
-                $description: 'Elevated card.',
             },
             popup: {
                 $type: 'shadow',
                 $value: [
                     {
-                        offsetX: '0px',
-                        offsetY: '0px',
-                        blur: '0px',
+                        offsetX: '0',
+                        offsetY: '0',
+                        blur: '0',
                         spread: '1px',
-                        color: '{shadow.light.outline}',
+                        color: '{dark.shadow.outline}',
                     },
                     {
                         offsetX: '0px',
                         offsetY: '2px',
                         blur: '8px',
                         spread: '0px',
-                        color: '{shadow.light.key}',
+                        color: '{dark.shadow.key}',
                     },
                     {
                         offsetX: '0px',
                         offsetY: '3px',
                         blur: '8px',
                         spread: '0px',
-                        color: '{shadow.light.ambient}',
+                        color: '{dark.shadow.ambient}',
                     },
                 ],
-                $description: 'Dropdowns, popovers, tooltips.',
             },
             overlay: {
                 $type: 'shadow',
                 $value: [
                     {
-                        offsetX: '0px',
-                        offsetY: '0px',
-                        blur: '0px',
+                        offsetX: '0',
+                        offsetY: '0',
+                        blur: '0',
                         spread: '1px',
-                        color: '{shadow.light.outline}',
+                        color: '{dark.shadow.outline}',
                     },
                     {
                         offsetX: '0px',
                         offsetY: '3px',
                         blur: '16px',
                         spread: '0px',
-                        color: '{shadow.light.key}',
+                        color: '{dark.shadow.key}',
                     },
                     {
                         offsetX: '0px',
                         offsetY: '4px',
                         blur: '32px',
                         spread: '0px',
-                        color: '{shadow.light.ambient}',
+                        color: '{dark.shadow.ambient}',
                     },
                 ],
-                $description: 'Modals, dialogs.',
-            },
-        },
-        dark: {
-            outline: {
-                $type: 'color',
-                $value: '{semantic.darkContrastA.6}',
-            },
-            key: {
-                $type: 'color',
-                $value: '#00000000',
-            },
-            ambient: {
-                $type: 'color',
-                $value: '#00000000',
             },
             overflow: {
                 compact: {
                     $type: 'dimension',
                     base: {
+                        $extensions: { 'io.koobiq': { private: 'Internal parameters of the directional shadows, built into the composites.' } },
                         outline: {
                             offset: {
                                 $value: '1px',
@@ -489,7 +539,7 @@
                             },
                             color: {
                                 $type: 'color',
-                                $value: '{shadow.dark.outline}',
+                                $value: '{dark.shadow.outline}',
                             },
                         },
                         key: {
@@ -643,6 +693,7 @@
                 normal: {
                     $type: 'dimension',
                     base: {
+                        $extensions: { 'io.koobiq': { private: 'Internal parameters of the directional shadows, built into the composites.' } },
                         outline: {
                             offset: {
                                 $value: '1px',
@@ -661,7 +712,7 @@
                             },
                             color: {
                                 $type: 'color',
-                                $value: '{shadow.dark.outline}',
+                                $value: '{dark.shadow.outline}',
                             },
                         },
                         key: {
@@ -812,84 +863,6 @@
                         ],
                     },
                 },
-            },
-            card: {
-                $type: 'shadow',
-                $value: [
-                    {
-                        offsetX: '0px',
-                        offsetY: '0px',
-                        blur: '0px',
-                        spread: '1px',
-                        color: '{shadow.dark.outline}',
-                    },
-                    {
-                        offsetX: '0px',
-                        offsetY: '1px',
-                        blur: '6px',
-                        spread: '0px',
-                        color: '{shadow.dark.key}',
-                    },
-                    {
-                        offsetX: '0px',
-                        offsetY: '1px',
-                        blur: '6px',
-                        spread: '0px',
-                        color: '{shadow.dark.ambient}',
-                    },
-                ],
-            },
-            popup: {
-                $type: 'shadow',
-                $value: [
-                    {
-                        offsetX: '0px',
-                        offsetY: '0px',
-                        blur: '0px',
-                        spread: '1px',
-                        color: '{shadow.dark.outline}',
-                    },
-                    {
-                        offsetX: '0px',
-                        offsetY: '2px',
-                        blur: '8px',
-                        spread: '0px',
-                        color: '{shadow.dark.key}',
-                    },
-                    {
-                        offsetX: '0px',
-                        offsetY: '3px',
-                        blur: '8px',
-                        spread: '0px',
-                        color: '{shadow.dark.ambient}',
-                    },
-                ],
-            },
-            overlay: {
-                $type: 'shadow',
-                $value: [
-                    {
-                        offsetX: '0px',
-                        offsetY: '0px',
-                        blur: '0px',
-                        spread: '1px',
-                        color: '{shadow.dark.outline}',
-                    },
-                    {
-                        offsetX: '0px',
-                        offsetY: '3px',
-                        blur: '16px',
-                        spread: '0px',
-                        color: '{shadow.dark.key}',
-                    },
-                    {
-                        offsetX: '0px',
-                        offsetY: '4px',
-                        blur: '32px',
-                        spread: '0px',
-                        color: '{shadow.dark.ambient}',
-                    },
-                ],
             },
         },
     },

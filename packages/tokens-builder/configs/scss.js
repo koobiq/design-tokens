@@ -1,4 +1,3 @@
-import { isShadowParameter } from '../filters/shadow-parameter.js';
 import { isTypography } from '../filters/typography.js';
 import { isMdTypography } from '../filters/md-typography.js';
 
@@ -9,8 +8,7 @@ export default {
             {
                 destination: '_variables.scss',
                 format: 'scss/variables',
-                filter: (token) =>
-                    !token.attributes.typography && !token.attributes['md-typography'] && !isShadowParameter(token)
+                filter: (token) => !token.attributes.typography && !token.attributes['md-typography']
             },
             {
                 destination: '_typography.scss',

@@ -9,8 +9,6 @@ import registerThemeAttributes from './transforms/attribute/theme.js';
 import registerScssValue from './transforms/attribute/scss-value.js';
 import registerDeprecationComment from './transforms/attribute/deprecation-comment.js';
 import registerCustomKebab from './transforms/name/custom-kebab.js';
-import registerThemeFirstNames from './transforms/name/theme-first.js';
-import registerShadowShorthand from './transforms/value/shadow-shorthand.js';
 
 // ==== Include custom preprocessors ====
 import registerExpandTypography from './preprocessors/expand-typography.js';
@@ -42,8 +40,6 @@ registerThemeAttributes(StyleDictionary);
 registerScssValue(StyleDictionary);
 registerDeprecationComment(StyleDictionary);
 registerCustomKebab(StyleDictionary);
-registerThemeFirstNames(StyleDictionary);
-registerShadowShorthand(StyleDictionary);
 
 registerExpandTypography(StyleDictionary);
 registerDropTransparentShadowLayers(StyleDictionary);

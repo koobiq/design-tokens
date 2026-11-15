@@ -50,8 +50,8 @@ Collection `Shadow`, modes `Light` and `Dark`. Names are paths; `/` in Figma is 
 `i` is the layer index: `outline` 0, `key` 1, `ambient` 2. Same for `popup` and `overlay`.
 
 There are **no parameter tokens** for flat shadows. The values are written directly in the
-composite, one object per layer. Colors are the public roles `{shadow.light.outline|key|ambient}` /
-`{shadow.dark.…}`, which point at the semantic palette (in Figma the color variables alias the
+composite, one object per layer. Colors are the public roles `{light.shadow.outline|key|ambient}` /
+`{dark.shadow.…}`, which point at the semantic palette (in Figma the color variables alias the
 library's Semantic variables directly, e.g. `semantic/contrastA/…`).
 
 ### Directional shadows

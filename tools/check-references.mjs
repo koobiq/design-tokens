@@ -9,7 +9,7 @@
  *
  * That chain only survives in the output because `outputReferences` is on and the semantic
  * palette duplicates the engineering palette 1:1. It is easy to break by accident — a filter
- * change, a colour transform waking up, a token going missing — and nothing else in the build
+ * change, a color transform waking up, a token going missing — and nothing else in the build
  * would fail. Hence these checks.
  *
  *   node tools/check-references.mjs
@@ -19,9 +19,12 @@ import path from 'node:path';
 
 import JSON5 from 'json5';
 
-import { normalizeLength, shadowGeometry } from '../packages/tokens-builder/formats/shadow-references.js';
 import { isTransparentLayer } from '../packages/tokens-builder/preprocessors/drop-transparent-shadow-layers.js';
 import { markPrivate } from '../packages/tokens-builder/preprocessors/private.js';
+
+// A zero length is compared as `0`, so `0px` and `0` are the same zero in both the source and the CSS.
+const ZERO_LENGTH = /^[+-]?0*\.?0+(?:px|em|rem)?$/;
+const zeroAware = (css) => (ZERO_LENGTH.test(css) ? '0' : css);
 
 const DIST = path.join(process.cwd(), 'dist/design-tokens/web');
 // Sliced files live under css/; the css-tokens*.css aggregates sit at the root of web/.
@@ -117,7 +120,7 @@ for (const [name, value] of root) {
 
 // 4. Multi-layer shadows keep one reference per layer. Style Dictionary resolves references
 //    inside object-valued tokens by substituting the first occurrence of the resolved literal,
-//    and shadow-key and shadow-ambient resolve to the same colour — so a regression here
+//    and shadow-key and shadow-ambient resolve to the same color — so a regression here
 //    shows up as the same var() twice rather than as a build error.
 for (const selector of ['.kbq-light', '.kbq-dark']) {
     const card = scopes[selector].get('--kbq-shadow-card') ?? '';
@@ -131,18 +134,18 @@ for (const selector of ['.kbq-light', '.kbq-dark']) {
 // 4b. Shape of the shadows in the built CSS. A composite shadow is written with its parameters
 //     already substituted (formats/shadow-references.js) — the offsets, blur, spread and colors are
 //     sources only and must not leak out as variables of their own. What ships:
-//       --kbq-shadow-outline|key|ambient            color roles (shadow.light|dark in shadows.json5)
+//       --kbq-shadow-outline|key|ambient            color roles (light.shadow|dark.shadow in colors.json5)
 //       --kbq-shadow-<flat>                         1–3 layers, each `x y [blur [spread]] color`
 //       --kbq-shadow-<overflow>-<side>              1–3 layers, each `x y [blur [spread]] color`
-//     Zero lengths are unitless (`0`, not `0px`), and trailing zero blur and spread are left out.
+//     A zero length is written as the source spells it, `0` or `0px`, and every field is written.
 //     The sources always have three layers; a fully transparent one is left out of the output.
 //     Style Dictionary's own reference pass would put a var() wherever a resolved literal first
 //     occurs, and a shadow is mostly repeated literals (0px, 1px, 6px), hence the custom assembly.
 const SHADOW_LAYERS = ['outline', 'key', 'ambient'];
 const SHADOW_ROLE = /^--kbq-shadow-(outline|key|ambient)$/;
 const SHADOW_FINAL = /^--kbq-shadow-(card|popup|overlay|overflow-(?:compact|normal))(?:-(top|right|bottom|left))?$/;
-// A length is `0` or a non-zero value with a unit; `0px` is refused.
-const SHADOW_LENGTH = String.raw`(?:0|-?(?!0(?:\.0+)?px\b)\d+(?:\.\d+)?px)`;
+// A length is `0` or `0px`, or a non-zero value with a unit.
+const SHADOW_LENGTH = String.raw`(?:0(?:px)?|-?\d+(?:\.\d+)?px)`;
 const SHADOW_LAYER_VALUE = new RegExp(
     `^${SHADOW_LENGTH} ${SHADOW_LENGTH}(?: ${SHADOW_LENGTH}(?: ${SHADOW_LENGTH})?)? (?:var\\(--[\\w-]+\\)|#[0-9a-fA-F]{6,8})$`
 );
@@ -183,9 +186,11 @@ for (const [selector, declarations] of bySelector) {
 //     of its own rather than a calc() of the offset, and nothing in the build ties the pair together.
 //     The layers of a sided shadow pick x and y from the layer variable their side needs (as in
 //     Figma). All of that lives in the sources, so it is checked there, and then against the CSS.
-const shadowSource = JSON5.parse(
-    fs.readFileSync(path.join(process.cwd(), 'packages/design-tokens/web/properties/shadows.json5'), 'utf8')
-);
+const shadowSource = markPrivate(
+    JSON5.parse(
+        fs.readFileSync(path.join(process.cwd(), 'packages/design-tokens/web/properties/shadows.json5'), 'utf8')
+    )
+).marked;
 // Every source token by its path. Tokens are read with the marking of the build (preprocessors/private.js),
 // so these checks and the build agree on which tokens are private.
 const flatten = (node, prefix, into, inheritedType) => {
@@ -299,13 +304,12 @@ for (const shadow of ['overflow-compact', 'overflow-normal']) {
                 if (isTransparentLayer(value ?? {}, (ref) => sourceTokens.get(ref)?.$value)) continue;
 
                 const css = cssLayers[shipped.indexOf(value)] ?? '';
-                const geometry = shadowGeometry(
-                    [expected.offsetX, expected.offsetY, expected.blur, expected.spread].map((value) =>
-                        normalizeLength(shadowPx(value))
-                    )
-                ).join(' ');
+                const geometry = [expected.offsetX, expected.offsetY, expected.blur, expected.spread]
+                    .map((value) => zeroAware(shadowPx(value)))
+                    .join(' ');
+                const written = css.split(' ').slice(0, 4).map(zeroAware).join(' ');
 
-                if (!css.startsWith(`${geometry} `)) {
+                if (written !== geometry) {
                     fail(
                         'shadow sides',
                         `${selector} { --kbq-shadow-${shadow}-${side} } layer ${index + 1} is "${css}", expected it to start with "${geometry}"`
@@ -316,10 +320,10 @@ for (const shadow of ['overflow-compact', 'overflow-normal']) {
     }
 }
 
-// 4d. Every shadow is a composite with `$type: 'shadow'`. The build tells a composite from a shadow
-//     parameter by that type (isShadowParameter): a shadow that loses it is taken for a parameter and
-//     disappears from the CSS, Sass and JS output without an error. So the source is checked, and so
-//     is that every shadow made it into the CSS of both themes.
+// 4d. Every shadow is a composite with `$type: 'shadow'`, unless it is private. The build leaves a private
+//     token out of every output, so a composite that gets the marker by mistake disappears from the CSS,
+//     Sass and JS output without an error. So the source is checked, and so is that every shadow made it
+//     into the CSS of both themes.
 const SHADOW_NAMES = [
     'card',
     'popup',
@@ -344,12 +348,22 @@ for (const [theme, selector] of [
 ]) {
     const group = shadowSource.shadow?.[theme] ?? {};
 
-    // Apart from the colour roles (outline, key, ambient) and the base parameters, a token of the theme is a composite.
+    // Apart from the private parameters, a token of the theme is a composite: the color roles live in colors.json5.
     for (const [path, token] of leavesOf(group)) {
-        if (SHADOW_LAYERS.includes(path) || path.split('.').includes('base')) continue;
+        if (token.private) continue;
 
         if (token.$type !== 'shadow') {
-            fail('shadow type', `shadow.${theme}.${path} has no $type: 'shadow', so the build would drop it`);
+            fail(
+                'shadow type',
+                `shadow.${theme}.${path} is neither a composite nor private, so the build would ship it: give it $type: 'shadow', or mark it private`
+            );
+        }
+    }
+
+    // The color roles are public: each theme ships them from colors.json5.
+    for (const layer of SHADOW_LAYERS) {
+        if (!bySelector.get(selector)?.has(`--kbq-shadow-${layer}`)) {
+            fail('shadow roles', `${selector} { --kbq-shadow-${layer} } is missing from the built CSS`);
         }
     }
 
@@ -405,7 +419,7 @@ for (const [file, selector] of [
     }
 }
 
-// 7. Private tokens ship no variable. A private token (`$extensions['io.koobiq.tokens'].private`) is an
+// 7. Private tokens ship no variable. A private token (`$extensions['io.koobiq'].private`) is an
 //    intermediate value: references resolve through it and it has no variable, constant or Sass
 //    variable on any platform. So its name appears in no output, neither declared nor referenced: a
 //    var() to it would not resolve. Names are derived the way each platform derives them
@@ -450,11 +464,8 @@ const outputNames = (tokenPath, subProperties) => {
         .map(kebabPart)
         .join('-')
         .replace(/-a-(\d+)$/, '-a$1');
-    // Sass and JS names keep the theme first for the shadows (transforms/name/theme-first.js).
-    const themed =
-        parts[0] === 'shadow' && ['light', 'dark'].includes(parts[1]) ? [parts[1], parts[0], ...parts.slice(2)] : parts;
-    const sassBase = themed.map(kebabPart).join('-');
-    const pascalBase = themed
+    const sassBase = parts.map(kebabPart).join('-');
+    const pascalBase = parts
         .flatMap((part) => part.split('-'))
         .map(capitalize)
         .join('');

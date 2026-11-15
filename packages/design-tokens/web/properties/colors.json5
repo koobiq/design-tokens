@@ -491,6 +491,21 @@
                 },
             },
         },
+        shadow: {
+            $type: 'color',
+            outline: {
+                $value: '{semantic.contrastA.1}',
+                $description: 'Minimal elevation, 1px outer border.',
+            },
+            key: {
+                $value: '{semantic.contrastA.3}',
+                $description: 'Internal component — do not use directly.',
+            },
+            ambient: {
+                $value: '{semantic.contrastA.2}',
+                $description: 'Internal component — do not use directly.',
+            },
+        },
         opacity: {
             $type: 'number',
             disabled: {
@@ -965,6 +980,18 @@
                 'focus-error': {
                     $value: '{semantic.darkErrorA.11}',
                 },
+            },
+        },
+        shadow: {
+            $type: 'color',
+            outline: {
+                $value: '{semantic.darkContrastA.6}',
+            },
+            key: {
+                $value: '#00000000',
+            },
+            ambient: {
+                $value: '#00000000',
             },
         },
         opacity: {

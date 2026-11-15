@@ -280,6 +280,9 @@ Pattern: `--kbq-shadow-[type]`
 | `--kbq-shadow-outline`                 | Minimal elevation, 1px outer border.               |
 | `--kbq-shadow-key`                     | Internal component — do not use directly.          |
 | `--kbq-shadow-ambient`                 | Internal component — do not use directly.          |
+| `--kbq-shadow-card`                    | Elevated card.                                     |
+| `--kbq-shadow-popup`                   | Dropdowns, popovers, tooltips.                     |
+| `--kbq-shadow-overlay`                 | Modals, dialogs.                                   |
 | `--kbq-shadow-overflow-compact-top`    | Subtle overflow shadow for low-elevation elements. |
 | `--kbq-shadow-overflow-compact-right`  |                                                    |
 | `--kbq-shadow-overflow-compact-bottom` |                                                    |
@@ -288,9 +291,6 @@ Pattern: `--kbq-shadow-[type]`
 | `--kbq-shadow-overflow-normal-right`   |                                                    |
 | `--kbq-shadow-overflow-normal-bottom`  |                                                    |
 | `--kbq-shadow-overflow-normal-left`    |                                                    |
-| `--kbq-shadow-card`                    | Elevated card.                                     |
-| `--kbq-shadow-popup`                   | Dropdowns, popovers, tooltips.                     |
-| `--kbq-shadow-overlay`                 | Modals, dialogs.                                   |
 
 ## Opacity
 
@@ -317,7 +317,7 @@ File paths relative to `packages/design-tokens/web/properties/`:
 - `plt.json5` — the engineering palette. The **only** place with literal OKLch values.
 - `semantic.json5` — 1:1 aliases of the engineering palette, named by meaning (`themeA`, `contrastA`, …).
 - `colors.json5` — role tokens (`light.*` / `dark.*`) that produce the `--kbq-*` CSS variables.
-- `shadows.json5` — shadow tokens (`shadow.light.*` / `shadow.dark.*`): the colour roles, the parameters of the directional shadows and the composite shadows.
+- `shadows.json5` — shadow composites (`shadow.light.*` / `shadow.dark.*`) and the internal parameters of the directional shadows. The shadow color roles are in `colors.json5` (`light.shadow.*` / `dark.shadow.*`).
 
 ### plt Color Families
 
