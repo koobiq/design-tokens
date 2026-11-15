@@ -1,4 +1,6 @@
 import { isShadowParameter } from '../filters/shadow-parameter.js';
+import { isTypography } from '../filters/typography.js';
+import { isMdTypography } from '../filters/md-typography.js';
 
 export default {
     scss: {
@@ -14,13 +16,13 @@ export default {
                 destination: '_typography.scss',
                 format: 'kbq-scss/typography',
                 mapName: 'koobiq',
-                filter: 'typography'
+                filter: isTypography
             },
             {
                 destination: '_md-typography.scss',
                 format: 'kbq-scss/typography',
                 mapName: 'md-typography',
-                filter: 'md-typography'
+                filter: isMdTypography
             },
             {
                 destination: '_palette.scss',

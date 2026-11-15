@@ -75,7 +75,7 @@ Pattern: `--kbq-shadow-[type]`
 
 | Variable | Usage |
 | :--- | :--- |
-<%- shadowRows(light.shadow, shadows.shadow.light) %>
+<%- shadowRows(shadows.shadow.light) %>
 
 ## Opacity
 
@@ -101,6 +101,7 @@ File paths relative to `packages/design-tokens/web/properties/`:
 - `plt.json5` — the engineering palette. The **only** place with literal OKLch values.
 - `semantic.json5` — 1:1 aliases of the engineering palette, named by meaning (`themeA`, `contrastA`, …).
 - `colors.json5` — role tokens (`light.*` / `dark.*`) that produce the `--kbq-*` CSS variables.
+- `shadows.json5` — shadow tokens (`shadow.light.*` / `shadow.dark.*`): the colour roles, the parameters of the directional shadows and the composite shadows.
 
 ### plt Color Families
 

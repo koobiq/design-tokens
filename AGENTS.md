@@ -79,6 +79,7 @@ For Figma-to-token color comparisons, use
 
 - **CSS variables are the API** — use `--kbq-*`; do not hardcode colors or sizes.
 - **Global over component** — component-specific tokens were removed in v4; use global tokens (e.g. `--kbq-size-xl`). Only `code-block` syntax colors, `scrollbar` and `skeleton` remain.
+- **Internal tokens** — a token marked `$extensions['io.koobiq.tokens'].private` (on the token or its group) is an intermediate value: other tokens may reference it, but it ships no variable on any platform. The marker takes `true`, a string explaining why, or `false` to opt out of a group — the same values as `$deprecated`. Never read one from product code. See [`TOKENS-WORKFLOW.md`](./TOKENS-WORKFLOW.md#internal-tokens).
 - **Semantic naming** — tokens are named by function (`error`, `contrast`, `theme`), not value (`red`, `blue`).
 - **Sources are DTCG** — write `$value`, not `value`. Group-level `$type` is inherited.
 

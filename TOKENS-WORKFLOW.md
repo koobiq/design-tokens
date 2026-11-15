@@ -88,6 +88,69 @@ Rough guide to the ramp:
 
 ---
 
+## Internal tokens
+
+Some tokens are stepping stones. They exist so that other tokens can reference and inherit from
+them, and no product code should read them. Such a token is **internal**. It is marked in the
+source, and the build keeps it out of every output:
+
+```json5
+shadow: {
+    $type: 'color',
+    key: {
+        $value: '{semantic.contrastA.3}',
+        $extensions: { 'io.koobiq.tokens': { private: true } },
+    },
+},
+```
+
+The marker can sit on a token or on a group, and it covers everything under the group. A
+descendant opts out with `private: false`.
+
+Its values mirror [`$deprecated`](https://www.designtokens.org/tr/2025.10/format/) — `true` marks
+the token, a string marks it and explains why, and `false` opts out of a group's default:
+
+```json5
+key: {
+    $value: '{semantic.contrastA.3}',
+    $extensions: { 'io.koobiq.tokens': { private: 'shadow layer, compose it into a shadow instead' } },
+},
+```
+
+A group's explanation is inherited by everything under it. The explanation never reaches an output —
+an internal token ships no variable — so it serves the source itself and the build's error messages.
+A quoted boolean (`'true'`, `'false'`) is refused rather than read as an explanation, because
+`private: 'false'` would otherwise make the token private.
+
+The marker guarantees three things:
+
+- **No variable on any platform.** An internal token has no CSS custom property, no Sass variable
+  and no JS constant, in any file, aggregates included. The sources are still published as
+  `dist/design-tokens/web/properties/*.json5`, so an internal token and its marker remain visible there;
+  the guarantee covers the variables the build emits.
+- **Its value still flows.** A token that references an internal token gets its value. An internal
+  alias is skipped: `{a}`, where `a` is internal and points at `{c}`, becomes `{c}`, so the chain
+  stays `role → semantic → plt`. An internal token with a literal value is written where it is used.
+  No output contains a `var()` to an internal token.
+- **It is enforced.** `yarn build` fails if an internal token's name appears in a CSS, Sass or JS/TS
+  output. A typography composite is expanded into one token per sub-property, so for it the check looks
+  for the names of those sub-properties (`--kbq-typography-<name>-font-size`, and so on). It also fails if
+  a theme-specific literal internal token is used by a token outside that theme, which would freeze the
+  theme's value into the other scope.
+
+An internal token is neither of the two other kinds of "not for product code":
+
+- A **`$deprecated`** token is public: it still ships, with a notice, and products may still use it.
+  An internal token is not meant to be used at all, so it has no notice and no migration path.
+- A token with a **`null`** value is part of the vocabulary and deliberately unstyled (see
+  [No empty tokens](#no-empty-tokens)), so it has nothing for a referencing token to take. An internal
+  token has a value, and that value is what its referencing tokens take.
+
+Make a token internal when it only composes other tokens. Deprecate it when it is public and being
+replaced.
+
+---
+
 ## Recipes
 
 ### Add a semantic color
@@ -166,6 +229,23 @@ e.g. a high-contrast theme:
 The notice becomes a comment in the generated CSS and the token drops out of `STYLING.md`.
 `$deprecated: true` works too, but a replacement hint is much more useful.
 
+### Make a token internal
+
+Add the marker to the token, or to the group that should be internal. Other tokens can keep
+referencing it; nothing else gets a variable for it:
+
+```json5
+{
+    'internal-example': {
+        $value: '{semantic.warningA.2}',
+        $extensions: { 'io.koobiq.tokens': { private: true } }
+    }
+}
+```
+
+Make it internal only when nothing should read it. If a product should keep using it, leave it
+public.
+
 ### Add a typography preset
 
 Typography presets are DTCG `typography` composites:
@@ -220,7 +300,10 @@ Reach for the long form only when a preset genuinely differs; `md-h4` is `subhea
 
 ### Add a shadow
 
-Shadows are DTCG `shadow` composites — one layer object, or an array for multi-layer:
+Shadows are DTCG `shadow` composites — one layer object, or an array for multi-layer. They live in
+`shadows.json5`, one group per theme: `shadow.light` and `shadow.dark`. Each group also holds the colour
+roles `outline`, `key` and `ambient` and the base parameters of the directional shadows, so a new
+composite goes into both themes:
 
 ```json5
 {
@@ -229,8 +312,41 @@ Shadows are DTCG `shadow` composites — one layer object, or an array for multi
             'card-hover': {
                 $type: 'shadow',
                 $value: [
-                    { color: '{light.shadow.outline}', offsetX: '0', offsetY: '0', blur: '0', spread: '1px' },
-                    { color: '{light.shadow.key}', offsetX: '0', offsetY: '2px', blur: '8px', spread: '0' }
+                    {
+                        color: '{shadow.light.outline}',
+                        offsetX: '0',
+                        offsetY: '0',
+                        blur: '0',
+                        spread: '1px'
+                    },
+                    {
+                        color: '{shadow.light.key}',
+                        offsetX: '0',
+                        offsetY: '2px',
+                        blur: '8px',
+                        spread: '0'
+                    }
+                ]
+            }
+        },
+        dark: {
+            'card-hover': {
+                $type: 'shadow',
+                $value: [
+                    {
+                        color: '{shadow.dark.outline}',
+                        offsetX: '0',
+                        offsetY: '0',
+                        blur: '0',
+                        spread: '1px'
+                    },
+                    {
+                        color: '{shadow.dark.key}',
+                        offsetX: '0',
+                        offsetY: '2px',
+                        blur: '8px',
+                        spread: '0'
+                    }
                 ]
             }
         }

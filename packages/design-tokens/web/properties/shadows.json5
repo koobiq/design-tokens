@@ -1,328 +1,376 @@
+// Everything about the shadows of one theme is a single group: shadow.light (light theme) and
+// shadow.dark (dark theme). Each group holds:
+//   - the colour roles outline, key and ambient, shipped as --kbq-shadow-outline|key|ambient;
+//   - overflow.compact and overflow.normal, the directional shadows. Each has its base parameters
+//     (offset, offset-neg, cross, blur, spread and colour of every layer, per theme) and its four
+//     sides as composites: overflow.<kind>.top|right|bottom|left;
+//   - the flat composite shadows card, popup and overlay ($type: 'shadow'), which are what ships.
+// The parameters are sources only: they ship no variable of their own.
 {
     shadow: {
-        $description: 'Mirrors the Figma Shadow collection. Flat shadows (card, popup, overlay) fall down and have no parameter tokens: their values are written directly in the composites shadow.light|dark.<name>, one object per layer (outline, key, ambient). Shadows that fall in several directions (overflow-*) have offset (along the main axis: down or right), offset-neg (the same distance the opposite way: up or left) and cross (the additional axis, 0 by default) per layer; offset-neg is a value of its own, mirrored from Figma where variables cannot negate, so keep each pair equal. The final per-side x, y, blur, spread and color of Figma are the attributes of the layer objects in the $value array of shadow.light|dark.<shadow>-<side> (one object per layer: outline, key, ambient), each pointing at the layer variables above. Colors are under light.shadow / dark.shadow.',
-        'overflow-compact': {
-            $type: 'dimension',
-            base: {
-                outline: {
-                    offset: {
-                        $value: '1px',
-                    },
-                    'offset-neg': {
-                        $value: '-1px',
-                    },
-                    cross: {
-                        $value: '0px',
-                    },
-                    blur: {
-                        $value: '0px',
-                    },
-                    spread: {
-                        $value: '0px',
-                    },
-                },
-                key: {
-                    offset: {
-                        $value: '0px',
-                    },
-                    'offset-neg': {
-                        $value: '0px',
-                    },
-                    cross: {
-                        $value: '0px',
-                    },
-                    blur: {
-                        $value: '0px',
-                    },
-                    spread: {
-                        $value: '0px',
-                    },
-                },
-                ambient: {
-                    offset: {
-                        $value: '0px',
-                    },
-                    'offset-neg': {
-                        $value: '0px',
-                    },
-                    cross: {
-                        $value: '0px',
-                    },
-                    blur: {
-                        $value: '0px',
-                    },
-                    spread: {
-                        $value: '0px',
-                    },
-                },
-            },
-        },
-        'overflow-normal': {
-            $type: 'dimension',
-            base: {
-                outline: {
-                    offset: {
-                        $value: '1px',
-                    },
-                    'offset-neg': {
-                        $value: '-1px',
-                    },
-                    cross: {
-                        $value: '0px',
-                    },
-                    blur: {
-                        $value: '0px',
-                    },
-                    spread: {
-                        $value: '0px',
-                    },
-                },
-                key: {
-                    offset: {
-                        $value: '9px',
-                    },
-                    'offset-neg': {
-                        $value: '-9px',
-                    },
-                    cross: {
-                        $value: '0px',
-                    },
-                    blur: {
-                        $value: '8px',
-                    },
-                    spread: {
-                        $value: '-12px',
-                    },
-                },
-                ambient: {
-                    offset: {
-                        $value: '0px',
-                    },
-                    'offset-neg': {
-                        $value: '0px',
-                    },
-                    cross: {
-                        $value: '0px',
-                    },
-                    blur: {
-                        $value: '0px',
-                    },
-                    spread: {
-                        $value: '0px',
-                    },
-                },
-            },
-        },
         light: {
-            'overflow-compact-top': {
-                $type: 'shadow',
-                $value: [
-                    {
-                        offsetX: '{shadow.overflow-compact.base.outline.cross}',
-                        offsetY: '{shadow.overflow-compact.base.outline.offset-neg}',
-                        blur: '{shadow.overflow-compact.base.outline.blur}',
-                        spread: '{shadow.overflow-compact.base.outline.spread}',
-                        color: '{light.shadow.overflow-compact.base.outline.color}',
-                    },
-                    {
-                        offsetX: '{shadow.overflow-compact.base.key.cross}',
-                        offsetY: '{shadow.overflow-compact.base.key.offset-neg}',
-                        blur: '{shadow.overflow-compact.base.key.blur}',
-                        spread: '{shadow.overflow-compact.base.key.spread}',
-                        color: '{light.shadow.overflow-compact.base.key.color}',
-                    },
-                    {
-                        offsetX: '{shadow.overflow-compact.base.ambient.cross}',
-                        offsetY: '{shadow.overflow-compact.base.ambient.offset-neg}',
-                        blur: '{shadow.overflow-compact.base.ambient.blur}',
-                        spread: '{shadow.overflow-compact.base.ambient.spread}',
-                        color: '{light.shadow.overflow-compact.base.ambient.color}',
-                    },
-                ],
-                $description: 'Subtle overflow shadow for low-elevation elements.',
+            outline: {
+                $type: 'color',
+                $value: '{semantic.contrastA.1}',
+                $description: 'Minimal elevation, 1px outer border.',
             },
-            'overflow-compact-right': {
-                $type: 'shadow',
-                $value: [
-                    {
-                        offsetX: '{shadow.overflow-compact.base.outline.offset}',
-                        offsetY: '{shadow.overflow-compact.base.outline.cross}',
-                        blur: '{shadow.overflow-compact.base.outline.blur}',
-                        spread: '{shadow.overflow-compact.base.outline.spread}',
-                        color: '{light.shadow.overflow-compact.base.outline.color}',
-                    },
-                    {
-                        offsetX: '{shadow.overflow-compact.base.key.offset}',
-                        offsetY: '{shadow.overflow-compact.base.key.cross}',
-                        blur: '{shadow.overflow-compact.base.key.blur}',
-                        spread: '{shadow.overflow-compact.base.key.spread}',
-                        color: '{light.shadow.overflow-compact.base.key.color}',
-                    },
-                    {
-                        offsetX: '{shadow.overflow-compact.base.ambient.offset}',
-                        offsetY: '{shadow.overflow-compact.base.ambient.cross}',
-                        blur: '{shadow.overflow-compact.base.ambient.blur}',
-                        spread: '{shadow.overflow-compact.base.ambient.spread}',
-                        color: '{light.shadow.overflow-compact.base.ambient.color}',
-                    },
-                ],
+            key: {
+                $type: 'color',
+                $value: '{semantic.contrastA.3}',
+                $description: 'Internal component — do not use directly.',
             },
-            'overflow-compact-bottom': {
-                $type: 'shadow',
-                $value: [
-                    {
-                        offsetX: '{shadow.overflow-compact.base.outline.cross}',
-                        offsetY: '{shadow.overflow-compact.base.outline.offset}',
-                        blur: '{shadow.overflow-compact.base.outline.blur}',
-                        spread: '{shadow.overflow-compact.base.outline.spread}',
-                        color: '{light.shadow.overflow-compact.base.outline.color}',
-                    },
-                    {
-                        offsetX: '{shadow.overflow-compact.base.key.cross}',
-                        offsetY: '{shadow.overflow-compact.base.key.offset}',
-                        blur: '{shadow.overflow-compact.base.key.blur}',
-                        spread: '{shadow.overflow-compact.base.key.spread}',
-                        color: '{light.shadow.overflow-compact.base.key.color}',
-                    },
-                    {
-                        offsetX: '{shadow.overflow-compact.base.ambient.cross}',
-                        offsetY: '{shadow.overflow-compact.base.ambient.offset}',
-                        blur: '{shadow.overflow-compact.base.ambient.blur}',
-                        spread: '{shadow.overflow-compact.base.ambient.spread}',
-                        color: '{light.shadow.overflow-compact.base.ambient.color}',
-                    },
-                ],
+            ambient: {
+                $type: 'color',
+                $value: '{semantic.contrastA.2}',
+                $description: 'Internal component — do not use directly.',
             },
-            'overflow-compact-left': {
-                $type: 'shadow',
-                $value: [
-                    {
-                        offsetX: '{shadow.overflow-compact.base.outline.offset-neg}',
-                        offsetY: '{shadow.overflow-compact.base.outline.cross}',
-                        blur: '{shadow.overflow-compact.base.outline.blur}',
-                        spread: '{shadow.overflow-compact.base.outline.spread}',
-                        color: '{light.shadow.overflow-compact.base.outline.color}',
+            overflow: {
+                compact: {
+                    $type: 'dimension',
+                    base: {
+                        outline: {
+                            offset: {
+                                $value: '1px',
+                            },
+                            'offset-neg': {
+                                $value: '-1px',
+                            },
+                            cross: {
+                                $value: '0px',
+                            },
+                            blur: {
+                                $value: '0px',
+                            },
+                            spread: {
+                                $value: '0px',
+                            },
+                            color: {
+                                $type: 'color',
+                                $value: '{light.line.contrast-less}',
+                            },
+                        },
+                        key: {
+                            offset: {
+                                $value: '0px',
+                            },
+                            'offset-neg': {
+                                $value: '0px',
+                            },
+                            cross: {
+                                $value: '0px',
+                            },
+                            blur: {
+                                $value: '0px',
+                            },
+                            spread: {
+                                $value: '0px',
+                            },
+                            color: {
+                                $type: 'color',
+                                $value: '#00000000',
+                            },
+                        },
+                        ambient: {
+                            offset: {
+                                $value: '0px',
+                            },
+                            'offset-neg': {
+                                $value: '0px',
+                            },
+                            cross: {
+                                $value: '0px',
+                            },
+                            blur: {
+                                $value: '0px',
+                            },
+                            spread: {
+                                $value: '0px',
+                            },
+                            color: {
+                                $type: 'color',
+                                $value: '#00000000',
+                            },
+                        },
                     },
-                    {
-                        offsetX: '{shadow.overflow-compact.base.key.offset-neg}',
-                        offsetY: '{shadow.overflow-compact.base.key.cross}',
-                        blur: '{shadow.overflow-compact.base.key.blur}',
-                        spread: '{shadow.overflow-compact.base.key.spread}',
-                        color: '{light.shadow.overflow-compact.base.key.color}',
+                    top: {
+                        $type: 'shadow',
+                        $value: [
+                            {
+                                offsetX: '{shadow.light.overflow.compact.base.outline.cross}',
+                                offsetY: '{shadow.light.overflow.compact.base.outline.offset-neg}',
+                                blur: '{shadow.light.overflow.compact.base.outline.blur}',
+                                spread: '{shadow.light.overflow.compact.base.outline.spread}',
+                                color: '{shadow.light.overflow.compact.base.outline.color}',
+                            },
+                            {
+                                offsetX: '{shadow.light.overflow.compact.base.key.cross}',
+                                offsetY: '{shadow.light.overflow.compact.base.key.offset-neg}',
+                                blur: '{shadow.light.overflow.compact.base.key.blur}',
+                                spread: '{shadow.light.overflow.compact.base.key.spread}',
+                                color: '{shadow.light.overflow.compact.base.key.color}',
+                            },
+                            {
+                                offsetX: '{shadow.light.overflow.compact.base.ambient.cross}',
+                                offsetY: '{shadow.light.overflow.compact.base.ambient.offset-neg}',
+                                blur: '{shadow.light.overflow.compact.base.ambient.blur}',
+                                spread: '{shadow.light.overflow.compact.base.ambient.spread}',
+                                color: '{shadow.light.overflow.compact.base.ambient.color}',
+                            },
+                        ],
+                        $description: 'Subtle overflow shadow for low-elevation elements.',
                     },
-                    {
-                        offsetX: '{shadow.overflow-compact.base.ambient.offset-neg}',
-                        offsetY: '{shadow.overflow-compact.base.ambient.cross}',
-                        blur: '{shadow.overflow-compact.base.ambient.blur}',
-                        spread: '{shadow.overflow-compact.base.ambient.spread}',
-                        color: '{light.shadow.overflow-compact.base.ambient.color}',
+                    right: {
+                        $type: 'shadow',
+                        $value: [
+                            {
+                                offsetX: '{shadow.light.overflow.compact.base.outline.offset}',
+                                offsetY: '{shadow.light.overflow.compact.base.outline.cross}',
+                                blur: '{shadow.light.overflow.compact.base.outline.blur}',
+                                spread: '{shadow.light.overflow.compact.base.outline.spread}',
+                                color: '{shadow.light.overflow.compact.base.outline.color}',
+                            },
+                            {
+                                offsetX: '{shadow.light.overflow.compact.base.key.offset}',
+                                offsetY: '{shadow.light.overflow.compact.base.key.cross}',
+                                blur: '{shadow.light.overflow.compact.base.key.blur}',
+                                spread: '{shadow.light.overflow.compact.base.key.spread}',
+                                color: '{shadow.light.overflow.compact.base.key.color}',
+                            },
+                            {
+                                offsetX: '{shadow.light.overflow.compact.base.ambient.offset}',
+                                offsetY: '{shadow.light.overflow.compact.base.ambient.cross}',
+                                blur: '{shadow.light.overflow.compact.base.ambient.blur}',
+                                spread: '{shadow.light.overflow.compact.base.ambient.spread}',
+                                color: '{shadow.light.overflow.compact.base.ambient.color}',
+                            },
+                        ],
                     },
-                ],
-            },
-            'overflow-normal-top': {
-                $type: 'shadow',
-                $value: [
-                    {
-                        offsetX: '{shadow.overflow-normal.base.outline.cross}',
-                        offsetY: '{shadow.overflow-normal.base.outline.offset-neg}',
-                        blur: '{shadow.overflow-normal.base.outline.blur}',
-                        spread: '{shadow.overflow-normal.base.outline.spread}',
-                        color: '{light.shadow.overflow-normal.base.outline.color}',
+                    bottom: {
+                        $type: 'shadow',
+                        $value: [
+                            {
+                                offsetX: '{shadow.light.overflow.compact.base.outline.cross}',
+                                offsetY: '{shadow.light.overflow.compact.base.outline.offset}',
+                                blur: '{shadow.light.overflow.compact.base.outline.blur}',
+                                spread: '{shadow.light.overflow.compact.base.outline.spread}',
+                                color: '{shadow.light.overflow.compact.base.outline.color}',
+                            },
+                            {
+                                offsetX: '{shadow.light.overflow.compact.base.key.cross}',
+                                offsetY: '{shadow.light.overflow.compact.base.key.offset}',
+                                blur: '{shadow.light.overflow.compact.base.key.blur}',
+                                spread: '{shadow.light.overflow.compact.base.key.spread}',
+                                color: '{shadow.light.overflow.compact.base.key.color}',
+                            },
+                            {
+                                offsetX: '{shadow.light.overflow.compact.base.ambient.cross}',
+                                offsetY: '{shadow.light.overflow.compact.base.ambient.offset}',
+                                blur: '{shadow.light.overflow.compact.base.ambient.blur}',
+                                spread: '{shadow.light.overflow.compact.base.ambient.spread}',
+                                color: '{shadow.light.overflow.compact.base.ambient.color}',
+                            },
+                        ],
                     },
-                    {
-                        offsetX: '{shadow.overflow-normal.base.key.cross}',
-                        offsetY: '{shadow.overflow-normal.base.key.offset-neg}',
-                        blur: '{shadow.overflow-normal.base.key.blur}',
-                        spread: '{shadow.overflow-normal.base.key.spread}',
-                        color: '{light.shadow.overflow-normal.base.key.color}',
+                    left: {
+                        $type: 'shadow',
+                        $value: [
+                            {
+                                offsetX: '{shadow.light.overflow.compact.base.outline.offset-neg}',
+                                offsetY: '{shadow.light.overflow.compact.base.outline.cross}',
+                                blur: '{shadow.light.overflow.compact.base.outline.blur}',
+                                spread: '{shadow.light.overflow.compact.base.outline.spread}',
+                                color: '{shadow.light.overflow.compact.base.outline.color}',
+                            },
+                            {
+                                offsetX: '{shadow.light.overflow.compact.base.key.offset-neg}',
+                                offsetY: '{shadow.light.overflow.compact.base.key.cross}',
+                                blur: '{shadow.light.overflow.compact.base.key.blur}',
+                                spread: '{shadow.light.overflow.compact.base.key.spread}',
+                                color: '{shadow.light.overflow.compact.base.key.color}',
+                            },
+                            {
+                                offsetX: '{shadow.light.overflow.compact.base.ambient.offset-neg}',
+                                offsetY: '{shadow.light.overflow.compact.base.ambient.cross}',
+                                blur: '{shadow.light.overflow.compact.base.ambient.blur}',
+                                spread: '{shadow.light.overflow.compact.base.ambient.spread}',
+                                color: '{shadow.light.overflow.compact.base.ambient.color}',
+                            },
+                        ],
                     },
-                    {
-                        offsetX: '{shadow.overflow-normal.base.ambient.cross}',
-                        offsetY: '{shadow.overflow-normal.base.ambient.offset-neg}',
-                        blur: '{shadow.overflow-normal.base.ambient.blur}',
-                        spread: '{shadow.overflow-normal.base.ambient.spread}',
-                        color: '{light.shadow.overflow-normal.base.ambient.color}',
+                },
+                normal: {
+                    $type: 'dimension',
+                    base: {
+                        outline: {
+                            offset: {
+                                $value: '1px',
+                            },
+                            'offset-neg': {
+                                $value: '-1px',
+                            },
+                            cross: {
+                                $value: '0px',
+                            },
+                            blur: {
+                                $value: '0px',
+                            },
+                            spread: {
+                                $value: '0px',
+                            },
+                            color: {
+                                $type: 'color',
+                                $value: '#00000000',
+                            },
+                        },
+                        key: {
+                            offset: {
+                                $value: '9px',
+                            },
+                            'offset-neg': {
+                                $value: '-9px',
+                            },
+                            cross: {
+                                $value: '0px',
+                            },
+                            blur: {
+                                $value: '8px',
+                            },
+                            spread: {
+                                $value: '-12px',
+                            },
+                            color: {
+                                $type: 'color',
+                                $value: '{semantic.contrastA.13}',
+                            },
+                        },
+                        ambient: {
+                            offset: {
+                                $value: '0px',
+                            },
+                            'offset-neg': {
+                                $value: '0px',
+                            },
+                            cross: {
+                                $value: '0px',
+                            },
+                            blur: {
+                                $value: '0px',
+                            },
+                            spread: {
+                                $value: '0px',
+                            },
+                            color: {
+                                $type: 'color',
+                                $value: '#00000000',
+                            },
+                        },
                     },
-                ],
-                $description: 'Modal / sidepanel header overflow shadow.',
-            },
-            'overflow-normal-right': {
-                $type: 'shadow',
-                $value: [
-                    {
-                        offsetX: '{shadow.overflow-normal.base.outline.offset}',
-                        offsetY: '{shadow.overflow-normal.base.outline.cross}',
-                        blur: '{shadow.overflow-normal.base.outline.blur}',
-                        spread: '{shadow.overflow-normal.base.outline.spread}',
-                        color: '{light.shadow.overflow-normal.base.outline.color}',
+                    top: {
+                        $type: 'shadow',
+                        $value: [
+                            {
+                                offsetX: '{shadow.light.overflow.normal.base.outline.cross}',
+                                offsetY: '{shadow.light.overflow.normal.base.outline.offset-neg}',
+                                blur: '{shadow.light.overflow.normal.base.outline.blur}',
+                                spread: '{shadow.light.overflow.normal.base.outline.spread}',
+                                color: '{shadow.light.overflow.normal.base.outline.color}',
+                            },
+                            {
+                                offsetX: '{shadow.light.overflow.normal.base.key.cross}',
+                                offsetY: '{shadow.light.overflow.normal.base.key.offset-neg}',
+                                blur: '{shadow.light.overflow.normal.base.key.blur}',
+                                spread: '{shadow.light.overflow.normal.base.key.spread}',
+                                color: '{shadow.light.overflow.normal.base.key.color}',
+                            },
+                            {
+                                offsetX: '{shadow.light.overflow.normal.base.ambient.cross}',
+                                offsetY: '{shadow.light.overflow.normal.base.ambient.offset-neg}',
+                                blur: '{shadow.light.overflow.normal.base.ambient.blur}',
+                                spread: '{shadow.light.overflow.normal.base.ambient.spread}',
+                                color: '{shadow.light.overflow.normal.base.ambient.color}',
+                            },
+                        ],
+                        $description: 'Modal / sidepanel header overflow shadow.',
                     },
-                    {
-                        offsetX: '{shadow.overflow-normal.base.key.offset}',
-                        offsetY: '{shadow.overflow-normal.base.key.cross}',
-                        blur: '{shadow.overflow-normal.base.key.blur}',
-                        spread: '{shadow.overflow-normal.base.key.spread}',
-                        color: '{light.shadow.overflow-normal.base.key.color}',
+                    right: {
+                        $type: 'shadow',
+                        $value: [
+                            {
+                                offsetX: '{shadow.light.overflow.normal.base.outline.offset}',
+                                offsetY: '{shadow.light.overflow.normal.base.outline.cross}',
+                                blur: '{shadow.light.overflow.normal.base.outline.blur}',
+                                spread: '{shadow.light.overflow.normal.base.outline.spread}',
+                                color: '{shadow.light.overflow.normal.base.outline.color}',
+                            },
+                            {
+                                offsetX: '{shadow.light.overflow.normal.base.key.offset}',
+                                offsetY: '{shadow.light.overflow.normal.base.key.cross}',
+                                blur: '{shadow.light.overflow.normal.base.key.blur}',
+                                spread: '{shadow.light.overflow.normal.base.key.spread}',
+                                color: '{shadow.light.overflow.normal.base.key.color}',
+                            },
+                            {
+                                offsetX: '{shadow.light.overflow.normal.base.ambient.offset}',
+                                offsetY: '{shadow.light.overflow.normal.base.ambient.cross}',
+                                blur: '{shadow.light.overflow.normal.base.ambient.blur}',
+                                spread: '{shadow.light.overflow.normal.base.ambient.spread}',
+                                color: '{shadow.light.overflow.normal.base.ambient.color}',
+                            },
+                        ],
                     },
-                    {
-                        offsetX: '{shadow.overflow-normal.base.ambient.offset}',
-                        offsetY: '{shadow.overflow-normal.base.ambient.cross}',
-                        blur: '{shadow.overflow-normal.base.ambient.blur}',
-                        spread: '{shadow.overflow-normal.base.ambient.spread}',
-                        color: '{light.shadow.overflow-normal.base.ambient.color}',
+                    bottom: {
+                        $type: 'shadow',
+                        $value: [
+                            {
+                                offsetX: '{shadow.light.overflow.normal.base.outline.cross}',
+                                offsetY: '{shadow.light.overflow.normal.base.outline.offset}',
+                                blur: '{shadow.light.overflow.normal.base.outline.blur}',
+                                spread: '{shadow.light.overflow.normal.base.outline.spread}',
+                                color: '{shadow.light.overflow.normal.base.outline.color}',
+                            },
+                            {
+                                offsetX: '{shadow.light.overflow.normal.base.key.cross}',
+                                offsetY: '{shadow.light.overflow.normal.base.key.offset}',
+                                blur: '{shadow.light.overflow.normal.base.key.blur}',
+                                spread: '{shadow.light.overflow.normal.base.key.spread}',
+                                color: '{shadow.light.overflow.normal.base.key.color}',
+                            },
+                            {
+                                offsetX: '{shadow.light.overflow.normal.base.ambient.cross}',
+                                offsetY: '{shadow.light.overflow.normal.base.ambient.offset}',
+                                blur: '{shadow.light.overflow.normal.base.ambient.blur}',
+                                spread: '{shadow.light.overflow.normal.base.ambient.spread}',
+                                color: '{shadow.light.overflow.normal.base.ambient.color}',
+                            },
+                        ],
                     },
-                ],
-            },
-            'overflow-normal-bottom': {
-                $type: 'shadow',
-                $value: [
-                    {
-                        offsetX: '{shadow.overflow-normal.base.outline.cross}',
-                        offsetY: '{shadow.overflow-normal.base.outline.offset}',
-                        blur: '{shadow.overflow-normal.base.outline.blur}',
-                        spread: '{shadow.overflow-normal.base.outline.spread}',
-                        color: '{light.shadow.overflow-normal.base.outline.color}',
+                    left: {
+                        $type: 'shadow',
+                        $value: [
+                            {
+                                offsetX: '{shadow.light.overflow.normal.base.outline.offset-neg}',
+                                offsetY: '{shadow.light.overflow.normal.base.outline.cross}',
+                                blur: '{shadow.light.overflow.normal.base.outline.blur}',
+                                spread: '{shadow.light.overflow.normal.base.outline.spread}',
+                                color: '{shadow.light.overflow.normal.base.outline.color}',
+                            },
+                            {
+                                offsetX: '{shadow.light.overflow.normal.base.key.offset-neg}',
+                                offsetY: '{shadow.light.overflow.normal.base.key.cross}',
+                                blur: '{shadow.light.overflow.normal.base.key.blur}',
+                                spread: '{shadow.light.overflow.normal.base.key.spread}',
+                                color: '{shadow.light.overflow.normal.base.key.color}',
+                            },
+                            {
+                                offsetX: '{shadow.light.overflow.normal.base.ambient.offset-neg}',
+                                offsetY: '{shadow.light.overflow.normal.base.ambient.cross}',
+                                blur: '{shadow.light.overflow.normal.base.ambient.blur}',
+                                spread: '{shadow.light.overflow.normal.base.ambient.spread}',
+                                color: '{shadow.light.overflow.normal.base.ambient.color}',
+                            },
+                        ],
                     },
-                    {
-                        offsetX: '{shadow.overflow-normal.base.key.cross}',
-                        offsetY: '{shadow.overflow-normal.base.key.offset}',
-                        blur: '{shadow.overflow-normal.base.key.blur}',
-                        spread: '{shadow.overflow-normal.base.key.spread}',
-                        color: '{light.shadow.overflow-normal.base.key.color}',
-                    },
-                    {
-                        offsetX: '{shadow.overflow-normal.base.ambient.cross}',
-                        offsetY: '{shadow.overflow-normal.base.ambient.offset}',
-                        blur: '{shadow.overflow-normal.base.ambient.blur}',
-                        spread: '{shadow.overflow-normal.base.ambient.spread}',
-                        color: '{light.shadow.overflow-normal.base.ambient.color}',
-                    },
-                ],
-            },
-            'overflow-normal-left': {
-                $type: 'shadow',
-                $value: [
-                    {
-                        offsetX: '{shadow.overflow-normal.base.outline.offset-neg}',
-                        offsetY: '{shadow.overflow-normal.base.outline.cross}',
-                        blur: '{shadow.overflow-normal.base.outline.blur}',
-                        spread: '{shadow.overflow-normal.base.outline.spread}',
-                        color: '{light.shadow.overflow-normal.base.outline.color}',
-                    },
-                    {
-                        offsetX: '{shadow.overflow-normal.base.key.offset-neg}',
-                        offsetY: '{shadow.overflow-normal.base.key.cross}',
-                        blur: '{shadow.overflow-normal.base.key.blur}',
-                        spread: '{shadow.overflow-normal.base.key.spread}',
-                        color: '{light.shadow.overflow-normal.base.key.color}',
-                    },
-                    {
-                        offsetX: '{shadow.overflow-normal.base.ambient.offset-neg}',
-                        offsetY: '{shadow.overflow-normal.base.ambient.cross}',
-                        blur: '{shadow.overflow-normal.base.ambient.blur}',
-                        spread: '{shadow.overflow-normal.base.ambient.spread}',
-                        color: '{light.shadow.overflow-normal.base.ambient.color}',
-                    },
-                ],
+                },
             },
             card: {
                 $type: 'shadow',
@@ -332,21 +380,21 @@
                         offsetY: '0px',
                         blur: '0px',
                         spread: '1px',
-                        color: '{light.shadow.outline}',
+                        color: '{shadow.light.outline}',
                     },
                     {
                         offsetX: '0px',
                         offsetY: '1px',
                         blur: '6px',
                         spread: '0px',
-                        color: '{light.shadow.key}',
+                        color: '{shadow.light.key}',
                     },
                     {
                         offsetX: '0px',
                         offsetY: '1px',
                         blur: '6px',
                         spread: '0px',
-                        color: '{light.shadow.ambient}',
+                        color: '{shadow.light.ambient}',
                     },
                 ],
                 $description: 'Elevated card.',
@@ -359,21 +407,21 @@
                         offsetY: '0px',
                         blur: '0px',
                         spread: '1px',
-                        color: '{light.shadow.outline}',
+                        color: '{shadow.light.outline}',
                     },
                     {
                         offsetX: '0px',
                         offsetY: '2px',
                         blur: '8px',
                         spread: '0px',
-                        color: '{light.shadow.key}',
+                        color: '{shadow.light.key}',
                     },
                     {
                         offsetX: '0px',
                         offsetY: '3px',
                         blur: '8px',
                         spread: '0px',
-                        color: '{light.shadow.ambient}',
+                        color: '{shadow.light.ambient}',
                     },
                 ],
                 $description: 'Dropdowns, popovers, tooltips.',
@@ -386,234 +434,384 @@
                         offsetY: '0px',
                         blur: '0px',
                         spread: '1px',
-                        color: '{light.shadow.outline}',
+                        color: '{shadow.light.outline}',
                     },
                     {
                         offsetX: '0px',
                         offsetY: '3px',
                         blur: '16px',
                         spread: '0px',
-                        color: '{light.shadow.key}',
+                        color: '{shadow.light.key}',
                     },
                     {
                         offsetX: '0px',
                         offsetY: '4px',
                         blur: '32px',
                         spread: '0px',
-                        color: '{light.shadow.ambient}',
+                        color: '{shadow.light.ambient}',
                     },
                 ],
                 $description: 'Modals, dialogs.',
             },
         },
         dark: {
-            'overflow-compact-top': {
-                $type: 'shadow',
-                $value: [
-                    {
-                        offsetX: '{shadow.overflow-compact.base.outline.cross}',
-                        offsetY: '{shadow.overflow-compact.base.outline.offset-neg}',
-                        blur: '{shadow.overflow-compact.base.outline.blur}',
-                        spread: '{shadow.overflow-compact.base.outline.spread}',
-                        color: '{dark.shadow.overflow-compact.base.outline.color}',
-                    },
-                    {
-                        offsetX: '{shadow.overflow-compact.base.key.cross}',
-                        offsetY: '{shadow.overflow-compact.base.key.offset-neg}',
-                        blur: '{shadow.overflow-compact.base.key.blur}',
-                        spread: '{shadow.overflow-compact.base.key.spread}',
-                        color: '{dark.shadow.overflow-compact.base.key.color}',
-                    },
-                    {
-                        offsetX: '{shadow.overflow-compact.base.ambient.cross}',
-                        offsetY: '{shadow.overflow-compact.base.ambient.offset-neg}',
-                        blur: '{shadow.overflow-compact.base.ambient.blur}',
-                        spread: '{shadow.overflow-compact.base.ambient.spread}',
-                        color: '{dark.shadow.overflow-compact.base.ambient.color}',
-                    },
-                ],
+            outline: {
+                $type: 'color',
+                $value: '{semantic.darkContrastA.6}',
             },
-            'overflow-compact-right': {
-                $type: 'shadow',
-                $value: [
-                    {
-                        offsetX: '{shadow.overflow-compact.base.outline.offset}',
-                        offsetY: '{shadow.overflow-compact.base.outline.cross}',
-                        blur: '{shadow.overflow-compact.base.outline.blur}',
-                        spread: '{shadow.overflow-compact.base.outline.spread}',
-                        color: '{dark.shadow.overflow-compact.base.outline.color}',
-                    },
-                    {
-                        offsetX: '{shadow.overflow-compact.base.key.offset}',
-                        offsetY: '{shadow.overflow-compact.base.key.cross}',
-                        blur: '{shadow.overflow-compact.base.key.blur}',
-                        spread: '{shadow.overflow-compact.base.key.spread}',
-                        color: '{dark.shadow.overflow-compact.base.key.color}',
-                    },
-                    {
-                        offsetX: '{shadow.overflow-compact.base.ambient.offset}',
-                        offsetY: '{shadow.overflow-compact.base.ambient.cross}',
-                        blur: '{shadow.overflow-compact.base.ambient.blur}',
-                        spread: '{shadow.overflow-compact.base.ambient.spread}',
-                        color: '{dark.shadow.overflow-compact.base.ambient.color}',
-                    },
-                ],
+            key: {
+                $type: 'color',
+                $value: '#00000000',
             },
-            'overflow-compact-bottom': {
-                $type: 'shadow',
-                $value: [
-                    {
-                        offsetX: '{shadow.overflow-compact.base.outline.cross}',
-                        offsetY: '{shadow.overflow-compact.base.outline.offset}',
-                        blur: '{shadow.overflow-compact.base.outline.blur}',
-                        spread: '{shadow.overflow-compact.base.outline.spread}',
-                        color: '{dark.shadow.overflow-compact.base.outline.color}',
-                    },
-                    {
-                        offsetX: '{shadow.overflow-compact.base.key.cross}',
-                        offsetY: '{shadow.overflow-compact.base.key.offset}',
-                        blur: '{shadow.overflow-compact.base.key.blur}',
-                        spread: '{shadow.overflow-compact.base.key.spread}',
-                        color: '{dark.shadow.overflow-compact.base.key.color}',
-                    },
-                    {
-                        offsetX: '{shadow.overflow-compact.base.ambient.cross}',
-                        offsetY: '{shadow.overflow-compact.base.ambient.offset}',
-                        blur: '{shadow.overflow-compact.base.ambient.blur}',
-                        spread: '{shadow.overflow-compact.base.ambient.spread}',
-                        color: '{dark.shadow.overflow-compact.base.ambient.color}',
-                    },
-                ],
+            ambient: {
+                $type: 'color',
+                $value: '#00000000',
             },
-            'overflow-compact-left': {
-                $type: 'shadow',
-                $value: [
-                    {
-                        offsetX: '{shadow.overflow-compact.base.outline.offset-neg}',
-                        offsetY: '{shadow.overflow-compact.base.outline.cross}',
-                        blur: '{shadow.overflow-compact.base.outline.blur}',
-                        spread: '{shadow.overflow-compact.base.outline.spread}',
-                        color: '{dark.shadow.overflow-compact.base.outline.color}',
+            overflow: {
+                compact: {
+                    $type: 'dimension',
+                    base: {
+                        outline: {
+                            offset: {
+                                $value: '1px',
+                            },
+                            'offset-neg': {
+                                $value: '-1px',
+                            },
+                            cross: {
+                                $value: '0px',
+                            },
+                            blur: {
+                                $value: '0px',
+                            },
+                            spread: {
+                                $value: '0px',
+                            },
+                            color: {
+                                $type: 'color',
+                                $value: '{shadow.dark.outline}',
+                            },
+                        },
+                        key: {
+                            offset: {
+                                $value: '0px',
+                            },
+                            'offset-neg': {
+                                $value: '0px',
+                            },
+                            cross: {
+                                $value: '0px',
+                            },
+                            blur: {
+                                $value: '0px',
+                            },
+                            spread: {
+                                $value: '0px',
+                            },
+                            color: {
+                                $type: 'color',
+                                $value: '#00000000',
+                            },
+                        },
+                        ambient: {
+                            offset: {
+                                $value: '0px',
+                            },
+                            'offset-neg': {
+                                $value: '0px',
+                            },
+                            cross: {
+                                $value: '0px',
+                            },
+                            blur: {
+                                $value: '0px',
+                            },
+                            spread: {
+                                $value: '0px',
+                            },
+                            color: {
+                                $type: 'color',
+                                $value: '#00000000',
+                            },
+                        },
                     },
-                    {
-                        offsetX: '{shadow.overflow-compact.base.key.offset-neg}',
-                        offsetY: '{shadow.overflow-compact.base.key.cross}',
-                        blur: '{shadow.overflow-compact.base.key.blur}',
-                        spread: '{shadow.overflow-compact.base.key.spread}',
-                        color: '{dark.shadow.overflow-compact.base.key.color}',
+                    top: {
+                        $type: 'shadow',
+                        $value: [
+                            {
+                                offsetX: '{shadow.dark.overflow.compact.base.outline.cross}',
+                                offsetY: '{shadow.dark.overflow.compact.base.outline.offset-neg}',
+                                blur: '{shadow.dark.overflow.compact.base.outline.blur}',
+                                spread: '{shadow.dark.overflow.compact.base.outline.spread}',
+                                color: '{shadow.dark.overflow.compact.base.outline.color}',
+                            },
+                            {
+                                offsetX: '{shadow.dark.overflow.compact.base.key.cross}',
+                                offsetY: '{shadow.dark.overflow.compact.base.key.offset-neg}',
+                                blur: '{shadow.dark.overflow.compact.base.key.blur}',
+                                spread: '{shadow.dark.overflow.compact.base.key.spread}',
+                                color: '{shadow.dark.overflow.compact.base.key.color}',
+                            },
+                            {
+                                offsetX: '{shadow.dark.overflow.compact.base.ambient.cross}',
+                                offsetY: '{shadow.dark.overflow.compact.base.ambient.offset-neg}',
+                                blur: '{shadow.dark.overflow.compact.base.ambient.blur}',
+                                spread: '{shadow.dark.overflow.compact.base.ambient.spread}',
+                                color: '{shadow.dark.overflow.compact.base.ambient.color}',
+                            },
+                        ],
                     },
-                    {
-                        offsetX: '{shadow.overflow-compact.base.ambient.offset-neg}',
-                        offsetY: '{shadow.overflow-compact.base.ambient.cross}',
-                        blur: '{shadow.overflow-compact.base.ambient.blur}',
-                        spread: '{shadow.overflow-compact.base.ambient.spread}',
-                        color: '{dark.shadow.overflow-compact.base.ambient.color}',
+                    right: {
+                        $type: 'shadow',
+                        $value: [
+                            {
+                                offsetX: '{shadow.dark.overflow.compact.base.outline.offset}',
+                                offsetY: '{shadow.dark.overflow.compact.base.outline.cross}',
+                                blur: '{shadow.dark.overflow.compact.base.outline.blur}',
+                                spread: '{shadow.dark.overflow.compact.base.outline.spread}',
+                                color: '{shadow.dark.overflow.compact.base.outline.color}',
+                            },
+                            {
+                                offsetX: '{shadow.dark.overflow.compact.base.key.offset}',
+                                offsetY: '{shadow.dark.overflow.compact.base.key.cross}',
+                                blur: '{shadow.dark.overflow.compact.base.key.blur}',
+                                spread: '{shadow.dark.overflow.compact.base.key.spread}',
+                                color: '{shadow.dark.overflow.compact.base.key.color}',
+                            },
+                            {
+                                offsetX: '{shadow.dark.overflow.compact.base.ambient.offset}',
+                                offsetY: '{shadow.dark.overflow.compact.base.ambient.cross}',
+                                blur: '{shadow.dark.overflow.compact.base.ambient.blur}',
+                                spread: '{shadow.dark.overflow.compact.base.ambient.spread}',
+                                color: '{shadow.dark.overflow.compact.base.ambient.color}',
+                            },
+                        ],
                     },
-                ],
-            },
-            'overflow-normal-top': {
-                $type: 'shadow',
-                $value: [
-                    {
-                        offsetX: '{shadow.overflow-normal.base.outline.cross}',
-                        offsetY: '{shadow.overflow-normal.base.outline.offset-neg}',
-                        blur: '{shadow.overflow-normal.base.outline.blur}',
-                        spread: '{shadow.overflow-normal.base.outline.spread}',
-                        color: '{dark.shadow.overflow-normal.base.outline.color}',
+                    bottom: {
+                        $type: 'shadow',
+                        $value: [
+                            {
+                                offsetX: '{shadow.dark.overflow.compact.base.outline.cross}',
+                                offsetY: '{shadow.dark.overflow.compact.base.outline.offset}',
+                                blur: '{shadow.dark.overflow.compact.base.outline.blur}',
+                                spread: '{shadow.dark.overflow.compact.base.outline.spread}',
+                                color: '{shadow.dark.overflow.compact.base.outline.color}',
+                            },
+                            {
+                                offsetX: '{shadow.dark.overflow.compact.base.key.cross}',
+                                offsetY: '{shadow.dark.overflow.compact.base.key.offset}',
+                                blur: '{shadow.dark.overflow.compact.base.key.blur}',
+                                spread: '{shadow.dark.overflow.compact.base.key.spread}',
+                                color: '{shadow.dark.overflow.compact.base.key.color}',
+                            },
+                            {
+                                offsetX: '{shadow.dark.overflow.compact.base.ambient.cross}',
+                                offsetY: '{shadow.dark.overflow.compact.base.ambient.offset}',
+                                blur: '{shadow.dark.overflow.compact.base.ambient.blur}',
+                                spread: '{shadow.dark.overflow.compact.base.ambient.spread}',
+                                color: '{shadow.dark.overflow.compact.base.ambient.color}',
+                            },
+                        ],
                     },
-                    {
-                        offsetX: '{shadow.overflow-normal.base.key.cross}',
-                        offsetY: '{shadow.overflow-normal.base.key.offset-neg}',
-                        blur: '{shadow.overflow-normal.base.key.blur}',
-                        spread: '{shadow.overflow-normal.base.key.spread}',
-                        color: '{dark.shadow.overflow-normal.base.key.color}',
+                    left: {
+                        $type: 'shadow',
+                        $value: [
+                            {
+                                offsetX: '{shadow.dark.overflow.compact.base.outline.offset-neg}',
+                                offsetY: '{shadow.dark.overflow.compact.base.outline.cross}',
+                                blur: '{shadow.dark.overflow.compact.base.outline.blur}',
+                                spread: '{shadow.dark.overflow.compact.base.outline.spread}',
+                                color: '{shadow.dark.overflow.compact.base.outline.color}',
+                            },
+                            {
+                                offsetX: '{shadow.dark.overflow.compact.base.key.offset-neg}',
+                                offsetY: '{shadow.dark.overflow.compact.base.key.cross}',
+                                blur: '{shadow.dark.overflow.compact.base.key.blur}',
+                                spread: '{shadow.dark.overflow.compact.base.key.spread}',
+                                color: '{shadow.dark.overflow.compact.base.key.color}',
+                            },
+                            {
+                                offsetX: '{shadow.dark.overflow.compact.base.ambient.offset-neg}',
+                                offsetY: '{shadow.dark.overflow.compact.base.ambient.cross}',
+                                blur: '{shadow.dark.overflow.compact.base.ambient.blur}',
+                                spread: '{shadow.dark.overflow.compact.base.ambient.spread}',
+                                color: '{shadow.dark.overflow.compact.base.ambient.color}',
+                            },
+                        ],
                     },
-                    {
-                        offsetX: '{shadow.overflow-normal.base.ambient.cross}',
-                        offsetY: '{shadow.overflow-normal.base.ambient.offset-neg}',
-                        blur: '{shadow.overflow-normal.base.ambient.blur}',
-                        spread: '{shadow.overflow-normal.base.ambient.spread}',
-                        color: '{dark.shadow.overflow-normal.base.ambient.color}',
+                },
+                normal: {
+                    $type: 'dimension',
+                    base: {
+                        outline: {
+                            offset: {
+                                $value: '1px',
+                            },
+                            'offset-neg': {
+                                $value: '-1px',
+                            },
+                            cross: {
+                                $value: '0px',
+                            },
+                            blur: {
+                                $value: '0px',
+                            },
+                            spread: {
+                                $value: '0px',
+                            },
+                            color: {
+                                $type: 'color',
+                                $value: '{shadow.dark.outline}',
+                            },
+                        },
+                        key: {
+                            offset: {
+                                $value: '9px',
+                            },
+                            'offset-neg': {
+                                $value: '-9px',
+                            },
+                            cross: {
+                                $value: '0px',
+                            },
+                            blur: {
+                                $value: '8px',
+                            },
+                            spread: {
+                                $value: '-12px',
+                            },
+                            color: {
+                                $type: 'color',
+                                $value: '#00000000',
+                            },
+                        },
+                        ambient: {
+                            offset: {
+                                $value: '0px',
+                            },
+                            'offset-neg': {
+                                $value: '0px',
+                            },
+                            cross: {
+                                $value: '0px',
+                            },
+                            blur: {
+                                $value: '0px',
+                            },
+                            spread: {
+                                $value: '0px',
+                            },
+                            color: {
+                                $type: 'color',
+                                $value: '#00000000',
+                            },
+                        },
                     },
-                ],
-            },
-            'overflow-normal-right': {
-                $type: 'shadow',
-                $value: [
-                    {
-                        offsetX: '{shadow.overflow-normal.base.outline.offset}',
-                        offsetY: '{shadow.overflow-normal.base.outline.cross}',
-                        blur: '{shadow.overflow-normal.base.outline.blur}',
-                        spread: '{shadow.overflow-normal.base.outline.spread}',
-                        color: '{dark.shadow.overflow-normal.base.outline.color}',
+                    top: {
+                        $type: 'shadow',
+                        $value: [
+                            {
+                                offsetX: '{shadow.dark.overflow.normal.base.outline.cross}',
+                                offsetY: '{shadow.dark.overflow.normal.base.outline.offset-neg}',
+                                blur: '{shadow.dark.overflow.normal.base.outline.blur}',
+                                spread: '{shadow.dark.overflow.normal.base.outline.spread}',
+                                color: '{shadow.dark.overflow.normal.base.outline.color}',
+                            },
+                            {
+                                offsetX: '{shadow.dark.overflow.normal.base.key.cross}',
+                                offsetY: '{shadow.dark.overflow.normal.base.key.offset-neg}',
+                                blur: '{shadow.dark.overflow.normal.base.key.blur}',
+                                spread: '{shadow.dark.overflow.normal.base.key.spread}',
+                                color: '{shadow.dark.overflow.normal.base.key.color}',
+                            },
+                            {
+                                offsetX: '{shadow.dark.overflow.normal.base.ambient.cross}',
+                                offsetY: '{shadow.dark.overflow.normal.base.ambient.offset-neg}',
+                                blur: '{shadow.dark.overflow.normal.base.ambient.blur}',
+                                spread: '{shadow.dark.overflow.normal.base.ambient.spread}',
+                                color: '{shadow.dark.overflow.normal.base.ambient.color}',
+                            },
+                        ],
                     },
-                    {
-                        offsetX: '{shadow.overflow-normal.base.key.offset}',
-                        offsetY: '{shadow.overflow-normal.base.key.cross}',
-                        blur: '{shadow.overflow-normal.base.key.blur}',
-                        spread: '{shadow.overflow-normal.base.key.spread}',
-                        color: '{dark.shadow.overflow-normal.base.key.color}',
+                    right: {
+                        $type: 'shadow',
+                        $value: [
+                            {
+                                offsetX: '{shadow.dark.overflow.normal.base.outline.offset}',
+                                offsetY: '{shadow.dark.overflow.normal.base.outline.cross}',
+                                blur: '{shadow.dark.overflow.normal.base.outline.blur}',
+                                spread: '{shadow.dark.overflow.normal.base.outline.spread}',
+                                color: '{shadow.dark.overflow.normal.base.outline.color}',
+                            },
+                            {
+                                offsetX: '{shadow.dark.overflow.normal.base.key.offset}',
+                                offsetY: '{shadow.dark.overflow.normal.base.key.cross}',
+                                blur: '{shadow.dark.overflow.normal.base.key.blur}',
+                                spread: '{shadow.dark.overflow.normal.base.key.spread}',
+                                color: '{shadow.dark.overflow.normal.base.key.color}',
+                            },
+                            {
+                                offsetX: '{shadow.dark.overflow.normal.base.ambient.offset}',
+                                offsetY: '{shadow.dark.overflow.normal.base.ambient.cross}',
+                                blur: '{shadow.dark.overflow.normal.base.ambient.blur}',
+                                spread: '{shadow.dark.overflow.normal.base.ambient.spread}',
+                                color: '{shadow.dark.overflow.normal.base.ambient.color}',
+                            },
+                        ],
                     },
-                    {
-                        offsetX: '{shadow.overflow-normal.base.ambient.offset}',
-                        offsetY: '{shadow.overflow-normal.base.ambient.cross}',
-                        blur: '{shadow.overflow-normal.base.ambient.blur}',
-                        spread: '{shadow.overflow-normal.base.ambient.spread}',
-                        color: '{dark.shadow.overflow-normal.base.ambient.color}',
+                    bottom: {
+                        $type: 'shadow',
+                        $value: [
+                            {
+                                offsetX: '{shadow.dark.overflow.normal.base.outline.cross}',
+                                offsetY: '{shadow.dark.overflow.normal.base.outline.offset}',
+                                blur: '{shadow.dark.overflow.normal.base.outline.blur}',
+                                spread: '{shadow.dark.overflow.normal.base.outline.spread}',
+                                color: '{shadow.dark.overflow.normal.base.outline.color}',
+                            },
+                            {
+                                offsetX: '{shadow.dark.overflow.normal.base.key.cross}',
+                                offsetY: '{shadow.dark.overflow.normal.base.key.offset}',
+                                blur: '{shadow.dark.overflow.normal.base.key.blur}',
+                                spread: '{shadow.dark.overflow.normal.base.key.spread}',
+                                color: '{shadow.dark.overflow.normal.base.key.color}',
+                            },
+                            {
+                                offsetX: '{shadow.dark.overflow.normal.base.ambient.cross}',
+                                offsetY: '{shadow.dark.overflow.normal.base.ambient.offset}',
+                                blur: '{shadow.dark.overflow.normal.base.ambient.blur}',
+                                spread: '{shadow.dark.overflow.normal.base.ambient.spread}',
+                                color: '{shadow.dark.overflow.normal.base.ambient.color}',
+                            },
+                        ],
                     },
-                ],
-            },
-            'overflow-normal-bottom': {
-                $type: 'shadow',
-                $value: [
-                    {
-                        offsetX: '{shadow.overflow-normal.base.outline.cross}',
-                        offsetY: '{shadow.overflow-normal.base.outline.offset}',
-                        blur: '{shadow.overflow-normal.base.outline.blur}',
-                        spread: '{shadow.overflow-normal.base.outline.spread}',
-                        color: '{dark.shadow.overflow-normal.base.outline.color}',
+                    left: {
+                        $type: 'shadow',
+                        $value: [
+                            {
+                                offsetX: '{shadow.dark.overflow.normal.base.outline.offset-neg}',
+                                offsetY: '{shadow.dark.overflow.normal.base.outline.cross}',
+                                blur: '{shadow.dark.overflow.normal.base.outline.blur}',
+                                spread: '{shadow.dark.overflow.normal.base.outline.spread}',
+                                color: '{shadow.dark.overflow.normal.base.outline.color}',
+                            },
+                            {
+                                offsetX: '{shadow.dark.overflow.normal.base.key.offset-neg}',
+                                offsetY: '{shadow.dark.overflow.normal.base.key.cross}',
+                                blur: '{shadow.dark.overflow.normal.base.key.blur}',
+                                spread: '{shadow.dark.overflow.normal.base.key.spread}',
+                                color: '{shadow.dark.overflow.normal.base.key.color}',
+                            },
+                            {
+                                offsetX: '{shadow.dark.overflow.normal.base.ambient.offset-neg}',
+                                offsetY: '{shadow.dark.overflow.normal.base.ambient.cross}',
+                                blur: '{shadow.dark.overflow.normal.base.ambient.blur}',
+                                spread: '{shadow.dark.overflow.normal.base.ambient.spread}',
+                                color: '{shadow.dark.overflow.normal.base.ambient.color}',
+                            },
+                        ],
                     },
-                    {
-                        offsetX: '{shadow.overflow-normal.base.key.cross}',
-                        offsetY: '{shadow.overflow-normal.base.key.offset}',
-                        blur: '{shadow.overflow-normal.base.key.blur}',
-                        spread: '{shadow.overflow-normal.base.key.spread}',
-                        color: '{dark.shadow.overflow-normal.base.key.color}',
-                    },
-                    {
-                        offsetX: '{shadow.overflow-normal.base.ambient.cross}',
-                        offsetY: '{shadow.overflow-normal.base.ambient.offset}',
-                        blur: '{shadow.overflow-normal.base.ambient.blur}',
-                        spread: '{shadow.overflow-normal.base.ambient.spread}',
-                        color: '{dark.shadow.overflow-normal.base.ambient.color}',
-                    },
-                ],
-            },
-            'overflow-normal-left': {
-                $type: 'shadow',
-                $value: [
-                    {
-                        offsetX: '{shadow.overflow-normal.base.outline.offset-neg}',
-                        offsetY: '{shadow.overflow-normal.base.outline.cross}',
-                        blur: '{shadow.overflow-normal.base.outline.blur}',
-                        spread: '{shadow.overflow-normal.base.outline.spread}',
-                        color: '{dark.shadow.overflow-normal.base.outline.color}',
-                    },
-                    {
-                        offsetX: '{shadow.overflow-normal.base.key.offset-neg}',
-                        offsetY: '{shadow.overflow-normal.base.key.cross}',
-                        blur: '{shadow.overflow-normal.base.key.blur}',
-                        spread: '{shadow.overflow-normal.base.key.spread}',
-                        color: '{dark.shadow.overflow-normal.base.key.color}',
-                    },
-                    {
-                        offsetX: '{shadow.overflow-normal.base.ambient.offset-neg}',
-                        offsetY: '{shadow.overflow-normal.base.ambient.cross}',
-                        blur: '{shadow.overflow-normal.base.ambient.blur}',
-                        spread: '{shadow.overflow-normal.base.ambient.spread}',
-                        color: '{dark.shadow.overflow-normal.base.ambient.color}',
-                    },
-                ],
+                },
             },
             card: {
                 $type: 'shadow',
@@ -623,21 +821,21 @@
                         offsetY: '0px',
                         blur: '0px',
                         spread: '1px',
-                        color: '{dark.shadow.outline}',
+                        color: '{shadow.dark.outline}',
                     },
                     {
                         offsetX: '0px',
                         offsetY: '1px',
                         blur: '6px',
                         spread: '0px',
-                        color: '{dark.shadow.key}',
+                        color: '{shadow.dark.key}',
                     },
                     {
                         offsetX: '0px',
                         offsetY: '1px',
                         blur: '6px',
                         spread: '0px',
-                        color: '{dark.shadow.ambient}',
+                        color: '{shadow.dark.ambient}',
                     },
                 ],
             },
@@ -649,21 +847,21 @@
                         offsetY: '0px',
                         blur: '0px',
                         spread: '1px',
-                        color: '{dark.shadow.outline}',
+                        color: '{shadow.dark.outline}',
                     },
                     {
                         offsetX: '0px',
                         offsetY: '2px',
                         blur: '8px',
                         spread: '0px',
-                        color: '{dark.shadow.key}',
+                        color: '{shadow.dark.key}',
                     },
                     {
                         offsetX: '0px',
                         offsetY: '3px',
                         blur: '8px',
                         spread: '0px',
-                        color: '{dark.shadow.ambient}',
+                        color: '{shadow.dark.ambient}',
                     },
                 ],
             },
@@ -675,109 +873,23 @@
                         offsetY: '0px',
                         blur: '0px',
                         spread: '1px',
-                        color: '{dark.shadow.outline}',
+                        color: '{shadow.dark.outline}',
                     },
                     {
                         offsetX: '0px',
                         offsetY: '3px',
                         blur: '16px',
                         spread: '0px',
-                        color: '{dark.shadow.key}',
+                        color: '{shadow.dark.key}',
                     },
                     {
                         offsetX: '0px',
                         offsetY: '4px',
                         blur: '32px',
                         spread: '0px',
-                        color: '{dark.shadow.ambient}',
+                        color: '{shadow.dark.ambient}',
                     },
                 ],
-            },
-        },
-    },
-    light: {
-        shadow: {
-            $type: 'color',
-            'overflow-compact': {
-                base: {
-                    outline: {
-                        color: {
-                            $value: '{light.line.contrast-less}',
-                        },
-                    },
-                    key: {
-                        color: {
-                            $value: '#00000000',
-                        },
-                    },
-                    ambient: {
-                        color: {
-                            $value: '#00000000',
-                        },
-                    },
-                },
-            },
-            'overflow-normal': {
-                base: {
-                    outline: {
-                        color: {
-                            $value: '#00000000',
-                        },
-                    },
-                    key: {
-                        color: {
-                            $value: '{semantic.contrastA.13}',
-                        },
-                    },
-                    ambient: {
-                        color: {
-                            $value: '#00000000',
-                        },
-                    },
-                },
-            },
-        },
-    },
-    dark: {
-        shadow: {
-            $type: 'color',
-            'overflow-compact': {
-                base: {
-                    outline: {
-                        color: {
-                            $value: '{dark.shadow.outline}',
-                        },
-                    },
-                    key: {
-                        color: {
-                            $value: '#00000000',
-                        },
-                    },
-                    ambient: {
-                        color: {
-                            $value: '#00000000',
-                        },
-                    },
-                },
-            },
-            'overflow-normal': {
-                base: {
-                    outline: {
-                        color: {
-                            $value: '{dark.shadow.outline}',
-                        },
-                    },
-                    key: {
-                        color: {
-                            $value: '#00000000',
-                        },
-                    },
-                    ambient: {
-                        color: {
-                            $value: '#00000000',
-                        },
-                    },
-                },
             },
         },
     },

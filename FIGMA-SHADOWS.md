@@ -50,33 +50,37 @@ Collection `Shadow`, modes `Light` and `Dark`. Names are paths; `/` in Figma is 
 `i` is the layer index: `outline` 0, `key` 1, `ambient` 2. Same for `popup` and `overlay`.
 
 There are **no parameter tokens** for flat shadows. The values are written directly in the
-composite, one object per layer. Colors are the public roles `{light.shadow.outline|key|ambient}` /
-`{dark.shadow.…}`, which point at the semantic palette (in Figma the color variables alias the
+composite, one object per layer. Colors are the public roles `{shadow.light.outline|key|ambient}` /
+`{shadow.dark.…}`, which point at the semantic palette (in Figma the color variables alias the
 library's Semantic variables directly, e.g. `semantic/contrastA/…`).
 
 ### Directional shadows
+
+In Figma the group is `overflow-compact` or `overflow-normal` (`<overflow>` below). In tokens it is `overflow.compact` or `overflow.normal` (`<kind>` below).
 
 Two levels of variables, both exist in Figma:
 
 1. **Layer variables** (`base`), the source of truth:
 
-    | Figma                                             | Token                                                     |
-    | :------------------------------------------------ | :-------------------------------------------------------- |
-    | `Shadow/<overflow>/base/<layer>/offset`           | `shadow.<overflow>.base.<layer>.offset`                   |
-    | `Shadow/<overflow>/base/<layer>/offset-neg`       | `shadow.<overflow>.base.<layer>.offset-neg`               |
-    | `Shadow/<overflow>/base/<layer>/cross`            | `shadow.<overflow>.base.<layer>.cross`                    |
-    | `Shadow/<overflow>/base/<layer>/blur`, `…/spread` | `shadow.<overflow>.base.<layer>.blur`, `.spread`          |
-    | `Shadow/<overflow>/base/<layer>/color`            | `light.shadow.<overflow>.base.<layer>.color` and `dark.…` |
+    | Figma                                             | Token                                                             |
+    | :------------------------------------------------ | :---------------------------------------------------------------- |
+    | `Shadow/<overflow>/base/<layer>/offset`           | `shadow.light\|dark.overflow.<kind>.base.<layer>.offset`          |
+    | `Shadow/<overflow>/base/<layer>/offset-neg`       | `shadow.light\|dark.overflow.<kind>.base.<layer>.offset-neg`      |
+    | `Shadow/<overflow>/base/<layer>/cross`            | `shadow.light\|dark.overflow.<kind>.base.<layer>.cross`           |
+    | `Shadow/<overflow>/base/<layer>/blur`, `…/spread` | `shadow.light\|dark.overflow.<kind>.base.<layer>.blur`, `.spread` |
+    | `Shadow/<overflow>/base/<layer>/color`            | `shadow.light\|dark.overflow.<kind>.base.<layer>.color`           |
+
+    The base parameters depend on the theme, like the colors, so each one is a token per theme.
 
 2. **Per-side variables**, aliases of the layer variables:
 
-    | Figma                                                          | Token                                                                          |
-    | :------------------------------------------------------------- | :----------------------------------------------------------------------------- |
-    | `Shadow/<overflow>/<side>/<layer>/<x\|y\|blur\|spread\|color>` | attributes of the layer object `[i]` in `shadow.light\|dark.<overflow>-<side>` |
+    | Figma                                                          | Token                                                                               |
+    | :------------------------------------------------------------- | :---------------------------------------------------------------------------------- |
+    | `Shadow/<overflow>/<side>/<layer>/<x\|y\|blur\|spread\|color>` | attributes of the layer object `[i]` in `shadow.light\|dark.overflow.<kind>.<side>` |
 
     The per-side values are not separate tokens in code. They are the layer objects inside the
-    `$value` array of the composite `shadow.light|dark.<overflow>-<side>`, and each attribute
-    points at a layer variable (`{shadow.<overflow>.base.<layer>.offset}` and so on).
+    `$value` array of the composite `shadow.light|dark.overflow.<kind>.<side>`, and each attribute
+    points at a layer variable of the same theme (`{shadow.<light|dark>.overflow.<kind>.base.<layer>.offset}` and so on).
 
 ## Offsets: `offset`, `offset-neg`, `cross`
 
@@ -123,10 +127,19 @@ the three `DROP_SHADOW` effects (outline, key, ambient) with every field bound t
 - A layer that is transparent in **both** modes is not written to the style (for example
   `overflow-compact` has only the outline). A layer that is visible in one mode stays, even if it
   is transparent in the other: a style cannot differ between Light and Dark.
-- The description of a style holds the CSS variable that ships in code
-  (`--kbq-shadow-overflow-normal-top`).
-- The description of a final variable holds the JS path of the matching attribute in the composite
-  (for example `shadow.light.overflow-normal-top[1].offsetX`).
+- **Requirement:** the description of every effect style holds the CSS variable of its shadow that
+  ships in code, `var(--kbq-shadow-<name>)` (for example `var(--kbq-shadow-overflow-normal-top)`).
+  Shadow variables get no code syntax: they are intermediate, so the CSS reference lives on the style.
+- **Requirement:** a Figma variable that exists neither as a CSS variable nor as a design token of its
+  own (every flat and per-side variable, which is an attribute of a composite) holds the JSON path of
+  that attribute in its description, one line per theme, for example
+  `light: shadow.light.overflow.normal.top[1].offsetX` / `dark: shadow.dark.overflow.normal.top[1].offsetX`.
+  Variables that are design tokens themselves (the `base` layer parameters) do not need it.
+- **Requirement:** inner shadows are allowed as extra styles `Overflow/Compact/<Side> Inner`
+  (`INNER_SHADOW`, on top of the 11), for when a shadow must sit inside its container (layer order in
+  Auto Layout, z-index, overlap). Their parameters take the values of the outer `overflow-compact`
+  shadow and are bound to its variables. The inner shadow flips the direction, so the offset has the
+  opposite sign. Every parameter is bound to a variable, no literals.
 
 Figma note: on a frame with **Clip content** off the spread of a shadow is ignored, so previews
 look heavier than on the web. Turn Clip content on for the element that carries the style.
@@ -134,8 +147,8 @@ look heavier than on the web. Turn Clip content on for the element that carries 
 ## What ships in code
 
 - The CSS variables are only the finals, `--kbq-shadow-card`, `--kbq-shadow-overflow-normal-top`,
-  and the color roles `--kbq-shadow-outline|key|ambient`. Parameter tokens (`offset`, `base.*`,
-  and so on) are **sources only**: no CSS, Sass or JS variable of their own.
+  and the color roles `--kbq-shadow-outline|key|ambient`. Parameter tokens (`offset`, `base.*`, and so
+  on) are **sources only**: no CSS, Sass or JS variable of their own.
 - The value of a composite is assembled from its original value, with parameters replaced by their
   literals and colors kept as `var()` of the shipped role, so re-theming keeps working.
 - A layer with a transparent color is dropped per theme before rendering, so the output of a theme

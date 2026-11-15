@@ -1,3 +1,4 @@
+import { isPrivate } from '../filters/private.js';
 import { isShadowParameter } from '../filters/shadow-parameter.js';
 import { stripThemeFromNames } from './strip-theme.js';
 
@@ -39,8 +40,9 @@ const fieldToCss = (value, byPath) => {
 
         if (!target) throw new Error(`Shadow references an unknown token: {${match[1]}}`);
 
-        // A shipped token is referenced by its variable; a parameter is followed down to its value.
-        if (!isShadowParameter(target)) return `var(--${target.name})`;
+        // A shipped token is referenced by its variable. A parameter or a private token has none, so it
+        // is followed down to what it stands for.
+        if (!isShadowParameter(target) && !isPrivate(target)) return `var(--${target.name})`;
 
         current = target.original.$value;
     }
@@ -48,11 +50,32 @@ const fieldToCss = (value, byPath) => {
     throw new Error(`Shadow reference does not resolve, too many hops from ${value}`);
 };
 
+const ZERO_LENGTH = /^[+-]?0*\.?0+(?:px|em|rem)?$/;
+
+// A zero length is written unitless: `0`, not `0px`.
+export const normalizeLength = (css) => (ZERO_LENGTH.test(css) ? '0' : css);
+
+/**
+ * The `x y blur spread` of a layer, without the zeros box-shadow does not need. Blur and spread
+ * default to 0, so trailing zeros are left out; x and y are positional and always written.
+ */
+export const shadowGeometry = (fields) => {
+    const parts = fields.filter((field) => field !== undefined);
+
+    while (parts.length > 2 && parts[parts.length - 1] === '0') parts.pop();
+
+    return parts;
+};
+
 const layerToCss = (layer, byPath) => {
-    return [layer.offsetX, layer.offsetY, layer.blur, layer.spread, layer.color]
-        .filter((value) => value !== undefined)
-        .map((value) => fieldToCss(value, byPath))
-        .join(' ');
+    const geometry = shadowGeometry(
+        [layer.offsetX, layer.offsetY, layer.blur, layer.spread].map((value) =>
+            value === undefined ? undefined : normalizeLength(fieldToCss(value, byPath))
+        )
+    );
+    const color = layer.color === undefined ? [] : [fieldToCss(layer.color, byPath)];
+
+    return [...geometry, ...color].join(' ');
 };
 
 export const inlineShadowReferences = (dictionary) => {

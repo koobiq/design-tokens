@@ -1,5 +1,5 @@
 import { hasValue } from '../filters/has-value.js';
-import { isShadowParameter } from '../filters/shadow-parameter.js';
+import { isShadowParameter, isShadowRole } from '../filters/shadow-parameter.js';
 
 const paletteColors = [
     'blue',
@@ -188,7 +188,7 @@ export default {
             },
             {
                 destination: sliced('typography.css'),
-                format: 'css/variables',
+                format: 'kbq-css/variables',
                 filter: (token) => token.attributes.category === 'typography',
                 options: {
                     outputReferences: true
@@ -196,7 +196,7 @@ export default {
             },
             {
                 destination: sliced('md-typography.css'),
-                format: 'css/variables',
+                format: 'kbq-css/variables',
                 filter: (token) => token.attributes.category === 'md-typography',
                 options: {
                     outputReferences: true
@@ -220,7 +220,7 @@ export default {
                 format: 'kbq-css/variables',
                 // Only the composite shadows; their parameters are sources (isShadowParameter).
                 filter: (token) =>
-                    token.attributes.light && token.filePath?.includes('shadows.json5') && !isShadowParameter(token),
+                    token.attributes.light && token.filePath?.includes('shadows.json5') && token.$type === 'shadow',
                 options: {
                     selector: '.kbq-light',
                     outputReferences: true
@@ -230,8 +230,10 @@ export default {
                 destination: sliced('light/semantic-colors.css'),
                 format: 'kbq-css/variables',
                 // `filePath?.` because Style Dictionary leaves it undefined on null-valued tokens;
-                // a token with no known file is simply not one of colors.json5's.
-                filter: (token) => token.attributes.light && token.filePath?.includes('colors.json5'),
+                // a token with no known file is simply not one of colors.json5's. The shadow roles
+                // live in shadows.json5 but ship with the colour roles, as they always have.
+                filter: (token) =>
+                    token.attributes.light && (token.filePath?.includes('colors.json5') || isShadowRole(token)),
                 options: {
                     selector: '.kbq-light',
                     outputReferences: true
@@ -241,7 +243,7 @@ export default {
                 destination: sliced('dark/shadows.css'),
                 format: 'kbq-css/variables',
                 filter: (token) =>
-                    token.attributes.dark && token.filePath?.includes('shadows.json5') && !isShadowParameter(token),
+                    token.attributes.dark && token.filePath?.includes('shadows.json5') && token.$type === 'shadow',
                 options: {
                     selector: '.kbq-dark',
                     outputReferences: true
@@ -250,7 +252,8 @@ export default {
             {
                 destination: sliced('dark/semantic-colors.css'),
                 format: 'kbq-css/variables',
-                filter: (token) => token.attributes.dark && token.filePath?.includes('colors.json5'),
+                filter: (token) =>
+                    token.attributes.dark && (token.filePath?.includes('colors.json5') || isShadowRole(token)),
                 options: {
                     selector: '.kbq-dark',
                     outputReferences: true
@@ -289,7 +292,7 @@ export default {
             },
             {
                 destination: 'css-tokens.css',
-                format: 'css/variables',
+                format: 'kbq-css/variables',
                 filter: (token) =>
                     hasValue(token) &&
                     !isComponent(token) &&

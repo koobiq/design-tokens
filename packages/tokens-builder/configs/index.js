@@ -2,6 +2,7 @@ import { join } from 'node:path';
 import scssConfig from './scss.js';
 import jsConfig from './js.js';
 import cssConfig from './css.js';
+import { isPrivate } from '../filters/private.js';
 
 const filterObj = {
     options: {
@@ -10,20 +11,38 @@ const filterObj = {
     }
 };
 
+/**
+ * Composes privacy into a file's filter. Style Dictionary has no platform-level filter, so this runs
+ * once for every file of every platform: a private token ships in no file, on any platform.
+ *
+ * A filter has to be a function here, because a filter given by name would have to be looked up in
+ * the Style Dictionary instance, which this module does not have.
+ */
+const publicOnly = (filter) => {
+    if (filter === undefined) return (token) => !isPrivate(token);
+    if (typeof filter === 'function') return (token, options) => !isPrivate(token) && filter(token, options);
+
+    throw new Error(`A file filter must be a function, so that privacy can be composed into it: ${filter}`);
+};
+
 function filterOptions(platforms) {
     const platformObj = {};
 
     platforms.map((p) => Object.assign(platformObj, p));
 
     Object.keys(platformObj).forEach((p) => {
-        platformObj[p].files = platformObj[p].files.map((f) => ({
-            ...f,
-            ...filterObj,
-            options: {
-                ...(f.options ?? {}),
-                ...filterObj.options
-            }
-        }));
+        platformObj[p] = {
+            ...platformObj[p],
+            files: platformObj[p].files.map((f) => ({
+                ...f,
+                ...filterObj,
+                filter: publicOnly(f.filter),
+                options: {
+                    ...(f.options ?? {}),
+                    ...filterObj.options
+                }
+            }))
+        };
     });
 
     return platformObj;
@@ -57,7 +76,10 @@ export default (theme) => {
         // why this isn't Style Dictionary's built-in `expand` option.
         // Shadows stay composite — `shadow/css/shorthand` renders them as one box-shadow. Layers with
         // a transparent color are dropped first (kbq/drop-transparent-shadow-layers).
-        preprocessors: ['kbq/expand-typography', 'kbq/drop-transparent-shadow-layers'],
+        // Typography is expanded first, so that the sub-properties of a private composite are private
+        // tokens of their own, and their aliases are collapsed too (kbq/private). Nothing is deleted, so
+        // every reference still resolves.
+        preprocessors: ['kbq/expand-typography', 'kbq/private', 'kbq/drop-transparent-shadow-layers'],
         // Fail the build on transform errors instead of printing them. Without this a transform
         // that throws on a value (say a dimension transform meeting `letter-spacing: normal`)
         // is caught by Style Dictionary, quietly falls back to the untransformed value and only
