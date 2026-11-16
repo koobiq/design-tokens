@@ -1,122 +1,95 @@
-# Contributing to Design Tokens
+# Contributing to Koobiq Design Tokens
 
-## Found a bug?
+Thank you for helping improve the Koobiq design tokens. This guide explains how to propose a change, set up the repository and get a pull request merged.
 
-If you find a bug/issue in the source code or a mistake in the documentation,
-you can help us by
-[creating an issue](https://github.com/koobiq/design-tokens/issues/new)
-here on GitHub.
+Contributions are accepted under the [MIT License](LICENSE).
 
-Please provide an issue reproduction. Screenshots are also
-helpful.
+## Questions, bugs and ideas
 
-## Submitting a pull request
+- Ask questions in [GitHub Discussions](https://github.com/koobiq/design-tokens/discussions), not in issues.
+- Report a bug in an [issue](https://github.com/koobiq/design-tokens/issues/new): the token, the theme, the package version, the expected and the actual value, and a screenshot. Search the existing issues first.
+- Designers: propose a new or changed token in an issue. Say what the token is for and where it is used, give its value in the light and the dark theme (an existing palette step or a Figma variable), and link the Figma frame or attach screenshots. Tokens are named by function, not by hue, as [the naming rules](TOKENS-WORKFLOW.md#naming) describe.
+- Send a small change straight as a pull request: a wrong value or reference in an existing token, a fix in the build tools or the codemod, or a correction in the docs.
+- Discuss a large change in an issue before writing code: a new token or palette family, a change to the engineering palette or the visual language, or a breaking change such as renaming or removing a token or an output file.
 
-Before you submit your pull request (PR) consider the following guidelines:
+## Setup
 
-- Fork Design Tokens into your namespace by using the fork button on GitHub.
-- Make your changes in a new git branch: `git checkout -b my-fix-branch main`
-- Build the tokens and check the generated output: `yarn build`
-- Push your branch to GitHub.
-- Create a new pull request from your branch against the `main` branch.
+- Use the Node.js version from [`.nvmrc`](.nvmrc). Yarn 4 is checked into the repository (`yarnPath` in [`.yarnrc.yml`](.yarnrc.yml)), so any `yarn` runs that version. If Yarn is not installed, run `corepack enable`.
+- Install the dependencies: `yarn install`.
+- Enable the git hooks once: `yarn husky`. Before each commit they format the staged files with Prettier, lint the staged `.js` files and validate the commit message.
 
-## Commit message guidelines
+The package layout and the token layers are described in [AGENTS.md](AGENTS.md); using the tokens in an app is described in the [README](README.md).
 
-```
-<type>(<scope>): <short summary>
-  │       │             │
-  │       │             └─⫸ Summary in present tense. Not capitalized. No period at the end.
-  │       │
-  │       └─⫸ Commit Scope: deps|deps-dev|colors|typography|shadows|font|palette|plt|scss|docs|build|ci
-  │
-  └─⫸ Commit Type: build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test
-```
+## Making a change
 
-Each commit message consists of a `type`, `scope` and `subject` (message).  
-The `type` and `subject` are mandatory, the `scope` is optional in some specific
-cases. Format: `<type>(<scope>): <subject>`
+1. Fork the repository, or push a branch to it if you have write access. Create the branch from `main`.
+2. Edit the token sources in `packages/design-tokens/web/properties/` (`web/components/` holds the three remaining component token sets). [TOKENS-WORKFLOW.md](TOKENS-WORKFLOW.md) has the recipes: reference `{semantic.*}` from role tokens, add both themes, deprecate a token instead of removing it.
+3. Do not edit generated files by hand:
+    - `STYLING.md` is built from the sources and `tools/styling.md.ejs` by `yarn generate:styling`. Commit the result: CI fails if it is out of date.
+    - `packages/design-tokens/codemod/palette-map.json` is rebuilt from `plt.json5` by `yarn build`. Commit it when it changes.
+    - `CHANGELOG.md` and the version in `package.json` are written by the release command.
+    - `dist/` is the build output and is not committed.
+4. Run the checks CI runs:
 
-### Type
+    ```bash
+    yarn build                                         # Build into dist/ and check the role → semantic → plt chain
+    yarn test                                          # Tests of the build tools and the codemod
+    yarn generate:styling                              # Regenerate STYLING.md
+    yarn prettier && yarn eslint && yarn lint:all:dist # Lint the sources and the built CSS, SCSS and JS
+    ```
 
-Must be one of the following:
+    To check a color against Figma, follow [FIGMA-COLOR-COMPARISON.md](FIGMA-COLOR-COMPARISON.md) (in Russian).
 
-- **feat**: A new feature
-- **fix**: A bug fix
-- **docs**: Documentation only changes
-- **style**: Changes that do not affect the meaning of the code (white-space,
-  formatting, missing semi-colons, etc)
-- **refactor**: A code change that neither fixes a bug nor adds a feature
-- **perf**: A code change that improves performance
-- **test**: Adding missing tests or correcting existing tests
-- **build**: Changes that affect the build system or external dependencies
-- **ci**: Changes to the CI configuration
-- **chore**: Other changes that don't modify src or test files
-- **revert**: Reverts a previous commit
+5. Open a pull request against `main`. If a fix is also needed in v3, say so in the pull request: v3 is released from the `3.20.x` branch.
 
-### Scope
+## Commit messages and pull request titles
 
-The scope is optional and names the part of the repository the change affects:
-
-- `colors`, `typography`, `shadows`, `font`, `palette`, `plt` — token areas
-- `scss` — generated Sass output
-- `docs`, `build`, `ci` — repository tooling
-- `deps`, `deps-dev` — dependency updates (Dependabot) and dependency management
-
-### Message
-
-**Subject**  
-The commit message should describe the problem it solves or the feature it
-introduces. Not the changes you have done. Furthermore the commit message has to
-start with a lowercase letter and must not end with a period.
-
-**Body**  
-The body should include the motivation for the change and contrast this with
-previous behavior.
-
-**Footer**  
-The footer should contain any information about Breaking Changes and is also the
-place to reference GitHub issues that this commit closes.
-
-Breaking Changes should start with the word BREAKING CHANGE: with a space or two
-newlines. The rest of the commit message is then used for this.
-
-### Examples
+commitlint checks the commit message in the `commit-msg` hook and the pull request title in CI. The rules are in the [commitlint config](.commitlintrc.js).
 
 ```
-feat(colors): add new brand color
+<type>(<scope>): <subject>
+```
+
+- **type**: `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `build`, `ci`, `chore` or `revert`. Use `feat` for a new token or capability and `fix` for a corrected value or reference.
+- **scope** (optional, leave it out when none fits): one of `colors`, `typography`, `shadows`, `font`, `palette`, `plt`, `scss`, `docs`, `build`, `ci`, `deps` or `deps-dev`. Separate several scopes with commas: `fix(colors,shadows): ...`.
+- **subject**: in the imperative mood, starting with a lowercase letter, with no period at the end.
+- The header is at most 100 characters. Lines of the body and footer are at most 100 characters.
+- If the change has a task in the Koobiq tracker, put its reference at the end of the subject: `(#DS-1234)`. Link a GitHub issue in the pull request description with `Closes #123`.
+- Mark a breaking change with a `BREAKING CHANGE:` footer that says what consumers have to do. Do not put `!` after the type: commitlint accepts it, but the changelog generator skips such a commit.
+- The changelog does not show the footer, so describe the migration in the pull request as well: breaking changes are documented in the [README](README.md#breaking-changes-in-v4) and [MIGRATION.md](MIGRATION.md), as the v4 ones are.
+
+Examples:
+
+```
+fix(colors): make background theme and status tokens opaque (#DS-5665)
+fix(scss): rebuild _palette.scss for the v4 OKLch palette
+docs: add Figma color comparison guide
 ```
 
 ```
-fix(shadows): fixes an issue with the card shadow
+feat(colors): remove the deprecated background-warning-less
 
-Closes #33
+BREAKING CHANGE: use --kbq-background-warning-fade instead.
 ```
 
-```
-refactor(palette): remove the deprecated palette
+Pull requests are squash-merged. The commit in `main` takes the pull request title, or the commit message if the pull request has a single commit, so keep both in this format. `CHANGELOG.md` is generated from these commits: `feat` and `fix` go into it, `build`, `chore` and `docs` do not.
 
-BREAKING CHANGE: The palette has been removed.
-Describe reasons.
-```
+CI checks the title when the pull request is opened and on every push, so a renamed title is checked on the next push.
 
-## Code reviews and PRs
+## Pull requests
 
-### Open PR
+- Say what changed and why, and list the tokens whose values changed. For a visual change, attach before and after screenshots in the light and the dark theme.
+- Say if a page on [koobiq.io](https://koobiq.io/en/main/design-tokens/overview) needs an update.
+- Keep one change per pull request: it becomes one commit in `main`.
+- Open unfinished work as a [draft](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests#draft-pull-requests) and mark it **Ready for review** when it is done.
+- Keep the branch up to date with `main`: a pull request with conflicts gets no CI runs at all.
 
-A developer opens a PR in one of two ways:
+## Ready to merge
 
-1. The PR is already finished and can directly be reviewed.
-2. The PR is still wip and is opened for others to be tracked. In this case the
-   PR has to have the `pr: wip` and/or has to be opened as a
-   [Draft](https://github.blog/2019-02-14-introducing-draft-pull-requests/).
+A maintainer squash-merges the pull request when:
 
-### Draft/WIP
+- CI is green, including the commitlint check of the title;
+- a maintainer has approved it and the review threads are resolved;
+- it has no conflicts with `main`.
 
-After the work on this draft/wip PR has been finished, remove the label
-`pr: wip` and click the button `Ready for review` if it was opened as a Draft to
-flag it for the codeowners/admins to review.
-
-### Review
-
-Now the review process kicks in. Depending on the scope of the PR one or more
-maintainers must review and approve this PR before the process can be continued.
+A branch of this repository is deleted automatically after the merge; a branch in a fork is not.
