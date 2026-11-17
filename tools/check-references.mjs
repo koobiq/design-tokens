@@ -25,6 +25,11 @@ import { markPrivate } from '../packages/tokens-builder/preprocessors/private.js
 // A zero length is compared as `0`, so `0px` and `0` are the same zero in both the source and the CSS.
 const ZERO_LENGTH = /^[+-]?0*\.?0+(?:px|em|rem)?$/;
 const zeroAware = (css) => (ZERO_LENGTH.test(css) ? '0' : css);
+const kebabPart = (part) =>
+    part
+        .replace(/([a-z])([A-Z])/g, '$1-$2')
+        .replace(/[\s.]+/g, '-')
+        .toLowerCase();
 
 const DIST = path.join(process.cwd(), 'dist/design-tokens/web');
 // Sliced files live under css/; the css-tokens*.css aggregates sit at the root of web/.
@@ -131,61 +136,10 @@ for (const selector of ['.kbq-light', '.kbq-dark']) {
     }
 }
 
-// 4b. Shape of the shadows in the built CSS. A composite shadow is written with its parameters
-//     already substituted (formats/shadow-references.js) — the offsets, blur, spread and colors are
-//     sources only and must not leak out as variables of their own. What ships:
-//       --kbq-shadow-outline|key|ambient            color roles (light.shadow|dark.shadow in colors.json5)
-//       --kbq-shadow-<flat>                         1–3 layers, each `x y [blur [spread]] color`
-//       --kbq-shadow-<overflow>-<side>              1–3 layers, each `x y [blur [spread]] color`
-//     A zero length is written as the source spells it, `0` or `0px`, and every field is written.
-//     The sources always have three layers; a fully transparent one is left out of the output.
-//     Style Dictionary's own reference pass would put a var() wherever a resolved literal first
-//     occurs, and a shadow is mostly repeated literals (0px, 1px, 6px), hence the custom assembly.
 const SHADOW_LAYERS = ['outline', 'key', 'ambient'];
 const SHADOW_ROLE = /^--kbq-shadow-(outline|key|ambient)$/;
-const SHADOW_FINAL = /^--kbq-shadow-(card|popup|overlay|overflow-(?:compact|normal))(?:-(top|right|bottom|left))?$/;
-// A length is `0` or `0px`, or a non-zero value with a unit.
-const SHADOW_LENGTH = String.raw`(?:0(?:px)?|-?\d+(?:\.\d+)?px)`;
-const SHADOW_LAYER_VALUE = new RegExp(
-    `^${SHADOW_LENGTH} ${SHADOW_LENGTH}(?: ${SHADOW_LENGTH}(?: ${SHADOW_LENGTH})?)? (?:var\\(--[\\w-]+\\)|#[0-9a-fA-F]{6,8})$`
-);
 
-for (const [selector, declarations] of bySelector) {
-    for (const [name, value] of declarations) {
-        if (!name.startsWith('--kbq-shadow-') || SHADOW_ROLE.test(name)) continue;
-
-        const final = name.match(SHADOW_FINAL);
-
-        if (!final) {
-            fail(
-                'shadow parameters',
-                `${selector} { ${name} } is a CSS variable of a shadow parameter; parameters are sources only`
-            );
-            continue;
-        }
-
-        const layers = value.split(/,\s*(?![^(]*\))/).map((layer) => layer.trim());
-
-        if (layers.length < 1 || layers.length > SHADOW_LAYERS.length) {
-            fail('shadow layers', `${selector} { ${name} } has ${layers.length} layers, expected 1 to 3`);
-            continue;
-        }
-
-        layers.forEach((layer, index) => {
-            if (!SHADOW_LAYER_VALUE.test(layer)) {
-                fail(
-                    'shadow layers',
-                    `${selector} { ${name} } layer ${index + 1} is "${layer}", expected "x y blur spread color"`
-                );
-            }
-        });
-    }
-}
-
-// 4c. The shadow parameters mirror Figma, where variables cannot negate, so every offset-neg is a value
-//     of its own rather than a calc() of the offset, and nothing in the build ties the pair together.
-//     The layers of a sided shadow pick x and y from the layer variable their side needs (as in
-//     Figma). All of that lives in the sources, so it is checked there, and then against the CSS.
+// Read the source metadata before checking public shadow names and directional geometry.
 const shadowSource = markPrivate(
     JSON5.parse(
         fs.readFileSync(path.join(process.cwd(), 'packages/design-tokens/web/properties/shadows.json5'), 'utf8')
@@ -222,19 +176,66 @@ for (const dir of ['properties', 'components']) {
     }
 }
 
+const shadowsByTheme = new Map(
+    ['light', 'dark'].map((theme) => [
+        theme,
+        new Map(
+            [...sourceTokens]
+                .filter(([tokenPath]) => tokenPath.startsWith(`shadow.${theme}.`))
+                .map(([tokenPath, token]) => [tokenPath.slice(`shadow.${theme}.`.length), token])
+        )
+    ])
+);
+
+// 4b. Public shadow names come from the sources, not a fixed list. The standard shadow transform
+// owns CSS serialization (including inset, dimensions and layer aliases); this check guards the
+// public inventory and failed object serialization without maintaining a second CSS grammar.
+for (const [selector, declarations] of bySelector) {
+    const theme = selector === '.kbq-light' ? 'light' : selector === '.kbq-dark' ? 'dark' : undefined;
+    const publicNames = new Set(
+        [...(shadowsByTheme.get(theme) ?? [])]
+            .filter(([, token]) => token.$type === 'shadow' && !token.private)
+            .map(([name]) => `--kbq-shadow-${name.split('.').map(kebabPart).join('-')}`)
+    );
+
+    for (const [name, value] of declarations) {
+        if (!name.startsWith('--kbq-shadow-') || SHADOW_ROLE.test(name)) continue;
+
+        if (!publicNames.has(name)) {
+            fail('shadow parameters', `${selector} { ${name} } has no public shadow token in the sources`);
+        }
+
+        if (!value || value.includes('[object Object]')) {
+            fail('shadow layers', `${selector} { ${name} } has an unserialized shadow value: "${value}"`);
+        }
+    }
+}
+
+// 4c. Figma cannot negate variables, so offset-neg is a value of its own. Check the mirrors and
+// the x/y source of each directional layer against the source tokens and the generated CSS.
 const shadowToken = (tokenPath) => tokenPath.split('.').reduce((node, key) => node?.[key], shadowSource);
 const shadowPx = (value) => {
     let current = value;
+    const seen = new Set();
+    let next;
 
-    for (let hops = 0; hops < 10; hops++) {
-        const next = String(current).match(/^\{(.+)\}$/);
+    while ((next = String(current).match(/^\{(.+)\}$/)) !== null) {
+        if (seen.has(next[1])) return undefined;
 
-        if (!next) return current;
-        current = shadowToken(next[1])?.$value;
+        seen.add(next[1]);
+        current = sourceTokens.get(next[1])?.$value;
     }
 
-    return undefined;
+    return current !== null && typeof current === 'object' ? `${current.value}${current.unit}` : current;
 };
+const resolveCssValue = (value, declarations, seen = new Set()) =>
+    value.replace(/var\((--[\w-]+)\)/g, (reference, name) => {
+        const target = declarations.get(name);
+
+        if (target === undefined || seen.has(name)) return reference;
+
+        return resolveCssValue(target, declarations, new Set([...seen, name]));
+    });
 const SIDE_SOURCE = {
     top: { x: 'cross', y: 'offset-neg' },
     right: { x: 'offset', y: 'cross' },
@@ -307,7 +308,12 @@ for (const shadow of ['overflow-compact', 'overflow-normal']) {
                 const geometry = [expected.offsetX, expected.offsetY, expected.blur, expected.spread]
                     .map((value) => zeroAware(shadowPx(value)))
                     .join(' ');
-                const written = css.split(' ').slice(0, 4).map(zeroAware).join(' ');
+                const written = resolveCssValue(css, scopes[selector])
+                    .replace(/^inset\s+/, '')
+                    .split(' ')
+                    .slice(0, 4)
+                    .map(zeroAware)
+                    .join(' ');
 
                 if (written !== geometry) {
                     fail(
@@ -324,32 +330,26 @@ for (const shadow of ['overflow-compact', 'overflow-normal']) {
 //     token out of every output, so a composite that gets the marker by mistake disappears from the CSS,
 //     Sass and JS output without an error. So the source is checked, and so is that every shadow made it
 //     into the CSS of both themes.
-const SHADOW_NAMES = [
+const SHADOW_NAMES = new Set([
     'card',
     'popup',
     'overlay',
     ...['compact', 'normal'].flatMap((kind) =>
         ['top', 'right', 'bottom', 'left'].map((side) => `overflow.${kind}.${side}`)
+    ),
+    ...[...shadowsByTheme.values()].flatMap((tokens) =>
+        [...tokens].filter(([, token]) => token.$type === 'shadow' && !token.private).map(([name]) => name)
     )
-];
-
-// Every token under a node, by its dotted path, as the source spells it.
-const leavesOf = (node, prefix = []) =>
-    Object.entries(node).flatMap(([key, child]) => {
-        if (key.startsWith('$') || child === null || typeof child !== 'object') return [];
-        if ('$value' in child) return [[[...prefix, key].join('.'), child]];
-
-        return leavesOf(child, [...prefix, key]);
-    });
+]);
 
 for (const [theme, selector] of [
     ['light', '.kbq-light'],
     ['dark', '.kbq-dark']
 ]) {
-    const group = shadowSource.shadow?.[theme] ?? {};
+    const tokens = shadowsByTheme.get(theme);
 
     // Apart from the private parameters, a token of the theme is a composite: the color roles live in colors.json5.
-    for (const [path, token] of leavesOf(group)) {
+    for (const [path, token] of tokens) {
         if (token.private) continue;
 
         if (token.$type !== 'shadow') {
@@ -368,12 +368,14 @@ for (const [theme, selector] of [
     }
 
     for (const name of SHADOW_NAMES) {
-        if (shadowToken(`shadow.${theme}.${name}`)?.$type !== 'shadow') {
-            fail('shadow type', `shadow.${theme}.${name} is missing or is not a $type: 'shadow' token`);
+        const token = tokens.get(name);
+
+        if (token?.$type !== 'shadow' || token.private) {
+            fail('shadow type', `shadow.${theme}.${name} is missing or is not a public $type: 'shadow' token`);
         }
 
         // A composite's CSS name is its path joined with dashes: overflow.normal.top is --kbq-shadow-overflow-normal-top.
-        const cssName = name.replace(/\./g, '-');
+        const cssName = name.split('.').map(kebabPart).join('-');
 
         if (!bySelector.get(selector)?.has(`--kbq-shadow-${cssName}`)) {
             fail('shadow type', `${selector} { --kbq-shadow-${cssName} } is missing from the built CSS`);
@@ -427,21 +429,17 @@ for (const [file, selector] of [
 //    A typography composite is expanded into one token per sub-property (preprocessors/expand-typography.js),
 //    so the variables it ships are named `<name>-<sub>`. Those are the names checked for it, exactly as
 //    the expansion emits them, not every name that merely starts with the composite's.
-const kebabPart = (part) =>
-    part
-        .replace(/([a-z])([A-Z])/g, '$1-$2')
-        .replace(/[\s.]+/g, '-')
-        .toLowerCase();
 const capitalize = (part) => part.charAt(0).toUpperCase() + part.slice(1);
 
 // The sub-properties a typography composite expands into: its own object value, or the object value of
 // the composite it aliases. Any other token, a shadow included, is not expanded, so it has none.
 const COMPOSITE_ALIAS = /^\{([^{}]+)\}$/;
-const MAX_ALIAS_HOPS = 20;
 const expandedSubProperties = (tokenPath) => {
     let node = sourceTokens.get(tokenPath);
+    const seen = new Set();
 
-    for (let hops = 0; hops < MAX_ALIAS_HOPS; hops++) {
+    while (!seen.has(node)) {
+        seen.add(node);
         if (node?.$type !== 'typography') return [];
         if (node.$value !== null && typeof node.$value === 'object' && !Array.isArray(node.$value)) {
             return Object.keys(node.$value);
@@ -539,8 +537,10 @@ const themeOf = (tokenPath) => {
 // A reference to a private alias is followed to its target, the way the build collapses it.
 const effectivePath = (tokenPath) => {
     let current = tokenPath;
+    const seen = new Set();
 
-    for (let hops = 0; hops < 20; hops++) {
+    while (!seen.has(current)) {
+        seen.add(current);
         const token = sourceTokens.get(current);
 
         if (!token?.private || !isAlias(token)) return current;
@@ -548,7 +548,7 @@ const effectivePath = (tokenPath) => {
         current = token.$value.slice(1, -1);
     }
 
-    fail('private tokens', `${tokenPath} is an alias chain of private tokens that does not resolve`);
+    fail('private tokens', `${tokenPath} has a cycle of private aliases`);
 
     return current;
 };

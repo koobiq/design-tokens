@@ -149,8 +149,10 @@ look heavier than on the web. Turn Clip content on for the element that carries 
 - The CSS variables are only the finals, `--kbq-shadow-card`, `--kbq-shadow-overflow-normal-top`,
   and the color roles `--kbq-shadow-outline|key|ambient`. Parameter tokens (`offset`, `base.*`, and so
   on) are **sources only**: no CSS, Sass or JS variable of their own.
-- The value of a composite is assembled from its original value, with parameters replaced by their
-  literals and colors kept as `var()` of the shipped role, so re-theming keeps working.
+- Before transformation, private references are replaced by references to the first public token
+  in the chain, or by their final values if there is no public token. Style Dictionary's standard
+  `shadow/css/shorthand` then renders the composite, and `outputReferences` keeps public colors as
+  `var()` references, so re-theming keeps working. There is no custom shadow serialization.
 - A layer with a transparent color is dropped per theme before rendering, so the output of a theme
   that uses only the outline is a one-layer `box-shadow`.
 - Every shadow token is `$type: 'shadow'`: the build tells a composite from a parameter by it.

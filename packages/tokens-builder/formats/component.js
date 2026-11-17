@@ -1,5 +1,4 @@
 import { fileHeader, formattedVariables } from 'style-dictionary/utils';
-import { referencesPrivate } from './private-references.js';
 import { stripThemeFromNames } from './strip-theme.js';
 
 /**
@@ -45,9 +44,7 @@ export default (StyleDictionary) => {
                 const body = formattedVariables({
                     format: 'css',
                     dictionary: { ...dictionary, allTokens },
-                    // A private token has no variable, so a reference to one is written as its value.
-                    outputReferences:
-                        outputReferences && ((token, refOptions) => !referencesPrivate(token, refOptions)),
+                    outputReferences,
                     usesDtcg
                 });
 

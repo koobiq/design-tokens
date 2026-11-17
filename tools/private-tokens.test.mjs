@@ -104,7 +104,7 @@ test('a chain of private aliases ends at the public token, and the reference ski
     assert.equal(marked.a.$value, '{c}');
 });
 
-test('a private alias to a private literal keeps the reference to the literal, which the formats inline', () => {
+test('a private alias to a private literal is replaced by the literal', () => {
     const tree = {
         lit: { $value: '#fff', ...marker(true) },
         alias: { $value: '{lit}', ...marker(true) },
@@ -114,8 +114,8 @@ test('a private alias to a private literal keeps the reference to the literal, w
 
     const marked = preprocess(tree);
 
-    assert.equal(marked.x.$value, '{lit}');
-    assert.equal(marked.y.$value, '{lit}');
+    assert.equal(marked.x.$value, '#fff');
+    assert.equal(marked.y.$value, '#fff');
 });
 
 test('a private alias to a public composite collapses onto the composite', () => {
@@ -128,13 +128,53 @@ test('a private alias to a public composite collapses onto the composite', () =>
     assert.equal(preprocess(tree).x.$value, '{pub}');
 });
 
-test('a reference to a private composite is kept, since its value is not a reference', () => {
+test('a private composite is inlined with its nested private references rewritten', () => {
     const tree = {
-        obj: { $type: 'typography', $value: { fontSize: '12px' }, ...marker(true) },
+        size: { $value: '12px', ...marker(true) },
+        font: { $value: 'Inter' },
+        family: { $value: '{font}', ...marker(true) },
+        obj: { $type: 'typography', $value: { fontSize: '{size}', fontFamily: '{family}' }, ...marker(true) },
         x: { $type: 'typography', $value: '{obj}' }
     };
 
-    assert.equal(preprocess(tree).x.$value, '{obj}');
+    assert.deepEqual(preprocess(tree).x.$value, { fontSize: '12px', fontFamily: '{font}' });
+});
+
+test('private values keep their types, including objects and arrays', () => {
+    for (const value of [0, false, null, { value: 6, unit: 'px' }, ['Inter', 'sans-serif']]) {
+        const tree = deepFreeze({
+            internal: { $value: value, ...marker(true) },
+            consumer: { $value: '{internal}' }
+        });
+
+        assert.deepEqual(preprocess(tree).consumer.$value, value);
+    }
+});
+
+test('the first public alias is preserved instead of following it to its value', () => {
+    const tree = {
+        literal: { $value: '#abc' },
+        publicAlias: { $value: '{literal}' },
+        internal: { $value: '{publicAlias}', ...marker(true) },
+        consumer: { $value: '{internal}' }
+    };
+
+    assert.equal(preprocess(tree).consumer.$value, '{publicAlias}');
+});
+
+test('public descendants of private groups remain references', () => {
+    const tree = {
+        g: {
+            ...marker(true),
+            internal: { $value: '6px' },
+            public: { $value: '{g.internal}', ...marker(false) }
+        },
+        consumer: { $value: '{g.public}' }
+    };
+    const marked = preprocess(tree);
+
+    assert.equal(marked.g.public.$value, '6px');
+    assert.equal(marked.consumer.$value, '{g.public}');
 });
 
 test('composite shadows and typography objects are rewritten field by field', () => {
@@ -161,14 +201,31 @@ test('composite shadows and typography objects are rewritten field by field', ()
     assert.deepEqual(marked.typo.$value, { fontFamily: '{c}', fontSize: '12px' });
 });
 
-test('an expression that embeds a private reference is left alone', () => {
+test('expressions keep public references and inline private scalar values', () => {
     const tree = {
         c: { $value: '2px' },
         a: { $value: '{c}', ...marker(true) },
-        y: { $value: 'calc({a} * 2)' }
+        literal: { $value: 0, ...marker(true) },
+        expression: { $value: 'calc({a} + {literal}px)', ...marker(true) },
+        y: { $value: 'calc({a} * 2)' },
+        z: { $value: 'max({expression}, {literal}px)' }
     };
 
-    assert.equal(preprocess(tree).y.$value, 'calc({a} * 2)');
+    const marked = preprocess(tree);
+
+    assert.equal(marked.y.$value, 'calc({c} * 2)');
+    assert.equal(marked.z.$value, 'max(calc({c} + 0px), 0px)');
+});
+
+test('an object or array cannot be interpolated into a string', () => {
+    for (const value of [{ value: 6, unit: 'px' }, [1, 2]]) {
+        const tree = {
+            internal: { $value: value, ...marker(true) },
+            consumer: { $value: 'calc({internal} * 2)' }
+        };
+
+        assert.throws(() => preprocess(tree), /Cannot interpolate private composite \{internal\}/);
+    }
 });
 
 test('a reference cycle through private aliases fails the build', () => {
@@ -178,6 +235,22 @@ test('a reference cycle through private aliases fails the build', () => {
     };
 
     assert.throws(() => preprocess(tree), /does not resolve/);
+});
+
+test('cycles inside private composites and expressions fail the build', () => {
+    for (const value of [{ color: '{a}' }, ['{a}'], 'calc({a} * 2)']) {
+        assert.throws(() => preprocess({ a: { $value: value, ...marker(true) } }), /Private reference cycle/);
+    }
+});
+
+test('a long private chain is not mistaken for a cycle', () => {
+    const tree = { literal: { $value: '6px' }, consumer: { $value: '{p0}' } };
+
+    for (let i = 0; i < 30; i++) {
+        tree[`p${i}`] = { $value: i === 29 ? '{literal}' : `{p${i + 1}}`, ...marker(true) };
+    }
+
+    assert.equal(preprocess(tree).consumer.$value, '{literal}');
 });
 
 test('a private alias to a missing token leaves the dangling reference for the build to report', () => {
@@ -237,7 +310,9 @@ test('the input tree is not mutated', () => {
     const tree = deepFreeze({
         c: { $value: '#abc' },
         a: { $value: '{c}', ...marker(true) },
-        g: { ...marker(true), b: { $value: '{a}' } }
+        g: { ...marker(true), b: { $value: '{a}' } },
+        composite: { $value: [{ color: '{a}', offset: '{g.b}' }], ...marker(true) },
+        consumer: { $value: '{composite}' }
     });
     const before = JSON.stringify(tree);
 

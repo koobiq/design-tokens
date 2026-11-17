@@ -1,6 +1,5 @@
 const REFERENCE = /^\{([^{}]+)\}$/;
 const TRANSPARENT = /^(?:transparent|#[0-9a-f]{3}0|#[0-9a-f]{6}00)$/i;
-const MAX_HOPS = 20;
 
 const isPlainObject = (value) => value !== null && typeof value === 'object' && !Array.isArray(value);
 
@@ -13,16 +12,17 @@ const at = (root, path) => path.split('.').reduce((node, key) => (isPlainObject(
  */
 export const isTransparentLayer = (layer, lookup) => {
     let current = layer?.color;
+    const seen = new Set();
+    let match;
 
-    for (let hops = 0; hops < MAX_HOPS; hops++) {
-        const match = REFERENCE.exec(current);
+    while ((match = REFERENCE.exec(current)) !== null) {
+        if (seen.has(match[1])) return false;
 
-        if (!match) return TRANSPARENT.test(current);
-
+        seen.add(match[1]);
         current = lookup(match[1]);
     }
 
-    return false;
+    return TRANSPARENT.test(current);
 };
 
 /**

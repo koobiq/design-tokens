@@ -77,8 +77,8 @@ export default (theme) => {
         // Shadows stay composite — `shadow/css/shorthand` renders them as one box-shadow. Layers with
         // a transparent color are dropped first (kbq/drop-transparent-shadow-layers).
         // Typography is expanded first, so that the sub-properties of a private composite are private
-        // tokens of their own, and their aliases are collapsed too (kbq/private). Nothing is deleted, so
-        // every reference still resolves.
+        // tokens of their own. Then private references are replaced with public aliases or values
+        // (kbq/private), before transparent layers are dropped and the standard transforms run.
         preprocessors: ['kbq/expand-typography', 'kbq/private', 'kbq/drop-transparent-shadow-layers'],
         // Fail the build on transform errors instead of printing them. Without this a transform
         // that throws on a value (say a dimension transform meeting `letter-spacing: normal`)

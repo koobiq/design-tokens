@@ -1,7 +1,6 @@
 /** The vendor namespace of the marker, in `$extensions` (DTCG §5.2.3). */
 const NS = 'io.koobiq';
 const REFERENCE = /^\{([^{}]+)\}$/;
-const MAX_HOPS = 20;
 
 const isPlainObject = (value) => value !== null && typeof value === 'object' && !Array.isArray(value);
 
@@ -75,38 +74,43 @@ export const markPrivate = (tree) => {
 };
 
 /**
- * A reference to a private token that is itself a pure alias is rewritten to that alias's target, so
- * the chain skips the private hop: `{a}`, where `a` is private and `{c}`, becomes `{c}`. The resolved
- * value does not change, so the theme does not either.
- *
- * A private token with a literal value keeps its reference. The formats inline it instead, see
- * formats/private-references.js.
+ * Stops at the first public token, keeping its reference for outputReferences. When no public
+ * token is reached, substitutes the private value before Style Dictionary transforms it.
  */
-const skipPrivate = (value, root, privates) => {
-    let current = value;
+const resolvePrivate = (path, root, privates, stack) => {
+    if (!privates.has(path)) return `{${path}}`;
 
-    for (let hops = 0; hops < MAX_HOPS; hops++) {
-        const match = REFERENCE.exec(current);
-
-        if (!match || !privates.has(match[1])) return current;
-
-        const next = at(root, match[1])?.$value;
-
-        if (typeof next !== 'string' || !REFERENCE.test(next)) return current;
-
-        current = next;
+    if (stack.includes(path)) {
+        throw new Error(`Private reference cycle does not resolve: ${[...stack, path].join(' → ')}`);
     }
 
-    throw new Error(`Private alias does not resolve, too many hops from ${value}`);
+    return rewrite(at(root, path).$value, root, privates, [...stack, path]);
 };
 
 // Rewrites every string leaf of a $value, so composite shadows (arrays of layer objects) and
 // typography presets are covered as well as plain string values.
-const rewrite = (value, root, privates) => {
-    if (typeof value === 'string') return skipPrivate(value, root, privates);
-    if (Array.isArray(value)) return value.map((item) => rewrite(item, root, privates));
+const rewrite = (value, root, privates, stack = []) => {
+    if (typeof value === 'string') {
+        const match = REFERENCE.exec(value);
+
+        if (match) return resolvePrivate(match[1], root, privates, stack);
+
+        return value.replace(/\{([^{}]+)\}/g, (_reference, path) => {
+            const resolved = resolvePrivate(path, root, privates, stack);
+
+            if (resolved !== null && typeof resolved === 'object') {
+                throw new Error(`Cannot interpolate private composite {${path}} into string ${JSON.stringify(value)}`);
+            }
+
+            return String(resolved);
+        });
+    }
+
+    if (Array.isArray(value)) return value.map((item) => rewrite(item, root, privates, stack));
     if (isPlainObject(value)) {
-        return Object.fromEntries(Object.entries(value).map(([key, item]) => [key, rewrite(item, root, privates)]));
+        return Object.fromEntries(
+            Object.entries(value).map(([key, item]) => [key, rewrite(item, root, privates, stack)])
+        );
     }
 
     return value;

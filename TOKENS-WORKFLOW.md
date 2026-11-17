@@ -129,10 +129,14 @@ The marker guarantees three things:
   and no JS constant, in any file, aggregates included. The sources are still published as
   `dist/design-tokens/web/properties/*.json5`, so an internal token and its marker remain visible there;
   the guarantee covers the variables the build emits.
-- **Its value still flows.** A token that references an internal token gets its value. An internal
-  alias is skipped: `{a}`, where `a` is internal and points at `{c}`, becomes `{c}`, so the chain
-  stays `role → semantic → plt`. An internal token with a literal value is written where it is used.
-  No output contains a `var()` to an internal token.
+- **Its value still flows.** Before Style Dictionary transforms values, the private-token
+  preprocessor follows each internal reference to the first public token and preserves that reference.
+  For example, `{a}`, where `a` is internal and points at public `{c}`, becomes `{c}`; CSS keeps
+  `var(--kbq-c)` rather than flattening the public chain. If the chain never reaches a public token,
+  the final value is substituted, whether it is a size, a color, an object or an array. References
+  inside composites and string expressions follow the same rule. An object or array cannot be
+  embedded inside a string expression. Private reference cycles fail the build; missing references
+  are reported by Style Dictionary. No output contains a `var()` to an internal token.
 - **It is enforced.** `yarn build` fails if an internal token's name appears in a CSS, Sass or JS/TS
   output. A typography composite is expanded into one token per sub-property, so for it the check looks
   for the names of those sub-properties (`--kbq-typography-<name>-font-size`, and so on). It also fails if
