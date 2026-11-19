@@ -38,6 +38,9 @@ Only the `overflow` group has sides. Do not add them to the flat shadows.
 
 Collection `Shadow`, modes `Light` and `Dark`. Names are paths; `/` in Figma is `.` in tokens.
 
+Shadow composites and directional base parameters live under `shadow.light` and `shadow.dark` in
+`shadows.json5`. Their public color roles live under `light.shadow` and `dark.shadow` in `colors.json5`.
+
 ### Flat shadows
 
 | Figma                                  | Token                                        |

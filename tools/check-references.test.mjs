@@ -117,83 +117,98 @@ test('the complete reference checker accepts standard shadows and still detects 
         assert.equal(result.status, 0, result.output);
     });
 
-    const reject = async (name, mutate, expected) => {
-        await t.test(name, () => {
-            const root = path.join(temporary, name.replaceAll(' ', '-'));
+    await t.test('unknown shadow declarations are rejected', () => {
+        const root = path.join(temporary, 'unknown-shadow-declarations');
 
-            fs.cpSync(extended, root, { recursive: true });
-            mutate(root);
-            const result = check(root);
+        fs.cpSync(extended, root, { recursive: true });
+        fs.appendFileSync(bundle(root), '\n.kbq-light {\n  --kbq-shadow-unknown: 0 1px 2px #123456;\n}\n');
+        const result = check(root);
 
-            assert.equal(result.status, 1, result.output);
-            assert.match(result.output, expected);
-        });
-    };
+        assert.equal(result.status, 1, result.output);
+        assert.match(result.output, /\[shadow parameters\].*--kbq-shadow-unknown/);
+    });
+    await t.test('missing newly added public shadows are detected', () => {
+        const root = path.join(temporary, 'missing-public-shadows');
 
-    await reject(
-        'unknown shadow declarations are rejected',
-        (root) => fs.appendFileSync(bundle(root), '\n.kbq-light {\n  --kbq-shadow-unknown: 0 1px 2px #123456;\n}\n'),
-        /\[shadow parameters\].*--kbq-shadow-unknown/
-    );
-    await reject(
-        'missing newly added public shadows are detected',
-        (root) => {
-            const css = fs.readFileSync(bundle(root), 'utf8').replace(/^\s*--kbq-shadow-card-hover:.*\n/m, '');
+        fs.cpSync(extended, root, { recursive: true });
+        const css = fs.readFileSync(bundle(root), 'utf8').replace(/^\s*--kbq-shadow-card-hover:.*\n/m, '');
 
-            fs.writeFileSync(bundle(root), css);
-        },
-        /\[shadow type\].*--kbq-shadow-card-hover.*missing/
-    );
-    await reject(
-        'unserialized dimension objects are detected',
-        (root) => {
-            const css = fs
-                .readFileSync(bundle(root), 'utf8')
-                .replace('inset 0px 2px 0.25rem', 'inset [object Object] 2px 0.25rem');
+        fs.writeFileSync(bundle(root), css);
+        const result = check(root);
 
-            fs.writeFileSync(bundle(root), css);
-        },
-        /\[shadow layers\].*unserialized shadow value/
-    );
-    await reject(
-        'incorrect directional geometry is still rejected',
-        (root) => {
-            const css = fs
-                .readFileSync(bundle(root), 'utf8')
-                .replace('inset 0px -1px 0px 0px', 'inset 0px -2px 0px 0px');
+        assert.equal(result.status, 1, result.output);
+        assert.match(result.output, /\[shadow type\].*--kbq-shadow-card-hover.*missing/);
+    });
+    await t.test('unserialized dimension objects are detected', () => {
+        const root = path.join(temporary, 'unserialized-dimension-objects');
 
-            fs.writeFileSync(bundle(root), css);
-        },
-        /\[shadow sides\].*expected it to start/
-    );
-    await reject(
-        'private output variables are still rejected',
-        (root) => fs.appendFileSync(bundle(root), '\n:root {\n  --kbq-internal-parameters-p0: 8px;\n}\n'),
-        /\[private tokens\].*internalParameters.p0/
-    );
-    await reject(
-        'private alias cycles are rejected without a hop limit',
-        (root) => {
-            const tree = readShadows(root);
+        fs.cpSync(extended, root, { recursive: true });
+        const css = fs
+            .readFileSync(bundle(root), 'utf8')
+            .replace('inset 0px 2px 0.25rem', 'inset [object Object] 2px 0.25rem');
 
-            tree.internalParameters.p29.$value = '{internalParameters.p0}';
-            writeShadows(root, tree);
-        },
-        /\[private tokens\].*cycle of private aliases/
-    );
-    await reject(
-        'expanded private typography leaks are detected through long alias chains',
-        (root) => fs.appendFileSync(bundle(root), '\n:root {\n  --kbq-internal-typography-p0-font-size: 12px;\n}\n'),
-        /\[private tokens\].*internalTypography.p0/
-    );
-    await reject(
-        'long chains cannot hide private literals from a different theme',
-        (root) => {
-            const tree = readShadows(root);
+        fs.writeFileSync(bundle(root), css);
+        const result = check(root);
 
-            tree.internalParameters.p29.$value = '{shadow.dark.overflow.normal.base.outline.blur}';
-            writeShadows(root, tree);
-        },
-        /\[private modes\].*private dark literal/
-    );
+        assert.equal(result.status, 1, result.output);
+        assert.match(result.output, /\[shadow layers\].*unserialized shadow value/);
+    });
+    await t.test('incorrect directional geometry is still rejected', () => {
+        const root = path.join(temporary, 'incorrect-directional-geometry');
+
+        fs.cpSync(extended, root, { recursive: true });
+        const css = fs.readFileSync(bundle(root), 'utf8').replace('inset 0px -1px 0px 0px', 'inset 0px -2px 0px 0px');
+
+        fs.writeFileSync(bundle(root), css);
+        const result = check(root);
+
+        assert.equal(result.status, 1, result.output);
+        assert.match(result.output, /\[shadow sides\].*expected it to start/);
+    });
+    await t.test('private output variables are still rejected', () => {
+        const root = path.join(temporary, 'private-output-variables');
+
+        fs.cpSync(extended, root, { recursive: true });
+        fs.appendFileSync(bundle(root), '\n:root {\n  --kbq-internal-parameters-p0: 8px;\n}\n');
+        const result = check(root);
+
+        assert.equal(result.status, 1, result.output);
+        assert.match(result.output, /\[private tokens\].*internalParameters.p0/);
+    });
+    await t.test('private alias cycles are rejected without a hop limit', () => {
+        const root = path.join(temporary, 'private-alias-cycles');
+
+        fs.cpSync(extended, root, { recursive: true });
+        const tree = readShadows(root);
+
+        tree.internalParameters.p29.$value = '{internalParameters.p0}';
+        writeShadows(root, tree);
+        const result = check(root);
+
+        assert.equal(result.status, 1, result.output);
+        assert.match(result.output, /\[private tokens\].*cycle of private aliases/);
+    });
+    await t.test('expanded private typography leaks are detected through long alias chains', () => {
+        const root = path.join(temporary, 'private-typography-leaks');
+
+        fs.cpSync(extended, root, { recursive: true });
+        fs.appendFileSync(bundle(root), '\n:root {\n  --kbq-internal-typography-p0-font-size: 12px;\n}\n');
+        const result = check(root);
+
+        assert.equal(result.status, 1, result.output);
+        assert.match(result.output, /\[private tokens\].*internalTypography.p0/);
+    });
+    await t.test('long chains cannot hide private literals from a different theme', () => {
+        const root = path.join(temporary, 'private-literals-from-another-theme');
+
+        fs.cpSync(extended, root, { recursive: true });
+        const tree = readShadows(root);
+
+        tree.internalParameters.p29.$value = '{shadow.dark.overflow.normal.base.outline.blur}';
+        writeShadows(root, tree);
+        const result = check(root);
+
+        assert.equal(result.status, 1, result.output);
+        assert.match(result.output, /\[private modes\].*private dark literal/);
+    });
 });
