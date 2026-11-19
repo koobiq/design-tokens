@@ -98,7 +98,7 @@ const components = [
 const componentRoots = components.map(({ root }) => root);
 
 /**
- * Tokens authored under web/components — code-block syntax colours, scrollbar, skeleton.
+ * Tokens authored under web/components — code-block syntax colors, scrollbar, skeleton.
  *
  * Matched on the token's own path rather than its `filePath`: Style Dictionary leaves `filePath`
  * undefined on a token whose value is null, and those are exactly the deliberately-unstyled
@@ -187,7 +187,7 @@ export default {
             },
             {
                 destination: sliced('typography.css'),
-                format: 'css/variables',
+                format: 'kbq-css/variables',
                 filter: (token) => token.attributes.category === 'typography',
                 options: {
                     outputReferences: true
@@ -195,7 +195,7 @@ export default {
             },
             {
                 destination: sliced('md-typography.css'),
-                format: 'css/variables',
+                format: 'kbq-css/variables',
                 filter: (token) => token.attributes.category === 'md-typography',
                 options: {
                     outputReferences: true
@@ -217,7 +217,9 @@ export default {
             {
                 destination: sliced('light/shadows.css'),
                 format: 'kbq-css/variables',
-                filter: (token) => token.attributes.light && token.attributes.category === 'shadow',
+                // Only the composite shadows; their parameters are private and ship nothing.
+                filter: (token) =>
+                    token.attributes.light && token.filePath?.includes('shadows.json5') && token.$type === 'shadow',
                 options: {
                     selector: '.kbq-light',
                     outputReferences: true
@@ -237,7 +239,8 @@ export default {
             {
                 destination: sliced('dark/shadows.css'),
                 format: 'kbq-css/variables',
-                filter: (token) => token.attributes.dark && token.attributes.category === 'shadow',
+                filter: (token) =>
+                    token.attributes.dark && token.filePath?.includes('shadows.json5') && token.$type === 'shadow',
                 options: {
                     selector: '.kbq-dark',
                     outputReferences: true
@@ -252,7 +255,7 @@ export default {
                     outputReferences: true
                 }
             },
-            // The three component token sets that survived v4 (code-block syntax colours,
+            // The three component token sets that survived v4 (code-block syntax colors,
             // scrollbar, skeleton). Only consumers of those components need them, so they are
             // opt-in: kept out of index.css and out of the css-tokens*.css aggregates, and
             // shipped as their own triple mirroring the css-tokens*.css naming.
@@ -285,7 +288,7 @@ export default {
             },
             {
                 destination: 'css-tokens.css',
-                format: 'css/variables',
+                format: 'kbq-css/variables',
                 filter: (token) =>
                     hasValue(token) &&
                     !isComponent(token) &&

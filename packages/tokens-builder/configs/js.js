@@ -1,5 +1,7 @@
 import { hasValue } from '../filters/has-value.js';
 
+const shipped = (token) => hasValue(token);
+
 export default {
     js: {
         transformGroup: 'kbq/ts',
@@ -9,17 +11,17 @@ export default {
             {
                 destination: 'js/index.mjs',
                 format: 'javascript/es6',
-                filter: hasValue
+                filter: shipped
             },
             {
                 destination: 'js/index.js',
                 format: 'javascript/module-flat',
-                filter: hasValue
+                filter: shipped
             },
             {
                 destination: 'js/index.d.ts',
                 format: 'typescript/es6-declarations',
-                filter: hasValue
+                filter: shipped
             }
         ]
     }

@@ -1,6 +1,8 @@
+export const isTypography = (token) => token.attributes.typography;
+
 export default (StyleDictionary) => {
     StyleDictionary.registerFilter({
         name: 'typography',
-        filter: (token) => token.attributes.typography
+        filter: isTypography
     });
 };
