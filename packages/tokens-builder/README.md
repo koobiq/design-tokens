@@ -53,6 +53,6 @@ This is not a claim of strict DTCG conformance for the complete composite:
 - `lineHeight` is an absolute dimension. DTCG `typography` instead defines it as a unitless `number` multiplier.
 - `fontStyle`, `textTransform`, and `fontFeatureSettings` are Koobiq properties outside the DTCG `typography` property list.
 
-The preprocessor accepts the five required properties `fontSize`, `lineHeight`, `letterSpacing`, `fontWeight`, and `fontFamily`, plus the three extensions above.
-Invalid dimensions and unknown properties fail the build with the token path instead of producing `[object Object]`.
-Existing dimension strings remain supported outside the migrated composite values.
+The preprocessor accepts complete and partial composites, token references, and existing CSS dimension strings.
+Invalid dimension objects fail the build with the token path instead of producing `[object Object]`.
+Other Koobiq-specific sub-properties continue to expand using their property names as types.

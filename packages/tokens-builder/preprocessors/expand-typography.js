@@ -10,9 +10,7 @@ const SUBTYPES = {
     letterSpacing: 'dimension'
 };
 
-const REQUIRED = ['fontSize', 'lineHeight', 'letterSpacing', 'fontWeight', 'fontFamily'];
-const EXTENSIONS = ['fontStyle', 'textTransform', 'fontFeatureSettings'];
-const ALLOWED = new Set([...REQUIRED, ...EXTENSIONS]);
+const DIMENSION_PROPERTIES = ['fontSize', 'lineHeight', 'letterSpacing'];
 
 /** A `$value` that is nothing but a reference, e.g. `{typography.title}`. */
 const ALIAS = /^\{([^{}]+)\}$/;
@@ -54,26 +52,15 @@ const validateComposite = (node, path) => {
 
     const tokenPath = path.join('.');
 
-    for (const property of REQUIRED) {
-        if (!Object.hasOwn(node.$value, property)) {
-            throw new Error(`${tokenPath}.$value.${property}: required property is missing.`);
-        }
-    }
+    for (const property of DIMENSION_PROPERTIES) {
+        if (!Object.hasOwn(node.$value, property)) continue;
 
-    for (const property of Object.keys(node.$value)) {
-        if (!ALLOWED.has(property)) {
-            throw new Error(`${tokenPath}.$value.${property}: unknown typography property.`);
-        }
-    }
+        const value = node.$value[property];
 
-    for (const property of ['fontSize', 'lineHeight', 'letterSpacing']) {
-        assertDimension(node.$value[property], `${tokenPath}.$value.${property}`, { allowReference: true });
-    }
+        // Partial composites, references, and legacy CSS strings remain valid builder inputs.
+        if (typeof value === 'string') continue;
 
-    for (const property of EXTENSIONS) {
-        if (Object.hasOwn(node.$value, property) && typeof node.$value[property] !== 'string') {
-            throw new Error(`${tokenPath}.$value.${property}: expected a string or token reference.`);
-        }
+        assertDimension(value, `${tokenPath}.$value.${property}`);
     }
 };
 

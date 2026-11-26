@@ -96,36 +96,24 @@ test('preserves direct sub-property references', () => {
     assert.equal(result.typography.headline.letterSpacing.$value, '{typography.title.letterSpacing}');
 });
 
-test('requires the five standard typography properties', () => {
-    const value = composite();
-    delete value.letterSpacing;
-
-    assert.throws(
-        () => expand(typography(value)),
-        /typography\.headline\.\$value\.letterSpacing: required property is missing/
+test('accepts partial composites, legacy dimensions and additional Koobiq properties', () => {
+    const result = expand(
+        typography({
+            fontSize: '12px',
+            fontFamily: 'Inter',
+            textOverflow: 'ellipsis'
+        })
     );
+
+    assert.deepEqual(result.typography.headline, {
+        fontSize: { $value: '12px', $type: 'dimension' },
+        fontFamily: { $value: 'Inter', $type: 'fontFamily' },
+        textOverflow: { $value: 'ellipsis', $type: 'textOverflow' }
+    });
 });
 
-test('rejects unknown composite properties', () => {
-    const value = { ...composite(), textOverflow: 'ellipsis' };
-
-    assert.throws(
-        () => expand(typography(value)),
-        /typography\.headline\.\$value\.textOverflow: unknown typography property/
-    );
-});
-
-test('rejects a legacy lineHeight string with the property path', () => {
-    const value = { ...composite(), lineHeight: '32px' };
+test('rejects a malformed direct dimension with the property path', () => {
+    const value = { ...composite(), lineHeight: { value: 32, unit: 'em' } };
 
     assert.throws(() => expand(typography(value)), /typography\.headline\.\$value\.lineHeight: expected dimension/);
-});
-
-test('rejects non-string extension values', () => {
-    const value = { ...composite(), fontStyle: { value: 'italic' } };
-
-    assert.throws(
-        () => expand(typography(value)),
-        /typography\.headline\.\$value\.fontStyle: expected a string or token reference/
-    );
 });
