@@ -12,37 +12,47 @@ various output formats like SCSS, CSS, and TypeScript.
 
 ## Typography composite tokens
 
-Tokens builder supports [composite tokens](https://www.w3.org/community/reports/design-tokens/CG-FINAL-format-20251028/#composite-design-token) for the CSS platform.
-Currently, the `typography` composite type is supported.
+Tokens builder supports DTCG-style `typography` composites and serializes their values for CSS, SCSS, and TypeScript.
+The `fontSize`, `lineHeight`, and `letterSpacing` values share the dimension object shape:
 
-Typography presets are authored as DTCG `typography` composites — one token whose `$value` is an object of sub-properties:
-
-```json
+```json5
 {
-    "typography": {
-        "text-normal": {
-            "$type": "typography",
-            "$value": {
-                "fontSize": "16px",
-                "lineHeight": "24px",
-                "fontWeight": 400,
-                "fontFamily": "{font.family.mono}",
-                "letterSpacing": "normal"
+    typography: {
+        headline: {
+            $type: 'typography',
+            $value: {
+                fontSize: { value: 28, unit: 'px' },
+                lineHeight: { value: 32, unit: 'px' },
+                letterSpacing: { value: 0, unit: 'px' },
+                fontWeight: 700,
+                fontFamily: '{font.family.accent}',
+                textTransform: 'initial',
+                fontFeatureSettings: '"calt", "kern", "liga"'
             }
         }
     }
 }
 ```
 
-Sub-properties are camelCase, as the [`typography` type](https://www.w3.org/community/reports/design-tokens/CG-FINAL-format-20251028/#typography) requires.
-The `kbq/expand-typography` preprocessor expands each composite back into one token per sub-property before Style Dictionary resolves references:
+The `kbq/expand-typography` preprocessor expands the composite before Style Dictionary resolves references.
+The `kbq-value/dimension` transform serializes `{ value, unit }` for every output platform:
 
-```
-  --kbq-typography-text-normal-font-size: 16px;
-  --kbq-typography-text-normal-line-height: 24px;
-  --kbq-typography-text-normal-font-weight: 400;
-  --kbq-typography-text-normal-font-family: var(--kbq-font-family-mono);
-  // ...etc
+```css
+--kbq-typography-headline-font-size: 28px;
+--kbq-typography-headline-line-height: 32px;
+--kbq-typography-headline-letter-spacing: 0px;
 ```
 
-A composite can also be aliased whole — `"$value": "{typography.text-normal}"` — which the preprocessor expands into one reference per sub-property.
+A composite may be aliased whole (`"$value": "{typography.headline}"`) or may reference individual sub-properties.
+The preprocessor preserves those references.
+
+### Koobiq extensions
+
+This is not a claim of strict DTCG conformance for the complete composite:
+
+- `lineHeight` is an absolute dimension. DTCG `typography` instead defines it as a unitless `number` multiplier.
+- `fontStyle`, `textTransform`, and `fontFeatureSettings` are Koobiq properties outside the DTCG `typography` property list.
+
+The preprocessor accepts the five required properties `fontSize`, `lineHeight`, `letterSpacing`, `fontWeight`, and `fontFamily`, plus the three extensions above.
+Invalid dimensions and unknown properties fail the build with the token path instead of producing `[object Object]`.
+Existing dimension strings remain supported outside the migrated composite values.

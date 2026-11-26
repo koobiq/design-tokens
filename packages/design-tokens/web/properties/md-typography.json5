@@ -7,9 +7,9 @@
         // Not display-compact: two steps smaller and bold, so it has to be written out.
         'md-h2': {
             $value: {
-                fontSize: '24px',
-                lineHeight: '32px',
-                letterSpacing: 'normal',
+                fontSize: { value: 24, unit: 'px' },
+                lineHeight: { value: 32, unit: 'px' },
+                letterSpacing: { value: 0, unit: 'px' },
                 fontWeight: 700,
                 fontFamily: '{typography.display-compact.fontFamily}',
                 textTransform: '{typography.display-compact.textTransform}',

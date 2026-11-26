@@ -9,6 +9,7 @@ import registerThemeAttributes from './transforms/attribute/theme.js';
 import registerScssValue from './transforms/attribute/scss-value.js';
 import registerDeprecationComment from './transforms/attribute/deprecation-comment.js';
 import registerCustomKebab from './transforms/name/custom-kebab.js';
+import registerDimension from './transforms/value/dimension.js';
 
 // ==== Include custom preprocessors ====
 import registerExpandTypography from './preprocessors/expand-typography.js';
@@ -38,6 +39,7 @@ registerThemeAttributes(StyleDictionary);
 registerScssValue(StyleDictionary);
 registerDeprecationComment(StyleDictionary);
 registerCustomKebab(StyleDictionary);
+registerDimension(StyleDictionary);
 
 registerExpandTypography(StyleDictionary);
 
