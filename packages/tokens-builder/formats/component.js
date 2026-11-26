@@ -5,7 +5,7 @@ import { stripThemeFromNames } from './strip-theme.js';
  * The selector each slice of a component's tokens belongs under, in write order.
  *
  * `:root` holds whatever is theme-independent (scrollbar sizes, for instance); the other two
- * hold the light and dark colours.
+ * hold the light and dark colors.
  */
 const THEMES = [
     { selector: ':root', belongs: (token) => !token.attributes.light && !token.attributes.dark },

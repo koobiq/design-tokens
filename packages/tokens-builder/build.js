@@ -13,6 +13,8 @@ import registerDimension from './transforms/value/dimension.js';
 
 // ==== Include custom preprocessors ====
 import registerExpandTypography from './preprocessors/expand-typography.js';
+import registerDropTransparentShadowLayers from './preprocessors/drop-transparent-shadow-layers.js';
+import registerPrivateTokens from './preprocessors/private.js';
 
 // ==== Include custom filters ====
 import registerTypographyFilter from './filters/typography.js';
@@ -42,6 +44,8 @@ registerCustomKebab(StyleDictionary);
 registerDimension(StyleDictionary);
 
 registerExpandTypography(StyleDictionary);
+registerDropTransparentShadowLayers(StyleDictionary);
+registerPrivateTokens(StyleDictionary);
 
 registerTypographyFilter(StyleDictionary);
 registerMdTypographyFilter(StyleDictionary);

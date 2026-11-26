@@ -38,11 +38,12 @@ And that survives all the way into the CSS, one `var()` per hop:
 }
 ```
 
-| Layer                | File             | What it is                                                                   |
-| :------------------- | :--------------- | :--------------------------------------------------------------------------- |
-| `plt.*`              | `plt.json5`      | The engineering palette. The **only** place with literal OKLch values.       |
-| `semantic.*`         | `semantic.json5` | A 1:1 alias of the engineering palette, named by meaning rather than by hue. |
-| `light.*` / `dark.*` | `colors.json5`   | Roles — what a color is _for_. This is what product code uses.               |
+| Layer                              | File             | What it is                                                                                                                |
+| :--------------------------------- | :--------------- | :------------------------------------------------------------------------------------------------------------------------ |
+| `plt.*`                            | `plt.json5`      | The engineering palette. The **only** place with literal OKLch values.                                                    |
+| `semantic.*`                       | `semantic.json5` | A 1:1 alias of the engineering palette, named by meaning rather than by hue.                                              |
+| `light.*` / `dark.*`               | `colors.json5`   | Roles — what a color is _for_. This is what product code uses. The shadow roles are `light.shadow.*` and `dark.shadow.*`. |
+| `shadow.light.*` / `shadow.dark.*` | `shadows.json5`  | Shadow composites. The base parameters of the directional shadows are internal.                                           |
 
 ### Why the middle layer isn't redundant
 
@@ -85,6 +86,73 @@ Rough guide to the ramp:
 | `8–10`  | Mid-range — overlays, faded states                       |
 | `13–14` | Saturated — solid fills, links                           |
 | `16–20` | Deep, high contrast — primary text, contrast backgrounds |
+
+---
+
+## Internal tokens
+
+Some tokens are stepping stones. They exist so that other tokens can reference and inherit from
+them, and no product code should read them. Such a token is **internal**. It is marked in the
+source, and the build keeps it out of every output:
+
+```json5
+shadow: {
+    $type: 'color',
+    key: {
+        $value: '{semantic.contrastA.3}',
+        $extensions: { 'io.koobiq': { private: true } },
+    },
+},
+```
+
+The marker can sit on a token or on a group, and it covers everything under the group. A
+descendant opts out with `private: false`.
+
+Its values mirror [`$deprecated`](https://www.designtokens.org/tr/2025.10/format/) — `true` marks
+the token, a string marks it and explains why, and `false` opts out of a group's default:
+
+```json5
+key: {
+    $value: '{semantic.contrastA.3}',
+    $extensions: { 'io.koobiq': { private: 'shadow layer, compose it into a shadow instead' } },
+},
+```
+
+A group's explanation is inherited by everything under it. The explanation never reaches an output —
+an internal token ships no variable — so it serves the source itself and the build's error messages.
+A quoted boolean (`'true'`, `'false'`) is refused rather than read as an explanation, because
+`private: 'false'` would otherwise make the token private.
+
+The marker guarantees three things:
+
+- **No variable on any platform.** An internal token has no CSS custom property, no Sass variable
+  and no JS constant, in any file, aggregates included. The sources are still published as
+  `dist/design-tokens/web/properties/*.json5`, so an internal token and its marker remain visible there;
+  the guarantee covers the variables the build emits.
+- **Its value still flows.** Before Style Dictionary transforms values, the private-token
+  preprocessor follows each internal reference to the first public token and preserves that reference.
+  For example, `{a}`, where `a` is internal and points at public `{c}`, becomes `{c}`; CSS keeps
+  `var(--kbq-c)` rather than flattening the public chain. If the chain never reaches a public token,
+  the final value is substituted, whether it is a size, a color, an object or an array. References
+  inside composites and string expressions follow the same rule. An object or array cannot be
+  embedded inside a string expression. Private reference cycles fail the build; missing references
+  are reported by Style Dictionary. No output contains a `var()` to an internal token.
+- **It is enforced.** `yarn build` fails if an internal token's name appears in a CSS, Sass or JS/TS
+  output. A typography composite is expanded into one token per sub-property, so for it the check looks
+  for the names of those sub-properties (`--kbq-typography-<name>-font-size`, and so on). It also fails if
+  a theme-specific literal internal token is used by a token outside that theme, which would freeze the
+  theme's value into the other scope.
+
+An internal token is neither of the two other kinds of "not for product code":
+
+- A **`$deprecated`** token is public: it still ships, with a notice, and products may still use it.
+  An internal token is not meant to be used at all, so it has no notice and no migration path.
+- A token with a **`null`** value is part of the vocabulary and deliberately unstyled (see
+  [No empty tokens](#no-empty-tokens)), so it has nothing for a referencing token to take. An internal
+  token has a value, and that value is what its referencing tokens take.
+
+Make a token internal when it only composes other tokens. Deprecate it when it is public and being
+replaced.
 
 ---
 
@@ -166,6 +234,23 @@ e.g. a high-contrast theme:
 The notice becomes a comment in the generated CSS and the token drops out of `STYLING.md`.
 `$deprecated: true` works too, but a replacement hint is much more useful.
 
+### Make a token internal
+
+Add the marker to the token, or to the group that should be internal. Other tokens can keep
+referencing it; nothing else gets a variable for it:
+
+```json5
+{
+    'internal-example': {
+        $value: '{semantic.warningA.2}',
+        $extensions: { 'io.koobiq': { private: true } }
+    }
+}
+```
+
+Make it internal only when nothing should read it. If a product should keep using it, leave it
+public.
+
 ### Add a typography preset
 
 Typography presets are DTCG `typography` composites:
@@ -220,7 +305,10 @@ Reach for the long form only when a preset genuinely differs; `md-h4` is `subhea
 
 ### Add a shadow
 
-Shadows are DTCG `shadow` composites — one layer object, or an array for multi-layer:
+Shadows are DTCG `shadow` composites — one layer object, or an array for multi-layer. They live in
+`shadows.json5`, one group per theme: `shadow.light` and `shadow.dark`. The color roles `outline`, `key`
+and `ambient` are in `colors.json5`, under `light.shadow` and `dark.shadow`. The base parameters of the
+directional shadows are internal, so a new composite goes into both themes:
 
 ```json5
 {
@@ -229,8 +317,41 @@ Shadows are DTCG `shadow` composites — one layer object, or an array for multi
             'card-hover': {
                 $type: 'shadow',
                 $value: [
-                    { color: '{light.shadow.outline}', offsetX: '0', offsetY: '0', blur: '0', spread: '1px' },
-                    { color: '{light.shadow.key}', offsetX: '0', offsetY: '2px', blur: '8px', spread: '0' }
+                    {
+                        color: '{light.shadow.outline}',
+                        offsetX: '0',
+                        offsetY: '0',
+                        blur: '0',
+                        spread: '1px'
+                    },
+                    {
+                        color: '{light.shadow.key}',
+                        offsetX: '0',
+                        offsetY: '2px',
+                        blur: '8px',
+                        spread: '0'
+                    }
+                ]
+            }
+        },
+        dark: {
+            'card-hover': {
+                $type: 'shadow',
+                $value: [
+                    {
+                        color: '{dark.shadow.outline}',
+                        offsetX: '0',
+                        offsetY: '0',
+                        blur: '0',
+                        spread: '1px'
+                    },
+                    {
+                        color: '{dark.shadow.key}',
+                        offsetX: '0',
+                        offsetY: '2px',
+                        blur: '8px',
+                        spread: '0'
+                    }
                 ]
             }
         }

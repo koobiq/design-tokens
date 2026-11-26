@@ -13,18 +13,23 @@ const toKebab = (path) => {
     return standardKebab.replace(/-a-(\d+)$/, '-a$1');
 };
 
+const THEMES = ['light', 'dark'];
+
+// A theme is the category of a token (light.background.card) or, for the shadows, its type (shadow.light.card).
+const isThemeScoped = ({ category, type }) =>
+    THEMES.includes(category) || (category === 'shadow' && THEMES.includes(type));
+
 export default (StyleDictionary) => {
-    // Strips 'light'/'dark' when used as the category segment (e.g. shadow.light.card →
-    // shadow-card), so theme-scoped tokens don't carry the theme in their variable name —
-    // the theme lives in the `.kbq-light` / `.kbq-dark` selector instead.
+    // Strips 'light'/'dark' from a theme-scoped token (e.g. shadow.light.card → shadow-card), so the
+    // theme does not end up in its variable name — the theme lives in the `.kbq-light` / `.kbq-dark`
+    // selector instead.
     StyleDictionary.registerTransform({
         name: 'name/custom-kebab',
         type: 'name',
         transform: (token, platform) => {
-            const path =
-                token.attributes.category === 'light' || token.attributes.category === 'dark'
-                    ? token.path.filter((part) => part !== 'light' && part !== 'dark')
-                    : token.path;
+            const path = isThemeScoped(token.attributes)
+                ? token.path.filter((part) => !THEMES.includes(part))
+                : token.path;
 
             return toKebab(platform?.prefix ? [platform.prefix, ...path] : path);
         }
