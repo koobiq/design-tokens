@@ -12,6 +12,7 @@ export default (StyleDictionary) => {
             'kbq-attribute/light',
             'kbq-attribute/dark',
             'shadow/css/shorthand',
+            'kbq-value/dimension',
             'name/custom-kebab',
             'kbq-attribute/comment'
         ]

@@ -3,10 +3,12 @@
 
 import fs from 'fs';
 import path from 'path';
+import { pathToFileURL } from 'node:url';
 import ejs from 'ejs';
 import JSON5 from 'json5';
 
 import { markPrivate } from '../packages/tokens-builder/preprocessors/private.js';
+import { serializeDimension } from '../packages/tokens-builder/transforms/value/dimension.js';
 
 const TOKEN_PREFIX = 'kbq';
 
@@ -80,14 +82,20 @@ function stateRows(states) {
     return rows.join('\n');
 }
 
-function typographyRows(typo) {
+const dimensionCell = (name, preset, property) => {
+    const value = preset.$value?.[property];
+
+    return value === undefined ? '' : serializeDimension(value, `typography.${name}.$value.${property}`);
+};
+
+export function typographyRows(typo) {
     return Object.entries(typo.typography)
         .filter(([name, preset]) => !name.startsWith('$') && !preset?.private)
         .map(([name, preset]) =>
             row(
                 `\`${TOKEN_PREFIX}-${name}\``,
-                preset.$value?.fontSize ?? '',
-                preset.$value?.lineHeight ?? '',
+                dimensionCell(name, preset, 'fontSize'),
+                dimensionCell(name, preset, 'lineHeight'),
                 preset.$value?.fontWeight ?? ''
             )
         )
@@ -150,5 +158,7 @@ const output = ejs.render(fs.readFileSync(path.join(ROOT, 'tools', 'styling.md.e
     pltFamilyRows
 });
 
-fs.writeFileSync(path.join(ROOT, 'STYLING.md'), output);
-console.log('Generated STYLING.md');
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+    fs.writeFileSync(path.join(ROOT, 'STYLING.md'), output);
+    console.log('Generated STYLING.md');
+}

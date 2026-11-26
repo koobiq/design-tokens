@@ -1,11 +1,16 @@
-// DTCG sub-property → DTCG type, mirroring Style Dictionary's own DTCGTypesMap.typography.
-// Anything not listed keeps its own name as the type (fontFamily, fontWeight are real DTCG
-// types; textTransform / fontFeatureSettings are our documented extension).
+import { assertDimension } from '../transforms/value/dimension.js';
+
+// DTCG sub-property → output type. `lineHeight` deliberately stays an absolute dimension instead
+// of the DTCG unitless multiplier. Other unlisted properties keep their own name as the type
+// (fontFamily, fontWeight are real DTCG types; fontStyle / textTransform / fontFeatureSettings are
+// our documented extensions).
 const SUBTYPES = {
     fontSize: 'dimension',
-    letterSpacing: 'dimension',
-    lineHeight: 'number'
+    lineHeight: 'dimension',
+    letterSpacing: 'dimension'
 };
+
+const DIMENSION_PROPERTIES = ['fontSize', 'lineHeight', 'letterSpacing'];
 
 /** A `$value` that is nothing but a reference, e.g. `{typography.title}`. */
 const ALIAS = /^\{([^{}]+)\}$/;
@@ -40,6 +45,23 @@ const subProperties = (root, path) => {
     }
 
     return undefined;
+};
+
+const validateComposite = (node, path) => {
+    if (!isPlainObject(node.$value)) return;
+
+    const tokenPath = path.join('.');
+
+    for (const property of DIMENSION_PROPERTIES) {
+        if (!Object.hasOwn(node.$value, property)) continue;
+
+        const value = node.$value[property];
+
+        // Partial composites, references, and legacy CSS strings remain valid builder inputs.
+        if (typeof value === 'string') continue;
+
+        assertDimension(value, `${tokenPath}.$value.${property}`);
+    }
 };
 
 /**
@@ -81,12 +103,14 @@ export default (StyleDictionary) => {
             // `inherited` carries the nearest ancestor group's $type, which DTCG lets a token
             // omit. Style Dictionary applies that inheritance itself, but only after
             // preprocessors have run, so it has to be tracked here too.
-            const walk = (node, inherited) => {
+            const walk = (node, inherited, path = []) => {
                 if (!isPlainObject(node)) return node;
 
                 const type = node.$type ?? inherited;
 
                 if (type === 'typography' && isToken(node)) {
+                    validateComposite(node, path);
+
                     if (isPlainObject(node.$value)) return expand(node, Object.entries(node.$value));
 
                     const target = aliasTarget(node);
@@ -105,7 +129,9 @@ export default (StyleDictionary) => {
                     );
                 }
 
-                return Object.fromEntries(Object.entries(node).map(([key, value]) => [key, walk(value, type)]));
+                return Object.fromEntries(
+                    Object.entries(node).map(([key, value]) => [key, walk(value, type, [...path, key])])
+                );
             };
 
             return walk(tokens, undefined);

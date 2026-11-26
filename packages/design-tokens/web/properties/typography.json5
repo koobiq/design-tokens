@@ -3,9 +3,9 @@
         headline: {
             $type: 'typography',
             $value: {
-                fontSize: '28px',
-                lineHeight: '32px',
-                letterSpacing: 'normal',
+                fontSize: { value: 28, unit: 'px' },
+                lineHeight: { value: 32, unit: 'px' },
+                letterSpacing: { value: 0, unit: 'px' },
                 fontWeight: 700,
                 fontFamily: '{font.family.accent}',
                 textTransform: 'initial',
@@ -15,9 +15,9 @@
         title: {
             $type: 'typography',
             $value: {
-                fontSize: '20px',
-                lineHeight: '28px',
-                letterSpacing: 'normal',
+                fontSize: { value: 20, unit: 'px' },
+                lineHeight: { value: 28, unit: 'px' },
+                letterSpacing: { value: 0, unit: 'px' },
                 fontWeight: 700,
                 fontFamily: '{font.family.accent}',
                 textTransform: 'initial',
@@ -27,9 +27,9 @@
         subheading: {
             $type: 'typography',
             $value: {
-                fontSize: '18px',
-                lineHeight: '26px',
-                letterSpacing: 'normal',
+                fontSize: { value: 18, unit: 'px' },
+                lineHeight: { value: 26, unit: 'px' },
+                letterSpacing: { value: 0, unit: 'px' },
                 fontWeight: 600,
                 fontFamily: '{font.family.accent}',
                 textTransform: 'initial',
@@ -39,9 +39,9 @@
         'display-big': {
             $type: 'typography',
             $value: {
-                fontSize: '57px',
-                lineHeight: '64px',
-                letterSpacing: 'normal',
+                fontSize: { value: 57, unit: 'px' },
+                lineHeight: { value: 64, unit: 'px' },
+                letterSpacing: { value: 0, unit: 'px' },
                 fontWeight: 400,
                 fontFamily: '{font.family.accent}',
                 textTransform: 'initial',
@@ -51,9 +51,9 @@
         'display-normal': {
             $type: 'typography',
             $value: {
-                fontSize: '45px',
-                lineHeight: '52px',
-                letterSpacing: 'normal',
+                fontSize: { value: 45, unit: 'px' },
+                lineHeight: { value: 52, unit: 'px' },
+                letterSpacing: { value: 0, unit: 'px' },
                 fontWeight: 400,
                 fontFamily: '{font.family.accent}',
                 textTransform: 'initial',
@@ -63,9 +63,9 @@
         'display-compact': {
             $type: 'typography',
             $value: {
-                fontSize: '36px',
-                lineHeight: '44px',
-                letterSpacing: 'normal',
+                fontSize: { value: 36, unit: 'px' },
+                lineHeight: { value: 44, unit: 'px' },
+                letterSpacing: { value: 0, unit: 'px' },
                 fontWeight: 400,
                 fontFamily: '{font.family.accent}',
                 textTransform: 'initial',
@@ -75,9 +75,9 @@
         'display-big-strong': {
             $type: 'typography',
             $value: {
-                fontSize: '57px',
-                lineHeight: '64px',
-                letterSpacing: 'normal',
+                fontSize: { value: 57, unit: 'px' },
+                lineHeight: { value: 64, unit: 'px' },
+                letterSpacing: { value: 0, unit: 'px' },
                 fontWeight: 700,
                 fontFamily: '{font.family.accent}',
                 textTransform: 'initial',
@@ -87,9 +87,9 @@
         'display-normal-strong': {
             $type: 'typography',
             $value: {
-                fontSize: '45px',
-                lineHeight: '52px',
-                letterSpacing: 'normal',
+                fontSize: { value: 45, unit: 'px' },
+                lineHeight: { value: 52, unit: 'px' },
+                letterSpacing: { value: 0, unit: 'px' },
                 fontWeight: 700,
                 fontFamily: '{font.family.accent}',
                 textTransform: 'initial',
@@ -99,9 +99,9 @@
         'display-compact-strong': {
             $type: 'typography',
             $value: {
-                fontSize: '36px',
-                lineHeight: '44px',
-                letterSpacing: 'normal',
+                fontSize: { value: 36, unit: 'px' },
+                lineHeight: { value: 44, unit: 'px' },
+                letterSpacing: { value: 0, unit: 'px' },
                 fontWeight: 700,
                 fontFamily: '{font.family.accent}',
                 textTransform: 'initial',
@@ -111,9 +111,9 @@
         'text-big': {
             $type: 'typography',
             $value: {
-                fontSize: '16px',
-                lineHeight: '24px',
-                letterSpacing: '-0.011em',
+                fontSize: { value: 16, unit: 'px' },
+                lineHeight: { value: 24, unit: 'px' },
+                letterSpacing: { value: -0.176, unit: 'px' },
                 fontWeight: 'normal',
                 fontFamily: '{font.family.base}',
                 textTransform: 'initial',
@@ -123,9 +123,9 @@
         'text-big-medium': {
             $type: 'typography',
             $value: {
-                fontSize: '16px',
-                lineHeight: '24px',
-                letterSpacing: '-0.011em',
+                fontSize: { value: 16, unit: 'px' },
+                lineHeight: { value: 24, unit: 'px' },
+                letterSpacing: { value: -0.176, unit: 'px' },
                 fontWeight: 500,
                 fontFamily: '{font.family.base}',
                 textTransform: 'initial',
@@ -135,9 +135,9 @@
         'text-big-strong': {
             $type: 'typography',
             $value: {
-                fontSize: '16px',
-                lineHeight: '24px',
-                letterSpacing: '-0.011em',
+                fontSize: { value: 16, unit: 'px' },
+                lineHeight: { value: 24, unit: 'px' },
+                letterSpacing: { value: -0.176, unit: 'px' },
                 fontWeight: 600,
                 fontFamily: '{font.family.base}',
                 textTransform: 'initial',
@@ -147,9 +147,9 @@
         'text-normal': {
             $type: 'typography',
             $value: {
-                fontSize: '14px',
-                lineHeight: '20px',
-                letterSpacing: '-0.006em',
+                fontSize: { value: 14, unit: 'px' },
+                lineHeight: { value: 20, unit: 'px' },
+                letterSpacing: { value: -0.084, unit: 'px' },
                 fontWeight: 'normal',
                 fontFamily: '{font.family.base}',
                 textTransform: 'initial',
@@ -159,9 +159,9 @@
         'text-normal-medium': {
             $type: 'typography',
             $value: {
-                fontSize: '14px',
-                lineHeight: '20px',
-                letterSpacing: '-0.006em',
+                fontSize: { value: 14, unit: 'px' },
+                lineHeight: { value: 20, unit: 'px' },
+                letterSpacing: { value: -0.084, unit: 'px' },
                 fontWeight: 500,
                 fontFamily: '{font.family.base}',
                 textTransform: 'initial',
@@ -171,9 +171,9 @@
         'text-normal-strong': {
             $type: 'typography',
             $value: {
-                fontSize: '14px',
-                lineHeight: '20px',
-                letterSpacing: '-0.006em',
+                fontSize: { value: 14, unit: 'px' },
+                lineHeight: { value: 20, unit: 'px' },
+                letterSpacing: { value: -0.084, unit: 'px' },
                 fontWeight: 600,
                 fontFamily: '{font.family.base}',
                 textTransform: 'initial',
@@ -183,9 +183,9 @@
         'text-compact': {
             $type: 'typography',
             $value: {
-                fontSize: '12px',
-                lineHeight: '16px',
-                letterSpacing: 'normal',
+                fontSize: { value: 12, unit: 'px' },
+                lineHeight: { value: 16, unit: 'px' },
+                letterSpacing: { value: 0, unit: 'px' },
                 fontWeight: 'normal',
                 fontFamily: '{font.family.base}',
                 textTransform: 'initial',
@@ -195,9 +195,9 @@
         'text-compact-medium': {
             $type: 'typography',
             $value: {
-                fontSize: '12px',
-                lineHeight: '16px',
-                letterSpacing: 'normal',
+                fontSize: { value: 12, unit: 'px' },
+                lineHeight: { value: 16, unit: 'px' },
+                letterSpacing: { value: 0, unit: 'px' },
                 fontWeight: 500,
                 fontFamily: '{font.family.base}',
                 textTransform: 'initial',
@@ -207,9 +207,9 @@
         'text-compact-strong': {
             $type: 'typography',
             $value: {
-                fontSize: '12px',
-                lineHeight: '16px',
-                letterSpacing: 'normal',
+                fontSize: { value: 12, unit: 'px' },
+                lineHeight: { value: 16, unit: 'px' },
+                letterSpacing: { value: 0, unit: 'px' },
                 fontWeight: 600,
                 fontFamily: '{font.family.base}',
                 textTransform: 'initial',
@@ -219,9 +219,9 @@
         'caps-big': {
             $type: 'typography',
             $value: {
-                fontSize: '16px',
-                lineHeight: '24px',
-                letterSpacing: '0.08em',
+                fontSize: { value: 16, unit: 'px' },
+                lineHeight: { value: 24, unit: 'px' },
+                letterSpacing: { value: 1.28, unit: 'px' },
                 fontWeight: 400,
                 fontFamily: '{font.family.base}',
                 textTransform: 'uppercase',
@@ -231,9 +231,9 @@
         'caps-big-strong': {
             $type: 'typography',
             $value: {
-                fontSize: '16px',
-                lineHeight: '24px',
-                letterSpacing: '0.08em',
+                fontSize: { value: 16, unit: 'px' },
+                lineHeight: { value: 24, unit: 'px' },
+                letterSpacing: { value: 1.28, unit: 'px' },
                 fontWeight: 500,
                 fontFamily: '{font.family.base}',
                 textTransform: 'uppercase',
@@ -243,9 +243,9 @@
         'caps-normal': {
             $type: 'typography',
             $value: {
-                fontSize: '14px',
-                lineHeight: '20px',
-                letterSpacing: '0.08em',
+                fontSize: { value: 14, unit: 'px' },
+                lineHeight: { value: 20, unit: 'px' },
+                letterSpacing: { value: 1.12, unit: 'px' },
                 fontWeight: 'normal',
                 fontFamily: '{font.family.base}',
                 textTransform: 'uppercase',
@@ -255,9 +255,9 @@
         'caps-normal-strong': {
             $type: 'typography',
             $value: {
-                fontSize: '14px',
-                lineHeight: '20px',
-                letterSpacing: '0.08em',
+                fontSize: { value: 14, unit: 'px' },
+                lineHeight: { value: 20, unit: 'px' },
+                letterSpacing: { value: 1.12, unit: 'px' },
                 fontWeight: 500,
                 fontFamily: '{font.family.base}',
                 textTransform: 'uppercase',
@@ -267,9 +267,9 @@
         'caps-compact': {
             $type: 'typography',
             $value: {
-                fontSize: '12px',
-                lineHeight: '16px',
-                letterSpacing: '1px',
+                fontSize: { value: 12, unit: 'px' },
+                lineHeight: { value: 16, unit: 'px' },
+                letterSpacing: { value: 1, unit: 'px' },
                 fontWeight: 'normal',
                 fontFamily: '{font.family.base}',
                 textTransform: 'uppercase',
@@ -279,9 +279,9 @@
         'caps-compact-strong': {
             $type: 'typography',
             $value: {
-                fontSize: '12px',
-                lineHeight: '16px',
-                letterSpacing: '1px',
+                fontSize: { value: 12, unit: 'px' },
+                lineHeight: { value: 16, unit: 'px' },
+                letterSpacing: { value: 1, unit: 'px' },
                 fontWeight: 500,
                 fontFamily: '{font.family.base}',
                 textTransform: 'uppercase',
@@ -291,9 +291,9 @@
         'mono-big': {
             $type: 'typography',
             $value: {
-                fontSize: '16px',
-                lineHeight: '24px',
-                letterSpacing: 'normal',
+                fontSize: { value: 16, unit: 'px' },
+                lineHeight: { value: 24, unit: 'px' },
+                letterSpacing: { value: 0, unit: 'px' },
                 fontWeight: 'normal',
                 fontFamily: '{font.family.mono}',
                 textTransform: 'initial',
@@ -303,9 +303,9 @@
         'mono-big-strong': {
             $type: 'typography',
             $value: {
-                fontSize: '16px',
-                lineHeight: '24px',
-                letterSpacing: 'normal',
+                fontSize: { value: 16, unit: 'px' },
+                lineHeight: { value: 24, unit: 'px' },
+                letterSpacing: { value: 0, unit: 'px' },
                 fontWeight: 700,
                 fontFamily: '{font.family.mono}',
                 textTransform: 'initial',
@@ -315,9 +315,9 @@
         'mono-normal': {
             $type: 'typography',
             $value: {
-                fontSize: '14px',
-                lineHeight: '20px',
-                letterSpacing: 'normal',
+                fontSize: { value: 14, unit: 'px' },
+                lineHeight: { value: 20, unit: 'px' },
+                letterSpacing: { value: 0, unit: 'px' },
                 fontWeight: 'normal',
                 fontFamily: '{font.family.mono}',
                 textTransform: 'initial',
@@ -327,9 +327,9 @@
         'mono-normal-medium': {
             $type: 'typography',
             $value: {
-                fontSize: '14px',
-                lineHeight: '20px',
-                letterSpacing: 'normal',
+                fontSize: { value: 14, unit: 'px' },
+                lineHeight: { value: 20, unit: 'px' },
+                letterSpacing: { value: 0, unit: 'px' },
                 fontWeight: 600,
                 fontFamily: '{font.family.mono}',
                 textTransform: 'initial',
@@ -339,9 +339,9 @@
         'mono-normal-strong': {
             $type: 'typography',
             $value: {
-                fontSize: '14px',
-                lineHeight: '20px',
-                letterSpacing: 'normal',
+                fontSize: { value: 14, unit: 'px' },
+                lineHeight: { value: 20, unit: 'px' },
+                letterSpacing: { value: 0, unit: 'px' },
                 fontWeight: 700,
                 fontFamily: '{font.family.mono}',
                 textTransform: 'initial',
@@ -351,9 +351,9 @@
         'mono-compact': {
             $type: 'typography',
             $value: {
-                fontSize: '12px',
-                lineHeight: '16px',
-                letterSpacing: '0px',
+                fontSize: { value: 12, unit: 'px' },
+                lineHeight: { value: 16, unit: 'px' },
+                letterSpacing: { value: 0, unit: 'px' },
                 fontWeight: 'normal',
                 fontFamily: '{font.family.mono}',
                 textTransform: 'initial',
@@ -363,9 +363,9 @@
         'mono-compact-strong': {
             $type: 'typography',
             $value: {
-                fontSize: '12px',
-                lineHeight: '16px',
-                letterSpacing: '0px',
+                fontSize: { value: 12, unit: 'px' },
+                lineHeight: { value: 16, unit: 'px' },
+                letterSpacing: { value: 0, unit: 'px' },
                 fontWeight: 700,
                 fontFamily: '{font.family.mono}',
                 textTransform: 'initial',
@@ -375,9 +375,9 @@
         'mono-codeblock': {
             $type: 'typography',
             $value: {
-                fontSize: '14px',
-                lineHeight: '20px',
-                letterSpacing: 'normal',
+                fontSize: { value: 14, unit: 'px' },
+                lineHeight: { value: 20, unit: 'px' },
+                letterSpacing: { value: 0, unit: 'px' },
                 fontWeight: 'normal',
                 fontFamily: '{font.family.mono}',
                 textTransform: 'initial',
@@ -387,9 +387,9 @@
         'tabular-big': {
             $type: 'typography',
             $value: {
-                fontSize: '16px',
-                lineHeight: '24px',
-                letterSpacing: 'normal',
+                fontSize: { value: 16, unit: 'px' },
+                lineHeight: { value: 24, unit: 'px' },
+                letterSpacing: { value: 0, unit: 'px' },
                 fontWeight: 'normal',
                 fontFamily: '{font.family.base}',
                 textTransform: 'initial',
@@ -399,9 +399,9 @@
         'tabular-big-strong': {
             $type: 'typography',
             $value: {
-                fontSize: '16px',
-                lineHeight: '24px',
-                letterSpacing: 'normal',
+                fontSize: { value: 16, unit: 'px' },
+                lineHeight: { value: 24, unit: 'px' },
+                letterSpacing: { value: 0, unit: 'px' },
                 fontWeight: 600,
                 fontFamily: '{font.family.base}',
                 textTransform: 'initial',
@@ -411,9 +411,9 @@
         'tabular-normal': {
             $type: 'typography',
             $value: {
-                fontSize: '14px',
-                lineHeight: '20px',
-                letterSpacing: '-0.006em',
+                fontSize: { value: 14, unit: 'px' },
+                lineHeight: { value: 20, unit: 'px' },
+                letterSpacing: { value: -0.084, unit: 'px' },
                 fontWeight: 'normal',
                 fontFamily: '{font.family.base}',
                 textTransform: 'initial',
@@ -423,9 +423,9 @@
         'tabular-normal-strong': {
             $type: 'typography',
             $value: {
-                fontSize: '14px',
-                lineHeight: '20px',
-                letterSpacing: '-0.006em',
+                fontSize: { value: 14, unit: 'px' },
+                lineHeight: { value: 20, unit: 'px' },
+                letterSpacing: { value: -0.084, unit: 'px' },
                 fontWeight: 600,
                 fontFamily: '{font.family.base}',
                 textTransform: 'initial',
@@ -435,9 +435,9 @@
         'tabular-compact': {
             $type: 'typography',
             $value: {
-                fontSize: '12px',
-                lineHeight: '16px',
-                letterSpacing: 'normal',
+                fontSize: { value: 12, unit: 'px' },
+                lineHeight: { value: 16, unit: 'px' },
+                letterSpacing: { value: 0, unit: 'px' },
                 fontWeight: 'normal',
                 fontFamily: '{font.family.base}',
                 textTransform: 'initial',
@@ -447,9 +447,9 @@
         'tabular-compact-strong': {
             $type: 'typography',
             $value: {
-                fontSize: '12px',
-                lineHeight: '16px',
-                letterSpacing: 'normal',
+                fontSize: { value: 12, unit: 'px' },
+                lineHeight: { value: 16, unit: 'px' },
+                letterSpacing: { value: 0, unit: 'px' },
                 fontWeight: 600,
                 fontFamily: '{font.family.base}',
                 textTransform: 'initial',
@@ -460,9 +460,9 @@
             $type: 'typography',
             $value: {
                 fontStyle: 'italic',
-                fontSize: '16px',
-                lineHeight: '24px',
-                letterSpacing: '-0.011em',
+                fontSize: { value: 16, unit: 'px' },
+                lineHeight: { value: 24, unit: 'px' },
+                letterSpacing: { value: -0.176, unit: 'px' },
                 fontWeight: 'normal',
                 fontFamily: '{font.family.base}',
                 textTransform: 'initial',
@@ -473,9 +473,9 @@
             $type: 'typography',
             $value: {
                 fontStyle: 'italic',
-                fontSize: '16px',
-                lineHeight: '24px',
-                letterSpacing: '-0.011em',
+                fontSize: { value: 16, unit: 'px' },
+                lineHeight: { value: 24, unit: 'px' },
+                letterSpacing: { value: -0.176, unit: 'px' },
                 fontWeight: 600,
                 fontFamily: '{font.family.base}',
                 textTransform: 'initial',
@@ -486,9 +486,9 @@
             $type: 'typography',
             $value: {
                 fontStyle: 'italic',
-                fontSize: '14px',
-                lineHeight: '20px',
-                letterSpacing: '-0.006em',
+                fontSize: { value: 14, unit: 'px' },
+                lineHeight: { value: 20, unit: 'px' },
+                letterSpacing: { value: -0.084, unit: 'px' },
                 fontWeight: 'normal',
                 fontFamily: '{font.family.base}',
                 textTransform: 'initial',
@@ -499,9 +499,9 @@
             $type: 'typography',
             $value: {
                 fontStyle: 'italic',
-                fontSize: '14px',
-                lineHeight: '20px',
-                letterSpacing: '-0.006em',
+                fontSize: { value: 14, unit: 'px' },
+                lineHeight: { value: 20, unit: 'px' },
+                letterSpacing: { value: -0.084, unit: 'px' },
                 fontWeight: 600,
                 fontFamily: '{font.family.base}',
                 textTransform: 'initial',
@@ -512,9 +512,9 @@
             $type: 'typography',
             $value: {
                 fontStyle: 'italic',
-                fontSize: '12px',
-                lineHeight: '16px',
-                letterSpacing: 'normal',
+                fontSize: { value: 12, unit: 'px' },
+                lineHeight: { value: 16, unit: 'px' },
+                letterSpacing: { value: 0, unit: 'px' },
                 fontWeight: 'normal',
                 fontFamily: '{font.family.base}',
                 textTransform: 'initial',
@@ -525,9 +525,9 @@
             $type: 'typography',
             $value: {
                 fontStyle: 'italic',
-                fontSize: '12px',
-                lineHeight: '16px',
-                letterSpacing: 'normal',
+                fontSize: { value: 12, unit: 'px' },
+                lineHeight: { value: 16, unit: 'px' },
+                letterSpacing: { value: 0, unit: 'px' },
                 fontWeight: 600,
                 fontFamily: '{font.family.base}',
                 textTransform: 'initial',
@@ -537,7 +537,7 @@
         'navbar-title': {
             $type: 'typography',
             $value: {
-                fontSize: '18px',
+                fontSize: { value: 18, unit: 'px' },
                 lineHeight: '{typography.title.lineHeight}',
                 letterSpacing: '{typography.title.letterSpacing}',
                 fontWeight: '{typography.title.fontWeight}',
