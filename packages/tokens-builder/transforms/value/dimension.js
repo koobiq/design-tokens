@@ -21,6 +21,15 @@ export const assertDimension = (value, path, { allowReference = false } = {}) =>
     }
 };
 
+export const serializeDimension = (value, path) => {
+    // Existing dimension strings remain supported. Objects must be complete and valid.
+    if (typeof value === 'string') return value;
+
+    assertDimension(value, path);
+
+    return `${value.value}${value.unit}`;
+};
+
 const tokenPath = (token) => token.path?.join('.') ?? token.name ?? '<unknown token>';
 
 export default (StyleDictionary) => {
@@ -31,12 +40,7 @@ export default (StyleDictionary) => {
         transform: (token, _config, options) => {
             const value = options?.usesDtcg ? token.$value : token.value;
 
-            // Existing dimension strings remain supported. Objects must be complete and valid.
-            if (typeof value === 'string') return value;
-
-            assertDimension(value, tokenPath(token));
-
-            return `${value.value}${value.unit}`;
+            return serializeDimension(value, tokenPath(token));
         }
     });
 };
